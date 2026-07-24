@@ -7,9 +7,9 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { EVENT_TYPES, EVENTS_CONTENT } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Events & Celebrations at Vellora Stays",
+  title: "Events & Celebrations at Velora Stays",
   description:
-    "Host weddings, conferences, birthday parties, and social gatherings at Vellora Stays. Versatile event spaces with dedicated planning team in Lonavala.",
+    "Host weddings, conferences, birthday parties, and social gatherings at Velora Stays. Versatile event spaces with dedicated planning team in Lonavala.",
   keywords: [
     "villa events Lonavala",
     "wedding venue Lonavala",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "event spaces Pawna Lake",
   ],
   openGraph: {
-    title: "Events & Celebrations | Vellora Stays",
+    title: "Events & Celebrations | Velora Stays",
     description:
-      "From grand weddings to intimate gatherings, Vellora Stays offers versatile event spaces and expert planning for every occasion.",
+      "From grand weddings to intimate gatherings, Velora Stays offers versatile event spaces and expert planning for every occasion.",
   },
 };
 
@@ -43,7 +43,7 @@ export default function EventsPage() {
         schema={{
           "@context": "https://schema.org",
           "@type": "EventVenue",
-          name: "Vellora Stays Events",
+          name: "Velora Stays Events",
           description: EVENTS_CONTENT.description,
           url: "/events",
         }}

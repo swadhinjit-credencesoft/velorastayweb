@@ -5,6 +5,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: "*", allow: "/", disallow: ["/api/", "/booking"] },
     ],
-    sitemap: "https://vellorastays.in/sitemap.xml",
+    sitemap: "https://velorastays.in/sitemap.xml",
   };
 }

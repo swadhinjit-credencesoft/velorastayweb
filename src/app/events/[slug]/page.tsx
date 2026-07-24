@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const event = getEventBySlug(params.slug);
   if (!event) return { title: "Event Not Found" };
   return {
-    title: `${event.name} | Vellora Stays Events`,
+    title: `${event.name} | Velora Stays Events`,
     description: event.description,
     openGraph: {
-      title: `${event.name} | Vellora Stays`,
+      title: `${event.name} | Velora Stays`,
       description: event.tagline,
       images: [{ url: event.image, width: 1200, height: 630, alt: event.name }],
     },
@@ -52,7 +52,7 @@ export default function EventDetailPage({ params }: Props) {
           description: event.description,
           startDate: "2026-01-01",
           endDate: "2026-12-31",
-          location: "Vellora Stays, Lonavala, Maharashtra",
+          location: "Velora Stays, Lonavala, Maharashtra",
         })}
       />
 

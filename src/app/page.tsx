@@ -26,9 +26,9 @@ export default function HomePage() {
       <NearbyAttractions />
       <FAQ />
       <CTA
-        eyebrow="Ready to Experience Vellora Stays?"
+        eyebrow="Ready to Experience Velora Stays?"
         heading="Book Your Perfect Villa Today"
-        description="Join hundreds of happy guests who have chosen Vellora Stays for their Pawna Lake getaway. Private pool, bonfire, BBQ, and stunning lake views await."
+        description="Join hundreds of happy guests who have chosen Velora Stays for their Pawna Lake getaway. Private pool, bonfire, BBQ, and stunning lake views await."
         buttons={[
           { label: "Book Now", href: "/booking", variant: "primary" },
           { label: "View Villas", href: "/villas", variant: "outline" },

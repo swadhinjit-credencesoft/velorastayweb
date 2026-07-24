@@ -100,7 +100,7 @@ export default function VirtualTourViewer() {
           <p className={styles.eyebrow}>Explore</p>
           <h1 className={styles.title}>Virtual Tour</h1>
           <p className={styles.subtitle}>
-            Take an immersive 360° virtual tour of Vellora Stays from anywhere
+            Take an immersive 360° virtual tour of Velora Stays from anywhere
             in the world. Explore our spaces before you arrive.
           </p>
         </div>

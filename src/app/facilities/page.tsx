@@ -8,9 +8,9 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
 
 export const metadata: Metadata = {
-  title: "Facilities & Amenities | Vellora Stays",
+  title: "Facilities & Amenities | Velora Stays",
   description:
-    "Explore world-class facilities at Vellora Stays: private pool, BBQ, high-speed WiFi, fully equipped kitchen, power backup, and more amenities near Pawna Lake, Lonavala.",
+    "Explore world-class facilities at Velora Stays: private pool, BBQ, high-speed WiFi, fully equipped kitchen, power backup, and more amenities near Pawna Lake, Lonavala.",
   keywords: [
     "villa amenities Lonavala",
     "villa facilities Pawna Lake",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/facilities" },
   openGraph: {
-    title: "Facilities & Amenities | Vellora Stays",
+    title: "Facilities & Amenities | Velora Stays",
     description: FACILITIES_CONTENT.description,
-    url: "https://vellorastays.in/facilities",
+    url: "https://velorastays.in/facilities",
   },
 };
 
@@ -59,7 +59,7 @@ export default function FacilitiesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/fascilitise.jpeg"
-            alt="Vellora Stays facilities"
+            alt="Velora Stays facilities"
             fill
             className="object-cover"
             sizes="100vw"

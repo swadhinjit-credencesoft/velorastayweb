@@ -1,8 +1,8 @@
 {
-  "name": "grainbot-agro-analytics",
+  "name": "velora-stays-web",
   "version": "1.0.0",
   "private": true,
-  "description": "GrainBot Agro Analytics — agricultural SaaS marketing site built with Next.js, TypeScript, SCSS and Redux Toolkit.",
+  "description": "Velora Stays — luxury villa marketing site near Pawna Lake, Lonavala, built with Next.js, TypeScript, SCSS and Redux Toolkit.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

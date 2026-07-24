@@ -6,8 +6,8 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { AWARDS } from "@/data/team";
 
 export const metadata: Metadata = {
-  title: "Awards & Recognition | Vellora Stays",
-  description: "See the awards and recognition Vellora Stays has received for excellence in hospitality and guest satisfaction.",
+  title: "Awards & Recognition | Velora Stays",
+  description: "See the awards and recognition Velora Stays has received for excellence in hospitality and guest satisfaction.",
 };
 
 export default function AwardsPage() {

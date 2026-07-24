@@ -4,7 +4,7 @@ export const REVIEWS_CONTENT: SectionContent = {
   eyebrow: "Guest Reviews",
   heading: "What Our Guests Say About Us",
   description:
-    "We take pride in the experiences we create for every guest. With glowing reviews across multiple platforms, Vellora Stays continues to be one of the highest-rated luxury villa properties near Pawna Lake. Here is what real guests have to say about their stay with us.",
+    "We take pride in the experiences we create for every guest. With glowing reviews across multiple platforms, Velora Stays continues to be one of the highest-rated luxury villa properties near Pawna Lake. Here is what real guests have to say about their stay with us.",
 };
 
 export const REVIEW_PLATFORMS: ReviewPlatform[] = [
@@ -14,7 +14,7 @@ export const REVIEW_PLATFORMS: ReviewPlatform[] = [
     icon: "lucide:chrome",
     rating: 5.0,
     reviewCount: 47,
-    url: "https://maps.google.com/?q=Vellora+Stays+Pawna+Lake",
+    url: "https://maps.google.com/?q=Velora+Stays+Pawna+Lake",
   },
   {
     id: "platform-makemytrip",
@@ -22,7 +22,7 @@ export const REVIEW_PLATFORMS: ReviewPlatform[] = [
     icon: "lucide:map",
     rating: 4.9,
     reviewCount: 35,
-    url: "https://www.makemytrip.com/hotels/vellora-stays-pawna-lake.html",
+    url: "https://www.makemytrip.com/hotels/velora-stays-pawna-lake.html",
   },
   {
     id: "platform-goibibo",
@@ -30,7 +30,7 @@ export const REVIEW_PLATFORMS: ReviewPlatform[] = [
     icon: "lucide:map-pin",
     rating: 4.8,
     reviewCount: 22,
-    url: "https://www.goibibo.com/hotels/vellora-stays-pawna-lake.html",
+    url: "https://www.goibibo.com/hotels/velora-stays-pawna-lake.html",
   },
   {
     id: "platform-airbnb",
@@ -38,7 +38,7 @@ export const REVIEW_PLATFORMS: ReviewPlatform[] = [
     icon: "lucide:home",
     rating: 4.95,
     reviewCount: 68,
-    url: "https://www.airbnb.com/homes/vellora-stays",
+    url: "https://www.airbnb.com/homes/velora-stays",
   },
   {
     id: "platform-justdial",
@@ -46,7 +46,7 @@ export const REVIEW_PLATFORMS: ReviewPlatform[] = [
     icon: "lucide:phone",
     rating: 5.0,
     reviewCount: 42,
-    url: "https://www.justdial.com/Lonavala/Vellora-Stays",
+    url: "https://www.justdial.com/Lonavala/Velora-Stays",
   },
 ];
 
@@ -57,7 +57,7 @@ export const REVIEWS: Review[] = [
     platform: "google",
     rating: 5,
     date: "2026-01-12",
-    text: "Absolutely loved our stay at Vellora Stays! The 5 BHK villa was spotless and the private pool was perfect after a long drive from Mumbai. The caretaker, Ravi, was incredibly helpful and made sure we had everything we needed. The bonfire setup in the evening was magical. Will definitely come back again.",
+    text: "Absolutely loved our stay at Velora Stays! The 5 BHK villa was spotless and the private pool was perfect after a long drive from Mumbai. The caretaker, Ravi, was incredibly helpful and made sure we had everything we needed. The bonfire setup in the evening was magical. Will definitely come back again.",
     verified: true,
   },
   {
@@ -84,7 +84,7 @@ export const REVIEWS: Review[] = [
     platform: "airbnb",
     rating: 5,
     date: "2025-11-15",
-    text: "I have stayed at many villas near Lonavala and Vellora Stays is easily the best. The 4 BHK villa was spacious, the interiors were modern, and the private pool was a luxury. The location near Pawna Lake makes it perfect for a weekend escape from Mumbai.",
+    text: "I have stayed at many villas near Lonavala and Velora Stays is easily the best. The 4 BHK villa was spacious, the interiors were modern, and the private pool was a luxury. The location near Pawna Lake makes it perfect for a weekend escape from Mumbai.",
     verified: true,
   },
   {
@@ -138,7 +138,7 @@ export const REVIEWS: Review[] = [
     platform: "google",
     rating: 5,
     date: "2026-03-01",
-    text: "Vellora Stays exceeded my expectations in every way. The villas are modern and well-designed, and the team treated us like family. The caretaker helped us plan a full day of sightseeing including Lohagad Fort and Bhushi Dam. Outstanding service.",
+    text: "Velora Stays exceeded my expectations in every way. The villas are modern and well-designed, and the team treated us like family. The caretaker helped us plan a full day of sightseeing including Lohagad Fort and Bhushi Dam. Outstanding service.",
     verified: true,
   },
   {
@@ -156,7 +156,7 @@ export const REVIEWS: Review[] = [
     platform: "google",
     rating: 5,
     date: "2026-01-08",
-    text: "I was visiting Pawna Lake for the first time and chose Vellora Stays based on reviews. It was the perfect choice. The caretaker helped me navigate the area and even arranged a boat ride on the lake. The villa was cozy and spotless. Truly a luxury experience.",
+    text: "I was visiting Pawna Lake for the first time and chose Velora Stays based on reviews. It was the perfect choice. The caretaker helped me navigate the area and even arranged a boat ride on the lake. The villa was cozy and spotless. Truly a luxury experience.",
     verified: true,
   },
   {
@@ -183,7 +183,7 @@ export const REVIEWS: Review[] = [
     platform: "airbnb",
     rating: 5,
     date: "2026-03-05",
-    text: "The best part about Vellora Stays is the privacy. Each villa is a self-contained retreat with its own pool and garden. The views of Pawna Lake are stunning and the property is well-located for exploring Lonavala attractions. Highly recommend for groups.",
+    text: "The best part about Velora Stays is the privacy. Each villa is a self-contained retreat with its own pool and garden. The views of Pawna Lake are stunning and the property is well-located for exploring Lonavala attractions. Highly recommend for groups.",
     verified: true,
   },
   {
@@ -210,7 +210,7 @@ export const REVIEWS: Review[] = [
     platform: "justdial",
     rating: 5,
     date: "2026-02-28",
-    text: "Celebrated my birthday at Vellora Stays and the team made it really special. They arranged a cake and decorations in the villa and the caretaker organized a surprise bonfire setup. It is the small gestures like this that make this property stand out. Thank you, team!",
+    text: "Celebrated my birthday at Velora Stays and the team made it really special. They arranged a cake and decorations in the villa and the caretaker organized a surprise bonfire setup. It is the small gestures like this that make this property stand out. Thank you, team!",
     verified: true,
   },
   {

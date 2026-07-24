@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tour = getTourBySlug(params.slug);
   if (!tour) return { title: "Tour Not Found" };
   return {
-    title: `${tour.name} | Vellora Stays Tours`,
+    title: `${tour.name} | Velora Stays Tours`,
     description: tour.description,
     openGraph: {
-      title: `${tour.name} | Vellora Stays`,
+      title: `${tour.name} | Velora Stays`,
       description: tour.tagline,
       images: [{ url: tour.image, width: 1200, height: 630, alt: tour.name }],
     },

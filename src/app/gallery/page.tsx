@@ -6,9 +6,9 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Vellora Stays",
-  description: "Explore photos of villas, dining, events, facilities, and nearby attractions at Vellora Stays Lonavala.",
-  openGraph: { title: "Photo Gallery | Vellora Stays", description: "Take a visual tour of Vellora Stays through our photo gallery." },
+  title: "Photo Gallery | Velora Stays",
+  description: "Explore photos of villas, dining, events, facilities, and nearby attractions at Velora Stays Lonavala.",
+  openGraph: { title: "Photo Gallery | Velora Stays", description: "Take a visual tour of Velora Stays through our photo gallery." },
 };
 
 export default function GalleryPage() {
@@ -20,7 +20,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/heroimg2.jpeg"
-            alt="Vellora Stays gallery"
+            alt="Velora Stays gallery"
             fill
             className="object-cover"
             sizes="100vw"
@@ -30,7 +30,7 @@ export default function GalleryPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Gallery", href: "/gallery" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Photo Gallery</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Take a visual tour of Vellora Stays and discover what makes us special.</p>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Take a visual tour of Velora Stays and discover what makes us special.</p>
         </div>
       </section>
 

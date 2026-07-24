@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const offer = getOfferBySlug(params.slug);
   if (!offer) return { title: "Offer Not Found" };
   return {
-    title: `${offer.name} | Vellora Stays Offers`,
+    title: `${offer.name} | Velora Stays Offers`,
     description: offer.description,
     openGraph: {
-      title: `${offer.name} | Vellora Stays`,
+      title: `${offer.name} | Velora Stays`,
       description: offer.tagline,
       images: [{ url: offer.image, width: 1200, height: 630, alt: offer.name }],
     },

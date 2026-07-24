@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Amenities",
   heading: "Curated Experiences, Unmatched Amenities",
   description:
-    "At Vellora Stays, we pride ourselves on offering a premium lifestyle experience near Pawna Lake. From a private swimming pool and open lawns to a fully equipped kitchen and indoor entertainment, every amenity is designed for complete comfort and unforgettable memories.",
+    "At Velora Stays, we pride ourselves on offering a premium lifestyle experience near Pawna Lake. From a private swimming pool and open lawns to a fully equipped kitchen and indoor entertainment, every amenity is designed for complete comfort and unforgettable memories.",
 };
 
 export const FACILITIES: Facility[] = [

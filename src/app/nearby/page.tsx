@@ -7,9 +7,9 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { NEARBY_ATTRACTIONS, NEARBY_CONTENT, getAllCategories } from "@/data/nearby";
 
 export const metadata: Metadata = {
-  title: "Nearby Attractions in Lonavala | Vellora Stays",
+  title: "Nearby Attractions in Lonavala | Velora Stays",
   description:
-    "Explore Lonavala's top attractions near Vellora Stays: Lion's Point, Bhushi Dam, Lonavala, temples, museums, shopping malls, and more.",
+    "Explore Lonavala's top attractions near Velora Stays: Lion's Point, Bhushi Dam, Lonavala, temples, museums, shopping malls, and more.",
   keywords: [
     "Lonavala attractions",
     "things to do in Lonavala",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "tourist spots Lonavala",
   ],
   openGraph: {
-    title: "Nearby Attractions | Vellora Stays",
+    title: "Nearby Attractions | Velora Stays",
     description: NEARBY_CONTENT.description,
   },
 };

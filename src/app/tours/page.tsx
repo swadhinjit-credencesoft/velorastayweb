@@ -7,9 +7,9 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { TOUR_PACKAGES, TOURS_CONTENT } from "@/data/tours";
 
 export const metadata: Metadata = {
-  title: "Lonavala Tour Packages | Vellora Stays",
+  title: "Lonavala Tour Packages | Velora Stays",
   description:
-    "Explore Lonavala with curated tour packages from Vellora Stays. City tours, heritage walks, food trails, temple tours, photography tours, and more.",
+    "Explore Lonavala with curated tour packages from Velora Stays. City tours, heritage walks, food trails, temple tours, photography tours, and more.",
   keywords: [
     "Lonavala tour packages",
     "Lonavala sightseeing",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "food trail Lonavala",
   ],
   openGraph: {
-    title: "Lonavala Tour Packages | Vellora Stays",
+    title: "Lonavala Tour Packages | Velora Stays",
     description: TOURS_CONTENT.description,
   },
 };

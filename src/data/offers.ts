@@ -4,7 +4,7 @@ export const OFFERS_CONTENT: SectionContent = {
   eyebrow: "Special Offers",
   heading: "Exclusive Villa Deals",
   description:
-    "Take advantage of our handpicked offers and enjoy exceptional value during your stay at Vellora Stays. From weekend getaways to long-stay discounts, there is always a reason to book your next escape with us.",
+    "Take advantage of our handpicked offers and enjoy exceptional value during your stay at Velora Stays. From weekend getaways to long-stay discounts, there is always a reason to book your next escape with us.",
 };
 
 export const OFFERS: Offer[] = [
@@ -14,7 +14,7 @@ export const OFFERS: Offer[] = [
     name: "Weekend Getaway",
     tagline: "Escape the city with a refreshing villa stay",
     description:
-      "Make your weekends memorable with our special Weekend Getaway package. Enjoy a luxurious villa at Vellora Stays with a 15% discount on villa rates, complimentary BBQ setup, and late checkout so you can make the most of every moment. Whether you are planning a romantic escape or a family weekend, this offer gives you the perfect excuse to unwind by Pawna Lake.",
+      "Make your weekends memorable with our special Weekend Getaway package. Enjoy a luxurious villa at Velora Stays with a 15% discount on villa rates, complimentary BBQ setup, and late checkout so you can make the most of every moment. Whether you are planning a romantic escape or a family weekend, this offer gives you the perfect excuse to unwind by Pawna Lake.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "15% OFF",
     validFrom: "2026-01-01",
@@ -39,7 +39,7 @@ export const OFFERS: Offer[] = [
     name: "Early Bird Special",
     tagline: "Plan ahead and save big on your villa escape",
     description:
-      "The early bird catches the best rates. Book your villa at Vellora Stays at least 21 days in advance and enjoy a generous 20% discount on your total booking. This offer is perfect for travellers who like to plan ahead and want the peace of mind that comes with confirmed reservations at the best available price. Secure your preferred villa type and dates while enjoying significant savings.",
+      "The early bird catches the best rates. Book your villa at Velora Stays at least 21 days in advance and enjoy a generous 20% discount on your total booking. This offer is perfect for travellers who like to plan ahead and want the peace of mind that comes with confirmed reservations at the best available price. Secure your preferred villa type and dates while enjoying significant savings.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "20% OFF",
     validFrom: "2026-01-01",
@@ -89,7 +89,7 @@ export const OFFERS: Offer[] = [
     name: "Romantic Escape",
     tagline: "A romantic villa experience designed for two",
     description:
-      "Celebrate love with our Romantic Escape package at Vellora Stays. Enjoy a beautifully decorated villa with romantic touches, a complimentary candlelight dinner for two under the stars, and a late checkout to savour every moment together. This package is perfect for anniversaries, honeymoons, or simply a spontaneous romantic getaway. Let us set the mood while you focus on making memories with your special someone.",
+      "Celebrate love with our Romantic Escape package at Velora Stays. Enjoy a beautifully decorated villa with romantic touches, a complimentary candlelight dinner for two under the stars, and a late checkout to savour every moment together. This package is perfect for anniversaries, honeymoons, or simply a spontaneous romantic getaway. Let us set the mood while you focus on making memories with your special someone.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "Free Dinner",
     validFrom: "2026-01-01",
@@ -114,7 +114,7 @@ export const OFFERS: Offer[] = [
     name: "Corporate Offsite",
     tagline: "Refresh your team in a stunning villa setting",
     description:
-      "Make your corporate offsite more rewarding with our Corporate Offsite package. Teams booking directly with Vellora Stays enjoy a flat 20% discount on villa rates, complimentary meeting setup, high-speed WiFi, and dedicated event coordination. Whether you are planning a team retreat, brainstorming session, or company celebration, our Corporate Offsite package ensures that your organisation gets exceptional value in an inspiring setting.",
+      "Make your corporate offsite more rewarding with our Corporate Offsite package. Teams booking directly with Velora Stays enjoy a flat 20% discount on villa rates, complimentary meeting setup, high-speed WiFi, and dedicated event coordination. Whether you are planning a team retreat, brainstorming session, or company celebration, our Corporate Offsite package ensures that your organisation gets exceptional value in an inspiring setting.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "20% OFF",
     validFrom: "2026-01-01",
@@ -139,7 +139,7 @@ export const OFFERS: Offer[] = [
     name: "Family Reunion",
     tagline: "Bring the whole family together in luxury",
     description:
-      "Create unforgettable family memories at Vellora Stays. Our Family Reunion package offers special rates on 5 BHK and 7 BHK villas, along with complimentary kids' activities, a family BBQ night, and dedicated caretaker support. Whether it is a multi-generational gathering or a weekend with the cousins, our spacious villas provide the perfect setting for quality family time surrounded by the beauty of Pawna Lake.",
+      "Create unforgettable family memories at Velora Stays. Our Family Reunion package offers special rates on 5 BHK and 7 BHK villas, along with complimentary kids' activities, a family BBQ night, and dedicated caretaker support. Whether it is a multi-generational gathering or a weekend with the cousins, our spacious villas provide the perfect setting for quality family time surrounded by the beauty of Pawna Lake.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "18% OFF",
     validFrom: "2026-01-01",
@@ -189,7 +189,7 @@ export const OFFERS: Offer[] = [
     name: "Birthday Celebration",
     tagline: "Celebrate your special day in a stunning villa",
     description:
-      "Make your birthday unforgettable at Vellora Stays. Our Birthday Celebration package includes villa decoration with balloons and streamers, a custom birthday cake, a special dinner setup, and late checkout. Whether it is a milestone celebration or a surprise party for a loved one, our team will ensure every detail is taken care of so you can focus on celebrating with friends and family.",
+      "Make your birthday unforgettable at Velora Stays. Our Birthday Celebration package includes villa decoration with balloons and streamers, a custom birthday cake, a special dinner setup, and late checkout. Whether it is a milestone celebration or a surprise party for a loved one, our team will ensure every detail is taken care of so you can focus on celebrating with friends and family.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "Free Cake",
     validFrom: "2026-01-01",

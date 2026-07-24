@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const facility = getFacilityBySlug(params.slug);
   if (!facility) return { title: "Facility Not Found" };
   return {
-    title: `${facility.name} | Vellora Stays Facilities`,
+    title: `${facility.name} | Velora Stays Facilities`,
     description: facility.description,
     alternates: { canonical: `/facilities/${facility.slug}` },
     openGraph: {
-      title: `${facility.name} | Vellora Stays`,
+      title: `${facility.name} | Velora Stays`,
       description: facility.description,
-      url: `https://vellorastays.in/facilities/${facility.slug}`,
+      url: `https://velorastays.in/facilities/${facility.slug}`,
     },
   };
 }

@@ -12,10 +12,10 @@ export const LEGAL_PAGES: LegalPage[] = [
     lastUpdated: "January 15, 2026",
     content:
       "<h2>Introduction</h2>\n" +
-      "<p>Vellora Stays (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our booking services, or stay at our villa. By accessing our website or using our services, you agree to the practices described in this policy.</p>\n\n" +
+      "<p>Velora Stays (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our booking services, or stay at our villa. By accessing our website or using our services, you agree to the practices described in this policy.</p>\n\n" +
 
       "<h2>Our Properties</h2>\n" +
-      "<p>Vellora Stays operates 3 luxury villa properties near Pawna Lake, Lonavala:</p>\n" +
+      "<p>Velora Stays operates 3 luxury villa properties near Pawna Lake, Lonavala:</p>\n" +
       "<p><strong>Villa 7 (7 BHK):</strong> Situated on a 1-acre land parcel, Villa 7 features 7 rooms with attached bathrooms and 1 common bathroom, a swimming pool, and a garden. The villa has 4 rooms on the 1st floor with a hall and 3 rooms on the ground floor with a dining hall. Villa 7 can accommodate a minimum of 14 pax and a maximum of 28 pax.</p>\n" +
       "<p><strong>Villa 5 (5 BHK):</strong> Situated on a 1-acre land parcel, Villa 5 features 5 rooms with attached bathrooms and 1 common bathroom, a swimming pool, and a garden. The villa has 4 rooms on the 1st floor and 1 room on the ground floor with a dining room and a play zone. Villa 5 can accommodate a minimum of 10 pax and a maximum of 15 pax.</p>\n" +
       "<p><strong>Villa 4 (4 BHK):</strong> Situated on a 0.5-acre land parcel, Villa 4 features 4 rooms with attached bathrooms and 1 common bathroom, a separate dining area, a swimming pool, and a garden. The villa has 2 cottages with 2 rooms each and a separate dining room near the cottages. Villa 4 can accommodate a minimum of 8 pax and a maximum of 16 pax.</p>\n\n" +
@@ -49,9 +49,9 @@ export const LEGAL_PAGES: LegalPage[] = [
 
       "<h2>Contact Us</h2>\n" +
       "<p>If you have any questions regarding this Privacy Policy, please contact us at:</p>\n" +
-      "<p><strong>Vellora Stays</strong><br>\n" +
+      "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@vellorastays.in<br>\n" +
+      "Email: info@velorastays.in<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -60,10 +60,10 @@ export const LEGAL_PAGES: LegalPage[] = [
     lastUpdated: "January 15, 2026",
     content:
       "<h2>Introduction</h2>\n" +
-      "<p>These Terms and Conditions govern your use of the Vellora Stays website and services. By accessing our website, making a reservation, or staying at our villa, you agree to be bound by these terms.</p>\n\n" +
+      "<p>These Terms and Conditions govern your use of the Velora Stays website and services. By accessing our website, making a reservation, or staying at our villa, you agree to be bound by these terms.</p>\n\n" +
 
       "<h2>Our Properties</h2>\n" +
-      "<p>Vellora Stays operates 3 luxury villa properties near Pawna Lake, Lonavala:</p>\n" +
+      "<p>Velora Stays operates 3 luxury villa properties near Pawna Lake, Lonavala:</p>\n" +
       "<p><strong>Villa 7 (7 BHK):</strong> Situated on a 1-acre land parcel, Villa 7 features 7 rooms with attached bathrooms and 1 common bathroom, a swimming pool, and a garden. The villa has 4 rooms on the 1st floor with a hall and 3 rooms on the ground floor with a dining hall. Villa 7 can accommodate a minimum of 14 pax and a maximum of 28 pax.</p>\n" +
       "<p><strong>Villa 5 (5 BHK):</strong> Situated on a 1-acre land parcel, Villa 5 features 5 rooms with attached bathrooms and 1 common bathroom, a swimming pool, and a garden. The villa has 4 rooms on the 1st floor and 1 room on the ground floor with a dining room and a play zone. Villa 5 can accommodate a minimum of 10 pax and a maximum of 15 pax.</p>\n" +
       "<p><strong>Villa 4 (4 BHK):</strong> Situated on a 0.5-acre land parcel, Villa 4 features 4 rooms with attached bathrooms and 1 common bathroom, a separate dining area, a swimming pool, and a garden. The villa has 2 cottages with 2 rooms each and a separate dining room near the cottages. Villa 4 can accommodate a minimum of 8 pax and a maximum of 16 pax.</p>\n\n" +
@@ -108,10 +108,10 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>Guests are responsible for all charges incurred during their stay. You must adhere to the villa's house rules, which include restrictions on noise levels after 10:00 PM and prohibition of smoking in non-designated areas. Any damage to villa property, fixtures, or furnishings will be charged to the guest's account at replacement or repair cost.</p>\n\n" +
 
       "<h2>Liability Limitations</h2>\n" +
-      "<p>Vellora Stays shall not be liable for any loss, damage, or injury to guests or their property except to the extent caused by our proven negligence. We are not responsible for delays, cancellations, or disruptions caused by force majeure events. We strongly recommend that guests obtain comprehensive travel insurance.</p>\n\n" +
+      "<p>Velora Stays shall not be liable for any loss, damage, or injury to guests or their property except to the extent caused by our proven negligence. We are not responsible for delays, cancellations, or disruptions caused by force majeure events. We strongly recommend that guests obtain comprehensive travel insurance.</p>\n\n" +
 
       "<h2>Intellectual Property</h2>\n" +
-      "<p>All content on the Vellora Stays website, including text, graphics, logos, images, videos, and software, is the property of Vellora Stays or its licensors and is protected by Indian and international copyright, trademark, and intellectual property laws.</p>\n\n" +
+      "<p>All content on the Velora Stays website, including text, graphics, logos, images, videos, and software, is the property of Velora Stays or its licensors and is protected by Indian and international copyright, trademark, and intellectual property laws.</p>\n\n" +
 
       "<h2>Cancellation and Refund Terms</h2>\n" +
       "<p>Cancellation terms vary depending on the rate type and booking channel. Please refer to our dedicated Cancellation Policy and Refund Policy pages for detailed information.</p>\n\n" +
@@ -121,9 +121,9 @@ export const LEGAL_PAGES: LegalPage[] = [
 
       "<h2>Contact Information</h2>\n" +
       "<p>For any questions regarding these Terms and Conditions, please contact us at:</p>\n" +
-      "<p><strong>Vellora Stays</strong><br>\n" +
+      "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@vellorastays.in<br>\n" +
+      "Email: info@velorastays.in<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -132,10 +132,10 @@ export const LEGAL_PAGES: LegalPage[] = [
     lastUpdated: "January 15, 2026",
     content:
       "<h2>Overview</h2>\n" +
-      "<p>At Vellora Stays, we understand that plans can change unexpectedly. This Refund Policy outlines the conditions under which refunds are available and the process for requesting a refund.</p>\n\n" +
+      "<p>At Velora Stays, we understand that plans can change unexpectedly. This Refund Policy outlines the conditions under which refunds are available and the process for requesting a refund.</p>\n\n" +
 
       "<h2>Eligible Refund Conditions</h2>\n" +
-      "<p>Refunds may be issued under the following circumstances: if you cancel your reservation within the timeframe specified in our Cancellation Policy, if Vellora Stays is unable to honour your reservation due to circumstances within our control, or if there is a documented service failure that significantly impacted your stay.</p>\n\n" +
+      "<p>Refunds may be issued under the following circumstances: if you cancel your reservation within the timeframe specified in our Cancellation Policy, if Velora Stays is unable to honour your reservation due to circumstances within our control, or if there is a documented service failure that significantly impacted your stay.</p>\n\n" +
 
       "<h2>Refund Processing Times</h2>\n" +
       "<p>Once a refund is approved, the processing time depends on your original payment method. Credit and debit card refunds typically appear within 5 to 7 business days. UPI refunds are generally processed within 3 to 5 business days. Net banking refunds take approximately 5 to 7 business days.</p>\n\n" +
@@ -149,16 +149,16 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>How to Request a Refund</h2>\n" +
       "<p>To request a refund, please contact us through any of the following channels:</p>\n" +
       "<ul>\n" +
-      "<li>Email: info@vellorastays.in</li>\n" +
+      "<li>Email: info@velorastays.in</li>\n" +
       "<li>Phone: +91 9324248001</li>\n" +
       "<li>Visit the dedicated caretaker in person during your stay</li>\n" +
       "</ul>\n\n" +
 
       "<h2>Contact Us</h2>\n" +
       "<p>For refund-related inquiries, please reach out to us at:</p>\n" +
-      "<p><strong>Vellora Stays - Refund Department</strong><br>\n" +
+      "<p><strong>Velora Stays - Refund Department</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@vellorastays.in<br>\n" +
+      "Email: info@velorastays.in<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -167,7 +167,7 @@ export const LEGAL_PAGES: LegalPage[] = [
     lastUpdated: "January 15, 2026",
     content:
       "<h2>Overview</h2>\n" +
-      "<p>We understand that travel plans can change, and we have designed our cancellation policy to be fair and transparent. This policy applies to all direct bookings made through the Vellora Stays website, by phone, or at the villa directly.</p>\n\n" +
+      "<p>We understand that travel plans can change, and we have designed our cancellation policy to be fair and transparent. This policy applies to all direct bookings made through the Velora Stays website, by phone, or at the villa directly.</p>\n\n" +
 
       "<h2>Cancellation Tiers</h2>\n" +
       "<p><strong>Free Cancellation (24+ Hours Before Check-in):</strong> If you cancel your reservation at least 24 hours before your scheduled check-in time, you will receive a full refund of any prepaid amounts with no cancellation fee.</p>\n" +
@@ -183,16 +183,16 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>How to Cancel</h2>\n" +
       "<p>To cancel your reservation, you may use any of the following methods:</p>\n" +
       "<ul>\n" +
-      "<li>Email: info@vellorastays.in</li>\n" +
+      "<li>Email: info@velorastays.in</li>\n" +
       "<li>Phone: +91 9324248001</li>\n" +
       "<li>Visit the dedicated caretaker in person</li>\n" +
       "</ul>\n\n" +
 
       "<h2>Contact Us</h2>\n" +
       "<p>For any questions about our cancellation policy, please contact us at:</p>\n" +
-      "<p><strong>Vellora Stays</strong><br>\n" +
+      "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@vellorastays.in<br>\n" +
+      "Email: info@velorastays.in<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -204,7 +204,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>Cookies are small text files that are placed on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work efficiently and improve the user experience.</p>\n\n" +
 
       "<h2>How We Use Cookies</h2>\n" +
-      "<p>Vellora Stays uses cookies to remember your login details and preferences, understand how visitors use our site, and enable our booking engine to function correctly.</p>\n\n" +
+      "<p>Velora Stays uses cookies to remember your login details and preferences, understand how visitors use our site, and enable our booking engine to function correctly.</p>\n\n" +
 
       "<h2>Types of Cookies We Use</h2>\n" +
       "<p><strong>Strictly Necessary Cookies:</strong> Essential for our website to function properly.</p>\n" +
@@ -216,8 +216,8 @@ export const LEGAL_PAGES: LegalPage[] = [
 
       "<h2>Contact Us</h2>\n" +
       "<p>If you have any questions about our use of cookies, please contact us at:</p>\n" +
-      "<p><strong>Vellora Stays</strong><br>\n" +
-      "Email: info@vellorastays.in<br>\n" +
+      "<p><strong>Velora Stays</strong><br>\n" +
+      "Email: info@velorastays.in<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -226,7 +226,7 @@ export const LEGAL_PAGES: LegalPage[] = [
     lastUpdated: "January 15, 2026",
     content:
       "<h2>Our Commitment to Accessibility</h2>\n" +
-      "<p>Vellora Stays is deeply committed to ensuring that our villa, website, and services are accessible to all guests, including people with disabilities.</p>\n\n" +
+      "<p>Velora Stays is deeply committed to ensuring that our villa, website, and services are accessible to all guests, including people with disabilities.</p>\n\n" +
 
       "<h2>Website Accessibility</h2>\n" +
       "<p>Our website is designed to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards, including proper heading structures, alt text on all images, sufficient colour contrast, and keyboard navigation support.</p>\n\n" +
@@ -236,9 +236,9 @@ export const LEGAL_PAGES: LegalPage[] = [
 
       "<h2>Contact Us</h2>\n" +
       "<p>For accessibility-related inquiries or to request specific accommodations, please contact us at:</p>\n" +
-      "<p><strong>Vellora Stays - Accessibility</strong><br>\n" +
+      "<p><strong>Velora Stays - Accessibility</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@vellorastays.in<br>\n" +
+      "Email: info@velorastays.in<br>\n" +
       "Phone: +91 9324248001</p>",
   },
 ];

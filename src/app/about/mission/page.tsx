@@ -6,8 +6,8 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_MISSION } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Mission | Vellora Stays",
-  description: "Discover the mission behind Vellora Stays — redefining luxury hospitality with quality, cleanliness, and genuine care.",
+  title: "Our Mission | Velora Stays",
+  description: "Discover the mission behind Velora Stays — redefining luxury hospitality with quality, cleanliness, and genuine care.",
 };
 
 export default function MissionPage() {

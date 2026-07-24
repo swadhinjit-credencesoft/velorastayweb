@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
             <div className={styles.imageWrap}>
               <Image
                 src={SITE_ASSETS.aboutImage}
-                alt="Vellora Stays villa entrance"
+                alt="Velora Stays villa entrance"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className={styles.image}
@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
           <div className={styles.contentCol}>
             <span className={styles.eyebrow}>Why Choose Us</span>
             <h2 className={`${styles.heading} font-oswald`}>
-              The Vellora Stays Difference
+              The Velora Stays Difference
             </h2>
             <p className={styles.description}>
               From our prime Pawna Lake location to our unwavering commitment to cleanliness and

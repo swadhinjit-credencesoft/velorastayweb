@@ -3,7 +3,7 @@ import { VILLAS } from "@/data/villas";
 import { BLOG_POSTS } from "@/data/blog";
 import { LEGAL_PAGES } from "@/data/legal";
 
-const BASE_URL = "https://vellorastays.in";
+const BASE_URL = "https://velorastays.in";
 
 const staticPages = [
   "",

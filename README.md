@@ -1,10 +1,10 @@
-# GrainBot Agro Analytics
+# Velora Stays
 
-Production-grade recreation of the GrainBot Agro Analytics marketing site, built with:
+Marketing site for Velora Stays — luxury villas near Pawna Lake, Lonavala. Built with:
 
 - **Next.js 14** (App Router) + **TypeScript**
 - **SCSS Modules** for component styling, with a shared token/mixin layer
-- **Redux Toolkit** for UI state (accordion, mobile nav, pricing selection)
+- **Redux Toolkit** for UI state (mobile nav, mega menu, booking flow)
 - **Iconify (`@iconify/react`)** for the Lucide icon set
 - Content fully driven by typed data files — no copy or config hard-coded in components
 
@@ -27,50 +27,58 @@ npm run start
 ## File structure
 
 ```
-grainbot/
-├── next.config.mjs          # Image domains, sass includePaths
+velorastayweb/
+├── next.config.mjs          # Static export, image config, sass includePaths
 ├── tsconfig.json            # Path alias: "@/*" -> "src/*"
 ├── package.json
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx        # Root layout, fonts, Redux provider
-│   │   ├── page.tsx          # Composes all sections in order
-│   │   └── globals.scss      # Reset, body font-feature-settings, selection, .font-oswald, .clip-image
+│   │   ├── page.tsx          # Homepage composing all sections
+│   │   ├── globals.scss      # Reset, body styles, utility classes
+│   │   ├── villas/           # Villa listing and detail pages
+│   │   ├── facilities/       # Amenities listing and detail pages
+│   │   ├── nearby/           # Nearby attractions
+│   │   ├── about/            # About, story, team, mission, vision, values, awards, careers, sustainability
+│   │   ├── contact/          # Contact page
+│   │   ├── booking/          # Booking flow
+│   │   ├── gallery/          # Photo gallery
+│   │   ├── reviews/          # Guest reviews
+│   │   ├── faq/              # FAQ page
+│   │   ├── offers/           # Special offers
+│   │   ├── events/           # Events and celebrations
+│   │   ├── blog/             # Travel blog
+│   │   ├── tours/            # Tour packages
+│   │   ├── explore/          # Explore hub (experiences, attractions, tours, gallery, virtual tour)
+│   │   ├── search/           # Search page
+│   │   └── legal/            # Legal pages (privacy, terms, refund, cookies, accessibility)
 │   ├── components/
-│   │   ├── Navigation/        # Fixed glass nav + mobile menu
-│   │   ├── Hero/               # Split "Smart Grain [pill] — Trading" headline, stats, overlays
-│   │   ├── VisualBreak/        # Full-bleed grayscale break section
-│   │   ├── Features/           # "Advantage" gap-px card grid
-│   │   ├── Analysis/           # Accordion with grid-rows animation + sticky cross-fade image
-│   │   ├── Pricing/            # Telegram Stars plans + How it works guide
-│   │   ├── Trust/              # Trust section, CTA form, Footer
-│   │   └── Icon/                # Iconify wrapper
-│   ├── data/                  # ALL site copy & content — single source of truth
-│   │   ├── site.ts             # Nav, hero, assets, visual break
-│   │   ├── features.ts
-│   │   ├── analysis.ts
-│   │   ├── pricing.ts
-│   │   └── trust.ts
+│   │   ├── layout/           # Header, MobileNav, Footer, ScrollToTop, WhatsAppButton, Breadcrumb
+│   │   ├── sections/         # Hero, SearchBar, FeaturedVillas, WhyChooseUs, Testimonials, Gallery, etc.
+│   │   ├── ui/               # Accordion, Badge, Button, Card, Input, Modal, Rating, Select, Tabs, etc.
+│   │   ├── villas/           # VillaCard, VillaGallery, VillaAmenities, VillaPricing, VillaComparison, etc.
+│   │   ├── seo/              # JsonLd structured data
+│   │   └── Icon/             # Iconify wrapper
+│   ├── data/                 # ALL site copy & content — single source of truth
 │   ├── store/
-│   │   ├── store.ts            # configureStore, makeStore factory
-│   │   ├── hooks.ts             # Typed useAppDispatch / useAppSelector
+│   │   ├── store.ts          # configureStore, makeStore factory
+│   │   ├── hooks.ts          # Typed useAppDispatch / useAppSelector
 │   │   └── slices/
-│   │       ├── uiSlice.ts       # activeAnalysisIndex, isMobileNavOpen
-│   │       └── pricingSlice.ts  # selectedPlanId
+│   │       ├── uiSlice.ts    # Mobile nav, mega menu, modal, scroll state
+│   │       └── bookingSlice.ts # Booking flow state
 │   ├── providers/
-│   │   └── ReduxProvider.tsx    # Client component wrapping <Provider>
+│   │   └── ReduxProvider.tsx  # Client component wrapping <Provider>
 │   ├── styles/
-│   │   ├── _variables.scss      # Design tokens (color, type, spacing, radii, motion)
-│   │   └── _mixins.scss         # container, section-padding, glass-surface, pill-button, etc.
-│   └── types/
-│       └── index.ts             # Shared TS interfaces for all data models
+│   │   ├── _variables.scss   # Design tokens (color, type, spacing, radii, motion)
+│   │   ├── _mixins.scss      # container, section-padding, glass-surface, pill-button, etc.
+│   │   ├── _animations.scss  # Keyframe animations
+│   │   ├── _typography.scss  # Typography styles
+│   │   └── _utilities.scss   # Utility classes
+│   ├── hooks/                # Custom hooks (IntersectionObserver, localStorage, mediaQuery, scroll)
+│   ├── types/
+│   │   └── index.ts          # Shared TS interfaces for all data models
+│   └── utils/
+│       ├── constants.ts      # Site constants
+│       ├── schema.ts         # JSON-LD schema generators
+│       └── seo.ts            # SEO helper functions
 ```
-
-## Notes on fidelity
-
-- Body sets `font-feature-settings: "cv11", "ss01"`.
-- Hero headline is split by an in-flow `rounded-full` pill image between "Smart Grain" and "— Trading".
-- Visual Break and Trust images use `grayscale` filters; Advantage/Analysis/Pricing imagery does not.
-- Nav logo uses wide tracking; hero headline uses tight (`-0.05em`) tracking.
-- Analysis accordion animates via CSS Grid `grid-template-rows` (`0fr` → `1fr`), driven by Redux state (`activeAnalysisIndex`) instead of imperative DOM toggling.
-- Features grid uses the `gap-px` + colored-background technique for hairline borders instead of per-card borders.

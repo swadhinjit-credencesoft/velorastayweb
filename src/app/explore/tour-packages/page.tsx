@@ -7,12 +7,12 @@ import { TOUR_PACKAGES, TOURS_CONTENT } from "@/data/tours";
 import styles from "./Tours.module.scss";
 
 export const metadata: Metadata = {
-  title: "Tour Packages in Lonavala | Vellora Stays",
+  title: "Tour Packages in Lonavala | Velora Stays",
   description:
-    "Explore Lonavala with our expertly guided tour packages — fort treks, heritage walks, food trails, temple visits, photography tours, and lakeside adventures. Book at Vellora Stays.",
+    "Explore Lonavala with our expertly guided tour packages — fort treks, heritage walks, food trails, temple visits, photography tours, and lakeside adventures. Book at Velora Stays.",
   alternates: { canonical: "/explore/tour-packages" },
   openGraph: {
-    title: "Tour Packages | Vellora Stays Lonavala",
+    title: "Tour Packages | Velora Stays Lonavala",
     description: "Expertly guided tours to experience the best of Pawna Lake and Lonavala.",
     url: `${SITE_INFO.url}/explore/tour-packages`,
   },

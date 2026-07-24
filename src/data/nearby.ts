@@ -4,7 +4,7 @@ export const NEARBY_CONTENT: SectionContent = {
   eyebrow: "Explore Pawna & Lonavala",
   heading: "Discover the Beauty of Lonavala & Pawna Lake",
   description:
-    "People don't just book a villa stay; they book an unforgettable getaway experience. Tucked away near the majestic waters of Pawna Dam, Vellora Stays places you right in the heart of one of Maharashtra's most scenic landscapes. Enjoy refreshing lakeside breezes, striking mountain sunrises, and easy access to local adventure points.",
+    "People don't just book a villa stay; they book an unforgettable getaway experience. Tucked away near the majestic waters of Pawna Dam, Velora Stays places you right in the heart of one of Maharashtra's most scenic landscapes. Enjoy refreshing lakeside breezes, striking mountain sunrises, and easy access to local adventure points.",
 };
 
 export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
@@ -13,7 +13,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     slug: "pawna-lake",
     name: "Pawna Lake",
     description:
-      "Located just minutes away from Vellora Stays, Pawna Lake offers peaceful daytime boating excursions and unparalleled sunset photography spots. The lake is surrounded by lush green hills and ancient forts, making it one of the most picturesque destinations near Mumbai and Pune.",
+      "Located just minutes away from Velora Stays, Pawna Lake offers peaceful daytime boating excursions and unparalleled sunset photography spots. The lake is surrounded by lush green hills and ancient forts, making it one of the most picturesque destinations near Mumbai and Pune.",
     image: "/Pawnalake.jpg",
     distance: "5 min drive",
     travelTime: "5 min drive",

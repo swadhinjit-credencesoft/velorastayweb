@@ -7,8 +7,8 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { TEAM_MEMBERS, AWARDS } from "@/data/team";
 
 export const metadata: Metadata = {
-  title: "Our Team | Vellora Stays",
-  description: "Meet the dedicated team behind Vellora Stays — passionate hospitality professionals committed to your comfort.",
+  title: "Our Team | Velora Stays",
+  description: "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
 };
 
 export default function TeamPage() {

@@ -6,8 +6,8 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { SUSTAINABILITY } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Sustainability | Vellora Stays",
-  description: "Learn about Vellora Stays' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+  title: "Sustainability | Velora Stays",
+  description: "Learn about Velora Stays' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
 };
 
 export default function SustainabilityPage() {

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${attraction.name} | Nearby Attractions`,
     description: attraction.description,
     openGraph: {
-      title: `${attraction.name} | Vellora Stays`,
+      title: `${attraction.name} | Velora Stays`,
       description: attraction.description,
       images: [{ url: attraction.image, width: 1200, height: 630, alt: attraction.name }],
     },

@@ -7,12 +7,12 @@ import { NEARBY_ATTRACTIONS, NEARBY_CONTENT, getAllCategories } from "@/data/nea
 import styles from "./Nearby.module.scss";
 
 export const metadata: Metadata = {
-  title: "Nearby Attractions in Lonavala | Vellora Stays",
+  title: "Nearby Attractions in Lonavala | Velora Stays",
   description:
-    "Explore the best attractions near Vellora Stays in Pawna Lake, Lonavala. From Lion's Point and Bhushi Dam to temples, markets, and parks — discover everything Lonavala and Pawna Lake have to offer.",
+    "Explore the best attractions near Velora Stays in Pawna Lake, Lonavala. From Lion's Point and Bhushi Dam to temples, markets, and parks — discover everything Lonavala and Pawna Lake have to offer.",
   alternates: { canonical: "/explore/nearby-attractions" },
   openGraph: {
-    title: "Nearby Attractions | Vellora Stays Lonavala",
+    title: "Nearby Attractions | Velora Stays Lonavala",
     description: "Discover landmarks, temples, markets, and parks near our villa in Pawna Lake.",
     url: `${SITE_INFO.url}/explore/nearby-attractions`,
   },

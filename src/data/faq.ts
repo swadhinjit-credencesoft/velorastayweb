@@ -8,7 +8,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-booking-01",
-        question: "How can I book a villa at Vellora Stays?",
+        question: "How can I book a villa at Velora Stays?",
         answer:
           "You can book a villa directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type (4 BHK, 5 BHK, or 7 BHK), and completing the secure payment process. Alternatively, you can call our reservations team at +91 9324248001 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb.",
       },
@@ -16,7 +16,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 7 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at info@vellorastays.in or call +91 9324248001 and we will do our best to accommodate your changes.",
+          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 7 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at info@velorastays.in or call +91 9324248001 and we will do our best to accommodate your changes.",
       },
       {
         id: "faq-booking-03",
@@ -28,7 +28,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-04",
         question: "Will I receive a booking confirmation?",
         answer:
-          "Yes, once your booking is confirmed and payment is processed, you will receive a detailed confirmation email with your reservation details, villa type, check-in and check-out dates, and any special requests you have noted. If you do not receive a confirmation within 30 minutes, please check your spam folder or contact us directly at info@vellorastays.in.",
+          "Yes, once your booking is confirmed and payment is processed, you will receive a detailed confirmation email with your reservation details, villa type, check-in and check-out dates, and any special requests you have noted. If you do not receive a confirmation within 30 minutes, please check your spam folder or contact us directly at info@velorastays.in.",
       },
       {
         id: "faq-booking-05",
@@ -47,13 +47,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-01",
         question: "What types of villas are available?",
         answer:
-          "Vellora Stays offers three types of luxury villas to suit every group size. Our options include the Cozy Retreat (4 BHK) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
+          "Velora Stays offers three types of luxury villas to suit every group size. Our options include the Cozy Retreat (4 BHK) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
       },
       {
         id: "faq-villas-02",
         question: "What is the check-in and check-out time?",
         answer:
-          "Check-in time at Vellora Stays is 2:00 PM and check-out time is 11:00 AM. Early check-in is available subject to villa availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. Please contact our caretaker at +91 9324248001 to arrange either option in advance.",
+          "Check-in time at Velora Stays is 2:00 PM and check-out time is 11:00 AM. Early check-in is available subject to villa availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. Please contact our caretaker at +91 9324248001 to arrange either option in advance.",
       },
       {
         id: "faq-villas-03",
@@ -71,7 +71,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-05",
         question: "What amenities are included in the villa?",
         answer:
-          "Every villa at Vellora Stays comes with air conditioning, smart TV with streaming services, free high-speed WiFi, a fully equipped modern kitchen, private swimming pool, BBQ area, lush garden, power backup, hot water, and a dedicated caretaker. Select villa categories also include premium amenities like outdoor seating areas, lawn games, and premium furnishings.",
+          "Every villa at Velora Stays comes with air conditioning, smart TV with streaming services, free high-speed WiFi, a fully equipped modern kitchen, private swimming pool, BBQ area, lush garden, power backup, hot water, and a dedicated caretaker. Select villa categories also include premium amenities like outdoor seating areas, lawn games, and premium furnishings.",
       },
     ],
   },
@@ -84,7 +84,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-kitchen-01",
         question: "Is there a kitchen in the villa?",
         answer:
-          "Yes, every villa at Vellora Stays comes with a fully equipped modern kitchen featuring a gas stove, refrigerator, microwave, utensils, cookware, and all the basics you need to prepare your own meals. We provide complimentary tea, coffee, sugar, and cooking essentials. Guests can purchase groceries from local markets or request our caretaker to arrange grocery shopping.",
+          "Yes, every villa at Velora Stays comes with a fully equipped modern kitchen featuring a gas stove, refrigerator, microwave, utensils, cookware, and all the basics you need to prepare your own meals. We provide complimentary tea, coffee, sugar, and cooking essentials. Guests can purchase groceries from local markets or request our caretaker to arrange grocery shopping.",
       },
       {
         id: "faq-kitchen-02",
@@ -102,7 +102,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-kitchen-04",
         question: "Are there restaurants nearby?",
         answer:
-          "Vellora Stays is located in Gevhande Apati, near Pawna Lake, with several local restaurants and dhabas within driving distance. Our caretaker can recommend the best local eateries for authentic Maharashtrian cuisine. For a more upscale dining experience, Lonavala town is about 20 minutes away with a wide range of restaurants and cafes.",
+          "Velora Stays is located in Gevhande Apati, near Pawna Lake, with several local restaurants and dhabas within driving distance. Our caretaker can recommend the best local eateries for authentic Maharashtrian cuisine. For a more upscale dining experience, Lonavala town is about 20 minutes away with a wide range of restaurants and cafes.",
       },
       {
         id: "faq-kitchen-05",
@@ -121,7 +121,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-location-01",
         question: "How far is the villa from Mumbai?",
         answer:
-          "Vellora Stays is approximately 100 kilometres from Mumbai, which is about a 2.5 to 3-hour drive via the Mumbai-Pune Expressway. The scenic drive through the Western Ghats is an experience in itself, with stunning views of the Sahyadri mountains. We recommend starting your journey early to avoid traffic and enjoy the beautiful route.",
+          "Velora Stays is approximately 100 kilometres from Mumbai, which is about a 2.5 to 3-hour drive via the Mumbai-Pune Expressway. The scenic drive through the Western Ghats is an experience in itself, with stunning views of the Sahyadri mountains. We recommend starting your journey early to avoid traffic and enjoy the beautiful route.",
       },
       {
         id: "faq-location-02",
@@ -139,7 +139,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-location-04",
         question: "How do I reach the villa?",
         answer:
-          "Vellora Stays is located in Gevhande Apati, near Pawna Lake, Lonavala, Maharashtra 410401. The most convenient way to reach us is by car via the Mumbai-Pune Expressway. If you prefer public transport, Lonavala railway station is about 20 minutes away, and we can arrange a pickup from the station. We will share detailed directions and a Google Maps link with your booking confirmation.",
+          "Velora Stays is located in Gevhande Apati, near Pawna Lake, Lonavala, Maharashtra 410401. The most convenient way to reach us is by car via the Mumbai-Pune Expressway. If you prefer public transport, Lonavala railway station is about 20 minutes away, and we can arrange a pickup from the station. We will share detailed directions and a Google Maps link with your booking confirmation.",
       },
       {
         id: "faq-location-05",
@@ -164,7 +164,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-facilities-02",
         question: "Is there a swimming pool?",
         answer:
-          "Yes, every villa at Vellora Stays comes with its own private swimming pool. The pools are regularly maintained and cleaned to ensure crystal-clear water. Pool towels are provided and the caretaker can assist with any pool-related requests. Please note that children must be supervised by adults at all times while using the pool.",
+          "Yes, every villa at Velora Stays comes with its own private swimming pool. The pools are regularly maintained and cleaned to ensure crystal-clear water. Pool towels are provided and the caretaker can assist with any pool-related requests. Please note that children must be supervised by adults at all times while using the pool.",
       },
       {
         id: "faq-facilities-03",
@@ -195,7 +195,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-events-01",
         question: "Can I book the villa for a private event?",
         answer:
-          "Yes, Vellora Stays is perfect for private events like birthday parties, anniversaries, pre-wedding shoots, corporate offsites, and family reunions. Our villas offer spacious indoor and outdoor areas that can be customized for your celebration. Please contact our events team at least two weeks in advance to discuss your requirements and schedule a site visit.",
+          "Yes, Velora Stays is perfect for private events like birthday parties, anniversaries, pre-wedding shoots, corporate offsites, and family reunions. Our villas offer spacious indoor and outdoor areas that can be customized for your celebration. Please contact our events team at least two weeks in advance to discuss your requirements and schedule a site visit.",
       },
       {
         id: "faq-events-02",
@@ -213,7 +213,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-events-04",
         question: "Do you provide catering for events?",
         answer:
-          "Yes, we can arrange catering services for all events hosted at Vellora Stays. We offer a wide selection of Maharashtrian, North Indian, and Continental cuisines. Menu customization is available to accommodate dietary restrictions and personal preferences. A tasting session can be arranged prior to the event for larger bookings.",
+          "Yes, we can arrange catering services for all events hosted at Velora Stays. We offer a wide selection of Maharashtrian, North Indian, and Continental cuisines. Menu customization is available to accommodate dietary restrictions and personal preferences. A tasting session can be arranged prior to the event for larger bookings.",
       },
       {
         id: "faq-events-05",
@@ -232,7 +232,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-payment-01",
         question: "What payment methods do you accept?",
         answer:
-          "Vellora Stays accepts a wide range of payment methods for your convenience including cash (INR), all major credit and debit cards (Visa, Mastercard, American Express, RuPay), UPI payments (Google Pay, PhonePe, Paytm), and net banking. Online payments through our website are processed through a secure, encrypted gateway to ensure complete safety of your financial information.",
+          "Velora Stays accepts a wide range of payment methods for your convenience including cash (INR), all major credit and debit cards (Visa, Mastercard, American Express, RuPay), UPI payments (Google Pay, PhonePe, Paytm), and net banking. Online payments through our website are processed through a secure, encrypted gateway to ensure complete safety of your financial information.",
       },
       {
         id: "faq-payment-02",
@@ -269,7 +269,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-safety-01",
         question: "Is the villa equipped with CCTV?",
         answer:
-          "Yes, Vellora Stays is monitored by a comprehensive CCTV surveillance system that covers all entry and exit points, parking areas, and common areas. Our security team monitors the feeds around the clock to ensure the safety of all guests and their belongings. Villa interiors and private areas are not under surveillance to maintain your privacy.",
+          "Yes, Velora Stays is monitored by a comprehensive CCTV surveillance system that covers all entry and exit points, parking areas, and common areas. Our security team monitors the feeds around the clock to ensure the safety of all guests and their belongings. Villa interiors and private areas are not under surveillance to maintain your privacy.",
       },
       {
         id: "faq-safety-02",
@@ -281,7 +281,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-safety-03",
         question: "Is the villa equipped for fire safety?",
         answer:
-          "Absolutely. Vellora Stays is fully compliant with all fire safety regulations and is equipped with smoke detectors, fire extinguishers, clearly marked emergency exits, and an automated fire alarm system. Our staff is trained in emergency evacuation procedures and regular fire drills are conducted to ensure preparedness. Emergency evacuation maps are placed inside every villa.",
+          "Absolutely. Velora Stays is fully compliant with all fire safety regulations and is equipped with smoke detectors, fire extinguishers, clearly marked emergency exits, and an automated fire alarm system. Our staff is trained in emergency evacuation procedures and regular fire drills are conducted to ensure preparedness. Emergency evacuation maps are placed inside every villa.",
       },
       {
         id: "faq-safety-04",

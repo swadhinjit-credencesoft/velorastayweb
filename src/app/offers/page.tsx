@@ -9,11 +9,11 @@ import { SITE_INFO } from "@/data/site";
 import styles from "./offers.module.scss";
 
 export const metadata: Metadata = {
-  title: "Special Offers & Deals | Vellora Stays",
+  title: "Special Offers & Deals | Velora Stays",
   description:
-    "Save big with exclusive villa offers at Vellora Stays. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
+    "Save big with exclusive villa offers at Velora Stays. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
   openGraph: {
-    title: "Special Offers | Vellora Stays",
+    title: "Special Offers | Velora Stays",
     description: OFFERS_CONTENT.description,
     url: `${SITE_INFO.url}/offers`,
   },

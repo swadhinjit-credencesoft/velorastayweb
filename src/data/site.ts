@@ -9,14 +9,14 @@ import type {
 } from "@/types";
 
 export const SITE_INFO: SiteInfo = {
-  name: "Vellora Stays",
+  name: "Velora Stays",
   tagline: "Luxury Villas Near Pawna Lake",
   description:
-    "Vellora Stays by The Explorer Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. Featuring 4 BHK, 5 BHK, and 7 BHK configurations with stunning mountain and lake views, perfect for family reunions, corporate retreats, and weekend getaways.",
-  url: "https://vellorastays.in",
+    "Velora Stays by The Explorer Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. Featuring 4 BHK, 5 BHK, and 7 BHK configurations with stunning mountain and lake views, perfect for family reunions, corporate retreats, and weekend getaways.",
+  url: "https://velorastays.in",
   phone: "+91 9324248001",
   whatsapp: "+91 9324248001",
-  email: "info@vellorastays.in",
+  email: "info@velorastays.in",
   address: {
     street: "Gevhande Apati",
     area: "Near Pawna Lake",
@@ -43,7 +43,7 @@ export const SOCIAL_LINKS: SocialLinks = {
   twitter: "",
   youtube: "",
   tripadvisor: "",
-  google: "https://maps.google.com/?q=Vellora+Stays+Pawna+Lake",
+  google: "https://maps.google.com/?q=Velora+Stays+Pawna+Lake",
 };
 
 export const SITE_ASSETS = {
@@ -92,7 +92,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: "/heroimg3.jpeg",
     title: "Experience Luxury by the Lake",
     subtitle:
-      "From private swimming pools to bonfire evenings, every moment at Vellora Stays is crafted for unforgettable memories.",
+      "From private swimming pools to bonfire evenings, every moment at Velora Stays is crafted for unforgettable memories.",
     cta: { label: "View Amenities", href: "/facilities" },
   },
 ];
@@ -186,7 +186,7 @@ export const TRUST_BADGES: TrustBadge[] = [
 
 const whatsappPhone = SITE_INFO.whatsapp.replace(/\s+/g, "").replace("+", "");
 const whatsappMessage = [
-  "This is an Enquiry from: Vellora Stays Website",
+  "This is an Enquiry from: Velora Stays Website",
   `Hotel Name: ${SITE_INFO.name}`,
   `Phone: ${SITE_INFO.phone}`,
   `Address: ${SITE_INFO.address.full}`,

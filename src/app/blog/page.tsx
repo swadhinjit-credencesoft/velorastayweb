@@ -7,9 +7,9 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { BLOG_POSTS, BLOG_CONTENT, BLOG_CATEGORIES } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Travel Blog | Vellora Stays",
+  title: "Travel Blog | Velora Stays",
   description:
-    "Read travel guides, villa tips, food recommendations, and local insights for Lonavala from the Vellora Stays blog.",
+    "Read travel guides, villa tips, food recommendations, and local insights for Lonavala from the Velora Stays blog.",
   keywords: [
     "Lonavala travel blog",
     "Lonavala guide",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Lonavala food guide",
   ],
   openGraph: {
-    title: "Travel Blog | Vellora Stays",
+    title: "Travel Blog | Velora Stays",
     description: BLOG_CONTENT.description,
   },
 };

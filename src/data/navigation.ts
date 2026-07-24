@@ -218,7 +218,7 @@ export const FOOTER_SOCIAL: SocialLink[] = [
   {
     id: "footer-social-google",
     icon: "lucide:map-pin",
-    href: "https://maps.google.com/?q=Vellora+Stays+Pawna+Lake",
+    href: "https://maps.google.com/?q=Velora+Stays+Pawna+Lake",
     label: "Google Business",
   },
 ];
@@ -227,8 +227,8 @@ export const FOOTER_CONTACT = {
   address:
     "Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401, India",
   phone: "+91 9324248001",
-  email: "info@vellorastays.in",
+  email: "info@velorastays.in",
   hours: "24/7 Guest Support",
 };
 
-export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Vellora Stays by The Explorer Stays. All rights reserved.`;
+export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Velora Stays by The Explorer Stays. All rights reserved.`;

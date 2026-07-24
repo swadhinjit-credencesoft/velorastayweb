@@ -12,10 +12,10 @@ import styles from "./villas.module.scss";
 export const metadata: Metadata = {
   title: "Our Villas | Luxury Villa Stays Near Pawna Lake, Lonavala",
   description:
-    "Choose from our range of luxury villas at Vellora Stays near Pawna Lake, Lonavala. From cozy 4 BHK to expansive 7 BHK, each features private pool, BBQ, and stunning lake views.",
+    "Choose from our range of luxury villas at Velora Stays near Pawna Lake, Lonavala. From cozy 4 BHK to expansive 7 BHK, each features private pool, BBQ, and stunning lake views.",
   alternates: { canonical: "/villas" },
   openGraph: {
-    title: "Our Villas | Vellora Stays Pawna Lake",
+    title: "Our Villas | Velora Stays Pawna Lake",
     description: "Browse our luxury villas near Pawna Lake with private pool, BBQ, and stunning views.",
     url: generateCanonicalUrl("/villas"),
   },

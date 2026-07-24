@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getLegalPage(params.slug);
   if (!page) return { title: "Page Not Found" };
-  return { title: `${page.title} | Vellora Stays`, description: `Read our ${page.title.toLowerCase()} for Vellora Stays villa in Lonavala.` };
+  return { title: `${page.title} | Velora Stays`, description: `Read our ${page.title.toLowerCase()} for Velora Stays villa in Lonavala.` };
 }
 
 export default function LegalPage({ params }: Props) {

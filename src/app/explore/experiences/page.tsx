@@ -6,12 +6,12 @@ import { SITE_INFO } from "@/data/site";
 import styles from "./Experiences.module.scss";
 
 export const metadata: Metadata = {
-  title: "Curated Experiences in Lonavala | Vellora Stays",
+  title: "Curated Experiences in Lonavala | Velora Stays",
   description:
-    "Discover Lonavala with our curated experiences — heritage walks, street food tours, art district explorations, sunset river cruises, cooking classes, and shopping tours. Book now at Vellora Stays.",
+    "Discover Lonavala with our curated experiences — heritage walks, street food tours, art district explorations, sunset river cruises, cooking classes, and shopping tours. Book now at Velora Stays.",
   alternates: { canonical: "/explore/experiences" },
   openGraph: {
-    title: "Curated Experiences in Lonavala | Vellora Stays",
+    title: "Curated Experiences in Lonavala | Velora Stays",
     description: "Handpicked local experiences to make your Lonavala visit unforgettable.",
     url: `${SITE_INFO.url}/explore/experiences`,
   },

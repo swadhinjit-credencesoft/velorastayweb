@@ -6,8 +6,8 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_VISION } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Vision | Vellora Stays",
-  description: "Explore the vision driving Vellora Stays — to become Lonavala's most trusted and beloved luxury villa brand.",
+  title: "Our Vision | Velora Stays",
+  description: "Explore the vision driving Velora Stays — to become Lonavala's most trusted and beloved luxury villa brand.",
 };
 
 export default function VisionPage() {

@@ -4,7 +4,7 @@ export const EVENTS_CONTENT: SectionContent = {
   eyebrow: "Events & Celebrations",
   heading: "Make Every Occasion Special",
   description:
-    "Host your most memorable events at Vellora Stays. From intimate gatherings to grand celebrations, our luxury villas and dedicated planning team ensure every occasion is executed flawlessly in a stunning Pawna Lake setting.",
+    "Host your most memorable events at Velora Stays. From intimate gatherings to grand celebrations, our luxury villas and dedicated planning team ensure every occasion is executed flawlessly in a stunning Pawna Lake setting.",
 };
 
 export const EVENT_TYPES: EventType[] = [
@@ -16,10 +16,10 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Throw an unforgettable birthday bash in our luxurious villas with stunning Pawna Lake views, private pool, and dedicated event coordination.",
     longDescription:
-      "Make your birthday celebration one to remember at Vellora Stays. Whether it is a milestone birthday for a loved one or a fun-filled kids' party, our villas can be transformed to match any theme or style. From stunning balloon décor and custom cakes to a lively BBQ under the stars, we take care of the details so you can enjoy every moment. Choose from our curated packages or let us create a bespoke celebration tailored to your vision. With a private pool, spacious garden, and breathtaking lake views, your birthday party will be the talk of the town.",
+      "Make your birthday celebration one to remember at Velora Stays. Whether it is a milestone birthday for a loved one or a fun-filled kids' party, our villas can be transformed to match any theme or style. From stunning balloon décor and custom cakes to a lively BBQ under the stars, we take care of the details so you can enjoy every moment. Choose from our curated packages or let us create a bespoke celebration tailored to your vision. With a private pool, spacious garden, and breathtaking lake views, your birthday party will be the talk of the town.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070",
     gallery: [
-      { id: "bday-img-1", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Birthday party decoration at Vellora Stays villa" },
+      { id: "bday-img-1", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Birthday party decoration at Velora Stays villa" },
       { id: "bday-img-2", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Birthday celebration with cake and friends" },
       { id: "bday-img-3", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Kids birthday party by the pool" },
     ],
@@ -97,7 +97,7 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Celebrate your milestones with romantic setups, candlelight dinners under the stars, and personalised touches for your special day at Pawna Lake.",
     longDescription:
-      "Every anniversary marks a beautiful chapter in your love story, and it deserves to be celebrated with warmth and elegance. Vellora Stays offers intimate villa settings adorned with romantic décor, candlelight dinner arrangements, and thoughtful touches that make your celebration truly personal. Whether it is your first anniversary or your silver jubilee, our team curates every detail — from fresh floral arrangements to personalised playlists — to create an evening filled with love, laughter, and cherished memories by the lake.",
+      "Every anniversary marks a beautiful chapter in your love story, and it deserves to be celebrated with warmth and elegance. Velora Stays offers intimate villa settings adorned with romantic décor, candlelight dinner arrangements, and thoughtful touches that make your celebration truly personal. Whether it is your first anniversary or your silver jubilee, our team curates every detail — from fresh floral arrangements to personalised playlists — to create an evening filled with love, laughter, and cherished memories by the lake.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070",
     gallery: [
       { id: "ann-img-1", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Anniversary romantic dinner setup at villa" },
@@ -172,11 +172,11 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Host impactful corporate offsites in our luxury villas with modern connectivity, stunning views, and dedicated event coordination.",
     longDescription:
-      "Beyond conferences, Vellora Stays is your partner for inspiring corporate offsites. Whether you are planning a team retreat, brainstorming session, or company celebration, our villas adapt to your requirements with ease. Equipped with high-speed WiFi, meeting setups, and breathtaking natural surroundings, our venues leave a lasting impression on your team. Our event coordinators work closely with your team to ensure flawless execution from concept to completion, while the serene Pawna Lake setting provides the perfect backdrop for creativity and collaboration.",
+      "Beyond conferences, Velora Stays is your partner for inspiring corporate offsites. Whether you are planning a team retreat, brainstorming session, or company celebration, our villas adapt to your requirements with ease. Equipped with high-speed WiFi, meeting setups, and breathtaking natural surroundings, our venues leave a lasting impression on your team. Our event coordinators work closely with your team to ensure flawless execution from concept to completion, while the serene Pawna Lake setting provides the perfect backdrop for creativity and collaboration.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070",
     gallery: [
       { id: "corp-img-1", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Corporate offsite setup in villa" },
-      { id: "corp-img-2", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Team meeting at Vellora Stays" },
+      { id: "corp-img-2", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Team meeting at Velora Stays" },
       { id: "corp-img-3", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Team building activity by the pool" },
     ],
     capacity: 50,
@@ -253,10 +253,10 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "From reunions to festive celebrations, enjoy our spacious villas for every kind of family gathering with private pool and BBQ.",
     longDescription:
-      "Life is full of moments worth celebrating with the people who matter most. Vellora Stays offers warm, welcoming villas for all kinds of family gatherings — be it a family reunion, festive party, or a casual get-together with relatives. Our customisable menus, spacious villas, and attentive service ensure that every gathering feels special. With private pools, gardens, and BBQ areas, you can create the perfect atmosphere for connection and celebration in the beautiful setting of Pawna Lake.",
+      "Life is full of moments worth celebrating with the people who matter most. Velora Stays offers warm, welcoming villas for all kinds of family gatherings — be it a family reunion, festive party, or a casual get-together with relatives. Our customisable menus, spacious villas, and attentive service ensure that every gathering feels special. With private pools, gardens, and BBQ areas, you can create the perfect atmosphere for connection and celebration in the beautiful setting of Pawna Lake.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070",
     gallery: [
-      { id: "fam-img-1", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Family gathering at Vellora Stays villa" },
+      { id: "fam-img-1", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Family gathering at Velora Stays villa" },
       { id: "fam-img-2", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Family celebration by the pool" },
       { id: "fam-img-3", src: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=2070", alt: "Family dinner under the stars" },
     ],

@@ -5,17 +5,17 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { REVIEWS, REVIEWS_CONTENT, REVIEW_PLATFORMS } from "@/data/reviews";
 
 export const metadata: Metadata = {
-  title: "Guest Reviews | Vellora Stays",
+  title: "Guest Reviews | Velora Stays",
   description:
-    "Read verified guest reviews for Vellora Stays. See ratings from Google, Booking.com, MakeMyTrip, and more.",
-  openGraph: { title: "Guest Reviews | Vellora Stays", description: REVIEWS_CONTENT.description },
+    "Read verified guest reviews for Velora Stays. See ratings from Google, Booking.com, MakeMyTrip, and more.",
+  openGraph: { title: "Guest Reviews | Velora Stays", description: REVIEWS_CONTENT.description },
 };
 
 export default function ReviewsPage() {
   return (
     <>
       <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Reviews", url: "/reviews" }])} />
-      <JsonLd schema={{ "@context": "https://schema.org", "@type": "LodgingBusiness", name: "Vellora Stays", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "47" } }} />
+      <JsonLd schema={{ "@context": "https://schema.org", "@type": "LodgingBusiness", name: "Velora Stays", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "47" } }} />
 
       <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

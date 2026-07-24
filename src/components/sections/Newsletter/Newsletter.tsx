@@ -24,7 +24,7 @@ export default function Newsletter() {
           <Icon icon="lucide:mail" width={32} height={32} className={styles.icon} />
           <h2 className={`${styles.heading} font-oswald`}>Stay in the Loop</h2>
           <p className={styles.description}>
-            Subscribe to our newsletter for exclusive offers, travel tips, and the latest updates from Vellora Stays.
+            Subscribe to our newsletter for exclusive offers, travel tips, and the latest updates from Velora Stays.
           </p>
 
           {submitted ? (

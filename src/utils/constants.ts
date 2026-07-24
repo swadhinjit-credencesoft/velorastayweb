@@ -1,5 +1,5 @@
 export const SITE_CONSTANTS = {
-  PROPERTY_NAME: "Vellora Stays",
+  PROPERTY_NAME: "Velora Stays",
   PROPERTY_TAGLINE: "Luxury Villas Near Pawna Lake, Lonavala",
   DEFAULT_CURRENCY: "₹",
   MIN_PRICE: 8000,

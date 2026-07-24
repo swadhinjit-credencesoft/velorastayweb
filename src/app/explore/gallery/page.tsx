@@ -6,12 +6,12 @@ import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
 import styles from "./Gallery.module.scss";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Vellora Stays Lonavala",
+  title: "Photo Gallery | Velora Stays Lonavala",
   description:
-    "Browse stunning photos of Vellora Stays — our elegant villas, fine dining, event spaces, and the vibrant city of Lonavala. A visual journey through our villa and destination.",
+    "Browse stunning photos of Velora Stays — our elegant villas, fine dining, event spaces, and the vibrant city of Lonavala. A visual journey through our villa and destination.",
   alternates: { canonical: "/explore/gallery" },
   openGraph: {
-    title: "Photo Gallery | Vellora Stays Lonavala",
+    title: "Photo Gallery | Velora Stays Lonavala",
     description: "Explore our villa and Lonavala through stunning photographs.",
     url: `${SITE_INFO.url}/explore/gallery`,
   },
@@ -31,7 +31,7 @@ export default function GalleryPage() {
           <p className={styles.eyebrow}>Explore</p>
           <h1 className={styles.title}>Gallery</h1>
           <p className={styles.subtitle}>
-            A visual journey through Vellora Stays and the enchanting city of
+            A visual journey through Velora Stays and the enchanting city of
             Lonavala. Browse our curated collection of photographs.
           </p>
         </div>
