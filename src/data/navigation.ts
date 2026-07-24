@@ -145,7 +145,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const NAV_CTA = {
   label: "Book a Stay",
-  href: "/contact",
+  href: "https://bookone.io/Velora-Stays?bookingEngine=true",
   icon: "lucide:calendar-check",
 };
 
@@ -186,7 +186,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     links: [
       { id: "footer-contact", label: "Contact Us", href: "/contact" },
       { id: "footer-faq", label: "FAQs", href: "/faq" },
-      { id: "footer-booking", label: "Book Now", href: "/contact" },
+      { id: "footer-booking", label: "Book Now", href: "https://bookone.io/Velora-Stays?bookingEngine=true" },
       { id: "footer-cancellation", label: "Cancellation Policy", href: "/faq#cancellation" },
     ],
   },

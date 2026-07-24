@@ -30,7 +30,7 @@ export default function HomePage() {
         heading="Book Your Perfect Villa Today"
         description="Join hundreds of happy guests who have chosen Velora Stays for their Pawna Lake getaway. Private pool, bonfire, BBQ, and stunning lake views await."
         buttons={[
-          { label: "Book Now", href: "/booking", variant: "primary" },
+          { label: "Book Now", href: "https://bookone.io/Velora-Stays?bookingEngine=true", variant: "primary" },
           { label: "View Villas", href: "/villas", variant: "outline" },
         ]}
       />

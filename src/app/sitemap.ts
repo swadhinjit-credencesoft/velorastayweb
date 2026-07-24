@@ -21,7 +21,6 @@ const staticPages = [
   "/about/careers",
   "/about/sustainability",
   "/contact",
-  "/booking",
   "/search",
   "/reviews",
   "/faq",

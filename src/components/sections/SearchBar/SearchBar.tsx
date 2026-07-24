@@ -101,7 +101,7 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
       <Button
         variant="accent"
         size="lg"
-        href="/villas"
+        href="https://bookone.io/Velora-Stays?bookingEngine=true"
         icon="lucide:search"
         className={styles.searchBtn}
       >

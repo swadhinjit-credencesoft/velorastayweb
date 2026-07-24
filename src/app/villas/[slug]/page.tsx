@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -164,7 +163,7 @@ export default function VillaDetailPage({ params }: VillaPageProps) {
                   {villa.originalPrice && <span className={styles.originalPrice}>{villa.currency}{villa.originalPrice.toLocaleString("en-IN")}</span>}
                 </div>
                 <p className={styles.priceUnit}>per {villa.priceUnit}</p>
-                <Link href="/booking" className={styles.bookBtn}>Book Now</Link>
+                <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className={styles.bookBtn}>Book Now</a>
                 <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
                 <div className={styles.bookingDetails}>
                   <div className={styles.bookingDetailRow}><span>Check-in</span><strong>{SITE_INFO.checkIn}</strong></div>

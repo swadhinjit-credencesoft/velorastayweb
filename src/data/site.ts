@@ -204,8 +204,10 @@ export const NAV_LINKS: NavLink[] = [
   { id: "nav-contact", label: "Contact Us", href: "/contact" },
 ];
 
+export const BOOKING_URL = "https://bookone.io/Velora-Stays?bookingEngine=true";
+
 export const NAV_CTA = {
   label: "Check Availability",
-  href: "/contact",
+  href: "https://bookone.io/Velora-Stays?bookingEngine=true",
   icon: "lucide:calendar-check",
 };

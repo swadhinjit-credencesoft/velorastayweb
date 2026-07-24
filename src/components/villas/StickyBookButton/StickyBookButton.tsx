@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import styles from "./StickyBookButton.module.scss";
@@ -45,10 +44,10 @@ export default function StickyBookButton({
             <span className={styles.unit}>/ night</span>
           </span>
         </div>
-        <Link href={`/villas/${slug}`} className={styles.bookBtn}>
+        <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className={styles.bookBtn}>
           <Icon icon="lucide:calendar-check" width={16} height={16} />
           Book Now
-        </Link>
+        </a>
       </div>
     </div>
   );

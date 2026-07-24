@@ -1,6 +1,5 @@
 import Icon from "@/components/Icon/Icon";
 import Badge from "@/components/ui/Badge/Badge";
-import Button from "@/components/ui/Button/Button";
 import styles from "./VillaPricing.module.scss";
 
 interface VillaPricingProps {
@@ -58,16 +57,15 @@ export default function VillaPricing({
         </span>
       </div>
 
-      <Button
-        variant="accent"
-        size="lg"
-        href={`/villas/${villaSlug}`}
-        icon="lucide:calendar-check"
-        iconPosition="left"
-        className={styles.bookButton}
+      <a
+        href="https://bookone.io/Velora-Stays?bookingEngine=true"
+        className={`${styles.bookButton} ${styles.accentButton}`}
+        target="_blank"
+        rel="noopener noreferrer"
       >
+        <Icon icon="lucide:calendar-check" width={18} height={18} />
         Book Now
-      </Button>
+      </a>
     </div>
   );
 }

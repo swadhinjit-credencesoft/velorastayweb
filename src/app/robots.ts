@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/api/", "/booking"] },
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
     ],
     sitemap: "https://velorastays.in/sitemap.xml",
   };

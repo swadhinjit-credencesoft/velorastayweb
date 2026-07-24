@@ -107,7 +107,7 @@ export default function OfferDetailPage({ params }: Props) {
               <hr className={styles.sidebarDivider} />
               <p className={styles.sidebarLabel}>Use promo code</p>
               <p className={styles.sidebarCode}>{offer.code}</p>
-              <Link href="/booking" className={styles.bookBtn}>Book Now</Link>
+              <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className={styles.bookBtn}>Book Now</a>
               <Link href="/contact" className={styles.askBtn}>Ask a Question</Link>
             </div>
 

@@ -44,7 +44,7 @@ export const VILLAS: VillaType[] = [
       "The 4 BHK Villa at Velora Stays is the perfect choice for smaller families and groups looking for premium privacy and comfort. Featuring 4 beautifully appointed master bedrooms, each with attached ensuite bathrooms, the villa offers a cosy yet luxurious retreat nestled amidst the scenic hills near Pawna Lake. The open-plan living area flows seamlessly into the outdoor spaces, where you can enjoy panoramic views of the surrounding mountains and the tranquil lake below.",
     longDescription:
       "Designed for intimate gatherings of 10 to 12 guests, the 4 BHK Villa combines modern luxury with the natural beauty of Lonavala's landscape. Each of the four bedrooms features a king-size bed with premium linens, individual air conditioning, and an ensuite bathroom equipped with hot water and complimentary toiletries. The spacious living room is furnished with comfortable seating and a large Smart TV, making it ideal for family movie nights or casual relaxation. The fully equipped kitchen includes a refrigerator, microwave, electric kettle, and all the utensils you need to prepare meals. Step outside onto the expansive lawn area, perfect for outdoor games and evening gatherings around the bonfire. The private swimming pool overlooks the sweeping hills, providing the perfect spot to unwind while taking in the breathtaking sunset views. Whether you are planning a quiet family weekend or a close-knit gathering with friends, the 4 BHK Villa offers an unmatched blend of privacy, comfort, and natural beauty.",
-    price: 15000,
+    price: 12000,
     originalPrice: 18000,
     currency: "₹",
     priceUnit: "per night",
@@ -144,7 +144,7 @@ export const VILLAS: VillaType[] = [
       "The 5 BHK Villa is our most sought-after configuration, comfortably hosting 10 to 15 guests across five beautifully designed master bedrooms. Each room offers stunning views of the Pawna Lake landscape, with private balconies that invite you to soak in the serene surroundings. The villa features a grand living area, a fully equipped kitchen, and access to the expansive outdoor spaces including the private pool, lush lawn, and bonfire area.",
     longDescription:
       "The 5 BHK Villa at Velora Stays represents the perfect balance of space, luxury, and value. Five fully furnished bedrooms, each with a king-size bed, premium linens, attached bathroom, and individual climate control, ensure every guest enjoys maximum comfort. The villa's open-plan design connects the indoor living spaces with the outdoors through large windows and sliding doors that frame the breathtaking Pawna Lake scenery. The living room features comfortable seating arrangements, a large Smart TV, and a Bluetooth speaker system for your entertainment. The kitchen is fully stocked with modern appliances including a refrigerator, microwave, gas stove, and all necessary cookware and utensils. Outside, the sprawling green lawn offers space for outdoor games, evening strolls, and gathering under the stars. The private swimming pool, perched on the hillside with panoramic views, is the crown jewel of the outdoor experience. As evening falls, gather around the bonfire pit for storytelling and BBQ under the open sky. The 5 BHK Villa is the ideal choice for family reunions, friend groups, and corporate team outings looking for a premium yet affordable retreat near Pawna Lake.",
-    price: 20000,
+    price: 15000,
     originalPrice: 25000,
     currency: "₹",
     priceUnit: "per night",
@@ -245,7 +245,7 @@ export const VILLAS: VillaType[] = [
       "The 7 BHK Grand Villa is the crown jewel of Velora Stays — an expansive estate designed for large groups, corporate retreats, and grand celebrations. With seven luxurious bedrooms, multiple viewing decks, a massive living area, and complete privacy, this villa accommodates 14 to 20 guests in absolute comfort and style.",
     longDescription:
       "The 7 BHK Grand Villa at Velora Stays redefines luxury group accommodation near Pawna Lake. Seven beautifully appointed bedrooms — each with king-size beds, premium linens, attached bathrooms, and individual climate control — ensure every guest enjoys a restful night's sleep. The grand living area features multiple seating zones, a large Smart TV, and floor-to-ceiling windows that offer panoramic views of the Pawna Lake landscape. The fully equipped kitchen is designed for large groups, with ample storage, multiple cooking stations, and all the appliances needed to prepare feasts for 20 guests. The outdoor spaces are equally impressive: a massive green lawn perfect for team-building activities, a private swimming pool with a dedicated deck area, multiple viewing points for sunrise and sunset, and a grand bonfire and BBQ area designed for large gatherings. The 7 BHK Grand Villa is the ultimate destination for milestone celebrations, corporate offsites, multi-family reunions, and anyone seeking the finest luxury villa experience near Pawna Lake. With complete estate buyout, maximum guest capacity, and unmatched privacy, this is where unforgettable memories are made.",
-    price: 35000,
+    price: 21000,
     originalPrice: 42000,
     currency: "₹",
     priceUnit: "per night",

@@ -1,18 +1,7 @@
-import type { Metadata } from "next";
-import BookingForm from "./BookingForm";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Book Your Stay | Velora Stays",
-  description:
-    "Book your luxury villa near Pawna Lake, Lonavala. Choose from 4 BHK, 5 BHK, and 7 BHK villas with stunning lake views.",
-  alternates: { canonical: "/booking" },
-  openGraph: {
-    title: "Book Your Stay | Velora Stays",
-    description: "Book your luxury villa near Pawna Lake, Lonavala.",
-    url: "https://velorastays.in/booking",
-  },
-};
+const BOOKING_ENGINE_URL = "https://bookone.io/Velora-Stays?bookingEngine=true";
 
 export default function BookingPage() {
-  return <BookingForm />;
+  redirect(BOOKING_ENGINE_URL);
 }

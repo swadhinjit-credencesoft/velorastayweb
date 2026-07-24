@@ -1,6 +1,7 @@
 export const SITE_CONSTANTS = {
   PROPERTY_NAME: "Velora Stays",
   PROPERTY_TAGLINE: "Luxury Villas Near Pawna Lake, Lonavala",
+  BOOKING_ENGINE_URL: "https://bookone.io/Velora-Stays?bookingEngine=true",
   DEFAULT_CURRENCY: "₹",
   MIN_PRICE: 8000,
   MAX_PRICE: 35000,
