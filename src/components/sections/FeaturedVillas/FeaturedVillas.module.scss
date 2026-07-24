@@ -1,0 +1,115 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+}
+
+.container {
+  @include m.container;
+}
+
+// ─── Header ──────────────────────────────────────────────
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: v.$space-xl;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}
+
+// ─── Grid ────────────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-lg;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cardItem {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// ─── Room Info ───────────────────────────────────────────
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-sm;
+}
+
+.roomName {
+  font-family: v.$font-display;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.roomTagline {
+  font-size: 14px;
+  color: v.$color-text-muted;
+  line-height: 1.5;
+}
+
+.roomMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-md;
+  padding-top: v.$space-sm;
+  border-top: 1px solid v.$color-border;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+  font-size: 13px;
+  color: v.$color-text-muted;
+}
+
+.roomFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: v.$space-md;
+  margin-top: auto;
+}
+
+// ─── CTA ─────────────────────────────────────────────────
+
+.cta {
+  text-align: center;
+  margin-top: v.$space-xl;
+}

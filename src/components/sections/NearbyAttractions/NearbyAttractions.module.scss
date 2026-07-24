@@ -1,0 +1,154 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$neutral-50;
+}
+
+.container {
+  @include m.container;
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: v.$space-xl;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}
+
+// ─── Scroll Row ──────────────────────────────────────────
+
+.scrollRow {
+  display: flex;
+  gap: v.$space-md;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: v.$space-md;
+  @include m.custom-scrollbar;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: 0 0 260px;
+  scroll-snap-align: start;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  overflow: hidden;
+  transition: box-shadow v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    box-shadow: v.$shadow-md;
+  }
+
+  @media (min-width: v.$bp-md) {
+    flex: 0 0 300px;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform v.$duration-slow v.$ease-standard;
+
+  .card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.distanceBadge {
+  position: absolute;
+  bottom: v.$space-sm;
+  right: v.$space-sm;
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+  padding: 4px 10px;
+  border-radius: v.$radius-full;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.cardContent {
+  padding: v.$space-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: v.$space-sm;
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 600;
+  color: v.$color-primary;
+}
+
+.cardTravel {
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+  font-size: 12px;
+  color: v.$color-text-muted;
+}
+
+// ─── View All ────────────────────────────────────────────
+
+.viewAll {
+  text-align: center;
+  margin-top: v.$space-lg;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-sm;
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$color-accent-dark;
+  transition: gap v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    gap: v.$space-md;
+  }
+}

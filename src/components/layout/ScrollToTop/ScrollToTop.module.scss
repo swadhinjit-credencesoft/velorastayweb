@@ -1,0 +1,45 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.button {
+  position: fixed;
+  bottom: v.$space-lg;
+  right: v.$space-lg;
+  z-index: v.$z-floating-card;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: v.$radius-full;
+  border: none;
+  background-color: v.$neutral-900;
+  color: v.$color-text-on-dark;
+  cursor: pointer;
+  box-shadow: v.$shadow-lg;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity v.$duration-standard v.$ease-standard,
+    visibility v.$duration-standard v.$ease-standard,
+    transform v.$duration-standard v.$ease-standard,
+    background-color v.$duration-fast v.$ease-standard;
+
+  @include m.focus-ring;
+
+  &:hover {
+    background-color: v.$color-accent;
+    color: v.$color-text-on-accent;
+    transform: translateY(0);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

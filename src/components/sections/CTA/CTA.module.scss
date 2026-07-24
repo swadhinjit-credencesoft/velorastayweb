@@ -1,0 +1,78 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$color-surface;
+}
+
+.withBg {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: v.$color-text-on-dark;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.7));
+  z-index: 0;
+}
+
+.container {
+  @include m.container;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-md;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+
+  .withBg & {
+    color: v.$color-accent;
+  }
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  .withBg & {
+    color: #fff;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+
+  .withBg & {
+    color: v.$neutral-400;
+  }
+
+  .section:not(.withBg) & {
+    color: v.$color-text-muted;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: v.$space-md;
+  margin-top: v.$space-md;
+}

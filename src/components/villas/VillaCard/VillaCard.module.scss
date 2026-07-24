@@ -1,0 +1,239 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.card {
+  @include m.card-surface;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  @include m.card-surface-hover;
+
+  @media (max-width: v.$bp-sm - 1) {
+    flex-direction: row;
+    border-radius: v.$radius-md;
+  }
+}
+
+// ─── Image ──────────────────────────────────────────────────
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+
+  @media (max-width: v.$bp-sm - 1) {
+    flex-shrink: 0;
+    width: 120px;
+    aspect-ratio: 1;
+  }
+}
+
+.image {
+  object-fit: cover;
+  transition: transform v.$duration-slow v.$ease-standard;
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+.badgeOverlay {
+  position: absolute;
+  top: v.$space-md;
+  left: v.$space-md;
+  z-index: 2;
+}
+
+.discountBadge {
+  position: absolute;
+  top: v.$space-md;
+  right: v.$space-md;
+  z-index: 2;
+
+  @media (max-width: v.$bp-sm - 1) {
+    top: auto;
+    bottom: v.$space-md;
+    right: v.$space-md;
+  }
+}
+
+// ─── Content ────────────────────────────────────────────────
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: v.$space-lg;
+  gap: v.$space-md;
+
+  @media (max-width: v.$bp-sm - 1) {
+    padding: v.$space-md;
+    gap: v.$space-sm;
+    justify-content: space-between;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+}
+
+.name {
+  font-family: v.$font-display;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 13px;
+  color: v.$color-text-muted;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @media (max-width: v.$bp-sm - 1) {
+    display: none;
+  }
+}
+
+// ─── Meta ───────────────────────────────────────────────────
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-md;
+
+  @media (max-width: v.$bp-sm - 1) {
+    gap: v.$space-sm;
+  }
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-xs;
+  font-size: 12px;
+  color: v.$color-text-muted;
+
+  svg {
+    color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+// ─── Amenities ──────────────────────────────────────────────
+
+.amenities {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+
+  @media (max-width: v.$bp-sm - 1) {
+    display: none;
+  }
+}
+
+.amenityIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: v.$radius-sm;
+  background-color: v.$neutral-100;
+  color: v.$color-text-muted;
+  transition: background-color v.$duration-fast v.$ease-standard,
+    color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-light;
+    color: v.$color-accent-dark;
+  }
+}
+
+.amenityMore {
+  font-size: 11px;
+  font-weight: 600;
+  color: v.$color-accent;
+  padding-left: v.$space-xs;
+}
+
+// ─── Footer ─────────────────────────────────────────────────
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: v.$space-md;
+  border-top: 1px solid v.$color-border;
+  margin-top: auto;
+
+  @media (max-width: v.$bp-sm - 1) {
+    padding-top: v.$space-sm;
+  }
+}
+
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-xs;
+  flex-wrap: wrap;
+}
+
+.originalPrice {
+  font-size: 13px;
+  color: v.$color-text-muted;
+  text-decoration: line-through;
+}
+
+.price {
+  font-family: v.$font-display;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: v.$color-primary;
+  letter-spacing: -0.02em;
+}
+
+.priceUnit {
+  font-size: 11px;
+  color: v.$color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-xs;
+  padding: v.$space-sm v.$space-md;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: v.$color-primary;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-full;
+  transition: all v.$duration-standard v.$ease-standard;
+
+  .card:hover & {
+    background-color: v.$color-primary;
+    color: v.$color-text-on-dark;
+    border-color: v.$color-primary;
+  }
+
+  @media (max-width: v.$bp-sm - 1) {
+    padding: v.$space-xs v.$space-sm;
+    font-size: 10px;
+  }
+}

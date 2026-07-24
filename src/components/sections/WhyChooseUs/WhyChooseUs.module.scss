@@ -1,0 +1,162 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$neutral-50;
+}
+
+.container {
+  @include m.container;
+}
+
+// ─── Layout ──────────────────────────────────────────────
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-xl;
+  align-items: center;
+  margin-bottom: v.$space-xl;
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$space-2xl;
+  }
+}
+
+// ─── Image Column ────────────────────────────────────────
+
+.imageCol {
+  position: relative;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: v.$radius-xl;
+  overflow: hidden;
+
+  @media (min-width: v.$bp-lg) {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+// ─── Content Column ──────────────────────────────────────
+
+.contentCol {
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+  margin-bottom: v.$space-lg;
+}
+
+// ─── Stats ───────────────────────────────────────────────
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-md;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+  padding: v.$space-md;
+  border-radius: v.$radius-md;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  color: v.$color-accent;
+}
+
+.statValue {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: v.$color-primary;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: v.$color-text-muted;
+}
+
+// ─── Badges Grid ─────────────────────────────────────────
+
+.badgesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.badgeCard {
+  display: flex;
+  align-items: flex-start;
+  gap: v.$space-md;
+  padding: v.$space-lg;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+
+  &:hover {
+    box-shadow: v.$shadow-md;
+  }
+}
+
+.badgeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  flex-shrink: 0;
+}
+
+.badgeLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: v.$color-primary;
+  margin-bottom: 2px;
+}
+
+.badgeValue {
+  font-size: 13px;
+  color: v.$color-text-muted;
+}

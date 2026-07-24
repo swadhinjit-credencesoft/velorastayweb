@@ -1,0 +1,65 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$neutral-50;
+}
+
+.container {
+  @include m.container;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-lg;
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: v.$space-xl;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: v.$space-sm;
+  padding: v.$space-lg;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  transition: box-shadow v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    box-shadow: v.$shadow-md;
+  }
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: v.$radius-full;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+}
+
+.value {
+  font-family: v.$font-display;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: v.$color-primary;
+}
+
+.label {
+  font-size: 14px;
+  color: v.$color-text-muted;
+  line-height: 1.4;
+}

@@ -1,0 +1,39 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.card {
+  @include m.card-surface;
+  overflow: hidden;
+  border-radius: v.$radius-lg;
+}
+
+.hoverable {
+  @include m.card-surface-hover;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform v.$duration-slow v.$ease-standard;
+}
+
+.hoverable:hover .image {
+  transform: scale(1.05);
+}
+
+.badgeOverlay {
+  position: absolute;
+  top: v.$space-md;
+  left: v.$space-md;
+  z-index: 2;
+}
+
+.content {
+  padding: v.$space-lg;
+}

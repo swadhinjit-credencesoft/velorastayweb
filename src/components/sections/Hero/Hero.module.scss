@@ -1,0 +1,203 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: v.$nav-height * -1;
+  padding-top: v.$nav-height;
+}
+
+// ─── Slider ──────────────────────────────────────────────
+
+.slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity v.$duration-slow v.$ease-standard;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.slideImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+// ─── Content ─────────────────────────────────────────────
+
+.content {
+  position: relative;
+  z-index: 2;
+  @include m.container;
+  padding-top: v.$space-xl;
+  padding-bottom: v.$space-xl;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xl;
+
+  @media (min-width: v.$bp-lg) {
+    padding-top: v.$space-lg;
+  }
+}
+
+.textBlock {
+  max-width: 700px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: v.$color-accent;
+  font-weight: 500;
+  margin-bottom: v.$space-md;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: v.$space-md;
+}
+
+.subtitle {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+  margin-bottom: v.$space-lg;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-md;
+}
+
+.ghostBtn {
+  color: #fff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+// ─── Search Section ──────────────────────────────────────
+
+.searchSection {
+  width: 100%;
+  max-width: 900px;
+
+  @media (max-width: v.$bp-lg) {
+    display: none;
+  }
+}
+
+// ─── Stats Row ───────────────────────────────────────────
+
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-lg) {
+    gap: v.$space-lg;
+  }
+}
+
+.statBadge {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: v.$space-sm v.$space-md;
+  border-radius: v.$radius-full;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+.statValue {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.statLabel {
+  display: block;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+// ─── Dots ────────────────────────────────────────────────
+
+.dots {
+  position: absolute;
+  bottom: v.$space-lg;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: v.$space-sm;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: v.$radius-full;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.dotActive {
+  background-color: v.$color-accent;
+  width: 28px;
+}

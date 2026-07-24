@@ -1,0 +1,112 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$neutral-50;
+}
+
+.container {
+  @include m.container;
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: v.$space-xl;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}
+
+// ─── Layout ──────────────────────────────────────────────
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-xl;
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: 280px 1fr;
+    gap: v.$space-2xl;
+  }
+}
+
+// ─── Sidebar ─────────────────────────────────────────────
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
+
+  @media (min-width: v.$bp-lg) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: v.$space-xs;
+    position: sticky;
+    top: calc(v.$nav-height + v.$space-md);
+    align-self: flex-start;
+  }
+}
+
+.categoryBtn {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: 12px v.$space-md;
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$color-text-muted;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-md;
+  background: v.$color-surface;
+  cursor: pointer;
+  transition: all v.$duration-fast v.$ease-standard;
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    border-color: v.$color-accent;
+    color: v.$color-primary;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    width: auto;
+  }
+}
+
+.active {
+  background-color: v.$neutral-900;
+  color: v.$color-text-on-dark;
+  border-color: v.$neutral-900;
+
+  &:hover {
+    color: v.$color-text-on-dark;
+  }
+}
+
+// ─── Content ─────────────────────────────────────────────
+
+.content {
+  min-width: 0;
+}

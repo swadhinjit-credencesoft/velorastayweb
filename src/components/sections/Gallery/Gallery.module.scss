@@ -1,0 +1,156 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+}
+
+.container {
+  @include m.container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: v.$space-lg;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+}
+
+// ─── Tabs ────────────────────────────────────────────────
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: v.$space-sm;
+  margin-bottom: v.$space-xl;
+}
+
+.tab {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: v.$color-text-muted;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-full;
+  background: none;
+  cursor: pointer;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    border-color: v.$color-primary;
+    color: v.$color-primary;
+  }
+}
+
+.activeTab {
+  background-color: v.$neutral-900;
+  color: v.$color-text-on-dark;
+  border-color: v.$neutral-900;
+
+  &:hover {
+    color: v.$color-text-on-dark;
+  }
+}
+
+// ─── Grid ────────────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: v.$space-md;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gridItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+
+  &:nth-child(1) {
+    grid-column: span 2;
+    aspect-ratio: 16 / 10;
+
+    @media (min-width: v.$bp-lg) {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+  }
+}
+
+.gridImage {
+  object-fit: cover;
+  transition: transform v.$duration-slow v.$ease-standard;
+
+  .gridItem:hover & {
+    transform: scale(1.08);
+  }
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-sm;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  opacity: 0;
+  transition: all v.$duration-standard v.$ease-standard;
+
+  .gridItem:hover & {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.caption {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 v.$space-md;
+}
+
+// ─── Lightbox ────────────────────────────────────────────
+
+.lightboxImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImg {
+  width: 100%;
+  height: auto;
+  border-radius: v.$radius-md;
+  object-fit: contain;
+  max-height: 70vh;
+}

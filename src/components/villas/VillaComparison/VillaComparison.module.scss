@@ -1,0 +1,199 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity v.$duration-slow v.$ease-standard,
+    transform v.$duration-slow v.$ease-standard;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scrollContainer {
+  overflow-x: auto;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  @include m.custom-scrollbar;
+
+  @media (max-width: v.$bp-md - 1) {
+    margin-inline: calc(-1 * v.$space-md);
+    border-radius: 0;
+    border-inline: none;
+  }
+}
+
+// ─── Table ──────────────────────────────────────────────────
+
+.table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.labelCol {
+  width: 150px;
+  min-width: 150px;
+  text-align: left;
+  padding: v.$space-lg;
+  background-color: v.$color-surface;
+  border-bottom: 1px solid v.$color-border;
+  border-right: 1px solid v.$color-border;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+
+  @media (max-width: v.$bp-md - 1) {
+    width: 120px;
+    min-width: 120px;
+    padding: v.$space-md;
+  }
+}
+
+.roomCol {
+  min-width: 180px;
+  padding: v.$space-lg;
+  background-color: v.$color-surface;
+  border-bottom: 1px solid v.$color-border;
+  border-right: 1px solid v.$color-border;
+  text-align: center;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: v.$bp-md - 1) {
+    min-width: 150px;
+    padding: v.$space-md;
+  }
+}
+
+// ─── Room Header ────────────────────────────────────────────
+
+.roomHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-sm;
+}
+
+.roomTag {
+  @include m.badge-accent;
+  font-size: 9px;
+  padding: 2px 8px;
+}
+
+.roomName {
+  font-family: v.$font-display;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+.discountBadge {
+  display: inline-flex;
+  padding: 2px 8px;
+  border-radius: v.$radius-full;
+  background-color: #ecfdf5;
+  color: v.$color-success;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.bookBtn {
+  @include m.pill-button;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: v.$space-sm v.$space-lg;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: v.$color-primary;
+  color: v.$color-text-on-dark;
+  margin-top: v.$space-xs;
+
+  &:hover {
+    background-color: v.$neutral-800;
+    transform: translateY(-1px);
+    box-shadow: v.$shadow-sm;
+  }
+}
+
+// ─── Rows ───────────────────────────────────────────────────
+
+.row {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity v.$duration-slow v.$ease-standard,
+    transform v.$duration-slow v.$ease-standard;
+
+  .visible & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:nth-child(even) td {
+    background-color: v.$neutral-50;
+  }
+}
+
+.labelCell {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: v.$space-md v.$space-lg;
+  font-weight: 600;
+  font-size: 13px;
+  color: v.$color-text-main;
+  border-bottom: 1px solid v.$color-border;
+  border-right: 1px solid v.$color-border;
+  white-space: nowrap;
+  background-color: v.$color-surface;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+
+  svg {
+    color: v.$color-accent;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: v.$bp-md - 1) {
+    padding: v.$space-sm v.$space-md;
+    font-size: 12px;
+  }
+}
+
+.valueCell {
+  padding: v.$space-md v.$space-lg;
+  text-align: center;
+  color: v.$color-text-muted;
+  border-bottom: 1px solid v.$color-border;
+  border-right: 1px solid v.$color-border;
+  font-size: 13px;
+  line-height: 1.5;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: v.$bp-md - 1) {
+    padding: v.$space-sm v.$space-md;
+    font-size: 12px;
+  }
+}
+
+.highlighted {
+  background-color: v.$color-accent-light !important;
+  color: v.$color-accent-dark;
+  font-weight: 600;
+}

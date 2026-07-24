@@ -1,0 +1,90 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.stickyBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: v.$z-floating-card;
+  transform: translateY(100%);
+  transition: transform v.$duration-standard v.$ease-standard;
+  pointer-events: none;
+
+  // visible on mobile only
+  @media (min-width: v.$bp-lg) {
+    display: none;
+  }
+
+  &.visible {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$space-md;
+  padding: v.$space-md v.$space-lg;
+  background-color: v.$color-surface;
+  border-top: 1px solid v.$color-border;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.roomName {
+  font-size: 13px;
+  font-weight: 600;
+  color: v.$color-primary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-xs;
+  font-family: v.$font-display;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: v.$color-primary;
+}
+
+.currency {
+  font-size: 0.75rem;
+}
+
+.unit {
+  font-family: v.$font-body;
+  font-size: 11px;
+  color: v.$color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bookBtn {
+  @include m.pill-button;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: v.$space-sm;
+  background-color: v.$color-accent;
+  color: v.$color-text-on-accent;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+  }
+}

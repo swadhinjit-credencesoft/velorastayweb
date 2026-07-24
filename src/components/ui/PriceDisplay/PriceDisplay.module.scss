@@ -1,0 +1,30 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.priceDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-sm;
+  flex-wrap: wrap;
+}
+
+.original {
+  font-size: 14px;
+  color: v.$color-text-muted;
+  text-decoration: line-through;
+}
+
+.current {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: v.$color-primary;
+  letter-spacing: -0.02em;
+}
+
+.unit {
+  font-size: 12px;
+  color: v.$color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,311 @@
+@use "sass:color";
+@use "variables" as v;
+
+// ─── Layout ───────────────────────────────────────────────
+@mixin container {
+  width: 100%;
+  max-width: v.$max-content-width;
+  margin-inline: auto;
+  padding-inline: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    padding-inline: v.$space-lg;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    padding-inline: v.$space-xl;
+  }
+}
+
+@mixin container-narrow {
+  @include container;
+  max-width: 900px;
+}
+
+@mixin container-wide {
+  @include container;
+  max-width: 1600px;
+}
+
+@mixin section-padding {
+  padding-block: v.$space-xl;
+
+  @media (min-width: v.$bp-lg) {
+    padding-block: v.$space-2xl;
+  }
+}
+
+@mixin section-padding-sm {
+  padding-block: v.$space-lg;
+
+  @media (min-width: v.$bp-lg) {
+    padding-block: v.$space-xl;
+  }
+}
+
+@mixin section-padding-dark {
+  @include section-padding;
+  background-color: v.$neutral-900;
+  color: v.$color-text-on-dark;
+}
+
+// ─── Surfaces ─────────────────────────────────────────────
+@mixin glass-surface {
+  background: v.$color-glass;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+@mixin glass-surface-dark {
+  background: rgba(15, 15, 15, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+@mixin card-surface {
+  background: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  box-shadow: v.$shadow-card;
+}
+
+@mixin card-surface-hover {
+  transition: transform v.$duration-standard v.$ease-standard,
+    box-shadow v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: v.$shadow-card-hover;
+  }
+}
+
+// ─── Buttons ──────────────────────────────────────────────
+@mixin pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-sm;
+  border-radius: v.$radius-full;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 14px 28px;
+  transition: all v.$duration-standard v.$ease-standard;
+  cursor: pointer;
+  border: none;
+}
+
+@mixin button-primary {
+  @include pill-button;
+  background-color: v.$neutral-900;
+  color: v.$color-text-on-dark;
+
+  &:hover {
+    background-color: v.$neutral-800;
+    transform: translateY(-1px);
+    box-shadow: v.$shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin button-secondary {
+  @include pill-button;
+  background-color: transparent;
+  color: v.$color-primary;
+  border: 1.5px solid v.$color-border;
+
+  &:hover {
+    border-color: v.$color-primary;
+    background-color: v.$neutral-100;
+  }
+}
+
+@mixin button-accent {
+  @include pill-button;
+  background-color: v.$color-accent;
+  color: v.$color-text-on-accent;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+    transform: translateY(-1px);
+    box-shadow: v.$shadow-md;
+  }
+}
+
+@mixin button-ghost {
+  @include pill-button;
+  background-color: transparent;
+  color: v.$color-primary;
+
+  &:hover {
+    background-color: v.$neutral-100;
+  }
+}
+
+// ─── Typography ───────────────────────────────────────────
+@mixin heading-display {
+  font-family: v.$font-display;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@mixin eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: v.$color-accent;
+  font-weight: 500;
+}
+
+// ─── Focus & Accessibility ────────────────────────────────
+@mixin focus-ring {
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid v.$color-accent;
+    outline-offset: 2px;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// ─── Image ────────────────────────────────────────────────
+@mixin grayscale-media {
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+@mixin image-overlay {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+    pointer-events: none;
+  }
+}
+
+// ─── Grid Patterns ────────────────────────────────────────
+@mixin hairline-grid($gap: 1px, $bg: v.$color-border) {
+  display: grid;
+  gap: $gap;
+  background-color: $bg;
+  border-radius: v.$radius-lg;
+  overflow: hidden;
+
+  > * {
+    background-color: v.$color-surface;
+  }
+}
+
+// ─── Badges ───────────────────────────────────────────────
+@mixin badge {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-xs;
+  padding: 4px 12px;
+  border-radius: v.$radius-full;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@mixin badge-accent {
+  @include badge;
+  background-color: v.$color-accent;
+  color: v.$color-text-on-accent;
+}
+
+@mixin badge-success {
+  @include badge;
+  background-color: #ecfdf5;
+  color: v.$color-success;
+}
+
+// ─── Animations ───────────────────────────────────────────
+@mixin hover-lift {
+  transition: transform v.$duration-standard v.$ease-standard,
+    box-shadow v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: v.$shadow-xl;
+  }
+}
+
+@mixin hover-scale {
+  transition: transform v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+@mixin hover-glow {
+  transition: box-shadow v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    box-shadow: 0 0 0 4px v.$color-accent-light;
+  }
+}
+
+// ─── Scrollbar ────────────────────────────────────────────
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: v.$neutral-300;
+    border-radius: v.$radius-full;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: v.$neutral-400;
+  }
+}
+
+// ─── Responsive Helpers ───────────────────────────────────
+@mixin mobile-only {
+  @media (min-width: v.$bp-lg) {
+    display: none;
+  }
+}
+
+@mixin desktop-only {
+  display: none;
+
+  @media (min-width: v.$bp-lg) {
+    display: block;
+  }
+}
+
+@mixin tablet-up {
+  display: none;
+
+  @media (min-width: v.$bp-md) {
+    display: block;
+  }
+}

@@ -1,0 +1,174 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+}
+
+.container {
+  @include m.container;
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: v.$space-xl;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}
+
+// ─── Carousel ────────────────────────────────────────────
+
+.carouselWrap {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: v.$space-lg;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: v.$space-md;
+  @include m.custom-scrollbar;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: 0 0 360px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-md;
+  padding: v.$space-lg;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  box-shadow: v.$shadow-card;
+  transition: box-shadow v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    box-shadow: v.$shadow-card-hover;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    flex: 0 0 420px;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: v.$radius-full;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-size: 15px;
+  font-weight: 600;
+  color: v.$color-primary;
+}
+
+.platform {
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+  font-size: 12px;
+  color: v.$color-text-muted;
+  text-transform: capitalize;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+  font-size: 11px;
+  font-weight: 500;
+  color: v.$color-success;
+  padding: 3px 8px;
+  border-radius: v.$radius-full;
+  background-color: #ecfdf5;
+}
+
+.reviewText {
+  font-size: 14px;
+  line-height: 1.65;
+  color: v.$color-text-muted;
+}
+
+.date {
+  font-size: 12px;
+  color: v.$neutral-400;
+}
+
+// ─── Dots ────────────────────────────────────────────────
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: v.$space-sm;
+  margin-top: v.$space-lg;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: v.$radius-full;
+  background-color: v.$neutral-300;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$neutral-400;
+  }
+}
+
+.dotActive {
+  background-color: v.$color-accent;
+  width: 24px;
+}

@@ -1,0 +1,115 @@
+@use "variables" as v;
+
+// ─── Base Typography ──────────────────────────────────────
+
+.font-display {
+  font-family: v.$font-display;
+}
+
+.font-body {
+  font-family: v.$font-body;
+}
+
+.font-mono {
+  font-family: v.$font-mono;
+}
+
+// ─── Headings ─────────────────────────────────────────────
+
+.heading-xl {
+  font-family: v.$font-display;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.heading-lg {
+  font-family: v.$font-display;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.heading-md {
+  font-family: v.$font-display;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.heading-sm {
+  font-family: v.$font-display;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.heading-xs {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+// ─── Body ─────────────────────────────────────────────────
+
+.body-lg {
+  font-size: 18px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}
+
+.body-md {
+  font-size: 16px;
+  line-height: 1.65;
+  color: v.$color-text-muted;
+}
+
+.body-sm {
+  font-size: 14px;
+  line-height: 1.6;
+  color: v.$color-text-muted;
+}
+
+.body-xs {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+// ─── Utility Text ─────────────────────────────────────────
+
+.text-accent {
+  color: v.$color-accent;
+}
+
+.text-muted {
+  color: v.$color-text-muted;
+}
+
+.text-dark {
+  color: v.$color-primary;
+}
+
+.text-on-dark {
+  color: v.$color-text-on-dark;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.15em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.04em;
+}

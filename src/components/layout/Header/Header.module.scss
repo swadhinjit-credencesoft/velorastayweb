@@ -1,0 +1,361 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: v.$z-nav;
+  height: v.$nav-height;
+  transition: height v.$duration-standard v.$ease-standard,
+    background-color v.$duration-standard v.$ease-standard,
+    box-shadow v.$duration-standard v.$ease-standard;
+
+  &.scrolled {
+    height: v.$nav-height-scrolled;
+    @include m.glass-surface;
+    box-shadow: v.$shadow-glass;
+  }
+}
+
+.inner {
+  @include m.container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+
+  .scrolled & {
+    font-size: 1.25rem;
+  }
+
+  .home & {
+    color: #fff;
+  }
+}
+
+.desktopNav {
+  @include m.desktop-only;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$color-text-main;
+  text-decoration: none;
+  border-radius: v.$radius-sm;
+  transition: color v.$duration-fast v.$ease-standard,
+    background-color v.$duration-fast v.$ease-standard;
+  white-space: nowrap;
+
+  &:hover,
+  &.navLinkActive {
+    color: v.$color-accent;
+    background-color: rgba(v.$color-accent, 0.06);
+  }
+
+  .home & {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover,
+    &.navLinkActive {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.chevron {
+  transition: transform v.$duration-fast v.$ease-standard;
+
+  .navLinkActive & {
+    transform: rotate(180deg);
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: v.$radius-full;
+  border: 1px solid transparent;
+  background: transparent;
+  color: v.$color-text-main;
+  cursor: pointer;
+  transition: background-color v.$duration-fast v.$ease-standard,
+    border-color v.$duration-fast v.$ease-standard;
+
+  @include m.focus-ring;
+
+  &:hover {
+    background-color: v.$neutral-100;
+    border-color: v.$color-border;
+  }
+
+  .home & {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.ctaButton {
+  @include m.button-accent;
+  font-size: 12px;
+  padding: 8px 14px;
+  white-space: nowrap;
+
+  @media (min-width: v.$bp-sm) {
+    padding: 8px 16px;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
+
+.ctaIcon {
+  @media (max-width: #{v.$bp-xs - 1px}) {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+
+  @media (max-width: #{v.$bp-lg - 1px}) {
+    display: flex;
+  }
+  @media (min-width: v.$bp-lg) {
+    display: none;
+  }
+
+  @include m.focus-ring;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: v.$color-primary;
+  border-radius: 1px;
+  transition: transform v.$duration-standard v.$ease-standard,
+    opacity v.$duration-fast v.$ease-standard;
+
+  .home & {
+    background-color: #fff;
+  }
+}
+
+.hamburgerOpen {
+  .hamburgerLine:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburgerLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburgerLine:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+.megaOverlay {
+  position: fixed;
+  top: v.$nav-height;
+  left: 0;
+  right: 0;
+  z-index: v.$z-mega-menu;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: fadeIn v.$duration-fast v.$ease-standard;
+
+  .scrolled & {
+    top: v.$nav-height-scrolled;
+  }
+}
+
+.megaContent {
+  @include m.glass-surface;
+  border-top: 1px solid v.$color-border;
+  box-shadow: v.$shadow-xl;
+  animation: fadeInDown v.$duration-standard v.$ease-out;
+}
+
+.megaInner {
+  @include m.container;
+  padding-block: v.$space-lg;
+}
+
+.megaHeader {
+  margin-bottom: v.$space-lg;
+}
+
+.megaTitle {
+  font-family: v.$font-display;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: v.$color-accent;
+  }
+}
+
+.megaSubtitle {
+  display: block;
+  margin-top: v.$space-2xs;
+  font-size: 13px;
+  color: v.$color-text-muted;
+}
+
+.megaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.megaCard {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: v.$space-md;
+  border-radius: v.$radius-md;
+  text-decoration: none;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$neutral-100;
+  }
+}
+
+.megaCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent;
+}
+
+.megaCardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.megaCardLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$color-text-main;
+}
+
+.megaCardDesc {
+  display: block;
+  font-size: 12px;
+  color: v.$color-text-muted;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.megaCardArrow {
+  flex-shrink: 0;
+  color: v.$color-text-muted;
+  opacity: 0;
+  transition: opacity v.$duration-fast v.$ease-standard,
+    transform v.$duration-fast v.$ease-standard;
+
+  .megaCard:hover & {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

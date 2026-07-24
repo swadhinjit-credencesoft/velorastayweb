@@ -1,0 +1,102 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.policies {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  overflow: hidden;
+}
+
+// ─── Item ───────────────────────────────────────────────────
+
+.item {
+  border-bottom: 1px solid v.$color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+// ─── Trigger ────────────────────────────────────────────────
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: v.$space-md;
+  width: 100%;
+  padding: v.$space-lg;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$neutral-50;
+  }
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: v.$radius-sm;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  transition: background-color v.$duration-fast v.$ease-standard,
+    color v.$duration-fast v.$ease-standard;
+
+  .open & {
+    background-color: v.$color-accent;
+    color: v.$color-text-on-accent;
+  }
+}
+
+.title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: v.$color-primary;
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: v.$color-text-muted;
+  transition: transform v.$duration-accordion v.$ease-standard;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+// ─── Content ────────────────────────────────────────────────
+
+.contentWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows v.$duration-accordion v.$ease-standard;
+
+  .open & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.content {
+  overflow: hidden;
+
+  > * {
+    padding: 0 v.$space-lg v.$space-lg;
+    padding-left: calc(v.$space-lg + 36px + v.$space-md);
+    font-size: 14px;
+    line-height: 1.7;
+    color: v.$color-text-muted;
+    margin: 0;
+  }
+}

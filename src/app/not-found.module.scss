@@ -1,0 +1,125 @@
+@use "../styles/variables" as v;
+@use "../styles/mixins" as m;
+
+.page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: v.$space-xl;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(v.$color-accent, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(v.$color-accent, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 520px;
+}
+
+.code {
+  display: block;
+  font-family: v.$font-display;
+  font-size: clamp(6rem, 15vw, 10rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: transparent;
+  background: linear-gradient(135deg, v.$color-accent 0%, #e8c87a 50%, v.$color-accent-dark 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  margin: v.$space-lg auto;
+  background: linear-gradient(90deg, transparent, v.$color-accent, transparent);
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: v.$space-md;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 400px;
+  margin: 0 auto v.$space-xl;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-md;
+  margin-bottom: v.$space-xl;
+}
+
+.primaryBtn {
+  @include m.button-accent;
+  padding: 14px 32px;
+  font-size: 14px;
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: v.$radius-md;
+  text-decoration: none;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-sm;
+}
+
+.link {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    color: v.$color-accent;
+  }
+}
+
+.dot {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+}

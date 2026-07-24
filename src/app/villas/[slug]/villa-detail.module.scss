@@ -1,0 +1,344 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.page {
+  @include m.container;
+  padding-block: v.$space-lg;
+}
+
+/* ── Image Gallery ─────────────────────────────── */
+.gallery {
+  display: grid;
+  gap: 4px;
+  border-radius: v.$radius-lg;
+  overflow: hidden;
+  margin-bottom: v.$space-lg;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.galleryMain {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  grid-column: 1 / -1;
+
+  @media (min-width: v.$bp-sm) {
+    height: 350px;
+  }
+
+  @media (min-width: v.$bp-md) {
+    height: 400px;
+  }
+}
+
+.gallerySide {
+  display: none;
+
+  @media (min-width: v.$bp-sm) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+  }
+}
+
+.gallerySideImg {
+  width: 100%;
+  height: 100%;
+  min-height: 170px;
+  object-fit: cover;
+
+  @media (min-width: v.$bp-md) {
+    min-height: 196px;
+  }
+}
+
+/* ── Content Layout ────────────────────────────── */
+.contentGrid {
+  display: grid;
+  gap: v.$space-lg;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: 2fr 1fr;
+    gap: v.$space-xl;
+  }
+}
+
+.main {
+  min-width: 0;
+}
+
+/* ── Header / Tag ──────────────────────────────── */
+.tag {
+  display: inline-block;
+  background-color: v.$color-accent;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: v.$radius-full;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.title {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: v.$space-xs;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 2rem;
+  }
+}
+
+.tagline {
+  color: v.$color-accent-dark;
+  font-size: 1rem;
+  margin-bottom: v.$space-lg;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 1.125rem;
+  }
+}
+
+/* ── Quick Stats ───────────────────────────────── */
+.quickStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: v.$space-sm v.$space-md;
+  margin-bottom: v.$space-lg;
+  padding: v.$space-md;
+  background-color: v.$neutral-50;
+  border-radius: v.$radius-md;
+  font-size: 0.875rem;
+
+  @media (min-width: v.$bp-sm) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$space-lg;
+  }
+
+  @media (min-width: v.$bp-md) {
+    font-size: 0.9375rem;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  @media (min-width: v.$bp-sm) {
+    flex-direction: row;
+    gap: v.$space-xs;
+  }
+
+  strong {
+    font-weight: 600;
+    color: v.$neutral-900;
+  }
+}
+
+.statLabel {
+  color: v.$neutral-500;
+
+  @media (min-width: v.$bp-sm) {
+    &::after {
+      content: ":";
+    }
+  }
+}
+
+/* ── Sections ──────────────────────────────────── */
+.sectionTitle {
+  font-family: v.$font-display;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: v.$space-sm;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.sectionTitleSm {
+  font-family: v.$font-display;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: v.$space-sm;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 1.125rem;
+  }
+}
+
+.bodyText {
+  line-height: 1.7;
+  color: v.$neutral-600;
+  margin-bottom: v.$space-lg;
+}
+
+/* ── Highlights ────────────────────────────────── */
+.highlightsList {
+  padding-left: v.$space-lg;
+  color: v.$neutral-600;
+  margin-bottom: v.$space-lg;
+}
+
+.highlightsList li {
+  margin-bottom: v.$space-sm;
+}
+
+/* ── Amenities Grid ────────────────────────────── */
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-sm;
+  margin-bottom: v.$space-xl;
+
+  @media (min-width: v.$bp-xs) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: v.$space-sm;
+  background-color: v.$neutral-50;
+  border-radius: v.$radius-sm;
+  font-size: 0.875rem;
+}
+
+/* ── Policies ──────────────────────────────────── */
+.policyItem {
+  margin-bottom: v.$space-md;
+}
+
+.policyTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.policyText {
+  color: v.$neutral-500;
+  line-height: 1.6;
+}
+
+/* ── Nearby ────────────────────────────────────── */
+.nearbyList {
+  padding-left: v.$space-lg;
+  color: v.$neutral-600;
+}
+
+.nearbyList li {
+  margin-bottom: 4px;
+}
+
+/* ── Sidebar / Booking Card ────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.bookingCard {
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  padding: v.$space-lg;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-xs;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: v.$color-accent-dark;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 2rem;
+  }
+}
+
+.originalPrice {
+  font-size: 0.875rem;
+  color: v.$neutral-400;
+  text-decoration: line-through;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 1rem;
+  }
+}
+
+.priceUnit {
+  color: v.$neutral-500;
+  margin-bottom: v.$space-lg;
+}
+
+.bookBtn {
+  display: block;
+  background-color: v.$color-accent;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  border-radius: v.$radius-md;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: v.$space-sm;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+  }
+}
+
+.callBtn {
+  display: block;
+  border: 1px solid v.$color-accent;
+  color: v.$color-accent-dark;
+  text-align: center;
+  padding: 14px;
+  border-radius: v.$radius-md;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-light;
+  }
+}
+
+.bookingDetails {
+  margin-top: v.$space-lg;
+  padding-top: v.$space-md;
+  border-top: 1px solid v.$color-border;
+  font-size: 0.875rem;
+  color: v.$neutral-500;
+}
+
+.bookingDetailRow {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: v.$space-sm;
+  }
+
+  strong {
+    color: v.$neutral-900;
+  }
+}

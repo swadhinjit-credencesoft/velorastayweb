@@ -1,0 +1,135 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.hero {
+  position: relative;
+  padding: v.$space-3xl v.$space-md v.$space-xl;
+  background: linear-gradient(135deg, v.$neutral-900 0%, #18181b 100%);
+  color: v.$color-text-on-dark;
+  text-align: center;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=80") center / cover no-repeat;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  @include m.container;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-sm;
+}
+
+.title {
+  @include m.heading-display;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: v.$space-md;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: v.$neutral-400;
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+.filters {
+  @include m.container;
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
+  padding-block: v.$space-lg 0;
+}
+
+.filterBtn {
+  @include m.badge;
+  padding: 6px 16px;
+  background: v.$neutral-100;
+  color: v.$color-text-muted;
+  border: 1px solid v.$color-border;
+  cursor: pointer;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover,
+  &.active {
+    background: v.$color-accent;
+    color: v.$color-text-on-accent;
+    border-color: v.$color-accent;
+  }
+}
+
+.grid {
+  @include m.container;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+  padding-block: v.$space-xl;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform v.$duration-slow v.$ease-standard;
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: v.$space-md;
+  opacity: 0;
+  transition: opacity v.$duration-standard v.$ease-standard;
+}
+
+.overlayText {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.count {
+  @include m.container;
+  padding-block: 0;
+  padding-bottom: v.$space-xl;
+  font-size: 0.85rem;
+  color: v.$color-text-muted;
+  text-align: center;
+}

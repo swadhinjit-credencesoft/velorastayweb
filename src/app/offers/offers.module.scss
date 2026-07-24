@@ -1,0 +1,165 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.gridSection {
+  @include m.section-padding;
+  background-color: v.$neutral-50;
+}
+
+.grid {
+  @include m.container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-lg;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: v.$color-surface;
+  border-radius: v.$radius-xl;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid v.$color-border;
+  transition: box-shadow v.$duration-standard v.$ease-standard,
+    transform v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    box-shadow: v.$shadow-xl;
+    transform: translateY(-4px);
+  }
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform v.$duration-slow v.$ease-standard;
+
+  .card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.discount {
+  position: absolute;
+  top: v.$space-md;
+  left: v.$space-md;
+  background-color: #ef4444;
+  color: #fff;
+  padding: 5px 16px;
+  border-radius: v.$radius-full;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.popular {
+  position: absolute;
+  top: v.$space-md;
+  right: v.$space-md;
+  background-color: v.$color-accent;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: v.$radius-full;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardBody {
+  padding: v.$space-lg;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-sm;
+  flex: 1;
+}
+
+.name {
+  font-family: v.$font-display;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: color v.$duration-fast v.$ease-standard;
+
+  .card:hover & {
+    color: v.$color-accent-dark;
+  }
+}
+
+.tagline {
+  font-size: 14px;
+  color: v.$color-accent-dark;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: v.$color-text-muted;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-xs;
+  margin-top: v.$space-xs;
+}
+
+.feature {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: v.$radius-sm;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  font-weight: 500;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: v.$space-md;
+  margin-top: auto;
+  border-top: 1px solid v.$color-border;
+}
+
+.code {
+  font-size: 13px;
+  color: v.$color-text-muted;
+
+  strong {
+    font-family: monospace;
+    color: v.$color-accent-dark;
+    font-weight: 700;
+  }
+}
+
+.viewLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: v.$color-accent-dark;
+  transition: color v.$duration-fast v.$ease-standard;
+
+  .card:hover & {
+    text-decoration: underline;
+  }
+}

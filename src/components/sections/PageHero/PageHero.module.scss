@@ -1,0 +1,65 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 340px;
+  padding: calc(v.$nav-height + v.$space-2xl) v.$space-lg v.$space-2xl;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  @media (min-width: v.$bp-lg) {
+    min-height: 400px;
+    padding: calc(v.$nav-height + v.$space-3xl) v.$space-lg v.$space-3xl;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 30, 0.6) 0%,
+    rgba(15, 15, 30, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  @include m.container;
+  width: 100%;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: v.$color-accent;
+  font-weight: 500;
+  margin-top: v.$space-md;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
+}

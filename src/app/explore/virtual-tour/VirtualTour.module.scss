@@ -1,0 +1,226 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.hero {
+  position: relative;
+  padding: v.$space-3xl v.$space-md v.$space-xl;
+  background: linear-gradient(135deg, v.$neutral-900 0%, #0c1222 100%);
+  color: v.$color-text-on-dark;
+  text-align: center;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1600&q=80") center / cover no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  @include m.container;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  margin-bottom: v.$space-sm;
+}
+
+.title {
+  @include m.heading-display;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: v.$space-md;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: v.$neutral-400;
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+.section {
+  @include m.container;
+  padding-block: v.$space-2xl;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
+  margin-bottom: v.$space-xl;
+}
+
+.tab {
+  @include m.badge;
+  padding: 10px 20px;
+  background: v.$neutral-100;
+  color: v.$color-text-muted;
+  border: 1px solid v.$color-border;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    border-color: v.$color-accent;
+    color: v.$color-accent;
+  }
+
+  &.active {
+    background: v.$color-accent;
+    color: v.$color-text-on-accent;
+    border-color: v.$color-accent;
+  }
+}
+
+.viewer {
+  position: relative;
+  border-radius: v.$radius-xl;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: v.$color-text-on-dark;
+  text-align: center;
+  margin-bottom: v.$space-lg;
+}
+
+.viewerIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: v.$radius-full;
+  border: 2px solid rgba(201, 169, 110, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: v.$space-md;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(201, 169, 110, 0);
+  }
+}
+
+.viewerTitle {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: v.$space-xs;
+}
+
+.viewerSub {
+  font-size: 0.9rem;
+  color: v.$neutral-400;
+  margin-bottom: v.$space-lg;
+}
+
+.viewerOverlay {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: v.$radius-xl;
+  pointer-events: none;
+}
+
+.viewerCorner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: v.$color-accent;
+  opacity: 0.5;
+
+  &.tl {
+    top: v.$space-md;
+    left: v.$space-md;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+
+  &.tr {
+    top: v.$space-md;
+    right: v.$space-md;
+    border-top: 2px solid;
+    border-right: 2px solid;
+  }
+
+  &.bl {
+    bottom: v.$space-md;
+    left: v.$space-md;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+  }
+
+  &.br {
+    bottom: v.$space-md;
+    right: v.$space-md;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+}
+
+.info {
+  @include m.card-surface;
+  padding: v.$space-xl;
+  margin-bottom: v.$space-lg;
+}
+
+.infoTitle {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: v.$space-sm;
+}
+
+.infoDesc {
+  font-size: 0.95rem;
+  color: v.$color-text-muted;
+  line-height: 1.7;
+  margin-bottom: v.$space-lg;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 v.$space-lg 0;
+  display: grid;
+  gap: v.$space-sm;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  font-size: 0.9rem;
+  color: v.$color-text-muted;
+}
+
+.highlightIcon {
+  color: v.$color-accent;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: v.$space-md;
+  flex-wrap: wrap;
+}
+
+.launchBtn {
+  @include m.button-accent;
+}

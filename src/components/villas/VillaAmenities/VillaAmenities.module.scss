@@ -1,0 +1,96 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xl;
+}
+
+.group {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity v.$duration-slow v.$ease-standard,
+    transform v.$duration-slow v.$ease-standard;
+
+  .visible & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.categoryTitle {
+  font-family: v.$font-display;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: v.$color-primary;
+  margin-bottom: v.$space-lg;
+  padding-bottom: v.$space-sm;
+  border-bottom: 2px solid v.$color-accent;
+  display: inline-block;
+}
+
+// ─── Grid ───────────────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: v.$space-md;
+
+  @media (max-width: v.$bp-lg - 1) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: v.$bp-md - 1) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: v.$bp-xs - 1) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: v.$space-md;
+  padding: v.$space-md;
+  border-radius: v.$radius-md;
+  border: 1px solid v.$color-border;
+  background-color: v.$color-surface;
+  transition: border-color v.$duration-fast v.$ease-standard,
+    background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    border-color: v.$color-accent;
+    background-color: v.$color-accent-light;
+  }
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: v.$radius-sm;
+  background-color: v.$neutral-100;
+  color: v.$color-accent-dark;
+  transition: background-color v.$duration-fast v.$ease-standard,
+    color v.$duration-fast v.$ease-standard;
+
+  .item:hover & {
+    background-color: v.$color-accent;
+    color: v.$color-text-on-accent;
+  }
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$color-text-main;
+  line-height: 1.3;
+}

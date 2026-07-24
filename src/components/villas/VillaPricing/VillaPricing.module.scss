@@ -1,0 +1,91 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-lg;
+  padding: v.$space-lg;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-surface;
+}
+
+// ─── Price Row ──────────────────────────────────────────────
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: v.$space-md;
+  flex-wrap: wrap;
+}
+
+.originalPriceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.originalLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: v.$color-text-muted;
+}
+
+.originalPrice {
+  font-size: 1rem;
+  color: v.$color-text-muted;
+  text-decoration: line-through;
+}
+
+.currentPriceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-sm;
+}
+
+.currentPrice {
+  font-family: v.$font-display;
+  font-size: 2rem;
+  font-weight: 500;
+  color: v.$color-primary;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.priceUnit {
+  font-size: 13px;
+  color: v.$color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// ─── Notes ──────────────────────────────────────────────────
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-sm;
+}
+
+.taxNote,
+.guaranteeNote {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-sm;
+  font-size: 13px;
+  color: v.$color-text-muted;
+
+  svg {
+    color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+// ─── CTA ────────────────────────────────────────────────────
+
+.bookButton {
+  width: 100%;
+  justify-content: center;
+}
