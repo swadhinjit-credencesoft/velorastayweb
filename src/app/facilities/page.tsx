@@ -92,7 +92,7 @@ export default function FacilitiesPage() {
                   >
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={facility.image || "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"}
+                        src={facility.image || "/schemaimage.jpeg"}
                         alt={facility.name}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"

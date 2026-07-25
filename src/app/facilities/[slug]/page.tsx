@@ -55,7 +55,7 @@ export default function FacilityDetailPage({ params }: Props) {
 
       <section className="relative h-[50vh] min-h-[400px]">
         <Image
-          src={facility.image || "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"}
+          src={facility.image || "/schemaimage.jpeg"}
           alt={facility.name}
           fill
           className="object-cover"
@@ -104,7 +104,7 @@ export default function FacilityDetailPage({ params }: Props) {
                   >
                     <div className="relative h-32 overflow-hidden">
                       <Image
-                        src={f.image || "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80"}
+                        src={f.image || "/schemaimage.jpeg"}
                         alt={f.name}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"

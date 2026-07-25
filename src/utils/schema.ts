@@ -41,7 +41,7 @@ export function generateHotelSchema() {
     priceRange: "₹8000 - ₹35000",
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200",
+    image: "/schemaimage.jpeg",
     sameAs: [
       "https://www.instagram.com/the_explorerstays",
     ],
@@ -71,7 +71,7 @@ export function generateLocalBusinessSchema() {
       latitude: SITE_INFO.geo.latitude,
       longitude: SITE_INFO.geo.longitude,
     },
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200",
+    image: "/schemaimage.jpeg",
     priceRange: "₹8000-₹35000",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",

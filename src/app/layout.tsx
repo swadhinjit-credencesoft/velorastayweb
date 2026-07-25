@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description: SITE_INFO.description,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200",
+        url: "/schemaimage.jpeg",
         width: 1200,
         height: 630,
         alt: SITE_INFO.name,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_INFO.name} | Luxury Villas Near Pawna Lake, Lonavala`,
     description: SITE_INFO.description,
-    images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200"],
+    images: ["/schemaimage.jpeg"],
   },
   robots: {
     index: true,
