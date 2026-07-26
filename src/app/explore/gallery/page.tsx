@@ -1,7 +1,9 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
+import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO } from "@/data/site";
+import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
 import styles from "./Gallery.module.scss";
 
@@ -20,6 +22,14 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <div>
+      <JsonLd
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Explore", url: `${SITE_INFO.url}/explore` },
+          { name: "Gallery", url: `${SITE_INFO.url}/explore/gallery` },
+        ])}
+      />
+
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <Breadcrumb

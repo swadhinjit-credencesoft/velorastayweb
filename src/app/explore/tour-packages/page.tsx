@@ -2,7 +2,9 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import Icon from "@/components/Icon/Icon";
+import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO } from "@/data/site";
+import { generateBreadcrumbSchema } from "@/utils/schema";
 import { TOUR_PACKAGES, TOURS_CONTENT } from "@/data/tours";
 import styles from "./Tours.module.scss";
 
@@ -21,6 +23,14 @@ export const metadata: Metadata = {
 export default function TourPackagesPage() {
   return (
     <div>
+      <JsonLd
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Explore", url: `${SITE_INFO.url}/explore` },
+          { name: "Tour Packages", url: `${SITE_INFO.url}/explore/tour-packages` },
+        ])}
+      />
+
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <Breadcrumb

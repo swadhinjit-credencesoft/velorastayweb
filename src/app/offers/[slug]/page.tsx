@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${offer.name} | Velora Stays Offers`,
     description: offer.description,
+    alternates: { canonical: `/offers/${offer.slug}` },
     openGraph: {
       title: `${offer.name} | Velora Stays`,
       description: offer.tagline,

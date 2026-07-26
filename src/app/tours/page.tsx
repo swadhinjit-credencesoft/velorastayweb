@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "heritage walk Lonavala",
     "food trail Lonavala",
   ],
+  alternates: { canonical: "/tours" },
   openGraph: {
     title: "Lonavala Tour Packages | Velora Stays",
     description: TOURS_CONTENT.description,

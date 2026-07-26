@@ -7,7 +7,7 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { EVENT_TYPES, EVENTS_CONTENT } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Events & Celebrations at Velora Stays",
+  title: "Events & Celebrations | Velora Stays",
   description:
     "Host weddings, conferences, birthday parties, and social gatherings at Velora Stays. Versatile event spaces with dedicated planning team in Lonavala.",
   keywords: [
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     "social gatherings villa",
     "event spaces Pawna Lake",
   ],
+  alternates: { canonical: "/events" },
   openGraph: {
     title: "Events & Celebrations | Velora Stays",
     description:

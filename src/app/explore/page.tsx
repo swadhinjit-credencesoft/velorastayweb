@@ -9,7 +9,7 @@ import styles from "./Explore.module.scss";
 export const metadata: Metadata = {
   title: "Explore Lonavala | Things to Do Near Velora Stays",
   description:
-    "Discover the best of Lonavala from Velora Stays. Explore curated experiences, nearby attractions, tour packages, photo gallery, and virtual tours of Pawna Lake and Lonavala.",
+    "Discover Lonavala from Velora Stays — curated experiences, nearby attractions, tour packages, photo gallery, and virtual tours of Pawna Lake.",
   alternates: { canonical: "/explore" },
   openGraph: {
     title: "Explore Lonavala | Velora Stays",

@@ -8,6 +8,7 @@ import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
 export const metadata: Metadata = {
   title: "Photo Gallery | Velora Stays",
   description: "Explore photos of villas, dining, events, facilities, and nearby attractions at Velora Stays Lonavala.",
+  alternates: { canonical: "/gallery" },
   openGraph: { title: "Photo Gallery | Velora Stays", description: "Take a visual tour of Velora Stays through our photo gallery." },
 };
 

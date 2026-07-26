@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "travel tips Lonavala",
     "Lonavala food guide",
   ],
+  alternates: { canonical: "/blog" },
   openGraph: {
     title: "Travel Blog | Velora Stays",
     description: BLOG_CONTENT.description,

@@ -17,8 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const attraction = getAttractionBySlug(params.slug);
   if (!attraction) return { title: "Attraction Not Found" };
   return {
-    title: `${attraction.name} | Nearby Attractions`,
+    title: `${attraction.name} | Velora Stays Nearby Attractions`,
     description: attraction.description,
+    alternates: { canonical: `/nearby/${attraction.slug}` },
     openGraph: {
       title: `${attraction.name} | Velora Stays`,
       description: attraction.description,

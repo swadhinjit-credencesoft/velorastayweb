@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${event.name} | Velora Stays Events`,
     description: event.description,
+    alternates: { canonical: `/events/${event.slug}` },
     openGraph: {
       title: `${event.name} | Velora Stays`,
       description: event.tagline,

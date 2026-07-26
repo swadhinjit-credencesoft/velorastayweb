@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import VirtualTourViewer from "./VirtualTourViewer";
+import JsonLd from "@/components/seo/JsonLd/JsonLd";
+import { SITE_INFO } from "@/data/site";
+import { generateBreadcrumbSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
   title: "Virtual Tour | Velora Stays",
@@ -14,5 +17,16 @@ export const metadata: Metadata = {
 };
 
 export default function VirtualTourPage() {
-  return <VirtualTourViewer />;
+  return (
+    <>
+      <JsonLd
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Explore", url: `${SITE_INFO.url}/explore` },
+          { name: "Virtual Tour", url: `${SITE_INFO.url}/explore/virtual-tour` },
+        ])}
+      />
+      <VirtualTourViewer />
+    </>
+  );
 }

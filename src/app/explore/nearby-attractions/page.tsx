@@ -2,14 +2,16 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import Icon from "@/components/Icon/Icon";
+import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO } from "@/data/site";
+import { generateBreadcrumbSchema } from "@/utils/schema";
 import { NEARBY_ATTRACTIONS, NEARBY_CONTENT, getAllCategories } from "@/data/nearby";
 import styles from "./Nearby.module.scss";
 
 export const metadata: Metadata = {
-  title: "Nearby Attractions in Lonavala | Velora Stays",
+  title: "Explore Nearby Attractions | Velora Stays",
   description:
-    "Explore the best attractions near Velora Stays in Pawna Lake, Lonavala. From Lion's Point and Bhushi Dam to temples, markets, and parks — discover everything Lonavala and Pawna Lake have to offer.",
+    "Discover the best attractions near Velora Stays in Pawna Lake, Lonavala — Lion's Point, Bhushi Dam, temples, markets, and more.",
   alternates: { canonical: "/explore/nearby-attractions" },
   openGraph: {
     title: "Nearby Attractions | Velora Stays Lonavala",
@@ -23,6 +25,14 @@ export default function NearbyAttractionsPage() {
 
   return (
     <div>
+      <JsonLd
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Explore", url: `${SITE_INFO.url}/explore` },
+          { name: "Nearby Attractions", url: `${SITE_INFO.url}/explore/nearby-attractions` },
+        ])}
+      />
+
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <Breadcrumb

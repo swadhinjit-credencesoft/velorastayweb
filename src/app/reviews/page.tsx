@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Guest Reviews | Velora Stays",
   description:
     "Read verified guest reviews for Velora Stays. See ratings from Google, Booking.com, MakeMyTrip, and more.",
+  alternates: { canonical: "/reviews" },
   openGraph: { title: "Guest Reviews | Velora Stays", description: REVIEWS_CONTENT.description },
 };
 

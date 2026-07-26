@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${tour.name} | Velora Stays Tours`,
     description: tour.description,
+    alternates: { canonical: `/tours/${tour.slug}` },
     openGraph: {
       title: `${tour.name} | Velora Stays`,
       description: tour.tagline,

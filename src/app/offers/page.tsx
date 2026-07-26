@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Special Offers & Deals | Velora Stays",
   description:
     "Save big with exclusive villa offers at Velora Stays. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
+  alternates: { canonical: "/offers" },
   openGraph: {
     title: "Special Offers | Velora Stays",
     description: OFFERS_CONTENT.description,

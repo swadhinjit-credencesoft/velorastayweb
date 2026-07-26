@@ -1,14 +1,16 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
+import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import Icon from "@/components/Icon/Icon";
 import { SITE_INFO } from "@/data/site";
+import { generateBreadcrumbSchema } from "@/utils/schema";
 import styles from "./Experiences.module.scss";
 
 export const metadata: Metadata = {
   title: "Curated Experiences in Lonavala | Velora Stays",
   description:
-    "Discover Lonavala with our curated experiences — heritage walks, street food tours, art district explorations, sunset river cruises, cooking classes, and shopping tours. Book now at Velora Stays.",
+    "Discover Lonavala with curated experiences — heritage walks, food tours, sunset cruises, cooking classes, and more. Book at Velora Stays.",
   alternates: { canonical: "/explore/experiences" },
   openGraph: {
     title: "Curated Experiences in Lonavala | Velora Stays",
@@ -77,6 +79,14 @@ const EXPERIENCES = [
 export default function ExperiencesPage() {
   return (
     <div>
+      <JsonLd
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Explore", url: `${SITE_INFO.url}/explore` },
+          { name: "Experiences", url: `${SITE_INFO.url}/explore/experiences` },
+        ])}
+      />
+
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <Breadcrumb

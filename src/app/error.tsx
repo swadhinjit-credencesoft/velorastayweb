@@ -8,7 +8,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh px-4 text-center">
+    <div className="flex flex-col items-center justify-center min-h-[60vh] px-4 text-center">
       <h2 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h2>
       <p className="text-gray-500 mb-6 max-w-md">
         An unexpected error occurred. Please try again or return to the homepage.

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Search | Velora Stays",
   description:
     "Search villas, facilities, and blog posts at Velora Stays near Pawna Lake, Lonavala.",
+  robots: { index: false, follow: false },
   alternates: { canonical: "/search" },
   openGraph: {
     title: "Search | Velora Stays",

@@ -7,6 +7,11 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 export const metadata: Metadata = {
   title: "Careers at Velora Stays | Join Our Team",
   description: "Explore career opportunities at Velora Stays. Join our growing team of hospitality professionals in Lonavala.",
+  alternates: { canonical: "/about/careers" },
+  openGraph: {
+    title: "Careers at Velora Stays",
+    description: "Explore career opportunities at Velora Stays. Join our growing team of hospitality professionals in Lonavala.",
+  },
 };
 
 export default function CareersPage() {

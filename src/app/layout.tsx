@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "weekend getaway Lonavala",
     "private pool villa Maharashtra",
     "group stay Pawna Lake",
-    "The Explorer Stays",
+    "Velora Stays",
   ],
   authors: [{ name: SITE_INFO.name }],
   creator: SITE_INFO.name,

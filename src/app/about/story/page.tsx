@@ -9,6 +9,11 @@ import { ABOUT_STORY, ABOUT_MILESTONES } from "@/data/about";
 export const metadata: Metadata = {
   title: "Our Story | Velora Stays",
   description: "Learn the story behind Velora Stays, from our founding in 2020 to becoming one of Lonavala's top-rated luxury villas.",
+  alternates: { canonical: "/about/story" },
+  openGraph: {
+    title: "Our Story | Velora Stays",
+    description: "Learn the story behind Velora Stays, from our founding in 2020 to becoming one of Lonavala's top-rated luxury villas.",
+  },
 };
 
 export default function StoryPage() {

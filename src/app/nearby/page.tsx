@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "Lonavala sightseeing",
     "tourist spots Lonavala",
   ],
+  alternates: { canonical: "/nearby" },
   openGraph: {
     title: "Nearby Attractions | Velora Stays",
     description: NEARBY_CONTENT.description,

@@ -7,6 +7,7 @@ import { FAQ_CATEGORIES } from "@/data/faq";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Velora Stays",
   description: "Find answers to common questions about booking, villas, dining, facilities, payment, and policies at Velora Stays Lonavala.",
+  alternates: { canonical: "/faq" },
   openGraph: { title: "FAQ | Velora Stays", description: "Get answers to all your questions about staying at Velora Stays." },
 };
 

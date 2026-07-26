@@ -8,6 +8,11 @@ import { SUSTAINABILITY } from "@/data/about";
 export const metadata: Metadata = {
   title: "Sustainability | Velora Stays",
   description: "Learn about Velora Stays' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+  alternates: { canonical: "/about/sustainability" },
+  openGraph: {
+    title: "Sustainability | Velora Stays",
+    description: "Learn about Velora Stays' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+  },
 };
 
 export default function SustainabilityPage() {

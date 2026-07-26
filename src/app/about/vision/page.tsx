@@ -8,6 +8,11 @@ import { ABOUT_VISION } from "@/data/about";
 export const metadata: Metadata = {
   title: "Our Vision | Velora Stays",
   description: "Explore the vision driving Velora Stays — to become Lonavala's most trusted and beloved luxury villa brand.",
+  alternates: { canonical: "/about/vision" },
+  openGraph: {
+    title: "Our Vision | Velora Stays",
+    description: "Explore the vision driving Velora Stays — to become Lonavala's most trusted and beloved luxury villa brand.",
+  },
 };
 
 export default function VisionPage() {

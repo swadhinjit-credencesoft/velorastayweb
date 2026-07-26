@@ -14,7 +14,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getLegalPage(params.slug);
   if (!page) return { title: "Page Not Found" };
-  return { title: `${page.title} | Velora Stays`, description: `Read our ${page.title.toLowerCase()} for Velora Stays villa in Lonavala.` };
+  const desc = `${page.title} — Velora Stays luxury villas near Pawna Lake, Lonavala.`;
+  return {
+    title: `${page.title} | Velora Stays`,
+    description: desc,
+    alternates: { canonical: `/legal/${page.slug}` },
+    openGraph: {
+      title: `${page.title} | Velora Stays`,
+      description: desc,
+    },
+  };
 }
 
 export default function LegalPage({ params }: Props) {
