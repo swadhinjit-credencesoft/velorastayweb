@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Velora Stays — Complete Website Content Dump</title>
+<style>
+body { font-family: 'Calibri', 'Segoe UI', Arial, sans-serif; font-size: 11pt; line-height: 1.5; margin: 40px; color: #222; }
+h1 { font-size: 20pt; color: #1a1a2e; border-bottom: 3px solid #d97706; padding-bottom: 6px; margin-top: 36px; }
+h2 { font-size: 16pt; color: #1a1a2e; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 28px; }
+h3 { font-size: 13pt; color: #d97706; margin-top: 20px; }
+h4 { font-size: 11pt; color: #444; margin-top: 14px; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0 20px; font-size: 10pt; }
+th, td { border: 1px solid #aaa; padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: #1a1a2e; color: #fff; font-weight: bold; }
+tr:nth-child(even) td { background: #f5f5f5; }
+.section { margin-bottom: 20px; }
+.tag { display: inline-block; background: #fef3c7; color: #92400e; padding: 1px 8px; border-radius: 3px; font-size: 9pt; margin: 1px; }
+.note { background: #eef; padding: 10px; border-left: 4px solid #d97706; margin: 10px 0; font-size: 10pt; }
+.policy { background: #f9f9f9; padding: 12px; border: 1px solid #ddd; margin: 10px 0; }
+.meta { color: #666; font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<h1>VELORA STAYS — COMPLETE WEBSITE CONTENT</h1>
+<p><strong>Generated:</strong> July 30, 2026 | <strong>Website:</strong> https://velorastays.in | <strong>Owner:</strong> The Explorer Stays</p>
+<p><strong>Phone:</strong> +91 9324248001 | <strong>Email:</strong> info@velorastays.in | <strong>Address:</strong> Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401</p>
+
+<hr>
+
+<h2>TABLE OF CONTENTS</h2>
+<ol>
+  <li>Site Identity &amp; Contact Information</li>
+  <li>Navigation Structure</li>
+  <li>Footer</li>
+  <li>Homepage (Hero, Stats, Trust Badges)</li>
+  <li>Villas — 4 BHK, 5 BHK, 7 BHK (Full Details)</li>
+  <li>Facilities / Amenities (All 16)</li>
+  <li>Nearby Attractions (All 12)</li>
+  <li>About Pages (Story, Mission, Vision, Values, Milestones, Sustainability)</li>
+  <li>Team Members (5) + Awards (5)</li>
+  <li>Guest Reviews (All 20)</li>
+  <li>FAQs (All 40)</li>
+  <li>Offers / Deals (All 8)</li>
+  <li>Events &amp; Celebrations (All 4 Event Types with Packages)</li>
+  <li>Tour Packages (All 5 with Full Itineraries)</li>
+  <li>Blog Posts (All 12 — Full Content)</li>
+  <li>Gallery (31 Images across 6 Categories)</li>
+  <li>Contact Page</li>
+  <li>Legal Pages (All 6 — Full Content)</li>
+  <li>SEO / Sitemap Data</li>
+  <li>Design Tokens / Style Variables</li>
+  <li>Technical Stack</li>
+</ol>
+
+<hr>
+
+<!-- ==================== 1. SITE IDENTITY ==================== -->
+<h1>1. SITE IDENTITY &amp; CONTACT INFORMATION</h1>
+
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Property Name</td><td>Velora Stays</td></tr>
+<tr><td>Tagline</td><td>Luxury Villas Near Pawna Lake</td></tr>
+<tr><td>Meta Description</td><td>Velora Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. 4 BHK, 5 BHK &amp; 7 BHK villas with stunning mountain views for family reunions &amp; weekend getaways.</td></tr>
+<tr><td>URL</td><td>https://velorastays.in</td></tr>
+<tr><td>Phone</td><td>+91 9324248001</td></tr>
+<tr><td>WhatsApp</td><td>+91 9324248001</td></tr>
+<tr><td>Email</td><td>info@velorastays.in</td></tr>
+<tr><td>Street</td><td>Gevhande Apati</td></tr>
+<tr><td>Area</td><td>Near Pawna Lake</td></tr>
+<tr><td>City</td><td>Lonavala</td></tr>
+<tr><td>State</td><td>Maharashtra</td></tr>
+<tr><td>Pincode</td><td>410401</td></tr>
+<tr><td>Country</td><td>India</td></tr>
+<tr><td>Full Address</td><td>Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401, India</td></tr>
+<tr><td>Latitude</td><td>18.7466</td></tr>
+<tr><td>Longitude</td><td>73.4833</td></tr>
+<tr><td>Check-In</td><td>2:00 PM</td></tr>
+<tr><td>Check-Out</td><td>11:00 AM</td></tr>
+<tr><td>Rating</td><td>5.0</td></tr>
+<tr><td>Review Count</td><td>47</td></tr>
+<tr><td>Booking Engine</td><td>https://bookone.io/Velora-Stays?bookingEngine=true</td></tr>
+</table>
+
+<h3>Social Links</h3>
+<table>
+<tr><th>Platform</th><th>URL</th></tr>
+<tr><td>Facebook</td><td>https://www.facebook.com/theexplorerstays</td></tr>
+<tr><td>Instagram</td><td>https://www.instagram.com/the_explorerstays</td></tr>
+<tr><td>Twitter</td><td>(empty)</td></tr>
+<tr><td>YouTube</td><td>(empty)</td></tr>
+<tr><td>TripAdvisor</td><td>(empty)</td></tr>
+<tr><td>Google Maps</td><td>https://maps.google.com/?q=Velora+Stays+Pawna+Lake</td></tr>
+</table>
+
+<h3>Site Assets</h3>
+<table>
+<tr><th>Asset</th><th>Path/URL</th></tr>
+<tr><td>Logo</td><td>/images/logo.svg</td></tr>
+<tr><td>Logo Light</td><td>/images/logo-light.svg</td></tr>
+<tr><td>Favicon</td><td>/favicon.ico</td></tr>
+<tr><td>About Image</td><td>/whychooseus.jpeg</td></tr>
+<tr><td>Contact Map Image</td><td>https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200</td></tr>
+<tr><td>Testimonial BG</td><td>https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070</td></tr>
+<tr><td>404 Image</td><td>https://images.unsplash.com/photo-1586611292717-f828b167408c?q=80&w=1200</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 1b. HERO SLIDES ==================== -->
+<h1>1b. HERO SLIDES</h1>
+
+<table>
+<tr><th>Slide</th><th>Image</th><th>Title</th><th>Subtitle</th><th>CTA</th></tr>
+<tr><td>1</td><td>/heroimg1.jpeg</td><td>Luxury Villa Staycation at Pawna Dam</td><td>Experience an exclusive private oasis featuring 4, 5, and 7 BHK configurations with stunning mountain views.</td><td>Check Availability → /contact</td></tr>
+<tr><td>2</td><td>/heroimg2.jpeg</td><td>Your Private Gateway in Lonavala</td><td>Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Explorer Stays.</td><td>Explore Villas → /villas</td></tr>
+<tr><td>3</td><td>/heroimg3.jpeg</td><td>Experience Luxury by the Lake</td><td>From private swimming pools to bonfire evenings, every moment at Velora Stays is crafted for unforgettable memories.</td><td>View Amenities → /facilities</td></tr>
+</table>
+
+<h3>Hero Stats</h3>
+<table>
+<tr><th>Stat</th><th>Value</th><th>Label</th></tr>
+<tr><td>Verified Reviews</td><td>50+</td><td>Verified Reviews</td></tr>
+<tr><td>Google Rating</td><td>5.0</td><td>Google Rating</td></tr>
+<tr><td>Happy Guests</td><td>500+</td><td>Happy Guests</td></tr>
+<tr><td>Guest Support</td><td>24/7</td><td>Guest Support</td></tr>
+</table>
+
+<h3>Trust Badges</h3>
+<table>
+<tr><th>Badge</th><th>Label</th><th>Value</th></tr>
+<tr><td>Private Pool</td><td>Private Pool</td><td>Exclusive Access</td></tr>
+<tr><td>Lake & Mountain View</td><td>Lake & Mountain View</td><td>Scenic Location</td></tr>
+<tr><td>Free WiFi</td><td>Free WiFi</td><td>High-Speed</td></tr>
+<tr><td>Secure Parking</td><td>Secure Parking</td><td>Free On-site</td></tr>
+<tr><td>24/7 Support</td><td>24/7 Support</td><td>Always Available</td></tr>
+<tr><td>Managed By</td><td>Managed By</td><td>The Explorer Stays</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 2. NAVIGATION ==================== -->
+<h1>2. NAVIGATION STRUCTURE</h1>
+
+<h3>Main Navigation (Desktop Dropdown Groups)</h3>
+
+<table>
+<tr><th>Group</th><th>Href</th><th>Child Links</th></tr>
+<tr><td><strong>The Villa</strong></td><td>/villas</td><td>All Villas (/villas), 4 BHK Villa (/villas/4-bhk-villa), 5 BHK Villa (/villas/5-bhk-villa), 7 BHK Grand Villa (/villas/7-bhk-villa)</td></tr>
+<tr><td><strong>Amenities</strong></td><td>/facilities</td><td>Outdoor & Pool (/facilities#outdoor), Kitchen & BBQ (/facilities#kitchen), Indoor Entertainment (/facilities#indoor)</td></tr>
+<tr><td><strong>Pawna Experience</strong></td><td>/nearby</td><td>Pawna Lake (/nearby#pawna-lake), Nearby Forts (/nearby#forts), Adventure Activities (/nearby#adventure)</td></tr>
+<tr><td><strong>More</strong></td><td>/gallery</td><td>Gallery (/gallery), Reviews (/reviews), FAQ (/faq), Contact (/contact)</td></tr>
+</table>
+
+<h3>Mobile / Simple Nav Links</h3>
+<table>
+<tr><th>Label</th><th>Href</th></tr>
+<tr><td>Home</td><td>/</td></tr>
+<tr><td>The Villa</td><td>/villas</td></tr>
+<tr><td>Amenities</td><td>/facilities</td></tr>
+<tr><td>Pawna Experience</td><td>/nearby</td></tr>
+<tr><td>Gallery</td><td>/gallery</td></tr>
+<tr><td>Contact Us</td><td>/contact</td></tr>
+</table>
+
+<h3>Nav CTA</h3>
+<p><strong>Book a Stay</strong> → https://bookone.io/Velora-Stays?bookingEngine=true</p>
+
+<hr>
+
+<!-- ==================== 3. FOOTER ==================== -->
+<h1>3. FOOTER</h1>
+
+<table>
+<tr><th>Group</th><th>Links</th></tr>
+<tr><td><strong>Villas</strong></td><td>About Us (/about), Our Villas (/villas), Amenities (/facilities), Gallery (/gallery), Guest Reviews (/reviews)</td></tr>
+<tr><td><strong>Villa Configurations</strong></td><td>4 BHK Villa (/villas/4-bhk-villa), 5 BHK Villa (/villas/5-bhk-villa), 7 BHK Grand Villa (/villas/7-bhk-villa)</td></tr>
+<tr><td><strong>Experience</strong></td><td>Pawna Lake (/nearby), Nearby Attractions (/nearby#forts), Adventure Activities (/nearby#adventure), Travel Blog (/blog)</td></tr>
+<tr><td><strong>Support</strong></td><td>Contact Us (/contact), FAQs (/faq), Book Now (bookone.io), Cancellation Policy (/faq#cancellation)</td></tr>
+<tr><td><strong>Legal</strong></td><td>Privacy Policy (/privacy), Terms & Conditions (/terms), Refund Policy (/refund), Sitemap (/sitemap.xml)</td></tr>
+</table>
+
+<p><strong>Footer Contact:</strong> Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401, India | +91 9324248001 | info@velorastays.in | 24/7 Guest Support</p>
+<p><strong>Footer Copyright:</strong>&copy; 2026 Velora Stays by The Explorer Stays. All rights reserved.</p>
+
+<hr>
+
+<!-- ==================== 4. HOMEPAGE ==================== -->
+<h1>4. HOMEPAGE COMPOSITION</h1>
+<p>The homepage at <code>/</code> (page.tsx) is composed of these sections in order:</p>
+<ol>
+  <li>Hero (with Search/Availability Bar)</li>
+  <li>Featured Villas (<code>FeaturedVillas</code> component — showcases 3 villas)</li>
+  <li>Why Choose Us (<code>WhyChooseUs</code> component)</li>
+  <li>Testimonials (<code>Testimonials</code> component — guest reviews carousel)</li>
+  <li>Gallery Preview (<code>Gallery</code> component — image grid)</li>
+  <li>Nearby Attractions (<code>NearbyAttractions</code> component)</li>
+  <li>FAQ Section (<code>FAQ</code> component — accordion)</li>
+  <li>CTA Section (Call to action with booking link)</li>
+</ol>
+
+<hr>
+
+<!-- ==================== 5. VILLAS ==================== -->
+<h1>5. VILLAS — FULL DETAILS</h1>
+
+<div class="section">
+<h2>Villas Section Header</h2>
+<p><strong>Eyebrow:</strong> Our Villas</p>
+<p><strong>Heading:</strong> Flexible Luxury Accommodations for Every Group Size</p>
+<p><strong>Description:</strong> At Velora Stays, we understand that no two getaways are the same. That is why our estate features highly flexible booking configurations. Depending on the specific subset of the estate you book, you can enjoy the property as an intimate 4 BHK, a spacious 5 BHK, or an expansive 7 BHK grand villa. Our premium estate hosts 10 to 15+ guests comfortably, offering stunning master bedrooms and ensuite bathrooms.</p>
+</div>
+
+<h3>Villa Amenities (Complete List — 24 amenities)</h3>
+<table>
+<tr><th>ID</th><th>Label</th><th>Category</th></tr>
+<tr><td>pool</td><td>Private Swimming Pool</td><td>outdoor</td></tr>
+<tr><td>lake-view</td><td>Lake & Mountain View</td><td>outdoor</td></tr>
+<tr><td>lawn</td><td>Expansive Living Lawn</td><td>outdoor</td></tr>
+<tr><td>bonfire</td><td>Bonfire Setup</td><td>outdoor</td></tr>
+<tr><td>bbq</td><td>BBQ Equipment</td><td>outdoor</td></tr>
+<tr><td>parking</td><td>Secure Parking</td><td>outdoor</td></tr>
+<tr><td>wifi</td><td>High-Speed WiFi</td><td>basic</td></tr>
+<tr><td>ac</td><td>Air Conditioning</td><td>basic</td></tr>
+<tr><td>smart-tv</td><td>Smart TV</td><td>entertainment</td></tr>
+<tr><td>bluetooth-speaker</td><td>Bluetooth Speaker</td><td>entertainment</td></tr>
+<tr><td>board-games</td><td>Board Games</td><td>entertainment</td></tr>
+<tr><td>kitchen</td><td>Fully Equipped Kitchen</td><td>kitchen</td></tr>
+<tr><td>refrigerator</td><td>Refrigerator</td><td>kitchen</td></tr>
+<tr><td>microwave</td><td>Microwave</td><td>kitchen</td></tr>
+<tr><td>electric-kettle</td><td>Electric Kettle</td><td>kitchen</td></tr>
+<tr><td>tea-coffee</td><td>Tea/Coffee Setup</td><td>kitchen</td></tr>
+<tr><td>power-backup</td><td>Power Backup</td><td>basic</td></tr>
+<tr><td>housekeeping</td><td>Daily Housekeeping</td><td>service</td></tr>
+<tr><td>caretaker</td><td>Dedicated Caretaker</td><td>service</td></tr>
+<tr><td>hot-water</td><td>Hot Water</td><td>bathroom</td></tr>
+<tr><td>toiletries</td><td>Premium Toiletries</td><td>bathroom</td></tr>
+<tr><td>premium-bedding</td><td>King Size Beds</td><td>comfort</td></tr>
+<tr><td>dining-area</td><td>Dining Area</td><td>basic</td></tr>
+<tr><td>balcony</td><td>Private Balcony</td><td>outdoor</td></tr>
+</table>
+
+<hr>
+
+<!-- ====== 5a. 4 BHK ====== -->
+<h2>5a. 4 BHK VILLA</h2>
+<table>
+<tr><td><strong>ID</strong></td><td>villa-4bhk</td></tr>
+<tr><td><strong>Slug</strong></td><td>4-bhk-villa</td></tr>
+<tr><td><strong>Name</strong></td><td>4 BHK Villa</td></tr>
+<tr><td><strong>Tagline</strong></td><td>Intimate luxury for smaller groups and families</td></tr>
+<tr><td><strong>Description</strong></td><td>The 4 BHK Villa at Velora Stays is the perfect choice for smaller families and groups looking for premium privacy and comfort. Featuring 4 beautifully appointed master bedrooms, each with attached ensuite bathrooms, the villa offers a cosy yet luxurious retreat nestled amidst the scenic hills near Pawna Lake. The open-plan living area flows seamlessly into the outdoor spaces, where you can enjoy panoramic views of the surrounding mountains and the tranquil lake below.</td></tr>
+<tr><td><strong>Long Description</strong></td><td>Designed for intimate gatherings of 10 to 12 guests, the 4 BHK Villa combines modern luxury with the natural beauty of Lonavala's landscape. Each of the four bedrooms features a king-size bed with premium linens, individual air conditioning, and an ensuite bathroom equipped with hot water and complimentary toiletries. The spacious living room is furnished with comfortable seating and a large Smart TV, making it ideal for family movie nights or casual relaxation. The fully equipped kitchen includes a refrigerator, microwave, electric kettle, and all the utensils you need to prepare meals. Step outside onto the expansive lawn area, perfect for outdoor games and evening gatherings around the bonfire. The private swimming pool overlooks the sweeping hills, providing the perfect spot to unwind while taking in the breathtaking sunset views. Whether you are planning a quiet family weekend or a close-knit gathering with friends, the 4 BHK Villa offers an unmatched blend of privacy, comfort, and natural beauty.</td></tr>
+<tr><td><strong>Price</strong></td><td>₹12,000 / night (Original: ₹18,000)</td></tr>
+<tr><td><strong>Bedrooms</strong></td><td>4</td></tr>
+<tr><td><strong>Bathrooms</strong></td><td>4</td></tr>
+<tr><td><strong>Max Occupancy</strong></td><td>12</td></tr>
+<tr><td><strong>Bed Config</strong></td><td>4 King Beds</td></tr>
+<tr><td><strong>View</strong></td><td>Mountain & Lake View</td></tr>
+<tr><td><strong>Tag</strong></td><td>Popular Choice</td></tr>
+<tr><td><strong>Available</strong></td><td>Yes</td></tr>
+</table>
+
+<h4>Images</h4>
+<table>
+<tr><th>ID</th><th>File</th><th>Alt</th></tr>
+<tr><td>villa4-1</td><td>/4BHKVilla.jpeg</td><td>Stunning 4 BHK villa exterior</td></tr>
+<tr><td>villa4-2</td><td>/4BHKVilla1.jpeg</td><td>Elegant 4 BHK villa interior</td></tr>
+<tr><td>villa4-3</td><td>/4BHKVilla2.jpeg</td><td>Spacious 4 BHK living area</td></tr>
+</table>
+
+<h4>Highlights</h4>
+<ul>
+  <li>4 master bedrooms with ensuite bathrooms</li>
+  <li>Private swimming pool with hill views</li>
+  <li>Expansive lawn for outdoor activities</li>
+  <li>Fully equipped kitchen for self-catering</li>
+</ul>
+
+<h4>Features</h4>
+<ul>
+  <li>King-size beds with premium linens</li>
+  <li>Individual AC in every bedroom</li>
+  <li>Smart TV in living area</li>
+  <li>Bonfire and BBQ setup included</li>
+</ul>
+
+<h4>Amenities (IDs)</h4>
+<p>pool, lake-view, lawn, bonfire, bbq, parking, wifi, ac, smart-tv, kitchen, refrigerator, microwave, electric-kettle, tea-coffee, power-backup, housekeeping, caretaker, hot-water, toiletries, premium-bedding, dining-area</p>
+
+<h4>Policies</h4>
+<table>
+<tr><th>Policy</th><th>Details</th></tr>
+<tr><td>Check-in & Check-out</td><td>Check-in: 2:00 PM, Check-out: 11:00 AM. Early/late available on request.</td></tr>
+<tr><td>Cancellation</td><td>Free up to 7 days before check-in. Within 7 days: 50% charge.</td></tr>
+<tr><td>Guest Policy</td><td>Max 12 guests. Additional guests with prior arrangement at extra charge.</td></tr>
+</table>
+
+<h4>FAQs</h4>
+<ol>
+  <li><strong>Is the swimming pool private?</strong> Yes, the swimming pool is exclusively for guests of the 4 BHK Villa. You will have complete privacy during your stay.</li>
+  <li><strong>Can we bring our own food and cook?</strong> Absolutely! The villa comes with a fully equipped kitchen. You can also opt for our in-house chef packages.</li>
+</ol>
+
+<h4>Nearby</h4>
+<ul>
+  <li>Pawna Lake — 5 min drive</li>
+  <li>Tikona Fort — 15 min drive</li>
+  <li>Lohagad Fort — 20 min drive</li>
+  <li>Lonavala Market — 25 min drive</li>
+</ul>
+
+<hr>
+
+<!-- ====== 5b. 5 BHK ====== -->
+<h2>5b. 5 BHK VILLA</h2>
+<table>
+<tr><td><strong>ID</strong></td><td>villa-5bhk</td></tr>
+<tr><td><strong>Slug</strong></td><td>5-bhk-villa</td></tr>
+<tr><td><strong>Name</strong></td><td>5 BHK Villa</td></tr>
+<tr><td><strong>Tagline</strong></td><td>Perfect for families and groups of friends</td></tr>
+<tr><td><strong>Description</strong></td><td>The 5 BHK Villa is our most sought-after configuration, comfortably hosting 10 to 15 guests across five beautifully designed master bedrooms. Each room offers stunning views of the Pawna Lake landscape, with private balconies that invite you to soak in the serene surroundings. The villa features a grand living area, a fully equipped kitchen, and access to the expansive outdoor spaces including the private pool, lush lawn, and bonfire area.</td></tr>
+<tr><td><strong>Long Description</strong></td><td>The 5 BHK Villa at Velora Stays represents the perfect balance of space, luxury, and value. Five fully furnished bedrooms, each with a king-size bed, premium linens, attached bathroom, and individual climate control, ensure every guest enjoys maximum comfort. The villa's open-plan design connects the indoor living spaces with the outdoors through large windows and sliding doors that frame the breathtaking Pawna Lake scenery. The living room features comfortable seating arrangements, a large Smart TV, and a Bluetooth speaker system for your entertainment. The kitchen is fully stocked with modern appliances including a refrigerator, microwave, gas stove, and all necessary cookware and utensils. Outside, the sprawling green lawn offers space for outdoor games, evening strolls, and gathering under the stars. The private swimming pool, perched on the hillside with panoramic views, is the crown jewel of the outdoor experience. As evening falls, gather around the bonfire pit for storytelling and BBQ under the open sky. The 5 BHK Villa is the ideal choice for family reunions, friend groups, and corporate team outings looking for a premium yet affordable retreat near Pawna Lake.</td></tr>
+<tr><td><strong>Price</strong></td><td>₹15,000 / night (Original: ₹25,000)</td></tr>
+<tr><td><strong>Bedrooms</strong></td><td>5</td></tr>
+<tr><td><strong>Bathrooms</strong></td><td>6</td></tr>
+<tr><td><strong>Max Occupancy</strong></td><td>15</td></tr>
+<tr><td><strong>Bed Config</strong></td><td>5 King Beds</td></tr>
+<tr><td><strong>View</strong></td><td>Lake & Mountain View</td></tr>
+<tr><td><strong>Tag</strong></td><td>Most Popular</td></tr>
+</table>
+
+<h4>Images</h4>
+<table>
+<tr><th>ID</th><th>File</th><th>Alt</th></tr>
+<tr><td>villa5-1</td><td>/5BHKVilla.jpeg</td><td>Luxurious 5 BHK villa exterior</td></tr>
+<tr><td>villa5-2</td><td>/5BHKVilla1.jpeg</td><td>Elegant 5 BHK villa interior</td></tr>
+<tr><td>villa5-3</td><td>/5BHKGrandVilla4.jpeg</td><td>Spacious 5 BHK living area</td></tr>
+</table>
+
+<h4>Highlights</h4>
+<ul>
+  <li>5 master bedrooms with private balconies</li>
+  <li>Private swimming pool overlooking the lake</li>
+  <li>Grand living area with Smart TV</li>
+  <li>Bonfire and BBQ area for evening gatherings</li>
+</ul>
+
+<h4>Features</h4>
+<ul>
+  <li>King-size beds with premium linens in all rooms</li>
+  <li>Fully equipped modern kitchen</li>
+  <li>Expansive green lawn for activities</li>
+  <li>Dedicated caretaker for guest assistance</li>
+</ul>
+
+<h4>Policies</h4>
+<table>
+<tr><th>Policy</th><th>Details</th></tr>
+<tr><td>Check-in & Check-out</td><td>Check-in: 2:00 PM, Check-out: 11:00 AM. Early/late available on request.</td></tr>
+<tr><td>Cancellation</td><td>Free up to 7 days before check-in. Within 7 days: 50% charge.</td></tr>
+<tr><td>Guest Policy</td><td>Max 15 guests. Extra mattresses available on request.</td></tr>
+</table>
+
+<h4>FAQs</h4>
+<ol>
+  <li><strong>Is breakfast included?</strong> Breakfast is not included in the standard rate but can be arranged through our in-house chef packages.</li>
+  <li><strong>Can we host events at the villa?</strong> Yes, the villa is perfect for birthday celebrations, anniversaries, and corporate offsites.</li>
+</ol>
+
+<h4>Nearby</h4>
+<ul>
+  <li>Pawna Lake — 5 min drive</li>
+  <li>Tikona Fort — 15 min drive</li>
+  <li>Lohagad Fort — 20 min drive</li>
+  <li>Bhushi Dam — 30 min drive</li>
+</ul>
+
+<hr>
+
+<!-- ====== 5c. 7 BHK ====== -->
+<h2>5c. 7 BHK GRAND VILLA</h2>
+<table>
+<tr><td><strong>ID</strong></td><td>villa-7bhk</td></tr>
+<tr><td><strong>Slug</strong></td><td>7-bhk-villa</td></tr>
+<tr><td><strong>Name</strong></td><td>7 BHK Grand Villa</td></tr>
+<tr><td><strong>Tagline</strong></td><td>The ultimate choice for large groups and celebrations</td></tr>
+<tr><td><strong>Description</strong></td><td>The 7 BHK Grand Villa is the crown jewel of Velora Stays — an expansive estate designed for large groups, corporate retreats, and grand celebrations. With seven luxurious bedrooms, multiple viewing decks, a massive living area, and complete privacy, this villa accommodates 14 to 20 guests in absolute comfort and style.</td></tr>
+<tr><td><strong>Long Description</strong></td><td>The 7 BHK Grand Villa at Velora Stays redefines luxury group accommodation near Pawna Lake. Seven beautifully appointed bedrooms — each with king-size beds, premium linens, attached bathrooms, and individual climate control — ensure every guest enjoys a restful night's sleep. The grand living area features multiple seating zones, a large Smart TV, and floor-to-ceiling windows that offer panoramic views of the Pawna Lake landscape. The fully equipped kitchen is designed for large groups, with ample storage, multiple cooking stations, and all the appliances needed to prepare feasts for 20 guests. The outdoor spaces are equally impressive: a massive green lawn perfect for team-building activities, a private swimming pool with a dedicated deck area, multiple viewing points for sunrise and sunset, and a grand bonfire and BBQ area designed for large gatherings. The 7 BHK Grand Villa is the ultimate destination for milestone celebrations, corporate offsites, multi-family reunions, and anyone seeking the finest luxury villa experience near Pawna Lake.</td></tr>
+<tr><td><strong>Price</strong></td><td>₹21,000 / night (Original: ₹42,000)</td></tr>
+<tr><td><strong>Bedrooms</strong></td><td>7</td></tr>
+<tr><td><strong>Bathrooms</strong></td><td>7</td></tr>
+<tr><td><strong>Max Occupancy</strong></td><td>20</td></tr>
+<tr><td><strong>Bed Config</strong></td><td>7 King Beds</td></tr>
+<tr><td><strong>View</strong></td><td>Panoramic Lake & Mountain View</td></tr>
+<tr><td><strong>Tag</strong></td><td>Premium Choice</td></tr>
+</table>
+
+<h4>Images</h4>
+<table>
+<tr><th>ID</th><th>File</th><th>Alt</th></tr>
+<tr><td>villa7-1</td><td>/7BHKGrandVilla.jpeg</td><td>Grand 7 BHK villa exterior</td></tr>
+<tr><td>villa7-2</td><td>/7BHKGrandVilla1.jpeg</td><td>Luxurious 7 BHK villa interior</td></tr>
+<tr><td>villa7-3</td><td>/7BHKGrandVilla3.jpeg</td><td>Expansive 7 BHK living area</td></tr>
+</table>
+
+<h4>Highlights</h4>
+<ul>
+  <li>7 luxurious bedrooms with ensuite bathrooms</li>
+  <li>Multiple viewing decks for sunrise and sunset</li>
+  <li>Grand living area with multiple seating zones</li>
+  <li>Full estate buyout for complete privacy</li>
+</ul>
+
+<h4>Features</h4>
+<ul>
+  <li>King-size beds with premium linens in all rooms</li>
+  <li>Massive kitchen for large group cooking</li>
+  <li>Grand bonfire and BBQ area</li>
+  <li>Multiple viewing points across the estate</li>
+</ul>
+
+<h4>Policies</h4>
+<table>
+<tr><th>Policy</th><th>Details</th></tr>
+<tr><td>Check-in & Check-out</td><td>Check-in: 2:00 PM, Check-out: 11:00 AM. Priority early check-in for large group bookings.</td></tr>
+<tr><td>Cancellation</td><td>Free up to 14 days before check-in. Within 14 days may forfeit deposit.</td></tr>
+<tr><td>Guest Policy</td><td>Max 20 guests. Full estate buyout ensures complete privacy.</td></tr>
+</table>
+
+<h4>FAQs</h4>
+<ol>
+  <li><strong>Can we host a corporate retreat?</strong> Absolutely. The 7 BHK Grand Villa is ideal for corporate team outings with high-speed WiFi, large meeting spaces, and outdoor areas for team-building activities.</li>
+  <li><strong>Is the full estate available for exclusive booking?</strong> Yes, the 7 BHK Grand Villa offers full estate buyout, giving your group complete privacy and exclusive access to all amenities.</li>
+</ol>
+
+<h4>Nearby</h4>
+<ul>
+  <li>Pawna Lake — 5 min drive</li>
+  <li>Tikona Fort — 15 min drive</li>
+  <li>Lohagad Fort — 20 min drive</li>
+  <li>Lonavala Market — 25 min drive</li>
+</ul>
+
+<hr>
+
+<!-- ==================== 6. FACILITIES ==================== -->
+<h1>6. FACILITIES / AMENITIES (All 16)</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Amenities</p>
+<p><strong>Section Heading:</strong> Curated Experiences, Unmatched Amenities</p>
+<p><strong>Section Description:</strong> At Velora Stays, we pride ourselves on offering a premium lifestyle experience near Pawna Lake. From a private swimming pool and open lawns to a fully equipped kitchen and indoor entertainment, every amenity is designed for complete comfort and unforgettable memories.</p>
+</div>
+
+<table>
+<tr><th>#</th><th>Name</th><th>Slug</th><th>Category</th><th>Description</th><th>Features</th></tr>
+<tr><td>1</td><td>Private Swimming Pool</td><td>private-pool</td><td>outdoor</td><td>Take a refreshing dip in your dedicated private swimming pool while soaking in panoramic views of the Lonavala hills and the surrounding lake area. The pool is exclusively for villa guests, ensuring complete privacy during your stay.</td><td>Exclusive access, Hill view, Clean & maintained daily</td></tr>
+<tr><td>2</td><td>Expansive Living Lawn</td><td>living-lawn</td><td>outdoor</td><td>A massive green living lawn ideal for outdoor games, evening strolls, and gathering under the stars. The sprawling lawn provides ample space for children to play, team-building activities, and simply enjoying the fresh mountain air.</td><td>Outdoor games, Evening gatherings, Mountain air</td></tr>
+<tr><td>3</td><td>Bonfire Setup</td><td>bonfire-area</td><td>outdoor</td><td>As dusk falls, gather your loved ones on our sprawling green lawn for an evening outdoor bonfire setup, perfect for sharing stories and creating lasting memories under the open sky.</td><td>Evening setup, BBQ compatible, Open sky</td></tr>
+<tr><td>4</td><td>BBQ Equipment</td><td>bbq-equipment</td><td>outdoor</td><td>Make use of our live Barbecue (BBQ) equipment for a fun, interactive evening meal on the lawn. Grill your favourite meats and vegetables while enjoying the cool mountain breeze.</td><td>Live grill setup, Equipment provided, Outdoor cooking</td></tr>
+<tr><td>5</td><td>High-Speed WiFi</td><td>free-wifi</td><td>basic</td><td>Stay connected throughout your stay with our high-speed WiFi network available in all rooms and common areas. Whether you are streaming, video-calling, or working remotely, our reliable internet ensures you never miss a beat.</td><td>High-speed internet, All areas covered, Streaming ready</td></tr>
+<tr><td>6</td><td>Air Conditioning</td><td>air-conditioning</td><td>basic</td><td>Escape the heat with individually controlled air conditioning in every bedroom. Our energy-efficient units keep your space cool and comfortable, allowing you to relax after a day of exploring.</td><td>Individual controls, 24/7 cooling, Energy efficient</td></tr>
+<tr><td>7</td><td>Smart TV</td><td>smart-tv</td><td>entertainment</td><td>Wind down with a large LED Smart TV featuring Netflix, YouTube, and a range of cable channels. Enjoy your favourite shows or catch up on the news from the comfort of the villa.</td><td>Netflix & YouTube, Cable channels, Large screen</td></tr>
+<tr><td>8</td><td>Fully Equipped Kitchen</td><td>fully-equipped-kitchen</td><td>kitchen</td><td>A great vacation requires exceptional food. Our fully functional, premium kitchen setup allows you to prepare meals at your convenience. Includes refrigerator, microwave, gas stove, and all necessary cookware.</td><td>Gas stove, Refrigerator, Microwave, Cookware</td></tr>
+<tr><td>9</td><td>Secure Parking</td><td>secure-parking</td><td>outdoor</td><td>Hassle-free, dedicated parking spaces right on the estate for your entire group. Your vehicles will be safe and easily accessible throughout your stay.</td><td>Dedicated spaces, On-site parking, Secure premises</td></tr>
+<tr><td>10</td><td>Power Backup</td><td>power-backup</td><td>basic</td><td>Rest easy knowing that our full-building power backup keeps the lights on and appliances running during any outage. A dedicated generator ensures your stay is never interrupted.</td><td>Full backup, Zero downtime, Generator on standby</td></tr>
+<tr><td>11</td><td>Daily Housekeeping</td><td>daily-housekeeping</td><td>service</td><td>Our dedicated housekeeping team ensures your villa stays fresh and tidy every day. From fresh towels to thorough cleaning, we take care of the details so you can focus on enjoying your stay.</td><td>Daily cleaning, Fresh towels, Tidy spaces</td></tr>
+<tr><td>12</td><td>Dedicated Caretaker</td><td>dedicated-caretaker</td><td>service</td><td>A dedicated caretaker is available on-site to assist with any needs during your stay. From arranging the bonfire to helping with local recommendations, our caretaker ensures a seamless experience.</td><td>On-site support, Local knowledge, Guest assistance</td></tr>
+<tr><td>13</td><td>Indoor Games</td><td>indoor-games</td><td>entertainment</td><td>Enjoy a wide selection of indoor board games and a classic Carrom board setup. Even on a rainy afternoon in Lonavala, the entertainment never stops.</td><td>Board games, Carrom, Family entertainment</td></tr>
+<tr><td>14</td><td>Bluetooth Music System</td><td>music-system</td><td>entertainment</td><td>Sync up your devices to our premium Bluetooth sound systems to set the mood for any occasion — from morning relaxation to evening pool parties.</td><td>Bluetooth enabled, Premium sound, Pool & living area</td></tr>
+<tr><td>15</td><td>Hot Water</td><td>hot-water</td><td>bathroom</td><td>Enjoy uninterrupted hot water supply with individual geysers installed in every bathroom. Our instant heating system ensures you never have to wait for a warm shower.</td><td>24/7 supply, Instant heating, Every bathroom</td></tr>
+<tr><td>16</td><td>Dining Area</td><td>dining-area</td><td>basic</td><td>A spacious indoor dining area perfect for group meals, whether you are enjoying a home-cooked feast or meals prepared by our in-house chef.</td><td>Spacious seating, Indoor dining, Group-friendly</td></tr>
+</table>
+
+<h4>Facility Image References</h4>
+<table>
+<tr><th>Facility</th><th>Image Path</th></tr>
+<tr><td>Private Swimming Pool</td><td>/outdoorpool.jpeg</td></tr>
+<tr><td>Expansive Living Lawn</td><td>/ExpansiveLivingLawn.jpeg</td></tr>
+<tr><td>Bonfire Setup</td><td>/bornfire.webp</td></tr>
+<tr><td>BBQ Equipment</td><td>https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80</td></tr>
+<tr><td>High-Speed WiFi</td><td>/WhatsApp Image 2026-07-19 at 8.44.17 AM (1).jpeg</td></tr>
+<tr><td>Air Conditioning</td><td>/WhatsApp Image 2026-07-19 at 8.44.15 AM (1).jpeg</td></tr>
+<tr><td>Smart TV</td><td>https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80</td></tr>
+<tr><td>Fully Equipped Kitchen</td><td>https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80</td></tr>
+<tr><td>Secure Parking</td><td>https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80</td></tr>
+<tr><td>Power Backup</td><td>https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80</td></tr>
+<tr><td>Daily Housekeeping</td><td>https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=80</td></tr>
+<tr><td>Dedicated Caretaker</td><td>https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=800&q=80</td></tr>
+<tr><td>Indoor Games</td><td>https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80</td></tr>
+<tr><td>Bluetooth Music System</td><td>/WhatsApp Image 2026-07-19 at 8.44.16 AM.jpeg</td></tr>
+<tr><td>Hot Water</td><td>https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80</td></tr>
+<tr><td>Dining Area</td><td>https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 7. NEARBY ==================== -->
+<h1>7. NEARBY ATTRACTIONS (All 12)</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Explore Pawna &amp; Lonavala</p>
+<p><strong>Section Heading:</strong> Discover the Beauty of Lonavala &amp; Pawna Lake</p>
+<p><strong>Section Description:</strong> People don't just book a villa stay; they book an unforgettable getaway experience. Tucked away near the majestic waters of Pawna Dam, Velora Stays places you right in the heart of one of Maharashtra's most scenic landscapes. Enjoy refreshing lakeside breezes, striking mountain sunrises, and easy access to local adventure points.</p>
+</div>
+
+<table>
+<tr><th>#</th><th>Name</th><th>Category</th><th>Distance</th><th>Description</th><th>Highlights</th><th>Tips</th></tr>
+<tr><td>1</td><td>Pawna Lake</td><td>Nature</td><td>5 min drive</td><td>Located just minutes away from Velora Stays, Pawna Lake offers peaceful daytime boating excursions and unparalleled sunset photography spots. The lake is surrounded by lush green hills and ancient forts, making it one of the most picturesque destinations near Mumbai and Pune.</td><td>Boating, Sunset views, Photography, Peaceful retreat</td><td>Visit during sunset for the most breathtaking views. Carry a camera for amazing photography opportunities.</td></tr>
+<tr><td>2</td><td>Tikona Fort</td><td>Trekking</td><td>15 min drive</td><td>A popular destination for trekking enthusiasts looking for panoramic views of the entire valley from its historic peak. Tikona Fort, also known as Vitandgad, is a hill fort near Pawna Lake that offers a moderately challenging trek with stunning reward views.</td><td>Panoramic valley views, Historic fort, Moderate trek, Scenic beauty</td><td>Start the trek early morning to avoid the heat. Carry water and wear comfortable trekking shoes.</td></tr>
+<tr><td>3</td><td>Lohagad Fort</td><td>Heritage</td><td>20 min drive</td><td>A magnificent historic fort ideal for family day trips, sightseeing, and exploring rich regional history. Lohagad Fort stands at an elevation of 1,033 metres and offers well-preserved fortifications, ancient gates, and breathtaking views of the Sahyadri mountains.</td><td>Historic architecture, Mountain views, Family friendly, Rich history</td><td>The fort is accessible by a short trek or vehicle. Visit during monsoon for lush green surroundings.</td></tr>
+<tr><td>4</td><td>Visapur Fort</td><td>Trekking</td><td>25 min drive</td><td>An impressive hill fort that stands adjacent to Lohagad Fort, offering a more challenging trek and spectacular views of the surrounding valley. The fort ruins include ancient water cisterns, a large stone arch, and remnants of fortification walls.</td><td>Challenging trek, Fort ruins, Spectacular views, Adventure</td><td>This trek is more difficult than Tikona. Best suited for experienced trekkers. Start early.</td></tr>
+<tr><td>5</td><td>Lion's Point</td><td>Viewpoint</td><td>30 min drive</td><td>One of the most popular viewpoints near Lonavala, Lion's Point offers stunning panoramic views of the Sahyadri mountain range, the deep valley below, and the winding roads.</td><td>Panoramic views, Photography spot, Mountain breeze, Scenic drive</td><td>Visit during sunrise or sunset for the most dramatic views. Carry a light jacket as it can get windy.</td></tr>
+<tr><td>6</td><td>Bhushi Dam</td><td>Nature</td><td>35 min drive</td><td>A popular monsoon destination near Lonavala, Bhushi Dam offers a refreshing experience with water flowing over the dam steps. The surrounding area features lush greenery, walking paths, and small eateries serving local snacks.</td><td>Waterfall effect, Walking paths, Monsoon beauty, Local snacks</td><td>Best visited during monsoon when water flows over the steps. Carry waterproof footwear.</td></tr>
+<tr><td>7</td><td>Rajmachi Fort</td><td>Trekking</td><td>45 min drive</td><td>A historic fort accessible via a scenic trek through the Sahyadri mountains. Rajmachi Fort offers stunning views of the Konkan coast and is a favourite among trekkers and history enthusiasts.</td><td>Scenic trek, Coastal views, Historic significance, Adventure</td><td>The trek takes about 2-3 hours. Start early and carry sufficient water and snacks.</td></tr>
+<tr><td>8</td><td>Lonavala Market</td><td>Shopping</td><td>25 min drive</td><td>Explore the bustling local market of Lonavala, famous for its chikki (local sweet), fudge, and locally grown produce. The market offers a vibrant shopping experience.</td><td>Local chikki, Handicrafts, Fresh produce, Souvenirs</td><td>Try the famous Lonavala chikki and fudge. Bargaining is expected at local shops.</td></tr>
+<tr><td>9</td><td>Tiger Point</td><td>Viewpoint</td><td>30 min drive</td><td>A scenic viewpoint offering breathtaking views of the Sahyadri mountains and the deep valley below. Named after the tiger-shaped rock formation nearby.</td><td>Mountain views, Tiger rock formation, Cool climate, Photography</td><td>Visit during clear weather for the best views. Carry a light jacket.</td></tr>
+<tr><td>10</td><td>Karla Caves</td><td>Heritage</td><td>40 min drive</td><td>An ancient Buddhist rock-cut cave complex dating back to the 2nd century BC, featuring stunning architecture, intricate carvings, and a magnificent prayer hall.</td><td>Ancient Buddhist caves, Intricate carvings, Historic architecture, Cultural significance</td><td>Wear comfortable shoes for climbing steps. Hire a local guide for a more informative visit.</td></tr>
+<tr><td>11</td><td>Bhaja Caves</td><td>Heritage</td><td>35 min drive</td><td>A group of 22 rock-cut caves dating back to the 2nd century BC, known for their remarkable architecture, wooden beams, and ancient Buddhist inscriptions.</td><td>22 rock-cut caves, Ancient inscriptions, Wooden architecture, Buddhist heritage</td><td>Visit early morning to avoid crowds. The caves are closed during monsoon season.</td></tr>
+<tr><td>12</td><td>Imagicaa World</td><td>Entertainment</td><td>40 min drive</td><td>One of India's largest theme parks, offering thrilling rides, water park attractions, and a snow park for entertainment all year round.</td><td>Theme park, Water park, Snow park, Family entertainment</td><td>Book tickets online for discounts. Plan a full day to experience all attractions.</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 8. ABOUT ==================== -->
+<h1>8. ABOUT PAGES</h1>
+
+<h2>8a. Our Story</h2>
+<p>Velora Stays was born from a deep love for the Sahyadri mountains and the tranquil beauty of Pawna Lake. Founded in 2022 by The Explorer Stays, a team passionate about creating unforgettable escape experiences, Velora Stays opened its doors in the serene village of Gevhande Apati, just minutes from the shimmering waters of Pawna Lake. The location was chosen with great care, nestled among the rolling hills of Lonavala, offering guests a perfect blend of luxury, privacy, and nature.</p>
+<p>The founding of Velora Stays came at a time when travellers were seeking meaningful escapes from the chaos of city life. Rather than building another hotel, the founders envisioned something entirely different: luxury private villas where families, friends, and couples could immerse themselves in the beauty of the Western Ghats while enjoying world-class amenities. Every villa was thoughtfully designed with spacious 4 BHK, 5 BHK, and 7 BHK layouts, each featuring a private swimming pool, lush garden, modern kitchen, and dedicated BBQ area. The goal was clear: create a sanctuary where guests could reconnect with nature without sacrificing comfort.</p>
+<p>From its earliest days, Velora Stays distinguished itself through an unwavering focus on privacy and exclusivity. Unlike crowded resorts, each villa at Velora Stays is a self-contained retreat, ensuring that guests enjoy their own private pool, garden, and dedicated caretaker. The property adopted eco-conscious practices, blending seamlessly with the natural landscape while maintaining the highest standards of luxury and cleanliness. Word spread among discerning travellers and weekend warriors from Mumbai and Pune who were looking for a peaceful, upscale getaway near the Sahyadris.</p>
+<p>The response from guests was overwhelming. Within the first year, Velora Stays had earned a reputation for delivering an unmatched villa experience, with guests consistently praising the stunning lake views, the quality of the amenities, and the warmth of the staff. The property's growth was organic and driven entirely by word-of-mouth recommendations and glowing online reviews. The team remained focused on the core mission: providing every guest with a stay that exceeded their expectations while preserving the natural beauty that makes Pawna Lake so special. Today, Velora Stays continues to build on this foundation, welcoming guests from Mumbai, Pune, and across India who are seeking a genuine luxury escape in the heart of the Western Ghats.</p>
+
+<h2>8b. Our Mission</h2>
+<p>At Velora Stays, our mission is to redefine the luxury villa experience by creating private retreats where guests can fully immerse themselves in the beauty and tranquility of Pawna Lake. We are dedicated to providing every guest with an exceptional escape, combining modern luxury with the raw beauty of the Western Ghats. We believe that true luxury lies in privacy, space, and the freedom to create unforgettable moments with loved ones.</p>
+<p>We achieve this mission by investing in our properties first. Each villa is designed with spacious layouts, premium furnishings, and thoughtful amenities that cater to families, friends, and corporate groups. Our dedicated caretakers ensure every detail is taken care of, from the moment a guest arrives to the farewell at checkout. We maintain the highest standards of cleanliness and hygiene, understanding that a pristine villa is the foundation of a great retreat. We continuously upgrade our facilities and add new experiences to ensure that every aspect of the guest experience reflects our commitment to excellence. From the crystal-clear waters of our private pools to the warmth of a bonfire under the stars, every moment at Velora Stays is curated with care. Our mission extends beyond our villas; we strive to be a positive force in the Pawna Lake community, supporting local businesses and creating meaningful employment opportunities for the people of Lonavala.</p>
+
+<h2>8c. Our Vision</h2>
+<p>Our vision is to become Maharashtra's most trusted and beloved luxury villa brand, known not just for stunning properties but for creating transformative experiences that bring guests back season after season. We envision a future where Velora Stays is the first name that comes to mind for any traveller seeking a private, luxurious, and nature-connected escape near Pawna Lake. We aim to set the standard for what a villa retreat can achieve, inspiring the entire industry to raise the bar on privacy, quality, and guest care.</p>
+<p>Looking ahead, we plan to expand strategically across Maharashtra, bringing the Velora Stays experience to more stunning locations in the Western Ghats. Each new property will maintain the same unwavering commitment to privacy, luxury, and personalised service that defines our flagship Pawna Lake location. Beyond Maharashtra, we aspire to establish Velora Stays properties in other scenic destinations across India, creating a network of trusted luxury retreats that travellers can rely on wherever their journey takes them. We are also committed to sustainable hospitality practices, reducing our environmental footprint while enhancing the guest experience.</p>
+
+<h2>8d. Our Values</h2>
+<table>
+<tr><th>Value</th><th>Description</th></tr>
+<tr><td><strong>Hospitality First</strong></td><td>Hospitality is not just what we do; it is who we are. Every team member at Velora Stays is empowered to go above and beyond for our guests, whether it is remembering a returning guest's preference, arranging a special surprise for a celebration, or simply offering a warm and genuine smile. We believe that true hospitality lies in anticipating needs, not just responding to requests.</td></tr>
+<tr><td><strong>Cleanliness Always</strong></td><td>Cleanliness is the non-negotiable foundation of everything we do at Velora Stays. We maintain hospital-grade sanitisation standards, use premium cleaning products, and follow rigorous cleaning checklists for every villa and common area. Our housekeeping team undergoes regular training on the latest hygiene protocols, and every villa is inspected before guest arrival to ensure it meets our exacting standards.</td></tr>
+<tr><td><strong>Guest-Centric</strong></td><td>Every decision we make at Velora Stays starts with a simple question: how will this benefit our guests? From the selection of mattresses and linens to the design of our BBQ areas and the training of our staff, guest comfort and satisfaction are our primary drivers. We actively seek and welcome guest feedback through multiple channels, and we use this input to continuously refine and improve our services.</td></tr>
+<tr><td><strong>Private Luxury</strong></td><td>We believe that true luxury means having your own private space to unwind, connect, and create memories. At Velora Stays, every villa comes with its own private swimming pool, lush garden, modern kitchen, and BBQ area, ensuring complete exclusivity for our guests. We have mastered the art of delivering premium touches in a private villa setting, from designer interiors and high-speed WiFi to gourmet kitchen setups and bonfire arrangements.</td></tr>
+<tr><td><strong>Continuous Improvement</strong></td><td>The hospitality industry is always evolving, and so are we. At Velora Stays, we foster a culture of continuous learning and improvement at every level of the organisation. We invest in regular staff training programs, stay current with industry best practices, and actively seek innovative solutions to enhance the guest experience.</td></tr>
+</table>
+
+<h2>8e. Milestones</h2>
+<table>
+<tr><th>Year</th><th>Milestone</th><th>Details</th></tr>
+<tr><td><strong>2022</strong></td><td>Founded</td><td>Velora Stays opened its doors in Gevhande Apati, near Pawna Lake, Lonavala. Founded by The Explorer Stays with a vision to provide luxury private villa experiences, the property launched with 3 carefully designed villas.</td></tr>
+<tr><td><strong>2023</strong></td><td>500th Guest</td><td>Within its first year of operation, Velora Stays welcomed its 500th guest. The property achieved an average guest rating of 5.0 on Google and received its first batch of glowing reviews on MakeMyTrip and Airbnb.</td></tr>
+<tr><td><strong>2024</strong></td><td>Expanded to 5 Villas</td><td>Responding to growing demand, Velora Stays expanded its capacity from 3 to 5 luxury villas, adding new villa categories including the Premium 5 BHK and the Grand 7 BHK. The property also launched its direct booking platform.</td></tr>
+<tr><td><strong>2025</strong></td><td>100+ Reviews</td><td>Velora Stays crossed the milestone of 100+ cumulative verified reviews across Google, MakeMyTrip, and Airbnb, with an overall rating of 5.0 stars. The property was recognised as one of the top luxury villa stays near Pawna Lake and received the Guest Satisfaction Award from Airbnb.</td></tr>
+</table>
+
+<h2>8f. Sustainability Promise</h2>
+<p>At Velora Stays, we believe that providing exceptional luxury and protecting our planet are not competing goals but complementary commitments. Since our founding, we have worked to integrate sustainable practices into every aspect of our operations.</p>
+<p><strong>Energy Conservation:</strong> We have transitioned to energy-efficient LED lighting and solar-powered water heating systems. Our AC systems use inverter technology, and motion sensors in common areas automatically adjust lighting.</p>
+<p><strong>Water Conservation:</strong> We have installed water-efficient fixtures including low-flow showerheads, dual-flush toilets, and sensor-operated taps. Our swimming pools use advanced filtration systems. Rainwater harvesting systems supplement our water supply.</p>
+<p><strong>Plastic Reduction:</strong> We stock refillable glass bottles of filtered water instead of disposable plastic bottles. Bathroom amenities are provided in eco-friendly dispensers rather than individual plastic packets. We use biodegradable cleaning products.</p>
+<p><strong>Local Sourcing:</strong> We prioritise sourcing food and supplies locally whenever possible, supporting the regional economy while reducing transportation emissions. We partner with local artisans for villa furnishings.</p>
+<p><strong>Waste Management:</strong> We separate waste into organic, recyclable, and non-recyclable streams. Organic waste is composted and used in gardens. Recyclable materials are sent to certified recycling facilities.</p>
+
+<hr>
+
+<!-- ==================== 9. TEAM + AWARDS ==================== -->
+<h1>9. TEAM MEMBERS + AWARDS</h1>
+
+<h2>Team Members (5)</h2>
+<table>
+<tr><th>Name</th><th>Role</th><th>Bio</th></tr>
+<tr><td>The Explorer Stays Team</td><td>Founders</td><td>Founded by a group of passionate travellers and hospitality enthusiasts, The Explorer Stays created Velora Stays with a vision to provide luxury private villa experiences near Pawna Lake. With a deep love for the Sahyadri mountains and a commitment to exceptional hospitality, the team has built Velora Stays into one of the most trusted villa properties in Lonavala.</td></tr>
+<tr><td>Ravi Patil</td><td>Head Caretaker</td><td>Ravi leads the caretaker team at Velora Stays with meticulous attention to detail. With over 15 years of experience in hospitality and a deep knowledge of the Lonavala region, he ensures that every guest receives personalised care and has an unforgettable experience. From arranging local activities to coordinating special events, Ravi goes above and beyond for every guest.</td></tr>
+<tr><td>Priya Deshmukh</td><td>Guest Experience Manager</td><td>Priya oversees the guest experience at Velora Stays with a passion for creating memorable stays. With a background in hospitality management and a genuine love for the villa hospitality industry, she ensures that every detail is taken care of, from the moment a guest inquires about a booking to the farewell at checkout. Her focus on personalised service has been instrumental in maintaining the property's 5.0-star rating.</td></tr>
+<tr><td>Suresh Kolkar</td><td>Kitchen Manager</td><td>Chef Suresh brings the authentic flavours of Maharashtra to the Velora Stays dining experience. Trained in traditional Maharashtrian cuisine and having worked at several premium properties, he combines local recipes with contemporary techniques. His BBQ setups and home-cooked meals are among the most talked-about features among our guests.</td></tr>
+<tr><td>Amit Jadhav</td><td>Activities Coordinator</td><td>Amit coordinates all the adventure activities and experiences at Velora Stays, from fort treks and kayaking to sunset boat rides. With a deep knowledge of the Pawna Lake region and a passion for adventure, he curates unique experiences that showcase the best of the Sahyadri mountains. His energy and enthusiasm are infectious, making every activity a memorable experience.</td></tr>
+</table>
+
+<h2>Awards (5)</h2>
+<table>
+<tr><th>Award</th><th>Organization</th><th>Year</th><th>Description</th></tr>
+<tr><td>Top Rated Villa Stay</td><td>Google</td><td>2025</td><td>Recognised as one of the top-rated villa stays near Pawna Lake with a perfect 5.0-star rating from 47+ verified Google reviews.</td></tr>
+<tr><td>Guest Favourite</td><td>Airbnb</td><td>2025</td><td>Awarded by Airbnb for consistently high guest review scores (4.95 rating).</td></tr>
+<tr><td>Best Luxury Villa Experience</td><td>MakeMyTrip</td><td>2026</td><td>Honoured by MakeMyTrip for providing the best luxury villa experience near Pawna Lake.</td></tr>
+<tr><td>Excellence in Hospitality</td><td>Goibibo</td><td>2025</td><td>Goibibo Excellence Award for outstanding hospitality and service standards.</td></tr>
+<tr><td>Best Weekend Getaway</td><td>Lonavala Tourism</td><td>2026</td><td>Awarded for being the best weekend getaway destination near Pawna Lake.</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 10. REVIEWS ==================== -->
+<h1>10. GUEST REVIEWS (All 20)</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Guest Reviews</p>
+<p><strong>Section Heading:</strong> What Our Guests Say About Us</p>
+<p><strong>Section Description:</strong> We take pride in the experiences we create for every guest. With glowing reviews across multiple platforms, Velora Stays continues to be one of the highest-rated luxury villa properties near Pawna Lake. Here is what real guests have to say about their stay with us.</p>
+</div>
+
+<h3>Review Platform Ratings</h3>
+<table>
+<tr><th>Platform</th><th>Rating</th><th>Review Count</th></tr>
+<tr><td>Google</td><td>5.0</td><td>47</td></tr>
+<tr><td>MakeMyTrip</td><td>4.9</td><td>35</td></tr>
+<tr><td>Goibibo</td><td>4.8</td><td>22</td></tr>
+<tr><td>Airbnb</td><td>4.95</td><td>68</td></tr>
+<tr><td>Justdial</td><td>5.0</td><td>42</td></tr>
+</table>
+
+<h3>Individual Reviews</h3>
+<table>
+<tr><th>#</th><th>Author</th><th>Platform</th><th>Date</th><th>Review Text</th></tr>
+<tr><td>1</td><td>Priya Sharma</td><td>Google</td><td>2026-01-12</td><td>Absolutely loved our stay at Velora Stays! The 5 BHK villa was spotless and the private pool was perfect after a long drive from Mumbai. The caretaker, Ravi, was incredibly helpful and made sure we had everything we needed. The bonfire setup in the evening was magical. Will definitely come back again.</td></tr>
+<tr><td>2</td><td>Rohit Mehta</td><td>MakeMyTrip</td><td>2025-12-28</td><td>Location was perfect for our family reunion. The 7 BHK villa accommodated all 14 of us comfortably. The BBQ area was a hit and the kitchen was fully equipped for our home-cooked meals. The view of Pawna Lake from the terrace was breathtaking. Great value for a luxury villa.</td></tr>
+<tr><td>3</td><td>Ananya Banerjee</td><td>Google</td><td>2026-02-03</td><td>Very clean villas and helpful staff. The private pool was crystal clear and the garden was beautifully maintained. We celebrated our anniversary here and the team arranged a special dinner setup. Only suggestion would be to add more board games. Overall a wonderful experience.</td></tr>
+<tr><td>4</td><td>Vikram Singh</td><td>Airbnb</td><td>2025-11-15</td><td>I have stayed at many villas near Lonavala and Velora Stays is easily the best. The 4 BHK villa was spacious, the interiors were modern, and the private pool was a luxury. The location near Pawna Lake makes it perfect for a weekend escape from Mumbai.</td></tr>
+<tr><td>5</td><td>Sumanth Reddy</td><td>Google</td><td>2026-01-20</td><td>Perfect villa for a group trip. The 5 BHK layout was ideal for our friends group. The BBQ setup was fantastic and the caretaker helped us with everything from grocery shopping to arranging a local guide for Tikona Fort trek. Highly recommend.</td></tr>
+<tr><td>6</td><td>Nisha Kapoor</td><td>MakeMyTrip</td><td>2025-12-05</td><td>We stayed here for a family wedding celebration and the team was incredibly accommodating. They arranged a special decoration for the occasion and even helped us with local vendor coordination. The housekeeping team kept the villa immaculate throughout our stay.</td></tr>
+<tr><td>7</td><td>Arindam Ghosh</td><td>Justdial</td><td>2026-03-10</td><td>One of the best villa experiences near Pawna Lake. I have been staying here regularly for weekend getaways and the consistency in service is commendable. The power backup ensures there is never any interruption and the WiFi speed is impressive for working remotely.</td></tr>
+<tr><td>8</td><td>Meera Iyer</td><td>Google</td><td>2025-11-22</td><td>The location is unbeatable for anyone visiting Pawna Lake. We could walk to the lake in 10 minutes and the sunset views from the villa terrace were stunning. The private pool was a luxury and the kitchen was well-equipped for our home-cooked meals. Highly recommended for couples.</td></tr>
+<tr><td>9</td><td>Debashish Bose</td><td>Airbnb</td><td>2026-02-14</td><td>Perfect choice for a weekend escape from Pune. The villa was comfortable and the views were incredible. The caretaker arranged a bonfire for us and the BBQ setup was perfect. The only minor issue was the road to the property, but that is part of the charm.</td></tr>
+<tr><td>10</td><td>Kavitha Nair</td><td>Google</td><td>2026-03-01</td><td>Velora Stays exceeded my expectations in every way. The villas are modern and well-designed, and the team treated us like family. The caretaker helped us plan a full day of sightseeing including Lohagad Fort and Bhushi Dam. Outstanding service.</td></tr>
+<tr><td>11</td><td>Subhasish Mitra</td><td>MakeMyTrip</td><td>2025-10-30</td><td>Great location, clean villas, and friendly staff. The private pool was a luxury and the garden was perfect for morning yoga. The kitchen was well-equipped for our home-cooked meals. The drive from Mumbai was scenic and the property is well-located for exploring Lonavala.</td></tr>
+<tr><td>12</td><td>Tanvi Agarwal</td><td>Google</td><td>2026-01-08</td><td>I was visiting Pawna Lake for the first time and chose Velora Stays based on reviews. It was the perfect choice. The caretaker helped me navigate the area and even arranged a boat ride on the lake. The villa was cozy and spotless. Truly a luxury experience.</td></tr>
+<tr><td>13</td><td>Rajat Chakraborty</td><td>Justdial</td><td>2026-02-20</td><td>Been a loyal customer for over a year now. Every visit is as good as the first. The villas are always clean, the pools are well-maintained, and the caretakers are always helpful. This is my go-to property whenever I need a break from Pune.</td></tr>
+<tr><td>14</td><td>Pooja Sharma</td><td>Google</td><td>2025-12-18</td><td>The best villa experience near Lonavala. The private pool, the garden, the BBQ area, the lake views - everything was perfect. The caretaker was always available but never intrusive. The kitchen was well-equipped for our family meals. Highly recommend for families.</td></tr>
+<tr><td>15</td><td>Sourav Pal</td><td>Airbnb</td><td>2026-03-05</td><td>The best part about Velora Stays is the privacy. Each villa is a self-contained retreat with its own pool and garden. The views of Pawna Lake are stunning and the property is well-located for exploring Lonavala attractions. Highly recommend for groups.</td></tr>
+<tr><td>16</td><td>Madhuri Bose</td><td>MakeMyTrip</td><td>2026-01-25</td><td>We booked two villas for a family reunion and everything was arranged perfectly. The villas were close to each other and the team even arranged a joint BBQ night. The caretakers were attentive and the food from the kitchen was delicious. Truly a wonderful experience.</td></tr>
+<tr><td>17</td><td>Anirban Sengupta</td><td>Google</td><td>2025-11-10</td><td>Comfortable stay at a reasonable price for a luxury villa. The 4 BHK was spacious, the pool was private, and the kitchen was modern. The WiFi was fast enough for video calls. Would recommend for remote workers looking for a change of scenery.</td></tr>
+<tr><td>18</td><td>Ishita Mondal</td><td>Justdial</td><td>2026-02-28</td><td>Celebrated my birthday at Velora Stays and the team made it really special. They arranged a cake and decorations in the villa and the caretaker organized a surprise bonfire setup. It is the small gestures like this that make this property stand out. Thank you, team!</td></tr>
+<tr><td>19</td><td>Abhijit Roy</td><td>Google</td><td>2026-03-12</td><td>Perfect for both relaxation and adventure. I stayed for five nights on a workation and every day the villa was cleaned to perfection. The proximity to Pawna Lake meant I could take morning walks by the water. The power backup and WiFi made remote work seamless.</td></tr>
+<tr><td>20</td><td>Shreya Ghosh</td><td>Airbnb</td><td>2025-12-30</td><td>Amazing villa with stunning lake views. The private pool was a luxury and the garden was perfect for morning yoga. The caretaker was always available but never intrusive. The kitchen was well-equipped for our home-cooked meals. Will definitely come back.</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 11. FAQS ==================== -->
+<h1>11. FAQS (All 40 — 8 Categories)</h1>
+
+<h2>Category 1: Booking &amp; Reservations</h2>
+<ol>
+  <li><strong>How can I book a villa at Velora Stays?</strong> You can book directly through our website by selecting your dates, choosing your preferred villa type, and completing secure payment. Alternatively, call +91 9324248001 or WhatsApp. Also available on MakeMyTrip, Goibibo, and Airbnb.</li>
+  <li><strong>Can I modify or cancel my reservation?</strong> Yes, subject to cancellation policy. Free cancellation up to 7 days before check-in. Within 7 days: one-night charge may apply.</li>
+  <li><strong>Do you accept group bookings?</strong> Absolutely! Special rates available for 2+ villas. Contact reservations team at least two weeks in advance.</li>
+  <li><strong>Will I receive a booking confirmation?</strong> Yes, detailed confirmation email with reservation details. If not received within 30 minutes, check spam or contact info@velorastays.in.</li>
+  <li><strong>Can I request a specific villa?</strong> We do our best to accommodate, subject to availability. Mention preference while booking.</li>
+</ol>
+
+<h2>Category 2: Villas &amp; Accommodation</h2>
+<ol>
+  <li><strong>What types of villas are available?</strong> 4 BHK (Cozy Retreat), 5 BHK (Grand Villa), 7 BHK (Royal Estate). Each with private pool, garden, kitchen, BBQ, caretaker.</li>
+  <li><strong>What is check-in/check-out time?</strong> Check-in: 2:00 PM, Check-out: 11:00 AM. Early/late available on request.</li>
+  <li><strong>Are extra beds or baby cots available?</strong> Yes, at nominal charge. Inform at time of booking.</li>
+  <li><strong>Is there a caretaker at the villa?</strong> Yes, dedicated caretaker available 8:00 AM - 8:00 PM. Emergency number for after-hours.</li>
+  <li><strong>What amenities are included?</strong> AC, Smart TV, WiFi, fully equipped kitchen, private pool, BBQ, garden, power backup, hot water, caretaker.</li>
+</ol>
+
+<h2>Category 3: Kitchen &amp; BBQ</h2>
+<ol>
+  <li><strong>Is there a kitchen in the villa?</strong> Yes, fully equipped with gas stove, refrigerator, microwave, utensils, cookware. Complimentary tea, coffee, sugar, cooking essentials.</li>
+  <li><strong>Is BBQ equipment available?</strong> Yes, dedicated BBQ area with charcoal grill, utensils, and seating. Complimentary charcoal for first session.</li>
+  <li><strong>Can you arrange a private chef?</strong> Yes, available for traditional Maharashtrian feast, BBQ dinner, or celebration meals. Inform 24 hours in advance.</li>
+  <li><strong>Are there restaurants nearby?</strong> Local restaurants and dhabas within driving distance. Lonavala town is 20 minutes away.</li>
+  <li><strong>Can I order food delivery?</strong> Direct delivery is limited. Caretaker can arrange meals from nearby restaurants or private chef.</li>
+</ol>
+
+<h2>Category 4: Location &amp; Transport</h2>
+<ol>
+  <li><strong>How far is the villa from Mumbai?</strong> ~100 km, 2.5 to 3-hour drive via Mumbai-Pune Expressway.</li>
+  <li><strong>How far is the villa from Pune?</strong> ~60 km, 1.5 to 2-hour drive via Pune-Lonavala Highway.</li>
+  <li><strong>Is parking available?</strong> Yes, free parking for 2-3 vehicles at each villa.</li>
+  <li><strong>How do I reach the villa?</strong> By car via Mumbai-Pune Expressway. Lonavala railway station is 20 min away — pickup can be arranged.</li>
+  <li><strong>Can you arrange local transport for sightseeing?</strong> Yes, caretaker can arrange transport. Curated packages covering major attractions available.</li>
+</ol>
+
+<h2>Category 5: Facilities &amp; Services</h2>
+<ol>
+  <li><strong>Is WiFi available?</strong> Yes, complimentary high-speed WiFi in all villas and common areas.</li>
+  <li><strong>Is there a swimming pool?</strong> Yes, every villa has its own private swimming pool, regularly maintained.</li>
+  <li><strong>Is there a bonfire facility?</strong> Yes, bonfire setup in garden with complimentary firewood for first session.</li>
+  <li><strong>Is there a concierge service?</strong> Yes, caretaker team available for transport, tours, local recommendations.</li>
+  <li><strong>Is power backup available?</strong> Yes, all villas equipped with power backup generators.</li>
+</ol>
+
+<h2>Category 6: Events &amp; Celebrations</h2>
+<ol>
+  <li><strong>Can I book the villa for a private event?</strong> Yes, perfect for birthday parties, anniversaries, pre-wedding shoots, corporate offsites. Contact events team 2 weeks in advance.</li>
+  <li><strong>What event packages do you offer?</strong> Customizable packages including venue decoration, private chef, BBQ, bonfire, event coordination.</li>
+  <li><strong>What is maximum capacity for events?</strong> 7 BHK: up to 25 guests seated dinner, 40 cocktail-style. 4 BHK/5 BHK: 10-20 people.</li>
+  <li><strong>Do you provide catering?</strong> Yes, Maharashtrian, North Indian, Continental cuisines. Menu customization available.</li>
+  <li><strong>Can I host corporate meeting/offsite?</strong> Yes, meeting spaces with projectors, screens, WiFi, tea breaks, working lunches, team-building activities.</li>
+</ol>
+
+<h2>Category 7: Payment &amp; Policies</h2>
+<ol>
+  <li><strong>What payment methods do you accept?</strong> Cash (INR), all major credit/debit cards, UPI (Google Pay, PhonePe, Paytm), net banking.</li>
+  <li><strong>What is your cancellation policy?</strong> Free cancellation up to 7 days before check-in. Within 7 days: one-night charge. No-shows: full charge.</li>
+  <li><strong>When will my refund be processed?</strong> Within 5-7 business days to original payment method.</li>
+  <li><strong>Do you provide GST invoices?</strong> Yes, GST-compliant invoices for all stays. Provide GSTIN at time of booking.</li>
+  <li><strong>Do you require a security deposit?</strong> Refundable INR 5,000 at check-in.</li>
+</ol>
+
+<h2>Category 8: Safety &amp; Security</h2>
+<ol>
+  <li><strong>Is the villa equipped with CCTV?</strong> Yes, comprehensive CCTV surveillance covering all entry/exit points, parking, and common areas.</li>
+  <li><strong>What security measures are in place?</strong> CCTV, trained security personnel, dedicated caretaker, secure locks, visitor verification.</li>
+  <li><strong>Is the villa equipped for fire safety?</strong> Yes, smoke detectors, fire extinguishers, emergency exits, automated fire alarm system. Staff trained in evacuation procedures.</li>
+  <li><strong>Is medical assistance available on site?</strong> 24/7 on-call medical assistance, first-aid kit, tie-ups with nearby hospitals.</li>
+  <li><strong>What hygiene protocols do you follow?</strong> Hospital-grade disinfectants between stays, regular sanitization of common areas, hand sanitizer dispensers.</li>
+</ol>
+
+<hr>
+
+<!-- ==================== 12. OFFERS ==================== -->
+<h1>12. OFFERS / DEALS (All 8)</h1>
+
+<table>
+<tr><th>Offer</th><th>Discount</th><th>Code</th><th>Valid</th><th>Description</th><th>Features</th></tr>
+<tr><td><strong>Weekend Getaway</strong></td><td>15% OFF</td><td>WEEKEND15</td><td>Jan-Dec 2026</td><td>Weekend escape with 15% discount, complimentary BBQ setup, late checkout.</td><td>15% off all villas, Complimentary BBQ setup, Late checkout until 1:00 PM</td></tr>
+<tr><td><strong>Early Bird Special</strong></td><td>20% OFF</td><td>EARLY20</td><td>Jan-Dec 2026</td><td>Book 21+ days in advance and enjoy 20% discount. Full payment required at booking.</td><td>20% off when booked 21+ days ahead, Flexible rebooking up to 14 days before, Priority villa selection</td></tr>
+<tr><td><strong>Long Stay Discount</strong></td><td>25% OFF</td><td>LONGSTAY25</td><td>Jan-Dec 2026</td><td>Stay 7+ nights and receive 25% discount. Ideal for remote workers and extended holidays.</td><td>25% off 7+ nights, Complimentary weekly housekeeping, Free grocery shopping assistance</td></tr>
+<tr><td><strong>Romantic Escape</strong></td><td>Free Dinner</td><td>ROMANCE2026</td><td>Jan-Dec 2026</td><td>Candlelight dinner for two, romantic decoration, late checkout.</td><td>Complimentary candlelight dinner, Romantic décor, Late checkout until 1:00 PM</td></tr>
+<tr><td><strong>Corporate Offsite</strong></td><td>20% OFF</td><td>CORP20</td><td>Jan-Dec 2026</td><td>Flat 20% discount, complimentary meeting setup, high-speed WiFi, event coordination.</td><td>20% off, Complimentary meeting setup, Dedicated corporate support</td></tr>
+<tr><td><strong>Family Reunion</strong></td><td>18% OFF</td><td>FAMILY18</td><td>Jan-Dec 2026</td><td>Special rates on 5 BHK & 7 BHK, complimentary kids' activities, family BBQ night.</td><td>18% off 5 BHK & 7 BHK, Kids' activity kit, Free family BBQ setup</td></tr>
+<tr><td><strong>Monsoon Magic</strong></td><td>20% OFF</td><td>MONSOON20</td><td>Jun-Sep 2026</td><td>20% discount during rainy season, complimentary bonfire, guided nature walks.</td><td>20% off all villas, Complimentary bonfire each evening, Free guided nature walk</td></tr>
+<tr><td><strong>Birthday Celebration</strong></td><td>Free Cake</td><td>BIRTHDAY26</td><td>Jan-Dec 2026</td><td>Villa decoration, custom birthday cake (1 kg), special dinner setup, late checkout.</td><td>Free custom cake, Balloon & streamer décor, Special dinner setup</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 13. EVENTS ==================== -->
+<h1>13. EVENTS &amp; CELEBRATIONS (All 4 Event Types)</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Events &amp; Celebrations</p>
+<p><strong>Section Heading:</strong> Make Every Occasion Special</p>
+<p><strong>Section Description:</strong> Host your most memorable events at Velora Stays. From intimate gatherings to grand celebrations, our luxury villas and dedicated planning team ensure every occasion is executed flawlessly in a stunning Pawna Lake setting.</p>
+</div>
+
+<h2>Birthday Parties</h2>
+<p><strong>Tagline:</strong> Celebrate another year of joy in a stunning villa</p>
+<p><strong>Capacity:</strong> Up to 30 guests | <strong>Price Range:</strong> ₹15,000 - ₹50,000</p>
+<p><strong>Packages:</strong> Basic ₹15,000 (balloon décor, cake 1kg, BBQ, photography 2hr, snacks), Premium ₹30,000 (theme décor, cake 2kg, private chef, photography & videography, bonfire + music), Royal ₹50,000 (luxury themed décor, designer cake 3kg, private chef + live entertainment, full-day photography, premium dinner for 30)</p>
+<p><strong>Features:</strong> Decoration, Cake, BBQ, Photography, Private Pool</p>
+
+<h2>Anniversary Celebrations</h2>
+<p><strong>Tagline:</strong> Honor your love story in a stunning lakeside villa</p>
+<p><strong>Capacity:</strong> Up to 20 guests | <strong>Price Range:</strong> ₹20,000 - ₹60,000</p>
+<p><strong>Packages:</strong> Silver ₹20,000 (romantic table setup, fresh flower bouquet, cake, photography 2hr, dinner for 20), Gold ₹40,000 (full villa romantic décor, candlelight dinner, floral arrangements, photography & videography, premium dinner buffet for 30), Platinum ₹60,000 (luxury themed décor with fairy lights, exclusive candlelight dinner for couple, premium floral & balloon décor, full-day photography, grand dinner for 40)</p>
+<p><strong>Features:</strong> Romantic Setup, Candle Light Dinner, Flowers, Lake Views</p>
+
+<h2>Corporate Offsites</h2>
+<p><strong>Tagline:</strong> Inspire your team in a stunning natural setting</p>
+<p><strong>Capacity:</strong> Up to 50 guests | <strong>Price Range:</strong> ₹25,000 - ₹1,00,000</p>
+<p><strong>Packages:</strong> Basic ₹25,000 (villa 2 days, meeting setup, WiFi, tea/coffee, BBQ dinner), Standard ₹60,000 (villa 2 days, meeting with projector, WiFi, all meals, team building), Premium ₹1,00,000 (multiple villas 2 days, full AV setup, premium catering, end-to-end event management)</p>
+<p><strong>Features:</strong> Meeting Setup, WiFi, Team Activities, BBQ, Lake Views</p>
+
+<h2>Family Gatherings</h2>
+<p><strong>Tagline:</strong> Bring the whole family together in a stunning setting</p>
+<p><strong>Capacity:</strong> Up to 40 guests | <strong>Price Range:</strong> ₹20,000 - ₹80,000</p>
+<p><strong>Packages:</strong> Intimate ₹20,000 (villa 2 days, basic decoration, BBQ dinner, pool access, photography 1hr), Grand ₹50,000 (villa 2 days, themed decoration, full dinner for 30, BBQ + bonfire, photography & videography), Lavish ₹80,000 (multiple villas 3 days, premium customized décor, gourmet dinner for 40, live cooking station, full-day photography)</p>
+<p><strong>Features:</strong> Private Pool, BBQ, Bonfire, Photography, Lake Views</p>
+
+<hr>
+
+<!-- ==================== 14. TOURS ==================== -->
+<h1>14. TOUR PACKAGES (All 5 — Full Details)</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Pawna Experience</p>
+<p><strong>Section Heading:</strong> Explore the Beauty of Lonavala</p>
+<p><strong>Section Description:</strong> Discover the magic of Pawna Lake and the surrounding Sahyadri mountains with our curated experiences. From historic forts to thrilling adventures, each experience is designed to give you an authentic and unforgettable taste of Lonavala.</p>
+</div>
+
+<h2>Tour 1: Pawna Lake Adventure</h2>
+<table>
+<tr><td><strong>Duration</strong></td><td>Full Day (8:00 AM - 5:00 PM)</td></tr>
+<tr><td><strong>Price</strong></td><td>₹2,500 (Original: ₹3,000)</td></tr>
+<tr><td><strong>Group Size</strong></td><td>2-10 people</td></tr>
+</table>
+<p><strong>Includes:</strong> AC transport, English-speaking guide, lakeside lunch, boating & kayaking, guided trek, bottled water</p>
+<p><strong>Itinerary:</strong></p>
+<ol>
+  <li><strong>8:00 AM — Pawna Lake Boating:</strong> Scenic boat ride on Pawna Lake with views of Tikona Fort and Sahyadri mountains.</li>
+  <li><strong>10:00 AM — Kayaking Experience:</strong> Kayak on serene waters with panoramic views.</li>
+  <li><strong>12:00 PM — Village Visit:</strong> Visit local fishing village, learn about culture, home-cooked lunch with fresh fish.</li>
+  <li><strong>2:00 PM — Guided Trek:</strong> Trek through lush green trails with lake and valley views.</li>
+  <li><strong>5:00 PM — Evening by the Lake:</strong> Relax by the lake, watch sunset with tea.</li>
+</ol>
+
+<h2>Tour 2: Fort Trekking Experience</h2>
+<table>
+<tr><td><strong>Duration</strong></td><td>Full Day (7:00 AM - 4:00 PM)</td></tr>
+<tr><td><strong>Price</strong></td><td>₹2,000 (Original: ₹2,500)</td></tr>
+<tr><td><strong>Group Size</strong></td><td>2-12 people</td></tr>
+</table>
+<p><strong>Includes:</strong> Trekking guide, AC transport, entry fees, packed lunch, trekking poles, first aid, water</p>
+<p><strong>Itinerary:</strong></p>
+<ol>
+  <li><strong>7:00 AM — Lohagad Fort Trek:</strong> Trek through lush vegetation, ancient stone pathways, massive gateways (2hr to summit at 1,033m).</li>
+  <li><strong>10:00 AM — Fort Exploration:</strong> Explore Visapur Gate, Shivaji-era fortifications, water cisterns. Panoramic lake views.</li>
+  <li><strong>12:00 PM — Lunch Break:</strong> Packed lunch with mountain views.</li>
+  <li><strong>1:30 PM — Tikona Fort Trek:</strong> Scenic trek to Tikona Fort (1.5hr). Views of Pawna Lake.</li>
+  <li><strong>4:00 PM — Tikona Fort Exploration:</strong> Explore Vinayak Temple, historic fortifications. Sunset views.</li>
+</ol>
+
+<h2>Tour 3: Lakeside Camping</h2>
+<table>
+<tr><td><strong>Duration</strong></td><td>1 Night (4:00 PM - 7:00 AM next day)</td></tr>
+<tr><td><strong>Price</strong></td><td>₹3,500 (Original: ₹4,500)</td></tr>
+<tr><td><strong>Group Size</strong></td><td>4-20 people</td></tr>
+</table>
+<p><strong>Includes:</strong> Premium campsite, comfortable tents with sleeping bags, welcome drink & snacks, BBQ dinner, bonfire with music, stargazing, breakfast</p>
+<p><strong>Itinerary:</strong></p>
+<ol>
+  <li><strong>4:00 PM — Campsite Arrival:</strong> Welcome drinks, settle into tents.</li>
+  <li><strong>6:00 PM — Bonfire & Barbecue:</strong> Grill by the lake with music and storytelling.</li>
+  <li><strong>8:00 PM — Stargazing:</strong> Identify constellations with expert guides.</li>
+  <li><strong>9:30 PM — Dinner:</strong> Local Maharashtrian cuisine under the open sky.</li>
+  <li><strong>7:00 AM — Sunrise & Breakfast:</strong> Sunrise over the lake, breakfast, check-out.</li>
+</ol>
+
+<h2>Tour 4: Adventure Activities</h2>
+<table>
+<tr><td><strong>Duration</strong></td><td>Full Day (8:00 AM - 3:30 PM)</td></tr>
+<tr><td><strong>Price</strong></td><td>₹3,000 (Original: ₹4,000)</td></tr>
+<tr><td><strong>Group Size</strong></td><td>4-15 people</td></tr>
+</table>
+<p><strong>Includes:</strong> Professional instructors, all safety equipment, AC transport, lakeside lunch, water, photography</p>
+<p><strong>Itinerary:</strong></p>
+<ol>
+  <li><strong>8:00 AM — Rappelling:</strong> Descend a cliff face with valley views.</li>
+  <li><strong>10:00 AM — Zip-lining:</strong> Zip-line across a gorge with panoramic views.</li>
+  <li><strong>12:00 PM — ATV Riding:</strong> Navigate rugged terrain on ATVs.</li>
+  <li><strong>2:00 PM — Lakeside Lunch:</strong> Lunch by Pawna Lake.</li>
+  <li><strong>3:30 PM — Rock Climbing:</strong> Climb natural rock formations with instructor guidance.</li>
+</ol>
+
+<h2>Tour 5: Sunset Experience</h2>
+<table>
+<tr><td><strong>Duration</strong></td><td>Evening (4:30 PM - 7:30 PM)</td></tr>
+<tr><td><strong>Price</strong></td><td>₹1,500 (Original: ₹2,000)</td></tr>
+<tr><td><strong>Group Size</strong></td><td>2-8 people</td></tr>
+</table>
+<p><strong>Includes:</strong> Professional guide, AC transport, refreshments & snacks, short boat ride during golden hour, photography assistance, chai</p>
+<p><strong>Itinerary:</strong></p>
+<ol>
+  <li><strong>4:30 PM — Hilltop Viewpoint:</strong> Panoramic views of Pawna Lake with refreshments.</li>
+  <li><strong>5:30 PM — Sunset Photography:</strong> Capture sunset with photographer guidance.</li>
+  <li><strong>6:15 PM — Lakeside Sunset:</strong> Final moments of sunset reflected on water.</li>
+  <li><strong>6:45 PM — Golden Hour Boat Ride:</strong> Boat ride during golden hour.</li>
+  <li><strong>7:30 PM — Chai by the Lake:</strong> Chai at lakeside tea stall.</li>
+</ol>
+
+<hr>
+
+<!-- ==================== 15. BLOG ==================== -->
+<h1>15. BLOG POSTS (All 12)</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Travel Journal</p>
+<p><strong>Section Heading:</strong> Stories, Guides, and Tips from Pawna Lake</p>
+<p><strong>Section Description:</strong> Explore our curated collection of travel guides, villa tips, food recommendations, and local insights to help you make the most of your trip to Pawna Lake and Lonavala.</p>
+<p><strong>Blog Categories:</strong> Travel Tips, Pawna Lake Guide, Villa Tips, Food &amp; Dining, Events, Adventure, Local Culture</p>
+<p><strong>Author:</strong> Velora Stays Team — The official blog team at Velora Stays, Lonavala.</p>
+</div>
+
+<h3>Post 1: "Best Villas Near Pawna Lake 2026"</h3>
+<p><span class="meta">Slug: best-villas-near-pawna-lake-2026 | Category: Villa Tips | Published: Jan 15, 2026 | 5 min read | Featured: Yes</span></p>
+<p><strong>Excerpt:</strong> Discover the top luxury and budget-friendly villas near Pawna Lake, Lonavala that offer stunning views, modern amenities, and a peaceful escape in 2026.</p>
+<p><strong>Key Topics:</strong> Pawna Lake as a sought-after getaway, choosing villas with proximity to lake, private outdoor spaces, Velora Stays highlights (spacious living areas, fully equipped kitchens, private sit-out decks, landscaped gardens, complimentary bonfire setups), booking tips for peak season (Oct-Feb).</p>
+
+<h3>Post 2: "Top 15 Things to Do Near Pawna Lake"</h3>
+<p><span class="meta">Slug: things-to-do-near-pawna-lake | Category: Pawna Lake Guide | Published: Jan 20, 2026 | 7 min read | Featured: Yes</span></p>
+<p><strong>Excerpt:</strong> From historic forts to scenic viewpoints, here are the top 15 things to do near Pawna Lake.</p>
+<p><strong>Key Topics:</strong> Lion's Point, Bhushi Dam, Lohagad Fort, Visapur Fort, Tikona Fort, Pawna Lake backwaters (kayaking, nature walks), Tung Fort (photography), stargazing, Lonavala chikki shops.</p>
+
+<h3>Post 3: "Complete Guide to Pawna Lake"</h3>
+<p><span class="meta">Slug: complete-guide-to-pawna-lake | Category: Pawna Lake Guide | Published: Feb 1, 2026 | 6 min read | Featured: Yes</span></p>
+<p><strong>Excerpt:</strong> Everything you need to know about Pawna Lake — from boating and camping to the best times to visit and nearby attractions.</p>
+<p><strong>Key Topics:</strong> Formation by Pawna Dam, boating (pedal boats, speedboats, kayaks), monsoon beauty (Jun-Sep), camping (basic to luxury glamping), forts (Lohagad, Visapur, Tikona, Tung).</p>
+
+<h3>Post 4: "Where to Stay Near Pawna Lake: Area Guide"</h3>
+<p><span class="meta">Slug: where-to-stay-near-pawna-lake-area-guide | Category: Villa Tips | Published: Feb 10, 2026 | 6 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> Confused about which area to choose near Pawna Lake? Comprehensive guide to the best locations for your lakeside stay.</p>
+<p><strong>Key Topics:</strong> Lakeside shoreline vs Lonavala town proximity, Velora Stays strategic positioning (elevated terrain, lake views, secluded yet accessible).</p>
+
+<h3>Post 5: "Best Restaurants Near Pawna Lake"</h3>
+<p><span class="meta">Slug: best-restaurants-near-pawna-lake | Category: Food & Dining | Published: Feb 15, 2026 | 5 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> Explore the diverse culinary scene around Pawna Lake — from traditional Maharashtrian thalis to continental cuisine.</p>
+<p><strong>Key Topics:</strong> Traditional thalis (bhakri, pitla, zunka), Malvani cuisine (fish curries, sol kadhi), international options (Italian, Continental, Pan-Asian), farm-to-table movement, lakeside dining, in-house dining at Velora Stays.</p>
+
+<h3>Post 6: "Pawna Lake Street Food Guide: Must-Try Dishes"</h3>
+<p><span class="meta">Slug: pawna-lake-street-food-guide | Category: Food & Dining | Published: Feb 20, 2026 | 6 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> A food lover's guide to the street food scene around Pawna Lake and Lonavala — must-try dishes and hidden gems.</p>
+<p><strong>Key Topics:</strong> Lonavala chikki (peanut, dry fruit, chocolate, coconut), vada pav, misal pav, dabeli, bhajiyas, pakoras, puran poli, best time for street food (Oct-Mar).</p>
+
+<h3>Post 7: "Weekend Getaway Ideas from Pawna Lake"</h3>
+<p><span class="meta">Slug: weekend-getaway-ideas-from-pawna-lake | Category: Travel Tips | Published: Mar 1, 2026 | 5 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> Exciting weekend getaway destinations easily accessible from Pawna Lake — Lonavala, Pune, Mumbai, and more.</p>
+<p><strong>Key Topics:</strong> Lonavala & Khandala (Bushy Garden, Karla/Bhaja caves), Pune (Shaniwar Wada, Aga Khan Palace, FC Road), Mumbai (Gateway of India, Bandra, Marine Drive), Alibaug beaches, Karjat (farm stays, river rafting), Matheran.</p>
+
+<h3>Post 8: "Best Family Villas Near Pawna Lake"</h3>
+<p><span class="meta">Slug: best-family-villas-near-pawna-lake | Category: Villa Tips | Published: Mar 10, 2026 | 5 min read | Featured: Yes</span></p>
+<p><strong>Excerpt:</strong> Planning a family trip? Best family-friendly villas with spacious rooms, kid-friendly amenities, and a welcoming atmosphere.</p>
+<p><strong>Key Topics:</strong> Multiple bedrooms with attached bathrooms, gardens, pools, game rooms, safety (fenced properties, shallow pools, 24/7 security), Velora Stays family villas (board games, children's menu, guided nature walks, bonfires, lakeside picnics).</p>
+
+<h3>Post 9: "Adventure Activities Near Pawna Lake"</h3>
+<p><span class="meta">Slug: adventure-activities-near-pawna-lake | Category: Adventure | Published: Mar 15, 2026 | 6 min read | Featured: Yes</span></p>
+<p><strong>Excerpt:</strong> Thrilling adventure activities near Pawna Lake — paragliding, trekking, camping, and water sports.</p>
+<p><strong>Key Topics:</strong> Paragliding (Oct-May), trekking (Lohagad Fort, Visapur Fort, Tikona Fort, multi-day routes), camping (basic to luxury glamping, bonfires, stargazing, night treks, rock climbing, rappelling), water sports (kayaking, canoeing, paddle boarding).</p>
+
+<h3>Post 10: "Best Cafes and Coffee Shops in Lonavala"</h3>
+<p><span class="meta">Slug: best-cafes-coffee-shops-lonavala | Category: Food & Dining | Published: Mar 20, 2026 | 5 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> From heritage establishments to trendy spots — the best cafes and coffee shops in Lonavala.</p>
+<p><strong>Key Topics:</strong> Established local institutions (filter coffee, chai, light bites), specialty coffee shops (third-wave, pour-over, cold brew), lakeside cafes with outdoor seating, traditional sweet shops (puran poli, karadantu, chikki).</p>
+
+<h3>Post 11: "Corporate Offsite Venues Near Pawna Lake"</h3>
+<p><span class="meta">Slug: corporate-offsite-venues-near-pawna-lake | Category: Events | Published: Apr 1, 2026 | 6 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> Best venues near Pawna Lake that combine productive meeting spaces with inspiring natural surroundings.</p>
+<p><strong>Key Topics:</strong> Trend of offsites in natural settings, advantages (creativity, collaboration, breaking hierarchies), venue selection (capacity, tech, accommodation, catering, team-building), activities (treks, kayaking competitions, bonfires), Velora Stays corporate offsite packages.</p>
+
+<h3>Post 12: "Photography Spots Near Pawna Lake You Must Visit"</h3>
+<p><span class="meta">Slug: photography-spots-near-pawna-lake | Category: Pawna Lake Guide | Published: Apr 10, 2026 | 5 min read | Featured: No</span></p>
+<p><strong>Excerpt:</strong> Capture the breathtaking beauty of Pawna Lake and the Sahyadri Mountains at these stunning photography spots.</p>
+<p><strong>Key Topics:</strong> Pawna Lake shoreline (early morning mist, reflections, sunset from western shore), hill forts (Lohagad Fort panoramic views, Tikona Fort cone-shaped peak), monsoon photography (waterfalls, lush greenery, cloud formations, misty mornings), night photography (low light pollution, Milky Way).</p>
+
+<hr>
+
+<!-- ==================== 16. GALLERY ==================== -->
+<h1>16. GALLERY (31 Images across 6 Categories)</h1>
+
+<h3>Gallery Categories</h3>
+<table>
+<tr><th>Category</th><th>Slug</th><th>Count</th></tr>
+<tr><td>Exterior & Pool</td><td>exterior</td><td>5</td></tr>
+<tr><td>Bedrooms & Interiors</td><td>bedrooms</td><td>5</td></tr>
+<tr><td>Living & Dining</td><td>living</td><td>5</td></tr>
+<tr><td>Outdoor & Lawn</td><td>outdoor</td><td>5</td></tr>
+<tr><td>Lake & Sunset</td><td>lake</td><td>6</td></tr>
+<tr><td>Guest Moments</td><td>guests</td><td>5</td></tr>
+</table>
+
+<h3>All Images</h3>
+<table>
+<tr><th>ID</th><th>Category</th><th>Caption</th><th>File</th></tr>
+<tr><td>gallery-ext-01</td><td>exterior</td><td>Villa Facade</td><td>/WhatsApp Image 2026-07-19 at 8.44.17 AM (1).jpeg</td></tr>
+<tr><td>gallery-ext-02</td><td>exterior</td><td>Private Pool</td><td>/WhatsApp Image 2026-07-19 at 8.44.16 AM.jpeg</td></tr>
+<tr><td>gallery-ext-03</td><td>exterior</td><td>Villa Entrance</td><td>/WhatsApp Image 2026-07-19 at 8.44.15 AM (1).jpeg</td></tr>
+<tr><td>gallery-ext-04</td><td>exterior</td><td>Night View</td><td>/WhatsApp Image 2026-07-19 at 8.44.11 AM (1).jpeg</td></tr>
+<tr><td>gallery-ext-05</td><td>exterior</td><td>Pool Deck</td><td>/outdoorpool.jpeg</td></tr>
+<tr><td>gallery-bed-01</td><td>bedrooms</td><td>Master Bedroom</td><td>/WhatsApp Image 2026-07-19 at 8.44.10 AM.jpeg</td></tr>
+<tr><td>gallery-bed-02</td><td>bedrooms</td><td>Lake View Bedroom</td><td>/WhatsApp Image 2026-07-19 at 8.44.10 AM.jpeg</td></tr>
+<tr><td>gallery-bed-03</td><td>bedrooms</td><td>Modern Interior</td><td>/WhatsApp Image 2026-07-19 at 8.44.08 AM.jpeg</td></tr>
+<tr><td>gallery-bed-04</td><td>bedrooms</td><td>Ensuite Bathroom</td><td>/WhatsApp Image 2026-07-19 at 8.42.21 AM.jpeg</td></tr>
+<tr><td>gallery-bed-05</td><td>bedrooms</td><td>Bedroom Balcony</td><td>/WhatsApp Image 2026-07-19 at 8.42.20 AM.jpeg</td></tr>
+<tr><td>gallery-liv-01</td><td>living</td><td>Living Room</td><td>/WhatsApp Image 2026-07-19 at 8.42.19 AM (1).jpeg</td></tr>
+<tr><td>gallery-liv-02</td><td>living</td><td>Dining Area</td><td>/WhatsApp Image 2026-07-19 at 8.42.18 AM (1).jpeg</td></tr>
+<tr><td>gallery-liv-03</td><td>living</td><td>Kitchen</td><td>/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg</td></tr>
+<tr><td>gallery-liv-04</td><td>living</td><td>Entertainment Area</td><td>/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg</td></tr>
+<tr><td>gallery-liv-05</td><td>living</td><td>Interior Design</td><td>/ExpansiveLivingLawn.jpeg</td></tr>
+<tr><td>gallery-out-01</td><td>outdoor</td><td>Bonfire Area</td><td>/bornfire.webp</td></tr>
+<tr><td>gallery-out-02</td><td>outdoor</td><td>Pawna Lake View</td><td>/Pawnalake.jpg</td></tr>
+<tr><td>gallery-out-03</td><td>outdoor</td><td>Outdoor Seating</td><td>/heroimg1.jpeg</td></tr>
+<tr><td>gallery-out-04</td><td>outdoor</td><td>Garden View</td><td>/heroimg2.jpeg</td></tr>
+<tr><td>gallery-out-05</td><td>outdoor</td><td>Evening Gathering</td><td>/heroimg3.jpeg</td></tr>
+<tr><td>gallery-lake-01</td><td>lake</td><td>Lohagad Fort</td><td>/lohagarh.jpg</td></tr>
+<tr><td>gallery-lake-02</td><td>lake</td><td>Karla Caves</td><td>/Karlacaves.jpg</td></tr>
+<tr><td>gallery-lake-03</td><td>lake</td><td>Bhaja Caves</td><td>/bhajacaves.jpg</td></tr>
+<tr><td>gallery-lake-04</td><td>lake</td><td>Lion Point</td><td>/lionpoint.jpg</td></tr>
+<tr><td>gallery-lake-05</td><td>lake</td><td>Tiger Point</td><td>/tigerpoint.jpg</td></tr>
+<tr><td>gallery-lake-06</td><td>lake</td><td>Trikona Fort</td><td>/trikonafort.jpg</td></tr>
+<tr><td>gallery-guest-01</td><td>guests</td><td>Family Pool Time</td><td>/WhatsApp Image 2026-07-19 at 8.44.17 AM (1).jpeg</td></tr>
+<tr><td>gallery-guest-02</td><td>guests</td><td>Bonfire Night</td><td>/WhatsApp Image 2026-07-19 at 8.44.16 AM.jpeg</td></tr>
+<tr><td>gallery-guest-03</td><td>guests</td><td>Sunset Moments</td><td>/WhatsApp Image 2026-07-19 at 8.44.15 AM (1).jpeg</td></tr>
+<tr><td>gallery-guest-04</td><td>guests</td><td>Corporate Retreat</td><td>/WhatsApp Image 2026-07-19 at 8.44.11 AM (1).jpeg</td></tr>
+<tr><td>gallery-guest-05</td><td>guests</td><td>BBQ Dinner</td><td>/WhatsApp Image 2026-07-19 at 8.42.21 AM.jpeg</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 17. CONTACT ==================== -->
+<h1>17. CONTACT PAGE</h1>
+
+<div class="section">
+<p><strong>Section Eyebrow:</strong> Get In Touch</p>
+<p><strong>Section Heading:</strong> Plan Your Next Getaway With Us</p>
+<p><strong>Section Description:</strong> Have questions about our pricing, flexible villa configurations, or want to host a private event? Our team is here to assist you. Reach out to us through any of the channels below and we will get back to you as quickly as possible.</p>
+</div>
+
+<h3>Contact Channels</h3>
+<table>
+<tr><th>Method</th><th>Details</th></tr>
+<tr><td>Direct Phone</td><td>+91 9324248001 (tel:+919324248001)</td></tr>
+<tr><td>WhatsApp</td><td>+91 9324248001 (wa.me/919324248001)</td></tr>
+<tr><td>Email</td><td>info@velorastays.in</td></tr>
+<tr><td>Address</td><td>Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401</td></tr>
+<tr><td>Working Hours</td><td>24/7 Guest Support</td></tr>
+</table>
+
+<h3>Departments</h3>
+<table>
+<tr><th>Department</th><th>Email</th><th>Phone</th><th>Description</th></tr>
+<tr><td>General Enquiries</td><td>info@velorastays.in</td><td>+91 9324248001</td><td>For any general questions about Velora Stays, villa configurations, amenities, or policies.</td></tr>
+<tr><td>Reservations</td><td>info@velorastays.in</td><td>+91 9324248001</td><td>Booking-related queries including availability, rates, and special requests.</td></tr>
+<tr><td>Events & Celebrations</td><td>info@velorastays.in</td><td>+91 9324248001</td><td>Birthday celebrations, corporate retreats, and memorable occasions.</td></tr>
+<tr><td>Feedback & Support</td><td>info@velorastays.in</td><td>+91 9324248001</td><td>Share positive experiences or suggest improvements.</td></tr>
+</table>
+
+<h3>Contact Form Fields</h3>
+<p>The contact form on the site collects: <strong>Name</strong> and <strong>Phone Number</strong>.</p>
+
+<hr>
+
+<!-- ==================== 18. LEGAL ==================== -->
+<h1>18. LEGAL PAGES (All 6 — Full Content)</h1>
+
+<h2>18a. Privacy Policy</h2>
+<div class="policy">
+<p><strong>Last Updated:</strong> January 15, 2026</p>
+<p>Velora Stays ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our booking services, or stay at our villa.</p>
+<p><strong>Properties:</strong></p>
+<ul>
+  <li><strong>Villa 7 (7 BHK):</strong> 1-acre, 7 rooms with attached bathrooms + 1 common bathroom, swimming pool, garden. 4 rooms on 1st floor with hall, 3 rooms on ground floor with dining hall. Min 14 pax, Max 28 pax.</li>
+  <li><strong>Villa 5 (5 BHK):</strong> 1-acre, 5 rooms with attached bathrooms + 1 common bathroom, swimming pool, garden. 4 rooms on 1st floor, 1 room on ground floor with dining room and play zone. Min 10 pax, Max 15 pax.</li>
+  <li><strong>Villa 4 (4 BHK):</strong> 0.5-acre, 4 rooms with attached bathrooms + 1 common bathroom, separate dining area, swimming pool, garden. 2 cottages with 2 rooms each. Min 8 pax, Max 16 pax.</li>
+</ul>
+<p><strong>Information Collected:</strong> Full name, email, phone, billing address, payment details, government-issued ID (for check-in), IP address, browser type, OS, referring URLs, pages visited.</p>
+<p><strong>Use of Information:</strong> Process reservations, manage stays, send confirmations, promotional offers (opt-in).</p>
+<p><strong>Cookies:</strong> Used to enhance browsing experience. Control via browser settings.</p>
+<p><strong>Third-Party Sharing:</strong> Payment processors, booking platforms (Booking.com, MakeMyTrip, Agoda), cloud hosting, analytics. Data not sold.</p>
+<p><strong>Data Security:</strong> SSL/TLS encryption, firewalls, regular security audits, strict access controls.</p>
+<p><strong>Data Retention:</strong> Reservation data retained for 7 years (tax/accounting). Marketing preferences until unsubscribed.</p>
+<p><strong>Your Rights:</strong> Access, correct, delete, restrict processing, data portability, withdraw consent.</p>
+<p><strong>Children's Privacy:</strong> Services not directed to under 18. Contact us if child has provided data.</p>
+</div>
+
+<h2>18b. Terms &amp; Conditions</h2>
+<div class="policy">
+<p><strong>Last Updated:</strong> January 15, 2026</p>
+<p>Same property descriptions as Privacy Policy.</p>
+<p><strong>Booking Terms:</strong> Must be 18+. Valid government-issued photo ID at check-in.</p>
+<p><strong>Check-in/Check-out:</strong> 2:00 PM / 11:00 AM.</p>
+<p><strong>Facilities:</strong> WiFi, parking, TV in each room, swimming pool, common turf area, garden area.</p>
+<p><strong>Pet Policy:</strong> Pets not allowed.</p>
+<p><strong>Food & Dining:</strong> Food from central kitchen ordered separately after booking. Adults (above 12): ₹1,500/person. Children (above 6): ₹750/child. Kids (below 6): No charge.</p>
+<p><strong>Pricing:</strong> ₹1,500 per person for all villas. Prices in INR inclusive of taxes unless stated otherwise.</p>
+<p><strong>Payment:</strong> Major credit/debit cards, UPI, net banking, digital wallets. Full payment or deposit at booking. Refundable security deposit at check-in.</p>
+<p><strong>Guest Responsibilities:</strong> Responsible for all charges. Noise restrictions after 10:00 PM. No smoking in non-designated areas. Damage charged at replacement cost.</p>
+<p><strong>Liability:</strong> Not liable for loss/damage/injury except proven negligence. Not responsible for force majeure events.</p>
+<p><strong>Intellectual Property:</strong> All content property of Velora Stays or licensors, protected by Indian and international laws.</p>
+<p><strong>Dispute Resolution:</strong> Good-faith negotiation first, then mediation, then jurisdiction of courts in Pune, Maharashtra, India.</p>
+</div>
+
+<h2>18c. Refund Policy</h2>
+<div class="policy">
+<p><strong>Last Updated:</strong> January 15, 2026</p>
+<p><strong>Eligible:</strong> Cancellation within policy timeframe, inability to honour reservation due to our fault, documented service failure.</p>
+<p><strong>Processing:</strong> Credit/debit cards: 5-7 business days. UPI: 3-5 business days. Net banking: 5-7 business days.</p>
+<p><strong>Partial Refunds:</strong> Early checkout without prior arrangement, charges for unused services cancelled 24+ hours in advance.</p>
+<p><strong>Non-Refundable:</strong> No-show charges, early checkout fees as per cancellation policy, prepared dining orders, third-party services.</p>
+</div>
+
+<h2>18d. Cancellation Policy</h2>
+<div class="policy">
+<p><strong>Last Updated:</strong> January 15, 2026</p>
+<p><strong>Free Cancellation (24+ Hours Before Check-in):</strong> Full refund, no cancellation fee.</p>
+<p><strong>Late Cancellation (12-24 Hours Before):</strong> 50% cancellation fee.</p>
+<p><strong>Very Late Cancellation (Less Than 12 Hours):</strong> 100% charge, no refund.</p>
+<p><strong>No-Show:</strong> 100% charge, no refund.</p>
+<p><strong>Early Checkout:</strong> Within first 24 hours: one night's stay charge. Inform caretaker 24 hours in advance.</p>
+</div>
+
+<h2>18e. Cookie Policy</h2>
+<div class="policy">
+<p><strong>Last Updated:</strong> January 15, 2026</p>
+<p><strong>Types:</strong> Strictly Necessary (essential), Performance/Analytics (usage data), Functionality (preferences).</p>
+<p><strong>Management:</strong> Cookie consent banner or browser settings. Blocking necessary cookies may impair functionality.</p>
+</div>
+
+<h2>18f. Accessibility Statement</h2>
+<div class="policy">
+<p><strong>Last Updated:</strong> January 15, 2026</p>
+<p><strong>Website:</strong> Conforms to WCAG 2.1 Level AA — proper heading structures, alt text, colour contrast, keyboard navigation.</p>
+<p><strong>Property:</strong> Step-free access to main entrance, accessible parking, wide corridors.</p>
+</div>
+
+<hr>
+
+<!-- ==================== 19. SEO / SITEMAP ==================== -->
+<h1>19. SEO / SITEMAP DATA</h1>
+
+<h3>Robots.txt Rules</h3>
+<p>Allow: / | Disallow: /api/ | Sitemap: https://velorastays.in/sitemap.xml</p>
+
+<h3>Static Sitemap Pages (36 total)</h3>
+<p>/ (priority 1.0), /villas (0.8), /facilities (0.8), /nearby (0.8), /gallery (0.8), /about (0.8), /about/story (0.8), /about/team (0.8), /about/mission (0.8), /about/vision (0.8), /about/values (0.8), /about/awards (0.8), /about/careers (0.8), /about/sustainability (0.8), /contact (0.8), /search (0.8), /reviews (0.8), /faq (0.8), /offers (0.8), /events (0.8), /blog (0.8), /tours (0.8), /explore (0.8), /explore/experiences (0.8), /explore/nearby-attractions (0.8), /explore/tour-packages (0.8), /explore/gallery (0.8), /explore/virtual-tour (0.8)</p>
+<p>Villa detail pages (3): /villas/4-bhk-villa, /villas/5-bhk-villa, /villas/7-bhk-villa (priority 0.9)</p>
+<p>Blog posts (12): /blog/* (priority 0.7, change frequency monthly)</p>
+<p>Legal pages (6): /legal/privacy-policy, /legal/terms-conditions, /legal/refund-policy, /legal/cancellation-policy, /legal/cookie-policy, /legal/accessibility (priority 0.3, change frequency yearly)</p>
+<p>Change frequency for most pages: weekly</p>
+
+<h3>404 Page</h3>
+<p>Heading: "Page Not Found" | Subtext: "The page you are looking for does not exist or has been moved." | CTA: "Go Home" (/), "View Villas" (/villas) | 404 graphic: amber 6xl "404"</p>
+
+<h3>Loading State</h3>
+<p>Animated spinner (amber border, transparent top) + "Loading..." text</p>
+
+<h3>Error State</h3>
+<p>Heading: "Something went wrong" | Subtext: "An unexpected error occurred. Please try again or return to the homepage." | CTA: "Try Again" (reset), "Go Home" (/)</p>
+
+<h3>Search Page</h3>
+<p>URL: /search | SEO: index: false | Search across villas (name, description), facilities (name, description), blog posts (title, excerpt)</p>
+
+<hr>
+
+<!-- ==================== 20. DESIGN TOKENS ==================== -->
+<h1>20. DESIGN TOKENS / STYLE VARIABLES</h1>
+
+<h3>Colors</h3>
+<table>
+<tr><th>Token</th><th>Value</th></tr>
+<tr><td>--color-primary</td><td>#d97706 (amber-600)</td></tr>
+<tr><td>--color-primary-dark</td><td>#b45309 (amber-700)</td></tr>
+<tr><td>--color-primary-light</td><td>#f59e0b (amber-500)</td></tr>
+<tr><td>--color-secondary</td><td>#1a1a2e (dark navy)</td></tr>
+<tr><td>--color-secondary-light</td><td>#16213e (navy)</td></tr>
+<tr><td>--color-accent</td><td>#f59e0b</td></tr>
+<tr><td>--color-text</td><td>#1f2937 (gray-800)</td></tr>
+<tr><td>--color-text-light</td><td>#6b7280 (gray-500)</td></tr>
+<tr><td>--color-bg</td><td>#ffffff</td></tr>
+<tr><td>--color-bg-alt</td><td>#f9fafb (gray-50)</td></tr>
+<tr><td>--color-bg-dark</td><td>#111827 (gray-900)</td></tr>
+<tr><td>--color-success</td><td>#10b981 (green-500)</td></tr>
+<tr><td>--color-error</td><td>#ef4444 (red-500)</td></tr>
+</table>
+
+<h3>Typography</h3>
+<table>
+<tr><td>Font Family (Headings)</td><td>'Oswald', sans-serif</td></tr>
+<tr><td>Font Family (Body)</td><td>'Inter', sans-serif</td></tr>
+<tr><td>Font Sizes: h1</td><td>2.5rem (40px)</td></tr>
+<tr><td>Font Sizes: h2</td><td>2rem (32px)</td></tr>
+<tr><td>Font Sizes: h3</td><td>1.5rem (24px)</td></tr>
+<tr><td>Font Sizes: body</td><td>1rem (16px)</td></tr>
+<tr><td>Font Sizes: small</td><td>0.875rem (14px)</td></tr>
+</table>
+
+<h3>Spacing / Layout</h3>
+<table>
+<tr><td>--section-padding</td><td>5rem (80px)</td></tr>
+<tr><td>--container-max-width</td><td>1280px</td></tr>
+<tr><td>--border-radius-sm</td><td>0.375rem</td></tr>
+<tr><td>--border-radius</td><td>0.5rem</td></tr>
+<tr><td>--border-radius-lg</td><td>0.75rem</td></tr>
+<tr><td>--border-radius-xl</td><td>1rem</td></tr>
+<tr><td>--shadow-sm</td><td>0 1px 2px rgba(0,0,0,0.05)</td></tr>
+<tr><td>--shadow-md</td><td>0 4px 6px rgba(0,0,0,0.1)</td></tr>
+<tr><td>--shadow-lg</td><td>0 10px 15px rgba(0,0,0,0.1)</td></tr>
+</table>
+
+<h3>Animations</h3>
+<table>
+<tr><td>Transition Base</td><td>all 0.3s ease</td></tr>
+<tr><td>Fade In</td><td>opacity 0 to 1, 0.6s ease</td></tr>
+<tr><td>Slide Up</td><td>translateY(20px) to 0, 0.6s ease</td></tr>
+<tr><td>Scale In</td><td>scale(0.95) to 1, 0.3s ease</td></tr>
+<tr><td>Stagger Delay</td><td>80ms between items</td></tr>
+<tr><td>Hover Lift</td><td>translateY(-4px) + shadow</td></tr>
+</table>
+
+<h3>Breakpoints</h3>
+<table>
+<tr><td>Mobile</td><td>640px</td></tr>
+<tr><td>Tablet</td><td>768px</td></tr>
+<tr><td>Desktop</td><td>1024px</td></tr>
+<tr><td>Wide</td><td>1280px</td></tr>
+</table>
+
+<hr>
+
+<!-- ==================== 21. TECHNICAL ==================== -->
+<h1>21. TECHNICAL STACK</h1>
+
+<table>
+<tr><th>Technology</th><th>Version</th></tr>
+<tr><td>Next.js</td><td>14.2.32</td></tr>
+<tr><td>React</td><td>18.3.1</td></tr>
+<tr><td>TypeScript</td><td>5.5.3</td></tr>
+<tr><td>Sass</td><td>1.77.8</td></tr>
+<tr><td>@reduxjs/toolkit</td><td>2.2.7</td></tr>
+<tr><td>react-redux</td><td>9.1.2</td></tr>
+<tr><td>@iconify/react</td><td>5.0.2</td></tr>
+<tr><td>next-sitemap</td><td>4.2.3</td></tr>
+<tr><td>React DOM</td><td>18.3.1</td></tr>
+<tr><td>Build Output</td><td>Static Export (output: 'export')</td></tr>
+<tr><td>Node.js</td><td>^18.17</td></tr>
+</table>
+
+<h3>Project Constants</h3>
+<table>
+<tr><th>Constant</th><th>Value</th></tr>
+<tr><td>Property Name</td><td>Velora Stays</td></tr>
+<tr><td>Property Tagline</td><td>Luxury Villas Near Pawna Lake, Lonavala</td></tr>
+<tr><td>Booking Engine URL</td><td>https://bookone.io/Velora-Stays?bookingEngine=true</td></tr>
+<tr><td>Default Currency</td><td>₹</td></tr>
+<tr><td>Min Price</td><td>₹8,000</td></tr>
+<tr><td>Max Price</td><td>₹35,000</td></tr>
+<tr><td>Max Occupancy</td><td>25</td></tr>
+<tr><td>Check-In Time</td><td>14:00</td></tr>
+<tr><td>Check-Out Time</td><td>11:00</td></tr>
+<tr><td>Max Gallery Images Per Page</td><td>24</td></tr>
+<tr><td>Blog Posts Per Page</td><td>9</td></tr>
+<tr><td>Reviews Per Page</td><td>10</td></tr>
+<tr><td>WhatsApp Number</td><td>+919324248001</td></tr>
+<tr><td>Emergency Number</td><td>+919324248001</td></tr>
+<tr><td>Reception Number</td><td>+919324248001</td></tr>
+</table>
+
+<hr>
+
+<h1>END OF DOCUMENT</h1>
+<p>This document contains the complete content of the Velora Stays website (https://velorastays.in) as extracted from the Next.js source code. All content is owned by Velora Stays / The Explorer Stays.</p>
+
+</body>
+</html>
