@@ -90,7 +90,7 @@ export const ABOUT_MILESTONES: Milestone[] = [
     year: "2022",
     title: "Founded",
     description:
-      "Velora Stays opened its doors in Gevhande Apati, near Pawna Lake, Lonavala. Founded by The Explorer Stays with a vision to provide luxury private villa experiences, the property launched with 3 carefully designed villas. Despite being a new entrant, the property quickly earned a reputation for exceptional privacy, stunning views, and warm service.",
+      "Velora Stays opened its doors in Gevhande Apati, near Pawna Lake, Lonavala. Founded by Theveloras  stayswith a vision to provide luxury private villa experiences, the property launched with 3 carefully designed villas. Despite being a new entrant, the property quickly earned a reputation for exceptional privacy, stunning views, and warm service.",
   },
   {
     id: "milestone-2023",

@@ -3,10 +3,10 @@ import type { TeamMember, Award } from "@/types";
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "team-founder",
-    name: "The Explorer Stays Team",
+    name: "The DC Developer  Team",
     role: "Founders",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-    bio: "Founded by a group of passionate travellers and hospitality enthusiasts, The Explorer Stays created Velora Stays with a vision to provide luxury private villa experiences near Pawna Lake. With a deep love for the Sahyadri mountains and a commitment to exceptional hospitality, the team has built Velora Stays into one of the most trusted villa properties in Lonavala.",
+    bio: "Founded by a group of passionate travellers and hospitality enthusiasts, Theveloras  stayscreated Velora Stays with a vision to provide luxury private villa experiences near Pawna Lake. With a deep love for the Sahyadri mountains and a commitment to exceptional hospitality, the team has built Velora Stays into one of the most trusted villa properties in Lonavala.",
     social: [
       { platform: "instagram", url: "https://instagram.com/theexplorerstays" },
     ],

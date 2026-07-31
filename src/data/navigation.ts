@@ -20,21 +20,21 @@ export const NAV_GROUPS: NavGroup[] = [
       },
       {
         id: "nav-villas-4bhk",
-        label: "4 BHK Villa",
+        label: "4  Villa",
         href: "/villas/4-bhk-villa",
         description: "Intimate luxury for smaller groups",
         icon: "lucide:home",
       },
       {
         id: "nav-villas-5bhk",
-        label: "5 BHK Villa",
+        label: "5 Villa",
         href: "/villas/5-bhk-villa",
         description: "Perfect for families and friends",
         icon: "lucide:castle",
       },
       {
         id: "nav-villas-7bhk",
-        label: "7 BHK Grand Villa",
+        label: "7 Grand Villa",
         href: "/villas/7-bhk-villa",
         description: "The ultimate group getaway",
         icon: "lucide:sparkles",
@@ -165,9 +165,9 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     id: "footer-villa-config",
     title: "Villa Configurations",
     links: [
-      { id: "footer-4bhk", label: "4 BHK Villa", href: "/villas/4-bhk-villa" },
-      { id: "footer-5bhk", label: "5 BHK Villa", href: "/villas/5-bhk-villa" },
-      { id: "footer-7bhk", label: "7 BHK Grand Villa", href: "/villas/7-bhk-villa" },
+      { id: "footer-4bhk", label: "4 Villa", href: "/villas/4-bhk-villa" },
+      { id: "footer-5bhk", label: "5  Villa", href: "/villas/5-bhk-villa" },
+      { id: "footer-7bhk", label: "7 Grand Villa", href: "/villas/7-bhk-villa" },
     ],
   },
   {

@@ -74,17 +74,17 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
     image: "/heroimg1.jpeg",
-    title: "Luxury Villa Staycation at Pawna Dam",
+    title: "Luxury Villa Staycation  near  Pawna Dam",
     subtitle:
-      "Experience an exclusive private oasis featuring 4, 5, and 7 BHK configurations with stunning mountain views.",
+      "Experience an exclusive private oasis featuring 4, 5, and 7  villas configurations with stunning mountain views.",
     cta: { label: "Check Availability", href: "/contact" },
   },
   {
     id: "hero-slide-2",
     image: "/heroimg2.jpeg",
-    title: "Your Private Gateway in Lonavala",
+    title: "Your Private Gateway  near  pawna lake  lonawala",
     subtitle:
-      "Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Explorer Stays.",
+      "Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Veloras Stays.",
     cta: { label: "Explore Villas", href: "/villas" },
   },
   {
