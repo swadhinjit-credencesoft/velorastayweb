@@ -5,14 +5,14 @@
 // import PageHero from "@/components/sections/PageHero/PageHero";
 // import JsonLd from "@/components/seo/JsonLd/JsonLd";
 // import { generateBreadcrumbSchema } from "@/utils/schema";
-// import { OFFERS, getOfferBySlug } from "@/data/offers";
+import { OFFERS } from "@/data/offers";
 // import styles from "./offer-detail.module.scss";
 
 // type Props = { params: { slug: string } };
 
-// export async function generateStaticParams() {
-//   return OFFERS.map((o) => ({ slug: o.slug }));
-// }
+export function generateStaticParams() {
+  return OFFERS.map((o) => ({ slug: o.slug }));
+}
 
 // export async function generateMetadata({ params }: Props): Promise<Metadata> {
 //   const offer = getOfferBySlug(params.slug);

@@ -5,13 +5,13 @@
 // import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 // import JsonLd from "@/components/seo/JsonLd/JsonLd";
 // import { generateBreadcrumbSchema, generateEventSchema } from "@/utils/schema";
-// import { EVENT_TYPES, getEventBySlug } from "@/data/events";
+import { EVENT_TYPES } from "@/data/events";
 
 // type Props = { params: { slug: string } };
 
-// export async function generateStaticParams() {
-//   return EVENT_TYPES.map((event) => ({ slug: event.slug }));
-// }
+export function generateStaticParams() {
+  return EVENT_TYPES.map((event) => ({ slug: event.slug }));
+}
 
 // export async function generateMetadata({ params }: Props): Promise<Metadata> {
 //   const event = getEventBySlug(params.slug);
