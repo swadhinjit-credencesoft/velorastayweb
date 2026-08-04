@@ -84,13 +84,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-kitchen-01",
         question: "Is there a kitchen in the villa?",
         answer:
-          "Yes, every villa at Velora Stays comes with a fully equipped modern kitchen featuring a gas stove, refrigerator, microwave, utensils, cookware, and all the basics you need to prepare your own meals. We provide complimentary tea, coffee, sugar, and cooking essentials. Guests can purchase groceries from local markets or request our caretaker to arrange grocery shopping.",
+          " Yes, every villa at Velora Stays features a private kitchen exclusively for your use. The kitchen is equipped with essential appliances, cookware, utensils, and basic amenities, allowing you to prepare meals comfortably during your stay.",
       },
       {
         id: "faq-kitchen-02",
         question: "Is BBQ equipment available?",
         answer:
-          "Yes, each villa comes with a dedicated BBQ area equipped with a charcoal grill, utensils, and seating. We provide complimentary charcoal for your first BBQ session. Additional charcoal and BBQ supplies can be purchased from the caretaker. Our caretaker can also help you arrange a local chef for a special BBQ dinner experience.",
+          "Yes, BBQ equipment is available on request. Please inform us in advance, and our team will arrange a charcoal grill along with the necessary utensils for your BBQ experience. Additional charcoal or other BBQ supplies may be available at an extra charge, subject to availability.",
       },
       {
         id: "faq-kitchen-03",

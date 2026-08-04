@@ -57,7 +57,7 @@ export const NAV_GROUPS: NavGroup[] = [
         id: "nav-amenities-kitchen",
         label: "Kitchen & BBQ",
         href: "/facilities#kitchen",
-        description: "Fully equipped kitchen and BBQ setup",
+        description: "Fully equipped kitchen and BBQ setup on requested",
         icon: "lucide:chef-hat",
       },
       {
