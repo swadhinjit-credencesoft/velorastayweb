@@ -10,13 +10,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-01",
         question: "How can I book a villa at Velora Stays?",
         answer:
-          "You can book a villa directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type (4 villas , 5 villas, or 7 grand villas ), and completing the secure payment process. Alternatively, you can call our reservations team at +91 9324248001 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb.",
+          "You can book a villa directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type (4 villas , 5 villas, or 7 grand villas ), and completing the secure payment process. Alternatively, you can call our reservations team at +91 7326079861 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb.",
       },
       {
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at reservation@thehotelmate.co or call +91 9324248001 and we will do our best to accommodate your changes.",
+          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at reservation@thehotelmate.co or call +91 7326079861 and we will do our best to accommodate your changes.",
       },
       {
         id: "faq-booking-03",
@@ -53,7 +53,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-02",
         question: "What is the check-in and check-out time?",
         answer:
-          "Check-in time at Velora Stays is 2:00 PM and check-out time is 11:00 AM. Early check-in is available subject to villa availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. Please contact our caretaker at +91 9324248001 to arrange either option in advance.",
+          "Check-in time at Velora Stays is 2:00 PM and check-out time is 11:00 AM. Early check-in is available subject to villa availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. Please contact our caretaker at +91 7326079861 to arrange either option in advance.",
       },
       {
         id: "faq-villas-03",
@@ -287,7 +287,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-safety-04",
         question: "Is there medical assistance available on site?",
         answer:
-          "Yes, we provide 24/7 on-call medical assistance with immediate access to a first-aid kit at the caretaker's office. We have tie-ups with nearby hospitals in Lonavala for any serious medical situations. In case of an emergency, please call our emergency line at +91 9324248001 or contact your caretaker immediately.",
+          "Yes, we provide 24/7 on-call medical assistance with immediate access to a first-aid kit at the caretaker's office. We have tie-ups with nearby hospitals in Lonavala for any serious medical situations. In case of an emergency, please call our emergency line at +91 7326079861 or contact your caretaker immediately.",
       },
       {
         id: "faq-safety-05",

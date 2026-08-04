@@ -11,15 +11,15 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "Direct Phone",
     icon: "lucide:phone",
-    value: "+91 9324248001",
-    href: "tel:+919324248001",
+    value: "+91 7326079861",
+    href: "tel:+917326079861",
     primary: true,
   },
   {
     label: "WhatsApp",
     icon: "lucide:message-circle",
-    value: "+91 9324248001",
-    href: "https://api.whatsapp.com/send?phone=919324248001&text=This%20is%20an%20Enquiry%20from%3A%20Velora%20Stays%20Website",
+    value: "+91 7326079861",
+    href: "https://api.whatsapp.com/send?phone=917326079861&text=This%20is%20an%20Enquiry%20from%3A%20Velora%20Stays%20Website",
     primary: true,
   },
   {
@@ -56,7 +56,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
     id: "dept-general",
     name: "General Enquiries",
     email: "reservation@thehotelmate.co",
-    phone: "+91 9324248001",
+    phone: "+91 7326079861",
     description:
       "For any general questions about Velora Stays, our villa configurations, amenities, or policies, our team is happy to help.",
   },
@@ -64,7 +64,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
     id: "dept-reservations",
     name: "Reservations",
     email: "reservation@thehotelmate.co",
-    phone: "+91 9324248001",
+    phone: "+91 7326079861",
     description:
       "Our dedicated reservations team handles all booking-related queries including villa availability, rate inquiries, and special requests.",
   },
@@ -72,7 +72,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
     id: "dept-events",
     name: "Events & Celebrations",
     email: "reservation@thehotelmate.co",
-    phone: "+91 9324248001",
+    phone: "+91 7326079861",
     description:
       "From birthday celebrations to corporate retreats, our team will help you plan and execute a memorable occasion at our villa.",
   },
@@ -80,7 +80,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
     id: "dept-feedback",
     name: "Feedback & Support",
     email: "reservation@thehotelmate.co",
-    phone: "+91 9324248001",
+    phone: "+91 7326079861",
     description:
       "Your feedback helps us improve. Whether you want to share a positive experience or suggest improvements, we take every comment seriously.",
   },

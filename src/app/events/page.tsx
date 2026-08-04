@@ -127,7 +127,7 @@ export default function EventsPage() {
               Contact Events Team
             </Link>
             <Link
-              href="tel:+919324248001"
+              href="tel:+917326079861"
               className="border-2 border-amber-500 text-amber-600 hover:bg-amber-50 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Call Now

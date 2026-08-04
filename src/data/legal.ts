@@ -52,7 +52,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
       "Email: reservation@thehotelmate.co<br>\n" +
-      "Phone: +91 9324248001</p>",
+      "Phone: +91 7326079861</p>",
   },
   {
     slug: "terms-conditions",
@@ -124,7 +124,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
       "Email: reservation@thehotelmate.co<br>\n" +
-      "Phone: +91 9324248001</p>",
+      "Phone: +91 7326079861</p>",
   },
   {
     slug: "refund-policy",
@@ -150,7 +150,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>To request a refund, please contact us through any of the following channels:</p>\n" +
       "<ul>\n" +
       "<li>Email: reservation@thehotelmate.co</li>\n" +
-      "<li>Phone: +91 9324248001</li>\n" +
+      "<li>Phone: +91 7326079861</li>\n" +
       "<li>Visit the dedicated caretaker in person during your stay</li>\n" +
       "</ul>\n\n" +
 
@@ -159,7 +159,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p><strong>Velora Stays - Refund Department</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
       "Email: reservation@thehotelmate.co<br>\n" +
-      "Phone: +91 9324248001</p>",
+      "Phone: +91 7326079861</p>",
   },
   {
     slug: "cancellation-policy",
@@ -184,7 +184,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>To cancel your reservation, you may use any of the following methods:</p>\n" +
       "<ul>\n" +
       "<li>Email: reservation@thehotelmate.co</li>\n" +
-      "<li>Phone: +91 9324248001</li>\n" +
+      "<li>Phone: +91 7326079861</li>\n" +
       "<li>Visit the dedicated caretaker in person</li>\n" +
       "</ul>\n\n" +
 
@@ -193,7 +193,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
       "Email: reservation@thehotelmate.co<br>\n" +
-      "Phone: +91 9324248001</p>",
+      "Phone: +91 7326079861</p>",
   },
   {
     slug: "cookie-policy",
@@ -218,7 +218,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>If you have any questions about our use of cookies, please contact us at:</p>\n" +
       "<p><strong>Velora Stays</strong><br>\n" +
       "Email: reservation@thehotelmate.co<br>\n" +
-      "Phone: +91 9324248001</p>",
+      "Phone: +91 7326079861</p>",
   },
   {
     slug: "accessibility",
@@ -239,7 +239,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p><strong>Velora Stays - Accessibility</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
       "Email: reservation@thehotelmate.co<br>\n" +
-      "Phone: +91 9324248001</p>",
+      "Phone: +91 7326079861</p>",
   },
 ];
 

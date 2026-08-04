@@ -226,7 +226,7 @@ export const FOOTER_SOCIAL: SocialLink[] = [
 export const FOOTER_CONTACT = {
   address:
     "Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401, India",
-  phone: "+91 9324248001",
+  phone: "+91 7326079861",
   email: "reservation@thehotelmate.co",
   hours: "24/7 Guest Support",
 };
