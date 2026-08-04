@@ -1,0 +1,184 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$color-surface;
+}
+
+.sectionAlt {
+  @include m.section-padding;
+  background-color: v.$neutral-50;
+  border-top: 1px solid v.$color-border;
+}
+
+.container {
+  @include m.container;
+}
+
+.sectionHeader {
+  max-width: 720px;
+  margin: 0 auto v.$space-xl;
+  text-align: center;
+
+  @media (min-width: v.$bp-lg) {
+    margin-bottom: v.$space-2xl;
+  }
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: v.$color-text-main;
+  margin-bottom: v.$space-md;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}
+
+// ─── Team grid ─────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-lg;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include m.card-surface;
+  @include m.card-surface-hover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid v.$color-accent;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+  padding: v.$space-lg;
+  flex: 1;
+}
+
+.memberName {
+  font-family: v.$font-display;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: v.$color-text-main;
+}
+
+.memberRole {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: v.$color-accent-dark;
+  font-weight: 600;
+}
+
+.memberBio {
+  font-size: 14px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+  flex: 1;
+}
+
+.socials {
+  display: flex;
+  gap: v.$space-sm;
+  margin-top: v.$space-md;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: v.$radius-full;
+  border: 1.5px solid v.$color-border;
+  color: v.$color-text-muted;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    border-color: v.$color-accent-dark;
+    color: v.$color-accent-dark;
+    background-color: v.$color-accent-light;
+  }
+}
+
+// ─── Awards ────────────────────────────────────────────
+
+.awardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.awardCard {
+  @include m.card-surface;
+  padding: v.$space-lg;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+  border-top: 3px solid v.$color-accent;
+}
+
+.awardYear {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: v.$color-accent-dark;
+  font-weight: 600;
+}
+
+.awardTitle {
+  font-family: v.$font-display;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: v.$color-text-main;
+}
+
+.awardOrg {
+  font-size: 13px;
+  font-weight: 600;
+  color: v.$color-text-muted;
+}
+
+.awardDesc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+}

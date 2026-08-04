@@ -1,61 +1,109 @@
 ﻿import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
+import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
+import Icon from "@/components/Icon/Icon";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { TEAM_MEMBERS, AWARDS } from "@/data/team";
+import styles from "./TeamPage.module.scss";
 
 export const metadata: Metadata = {
   title: "Our Team | Velora Stays",
-  description: "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
+  description:
+    "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
   alternates: { canonical: "/about/team" },
   openGraph: {
     title: "Our Team | Velora Stays",
-    description: "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
+    description:
+      "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
   },
 };
 
 export default function TeamPage() {
   return (
     <>
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "About", url: "/about" }, { name: "Team", url: "/about/team" }])} />
-      <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Team", href: "/about/team" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Meet Our Team</h1>
-          <p className="mt-3 text-gray-300">The people who make your stay special.</p>
+      <JsonLd
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: "https://velorastays.in" },
+          { name: "About", url: "https://velorastays.in/about" },
+          { name: "Team", url: "https://velorastays.in/about/team" },
+        ])}
+      />
+      <PageHero
+        eyebrow="Our Team"
+        heading="Meet Our Team"
+        description="The people who make your stay special."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "About", href: "/about" },
+          { label: "Team", href: "/about/team" },
+        ]}
+      />
+
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.eyebrow}>Dedicated Hospitality</span>
+            <h2 className={styles.heading}>The Faces Behind Velora Stays</h2>
+            <p className={styles.description}>
+              From first enquiry to farewell, our team works around the clock to
+              craft a stay worth remembering.
+            </p>
+          </div>
+
+          <div className={styles.grid}>
+            {TEAM_MEMBERS.map((member) => (
+              <div key={member.id} className={styles.card}>
+                <div className={styles.cardBody}>
+                  <h3 className={styles.memberName}>{member.name}</h3>
+                  <p className={styles.memberRole}>{member.role}</p>
+                  <p className={styles.memberBio}>{member.bio}</p>
+                  {member.social && member.social.length > 0 && (
+                    <div className={styles.socials}>
+                      {member.social.map((social) => (
+                        <a
+                          key={social.platform}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${member.name} on ${social.platform}`}
+                          className={styles.socialLink}
+                        >
+                          <Icon
+                            icon={`lucide:${social.platform}`}
+                            width={16}
+                            height={16}
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TEAM_MEMBERS.map((member) => (
-              <div key={member.id} className="bg-gray-50 rounded-xl overflow-hidden text-center">
-                <div className="relative h-64">
-                  <Image src={member.image} alt={member.name} fill className="object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
-                  <p className="text-amber-600 text-sm font-medium">{member.role}</p>
-                  <p className="mt-3 text-gray-600 text-sm line-clamp-4">{member.bio}</p>
-                </div>
-              </div>
-            ))}
+
+      <section className={styles.sectionAlt}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.eyebrow}>Recognition</span>
+            <h2 className={styles.heading}>Awards &amp; Recognition</h2>
+            <p className={styles.description}>
+              We are honoured by the trust and appreciation of our guests and
+              partners.
+            </p>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-8 text-center">Awards & Recognition</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className={styles.awardsGrid}>
             {AWARDS.map((award) => (
-              <div key={award.id} className="bg-amber-50 rounded-xl p-6">
-                <div className="text-amber-600 font-bold text-sm">{award.year}</div>
-                <h3 className="text-lg font-bold text-gray-900 mt-1">{award.title}</h3>
-                <p className="text-sm text-gray-500">{award.organization}</p>
-                <p className="mt-2 text-gray-600 text-sm">{award.description}</p>
+              <div key={award.id} className={styles.awardCard}>
+                <span className={styles.awardYear}>{award.year}</span>
+                <h3 className={styles.awardTitle}>{award.title}</h3>
+                <p className={styles.awardOrg}>{award.organization}</p>
+                <p className={styles.awardDesc}>{award.description}</p>
               </div>
             ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link href="/about" className="text-amber-600 font-semibold hover:underline">← Back to About</Link>
           </div>
         </div>
       </section>

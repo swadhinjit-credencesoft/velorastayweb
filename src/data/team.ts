@@ -8,48 +8,38 @@ export const TEAM_MEMBERS: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
     bio: "Founded by a group of passionate travellers and hospitality enthusiasts, Theveloras  stayscreated Velora Stays with a vision to provide luxury private villa experiences near Pawna Lake. With a deep love for the Sahyadri mountains and a commitment to exceptional hospitality, the team has built Velora Stays into one of the most trusted villa properties in Lonavala.",
     social: [
-      { platform: "instagram", url: "https://instagram.com/theexplorerstays" },
+      { platform: "instagram", url: "" },
     ],
   },
   {
     id: "team-caretaker",
-    name: "Ravi Patil",
+    name: " preveen dhabal",
     role: "Head Caretaker",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     bio: "Ravi leads the caretaker team at Velora Stays with meticulous attention to detail. With over 15 years of experience in hospitality and a deep knowledge of the Lonavala region, he ensures that every guest receives personalised care and has an unforgettable experience. From arranging local activities to coordinating special events, Ravi goes above and beyond for every guest.",
     social: [
-      { platform: "linkedin", url: "https://linkedin.com/in/ravipatil" },
+      { platform: "linkedin", url: "" },
     ],
   },
   {
     id: "team-manager",
-    name: "Priya Deshmukh",
+    name: " Avinash",
     role: "Guest Experience Manager",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     bio: "Priya oversees the guest experience at Velora Stays with a passion for creating memorable stays. With a background in hospitality management and a genuine love for the villa hospitality industry, she ensures that every detail is taken care of, from the moment a guest inquires about a booking to the farewell at checkout. Her focus on personalised service has been instrumental in maintaining the property's 5.0-star rating.",
     social: [
-      { platform: "linkedin", url: "https://linkedin.com/in/priyadeshmukh" },
-      { platform: "instagram", url: "https://instagram.com/priyadeshmukh" },
+      { platform: "linkedin", url: "" },
+      { platform: "instagram", url: "" },
     ],
   },
   {
     id: "team-chef",
-    name: "Suresh Kolkar",
+    name: " mr Yogesh",
     role: "Kitchen Manager",
     image: "https://images.unsplash.com/photo-1577219491135-ce3967c4d049?w=400&h=400&fit=crop&crop=face",
     bio: "Chef Suresh brings the authentic flavours of Maharashtra to the Velora Stays dining experience. Trained in traditional Maharashtrian cuisine and having worked at several premium properties, he combines local recipes with contemporary techniques. His BBQ setups and home-cooked meals are among the most talked-about features among our guests.",
     social: [
-      { platform: "instagram", url: "https://instagram.com/chefsuresh" },
-    ],
-  },
-  {
-    id: "team-activities",
-    name: "Amit Jadhav",
-    role: "Activities Coordinator",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    bio: "Amit coordinates all the adventure activities and experiences at Velora Stays, from fort treks and kayaking to sunset boat rides. With a deep knowledge of the Pawna Lake region and a passion for adventure, he curates unique experiences that showcase the best of the Sahyadri mountains. His energy and enthusiasm are infectious, making every activity a memorable experience.",
-    social: [
-      { platform: "instagram", url: "https://instagram.com/amitjadhav" },
+      { platform: "instagram", url: "" },
     ],
   },
 ];
