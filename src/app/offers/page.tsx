@@ -20,6 +20,12 @@
 //   },
 // };
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
+
 export default function OffersPage() {
   return null; // Offers page disabled — kept (commented out) for later use
   /* ORIGINAL PAGE CONTENT (disabled):

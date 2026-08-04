@@ -5,10 +5,15 @@
 // import PageHero from "@/components/sections/PageHero/PageHero";
 // import JsonLd from "@/components/seo/JsonLd/JsonLd";
 // import { generateBreadcrumbSchema } from "@/utils/schema";
+import type { Metadata } from "next";
 import { OFFERS } from "@/data/offers";
 // import styles from "./offer-detail.module.scss";
 
 // type Props = { params: { slug: string } };
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export function generateStaticParams() {
   return OFFERS.map((o) => ({ slug: o.slug }));

@@ -33,7 +33,7 @@ interface TmAvailability {
   noOfBooked: number;
   noOfAvailable: number;
   status: string;
-  roomRatePlans: TmRatePlan[];
+  roomRatePlans: TmRatePlan[] | null;
 }
 
 export interface TmRoom {
@@ -44,8 +44,8 @@ export interface TmRoom {
   minimumOccupancy: number;
   maximumOccupancy: number;
   noOfRooms: number;
-  imageList: TmImage[];
-  ratesAndAvailabilityDtos: TmAvailability[];
+  imageList: TmImage[] | null;
+  ratesAndAvailabilityDtos: TmAvailability[] | null;
 }
 
 export interface TmService {
@@ -207,14 +207,17 @@ const VILLA_POLICIES = [
 ];
 
 function pickPlanAmount(room: TmRoom): number | undefined {
-  const plans = room.ratesAndAvailabilityDtos.flatMap((dto) => dto.roomRatePlans);
+  const plans = (room.ratesAndAvailabilityDtos ?? []).flatMap(
+    (dto) => dto.roomRatePlans ?? []
+  );
   if (plans.length === 0) return undefined;
   return plans[0].amount;
 }
 
 function isAvailable(room: TmRoom): boolean {
-  if (room.ratesAndAvailabilityDtos.length === 0) return true;
-  return room.ratesAndAvailabilityDtos.some((dto) => dto.noOfAvailable > 0 && dto.status === "Open");
+  const dtos = room.ratesAndAvailabilityDtos ?? [];
+  if (dtos.length === 0) return true;
+  return dtos.some((dto) => dto.noOfAvailable > 0 && dto.status === "Open");
 }
 
 export function mapRoomToVilla(room: TmRoom, services: TmService[], index: number): VillaType {
@@ -238,7 +241,7 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
     bedrooms,
     bathrooms: Math.max(1, bedrooms),
     maxOccupancy: room.maximumOccupancy,
-    images: room.imageList.map((img, i) => ({
+    images: (room.imageList ?? []).map((img, i) => ({
       id: `${room.id}-${i}`,
       src: img.url,
       alt: `${room.name} at Velora Stays`,
@@ -267,7 +270,7 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
 }
 
 export function mapPropertyVillas(property: TmProperty): VillaType[] {
-  return property.roomList
+  return (property.roomList ?? [])
     .map((room, index) => mapRoomToVilla(room, property.propertyServicesList ?? [], index))
     .sort((a, b) => a.price - b.price);
 }

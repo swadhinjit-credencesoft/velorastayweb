@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     "group stay Pawna Lake",
     "Velora Stays",
   ],
+  applicationName: SITE_INFO.name,
   authors: [{ name: SITE_INFO.name }],
   creator: SITE_INFO.name,
   metadataBase: new URL(SITE_INFO.url),
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     description: SITE_INFO.description,
     images: [
       {
-        url: "/schemaimage.jpeg",
+        url: `${SITE_INFO.url}/schemaimage.jpeg`,
         width: 1200,
         height: 630,
         alt: SITE_INFO.name,
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_INFO.name} | Luxury Villas Near Pawna Lake, Lonavala`,
     description: SITE_INFO.description,
-    images: ["/schemaimage.jpeg"],
+    images: [`${SITE_INFO.url}/schemaimage.jpeg`],
   },
   robots: {
     index: true,

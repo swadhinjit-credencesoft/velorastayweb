@@ -31,6 +31,12 @@
 //   { label: "Events", href: "/events" },
 // ];
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
+
 export default function EventsPage() {
   return null; // Events page disabled — kept (commented out) for later use
   /* ORIGINAL PAGE CONTENT (disabled):

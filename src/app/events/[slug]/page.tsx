@@ -5,9 +5,14 @@
 // import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 // import JsonLd from "@/components/seo/JsonLd/JsonLd";
 // import { generateBreadcrumbSchema, generateEventSchema } from "@/utils/schema";
+import type { Metadata } from "next";
 import { EVENT_TYPES } from "@/data/events";
 
 // type Props = { params: { slug: string } };
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export function generateStaticParams() {
   return EVENT_TYPES.map((event) => ({ slug: event.slug }));
