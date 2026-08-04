@@ -66,7 +66,7 @@ export const REVIEWS: Review[] = [
     platform: "makemytrip",
     rating: 5,
     date: "2025-12-28",
-    text: "Location was perfect for our family reunion. The 7 BHK villa accommodated all 14 of us comfortably. The BBQ area was a hit and the kitchen was fully equipped for our home-cooked meals. The view of Pawna Lake from the terrace was breathtaking. Great value for a luxury villa.",
+    text: "Location was perfect for our family reunion. The 7 grand  villa accommodated all 14 of us comfortably. The BBQ area was a hit and the kitchen was fully equipped for our home-cooked meals. The view of Pawna Lake from the terrace was breathtaking. Great value for a luxury villa.",
     verified: true,
   },
   {
@@ -84,7 +84,7 @@ export const REVIEWS: Review[] = [
     platform: "airbnb",
     rating: 5,
     date: "2025-11-15",
-    text: "I have stayed at many villas near Lonavala and Velora Stays is easily the best. The 4 BHK villa was spacious, the interiors were modern, and the private pool was a luxury. The location near Pawna Lake makes it perfect for a weekend escape from Mumbai.",
+    text: "I have stayed at many villas near Lonavala and Velora Stays is easily the best. The 4 villa was spacious, the interiors were modern, and the private pool was a luxury. The location near Pawna Lake makes it perfect for a weekend escape from Mumbai.",
     verified: true,
   },
   {
@@ -201,7 +201,7 @@ export const REVIEWS: Review[] = [
     platform: "google",
     rating: 5,
     date: "2025-11-10",
-    text: "Comfortable stay at a reasonable price for a luxury villa. The 4 BHK was spacious, the pool was private, and the kitchen was modern. The WiFi was fast enough for video calls. Would recommend for remote workers looking for a change of scenery.",
+    text: "Comfortable stay at a reasonable price for a luxury villa. The 4 villas was spacious, the pool was private, and the kitchen was modern. The WiFi was fast enough for video calls. Would recommend for remote workers looking for a change of scenery.",
     verified: true,
   },
   {

@@ -139,19 +139,19 @@ export const OFFERS: Offer[] = [
     name: "Family Reunion",
     tagline: "Bring the whole family together in luxury",
     description:
-      "Create unforgettable family memories at Velora Stays. Our Family Reunion package offers special rates on 5 BHK and 7 BHK villas, along with complimentary kids' activities, a family BBQ night, and dedicated caretaker support. Whether it is a multi-generational gathering or a weekend with the cousins, our spacious villas provide the perfect setting for quality family time surrounded by the beauty of Pawna Lake.",
+      "Create unforgettable family memories at Velora Stays. Our Family Reunion package offers special rates on 5 BHK and 7 grand villas, along with complimentary kids' activities, a family BBQ night, and dedicated caretaker support. Whether it is a multi-generational gathering or a weekend with the cousins, our spacious villas provide the perfect setting for quality family time surrounded by the beauty of Pawna Lake.",
     image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800",
     discount: "18% OFF",
     validFrom: "2026-01-01",
     validUntil: "2026-12-31",
     code: "FAMILY18",
     terms: [
-      "Valid for bookings of 5 BHK and 7 BHK villas only.",
+      "Valid for bookings of 5 villa and 7 grand villas only.",
       "Minimum 2-night stay required.",
       "Cannot be combined with other promotional offers.",
     ],
     features: [
-      "18% discount on 5 BHK and 7 BHK villas",
+      "18% discount on 5 BHK and 7 grand villas",
       "Complimentary kids' activity kit",
       "Free family BBQ setup with charcoal",
     ],

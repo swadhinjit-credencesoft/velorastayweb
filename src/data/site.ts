@@ -12,7 +12,7 @@ export const SITE_INFO: SiteInfo = {
   name: "Velora Stays",
   tagline: "Luxury Villas Near Pawna Lake",
   description:
-    "Velora Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. 4 BHK, 5 BHK & 7 BHK villas with stunning mountain views for family reunions & weekend getaways.",
+    "Velora Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. 4 villas, 5 villas & 7 grand villas with stunning mountain views for family reunions & weekend getaways.",
   url: "https://velorastays.in",
   phone: "+91 9324248001",
   whatsapp: "+91 9324248001",

@@ -10,13 +10,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-01",
         question: "How can I book a villa at Velora Stays?",
         answer:
-          "You can book a villa directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type (4 BHK, 5 BHK, or 7 BHK), and completing the secure payment process. Alternatively, you can call our reservations team at +91 9324248001 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb.",
+          "You can book a villa directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type (4 villas , 5 villas, or 7 grand villas ), and completing the secure payment process. Alternatively, you can call our reservations team at +91 9324248001 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb.",
       },
       {
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 7 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at info@velorastays.in or call +91 9324248001 and we will do our best to accommodate your changes.",
+          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at info@velorastays.in or call +91 9324248001 and we will do our best to accommodate your changes.",
       },
       {
         id: "faq-booking-03",
@@ -47,7 +47,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-01",
         question: "What types of villas are available?",
         answer:
-          "Velora Stays offers three types of luxury villas to suit every group size. Our options include the Cozy Retreat (4 BHK) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
+          "Velora Stays offers three types of luxury villas to suit every group size. Our options include the Cozy Retreat (4 villas) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 grand villas) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
       },
       {
         id: "faq-villas-02",
@@ -207,7 +207,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-events-03",
         question: "What is the maximum capacity for events?",
         answer:
-          "Our 7 BHK Royal Estate villa can accommodate up to 25 guests for a seated dinner and up to 40 guests for a cocktail-style reception. For smaller gatherings like birthday dinners or family celebrations, our 4 BHK and 5 BHK villas are ideal for groups of 10 to 20 people. The exact capacity depends on the seating arrangement and layout you prefer, and our team will help you choose the best configuration.",
+          "Our 7 grand  Royal Estate villa can accommodate up to 25 guests for a seated dinner and up to 40 guests for a cocktail-style reception. For smaller gatherings like birthday dinners or family celebrations, our 4  and 5  villas are ideal for groups of 10 to 20 people. The exact capacity depends on the seating arrangement and layout you prefer, and our team will help you choose the best configuration.",
       },
       {
         id: "faq-events-04",
