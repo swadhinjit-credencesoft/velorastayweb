@@ -74,7 +74,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
     image: "/heroimg1.jpeg",
-    title: "Luxury Villa Staycation  near  Pawna Dam",
+    title: "Luxury Villa Staycation | near Pawna Dam",
     subtitle:
       "Experience an exclusive private oasis featuring 4, 5, and 7  villas configurations with stunning mountain views.",
     cta: { label: "Check Availability", href: "/contact" },
@@ -82,7 +82,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-2",
     image: "/heroimg2.jpeg",
-    title: "Your Private Gateway  near  pawna lake  lonawala",
+    title: "Your Private Gateway | near Pawna Lake Lonawala",
     subtitle:
       "Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Veloras Stays.",
     cta: { label: "Explore Villas", href: "/villas" },
@@ -90,7 +90,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-3",
     image: "/heroimg3.jpeg",
-    title: "Experience Luxury by the Lake",
+    title: "Experience Luxury | by the Lake",
     subtitle:
       "From private swimming pools to bonfire evenings, every moment at Velora Stays is crafted for unforgettable memories.",
     cta: { label: "View Amenities", href: "/facilities" },

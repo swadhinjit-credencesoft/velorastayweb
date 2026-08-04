@@ -48,7 +48,13 @@ export default function Hero({ children }: HeroProps) {
       <div className={styles.content}>
         <div className={styles.textBlock}>
           <span className={styles.eyebrow}>Welcome to {SITE_INFO.name}</span>
-          <h1 className={`${styles.heading} font-oswald`}>{slide.title}</h1>
+          <h1 className={`${styles.heading} font-oswald`}>
+            {slide.title.split("|").map((line, i) => (
+              <span key={i} className={styles.headingLine}>
+                {line.trim()}
+              </span>
+            ))}
+          </h1>
           <p className={styles.subtitle}>{slide.subtitle}</p>
           <div className={styles.actions}>
             <Button variant="primary" size="lg" href={slide.cta.href} icon="lucide:arrow-right" iconPosition="right">
