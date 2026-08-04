@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
-import { SITE_INFO } from "@/data/site";
+import { SITE_ASSETS, SITE_INFO } from "@/data/site";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setMobileNavOpen } from "@/store/slices/uiSlice";
 import type { NavGroup } from "@/types";
@@ -56,7 +57,13 @@ export default function MobileNav() {
       >
         <div className={styles.header}>
           <Link href="/" className={styles.logo} onClick={close}>
-            <span className={styles.logoText}>{SITE_INFO.name}</span>
+            <Image
+              src={SITE_ASSETS.logo}
+              alt={SITE_INFO.name}
+              width={1024}
+              height={1024}
+              className={styles.logoImage}
+            />
           </Link>
           <button
             type="button"

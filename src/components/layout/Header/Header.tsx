@@ -1,11 +1,12 @@
 "use client";
 
 import { useRef, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
-import { SITE_INFO } from "@/data/site";
+import { SITE_ASSETS, SITE_INFO } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
@@ -55,7 +56,14 @@ export default function Header() {
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={SITE_INFO.name}>
-          <span className={styles.logoText}>{SITE_INFO.name}</span>
+          <Image
+            src={SITE_ASSETS.logo}
+            alt={SITE_INFO.name}
+            width={1024}
+            height={1024}
+            className={styles.logoImage}
+            priority
+          />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Main navigation">

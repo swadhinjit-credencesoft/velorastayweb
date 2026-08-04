@@ -35,20 +35,13 @@
   flex-shrink: 0;
 }
 
-.logoText {
-  font-family: v.$font-display;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: v.$color-primary;
+.logoImage {
+  width: auto;
+  height: 88px;
+  transition: height v.$duration-standard v.$ease-standard;
 
   .scrolled & {
-    font-size: 1.25rem;
-  }
-
-  .home & {
-    color: #fff;
+    height: 72px;
   }
 }
 

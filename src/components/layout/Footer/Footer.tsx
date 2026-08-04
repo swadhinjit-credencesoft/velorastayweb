@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import {
@@ -7,7 +8,7 @@ import {
   FOOTER_SOCIAL,
   FOOTER_CONTACT,
 } from "@/data/navigation";
-import { SITE_INFO } from "@/data/site";
+import { SITE_ASSETS, SITE_INFO } from "@/data/site";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
@@ -18,7 +19,13 @@ export default function Footer() {
           <div className={styles.grid}>
             <div className={styles.brand}>
               <Link href="/" className={styles.logo}>
-                <span className={styles.logoText}>{SITE_INFO.name}</span>
+                <Image
+                  src={SITE_ASSETS.logo}
+                  alt={SITE_INFO.name}
+                  width={1024}
+                  height={1024}
+                  className={styles.logoImage}
+                />
               </Link>
               <p className={styles.tagline}>{SITE_INFO.tagline}</p>
 
