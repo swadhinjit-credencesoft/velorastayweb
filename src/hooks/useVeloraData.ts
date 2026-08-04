@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { getProperty, mapPropertyVillas, type TmProperty } from "@/lib/api/thehotelmate";
 import type { VillaType } from "@/types";
 
@@ -13,33 +13,42 @@ interface VeloraData {
 
 export function useVeloraData(): VeloraData {
   const [property, setProperty] = useState<TmProperty | null>(null);
+  const [villas, setVillas] = useState<VillaType[]>([]);
   const [error, setError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
+    setLoading(true);
     getProperty()
       .then((data) => {
-        if (!cancelled) setProperty(data);
-      })
-      .catch((err) => {
-        if (!cancelled) {
+        if (cancelled) return;
+        setProperty(data);
+        try {
+          setVillas(mapPropertyVillas(data));
+          setError(null);
+        } catch (err) {
+          setVillas([]);
           setError(err instanceof Error ? err : new Error(String(err)));
         }
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setVillas([]);
+        setError(err instanceof Error ? err : new Error(String(err)));
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
       });
     return () => {
       cancelled = true;
     };
   }, []);
 
-  const villas = useMemo(() => {
-    if (!property) return [];
-    return mapPropertyVillas(property);
-  }, [property]);
-
   return {
     property,
     villas,
-    loading: !property && !error,
+    loading,
     error,
   };
 }
@@ -50,9 +59,6 @@ export function useVillaBySlug(slug: string): {
   error: Error | null;
 } {
   const { villas, loading, error } = useVeloraData();
-  const villa = useMemo(
-    () => villas.find((v) => v.slug === slug),
-    [villas, slug],
-  );
+  const villa = villas.find((v) => v.slug === slug);
   return { villa, loading, error };
 }

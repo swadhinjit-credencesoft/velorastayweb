@@ -7,6 +7,11 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  console.error(
+    "[Velora Stays] Unhandled render error",
+    error?.message ?? error,
+    error?.digest ?? ""
+  );
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] px-4 text-center">
       <h2 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h2>

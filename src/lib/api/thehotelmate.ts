@@ -105,11 +105,21 @@ export async function getProperty(options?: { refresh?: boolean }): Promise<TmPr
   if (inflightPromise) return inflightPromise;
 
   inflightPromise = (async () => {
-    const res = await fetch(propertyAvailabilityUrl());
-    if (!res.ok) {
-      throw new Error(`Velora API error: ${res.status} ${res.statusText}`);
+    let data: TmProperty;
+    try {
+      const res = await fetch(propertyAvailabilityUrl());
+      if (!res.ok) {
+        throw new Error(`Velora API error: ${res.status} ${res.statusText}`);
+      }
+      data = (await res.json()) as TmProperty;
+    } catch (error) {
+      throw error instanceof Error
+        ? error
+        : new Error("Velora API request failed");
     }
-    const data = (await res.json()) as TmProperty;
+    if (!Array.isArray(data.roomList)) {
+      data = { ...data, roomList: [] };
+    }
     cachedProperty = data;
     return data;
   })().finally(() => {
@@ -217,40 +227,44 @@ function pickPlanAmount(room: TmRoom): number | undefined {
 function isAvailable(room: TmRoom): boolean {
   const dtos = room.ratesAndAvailabilityDtos ?? [];
   if (dtos.length === 0) return true;
-  return dtos.some((dto) => dto.noOfAvailable > 0 && dto.status === "Open");
+  return dtos.some(
+    (dto) => (dto?.noOfAvailable ?? 0) > 0 && dto?.status === "Open"
+  );
 }
 
 export function mapRoomToVilla(room: TmRoom, services: TmService[], index: number): VillaType {
-  const bedrooms = extractBhk(room.name) || 0;
-  const description = stripHtml(room.description || `${room.name} at Velora Stays`);
+  const roomName = room.name ?? `Villa ${index + 1}`;
+  const bedrooms = extractBhk(roomName) || 0;
+  const description = stripHtml(room.description || `${roomName} at Velora Stays`);
   const planAmount = pickPlanAmount(room);
+  const roomOnlyPrice = typeof room.roomOnlyPrice === "number" ? room.roomOnlyPrice : 0;
   const originalPrice =
-    planAmount && planAmount > room.roomOnlyPrice ? planAmount : undefined;
+    planAmount && planAmount > roomOnlyPrice ? planAmount : undefined;
 
   return {
-    id: `room-${room.id}`,
-    slug: room.name.toLowerCase().replace(/\s+/g, "-"),
-    name: room.name,
-    tagline: VILLA_TAGLINES[bedrooms] ?? `${room.name} at Velora Stays`,
+    id: `room-${room.id ?? index}`,
+    slug: roomName.toLowerCase().replace(/\s+/g, "-"),
+    name: roomName,
+    tagline: VILLA_TAGLINES[bedrooms] ?? `${roomName} at Velora Stays`,
     description,
     longDescription: description,
-    price: room.roomOnlyPrice,
+    price: roomOnlyPrice,
     originalPrice,
     currency: "₹",
     priceUnit: "per night",
     bedrooms,
     bathrooms: Math.max(1, bedrooms),
-    maxOccupancy: room.maximumOccupancy,
+    maxOccupancy: room.maximumOccupancy ?? bedrooms * 2,
     images: (room.imageList ?? []).map((img, i) => ({
-      id: `${room.id}-${i}`,
+      id: `${room.id ?? index}-${i}`,
       src: img.url,
-      alt: `${room.name} at Velora Stays`,
-      caption: room.name,
+      alt: `${roomName} at Velora Stays`,
+      caption: roomName,
     })),
     amenities: buildAmenityIds(services),
     highlights: [
       `${bedrooms} BHK private villa`,
-      `Hosts up to ${room.maximumOccupancy} guests`,
+      `Hosts up to ${room.maximumOccupancy ?? bedrooms * 2} guests`,
       "Private pool and lawn access",
       "Fully equipped kitchen",
     ],
