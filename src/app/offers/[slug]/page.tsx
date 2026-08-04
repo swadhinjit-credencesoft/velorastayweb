@@ -1,35 +1,37 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import PageHero from "@/components/sections/PageHero/PageHero";
-import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { generateBreadcrumbSchema } from "@/utils/schema";
-import { OFFERS, getOfferBySlug } from "@/data/offers";
-import styles from "./offer-detail.module.scss";
+// import type { Metadata } from "next";
+// import { notFound } from "next/navigation";
+// import Image from "next/image";
+// import Link from "next/link";
+// import PageHero from "@/components/sections/PageHero/PageHero";
+// import JsonLd from "@/components/seo/JsonLd/JsonLd";
+// import { generateBreadcrumbSchema } from "@/utils/schema";
+// import { OFFERS, getOfferBySlug } from "@/data/offers";
+// import styles from "./offer-detail.module.scss";
 
-type Props = { params: { slug: string } };
+// type Props = { params: { slug: string } };
 
-export async function generateStaticParams() {
-  return OFFERS.map((o) => ({ slug: o.slug }));
-}
+// export async function generateStaticParams() {
+//   return OFFERS.map((o) => ({ slug: o.slug }));
+// }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const offer = getOfferBySlug(params.slug);
-  if (!offer) return { title: "Offer Not Found" };
-  return {
-    title: `${offer.name} | Velora Stays Offers`,
-    description: offer.description,
-    alternates: { canonical: `/offers/${offer.slug}` },
-    openGraph: {
-      title: `${offer.name} | Velora Stays`,
-      description: offer.tagline,
-      images: [{ url: offer.image, width: 1200, height: 630, alt: offer.name }],
-    },
-  };
-}
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const offer = getOfferBySlug(params.slug);
+//   if (!offer) return { title: "Offer Not Found" };
+//   return {
+//     title: `${offer.name} | Velora Stays Offers`,
+//     description: offer.description,
+//     alternates: { canonical: `/offers/${offer.slug}` },
+//     openGraph: {
+//       title: `${offer.name} | Velora Stays`,
+//       description: offer.tagline,
+//       images: [{ url: offer.image, width: 1200, height: 630, alt: offer.name }],
+//     },
+//   };
+// }
 
-export default function OfferDetailPage({ params }: Props) {
+export default function OfferDetailPage() {
+  return null; // Offers detail page disabled — kept (commented out) for later use
+  /* ORIGINAL PAGE CONTENT (disabled):
   const offer = getOfferBySlug(params.slug);
   if (!offer) notFound();
 
@@ -137,4 +139,5 @@ export default function OfferDetailPage({ params }: Props) {
       </section>
     </>
   );
+  */
 }

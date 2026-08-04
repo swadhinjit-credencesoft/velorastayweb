@@ -1,34 +1,36 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { generateBreadcrumbSchema, generateEventSchema } from "@/utils/schema";
-import { EVENT_TYPES, getEventBySlug } from "@/data/events";
+// import type { Metadata } from "next";
+// import { notFound } from "next/navigation";
+// import Image from "next/image";
+// import Link from "next/link";
+// import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
+// import JsonLd from "@/components/seo/JsonLd/JsonLd";
+// import { generateBreadcrumbSchema, generateEventSchema } from "@/utils/schema";
+// import { EVENT_TYPES, getEventBySlug } from "@/data/events";
 
-type Props = { params: { slug: string } };
+// type Props = { params: { slug: string } };
 
-export async function generateStaticParams() {
-  return EVENT_TYPES.map((event) => ({ slug: event.slug }));
-}
+// export async function generateStaticParams() {
+//   return EVENT_TYPES.map((event) => ({ slug: event.slug }));
+// }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const event = getEventBySlug(params.slug);
-  if (!event) return { title: "Event Not Found" };
-  return {
-    title: `${event.name} | Velora Stays Events`,
-    description: event.description,
-    alternates: { canonical: `/events/${event.slug}` },
-    openGraph: {
-      title: `${event.name} | Velora Stays`,
-      description: event.tagline,
-      images: [{ url: event.image, width: 1200, height: 630, alt: event.name }],
-    },
-  };
-}
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const event = getEventBySlug(params.slug);
+//   if (!event) return { title: "Event Not Found" };
+//   return {
+//     title: `${event.name} | Velora Stays Events`,
+//     description: event.description,
+//     alternates: { canonical: `/events/${event.slug}` },
+//     openGraph: {
+//       title: `${event.name} | Velora Stays`,
+//       description: event.tagline,
+//       images: [{ url: event.image, width: 1200, height: 630, alt: event.name }],
+//     },
+//   };
+// }
 
-export default function EventDetailPage({ params }: Props) {
+export default function EventDetailPage() {
+  return null; // Events detail page disabled — kept (commented out) for later use
+  /* ORIGINAL PAGE CONTENT (disabled):
   const event = getEventBySlug(params.slug);
   if (!event) notFound();
 
@@ -182,4 +184,5 @@ export default function EventDetailPage({ params }: Props) {
       </section>
     </>
   );
+  */
 }

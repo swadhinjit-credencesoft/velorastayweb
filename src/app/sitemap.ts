@@ -24,8 +24,8 @@ const staticPages = [
   "/search",
   "/reviews",
   "/faq",
-  "/offers",
-  "/events",
+  // "/offers", // commented out — offers page disabled
+  // "/events", // commented out — events page disabled
   "/blog",
   "/tours",
   "/explore",

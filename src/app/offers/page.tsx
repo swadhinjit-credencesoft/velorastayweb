@@ -1,26 +1,28 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import PageHero from "@/components/sections/PageHero/PageHero";
-import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { generateBreadcrumbSchema } from "@/utils/schema";
-import { OFFERS, OFFERS_CONTENT } from "@/data/offers";
-import { SITE_INFO } from "@/data/site";
-import styles from "./offers.module.scss";
+﻿// import type { Metadata } from "next";
+// import Link from "next/link";
+// import Image from "next/image";
+// import PageHero from "@/components/sections/PageHero/PageHero";
+// import JsonLd from "@/components/seo/JsonLd/JsonLd";
+// import { generateBreadcrumbSchema } from "@/utils/schema";
+// import { OFFERS, OFFERS_CONTENT } from "@/data/offers";
+// import { SITE_INFO } from "@/data/site";
+// import styles from "./offers.module.scss";
 
-export const metadata: Metadata = {
-  title: "Special Offers & Deals | Velora Stays",
-  description:
-    "Save big with exclusive villa offers at Velora Stays. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
-  alternates: { canonical: "/offers" },
-  openGraph: {
-    title: "Special Offers | Velora Stays",
-    description: OFFERS_CONTENT.description,
-    url: `${SITE_INFO.url}/offers`,
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Special Offers & Deals | Velora Stays",
+//   description:
+//     "Save big with exclusive villa offers at Velora Stays. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
+//   alternates: { canonical: "/offers" },
+//   openGraph: {
+//     title: "Special Offers | Velora Stays",
+//     description: OFFERS_CONTENT.description,
+//     url: `${SITE_INFO.url}/offers`,
+//   },
+// };
 
 export default function OffersPage() {
+  return null; // Offers page disabled — kept (commented out) for later use
+  /* ORIGINAL PAGE CONTENT (disabled):
   return (
     <>
       <JsonLd
@@ -80,4 +82,5 @@ export default function OffersPage() {
       </section>
     </>
   );
+  */
 }

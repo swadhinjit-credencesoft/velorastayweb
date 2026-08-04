@@ -1,37 +1,39 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { generateBreadcrumbSchema } from "@/utils/schema";
-import { EVENT_TYPES, EVENTS_CONTENT } from "@/data/events";
+// import type { Metadata } from "next";
+// import Link from "next/link";
+// import Image from "next/image";
+// import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
+// import JsonLd from "@/components/seo/JsonLd/JsonLd";
+// import { generateBreadcrumbSchema } from "@/utils/schema";
+// import { EVENT_TYPES, EVENTS_CONTENT } from "@/data/events";
 
-export const metadata: Metadata = {
-  title: "Events & Celebrations | Velora Stays",
-  description:
-    "Host weddings, conferences, birthday parties, and social gatherings at Velora Stays. Versatile event spaces with dedicated planning team in Lonavala.",
-  keywords: [
-    "villa events Lonavala",
-    "wedding venue Lonavala",
-    "conference hall Lonavala",
-    "birthday party venue",
-    "social gatherings villa",
-    "event spaces Pawna Lake",
-  ],
-  alternates: { canonical: "/events" },
-  openGraph: {
-    title: "Events & Celebrations | Velora Stays",
-    description:
-      "From grand weddings to intimate gatherings, Velora Stays offers versatile event spaces and expert planning for every occasion.",
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Events & Celebrations | Velora Stays",
+//   description:
+//     "Host weddings, conferences, birthday parties, and social gatherings at Velora Stays. Versatile event spaces with dedicated planning team in Lonavala.",
+//   keywords: [
+//     "villa events Lonavala",
+//     "wedding venue Lonavala",
+//     "conference hall Lonavala",
+//     "birthday party venue",
+//     "social gatherings villa",
+//     "event spaces Pawna Lake",
+//   ],
+//   alternates: { canonical: "/events" },
+//   openGraph: {
+//     title: "Events & Celebrations | Velora Stays",
+//     description:
+//       "From grand weddings to intimate gatherings, Velora Stays offers versatile event spaces and expert planning for every occasion.",
+//   },
+// };
 
-const breadcrumbs = [
-  { label: "Home", href: "/" },
-  { label: "Events", href: "/events" },
-];
+// const breadcrumbs = [
+//   { label: "Home", href: "/" },
+//   { label: "Events", href: "/events" },
+// ];
 
 export default function EventsPage() {
+  return null; // Events page disabled — kept (commented out) for later use
+  /* ORIGINAL PAGE CONTENT (disabled):
   return (
     <>
       <JsonLd
@@ -135,4 +137,5 @@ export default function EventsPage() {
       </section>
     </>
   );
+  */
 }
