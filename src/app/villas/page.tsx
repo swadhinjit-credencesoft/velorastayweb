@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { VILLAS, VILLAS_CONTENT } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
-import styles from "./villas.module.scss";
+import VillaListClient from "./VillaListClient";
 
 export const metadata: Metadata = {
   title: "Our Villas | Luxury Villa Stays Near Pawna Lake, Lonavala",
   description:
-    "Choose from our range of luxury villas at Velora Stays near Pawna Lake, Lonavala. From cozy 4 villas to expansive 7 villas, each features private pool, BBQ, and stunning lake views.",
+    "Choose from our range of luxury villas at Velora Stays near Pawna Lake, Lonavala. From cozy 2 BHK villas to expansive 7 BHK villas, each features modern amenities and a fully equipped kitchen.",
   alternates: { canonical: "/villas" },
   openGraph: {
     title: "Our Villas | Velora Stays Pawna Lake",
-    description: "Browse our luxury villas near Pawna Lake with private pool, BBQ, and stunning views.",
+    description: "Browse our luxury villas near Pawna Lake with modern amenities, private pool, and stunning views.",
     url: generateCanonicalUrl("/villas"),
   },
 };
@@ -37,36 +35,7 @@ export default function VillasPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "The Villa", href: "/villas" }]}
         bgImage="/villaheroimg.jpeg"
       />
-      <section className={styles.gridSection}>
-        <div className={styles.grid}>
-          {VILLAS.map((villa) => (
-            <Link
-              key={villa.id}
-              href={`/villas/${villa.slug}`}
-              className={styles.card}
-            >
-              <div className={styles.imageWrap}>
-                <Image src={villa.images[0]?.src} alt={villa.images[0]?.alt} width={400} height={250} className={styles.image} />
-                {villa.tag && <span className={styles.tag}>{villa.tag}</span>}
-              </div>
-              <div className={styles.cardBody}>
-                <h2 className={styles.name}>{villa.name}</h2>
-                <p className={styles.tagline}>{villa.tagline}</p>
-                <div className={styles.meta}>
-                  <span>{villa.bedrooms} BHK</span>
-                  <span>{villa.size} {villa.sizeUnit}</span>
-                  <span>Max {villa.maxOccupancy} guests</span>
-                </div>
-                <div className={styles.priceRow}>
-                  <span className={styles.price}>{villa.currency}{villa.price.toLocaleString("en-IN")}</span>
-                  {villa.originalPrice && <span className={styles.originalPrice}>{villa.currency}{villa.originalPrice.toLocaleString("en-IN")}</span>}
-                  <span className={styles.unit}>/ {villa.priceUnit}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <VillaListClient fallbackVillas={VILLAS} />
     </>
   );
 }

@@ -1,12 +1,16 @@
+"use client";
+
 import Button from "@/components/ui/Button/Button";
 import RoomCard from "@/components/ui/Card/Card";
 import PriceDisplay from "@/components/ui/PriceDisplay/PriceDisplay";
 import Icon from "@/components/Icon/Icon";
 import { VILLAS_CONTENT, getPopularVillas } from "@/data/villas";
+import { useVeloraData } from "@/hooks/useVeloraData";
 import styles from "./FeaturedVillas.module.scss";
 
 export default function FeaturedVillas() {
-  const popularVillas = getPopularVillas();
+  const { villas, error } = useVeloraData();
+  const popularVillas = !error && villas.length > 0 ? villas : getPopularVillas();
 
   return (
     <section className={styles.section}>
@@ -28,10 +32,12 @@ export default function FeaturedVillas() {
                   <h3 className={styles.roomName}>{villa.name}</h3>
                   <p className={styles.roomTagline}>{villa.tagline}</p>
                   <div className={styles.roomMeta}>
-                    <span className={styles.metaItem}>
-                      <Icon icon="lucide:maximize-2" width={14} height={14} />
-                      {villa.size} {villa.sizeUnit}
-                    </span>
+                    {villa.size && villa.sizeUnit && (
+                      <span className={styles.metaItem}>
+                        <Icon icon="lucide:maximize-2" width={14} height={14} />
+                        {villa.size} {villa.sizeUnit}
+                      </span>
+                    )}
                     <span className={styles.metaItem}>
                       <Icon icon="lucide:users" width={14} height={14} />
                       Up to {villa.maxOccupancy}

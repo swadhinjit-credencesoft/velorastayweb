@@ -52,10 +52,12 @@ export default function VillaCard({ villa }: VillaCardProps) {
             <Icon icon="lucide:users" width={14} height={14} />
             {villa.maxOccupancy} {villa.maxOccupancy === 1 ? "Guest" : "Guests"}
           </span>
-          <span className={styles.metaItem}>
-            <Icon icon="lucide:maximize" width={14} height={14} />
-            {villa.size} {villa.sizeUnit}
-          </span>
+          {villa.size && villa.sizeUnit && (
+            <span className={styles.metaItem}>
+              <Icon icon="lucide:maximize" width={14} height={14} />
+              {villa.size} {villa.sizeUnit}
+            </span>
+          )}
           <span className={styles.metaItem}>
             <Icon icon="lucide:bed" width={14} height={14} />
             {villa.bedrooms} BHK
