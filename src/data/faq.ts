@@ -16,7 +16,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at info@velorastays.in or call +91 9324248001 and we will do our best to accommodate your changes.",
+          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at reservation@thehotelmate.co or call +91 9324248001 and we will do our best to accommodate your changes.",
       },
       {
         id: "faq-booking-03",
@@ -28,7 +28,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-04",
         question: "Will I receive a booking confirmation?",
         answer:
-          "Yes, once your booking is confirmed and payment is processed, you will receive a detailed confirmation email with your reservation details, villa type, check-in and check-out dates, and any special requests you have noted. If you do not receive a confirmation within 30 minutes, please check your spam folder or contact us directly at info@velorastays.in.",
+          "Yes, once your booking is confirmed and payment is processed, you will receive a detailed confirmation email with your reservation details, villa type, check-in and check-out dates, and any special requests you have noted. If you do not receive a confirmation within 30 minutes, please check your spam folder or contact us directly at reservation@thehotelmate.co.",
       },
       {
         id: "faq-booking-05",

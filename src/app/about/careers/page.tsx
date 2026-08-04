@@ -46,7 +46,7 @@ export default function CareersPage() {
           </div>
           <div className="bg-white border rounded-xl p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Apply</h2>
-            <p className="text-gray-600">Send your resume and a brief cover letter to <a href="mailto:info@velorastays.in" className="text-amber-600 font-semibold hover:underline">info@velorastays.in</a> with the subject line &quot;Application - [Position]&quot;. Our HR team will review your application and get back to you within 5 business days.</p>
+            <p className="text-gray-600">Send your resume and a brief cover letter to <a href="mailto:reservation@thehotelmate.co" className="text-amber-600 font-semibold hover:underline">reservation@thehotelmate.co</a> with the subject line &quot;Application - [Position]&quot;. Our HR team will review your application and get back to you within 5 business days.</p>
           </div>
           <div className="text-center">
             <Link href="/about" className="text-amber-600 font-semibold hover:underline">← Back to About</Link>

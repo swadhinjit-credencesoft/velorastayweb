@@ -25,8 +25,8 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "Email",
     icon: "lucide:mail",
-    value: "info@velorastays.in",
-    href: "mailto:info@velorastays.in",
+    value: "reservation@thehotelmate.co",
+    href: "mailto:reservation@thehotelmate.co",
     primary: true,
   },
   {
@@ -55,7 +55,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-general",
     name: "General Enquiries",
-    email: "info@velorastays.in",
+    email: "reservation@thehotelmate.co",
     phone: "+91 9324248001",
     description:
       "For any general questions about Velora Stays, our villa configurations, amenities, or policies, our team is happy to help.",
@@ -63,7 +63,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-reservations",
     name: "Reservations",
-    email: "info@velorastays.in",
+    email: "reservation@thehotelmate.co",
     phone: "+91 9324248001",
     description:
       "Our dedicated reservations team handles all booking-related queries including villa availability, rate inquiries, and special requests.",
@@ -71,7 +71,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-events",
     name: "Events & Celebrations",
-    email: "info@velorastays.in",
+    email: "reservation@thehotelmate.co",
     phone: "+91 9324248001",
     description:
       "From birthday celebrations to corporate retreats, our team will help you plan and execute a memorable occasion at our villa.",
@@ -79,7 +79,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-feedback",
     name: "Feedback & Support",
-    email: "info@velorastays.in",
+    email: "reservation@thehotelmate.co",
     phone: "+91 9324248001",
     description:
       "Your feedback helps us improve. Whether you want to share a positive experience or suggest improvements, we take every comment seriously.",

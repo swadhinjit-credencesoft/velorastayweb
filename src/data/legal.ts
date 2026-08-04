@@ -51,7 +51,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>If you have any questions regarding this Privacy Policy, please contact us at:</p>\n" +
       "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@velorastays.in<br>\n" +
+      "Email: reservation@thehotelmate.co<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -123,7 +123,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>For any questions regarding these Terms and Conditions, please contact us at:</p>\n" +
       "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@velorastays.in<br>\n" +
+      "Email: reservation@thehotelmate.co<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -149,7 +149,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>How to Request a Refund</h2>\n" +
       "<p>To request a refund, please contact us through any of the following channels:</p>\n" +
       "<ul>\n" +
-      "<li>Email: info@velorastays.in</li>\n" +
+      "<li>Email: reservation@thehotelmate.co</li>\n" +
       "<li>Phone: +91 9324248001</li>\n" +
       "<li>Visit the dedicated caretaker in person during your stay</li>\n" +
       "</ul>\n\n" +
@@ -158,7 +158,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>For refund-related inquiries, please reach out to us at:</p>\n" +
       "<p><strong>Velora Stays - Refund Department</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@velorastays.in<br>\n" +
+      "Email: reservation@thehotelmate.co<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -183,7 +183,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>How to Cancel</h2>\n" +
       "<p>To cancel your reservation, you may use any of the following methods:</p>\n" +
       "<ul>\n" +
-      "<li>Email: info@velorastays.in</li>\n" +
+      "<li>Email: reservation@thehotelmate.co</li>\n" +
       "<li>Phone: +91 9324248001</li>\n" +
       "<li>Visit the dedicated caretaker in person</li>\n" +
       "</ul>\n\n" +
@@ -192,7 +192,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>For any questions about our cancellation policy, please contact us at:</p>\n" +
       "<p><strong>Velora Stays</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@velorastays.in<br>\n" +
+      "Email: reservation@thehotelmate.co<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -217,7 +217,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Contact Us</h2>\n" +
       "<p>If you have any questions about our use of cookies, please contact us at:</p>\n" +
       "<p><strong>Velora Stays</strong><br>\n" +
-      "Email: info@velorastays.in<br>\n" +
+      "Email: reservation@thehotelmate.co<br>\n" +
       "Phone: +91 9324248001</p>",
   },
   {
@@ -238,7 +238,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p>For accessibility-related inquiries or to request specific accommodations, please contact us at:</p>\n" +
       "<p><strong>Velora Stays - Accessibility</strong><br>\n" +
       "PC37+579, Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401<br>\n" +
-      "Email: info@velorastays.in<br>\n" +
+      "Email: reservation@thehotelmate.co<br>\n" +
       "Phone: +91 9324248001</p>",
   },
 ];

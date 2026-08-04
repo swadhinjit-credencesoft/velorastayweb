@@ -227,7 +227,7 @@ export const FOOTER_CONTACT = {
   address:
     "Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401, India",
   phone: "+91 9324248001",
-  email: "info@velorastays.in",
+  email: "reservation@thehotelmate.co",
   hours: "24/7 Guest Support",
 };
 

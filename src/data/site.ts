@@ -16,7 +16,7 @@ export const SITE_INFO: SiteInfo = {
   url: "https://velorastays.in",
   phone: "+91 9324248001",
   whatsapp: "+91 9324248001",
-  email: "info@velorastays.in",
+  email: "reservation@thehotelmate.co",
   address: {
     street: "Gevhande Apati",
     area: "Near Pawna Lake",
