@@ -190,10 +190,8 @@ const VILLA_TAGS: Record<number, string> = {
 
 const VILLA_NEARBY = [
   "Pawna Lake — 5 min drive",
-  "Tikona Fort — 15 min drive",
-  "Lohagad Fort — 20 min drive",
-  "Bhushi Dam — 30 min drive",
-];
+  "Lonavala Market - 10min drive",
+]
 
 const VILLA_POLICIES = [
   {
