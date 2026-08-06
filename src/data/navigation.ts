@@ -19,6 +19,13 @@ export const NAV_GROUPS: NavGroup[] = [
         icon: "lucide:layout-grid",
       },
       {
+        id: "nav-villas-2bhk",
+        label: "2 Villa",
+        href: "/villas/2-bhk-villa",
+        description: "Cozy choice for couples and small families",
+        icon: "lucide:home",
+      },
+      {
         id: "nav-villas-4bhk",
         label: "4  Villa",
         href: "/villas/4-bhk-villa",
@@ -55,9 +62,9 @@ export const NAV_GROUPS: NavGroup[] = [
       },
       {
         id: "nav-amenities-kitchen",
-        label: "Kitchen & BBQ",
+        label: " central kitchen",
         href: "/facilities#kitchen",
-        description: "Fully equipped kitchen and BBQ setup on requested",
+        description: " central kitchen and BBQ setup on requested",
         icon: "lucide:chef-hat",
       },
       {
@@ -165,6 +172,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     id: "footer-villa-config",
     title: "Villa Configurations",
     links: [
+      { id: "footer-2bhk", label: "2 Villa", href: "/villas/2-bhk-villa" },
       { id: "footer-4bhk", label: "4 Villa", href: "/villas/4-bhk-villa" },
       { id: "footer-5bhk", label: "5  Villa", href: "/villas/5-bhk-villa" },
       { id: "footer-7bhk", label: "7 Grand Villa", href: "/villas/7-bhk-villa" },
@@ -231,4 +239,4 @@ export const FOOTER_CONTACT = {
   hours: "24/7 Guest Support",
 };
 
-export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Velora Stays by The Explorer Stays. All rights reserved.`;
+export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Velora Stays by D c developers. All rights reserved.`;

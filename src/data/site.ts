@@ -180,7 +180,7 @@ export const TRUST_BADGES: TrustBadge[] = [
     id: "badge-managed",
     icon: "lucide:shield-check",
     label: "Managed By",
-    value: "The Explorer Stays",
+    value: "D c developers",
   },
 ];
 

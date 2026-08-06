@@ -10,7 +10,7 @@ import VillaListClient from "./VillaListClient";
 export const metadata: Metadata = {
   title: "Our Villas | Luxury Villa Stays Near Pawna Lake, Lonavala",
   description:
-    "Choose from our range of luxury villas at Velora Stays near Pawna Lake, Lonavala. From cozy 2 BHK villas to expansive 7 BHK villas, each features modern amenities and a fully equipped kitchen.",
+    "Choose from our range of luxury villas at Velora Stays near Pawna Lake, Lonavala. From cozy 2 BHK villas to expansive 7 BHK villas, each features modern amenities and a  central kitchen.",
   alternates: { canonical: "/villas" },
   openGraph: {
     title: "Our Villas | Velora Stays Pawna Lake",

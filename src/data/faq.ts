@@ -30,12 +30,6 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         answer:
           "Yes, once your booking is confirmed and payment is processed, you will receive a detailed confirmation email with your reservation details, villa type, check-in and check-out dates, and any special requests you have noted. If you do not receive a confirmation within 30 minutes, please check your spam folder or contact us directly at reservation@thehotelmate.co.",
       },
-      {
-        id: "faq-booking-05",
-        question: "Can I request a specific villa?",
-        answer:
-          "We do our best to accommodate specific villa requests, subject to availability at the time of check-in. You can mention your preference while booking or contact us in advance and we will note it on your reservation. While we cannot guarantee exact villa assignments, our team makes every effort to fulfill these requests for our guests.",
-      },
     ],
   },
   {
@@ -47,7 +41,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-01",
         question: "What types of villas are available?",
         answer:
-          "Velora Stays offers three types of luxury villas to suit every group size. Our options include the Cozy Retreat (4 villas) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 grand villas) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
+          "Velora Stays offers four types of luxury villas to suit every group size. Our options include the Cozy 2-bedroom villa perfect for couples and small families , Cozy Retreat (4 villas) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 grand villas) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
       },
       {
         id: "faq-villas-02",
@@ -57,9 +51,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         id: "faq-villas-03",
-        question: "Are extra beds or baby cots available?",
+        question: "Are extra beds  available?",
         answer:
-          "Yes, we provide extra beds and baby cots on request at a nominal additional charge. Extra beds are suitable for children above 5 years of age, while baby cots are available for infants. Please inform us at the time of booking so we can have the extra bed or cot set up in your villa before your arrival.",
+          "Yes, extra beds are available on request for an additional charge, subject to availability. We recommend requesting an extra bed at the time of booking so our team can have it prepared before your arrival.",
       },
       {
         id: "faq-villas-04",
@@ -71,20 +65,26 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-05",
         question: "What amenities are included in the villa?",
         answer:
-          "Every villa at Velora Stays comes with air conditioning, smart TV with streaming services, free high-speed WiFi, a fully equipped modern kitchen, private swimming pool, BBQ area, lush garden, power backup, hot water, and a dedicated caretaker. Select villa categories also include premium amenities like outdoor seating areas, lawn games, and premium furnishings.",
+          "Every villa at Velora Stays is thoughtfully designed to provide a comfortable and luxurious stay. Guests can enjoy air-conditioned bedrooms, Smart TV with streaming services, complimentary high-speed Wi-Fi, a private swimming pool, beautifully landscaped gardens, 24/7 power backup, hot water, and dedicated caretaker support , Guests also have access to a central kitchen  and dining services. BBQ arrangements are available on request, subject to availability and applicable charges. Select villa categories may also include premium outdoor seating areas, spacious lawns, and enhanced furnishings for an elevated stay experience",
+      },
+       {
+        id: "faq-villas-06",
+        question: "Can I book more than one villa at Velora Stays ?",
+        answer:
+          "Yes, you can book multiple villas at Velora Stays for family vacations, group getaways, corporate retreats, destination weddings, celebrations, and special events, subject to availability For multiple villa bookings, please contact our Reservations Team. Our team will assist you with villa availability, recommend the best combination of villas for your group, and help you complete your reservation smoothly while ensuring your villas are located as conveniently as possible.",
       },
     ],
   },
   {
     id: "faq-kitchen",
-    name: "Kitchen & BBQ",
+    name: " central kitchen",
     icon: "lucide:utensils",
     items: [
       {
         id: "faq-kitchen-01",
         question: "Is there a kitchen in the villa?",
         answer:
-          " Yes, every villa at Velora Stays features a private kitchen exclusively for your use. The kitchen is equipped with essential appliances, cookware, utensils, and basic amenities, allowing you to prepare meals comfortably during your stay.",
+          " Yes, Velora Stays features a central kitchen that serves freshly prepared meals for our guests. While the villas do not have private kitchens, our central kitchen ensures delicious, hygienic, and quality food throughout your stay. If you have any special dietary requirements or meal preferences, please contact our Reservations Team in advance. We will do our best to accommodate your requests and make your stay as comfortable as possible.",
       },
       {
         id: "faq-kitchen-02",
@@ -94,9 +94,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         id: "faq-kitchen-03",
-        question: "Can you arrange a private chef?",
+        question: "Can you arrange meals during my stay at Velora Stays?",
         answer:
-          "Absolutely! We can arrange a private chef to prepare meals at your villa. Whether it is a traditional Maharashtrian feast, a BBQ dinner under the stars, or a special celebration meal, our partner chefs can create a customized menu based on your preferences. Please inform us at least 24 hours in advance so we can make the necessary arrangements.",
+          "Yes. Velora Stays has a fully operational central kitchen that prepares fresh and delicious meals for our guests. Our menu includes a variety of vegetarian and non-vegetarian options, carefully prepared using quality ingredients.If you have any special dietary requirements, meal preferences, or would like to arrange meals for your family, group, or a special occasion, please contact our Reservations Team in advance. We will be happy to assist you and make the necessary dining arrangements to ensure a comfortable and enjoyable stay.",
       },
       {
         id: "faq-kitchen-04",
@@ -197,12 +197,12 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         answer:
           "Yes, Velora Stays is perfect for private events like birthday parties, anniversaries, pre-wedding shoots, corporate offsites, and family reunions. Our villas offer spacious indoor and outdoor areas that can be customized for your celebration. Please contact our events team at least two weeks in advance to discuss your requirements and schedule a site visit.",
       },
-      {
-        id: "faq-events-02",
-        question: "What event packages do you offer?",
-        answer:
-          "We offer a range of customizable event packages tailored to different occasions and budgets. Packages typically include venue decoration, private chef arrangements, BBQ setup, bonfire, and dedicated event coordination. Our team will work closely with you to create a package that matches your vision, whether it is an intimate gathering or a larger celebration.",
-      },
+      // {
+      //   id: "faq-events-02",
+      //   question: "What event packages do you offer?",
+      //   answer:
+      //     "We offer a range of customizable event packages tailored to different occasions and budgets. Packages typically include venue decoration, private chef arrangements, BBQ setup, bonfire, and dedicated event coordination. Our team will work closely with you to create a package that matches your vision, whether it is an intimate gathering or a larger celebration.",
+      // },
       {
         id: "faq-events-03",
         question: "What is the maximum capacity for events?",
@@ -238,7 +238,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-payment-02",
         question: "What is your cancellation policy?",
         answer:
-          "We offer free cancellation up to 7 days before the scheduled check-in date. Cancellations made within 7 days of check-in will incur a charge equivalent to one night's stay. No-shows will be charged the full reservation amount. For group bookings and special packages, separate cancellation terms may apply and will be communicated at the time of booking.",
+          "We offer free cancellation up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in will incur a charge equivalent to one night's stay. No-shows will be charged the full reservation amount. For group bookings and special packages, separate cancellation terms may apply and will be communicated at the time of booking.",
       },
       {
         id: "faq-payment-03",

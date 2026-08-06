@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Amenities",
   heading: "Curated Experiences, Unmatched Amenities",
   description:
-    "At Velora Stays, we pride ourselves on offering a premium lifestyle experience near Pawna Lake. From a private swimming pool and open lawns to a fully equipped kitchen and indoor entertainment, every amenity is designed for complete comfort and unforgettable memories.",
+    "At Velora Stays, we pride ourselves on offering a premium lifestyle experience near Pawna Lake. From a private swimming pool and open lawns to a  central kitchen and indoor entertainment, every amenity is designed for complete comfort and unforgettable memories.",
 };
 
 export const FACILITIES: Facility[] = [
@@ -88,7 +88,7 @@ export const FACILITIES: Facility[] = [
   {
     id: "facility-kitchen",
     slug: "fully-equipped-kitchen",
-    name: "Fully Equipped Kitchen",
+    name: " central kitchen",
     description:
       "A great vacation requires exceptional food. Our fully functional, premium kitchen setup allows you to prepare meals at your convenience. Includes refrigerator, microwave, gas stove, and all necessary cookware.",
     icon: "lucide:chef-hat",

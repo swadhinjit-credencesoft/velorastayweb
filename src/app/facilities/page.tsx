@@ -10,7 +10,7 @@ import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
 export const metadata: Metadata = {
   title: "Facilities & Amenities | Velora Stays",
   description:
-    "Explore world-class facilities at Velora Stays: private pool, BBQ, high-speed WiFi, fully equipped kitchen, power backup, and more amenities near Pawna Lake, Lonavala.",
+    "Explore world-class facilities at Velora Stays: private pool, BBQ, high-speed WiFi,  central kitchen, power backup, and more amenities near Pawna Lake, Lonavala.",
   keywords: [
     "villa amenities Lonavala",
     "villa facilities Pawna Lake",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const categoryLabels: Record<string, string> = {
   outdoor: "Outdoor & Pool",
   entertainment: "Entertainment",
-  kitchen: "Kitchen & Dining",
+  kitchen: " central kitchen",
   comfort: "Comfort",
   service: "Service",
   bathroom: "Bathroom",
