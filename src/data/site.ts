@@ -55,7 +55,7 @@ export const SITE_ASSETS = {
   logo: "/veloralogo.png",
   logoLight: "/veloralogo.png",
   favicon: "/favicon.ico",
-  aboutImage: "/whychooseus.jpeg",
+  aboutImage: "/images/whychooseus.avif",
   roomsPreviewImage:
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
   diningImage:

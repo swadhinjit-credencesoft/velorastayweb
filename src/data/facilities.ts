@@ -46,7 +46,7 @@ export const FACILITIES: Facility[] = [
     slug: "bbq-equipment",
     name: "BBQ Equipment",
     description:
-      "Make use of our live Barbecue (BBQ) equipment for a fun, interactive evening meal on the lawn. Grill your favourite meats and vegetables while enjoying the cool mountain breeze.",
+      "Live Barbecue (BBQ) equipment is available on request. To arrange your BBQ experience, please contact our reservations team before your arrival. Our team will be happy to assist you. Additional charges may apply, subject to availability.",
     icon: "lucide:flame",
     image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80",
     features: ["Live grill setup", "Equipment provided", "Outdoor cooking"],
@@ -178,7 +178,7 @@ export const FACILITIES: Facility[] = [
     slug: "dining-area",
     name: "Dining Area",
     description:
-      "A spacious indoor dining area perfect for group meals, whether you are enjoying a home-cooked feast or meals prepared by our in-house chef.",
+      "Every villa features its own private indoor dining area, providing a comfortable space for guests to enjoy home-cooked meals, takeout, or food ordered from nearby restaurants. The separate dining space ensures privacy and convenience for families and groups throughout their stay.",
     icon: "lucide:utensils",
     image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
     features: ["Spacious seating", "Indoor dining", "Group-friendly"],
