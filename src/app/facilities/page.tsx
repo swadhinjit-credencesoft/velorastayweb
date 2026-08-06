@@ -6,6 +6,7 @@ import Icon from "@/components/Icon/Icon";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
+import FacilityImageCarousel from "./[slug]/FacilityImageCarousel";
 
 export const metadata: Metadata = {
   title: "Facilities & Amenities | Velora Stays",
@@ -57,14 +58,15 @@ export default function FacilitiesPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/fascilitise.jpeg"
+          <FacilityImageCarousel
+            images={[
+              "/images/swimmingpool.avif",
+              "/images/swimmingpool1.avif",
+            ]}
             alt="Velora Stays facilities"
-            fill
-            className="object-cover"
-            sizes="100vw"
+            controls={false}
+            overlayClassName="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Facilities", href: "/facilities" }]} />

@@ -258,6 +258,7 @@ export interface Facility {
   description: string;
   icon: string;
   image?: string;
+  images?: string[];
   features: string[];
   timing?: string;
   category: "outdoor" | "entertainment" | "kitchen" | "service" | "bathroom" | "comfort" | "transport" | "services" | "safety" | "family" | "basic";

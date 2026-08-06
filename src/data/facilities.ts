@@ -15,7 +15,11 @@ export const FACILITIES: Facility[] = [
     description:
       "Take a refreshing dip in your dedicated private swimming pool while soaking in panoramic views of the Lonavala hills and the surrounding lake area. The pool is exclusively for villa guests, ensuring complete privacy during your stay.",
     icon: "lucide:waves",
-    image: "/outdoorpool.jpeg",
+    image: "/images/swimmingpool.avif",
+    images: [
+      "/images/swimmingpool.avif",
+      "/images/swimmingpool1.avif",
+    ],
     features: ["Exclusive access", "Hill view", "Clean & maintained daily"],
     category: "outdoor",
   },
@@ -28,6 +32,21 @@ export const FACILITIES: Facility[] = [
     icon: "lucide:trees",
     image: "/ExpansiveLivingLawn.jpeg",
     features: ["Outdoor games", "Evening gatherings", "Mountain air"],
+    category: "outdoor",
+  },
+  {
+    id: "facility-balcony",
+    slug: "upper-level-balcony",
+    name: "Upper Level Balcony",
+    description:
+      "Step out onto our upper level balcony for sweeping views of the surrounding hills and fresh mountain air. The perfect spot for morning coffee, quiet reading, or watching the sunset over Pawna Lake.",
+    icon: "lucide:landmark",
+    image: "/images/upperlevelbalcony.avif",
+    images: [
+      "/images/upperlevelbalcony.avif",
+      "/images/upperlevelbalcony1.avif",
+    ],
+    features: ["Scenic hill views", "Relaxation space", "Sunset watching"],
     category: "outdoor",
   },
   {
@@ -92,7 +111,8 @@ export const FACILITIES: Facility[] = [
     description:
       "A great vacation requires exceptional food. Our fully functional, premium kitchen setup allows you to prepare meals at your convenience. Includes refrigerator, microwave, gas stove, and all necessary cookware.",
     icon: "lucide:chef-hat",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    image: "/images/groundkitchen.avif",
+    images: ["/images/groundkitchen.avif"],
     features: ["Gas stove", "Refrigerator", "Microwave", "Cookware"],
     category: "kitchen",
   },
@@ -152,6 +172,21 @@ export const FACILITIES: Facility[] = [
     category: "entertainment",
   },
   {
+    id: "facility-hall",
+    slug: "hall-room",
+    name: "Hall Room",
+    description:
+      "A spacious indoor hall room that brings everyone together — ideal for family gatherings, celebrations, movie nights, and group activities. Ample seating and a comfortable, well-lit space for all your events.",
+    icon: "lucide:sofa",
+    image: "/images/hallroom.avif",
+    images: [
+      "/images/hallroom.avif",
+      "/images/hallroom1.avif",
+    ],
+    features: ["Spacious seating", "Group gatherings", "Indoor events"],
+    category: "entertainment",
+  },
+  {
     id: "facility-music",
     slug: "music-system",
     name: "Bluetooth Music System",
@@ -180,7 +215,11 @@ export const FACILITIES: Facility[] = [
     description:
       "Every villa features its own private indoor dining area, providing a comfortable space for guests to enjoy home-cooked meals, takeout, or food ordered from nearby restaurants. The separate dining space ensures privacy and convenience for families and groups throughout their stay.",
     icon: "lucide:utensils",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    image: "/images/diningarea.avif",
+    images: [
+      "/images/diningarea.avif",
+      "/images/diningarea1.avif",
+    ],
     features: ["Spacious seating", "Indoor dining", "Group-friendly"],
     category: "basic",
   },

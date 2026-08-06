@@ -7,6 +7,7 @@ import Icon from "@/components/Icon/Icon";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, getFacilityBySlug } from "@/data/facilities";
+import FacilityImageCarousel from "./FacilityImageCarousel";
 
 type Props = { params: { slug: string } };
 
@@ -54,15 +55,10 @@ export default function FacilityDetailPage({ params }: Props) {
       />
 
       <section className="relative h-[50vh] min-h-[400px]">
-        <Image
-          src={facility.image || "/schemaimage.jpeg"}
+        <FacilityImageCarousel
+          images={facility.images?.length ? facility.images : [facility.image || "/schemaimage.jpeg"]}
           alt={facility.name}
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full">
             <Breadcrumb items={breadcrumbs} />
