@@ -41,9 +41,9 @@ export const VILLAS: VillaType[] = [
     name: " Velora 2(2 BHK Villa)",
     tagline: "Cozy 2-bedroom villa perfect for couples and small families",
     description:
-      "Cozy 2 BHK villa featuring comfortable bedrooms, a bright living area, a  Central Kitchen, essential modern amenities, and a relaxing stay for couples or small families.",
+      "Cozy Velora 2(2 BHK Villa)  featuring comfortable bedrooms, a bright living area, a  Central Kitchen, essential modern amenities, and a relaxing stay for couples or small families.",
     longDescription:
-      "The 2 BHK Villa at Velora Stays is an intimate retreat designed for couples and small families. Enjoy comfortable bedrooms, a bright and airy living area, and a  Central Kitchen for self-catering. Just a short drive from Pawna Lake, it is the perfect base for a peaceful weekend getaway with modern comfort and privacy.",
+      "The  Velora 2(2 BHK Villa) at Velora Stays is an intimate retreat designed for couples and small families. Enjoy comfortable bedrooms, a bright and airy living area, and a  Central Kitchen for self-catering. Just a short drive from Pawna Lake, it is the perfect base for a peaceful weekend getaway with modern comfort and privacy.",
     price: 6000,
     originalPrice: 8000,
     currency: "₹",
@@ -96,7 +96,7 @@ export const VILLAS: VillaType[] = [
         id: "villa2-cancel",
         title: "Cancellation Policy",
         description:
-          "Free cancellation up to 7 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
+          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
       },
       {
         id: "villa2-guests",
@@ -127,9 +127,9 @@ export const VILLAS: VillaType[] = [
     name: " Velora 4(4 BHK Villa)",
     tagline: "Comfortable 4-bedroom villa for families and small groups",
     description:
-      "Comfortable 4 BHK villa offering well-appointed bedrooms, a cozy living space, a functional kitchen, modern amenities, and an ideal retreat for families or small groups.",
+      "Comfortable Velora 4(4 BHK Villa)  offering well-appointed bedrooms, a cozy living space, a functional kitchen, modern amenities, and an ideal retreat for families or small groups.",
     longDescription:
-      "The 4 BHK Villa at Velora Stays is the perfect choice for families and small groups looking for premium privacy and comfort. It features well-appointed bedrooms, a cozy living space, a functional kitchen, and modern amenities — all nestled near Pawna Lake with easy access to the surrounding hills and scenic viewpoints.",
+      "The  Velora 4(4 BHK Villa) at Velora Stays is the perfect choice for families and small groups looking for premium privacy and comfort. It features well-appointed bedrooms, a cozy living space, a functional kitchen, and modern amenities — all nestled near Pawna Lake with easy access to the surrounding hills and scenic viewpoints.",
     price: 12000,
     originalPrice: 16000,
     currency: "₹",
@@ -184,7 +184,7 @@ export const VILLAS: VillaType[] = [
         id: "villa4-cancel",
         title: "Cancellation Policy",
         description:
-          "Free cancellation up to 7 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
+          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
       },
       {
         id: "villa4-guests",
@@ -202,8 +202,8 @@ export const VILLAS: VillaType[] = [
       },
     ],
     nearby: [
-      "Pawna Lake — 5 min drive",
-      "Lonavala  - Market — 25 min drive"
+      "Pawna Lake — 49 m  drive",
+      "Lonavala  - Market — 50 m drive"
     ],
     popular: true,
     available: true,
@@ -215,9 +215,9 @@ export const VILLAS: VillaType[] = [
     name: "5 BHK Villa",
     tagline: "Spacious 5-bedroom villa ideal for family getaways and friend groups",
     description:
-      "Luxury 5 BHK villa with stylish bedrooms, spacious living and dining areas, a  Central Kitchen, modern comforts, and the perfect setting for family gatherings or group stays.",
+      "Luxury Velora 5(5 BHK Villa)  with stylish bedrooms, spacious living and dining areas, a  Central Kitchen, modern comforts, and the perfect setting for family gatherings or group stays.",
     longDescription:
-      "The 5 BHK Villa at Velora Stays is a luxurious retreat offering stylish bedrooms, spacious living and dining areas, and a  Central Kitchen. Perfect for family gatherings or group stays, it combines modern comforts with the natural beauty of Pawna Lake and the surrounding hills.",
+      "The  Velora 5(5 BHK Villa) at Velora Stays is a luxurious retreat offering stylish bedrooms, spacious living and dining areas, and a  Central Kitchen. Perfect for family gatherings or group stays, it combines modern comforts with the natural beauty of Pawna Lake and the surrounding hills.",
     price: 15000,
     originalPrice: 20000,
     currency: "₹",
@@ -273,7 +273,7 @@ export const VILLAS: VillaType[] = [
         id: "villa5-cancel",
         title: "Cancellation Policy",
         description:
-          "Free cancellation up to 7 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
+          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
       },
       {
         id: "villa5-guests",
@@ -304,9 +304,9 @@ export const VILLAS: VillaType[] = [
     name: "7 BHK Villa",
     tagline: "The ultimate choice for large groups and grand celebrations",
     description:
-      "Spacious 7 BHK villa featuring elegant bedrooms, a  Central Kitchen, comfortable living areas, modern amenities, and ample space for large families, reunions, or group vacations.",
+      "Spacious Velora 7(7 BHK Villa)  featuring elegant bedrooms, a  Central Kitchen, comfortable living areas, modern amenities, and ample space for large families, reunions, or group vacations.",
     longDescription:
-      "The 7 BHK Villa is the crown jewel of Velora Stays — an expansive villa designed for large families, reunions, and group vacations. With elegant bedrooms, comfortable living areas and ample outdoor space, it comfortably hosts up to 28 guests near Pawna Lake.",
+      "The  Velora 7(7 BHK Villa) is the crown jewel of Velora Stays — an expansive villa designed for large families, reunions, and group vacations. With elegant bedrooms, comfortable living areas and ample outdoor space, it comfortably hosts up to 28 guests near Pawna Lake.",
     price: 21000,
     originalPrice: 28000,
     currency: "₹",
@@ -361,7 +361,7 @@ export const VILLAS: VillaType[] = [
         id: "villa7-cancel",
         title: "Cancellation Policy",
         description:
-          "Free cancellation up to 7 days before check-in. Cancellations within 14 days may forfeit the deposit.",
+          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
       },
       {
         id: "villa7-guests",

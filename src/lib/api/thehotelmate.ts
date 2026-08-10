@@ -189,8 +189,8 @@ const VILLA_TAGS: Record<number, string> = {
 };
 
 const VILLA_NEARBY = [
-  "Pawna Lake — 5 min drive",
-  "Lonavala Market - 10min drive",
+  "Pawna Lake — 49 min drive",
+  "Lonavala Market - 50min drive",
 ]
 
 const VILLA_POLICIES = [
@@ -204,7 +204,7 @@ const VILLA_POLICIES = [
     id: "cancel",
     title: "Cancellation Policy",
     description:
-      "Free cancellation up to 7 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
+      "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
   },
   {
     id: "guests",

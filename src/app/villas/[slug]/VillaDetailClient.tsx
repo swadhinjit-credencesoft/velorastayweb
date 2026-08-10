@@ -142,7 +142,7 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
                 </div>
                 <div className={styles.bookingDetailRow}>
                   <span>Free Cancellation</span>
-                  <strong>Up to 7 days</strong>
+                  <strong>Up to 15 days</strong>
                 </div>
               </div>
             </div>
