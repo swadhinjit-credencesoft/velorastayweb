@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
-import { VILLAS } from "@/data/villas";
+import GalleryVillaSections from "./GalleryVillaSections";
 
 export const metadata: Metadata = {
   title: "Photo Gallery | Velora Stays",
@@ -36,33 +36,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {[...VILLAS]
-        .sort((a, b) => b.bedrooms - a.bedrooms)
-        .map((villa) => (
-          <section key={villa.id} className="py-12 bg-white border-b last:border-0">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">{villa.name}</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {villa.images.map((img) => (
-                  <div key={img.id} className="relative aspect-[4/3] rounded-xl overflow-hidden group">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-end p-3">
-                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        {img.caption || img.alt}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        ))}
+      <GalleryVillaSections />
 
       {GALLERY_CATEGORIES.map((cat) => {
         const images = GALLERY_IMAGES.filter((img) => img.category === cat.slug);
