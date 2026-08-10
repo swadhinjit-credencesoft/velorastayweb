@@ -174,6 +174,13 @@ function buildAmenityIds(services: TmService[]): string[] {
   return Array.from(ids);
 }
 
+const SLUG_BY_BHK: Record<number, string> = {
+  2: "2-bhk-villa",
+  4: "4-bhk-villa",
+  5: "5-bhk-villa",
+  7: "7-bhk-villa",
+};
+
 const VILLA_TAGLINES: Record<number, string> = {
   2: "Cozy 2-bedroom villa perfect for couples and small families",
   4: "Comfortable 4-bedroom villa for families and small groups",
@@ -241,7 +248,7 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
 
   return {
     id: `room-${room.id ?? index}`,
-    slug: roomName.toLowerCase().replace(/\s+/g, "-"),
+    slug: SLUG_BY_BHK[bedrooms] ?? roomName.toLowerCase().replace(/\s+/g, "-"),
     name: roomName,
     tagline: VILLA_TAGLINES[bedrooms] ?? `${roomName} at Velora Stays`,
     description,

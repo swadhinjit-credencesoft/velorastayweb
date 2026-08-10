@@ -89,7 +89,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Escape the heat with individually controlled air conditioning in every bedroom. Our energy-efficient units keep your space cool and comfortable, allowing you to relax after a day of exploring.",
     icon: "lucide:wind",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1766788466565-768128d89ce4?w=800&q=80",
     features: ["Individual controls", "24/7 cooling", "Energy efficient"],
     category: "basic",
   },

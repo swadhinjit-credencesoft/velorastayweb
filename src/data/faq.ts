@@ -41,7 +41,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-01",
         question: "What types of villas are available?",
         answer:
-          "Velora Stays offers four types of luxury villas to suit every group size. Our options include the Cozy 2-bedroom villa perfect for couples and small families , Cozy Retreat (4 villas) for families and small groups, the Grand Villa (5 BHK) for larger families and friend groups, and the Royal Estate (7 grand villas) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
+          "Velora Stays offers four types of luxury villas to suit every group size. Our options include the Velora 2 (2 BHK) perfect for couples and small families , Velora 4 (4 BHK) for families and small groups, the Velora 5 (5 BHK) for larger families and friend groups, andVelora 7 (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
       },
       {
         id: "faq-villas-02",
