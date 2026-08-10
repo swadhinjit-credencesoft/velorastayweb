@@ -15,7 +15,7 @@ export const SITE_INFO: SiteInfo = {
     "Velora Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. 4 villas, 5 villas & 7 grand villas with stunning mountain views for family reunions & weekend getaways.",
   url: "https://velorastays.in",
   phone: "+91 7326079861",
-  whatsapp: "+91 7326079861",
+  whatsapp: "+91 9004126958",
   email: "reservation@thehotelmate.co",
   address: {
     street: "Gevhande Apati",
@@ -186,10 +186,11 @@ export const TRUST_BADGES: TrustBadge[] = [
 
 const whatsappPhone = SITE_INFO.whatsapp.replace(/\s+/g, "").replace("+", "");
 const whatsappMessage = [
-  "This is an Enquiry from: Velora Stays Website",
-  `Hotel Name: ${SITE_INFO.name}`,
-  `Phone: ${SITE_INFO.phone}`,
-  `Address: ${SITE_INFO.address.full}`,
+  "*This is an Enquiry from :* The HotelMate Website",
+  "Hotel Name: Velora Stays,",
+  "Property Id: 3607,",
+  "externalSite: WebSite,",
+  "Address: PC37+579,Near Pawna Lake, Lonavala,hotels-in-pune,Gevhande Apati,India",
 ].join("\n");
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`;
 

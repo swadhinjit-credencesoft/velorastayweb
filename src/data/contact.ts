@@ -18,8 +18,8 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "WhatsApp",
     icon: "lucide:message-circle",
-    value: "+91 7326079861",
-    href: "https://api.whatsapp.com/send?phone=917326079861&text=This%20is%20an%20Enquiry%20from%3A%20Velora%20Stays%20Website",
+    value: "+91 9004126958",
+    href: "https://api.whatsapp.com/send?phone=919004126958&text=*This%20is%20an%20Enquiry%20from%20%3A*%20The%20HotelMate%20Website%0AHotel%20Name%3A%20Velora%20Stays%2C%0AProperty%20Id%3A%203607%2C%0AexternalSite%3A%20WebSite%2C%0AAddress%3A%20PC37%2B579%2CNear%20Pawna%20Lake%2C%20Lonavala%2Chotels-in-pune%2CGevhande%20Apati%2CIndia",
     primary: true,
   },
   {

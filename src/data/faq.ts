@@ -16,7 +16,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in may incur a one-night charge. To modify your booking, please contact our reservations team at reservation@thehotelmate.co or call +91 7326079861 and we will do our best to accommodate your changes.",
+          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days  incur a charge of 50% of the booking amount.. To modify your booking, please contact our reservations team at reservation@thehotelmate.co or call +91 7326079861 and we will do our best to accommodate your changes.",
       },
       {
         id: "faq-booking-03",
@@ -59,7 +59,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-04",
         question: "Is there a caretaker at the villa?",
         answer:
-          "Yes, each villa comes with a dedicated caretaker who is available from 8:00 AM to 8:00 PM to assist with any needs. The caretaker can help with grocery shopping, arranging local transport, coordinating activities, and ensuring the villa is well-maintained during your stay. For after-hours assistance, our emergency contact number is available for urgent requests.",
+          "Yes, each villa comes with a dedicated caretaker who is available from 8:00 AM to 10:00 PM to assist with any needs. The caretaker can help with grocery shopping, arranging local transport, coordinating activities, and ensuring the villa is well-maintained during your stay. For after-hours assistance, our emergency contact number is available for urgent requests.",
       },
       {
         id: "faq-villas-05",
@@ -238,7 +238,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-payment-02",
         question: "What is your cancellation policy?",
         answer:
-          "We offer free cancellation up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in will incur a charge equivalent to one night's stay. No-shows will be charged the full reservation amount. For group bookings and special packages, separate cancellation terms may apply and will be communicated at the time of booking.",
+          "We offer free cancellation up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in will incur a charge of 50% of the booking amount. No-shows will be charged the full reservation amount. For group bookings and special packages, separate cancellation terms may apply and will be communicated at the time of booking.",
       },
       {
         id: "faq-payment-03",
