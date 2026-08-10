@@ -58,7 +58,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
 
   // ── Living & Dining ──
   { id: "gallery-liv-01", src: "/WhatsApp Image 2026-07-19 at 8.42.19 AM (1).jpeg", alt: "Living room", category: "living", caption: "Living Room" },
-  { id: "gallery-liv-02", src: "/WhatsApp Image 2026-07-19 at 8.42.18 AM (1).jpeg", alt: "Dining area", category: "living", caption: "Dining Area" },
+  // { id: "gallery-liv-02", src: "/WhatsApp Image 2026-07-19 at 8.42.18 AM (1).jpeg", alt: "Dining area", category: "living", caption: "Dining Area" },
   { id: "gallery-liv-03", src: "/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg", alt: "Kitchen", category: "living", caption: "Kitchen" },
   { id: "gallery-liv-04", src: "/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg", alt: "Entertainment area", category: "living", caption: "Entertainment Area" },
   { id: "gallery-liv-05", src: "/ExpansiveLivingLawn.jpeg", alt: "Interior design", category: "living", caption: "Interior Design" },
