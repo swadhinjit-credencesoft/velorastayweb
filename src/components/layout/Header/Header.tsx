@@ -59,8 +59,8 @@ export default function Header() {
           <Image
             src={SITE_ASSETS.logo}
             alt={SITE_INFO.name}
-            width={1024}
-            height={1024}
+            width={664}
+            height={453}
             className={styles.logoImage}
             priority
           />

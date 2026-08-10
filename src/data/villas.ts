@@ -38,7 +38,7 @@ export const VILLAS: VillaType[] = [
   {
     id: "room-8802",
     slug: "2-bhk-villa",
-    name: "2 BHK Villa",
+    name: " Velora 2(2 BHK Villa)",
     tagline: "Cozy 2-bedroom villa perfect for couples and small families",
     description:
       "Cozy 2 BHK villa featuring comfortable bedrooms, a bright living area, a  Central Kitchen, essential modern amenities, and a relaxing stay for couples or small families.",
@@ -124,7 +124,7 @@ export const VILLAS: VillaType[] = [
   {
     id: "room-8801",
     slug: "4-bhk-villa",
-    name: "4 BHK Villa",
+    name: " Velora 4(4 BHK Villa)",
     tagline: "Comfortable 4-bedroom villa for families and small groups",
     description:
       "Comfortable 4 BHK villa offering well-appointed bedrooms, a cozy living space, a functional kitchen, modern amenities, and an ideal retreat for families or small groups.",
