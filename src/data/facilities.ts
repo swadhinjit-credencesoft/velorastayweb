@@ -78,7 +78,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Stay connected throughout your stay with our high-speed WiFi network available in all rooms and common areas. Whether you are streaming, video-calling, or working remotely, our reliable internet ensures you never miss a beat.",
     icon: "lucide:wifi",
-    image: "/WhatsApp Image 2026-07-19 at 8.44.17 AM (1).jpeg",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
     features: ["High-speed internet", "All areas covered", "Streaming ready"],
     category: "basic",
   },
@@ -89,7 +89,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Escape the heat with individually controlled air conditioning in every bedroom. Our energy-efficient units keep your space cool and comfortable, allowing you to relax after a day of exploring.",
     icon: "lucide:wind",
-    image: "/WhatsApp Image 2026-07-19 at 8.44.15 AM (1).jpeg",
+    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
     features: ["Individual controls", "24/7 cooling", "Energy efficient"],
     category: "basic",
   },
@@ -167,7 +167,12 @@ export const FACILITIES: Facility[] = [
     description:
       "Enjoy a wide selection of indoor board games and a classic Carrom board setup. Even on a rainy afternoon in Lonavala, the entertainment never stops.",
     icon: "lucide:gamepad-2",
-    image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1652558973183-a3f046921163?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1652558973183-a3f046921163?w=800&q=80",
+      "https://images.unsplash.com/photo-1652558973276-7c57960f50cd?w=800&q=80",
+      "https://images.unsplash.com/photo-1620741211956-32977c8973be?w=800&q=80",
+    ],
     features: ["Board games", "Carrom", "Family entertainment"],
     category: "entertainment",
   },
@@ -193,7 +198,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Sync up your devices to our premium Bluetooth sound systems to set the mood for any occasion — from morning relaxation to evening pool parties.",
     icon: "lucide:speaker",
-    image: "/WhatsApp Image 2026-07-19 at 8.44.16 AM.jpeg",
+    image: "https://images.unsplash.com/photo-1511499271651-073325718d90?w=800&q=80",
     features: ["Bluetooth enabled", "Premium sound", "Pool & living area"],
     category: "entertainment",
   },
