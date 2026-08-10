@@ -94,7 +94,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_INFO.name,
     url: SITE_INFO.url,
-    logo: "/veloralogo.png",
+    logo: "/veloralogo-v2.png",
     description: SITE_INFO.description,
     address: {
       "@type": "PostalAddress",
