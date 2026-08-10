@@ -1,6 +1,6 @@
 import Hero from "@/components/sections/Hero/Hero";
 import SearchBar from "@/components/sections/SearchBar/SearchBar";
-import FeaturedVillas from "@/components/sections/FeaturedVillas/FeaturedVillas";
+import Featureds from "@/components/sections/FeaturedVillas/FeaturedVillas";
 import WhyChooseUs from "@/components/sections/WhyChooseUs/WhyChooseUs";
 import Testimonials from "@/components/sections/Testimonials/Testimonials";
 import Gallery from "@/components/sections/Gallery/Gallery";

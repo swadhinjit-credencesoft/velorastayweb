@@ -72,6 +72,22 @@ export const FACILITIES: Facility[] = [
     category: "outdoor",
   },
   {
+    id: "facility-outdoor-gaming",
+    slug: "outdoor-gaming",
+    name: "Outdoor Gaming & Cricket Turf",
+    description:
+      "Challenge your group to a proper match on our cricket turf or enjoy badminton and a variety of lawn games across the expansive grounds. Our dedicated outdoor gaming setup keeps everyone active and entertained under the open sky.",
+    icon: "lucide:volleyball",
+    image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&q=80",
+      "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80",
+    ],
+    features: ["Cricket turf", "Badminton", "Lawn games"],
+    category: "outdoor",
+  },
+  {
     id: "facility-wifi",
     slug: "free-wifi",
     name: "High-Speed WiFi",

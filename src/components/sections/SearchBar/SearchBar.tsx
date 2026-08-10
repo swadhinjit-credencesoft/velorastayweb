@@ -8,7 +8,10 @@ import {
   setAdults,
   setChildren,
   setRooms,
+  setSelectedRoomId,
 } from "@/store/slices/bookingSlice";
+import { useVeloraData } from "@/hooks/useVeloraData";
+import { VILLAS } from "@/data/villas";
 import Icon from "@/components/Icon/Icon";
 import styles from "./SearchBar.module.scss";
 
@@ -64,9 +67,8 @@ function buildBookingUrl(
 
 export default function SearchBar({ variant = "hero" }: SearchBarProps) {
   const dispatch = useAppDispatch();
-  const { checkIn, checkOut, adults, children, rooms } = useAppSelector(
-    (state) => state.booking,
-  );
+  const { checkIn, checkOut, adults, children, rooms, selectedRoomId } =
+    useAppSelector((state) => state.booking);
 
   useEffect(() => {
     if (!checkIn) {
@@ -78,14 +80,14 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
     }
   }, [checkIn, dispatch]);
 
+  const { villas, error } = useVeloraData();
+  const villaOptions = [...(!error && villas.length > 0 ? villas : VILLAS)]
+    .sort((a, b) => a.bedrooms - b.bedrooms)
+    .map((villa) => ({ value: villa.slug, label: villa.name }));
+
   const guestOptions = Array.from({ length: 6 }, (_, i) => ({
     value: i + 1,
     label: `${i + 1} Guest${i === 0 ? "" : "s"}`,
-  }));
-
-  const villaOptions = Array.from({ length: 5 }, (_, i) => ({
-    value: i + 1,
-    label: `${i + 1} Villa${i === 0 ? "" : "s"}`,
   }));
 
   const bookingUrl = buildBookingUrl(checkIn, checkOut, adults, children, rooms);
@@ -145,9 +147,13 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
         </label>
         <select
           className={styles.select}
-          value={rooms}
-          onChange={(e) => dispatch(setRooms(Number(e.target.value)))}
+          value={selectedRoomId ?? ""}
+          onChange={(e) => {
+            dispatch(setSelectedRoomId(e.target.value));
+            dispatch(setRooms(1));
+          }}
         >
+          <option value="">Select Villa</option>
           {villaOptions.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}

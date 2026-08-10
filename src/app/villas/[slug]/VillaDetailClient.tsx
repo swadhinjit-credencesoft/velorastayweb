@@ -31,20 +31,21 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
             <Image
               src={villa.images[0].src}
               alt={villa.images[0].alt}
-              width={800}
-              height={400}
+              width={1200}
+              height={600}
               className={styles.galleryMain}
+              priority
             />
             {villa.images.length > 1 && (
-              <div className={styles.gallerySide}>
-                {villa.images.slice(1, 3).map((img) => (
+              <div className={styles.galleryGrid}>
+                {villa.images.slice(1).map((img) => (
                   <Image
                     key={img.id}
                     src={img.src}
                     alt={img.alt}
-                    width={400}
-                    height={200}
-                    className={styles.gallerySideImg}
+                    width={600}
+                    height={400}
+                    className={styles.galleryGridImg}
                   />
                 ))}
               </div>

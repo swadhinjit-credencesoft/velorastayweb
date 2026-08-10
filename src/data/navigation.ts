@@ -172,10 +172,10 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     id: "footer-villa-config",
     title: "Villa Configurations",
     links: [
-      { id: "footer-2bhk", label: "2 Villa", href: "/villas/2-bhk-villa" },
-      { id: "footer-4bhk", label: "4 Villa", href: "/villas/4-bhk-villa" },
-      { id: "footer-5bhk", label: "5  Villa", href: "/villas/5-bhk-villa" },
-      { id: "footer-7bhk", label: "7 Grand Villa", href: "/villas/7-bhk-villa" },
+      { id: "footer-2bhk", label: " Velora 2 (2 BHK)", href: "/villas/2-bhk-villa" },
+      { id: "footer-4bhk", label: " Velora 4 (4 BHK)", href: "/villas/4-bhk-villa" },
+      { id: "footer-5bhk", label: " Velora 5 (5 BHK)", href: "/villas/5-bhk-villa" },
+      { id: "footer-7bhk", label: " Velora 7 (7 BHK)", href: "/villas/7-bhk-villa" },
     ],
   },
   {
