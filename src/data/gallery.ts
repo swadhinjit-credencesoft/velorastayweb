@@ -62,7 +62,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { id: "gallery-liv-03", src: "/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg", alt: "Kitchen", category: "living", caption: "Kitchen" },
   { id: "gallery-liv-04", src: "/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg", alt: "Entertainment area", category: "living", caption: "Entertainment Area" },
   { id: "gallery-liv-05", src: "/ExpansiveLivingLawn.jpeg", alt: "Interior design", category: "living", caption: "Interior Design" },
-  { id: "gallery-liv-06", src: "/images/groundkitchen.avif", alt: "Central kitchen", category: "living", caption: "Central Kitchen" },
+  { id: "gallery-liv-06", src: "/images/groundkitchen.avif", alt: "Central Kitchen", category: "living", caption: "Central Kitchen" },
   { id: "gallery-liv-07", src: "/images/diningarea.avif", alt: "Dining area", category: "living", caption: "Dining Area" },
   { id: "gallery-liv-08", src: "/images/diningarea1.avif", alt: "Dining space", category: "living", caption: "Private Dining Space" },
   { id: "gallery-liv-09", src: "/images/hallroom.avif", alt: "Hall room", category: "living", caption: "Hall Room" },

@@ -264,7 +264,7 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
       `${bedrooms} BHK private villa`,
       `Hosts up to ${room.maximumOccupancy ?? bedrooms * 2} guests`,
       "Private pool and lawn access",
-      " central kitchen",
+      " Central Kitchen",
     ],
     features: [
       "King-size beds with premium linens",

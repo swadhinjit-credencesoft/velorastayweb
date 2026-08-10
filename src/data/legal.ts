@@ -91,7 +91,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<p><strong>Pets are not allowed</strong> at any of our properties. We appreciate your understanding in maintaining a pet-free environment for the comfort of all guests.</p>\n\n" +
 
       "<h2>Food and Dining</h2>\n" +
-      "<p>Food is provided from our central kitchen in the property and needs to be ordered separately after placing your booking. The charges are as follows:</p>\n" +
+      "<p>Food is provided from our Central Kitchen in the property and needs to be ordered separately after placing your booking. The charges are as follows:</p>\n" +
       "<ul>\n" +
       "<li><strong>Adults (above 12 years):</strong> ₹1500 per person</li>\n" +
       "<li><strong>Children (above 6 years):</strong> ₹750 per child</li>\n" +

@@ -40,9 +40,9 @@ const TOUR_AREAS = [
     id: "dining",
     label: "Dining Area",
     icon: "lucide:utensils",
-    title: "Private  central kitchen",
+    title: "Private  Central Kitchen",
     description:
-      "Our  central kitchen and BBQ area offers a culinary experience through local and international cuisines. Cook with the freshest local ingredients or enjoy our curated meal packages in an inviting, elegant setting.",
+      "Our  Central Kitchen and BBQ area offers a culinary experience through local and international cuisines. Cook with the freshest local ingredients or enjoy our curated meal packages in an inviting, elegant setting.",
     highlights: [
       "Fully equipped modern kitchen",
       "BBQ grill and outdoor dining",

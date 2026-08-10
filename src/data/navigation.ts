@@ -62,9 +62,9 @@ export const NAV_GROUPS: NavGroup[] = [
       },
       {
         id: "nav-amenities-kitchen",
-        label: " central kitchen",
+        label: " Central Kitchen",
         href: "/facilities#kitchen",
-        description: " central kitchen and BBQ setup on requested",
+        description: " Central Kitchen and BBQ setup on requested",
         icon: "lucide:chef-hat",
       },
       {

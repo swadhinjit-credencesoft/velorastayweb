@@ -65,7 +65,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-05",
         question: "What amenities are included in the villa?",
         answer:
-          "Every villa at Velora Stays is thoughtfully designed to provide a comfortable and luxurious stay. Guests can enjoy air-conditioned bedrooms, Smart TV with streaming services, complimentary high-speed Wi-Fi, a private swimming pool, beautifully landscaped gardens, 24/7 power backup, hot water, and dedicated caretaker support , Guests also have access to a central kitchen  and dining services. BBQ arrangements are available on request, subject to availability and applicable charges. Select villa categories may also include premium outdoor seating areas, spacious lawns, and enhanced furnishings for an elevated stay experience",
+          "Every villa at Velora Stays is thoughtfully designed to provide a comfortable and luxurious stay. Guests can enjoy air-conditioned bedrooms, Smart TV with streaming services, complimentary high-speed Wi-Fi, a private swimming pool, beautifully landscaped gardens, 24/7 power backup, hot water, and dedicated caretaker support , Guests also have access to a Central Kitchen  and dining services. BBQ arrangements are available on request, subject to availability and applicable charges. Select villa categories may also include premium outdoor seating areas, spacious lawns, and enhanced furnishings for an elevated stay experience",
       },
        {
         id: "faq-villas-06",
@@ -77,14 +77,14 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   },
   {
     id: "faq-kitchen",
-    name: " central kitchen",
+    name: " Central Kitchen",
     icon: "lucide:utensils",
     items: [
       {
         id: "faq-kitchen-01",
         question: "Is there a kitchen in the villa?",
         answer:
-          " Yes, Velora Stays features a central kitchen that serves freshly prepared meals for our guests. While the villas do not have private kitchens, our central kitchen ensures delicious, hygienic, and quality food throughout your stay. If you have any special dietary requirements or meal preferences, please contact our Reservations Team in advance. We will do our best to accommodate your requests and make your stay as comfortable as possible.",
+          " Yes, Velora Stays features a Central Kitchen that serves freshly prepared meals for our guests. While the villas do not have private kitchens, our Central Kitchen ensures delicious, hygienic, and quality food throughout your stay. If you have any special dietary requirements or meal preferences, please contact our Reservations Team in advance. We will do our best to accommodate your requests and make your stay as comfortable as possible.",
       },
       {
         id: "faq-kitchen-02",
@@ -96,7 +96,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-kitchen-03",
         question: "Can you arrange meals during my stay at Velora Stays?",
         answer:
-          "Yes. Velora Stays has a fully operational central kitchen that prepares fresh and delicious meals for our guests. Our menu includes a variety of vegetarian and non-vegetarian options, carefully prepared using quality ingredients.If you have any special dietary requirements, meal preferences, or would like to arrange meals for your family, group, or a special occasion, please contact our Reservations Team in advance. We will be happy to assist you and make the necessary dining arrangements to ensure a comfortable and enjoyable stay.",
+          "Yes. Velora Stays has a fully operational Central Kitchen that prepares fresh and delicious meals for our guests. Our menu includes a variety of vegetarian and non-vegetarian options, carefully prepared using quality ingredients.If you have any special dietary requirements, meal preferences, or would like to arrange meals for your family, group, or a special occasion, please contact our Reservations Team in advance. We will be happy to assist you and make the necessary dining arrangements to ensure a comfortable and enjoyable stay.",
       },
       {
         id: "faq-kitchen-04",

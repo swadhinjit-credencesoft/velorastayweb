@@ -4,7 +4,7 @@ export const VILLAS_CONTENT: SectionContent = {
   eyebrow: "Our Villas",
   heading: "Flexible Luxury Accommodations for Every Group Size",
   description:
-    "At Velora Stays, we understand that no two getaways are the same. Choose from our range of private villas — from a cozy 2 BHK for couples to an expansive 7 BHK for large families and grand celebrations. Every villa features modern amenities, a  central kitchen, and easy access to Pawna Lake.",
+    "At Velora Stays, we understand that no two getaways are the same. Choose from our range of private villas — from a cozy 2 BHK for couples to an expansive 7 BHK for large families and grand celebrations. Every villa features modern amenities, a  Central Kitchen, and easy access to Pawna Lake.",
 };
 
 export const VILLA_AMENITIES: VillaAmenity[] = [
@@ -19,7 +19,7 @@ export const VILLA_AMENITIES: VillaAmenity[] = [
   { id: "smart-tv", icon: "lucide:tv", label: "Smart TV", category: "entertainment" },
   { id: "bluetooth-speaker", icon: "lucide:speaker", label: "Bluetooth Speaker", category: "entertainment" },
   { id: "board-games", icon: "lucide:gamepad-2", label: "Board Games", category: "entertainment" },
-  { id: "kitchen", icon: "lucide:chef-hat", label: " central kitchen", category: "kitchen" },
+  { id: "kitchen", icon: "lucide:chef-hat", label: " Central Kitchen", category: "kitchen" },
   { id: "refrigerator", icon: "lucide:refrigerator", label: "Refrigerator", category: "kitchen" },
   { id: "microwave", icon: "lucide:microwave", label: "Microwave", category: "kitchen" },
   { id: "electric-kettle", icon: "lucide:flame", label: "Electric Kettle", category: "kitchen" },
@@ -41,9 +41,9 @@ export const VILLAS: VillaType[] = [
     name: "2 BHK Villa",
     tagline: "Cozy 2-bedroom villa perfect for couples and small families",
     description:
-      "Cozy 2 BHK villa featuring comfortable bedrooms, a bright living area, a  central kitchen, essential modern amenities, and a relaxing stay for couples or small families.",
+      "Cozy 2 BHK villa featuring comfortable bedrooms, a bright living area, a  Central Kitchen, essential modern amenities, and a relaxing stay for couples or small families.",
     longDescription:
-      "The 2 BHK Villa at Velora Stays is an intimate retreat designed for couples and small families. Enjoy comfortable bedrooms, a bright and airy living area, and a  central kitchen for self-catering. Just a short drive from Pawna Lake, it is the perfect base for a peaceful weekend getaway with modern comfort and privacy.",
+      "The 2 BHK Villa at Velora Stays is an intimate retreat designed for couples and small families. Enjoy comfortable bedrooms, a bright and airy living area, and a  Central Kitchen for self-catering. Just a short drive from Pawna Lake, it is the perfect base for a peaceful weekend getaway with modern comfort and privacy.",
     price: 6000,
     originalPrice: 8000,
     currency: "₹",
@@ -110,7 +110,7 @@ export const VILLAS: VillaType[] = [
         id: "villa2-faq-1",
         question: "Is the 2 BHK Villa suitable for families with children?",
         answer:
-          "Absolutely. The 2 BHK Villa is ideal for couples and small families, offering comfortable bedrooms and a  central kitchen.",
+          "Absolutely. The 2 BHK Villa is ideal for couples and small families, offering comfortable bedrooms and a  Central Kitchen.",
       },
     ],
     nearby: [
@@ -198,7 +198,7 @@ export const VILLAS: VillaType[] = [
         id: "villa4-faq-1",
         question: "Can we bring our own food and cook?",
         answer:
-          "Absolutely! The villa comes with a  central kitchen. You can also opt for our in-house chef packages for a hassle-free dining experience.",
+          "Absolutely! The villa comes with a  Central Kitchen. You can also opt for our in-house chef packages for a hassle-free dining experience.",
       },
     ],
     nearby: [
@@ -215,9 +215,9 @@ export const VILLAS: VillaType[] = [
     name: "5 BHK Villa",
     tagline: "Spacious 5-bedroom villa ideal for family getaways and friend groups",
     description:
-      "Luxury 5 BHK villa with stylish bedrooms, spacious living and dining areas, a  central kitchen, modern comforts, and the perfect setting for family gatherings or group stays.",
+      "Luxury 5 BHK villa with stylish bedrooms, spacious living and dining areas, a  Central Kitchen, modern comforts, and the perfect setting for family gatherings or group stays.",
     longDescription:
-      "The 5 BHK Villa at Velora Stays is a luxurious retreat offering stylish bedrooms, spacious living and dining areas, and a  central kitchen. Perfect for family gatherings or group stays, it combines modern comforts with the natural beauty of Pawna Lake and the surrounding hills.",
+      "The 5 BHK Villa at Velora Stays is a luxurious retreat offering stylish bedrooms, spacious living and dining areas, and a  Central Kitchen. Perfect for family gatherings or group stays, it combines modern comforts with the natural beauty of Pawna Lake and the surrounding hills.",
     price: 15000,
     originalPrice: 20000,
     currency: "₹",
@@ -253,7 +253,7 @@ export const VILLAS: VillaType[] = [
     highlights: [
       "5 stylish bedrooms",
       "Spacious living and dining areas",
-      " central kitchen",
+      " Central Kitchen",
       "Private pool and lawn",
     ],
     features: [
@@ -304,7 +304,7 @@ export const VILLAS: VillaType[] = [
     name: "7 BHK Villa",
     tagline: "The ultimate choice for large groups and grand celebrations",
     description:
-      "Spacious 7 BHK villa featuring elegant bedrooms, a  central kitchen, comfortable living areas, modern amenities, and ample space for large families, reunions, or group vacations.",
+      "Spacious 7 BHK villa featuring elegant bedrooms, a  Central Kitchen, comfortable living areas, modern amenities, and ample space for large families, reunions, or group vacations.",
     longDescription:
       "The 7 BHK Villa is the crown jewel of Velora Stays — an expansive villa designed for large families, reunions, and group vacations. With elegant bedrooms, comfortable living areas and ample outdoor space, it comfortably hosts up to 28 guests near Pawna Lake.",
     price: 21000,
