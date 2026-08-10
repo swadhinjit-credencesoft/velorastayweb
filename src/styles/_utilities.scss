@@ -45,7 +45,7 @@
 .col-span-3 { grid-column: span 3 / span 3; }
 
 // ─── 5. Padding ──────────────────────────────────────────────
-@each $i in (0, 0\.5, 1, 1\.5, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20) {
+@each $i in (0, 0\.5, 1, 1\.5, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 28, 32) {
   .p-#{$i} { padding: #{$i * 0.25}rem; }
   .px-#{$i} { padding-left: #{$i * 0.25}rem; padding-right: #{$i * 0.25}rem; }
   .py-#{$i} { padding-top: #{$i * 0.25}rem; padding-bottom: #{$i * 0.25}rem; }
@@ -289,6 +289,8 @@
 .from-black\/60 { --tw-gradient-from: rgba(0, 0, 0, 0.6); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 .from-black\/70 { --tw-gradient-from: rgba(0, 0, 0, 0.7); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 .from-\[\#1a1a2e\] { --tw-gradient-from: #1a1a2e; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+.from-\[\#1a1a2e\]\/90 { --tw-gradient-from: rgba(26, 26, 46, 0.9); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+.from-\[\#16213e\]\/80 { --tw-gradient-from: rgba(22, 33, 62, 0.8); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 
 // Via: overrides --tw-gradient-stops to include via color
 .via-black\/30 { --tw-gradient-via: rgba(0, 0, 0, 0.3); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to, transparent); }
@@ -296,6 +298,7 @@
 // To: sets gradient destination
 .to-transparent { --tw-gradient-to: transparent; }
 .to-\[\#16213e\] { --tw-gradient-to: #16213e; }
+.to-\[\#16213e\]\/80 { --tw-gradient-to: rgba(22, 33, 62, 0.8); }
 
 // ─── 15. Border ──────────────────────────────────────────────
 .border { border-width: 1px; border-style: solid; }
@@ -341,6 +344,12 @@
 .absolute { position: absolute; }
 .fixed { position: fixed; }
 .sticky { position: sticky; }
+
+// Z-index
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-50 { z-index: 50; }
 
 // Inset / Direction
 .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
