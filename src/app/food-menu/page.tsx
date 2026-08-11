@@ -6,8 +6,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { SITE_INFO } from "@/data/site";
-import { ALA_CARTE_BBQ, ALA_CARTE_PRICES, DINING_CONTENT, MEAL_PACKAGES, MENU_SECTIONS } from "@/data/dining";
-import MenuPrintButton from "./MenuPrintButton";
+import { ALA_CARTE_BBQ, ALA_CARTE_PRICES, DINING_CONTENT, MEAL_PACKAGES } from "@/data/dining";
 import styles from "./food-menu.module.scss";
 
 export const metadata: Metadata = {
@@ -45,7 +44,16 @@ export default function FoodMenuPage() {
           <h1 className={styles.coverTitle}>Food Menu &amp; Packages</h1>
           <p className={styles.coverTagline}>{DINING_CONTENT.tagline}</p>
           <p className={styles.coverSub}>{DINING_CONTENT.description}</p>
-          <MenuPrintButton />
+          <div className={styles.downloadButtons}>
+            <a href="/downloads/full-meal-package.pdf" download className={styles.downloadBtn}>
+              <Icon icon="lucide:file-down" width={18} height={18} />
+              Meal Package
+            </a>
+            <a href="/downloads/food-menu.pdf" download className={styles.downloadBtn}>
+              <Icon icon="lucide:file-down" width={18} height={18} />
+              Food Menu
+            </a>
+          </div>
         </div>
       </section>
 
@@ -103,8 +111,8 @@ export default function FoodMenuPage() {
                 <tr>
                   <th scope="col">Meal</th>
                   <th scope="col">Adult (Above 12 years)</th>
-                  <th scope="col">Child (Above 6 years)</th>
-                  <th scope="col">Kids (Below 6 years)</th>
+                  <th scope="col">Child ( Below 6 years)</th>
+                  <th scope="col">Kids (Above 6 years)</th>
                 </tr>
               </thead>
               <tbody>
@@ -125,54 +133,6 @@ export default function FoodMenuPage() {
 
       <section className={styles.menu}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>The Menu</h2>
-          {MENU_SECTIONS.map((section) => (
-            <div key={section.id} className={styles.menuSection}>
-              <div className={styles.menuSectionHeader}>
-                <Icon icon={section.icon} width={20} height={20} />
-                <h3>{section.title}</h3>
-                {section.select && <span className={styles.menuSelect}>{section.select}</span>}
-              </div>
-              {section.note && <p className={styles.menuNote}>{section.note}</p>}
-              <ul className={styles.menuList}>
-                {section.items.map((item) => (
-                  <li key={item.name} className={styles.menuRow}>
-                    <span className={styles.menuRowLeft}>
-                      <span className={styles.menuName}>{item.name}</span>
-                      {item.description && (
-                        <span className={styles.menuDesc}>{item.description}</span>
-                      )}
-                    </span>
-                    {item.price && (
-                      <>
-                        <span className={styles.menuDots} />
-                        <span className={styles.menuPrice}>{item.price}</span>
-                      </>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-          <p className={styles.note}>{DINING_CONTENT.referenceNote}</p>
-
-          <p className={styles.feedback}>{DINING_CONTENT.feedback}</p>
-
-          <div className={styles.downloads}>
-            <h3 className={styles.downloadsTitle}>Download Menu</h3>
-            <div className={styles.downloadButtons}>
-              <a href="/downloads/full-meal-package.pdf" download className={styles.downloadBtn}>
-                <Icon icon="lucide:file-down" width={18} height={18} />
-                Meal Package
-              </a>
-              <a href="/downloads/food-menu.pdf" download className={styles.downloadBtn}>
-                <Icon icon="lucide:file-down" width={18} height={18} />
-                Food Menu
-              </a>
-            </div>
-          </div>
-
           <div className={styles.actions}>
             <Link href="https://bookone.io/Velora-Stays?bookingEngine=true" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>
               Book a Stay

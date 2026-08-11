@@ -46,11 +46,11 @@ export const MEAL_PACKAGES: MealPackage[] = [
   {
     id: "pkg-full-meal",
     name: "Full Meal Package",
-    price: "Rs. 1,200/- per adult",
+    price: "Rs. 1,300/- per adult",
     description: "Includes lunch, hi tea, dinner & breakfast.",
     includes: [
-      "Rs. 1,200/- per adult (above 12 years)",
-      "Rs. 600/- per child (above 6 years)",
+      "Rs. 1,300/- per adult (above 12 years)",
+      "Rs. 650/- per child (above 6 years)",
       "No charge for kids below 6 years",
     ],
     premium: true,
@@ -76,7 +76,7 @@ export const ALA_CARTE_PRICES: AlaCartePrice[] = [
   { meal: "Dinner", adult: "Rs. 500/-", child: "No charge", kids: "Rs. 250/-" },
 ];
 
-export const ALA_CARTE_BBQ = "BBQ Veg / Non-Veg — Rs. 1,200/- per kg";
+export const ALA_CARTE_BBQ = "BBQ Veg / Non-Veg — Rs. 1,300/- per kg";
 
 export const MENU_SECTIONS: MenuSection[] = [
   {
@@ -211,7 +211,7 @@ export const MENU_SECTIONS: MenuSection[] = [
     id: "menu-bbq",
     title: "Barbeque",
     icon: "lucide:flame",
-    note: "Extra · ₹1,200 per kg",
+    note: "Extra · ₹1,300 per kg",
     items: [
       { name: "Veg", description: "Paneer, capsicum, onion, tomato, aloo" },
       { name: "Non-Veg", description: "Chicken" },
