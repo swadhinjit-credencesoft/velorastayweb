@@ -41,7 +41,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-01",
         question: "What types of villas are available?",
         answer:
-          "Velora Stays offers four types of luxury villas to suit every group size. Our options include the Velora 2 (2 BHK) perfect for couples and small families , Velora 4 (4 BHK) for families and small groups, the Velora 5 (5 BHK) for larger families and friend groups, andVelora 7 (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
+          "Velora Stays offers four types of luxury villas to suit every group size. Our options include the Velora 2 (2 BHK) perfect for couples and small families , Velora 4 (4 BHK) for families and small groups, the Velora 5 (5 BHK) for larger families and friend groups, and Velora 7 (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
       },
       {
         id: "faq-villas-02",
@@ -59,7 +59,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-villas-04",
         question: "Is there a caretaker at the villa?",
         answer:
-          "Yes, each villa comes with a dedicated caretaker who is available from 8:00 AM to 10:00 PM to assist with any needs. The caretaker can help with grocery shopping, arranging local transport, coordinating activities, and ensuring the villa is well-maintained during your stay. For after-hours assistance, our emergency contact number is available for urgent requests.",
+          "Yes, each villa comes with a dedicated caretaker who is available from 8:00 AM to 10:00 PM to assist with any needs and ensuring the villa is well-maintained during your stay. For after-hours assistance, our emergency contact number is available for urgent requests.",
       },
       {
         id: "faq-villas-05",

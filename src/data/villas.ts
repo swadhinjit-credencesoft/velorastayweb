@@ -4,7 +4,7 @@ export const VILLAS_CONTENT: SectionContent = {
   eyebrow: "Our Villas",
   heading: "Flexible Luxury Accommodations for Every Group Size",
   description:
-    "At Velora Stays, we understand that no two getaways are the same. Choose from our range of private villas — from a cozy 2 BHK for couples to an expansive 7 BHK for large families and grand celebrations. Every villa features modern amenities, a  Central Kitchen, and easy access to Pawna Lake.",
+    "At Velora Stays, we understand that no two getaways are the same. Choose from our range of private villas — from villa 2 (2 BHK) for couples to an expansive villa 7(7 BHK) for large families and grand celebrations. Every villa features modern amenities, a  Central Kitchen, and easy access to Pawna Lake.",
 };
 
 export const VILLA_AMENITIES: VillaAmenity[] = [

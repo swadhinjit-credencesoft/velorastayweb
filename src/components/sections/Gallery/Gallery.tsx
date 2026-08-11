@@ -4,25 +4,20 @@ import { useState } from "react";
 import Image from "next/image";
 import Icon from "@/components/Icon/Icon";
 import Modal from "@/components/ui/Modal/Modal";
-import { GALLERY_CATEGORIES, GALLERY_IMAGES } from "@/data/gallery";
+import { VILLAS } from "@/data/villas";
 import styles from "./Gallery.module.scss";
 
+const VILLA_IMAGES = VILLAS.flatMap((villa) =>
+  villa.images.map((img) => ({
+    id: `${villa.slug}-${img.id}`,
+    src: img.src,
+    alt: img.alt,
+    caption: img.caption ? `${villa.name.trim()} — ${img.caption}` : villa.name.trim(),
+  }))
+);
+
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState("all");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-
-  const filteredImages =
-    activeCategory === "all"
-      ? GALLERY_IMAGES
-      : GALLERY_IMAGES.filter((img) => img.category === activeCategory);
-
-  const tabs = [
-    { id: "all", label: "All" },
-    ...GALLERY_CATEGORIES.map((cat) => ({
-      id: cat.slug,
-      label: cat.name,
-    })),
-  ];
 
   return (
     <section className={styles.section}>
@@ -32,20 +27,8 @@ export default function Gallery() {
           <h2 className={`${styles.heading} font-oswald`}>A Glimpse Inside</h2>
         </div>
 
-        <div className={styles.tabs}>
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              className={`${styles.tab} ${activeCategory === tab.id ? styles.activeTab : ""}`}
-              onClick={() => setActiveCategory(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
         <div className={styles.grid}>
-          {filteredImages.map((image) => (
+          {VILLA_IMAGES.map((image) => (
             <button
               key={image.id}
               className={styles.gridItem}

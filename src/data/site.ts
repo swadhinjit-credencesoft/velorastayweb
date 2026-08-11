@@ -84,7 +84,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: "/heroimg2.jpeg",
     title: "Your Private Gateway | near Pawna Lake Lonawala",
     subtitle:
-      "Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Veloras Stays.",
+      "Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Velora Stays.",
     cta: { label: "Explore Villas", href: "/villas" },
   },
   {
@@ -180,7 +180,7 @@ export const TRUST_BADGES: TrustBadge[] = [
     id: "badge-managed",
     icon: "lucide:shield-check",
     label: "Managed By",
-    value: "D c developers",
+    value: "DC developers",
   },
 ];
 

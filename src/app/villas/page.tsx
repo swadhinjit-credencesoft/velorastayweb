@@ -34,6 +34,7 @@ export default function VillasPage() {
         description={VILLAS_CONTENT.description}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "The Villa", href: "/villas" }]}
         bgImage="/villaheroimg.jpeg"
+        video="https://bookonelocal.in/cdn/done7bhk.mp4"
       />
       <VillaListClient fallbackVillas={VILLAS} />
     </>

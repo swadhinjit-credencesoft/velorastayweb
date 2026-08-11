@@ -7,6 +7,7 @@ interface PageHeroProps {
   description?: string;
   breadcrumbs: { label: string; href: string }[];
   bgImage?: string;
+  video?: string;
 }
 
 export default function PageHero({
@@ -15,13 +16,26 @@ export default function PageHero({
   description,
   breadcrumbs,
   bgImage,
+  video,
 }: PageHeroProps) {
   return (
     <section
       className={styles.hero}
-      style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
+      style={bgImage && !video ? { backgroundImage: `url(${bgImage})` } : undefined}
     >
-      <div className={styles.overlay} />
+      {video && (
+        <video
+          className={styles.video}
+          src={video}
+          poster={bgImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+      )}
+      <div className={video ? styles.overlayVideo : styles.overlay} />
       <div className={styles.content}>
         <Breadcrumb items={breadcrumbs} />
         <span className={styles.eyebrow}>{eyebrow}</span>
