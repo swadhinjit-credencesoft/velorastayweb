@@ -164,6 +164,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
       { id: "footer-about", label: "About Us", href: "/about" },
       { id: "footer-villas", label: "Our Villas", href: "/villas" },
       { id: "footer-amenities", label: "Amenities", href: "/facilities" },
+      { id: "footer-dining", label: "Food Menu & Packages", href: "/food-menu" },
       { id: "footer-gallery", label: "Gallery", href: "/gallery" },
       { id: "footer-reviews", label: "Guest Reviews", href: "/reviews" },
     ],

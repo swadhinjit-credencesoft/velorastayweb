@@ -1,0 +1,422 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.section {
+  @include m.section-padding;
+  background-color: v.$neutral-100;
+}
+
+.container {
+  @include m.container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: v.$space-xl;
+}
+
+.eyebrow {
+  @include m.eyebrow;
+  display: block;
+  margin-bottom: v.$space-sm;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+}
+
+.description {
+  max-width: 720px;
+  margin: v.$space-md auto 0;
+  color: v.$color-text-muted;
+  line-height: 1.7;
+}
+
+// ─── Premium Banner ────────────────────────────────────────
+
+.premiumBanner {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: v.$space-lg;
+  padding: v.$space-2xl v.$space-lg;
+  border-radius: v.$radius-2xl;
+  text-align: center;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.88), rgba(15, 15, 15, 0.94)) padding-box,
+    linear-gradient(135deg, #e8c880, v.$color-accent, v.$color-accent-dark) border-box;
+  box-shadow: v.$shadow-card-hover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/diningarea.avif");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+  }
+
+  @media (min-width: v.$bp-md) {
+    padding: v.$space-2xl;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    padding: v.$space-3xl;
+  }
+}
+
+.premiumBadge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-sm;
+  background: linear-gradient(135deg, #e8c880, v.$color-accent, v.$color-accent-dark);
+  color: v.$neutral-900;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: v.$radius-full;
+  margin-bottom: v.$space-lg;
+}
+
+.premiumBannerInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-md;
+}
+
+.premiumInfo {
+  max-width: 720px;
+}
+
+.premiumName {
+  font-family: v.$font-display;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: v.$color-text-on-dark;
+}
+
+.premiumPrice {
+  font-family: v.$font-display;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #e8c880;
+  margin: v.$space-sm 0 v.$space-md;
+}
+
+.premiumDesc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.premiumIncludes {
+  list-style: none;
+  padding: 0;
+  margin: v.$space-lg auto 0;
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-sm v.$space-lg;
+  text-align: left;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: v.$space-sm;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9375rem;
+  }
+}
+
+// ─── Packages ─────────────────────────────────────────────
+
+.packages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  > :only-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.packageCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: v.$space-lg;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  transition: box-shadow v.$duration-fast v.$ease-standard, transform v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    box-shadow: v.$shadow-card-hover;
+    transform: translateY(-2px);
+  }
+}
+
+.packageCardPopular {
+  border-color: v.$color-accent;
+  box-shadow: v.$shadow-card;
+}
+
+.packageCardPremium {
+  background:
+    linear-gradient(160deg, v.$neutral-900, v.$neutral-800) padding-box,
+    linear-gradient(135deg, #e8c880, v.$color-accent, v.$color-accent-dark) border-box;
+  border: 2px solid transparent;
+  border-radius: v.$radius-lg;
+  box-shadow: v.$shadow-card-hover;
+
+  .packageName {
+    display: flex;
+    align-items: center;
+    gap: v.$space-sm;
+    color: #e8c880;
+  }
+
+  .packagePrice {
+    color: v.$color-accent-light;
+  }
+
+  .packageDesc {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .packageIncludes li {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.packageCardFeatured {
+  grid-column: 1 / -1;
+  padding: v.$space-xl;
+
+  .packageName {
+    font-size: 1.375rem;
+  }
+
+  .packagePrice {
+    font-size: 2rem;
+  }
+
+  .packageDesc {
+    font-size: 0.9375rem;
+  }
+
+  @media (min-width: v.$bp-md) {
+    flex-direction: row;
+    align-items: center;
+    gap: v.$space-xl;
+    padding: v.$space-2xl;
+
+    .packageName {
+      font-size: 1.625rem;
+    }
+
+    .packagePrice {
+      font-size: 2.75rem;
+    }
+
+    .packageDesc {
+      flex: 1;
+      font-size: 1rem;
+    }
+
+    .packageIncludes {
+      min-width: 340px;
+      margin: 0 0 0 auto;
+
+      li {
+        font-size: 0.9375rem;
+      }
+    }
+  }
+}
+
+.premiumTag {
+  position: absolute;
+  top: -12px;
+  right: v.$space-md;
+  background: linear-gradient(135deg, #e8c880, v.$color-accent, v.$color-accent-dark);
+  color: v.$neutral-900;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 12px;
+  border-radius: v.$radius-full;
+}
+
+.popularTag {
+  position: absolute;
+  top: -12px;
+  right: v.$space-md;
+  background-color: v.$color-accent;
+  color: v.$color-text-on-accent;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 12px;
+  border-radius: v.$radius-full;
+}
+
+.packageName {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: v.$color-primary;
+}
+
+.packagePrice {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: v.$color-accent-dark;
+  margin: v.$space-xs 0 v.$space-sm;
+}
+
+.packageDesc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: v.$color-text-muted;
+  margin-bottom: v.$space-md;
+}
+
+.packageIncludes {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 0 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: v.$space-sm;
+    font-size: 0.8125rem;
+    color: v.$color-text-muted;
+
+    &:not(:last-child) {
+      margin-bottom: v.$space-sm;
+    }
+  }
+}
+
+// ─── Menu Preview ─────────────────────────────────────────
+
+.menu {
+  margin-top: v.$space-xl;
+}
+
+.menuHeading {
+  text-align: center;
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: v.$space-lg;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.menuCard {
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-md;
+  padding: v.$space-md;
+}
+
+.menuCardHeader {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  margin-bottom: v.$space-md;
+
+  h4 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: v.$color-primary;
+  }
+}
+
+.menuItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-sm;
+  font-size: 0.8125rem;
+  color: v.$color-text-main;
+
+  &:not(:last-child) {
+    margin-bottom: v.$space-sm;
+  }
+}
+
+.menuItemName {
+  white-space: nowrap;
+}
+
+.menuItemDots {
+  flex: 1;
+  border-bottom: 1px dotted v.$neutral-300;
+}
+
+.menuItemPrice {
+  white-space: nowrap;
+  font-weight: 600;
+  color: v.$color-accent-dark;
+}
+
+// ─── CTA ──────────────────────────────────────────────────
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: v.$space-md;
+  margin-top: v.$space-xl;
+}

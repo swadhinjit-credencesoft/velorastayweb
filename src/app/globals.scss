@@ -11,6 +11,13 @@ html {
   box-sizing: border-box;
 }
 
+@media print {
+  header,
+  footer {
+    display: none !important;
+  }
+}
+
 body {
   margin: 0;
   background-color: v.$color-background;
