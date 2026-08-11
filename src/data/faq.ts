@@ -8,292 +8,151 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-booking-01",
-        question: "How can I book a villa at Velora Stays?",
+        question: "How can I book a room at The Queen's Head – Paharganj?",
         answer:
-          "You can book a villas directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type ( Velora 2 ( A 2BHK Villa) Velora 4 ( A 4 BHK Villa), Velora 5 ( A 5bhk Villa) or Velora 7 ( A 7bhk Villa), and completing the secure payment process. Alternatively, you can call our reservations team at +91 7326079861 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb",
+          "You can book directly through our website by filling in the booking form with your check-in and check-out dates, room type and guest details. Alternatively, you can call or WhatsApp our reservations team at +91 9899739777 or email us at shivharehotelsandtravel@gmail.com.",
       },
       {
         id: "faq-booking-02",
-        question: "Can I modify or cancel my reservation?",
+        question: "What is the cancellation policy?",
         answer:
-          "Yes, you can modify or cancel your reservation subject to our cancellation policy. Free cancellation is available up to 15 days before the scheduled check-in date. Cancellations made within 7 days  incur a charge of 50% of the booking amount.. To modify your booking, please contact our reservations team at reservation@thehotelmate.co or call +91 7326079861 and we will do our best to accommodate your changes.",
+          "Cancellation is free if you cancel at least 24 hours prior to your check-in date.",
       },
       {
         id: "faq-booking-03",
-        question: "Do you accept group bookings?",
+        question: "Do you accept group or corporate bookings?",
         answer:
-          "Absolutely! We offer special rates and arrangements for group bookings of 2 or more villas. Whether it is a family gathering, corporate retreat, birthday celebration, or wedding party, our team will work with you to ensure every detail is taken care of. Please reach out to our reservations team at least two weeks in advance so we can prepare a customized package for your group.",
+          "Yes. We accept group, family and corporate bookings. Please contact our front desk or reservations team directly to arrange group rates and availability.",
       },
       {
         id: "faq-booking-04",
         question: "Will I receive a booking confirmation?",
         answer:
-          "Yes, once your booking is confirmed and payment is processed, you will receive a detailed confirmation email with your reservation details, villa type, check-in and check-out dates, and any special requests you have noted. If you do not receive a confirmation within 30 minutes, please check your spam folder or contact us directly at reservation@thehotelmate.co.",
+          "Yes. Once your reservation is confirmed by our team, you will receive confirmation with your stay details over WhatsApp, email or by phone.",
       },
     ],
   },
   {
-    id: "faq-villas",
-    name: "Villas & Accommodation",
-    icon: "lucide:home",
+    id: "faq-stay",
+    name: "Rooms & Stay",
+    icon: "lucide:bed-double",
     items: [
       {
-        id: "faq-villas-01",
-        question: "What types of villas are available?",
+        id: "faq-stay-01",
+        question: "What room types are available?",
         answer:
-          "Velora Stays offers four types of luxury villas to suit every group size. Our options include the Velora 2 (2 BHK) perfect for couples and small families , Velora 4 (4 BHK) for families and small groups, the Velora 5 (5 BHK) for larger families and friend groups, and Velora 7 (7 BHK) for corporate retreats and grand celebrations. Each villa comes with a private swimming pool, lush garden, modern kitchen, BBQ area, and dedicated caretaker.",
+          "We offer Deluxe Double Rooms, Premium Double Rooms, Premium Double Rooms with City View and our signature Triple Suite with Jacuzzi.",
       },
       {
-        id: "faq-villas-02",
-        question: "What is the check-in and check-out time?",
+        id: "faq-stay-02",
+        question: "Does the hotel offer Wi-Fi?",
         answer:
-          "Check-in time at Velora Stays is 2:00 PM and check-out time is 11:00 AM. Early check-in is available subject to villa availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. Please contact our caretaker at +91 7326079861 to arrange either option in advance.",
+          "Yes. Complimentary Wi-Fi is available for guests.",
       },
       {
-        id: "faq-villas-03",
-        question: "Are extra beds  available?",
+        id: "faq-stay-03",
+        question: "Does the hotel have air conditioning?",
         answer:
-          "Yes, extra beds are available on request for an additional charge, subject to availability. We recommend requesting an extra bed at the time of booking so our team can have it prepared before your arrival.",
+          "Yes. Air-conditioned accommodation is available.",
       },
       {
-        id: "faq-villas-04",
-        question: "Is there a caretaker at the villa?",
+        id: "faq-stay-04",
+        question: "Are extra beds available?",
         answer:
-          "Yes, each villa comes with a dedicated caretaker who is available from 8:00 AM to 10:00 PM to assist with any needs and ensuring the villa is well-maintained during your stay. For after-hours assistance, our emergency contact number is available for urgent requests.",
+          "Yes. An extra bed is available at ₹750 per night, subject to availability.",
       },
       {
-        id: "faq-villas-05",
-        question: "What amenities are included in the villa?",
+        id: "faq-stay-05",
+        question: "What are the check-in and check-out timings?",
         answer:
-          "Every villa at Velora Stays is thoughtfully designed to provide a comfortable and luxurious stay. Guests can enjoy air-conditioned bedrooms, Smart TV with streaming services, complimentary high-speed Wi-Fi, a private swimming pool, beautifully landscaped gardens, 24/7 power backup, hot water, and dedicated caretaker support , Guests also have access to a Central Kitchen  and dining services. BBQ arrangements are available on request, subject to availability and applicable charges. Select villa categories may also include premium outdoor seating areas, spacious lawns, and enhanced furnishings for an elevated stay experience",
+          "Check-in is from 12:00 PM and check-out is by 11:00 AM.",
       },
-       {
-        id: "faq-villas-06",
-        question: "Can I book more than one villa at Velora Stays ?",
+      {
+        id: "faq-stay-06",
+        question: "Is the hotel suitable for families?",
         answer:
-          "Yes, you can book multiple villas at Velora Stays for family vacations, group getaways, corporate retreats, destination weddings, celebrations, and special events, subject to availability For multiple villa bookings, please contact our Reservations Team. Our team will assist you with villa availability, recommend the best combination of villas for your group, and help you complete your reservation smoothly while ensuring your villas are located as conveniently as possible.",
+          "Yes. Family rooms are available and extra beds can be arranged, making the hotel suitable for family stays.",
       },
     ],
   },
   {
-    id: "faq-kitchen",
-    name: " Central Kitchen",
+    id: "faq-dining",
+    name: "Dining",
     icon: "lucide:utensils",
     items: [
       {
-        id: "faq-kitchen-01",
-        question: "Is there a kitchen in the villa?",
+        id: "faq-dining-01",
+        question: "Does the hotel have a restaurant?",
         answer:
-          " Yes, Velora Stays features a Central Kitchen that serves freshly prepared meals for our guests. While the villas do not have private kitchens, our Central Kitchen ensures delicious, hygienic, and quality food throughout your stay. If you have any special dietary requirements or meal preferences, please contact our Reservations Team in advance. We will do our best to accommodate your requests and make your stay as comfortable as possible.",
+          "Yes. The property has an on-site restaurant serving Indian and Chinese cuisine.",
       },
       {
-        id: "faq-kitchen-02",
-        question: "Is BBQ equipment available?",
+        id: "faq-dining-02",
+        question: "Is breakfast available?",
         answer:
-          "Yes, BBQ equipment is available on request. Please inform us in advance, and our team will arrange a charcoal grill along with the necessary utensils for your BBQ experience. Additional charcoal or other BBQ supplies may be available at an extra charge, subject to availability.",
-      },
-      {
-        id: "faq-kitchen-03",
-        question: "Can you arrange meals during my stay at Velora Stays?",
-        answer:
-          "Yes. Velora Stays has a fully operational Central Kitchen that prepares fresh and delicious meals for our guests. Our menu includes a variety of vegetarian and non-vegetarian options, carefully prepared using quality ingredients.If you have any special dietary requirements, meal preferences, or would like to arrange meals for your family, group, or a special occasion, please contact our Reservations Team in advance. We will be happy to assist you and make the necessary dining arrangements to ensure a comfortable and enjoyable stay.",
-      },
-      {
-        id: "faq-kitchen-04",
-        question: "Are there restaurants nearby?",
-        answer:
-          "Velora Stays is located in Gevhande Apati, near Pawna Lake and there are no local restaurants and dhabas within driving distance. Hence, we recommend to book with us in advance.",
-      },
-      {
-        id: "faq-kitchen-05",
-        question: "Can I order food delivery to the villa?",
-        answer:
-          "While direct food delivery options are limited in our area, our caretaker can help you arrange meals from nearby restaurants or arrange a private chef for your stay. We recommend planning your meals in advance, especially for larger groups, to ensure a seamless dining experience during your stay.",
-      },
-    ],
-  },
-  {
-    id: "faq-location",
-    name: "Location & Transport",
-    icon: "lucide:map-pin",
-    items: [
-      {
-        id: "faq-location-01",
-        question: "How far is the villa from Mumbai?",
-        answer:
-          "Velora Stays is approximately 100 kilometres from Mumbai, which is about a 2.5 to 3-hour drive via the Mumbai-Pune Expressway. The scenic drive through the Western Ghats is an experience in itself, with stunning views of the Sahyadri mountains. We recommend starting your journey early to avoid traffic and enjoy the beautiful route.",
-      },
-      {
-        id: "faq-location-02",
-        question: "How far is the villa from Pune?",
-        answer:
-          "We are located approximately 60 kilometres from Pune, which is about a 1.5 to 2-hour drive via the Pune-Lonavala Highway. The drive is scenic and well-maintained, making it perfect for a weekend getaway. Many of our guests from Pune visit for short stays and return refreshed.",
-      },
-      {
-        id: "faq-location-03",
-        question: "Is parking available at the villa?",
-        answer:
-          "Yes, we offer free parking space for 2-3 vehicles at each villa. Our parking area is secure and can accommodate cars, SUVs, and two-wheelers. For larger groups with multiple vehicles, please inform us in advance so we can make additional arrangements.",
-      },
-      {
-        id: "faq-location-04",
-        question: "How do I reach the villa?",
-        answer:
-          "Velora Stays is located in Gevhande Apati, near Pawna Lake, Lonavala, Maharashtra 410401. The most convenient way to reach us is by car via the Mumbai-Pune Expressway. If you prefer public transport, Lonavala railway station is about 20 minutes away, and we can arrange a pickup from the station. We will share detailed directions and a Google Maps link with your booking confirmation.",
-      },
-      {
-        id: "faq-location-05",
-        question: "Can you arrange local transport for sightseeing?",
-        answer:
-          "Yes, our caretaker can arrange local transport for sightseeing tours and outstation trips. We offer curated Lonavala and Pawna Lake packages that cover major attractions like Lohagad Fort, Tikona Fort, Bhushi Dam, and Lion's Point. You can also book our transport services for customized itineraries based on your interests.",
+          "Breakfast is available at ₹350 per person and is included in the CP (room + breakfast) tariff.",
       },
     ],
   },
   {
     id: "faq-facilities",
-    name: "Facilities & Services",
-    icon: "lucide:settings",
+    name: "Hotel Facilities",
+    icon: "lucide:star",
     items: [
       {
         id: "faq-facilities-01",
-        question: "Is WiFi available throughout the villa?",
+        question: "Is there a 24-hour reception?",
         answer:
-          "Yes, complimentary high-speed WiFi is available in all villas and common areas. Our WiFi supports streaming, video calls, and heavy browsing, making it ideal for both leisure and business travellers. If you experience any connectivity issues, please contact your caretaker for immediate assistance.",
+          "Yes. A 24-hour front desk operates to assist guests at all times.",
       },
       {
         id: "faq-facilities-02",
-        question: "Is there a swimming pool?",
+        question: "Does the hotel have parking?",
         answer:
-          "Yes, every villa at Velora Stays comes with its own private swimming pool. The pools are regularly maintained and cleaned to ensure crystal-clear water. Pool towels are provided and the caretaker can assist with any pool-related requests. Please note that children must be supervised by adults at all times while using the pool.",
+          "Current listings indicate free private parking, but this should be reconfirmed with hotel management before you arrive.",
       },
       {
         id: "faq-facilities-03",
-        question: "Is there a bonfire facility?",
+        question: "Does the hotel offer airport transfers?",
         answer:
-          "Yes, we offer bonfire setups in the garden area of each villa. Our caretaker will arrange the bonfire setup with firewood and seating. We provide complimentary firewood for your first bonfire session. Additional firewood can be purchased from the caretaker. Bonfires are subject to weather conditions and local regulations.",
-      },
-      {
-        id: "faq-facilities-04",
-        question: "Is there a concierge service?",
-        answer:
-          "Yes, our dedicated caretaker team is available to help you make the most of your stay near Pawna Lake. From arranging local transport and organising sightseeing tours to recommending hidden local gems, our caretaker handles it all. Simply contact your caretaker or call our main number and our team will be happy to assist with any request.",
-      },
-      {
-        id: "faq-facilities-05",
-        question: "Is power backup available?",
-        answer:
-          "Yes, all our villas are equipped with power backup generators to ensure uninterrupted electricity supply. This is especially important during the monsoon season when power cuts can occur. Our power backup can support air conditioning, lighting, and essential appliances, ensuring your comfort is never compromised.",
+          "Please contact the front desk for airport transfer and taxi information. Delhi International Airport is approximately 15 km away.",
       },
     ],
   },
   {
-    id: "faq-events",
-    name: "Events & Celebrations",
-    icon: "lucide:party-popper",
+    id: "faq-location",
+    name: "Location & Nearby",
+    icon: "lucide:map-pin",
     items: [
       {
-        id: "faq-events-01",
-        question: "Can I book the villa for a private event?",
+        id: "faq-location-01",
+        question: "Where is The Queen's Head located?",
         answer:
-          "Yes, Velora Stays is perfect for private events like birthday parties, anniversaries, pre-wedding shoots, corporate offsites, and family reunions. Our villas offer spacious indoor and outdoor areas that can be customized for your celebration. Please contact our events team at least two weeks in advance to discuss your requirements and schedule a site visit.",
-      },
-      // {
-      //   id: "faq-events-02",
-      //   question: "What event packages do you offer?",
-      //   answer:
-      //     "We offer a range of customizable event packages tailored to different occasions and budgets. Packages typically include venue decoration, private chef arrangements, BBQ setup, bonfire, and dedicated event coordination. Our team will work closely with you to create a package that matches your vision, whether it is an intimate gathering or a larger celebration.",
-      // },
-      {
-        id: "faq-events-03",
-        question: "What is the maximum capacity for events?",
-        answer:
-          "Our 7 grand  Royal Estate villa can accommodate up to 25 guests for a seated dinner and up to 40 guests for a cocktail-style reception. For smaller gatherings like birthday dinners or family celebrations, our 4  and 5  villas are ideal for groups of 10 to 20 people. The exact capacity depends on the seating arrangement and layout you prefer, and our team will help you choose the best configuration.",
+          "The Queen's Head is located at 2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055.",
       },
       {
-        id: "faq-events-04",
-        question: "Do you provide catering for events?",
+        id: "faq-location-02",
+        question: "Is the hotel near New Delhi Railway Station?",
         answer:
-          "Yes, we can arrange catering services for all events hosted at Velora Stays. We offer a wide selection of Maharashtrian, North Indian, and Continental cuisines. Menu customization is available to accommodate dietary restrictions and personal preferences. A tasting session can be arranged prior to the event for larger bookings.",
+          "Yes. The hotel is located in Paharganj, within walking distance of New Delhi Railway Station.",
       },
       {
-        id: "faq-events-05",
-        question: "Can I host a corporate meeting or offsite?",
+        id: "faq-location-03",
+        question: "Is the hotel near Ramakrishna Mission?",
         answer:
-          "Absolutely. Our villas offer a refreshing alternative to traditional conference venues. We can set up meeting spaces with projectors, screens, whiteboards, and high-speed WiFi to ensure your corporate event runs smoothly. Our team can arrange tea breaks, working lunches, and team-building activities as needed. For multi-day offsites, we also offer special rates for booking multiple villas.",
-      },
-    ],
-  },
-  {
-    id: "faq-payment",
-    name: "Payment & Policies",
-    icon: "lucide:credit-card",
-    items: [
-      {
-        id: "faq-payment-01",
-        question: "What payment methods do you accept?",
-        answer:
-          "Velora Stays accepts a wide range of payment methods for your convenience including cash (INR), all major credit and debit cards (Visa, Mastercard, American Express, RuPay), UPI payments (Google Pay, PhonePe, Paytm), and net banking. Online payments through our website are processed through a secure, encrypted gateway to ensure complete safety of your financial information.",
+          "Ramakrishna Mission is approximately 0.9 km from the hotel.",
       },
       {
-        id: "faq-payment-02",
-        question: "What is your cancellation policy?",
+        id: "faq-location-04",
+        question: "How far is Gurudwara Bangla Sahib?",
         answer:
-          "We offer free cancellation up to 15 days before the scheduled check-in date. Cancellations made within 7 days of check-in will incur a charge of 50% of the booking amount. No-shows will be charged the full reservation amount. For group bookings and special packages, separate cancellation terms may apply and will be communicated at the time of booking.",
+          "Gurudwara Bangla Sahib is approximately 2.2 km from the hotel.",
       },
       {
-        id: "faq-payment-03",
-        question: "When will my refund be processed?",
+        id: "faq-location-05",
+        question: "How far is Delhi Airport?",
         answer:
-          "Refunds for eligible cancellations are processed within 5 to 7 business days to the original payment method. Credit and debit card refunds may take an additional 2 to 3 business days to reflect in your account depending on your bank. UPI and net banking refunds are typically processed within 3 to 5 business days. You will receive an email notification once the refund has been initiated.",
-      },
-      {
-        id: "faq-payment-04",
-        question: "Do you provide GST invoices?",
-        answer:
-          "Yes, we provide GST-compliant invoices for all stays and services. Corporate guests and businesses can provide their GSTIN at the time of booking or check-in to receive a properly formatted GST invoice. These invoices are sent via email within 24 hours of check-out. For any corrections or re-issuance of invoices, please contact our accounts team within 30 days of your stay.",
-      },
-      {
-        id: "faq-payment-05",
-        question: "Do you require a security deposit?",
-        answer:
-          "A refundable security deposit of INR 5,000 is collected at the time of check-in as a precautionary measure. This deposit covers any potential damages, additional services, or incidental charges during your stay. The deposit is refunded in full at the time of check-out, provided there are no outstanding charges. For extended stays, the deposit may be adjusted periodically.",
-      },
-    ],
-  },
-  {
-    id: "faq-safety",
-    name: "Safety & Security",
-    icon: "lucide:shield",
-    items: [
-      {
-        id: "faq-safety-01",
-        question: "Is the villa equipped with CCTV?",
-        answer:
-          "Yes, Velora Stays is monitored by a comprehensive CCTV surveillance system that covers all entry and exit points, parking areas, and common areas. Our security team monitors the feeds around the clock to ensure the safety of all guests and their belongings. Villa interiors and private areas are not under surveillance to maintain your privacy.",
-      },
-      {
-        id: "faq-safety-02",
-        question: "What security measures are in place?",
-        answer:
-          "In addition to CCTV monitoring, we have trained security personnel and a dedicated caretaker on the premises. All villas are equipped with secure locks and a safety latch for added security. Our staff undergoes regular security training and all visitors are verified before being granted access to the property.",
-      },
-      {
-        id: "faq-safety-03",
-        question: "Is the villa equipped for fire safety?",
-        answer:
-          "Absolutely. Velora Stays is fully compliant with all fire safety regulations and is equipped with smoke detectors, fire extinguishers, clearly marked emergency exits, and an automated fire alarm system. Our staff is trained in emergency evacuation procedures and regular fire drills are conducted to ensure preparedness. Emergency evacuation maps are placed inside every villa.",
-      },
-      {
-        id: "faq-safety-04",
-        question: "Is there medical assistance available on site?",
-        answer:
-          "Yes, we provide 24/7 on-call medical assistance with immediate access to a first-aid kit at the caretaker's office. We have tie-ups with nearby hospitals in Lonavala for any serious medical situations. In case of an emergency, please call our emergency line at +91 7326079861 or contact your caretaker immediately.",
-      },
-      {
-        id: "faq-safety-05",
-        question: "What hygiene and sanitisation protocols do you follow?",
-        answer:
-          "We follow strict hygiene and sanitisation protocols across all areas of the property. Villas are thoroughly cleaned and sanitised between stays using hospital-grade disinfectants. Common areas including parking, garden furniture, and pool equipment are sanitised regularly. Hand sanitiser dispensers are placed at key locations throughout the property for guest use.",
+          "Delhi International Airport is approximately 15 km from the property.",
       },
     ],
   },

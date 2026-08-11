@@ -8,7 +8,7 @@ export default function Error({
   reset: () => void;
 }) {
   console.error(
-    "[Velora Stays] Unhandled render error",
+    "[The Queen's Head – Paharganj] Unhandled render error",
     error?.message ?? error,
     error?.digest ?? ""
   );

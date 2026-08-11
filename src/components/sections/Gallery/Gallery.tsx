@@ -4,17 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import Icon from "@/components/Icon/Icon";
 import Modal from "@/components/ui/Modal/Modal";
-import { VILLAS } from "@/data/villas";
+import { GALLERY_IMAGES } from "@/data/gallery";
 import styles from "./Gallery.module.scss";
 
-const VILLA_IMAGES = VILLAS.flatMap((villa) =>
-  villa.images.map((img) => ({
-    id: `${villa.slug}-${img.id}`,
-    src: img.src,
-    alt: img.alt,
-    caption: img.caption ? `${villa.name.trim()} — ${img.caption}` : villa.name.trim(),
-  }))
-);
+const VILLA_IMAGES = GALLERY_IMAGES.map((img) => ({
+  id: img.id,
+  src: img.src,
+  alt: img.alt,
+  caption: img.caption || img.alt,
+}));
 
 export default function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);

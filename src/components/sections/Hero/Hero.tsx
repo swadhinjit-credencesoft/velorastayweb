@@ -60,8 +60,8 @@ export default function Hero({ children }: HeroProps) {
             <Button variant="primary" size="lg" href={slide.cta.href} icon="lucide:arrow-right" iconPosition="right">
               {slide.cta.label}
             </Button>
-            <Button variant="ghost" size="lg" href="/villas" className={styles.ghostBtn}>
-              View All Villas
+            <Button variant="ghost" size="lg" href="/rooms" className={styles.ghostBtn}>
+              View Rooms
             </Button>
           </div>
         </div>

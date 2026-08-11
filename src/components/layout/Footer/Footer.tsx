@@ -96,10 +96,6 @@ export default function Footer() {
               <a href="https://www.credencesoft.in/" target="_blank" rel="noopener noreferrer">
                 CredenceSoft
               </a>
-              , Powered by{" "}
-              <a href="https://bookonepms.com/" target="_blank" rel="noopener noreferrer">
-                BookOne
-              </a>
             </p>
           </div>
         </div>

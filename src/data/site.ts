@@ -9,188 +9,171 @@ import type {
 } from "@/types";
 
 export const SITE_INFO: SiteInfo = {
-  name: "Velora Stays",
-  tagline: "Luxury Villas Near Pawna Lake",
+  name: "The Queen's Head – Paharganj",
+  tagline: "Comfortable Stays in the Heart of Paharganj",
   description:
-    "Velora Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. 4 villas, 5 villas & 7 grand villas with stunning mountain views for family reunions & weekend getaways.",
-  url: "https://velorastays.in",
-  phone: "+91 7326079861",
-  whatsapp: "+91 9004126958",
-  email: "reservation@thehotelmate.co",
+    "Stay at The Queen's Head – Paharganj, New Delhi. Enjoy comfortable rooms, free Wi-Fi, air conditioning, an on-site restaurant, a 24-hour front desk and convenient access to Central Delhi attractions.",
+  url: "https://shivharehotelsandtravel.com",
+  phone: "+91 9899739777",
+  whatsapp: "+91 9899739777",
+  email: "shivharehotelsandtravel@gmail.com",
   address: {
-    street: "Gevhande Apati",
-    area: "Near Pawna Lake",
-    city: "Lonavala",
-    state: "Maharashtra",
-    pincode: "410401",
+    street: "2282–2285, Rajguru Marg",
+    area: "Chuna Mandi, Paharganj",
+    city: "New Delhi",
+    state: "Delhi",
+    pincode: "110055",
     country: "India",
     full:
-      "Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401, India",
+      "2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055, India",
   },
   geo: {
-    latitude: 18.7466,
-    longitude: 73.4833,
+    latitude: 28.6446,
+    longitude: 77.2131,
   },
-  checkIn: "2:00 PM",
+  checkIn: "12:00 PM",
   checkOut: "11:00 AM",
   rating: 5.0,
-  reviewCount: 47,
+  reviewCount: 0,
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
-  facebook: "https://www.facebook.com/theexplorerstays",
-  instagram: "https://www.instagram.com/the_explorerstays",
+  facebook: "",
+  instagram: "",
   twitter: "",
   youtube: "",
   tripadvisor: "",
-  google: "https://maps.google.com/?q=Velora+Stays+Pawna+Lake",
+  google: "https://maps.google.com/?q=The+Queens+Head+Paharganj+New+Delhi",
 };
 
 export const SITE_ASSETS = {
   heroImages: [
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
+    "/heroimg1.jpeg",
+    "/heroimg2.jpeg",
+    "/heroimg3.jpeg",
   ] as const,
   logo: "/veloralogo-v2.png",
   logoLight: "/veloralogo-v2.png",
   favicon: "/favicon.ico",
-  aboutImage: "/images/whychooseus.avif",
-  roomsPreviewImage:
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
-  diningImage:
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
-  eventsImage:
-    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070",
-  contactMapImage:
-    "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200",
-  testimonialBackground:
-    "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070",
-  notFoundImage:
-    "https://images.unsplash.com/photo-1586611292717-f828b167408c?q=80&w=1200",
+  aboutImage: "/whychooseus.jpeg",
+  roomsPreviewImage: "/heroimg2.jpeg",
+  diningImage: "/images/diningarea.avif",
+  eventsImage: "/images/hallroom.avif",
+  contactMapImage: "/images/hallroom1.avif",
+  testimonialBackground: "/images/hallroom.avif",
+  notFoundImage: "/images/whychooseus.avif",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
     image: "/heroimg1.jpeg",
-    title: "Luxury Villa Staycation | near Pawna Dam",
+    title: "Comfortable Stays in the Heart of Paharganj",
     subtitle:
-      "Experience an exclusive private oasis featuring 4, 5, and 7  villas configurations with stunning mountain views.",
-    cta: { label: "Check Availability", href: "/contact" },
+      "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
+    cta: { label: "Check Availability", href: "/book-now" },
   },
   {
     id: "hero-slide-2",
     image: "/heroimg2.jpeg",
-    title: "Your Private Gateway | near Pawna Lake Lonawala",
+    title: "Your Convenient Base in Central Delhi",
     subtitle:
-      "Discover premium villas with private pools, breathtaking lake views, and world-class hospitality by The Velora Stays.",
-    cta: { label: "Explore Villas", href: "/villas" },
+      "Close to New Delhi Railway Station, Connaught Place and major attractions — ideal for business, leisure and short city stays.",
+    cta: { label: "Explore Rooms", href: "/rooms" },
   },
   {
     id: "hero-slide-3",
     image: "/heroimg3.jpeg",
-    title: "Experience Luxury | by the Lake",
+    title: "Indian & Chinese Dining On-Site",
     subtitle:
-      "From private swimming pools to bonfire evenings, every moment at Velora Stays is crafted for unforgettable memories.",
-    cta: { label: "View Amenities", href: "/facilities" },
+      "Enjoy a selection of Indian and Chinese dishes at our on-site restaurant without leaving the property.",
+    cta: { label: "View Amenities", href: "/amenities" },
   },
 ];
 
 export const HERO_STATS: HeroStat[] = [
   {
-    id: "stat-reviews",
-    value: "50+",
-    label: "Verified Reviews",
-    icon: "lucide:message-square",
-  },
-  {
-    id: "stat-rating",
-    value: "5.0",
-    label: "Google Rating",
-    icon: "lucide:star",
-  },
-  {
-    id: "stat-guests",
-    value: "500+",
-    label: "Happy Guests",
-    icon: "lucide:users",
-  },
-  {
-    id: "stat-support",
+    id: "stat-frontdesk",
     value: "24/7",
-    label: "Guest Support",
+    label: "Front Desk Assistance",
     icon: "lucide:headphones",
+  },
+  {
+    id: "stat-wifi",
+    value: "Free",
+    label: "High-Speed Wi-Fi",
+    icon: "lucide:wifi",
+  },
+  {
+    id: "stat-location",
+    value: "Central",
+    label: "Paharganj Location",
+    icon: "lucide:map-pin",
+  },
+  {
+    id: "stat-restaurant",
+    value: "On-Site",
+    label: "Indian & Chinese Restaurant",
+    icon: "lucide:utensils",
   },
 ];
 
 export const HERO_SOCIAL_LINKS: SocialLink[] = [
   {
-    id: "social-instagram",
-    icon: "lucide:instagram",
-    href: SOCIAL_LINKS.instagram,
-    label: "Instagram",
-  },
-  {
-    id: "social-facebook",
-    icon: "lucide:facebook",
-    href: SOCIAL_LINKS.facebook,
-    label: "Facebook",
-  },
-  {
     id: "social-google",
     icon: "lucide:map-pin",
     href: SOCIAL_LINKS.google,
-    label: "Google",
+    label: "Google Maps",
   },
 ];
 
 export const TRUST_BADGES: TrustBadge[] = [
   {
-    id: "badge-pool",
-    icon: "lucide:waves",
-    label: "Private Pool",
-    value: "Exclusive Access",
-  },
-  {
-    id: "badge-view",
-    icon: "lucide:mountain",
-    label: "Lake & Mountain View",
-    value: "Scenic Location",
-  },
-  {
     id: "badge-wifi",
     icon: "lucide:wifi",
-    label: "Free WiFi",
-    value: "High-Speed",
+    label: "Free Wi-Fi",
+    value: "Complimentary",
   },
   {
-    id: "badge-parking",
-    icon: "lucide:car",
-    label: "Secure Parking",
-    value: "Free On-site",
+    id: "badge-ac",
+    icon: "lucide:snowflake",
+    label: "Air Conditioning",
+    value: "All Rooms",
   },
   {
-    id: "badge-support",
+    id: "badge-frontdesk",
     icon: "lucide:headphones",
-    label: "24/7 Support",
+    label: "24-Hour Front Desk",
     value: "Always Available",
   },
   {
-    id: "badge-managed",
-    icon: "lucide:shield-check",
-    label: "Managed By",
-    value: "DC developers",
+    id: "badge-restaurant",
+    icon: "lucide:utensils",
+    label: "On-Site Restaurant",
+    value: "Indian & Chinese",
+  },
+  {
+    id: "badge-family",
+    icon: "lucide:users",
+    label: "Family Rooms",
+    value: "Comfortable Stays",
+  },
+  {
+    id: "badge-location",
+    icon: "lucide:map-pin",
+    label: "Prime Location",
+    value: "Paharganj, New Delhi",
   },
 ];
 
 const whatsappPhone = SITE_INFO.whatsapp.replace(/\s+/g, "").replace("+", "");
 const whatsappMessage = [
-  "*This is an Enquiry from :* The HotelMate Website",
-  "Hotel Name: Velora Stays,",
-  "Property Id: 3607,",
-  "externalSite: WebSite,",
-  "Address: PC37+579,Near Pawna Lake, Lonavala,hotels-in-pune,Gevhande Apati,India",
+  "Hello The Queen's Head – Paharganj,",
+  "I would like to enquire about a booking.",
+  "Name: ",
+  "Check-in: ",
+  "Check-out: ",
+  "Rooms: ",
 ].join("\n");
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -198,17 +181,17 @@ export const GOOGLE_MAPS_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!
 
 export const NAV_LINKS: NavLink[] = [
   { id: "nav-home", label: "Home", href: "/" },
-  { id: "nav-villas", label: "The Villa", href: "/villas" },
-  { id: "nav-amenities", label: "Amenities", href: "/facilities" },
-  { id: "nav-pawna", label: "Pawna Experience", href: "/nearby" },
-  { id: "nav-gallery", label: "Gallery", href: "/gallery" },
+  { id: "nav-rooms", label: "Rooms", href: "/rooms" },
+  { id: "nav-amenities", label: "Amenities", href: "/amenities" },
+  { id: "nav-dining", label: "Restaurant", href: "/restaurant" },
+  { id: "nav-location", label: "Location", href: "/location" },
   { id: "nav-contact", label: "Contact Us", href: "/contact" },
 ];
 
-export const BOOKING_URL = "https://bookone.io/Velora-Stays?bookingEngine=true";
+export const BOOKING_URL = "/book-now";
 
 export const NAV_CTA = {
-  label: "Check Availability",
-  href: "https://bookone.io/Velora-Stays?bookingEngine=true",
+  label: "Book Now",
+  href: "/book-now",
   icon: "lucide:calendar-check",
 };

@@ -1,16 +1,19 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
-import GalleryVillaSections from "./GalleryVillaSections";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Velora Stays",
-  description: "Explore photos of villas, dining, events, facilities, and nearby attractions at Velora Stays Lonavala.",
+  title: "Photo Gallery | The Queen's Head – Paharganj",
+  description: "Explore photos of rooms, restaurant, lobby, common areas and Paharganj at The Queen's Head – Paharganj, New Delhi.",
   alternates: { canonical: "/gallery" },
-  openGraph: { title: "Photo Gallery | Velora Stays", description: "Take a visual tour of Velora Stays through our photo gallery." },
+  openGraph: {
+    title: "Photo Gallery | The Queen's Head – Paharganj",
+    description: "Take a visual tour of The Queen's Head – Paharganj through our photo gallery.",
+  },
 };
 
 export default function GalleryPage() {
@@ -22,7 +25,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/heroimg2.jpeg"
-            alt="Velora Stays gallery"
+            alt="The Queen's Head – Paharganj gallery"
             fill
             className="object-cover"
             sizes="100vw"
@@ -32,11 +35,25 @@ export default function GalleryPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Gallery", href: "/gallery" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Photo Gallery</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Take a visual tour of Velora Stays and discover what makes us special.</p>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
+            Take a visual tour of The Queen&apos;s Head – Paharganj and discover what makes our hotel special.
+          </p>
         </div>
       </section>
 
-      <GalleryVillaSections />
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap gap-3">
+          {GALLERY_CATEGORIES.map((cat) => (
+            <Link
+              key={cat.id}
+              href={`/gallery/${cat.slug}`}
+              className="bg-gray-100 hover:bg-amber-500 hover:text-white text-gray-800 px-4 py-2 rounded-full text-sm font-medium transition-colors"
+            >
+              {cat.name}
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {GALLERY_CATEGORIES.map((cat) => {
         const images = GALLERY_IMAGES.filter((img) => img.category === cat.slug);
@@ -44,7 +61,12 @@ export default function GalleryPage() {
         return (
           <section key={cat.id} className="py-12 bg-white border-b last:border-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">{cat.name}</h2>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-gray-900">{cat.name}</h2>
+                <Link href={`/gallery/${cat.slug}`} className="text-amber-600 hover:text-amber-700 text-sm font-semibold">
+                  View all →
+                </Link>
+              </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {images.map((img) => (
                   <div key={img.id} className="relative aspect-[4/3] rounded-xl overflow-hidden group">

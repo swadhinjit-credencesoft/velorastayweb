@@ -1,87 +1,82 @@
 import type { SectionContent, ContactInfo } from "@/types";
 
 export const CONTACT_CONTENT: SectionContent = {
-  eyebrow: "Get In Touch",
-  heading: "Plan Your Next Getaway With Us",
+  eyebrow: "Contact Us",
+  heading: "Contact The Queen's Head – Paharganj",
   description:
-    "Have questions about our pricing, flexible villa configurations, or want to host a private event? Our team is here to assist you. Reach out to us through any of the channels below and we will get back to you as quickly as possible.",
+    "Call, WhatsApp or email us for bookings, enquiries or assistance. Our 24-hour front desk is always happy to help.",
 };
 
 export const CONTACT_INFO: ContactInfo[] = [
   {
-    label: "Direct Phone",
+    label: "Address",
+    icon: "lucide:map-pin",
+    value: "2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055",
+    href: "https://maps.google.com/?q=The+Queens+Head+Paharganj+New+Delhi",
+    primary: true,
+  },
+  {
+    label: "Reservations",
     icon: "lucide:phone",
-    value: "+91 7326079861",
-    href: "tel:+917326079861",
+    value: "+91 9899739777",
+    href: "tel:+919899739777",
     primary: true,
   },
   {
     label: "WhatsApp",
     icon: "lucide:message-circle",
-    value: "+91 9004126958",
-    href: "https://api.whatsapp.com/send?phone=919004126958&text=*This%20is%20an%20Enquiry%20from%20%3A*%20The%20HotelMate%20Website%0AHotel%20Name%3A%20Velora%20Stays%2C%0AProperty%20Id%3A%203607%2C%0AexternalSite%3A%20WebSite%2C%0AAddress%3A%20PC37%2B579%2CNear%20Pawna%20Lake%2C%20Lonavala%2Chotels-in-pune%2CGevhande%20Apati%2CIndia",
-    primary: true,
+    value: "+91 9899739777",
+    href: "https://api.whatsapp.com/send?phone=919899739777&text=Hello%20The%20Queen's%20Head%20%E2%80%93%20Paharganj%2C%20I%20would%20like%20to%20enquire%20about%20a%20booking.",
   },
   {
     label: "Email",
     icon: "lucide:mail",
-    value: "reservation@thehotelmate.co",
-    href: "mailto:reservation@thehotelmate.co",
-    primary: true,
+    value: "shivharehotelsandtravel@gmail.com",
+    href: "mailto:shivharehotelsandtravel@gmail.com",
   },
   {
-    label: "Address",
-    icon: "lucide:map-pin",
-    value: "Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401",
-    href: "https://maps.google.com/?q=Velora+Stays+Pawna+Lake+Lonavala",
-  },
-  {
-    label: "Working Hours",
+    label: "Front Desk",
     icon: "lucide:clock",
-    value: "24/7 Guest Support",
-    href: "#",
+    value: "Open 24 hours",
+    href: "",
   },
 ];
 
 export interface Department {
   id: string;
   name: string;
+  description: string;
   email: string;
   phone: string;
-  description: string;
 }
 
 export const CONTACT_DEPARTMENT: Department[] = [
   {
-    id: "dept-general",
-    name: "General Enquiries",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
-    description:
-      "For any general questions about Velora Stays, our villa configurations, amenities, or policies, our team is happy to help.",
-  },
-  {
     id: "dept-reservations",
     name: "Reservations",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
-    description:
-      "Our dedicated reservations team handles all booking-related queries including villa availability, rate inquiries, and special requests.",
+    description: "Bookings, availability and room rates",
+    email: "shivharehotelsandtravel@gmail.com",
+    phone: "+91 9899739777",
   },
   {
-    id: "dept-events",
-    name: "Events & Celebrations",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
-    description:
-      "From birthday celebrations to corporate retreats, our team will help you plan and execute a memorable occasion at our villa.",
+    id: "dept-frontdesk",
+    name: "Front Desk",
+    description: "Check-in, check-out and stay assistance (24 hours)",
+    email: "shivharehotelsandtravel@gmail.com",
+    phone: "+91 9899739777",
   },
   {
-    id: "dept-feedback",
-    name: "Feedback & Support",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
-    description:
-      "Your feedback helps us improve. Whether you want to share a positive experience or suggest improvements, we take every comment seriously.",
+    id: "dept-restaurant",
+    name: "Restaurant",
+    description: "Dining, meal plans and special requests",
+    email: "shivharehotelsandtravel@gmail.com",
+    phone: "+91 9899739777",
+  },
+  {
+    id: "dept-travel",
+    name: "Tours & Travel",
+    description: "Sightseeing, taxis and airport transfers",
+    email: "shivharehotelsandtravel@gmail.com",
+    phone: "+91 9899739777",
   },
 ];

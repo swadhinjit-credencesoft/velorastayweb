@@ -2,18 +2,18 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { SITE_INFO } from "@/data/site";
+import { SITE_INFO, WHATSAPP_LINK } from "@/data/site";
 import { ABOUT_STORY, ABOUT_MISSION, ABOUT_VISION } from "@/data/about";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "About Us | Velora Stays",
+  title: "About Us | The Queen's Head – Paharganj",
   description:
-    "Discover the story behind Velora Stays — a premium luxury villa in Pawna Lake, Lonavala. Learn about our mission and commitment to exceptional hospitality.",
+    "Discover the story behind The Queen's Head – Paharganj — a comfortable hotel in the heart of Paharganj, New Delhi. Learn about our mission and commitment to welcoming hospitality.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Us | Velora Stays",
-    description: "Learn about Velora Stays, our story, and mission.",
+    title: "About Us | The Queen's Head – Paharganj",
+    description: "Learn about The Queen's Head – Paharganj, our story, and mission.",
     url: `${SITE_INFO.url}/about`,
   },
 };
@@ -26,14 +26,16 @@ export default function AboutPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
-          <Image src="/heroimg3.jpeg" alt="About Velora Stays" fill className="object-cover" sizes="100vw" />
+          <Image src="/heroimg3.jpeg" alt="About The Queen's Head – Paharganj" fill className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]} />
           <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">About Us</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">{ABOUT_STORY.title}</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Discover the story behind Velora Stays.</p>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
+            Discover the story behind The Queen&apos;s Head – Paharganj.
+          </p>
         </div>
       </section>
 
@@ -71,9 +73,14 @@ export default function AboutPage() {
 
       <section className="py-16 bg-amber-500 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Experience the Velora Stays Difference</h2>
+          <h2 className="text-3xl font-bold mb-4">Experience The Queen&apos;s Head Difference</h2>
           <p className="mb-6 opacity-90">Book your stay and discover why guests keep coming back.</p>
-          <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
             Book Your Stay
           </a>
         </div>

@@ -22,7 +22,7 @@ export default function NotFound() {
         <h1 className={styles.heading}>Page Not Found</h1>
         <p className={styles.description}>
           The page you are looking for does not exist or has been moved. Let us
-          guide you back to your perfect stay near Pawna Lake.
+          guide you back to your stay at The Queen&apos;s Head – Paharganj.
         </p>
         <div className={styles.actions}>
           <Button
@@ -37,12 +37,12 @@ export default function NotFound() {
           <Button
             variant="outline"
             size="lg"
-            href="/villas"
-            icon="lucide:home"
+            href="/rooms"
+            icon="lucide:bed-double"
             iconPosition="left"
             className={styles.outlineOnDark}
           >
-            Explore Villas
+            Explore Rooms
           </Button>
         </div>
       </div>

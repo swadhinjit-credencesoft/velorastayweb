@@ -50,7 +50,7 @@ export default function NearbyAttractions() {
         </div>
 
         <div className={styles.viewAll}>
-          <a href="/explore" className={styles.viewAllLink}>
+          <a href="/location" className={styles.viewAllLink}>
             View All Attractions
             <Icon icon="lucide:arrow-right" width={16} height={16} />
           </a>

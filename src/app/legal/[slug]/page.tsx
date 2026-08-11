@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { LEGAL_PAGES, getLegalPage } from "@/data/legal";
+import { SITE_INFO } from "@/data/site";
 
 type Props = { params: { slug: string } };
 
@@ -14,13 +15,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getLegalPage(params.slug);
   if (!page) return { title: "Page Not Found" };
-  const desc = `${page.title} — Velora Stays luxury villas near Pawna Lake, Lonavala.`;
+  const desc = `${page.title} — ${SITE_INFO.name} hotel in Paharganj, New Delhi.`;
   return {
-    title: `${page.title} | Velora Stays`,
+    title: `${page.title} | ${SITE_INFO.name}`,
     description: desc,
     alternates: { canonical: `/legal/${page.slug}` },
     openGraph: {
-      title: `${page.title} | Velora Stays`,
+      title: `${page.title} | ${SITE_INFO.name}`,
       description: desc,
     },
   };

@@ -5,10 +5,10 @@ import { generateBreadcrumbSchema, generateFAQSchema } from "@/utils/schema";
 import { FAQ_CATEGORIES } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Velora Stays",
-  description: "Find answers to common questions about booking, villas, dining, facilities, payment, and policies at Velora Stays Lonavala.",
+  title: "Frequently Asked Questions | The Queen's Head – Paharganj",
+  description: "Find answers to common questions about booking, rooms, dining, facilities, payment, and policies at The Queen's Head – Paharganj, New Delhi.",
   alternates: { canonical: "/faq" },
-  openGraph: { title: "FAQ | Velora Stays", description: "Get answers to all your questions about staying at Velora Stays." },
+  openGraph: { title: "FAQ | The Queen's Head – Paharganj", description: "Get answers to all your questions about staying at The Queen's Head – Paharganj." },
 };
 
 export default function FAQPage() {
@@ -23,7 +23,7 @@ export default function FAQPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "FAQ", href: "/faq" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Frequently Asked Questions</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Find quick answers to common questions about Velora Stays.</p>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Find quick answers to common questions about staying with us.</p>
         </div>
       </section>
 

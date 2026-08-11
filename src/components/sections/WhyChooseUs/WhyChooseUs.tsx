@@ -6,9 +6,9 @@ import styles from "./WhyChooseUs.module.scss";
 export default function WhyChooseUs() {
   const stats = [
     { value: `${SITE_INFO.rating}`, label: "Guest Rating", icon: "lucide:star" },
-    { value: `${SITE_INFO.reviewCount}+`, label: "Verified Reviews", icon: "lucide:message-square" },
-    { value: "1000+", label: "Happy Guests", icon: "lucide:users" },
-    { value: "24/7", label: "Support", icon: "lucide:headphones" },
+    { value: "24/7", label: "Front Desk", icon: "lucide:headphones" },
+    { value: "Free", label: "Wi-Fi", icon: "lucide:wifi" },
+    { value: "Central", label: "Paharganj Location", icon: "lucide:map-pin" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
             <div className={styles.imageWrap}>
               <Image
                 src={SITE_ASSETS.aboutImage}
-                alt="Velora Stays villa entrance"
+                alt={`${SITE_INFO.name} hotel entrance`}
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className={styles.image}
@@ -30,12 +30,13 @@ export default function WhyChooseUs() {
           <div className={styles.contentCol}>
             <span className={styles.eyebrow}>Why Choose Us</span>
             <h2 className={`${styles.heading} font-oswald`}>
-              The Velora Stays Difference
+              The Queen&apos;s Head Difference
             </h2>
             <p className={styles.description}>
-              From our prime Pawna Lake location to our unwavering commitment to cleanliness and
-              guest satisfaction, every detail is designed to make your stay exceptional. We combine
-              modern comforts with warm Indian hospitality to create a home away from home.
+              From our central Paharganj location to comfortable rooms and dependable
+              24-hour service, every detail is designed to make your Delhi stay
+              simple and comfortable. We combine modern conveniences with warm
+              Indian hospitality to create a welcoming home away from home.
             </p>
 
             <div className={styles.statsGrid}>
