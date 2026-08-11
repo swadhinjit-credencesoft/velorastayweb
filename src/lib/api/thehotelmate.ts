@@ -196,7 +196,7 @@ const VILLA_TAGS: Record<number, string> = {
 };
 
 const VILLA_NEARBY = [
-  "Pawna Lake — 49 min drive",
+  "Pawna Lake - 5 min Drive",
   "Lonavala Market - 50min drive",
 ]
 

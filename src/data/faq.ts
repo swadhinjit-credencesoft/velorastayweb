@@ -10,7 +10,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-01",
         question: "How can I book a villa at Velora Stays?",
         answer:
-          "You can book a villa directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type (4 villas , 5 villas, or 7 grand villas ), and completing the secure payment process. Alternatively, you can call our reservations team at +91 7326079861 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb.",
+          "You can book a villas directly through our website by selecting your check-in and check-out dates, choosing your preferred villa type ( Velora 2 ( A 2BHK Villa) Velora 4 ( A 4 BHK Villa), Velora 5 ( A 5bhk Villa) or Velora 7 ( A 7bhk Villa), and completing the secure payment process. Alternatively, you can call our reservations team at +91 7326079861 or send us a WhatsApp message. We also accept bookings through popular platforms like MakeMyTrip, Goibibo, and Airbnb",
       },
       {
         id: "faq-booking-02",
@@ -102,7 +102,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-kitchen-04",
         question: "Are there restaurants nearby?",
         answer:
-          "Velora Stays is located in Gevhande Apati, near Pawna Lake, with several local restaurants and dhabas within driving distance. Our caretaker can recommend the best local eateries for authentic Maharashtrian cuisine. For a more upscale dining experience, Lonavala town is about 20 minutes away with a wide range of restaurants and cafes.",
+          "Velora Stays is located in Gevhande Apati, near Pawna Lake and there are no local restaurants and dhabas within driving distance. Hence, we recommend to book with us in advance.",
       },
       {
         id: "faq-kitchen-05",

@@ -11,9 +11,9 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
   {
     id: "pawna-lake",
     slug: "pawna-lake",
-    name: "Pawna Lake",
+    name: "Pawna Dam",
     description:
-      "Located just minutes away from Velora Stays, Pawna Lake offers peaceful daytime boating excursions and unparalleled sunset photography spots. The lake is surrounded by lush green hills and ancient forts, making it one of the most picturesque destinations near Mumbai and Pune.",
+      "Located approx 1 hour away from Velora Stays, Pawna Dam offers peaceful daytime boating excursions and unparalleled sunset photography spots. Surrounded by lush green hills and ancient forts, Pawna Dam is one of the most picturesque destinations near Mumbai and Pune, offering a perfect blend of natural beauty, tranquillity, and adventure.",
     image: "/Pawnalake.jpg",
     distance: "19.6 km",
     travelTime: " 49 min drive",
