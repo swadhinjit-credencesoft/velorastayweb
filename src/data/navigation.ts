@@ -74,6 +74,13 @@ export const NAV_GROUPS: NavGroup[] = [
         description: "Smart TV, games, and music system",
         icon: "lucide:tv",
       },
+      {
+        id: "nav-amenities-menu",
+        label: "Food Menu & Packages",
+        href: "/food-menu",
+        description: "Meal packages, à la carte, and BBQ",
+        icon: "lucide:utensils",
+      },
     ],
   },
   {

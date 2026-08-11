@@ -4,9 +4,9 @@ import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import Icon from "@/components/Icon/Icon";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
+import Dining from "@/components/sections/Dining/Dining";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
-import FacilityImageCarousel from "./[slug]/FacilityImageCarousel";
 
 export const metadata: Metadata = {
   title: "Facilities & Amenities | Velora Stays",
@@ -57,16 +57,18 @@ export default function FacilitiesPage() {
       />
 
       <section className="relative py-20 pt-32">
-        <div className="absolute inset-0 z-0">
-          <FacilityImageCarousel
-            images={[
-              "/images/swimmingpool.avif",
-              "/images/swimmingpool1.avif",
-            ]}
-            alt="Velora Stays facilities"
-            controls={false}
-            overlayClassName="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80"
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video
+            className="h-full w-full object-cover"
+            src="https://bookonelocal.in/cdn/done7bhk.mp4"
+            poster="/images/swimmingpool.avif"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/60 to-[#16213e]/50" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Facilities", href: "/facilities" }]} />
@@ -128,6 +130,8 @@ export default function FacilitiesPage() {
           ))}
         </div>
       </section>
+
+      <Dining />
     </>
   );
 }
