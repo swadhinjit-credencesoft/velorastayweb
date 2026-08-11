@@ -24,7 +24,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <Testimonials />
       <Gallery />
-      <Dining />
+      {/* <Dining /> */}
       <NearbyAttractions />
       <FAQ />
       <CTA
