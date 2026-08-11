@@ -15,10 +15,6 @@ export function generateCanonicalUrl(path: string): string {
   return `${SITE_INFO.url}${path}`;
 }
 
-export function generateOgImageUrl(title: string): string {
-  return `/api/og?title=${encodeURIComponent(title)}`;
-}
-
 export function generateBreadcrumbs(
   items: { label: string; href: string }[]
 ): BreadcrumbItem[] {

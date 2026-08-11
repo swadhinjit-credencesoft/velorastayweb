@@ -149,44 +149,6 @@ export interface RoomPolicy {
   description: string;
 }
 
-// ─── Villas ────────────────────────────────────────────────
-export interface VillaAmenity {
-  id: string;
-  icon: string;
-  label: string;
-  category: "outdoor" | "basic" | "entertainment" | "kitchen" | "service" | "bathroom" | "comfort";
-}
-
-export interface VillaType {
-  id: string;
-  slug: string;
-  name: string;
-  tagline: string;
-  description: string;
-  longDescription: string;
-  price: number;
-  originalPrice?: number;
-  currency: string;
-  priceUnit: string;
-  bedrooms: number;
-  bathrooms: number;
-  maxOccupancy: number;
-  bedConfig?: string;
-  view?: string;
-  size?: number;
-  sizeUnit?: string;
-  images: RoomImage[];
-  amenities: string[];
-  highlights: string[];
-  features: string[];
-  policies: RoomPolicy[];
-  faqs: FaqItem[];
-  nearby: string[];
-  popular: boolean;
-  available: boolean;
-  tag?: string;
-}
-
 // ─── Dining ───────────────────────────────────────────────
 export interface DiningVenue {
   id: string;

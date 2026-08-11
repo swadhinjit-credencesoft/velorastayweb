@@ -12,17 +12,24 @@ RewriteEngine On
 ############################################
 
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.velorastays\.in$ [NC]
-RewriteRule ^(.*)$ https://velorastays.in/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.shivharehotelsandtravel\.com$ [NC]
+RewriteRule ^(.*)$ https://shivharehotelsandtravel.com/$1 [R=301,L]
 
 ############################################
-# REDIRECT OLD WRONG VILLA URLS TO CORRECT SLUGS
+# REDIRECT OLD BRAND ROUTES TO NEW HOTEL ROUTES
 ############################################
 
-RewriteRule ^villas/velora-2-\(2-bhk\)/?$ /villas/2-bhk-villa [R=301,L]
-RewriteRule ^villas/velora-4-\(4-bhk\)/?$ /villas/4-bhk-villa [R=301,L]
-RewriteRule ^villas/velora-5-\(5-bhk\)/?$ /villas/5-bhk-villa [R=301,L]
-RewriteRule ^villas/velora-7-\(7-bhk\)/?$ /villas/7-bhk-villa [R=301,L]
+RewriteRule ^villas/?$ /rooms [R=301,L]
+RewriteRule ^villas/.+ /rooms [R=301,L]
+RewriteRule ^facilities/?$ /amenities [R=301,L]
+RewriteRule ^facilities/.+ /amenities [R=301,L]
+RewriteRule ^nearby/?$ /location [R=301,L]
+RewriteRule ^booking/?$ /book-now [R=301,L]
+RewriteRule ^food-menu/?$ /restaurant [R=301,L]
+RewriteRule ^privacy/?$ /legal/privacy-policy [R=301,L]
+RewriteRule ^refund/?$ /legal/cancellation-policy [R=301,L]
+RewriteRule ^terms/?$ /legal/terms-and-conditions [R=301,L]
+RewriteRule ^(blog|events|offers|tours|explore|search)/?$ / [R=301,L]
 
 ############################################
 # REMOVE index.html

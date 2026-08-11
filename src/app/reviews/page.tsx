@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { generateBreadcrumbSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateHotelSchema } from "@/utils/schema";
 import { REVIEWS, REVIEWS_CONTENT, REVIEW_PLATFORMS } from "@/data/reviews";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function ReviewsPage() {
   return (
     <>
       <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Reviews", url: "/reviews" }])} />
-      <JsonLd schema={{ "@context": "https://schema.org", "@type": "LodgingBusiness", name: "The Queen's Head – Paharganj", url: "https://shivharehotelsandtravel.com" }} />
+      <JsonLd schema={generateHotelSchema()} />
 
       <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
