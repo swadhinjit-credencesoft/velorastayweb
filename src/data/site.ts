@@ -10,7 +10,7 @@ import type {
 
 export const SITE_INFO: SiteInfo = {
   name: "The Queen's Head – Paharganj",
-  tagline: "Comfortable Stays in the Heart of Paharganj",
+  tagline: "Comfortable Stays in Paharganj",
   description:
     "Stay at The Queen's Head – Paharganj, New Delhi. Enjoy comfortable rooms, free Wi-Fi, air conditioning, an on-site restaurant, a 24-hour front desk and convenient access to Central Delhi attractions.",
   url: "https://shivharehotelsandtravel.com",
@@ -68,7 +68,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
     image: "/homehero1.png",
-    title: "Comfortable Stays in the Heart of Paharganj",
+    title: "Comfortable Stays in Paharganj",
     subtitle:
       "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
     cta: { label: "Check Availability", href: "/book-now" },

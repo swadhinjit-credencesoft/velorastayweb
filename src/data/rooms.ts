@@ -148,13 +148,14 @@ export const ROOMS: RoomType[] = [
     images: [
       {
         id: "premium-1",
-        src: "/PremiumDoubleRoom/PremiumDoubleRoom1.png",
+          src: "/PremiumDoubleRoom/PremiumDoubleRoom6.png",
         alt: "Premium Double Room at The Queen's Head – Paharganj",
         caption: "Premium Double Room",
       },
       {
         id: "premium-2",
-        src: "/PremiumDoubleRoom/PremiumDoubleRoom2.png",
+        src: "/PremiumDoubleRoom/PremiumDoubleRoom1.png",
+     
         alt: "Premium Double Room interior",
         caption: "Room facilities",
       },
@@ -178,7 +179,7 @@ export const ROOMS: RoomType[] = [
       },
       {
         id: "premium-6",
-        src: "/PremiumDoubleRoom/PremiumDoubleRoom6.png",
+      src: "/PremiumDoubleRoom/PremiumDoubleRoom2.png",
         alt: "Premium Double Room amenities",
         caption: "Room amenities",
       },
