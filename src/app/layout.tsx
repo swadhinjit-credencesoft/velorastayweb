@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description: SITE_INFO.description,
     images: [
       {
-        url: `${SITE_INFO.url}/heroimg1.jpeg`,
+        url: `${SITE_INFO.url}/homehero1.png`,
         width: 1200,
         height: 630,
         alt: SITE_INFO.name,
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_INFO.name} | Hotel in Paharganj, New Delhi`,
     description: SITE_INFO.description,
-    images: [`${SITE_INFO.url}/heroimg1.jpeg`],
+    images: [`${SITE_INFO.url}/homehero1.png`],
   },
   robots: {
     index: true,

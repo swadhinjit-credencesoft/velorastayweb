@@ -1,0 +1,15 @@
+
+> velora-stays-web@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 5.4s
+ ○ Compiling /location ...
+ ✓ Compiled /location in 21.2s (734 modules)
+ GET /location 200 in 184ms
+ ○ Compiling / ...
+ ✓ Compiled / in 16.5s (885 modules)
+ GET / 200 in 700ms

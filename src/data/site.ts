@@ -56,7 +56,7 @@ export const SITE_ASSETS = {
   logoLight: "",
   favicon: "/favicon.ico",
   aboutImage: "/whychooseus.png",
-  roomsPreviewImage: "/heroimg2.jpeg",
+  roomsPreviewImage: "/homehero2.png",
   diningImage: "/homehero3.png",
   eventsImage: "/homehero1.png",
   contactMapImage: "/homehero2.png",

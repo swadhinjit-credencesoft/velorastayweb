@@ -34,7 +34,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Weekend visitors",
       "International travellers",
     ],
-    image: "/Pawnalake.jpg",
+    image: "/nearby/new-delhi-railway-station.jpg",
   },
   {
     slug: "hotel-near-ramakrishna-mission",
@@ -55,7 +55,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Jantar Mantar â€” approx. 2.3 km",
       "Connaught Place â€” approx. 2.5 km",
     ],
-    image: "/Karlacaves.jpg",
+    image: "/nearby/ramakrishna-mission.jpg",
   },
   {
     slug: "hotel-near-gurudwara-bangla-sahib",
@@ -76,7 +76,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Jantar Mantar â€” approx. 2.3 km",
       "Connaught Place â€” approx. 2.5 km",
     ],
-    image: "/lohagarh.jpg",
+    image: "/nearby/gurudwara-bangla-sahib.jpg",
   },
   {
     slug: "hotel-near-jantar-mantar",
@@ -97,7 +97,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Gurudwara Bangla Sahib â€” approx. 2.2 km",
       "Ramakrishna Mission â€” approx. 0.9 km",
     ],
-    image: "/trikonafort.jpg",
+    image: "/nearby/jantar-mantar.jpg",
   },
   {
     slug: "hotel-near-connaught-place",
@@ -118,7 +118,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Gurudwara Bangla Sahib â€” approx. 2.2 km",
       "New Delhi Railway Station â€” walking distance",
     ],
-    image: "/BhushiDam.webp",
+    image: "/nearby/connaught-place.jpg",
   },
   {
     slug: "business-hotel-paharganj",
@@ -187,7 +187,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "24-hour front desk for early departures",
       "Comfortable rooms for rest before or after your flight",
     ],
-    image: "/heroimg2.jpeg",
+    image: "/nearby/delhi-airport.jpg",
   },
 ];
 

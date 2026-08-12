@@ -1,4 +1,4 @@
-import type { GalleryCategory, GalleryImage } from "@/types";
+﻿import type { GalleryCategory, GalleryImage } from "@/types";
 
 export const GALLERY_CATEGORIES: GalleryCategory[] = [
   { id: "cat-exterior", slug: "exterior", name: "Hotel Exterior", count: 3 },
@@ -11,8 +11,8 @@ export const GALLERY_CATEGORIES: GalleryCategory[] = [
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   { id: "gal-ext-1", src: "/whychooseus.png", alt: "The Queen's Head hotel exterior in Paharganj Delhi", category: "exterior", caption: "Hotel exterior" },
-  { id: "gal-ext-2", src: "/heroimg1.jpeg", alt: "The Queen's Head hotel front view", category: "exterior", caption: "Hotel front view" },
-  { id: "gal-ext-3", src: "/heroimg2.jpeg", alt: "The Queen's Head hotel Paharganj New Delhi", category: "exterior", caption: "Rajguru Marg, Paharganj" },
+  { id: "gal-ext-2", src: "/homehero1.png", alt: "The Queen's Head hotel front view", category: "exterior", caption: "Hotel front view" },
+  { id: "gal-ext-3", src: "/homehero2.png", alt: "The Queen's Head hotel Paharganj New Delhi", category: "exterior", caption: "Rajguru Marg, Paharganj" },
 
   { id: "gal-lob-1", src: "/homehero1.png", alt: "Reception and common area at The Queen's Head", category: "lobby", caption: "Reception" },
   { id: "gal-lob-2", src: "/homehero2.png", alt: "Hotel lobby seating area", category: "lobby", caption: "Lobby seating" },
@@ -56,7 +56,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { id: "gal-com-2", src: "/homehero1.png", alt: "Hotel corridors and common spaces", category: "common", caption: "Corridor" },
   { id: "gal-com-3", src: "/whychooseus.png", alt: "The Queen's Head hotel common spaces", category: "common", caption: "Common space" },
 
-  { id: "gal-pah-1", src: "/Pawnalake.jpg", alt: "Paharganj New Delhi street", category: "paharganj", caption: "Paharganj market" },
-  { id: "gal-pah-2", src: "/BhushiDam.webp", alt: "Connaught Place New Delhi", category: "paharganj", caption: "Connaught Place" },
-  { id: "gal-pah-3", src: "/Karlacaves.jpg", alt: "Delhi landmarks near the hotel", category: "paharganj", caption: "Delhi landmarks" },
+  { id: "gal-pah-1", src: "/nearby/chandni-chowk.jpg", alt: "Paharganj New Delhi street", category: "paharganj", caption: "Paharganj market" },
+  { id: "gal-pah-2", src: "/nearby/connaught-place.jpg", alt: "Connaught Place New Delhi", category: "paharganj", caption: "Connaught Place" },
+  { id: "gal-pah-3", src: "/nearby/india-gate.jpg", alt: "Delhi landmarks near the hotel", category: "paharganj", caption: "Delhi landmarks" },
 ];

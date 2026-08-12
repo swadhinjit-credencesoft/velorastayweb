@@ -1,10 +1,10 @@
-import type { SectionContent, NearbyAttraction } from "@/types";
+﻿import type { SectionContent, NearbyAttraction } from "@/types";
 
 export const NEARBY_CONTENT: SectionContent = {
   eyebrow: "Explore Delhi from Paharganj",
   heading: "Places to Visit Near The Queen's Head",
   description:
-    "The Queen's Head – Paharganj places you in a convenient part of New Delhi, close to major transport links, shopping areas and some of the city's most popular landmarks.",
+    "The Queen's Head â€“ Paharganj places you in a convenient part of New Delhi, close to major transport links, shopping areas and some of the city's most popular landmarks.",
 };
 
 export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
@@ -14,7 +14,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Ramakrishna Mission",
     description:
       "Ramakrishna Mission is one of the nearby landmarks listed for the property.",
-    image: "/Karlacaves.jpg",
+    image: "/nearby/ramakrishna-mission.jpg",
     distance: "0.9 km",
     travelTime: "Approx. 12 min walk",
     category: "Religious & Spiritual",
@@ -28,7 +28,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Gurudwara Bangla Sahib",
     description:
       "Gurudwara Bangla Sahib is one of Delhi's prominent landmarks and a popular destination for visitors.",
-    image: "/lohagarh.jpg",
+    image: "/nearby/gurudwara-bangla-sahib.jpg",
     distance: "2.2 km",
     travelTime: "Approx. 10 min drive",
     category: "Religious & Spiritual",
@@ -42,7 +42,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Jantar Mantar",
     description:
       "A major historical and astronomical landmark in Central Delhi built in the 18th century.",
-    image: "/trikonafort.jpg",
+    image: "/nearby/jantar-mantar.jpg",
     distance: "2.3 km",
     travelTime: "Approx. 12 min drive",
     category: "Monuments & Landmarks",
@@ -56,7 +56,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Connaught Place",
     description:
       "Central Delhi's iconic shopping and dining hub, known for its Georgian-style architecture and lively atmosphere.",
-    image: "/BhushiDam.webp",
+    image: "/nearby/connaught-place.jpg",
     distance: "2.5 km",
     travelTime: "Approx. 15 min drive",
     category: "Markets & Shopping",
@@ -70,9 +70,9 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "New Delhi Railway Station",
     description:
       "One of India's busiest railway stations, conveniently close to the hotel for train travellers.",
-    image: "/Pawnalake.jpg",
+    image: "/nearby/new-delhi-railway-station.jpg",
     distance: "Walking distance",
-    travelTime: "Approx. 5–10 min walk",
+    travelTime: "Approx. 5â€“10 min walk",
     category: "Transport Hubs",
     highlights: ["Major railway hub", "Convenient access"],
     tips: "Allow extra time during peak hours and festivals.",
@@ -84,12 +84,12 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Delhi International Airport",
     description:
       "Indira Gandhi International Airport connects Delhi with destinations across India and the world.",
-    image: "/lionpoint.jpg",
+    image: "/nearby/delhi-airport.jpg",
     distance: "Approx. 15 km",
-    travelTime: "Approx. 45–60 min drive (traffic dependent)",
+    travelTime: "Approx. 45â€“60 min drive (traffic dependent)",
     category: "Transport Hubs",
     highlights: ["International airport", "Airport transfers"],
-    tips: "Delhi traffic can significantly change travel time — plan ahead.",
+    tips: "Delhi traffic can significantly change travel time â€” plan ahead.",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=Indira+Gandhi+International+Airport",
   },
   {
@@ -98,7 +98,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Red Fort",
     description:
       "The iconic 17th-century Mughal fort and a UNESCO World Heritage Site in Old Delhi.",
-    image: "/rajmachifort.jpg",
+    image: "/nearby/red-fort.jpg",
     distance: "Approx. 4.5 km",
     travelTime: "Approx. 25 min drive",
     category: "Monuments & Landmarks",
@@ -112,12 +112,12 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "India Gate",
     description:
       "A war memorial and one of Delhi's most recognisable landmarks, surrounded by manicured lawns.",
-    image: "/tigerpoint.jpg",
+    image: "/nearby/india-gate.jpg",
     distance: "Approx. 6 km",
     travelTime: "Approx. 30 min drive",
     category: "Monuments & Landmarks",
     highlights: ["War memorial", "Evening lights"],
-    tips: "Beautifully lit in the evening — a favourite spot for a night walk.",
+    tips: "Beautifully lit in the evening â€” a favourite spot for a night walk.",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=India+Gate+New+Delhi",
   },
   {
@@ -126,7 +126,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Chandni Chowk",
     description:
       "Old Delhi's famous bustling market street, known for street food, bazaars and historic havelis.",
-    image: "/visapurfort.jpg",
+    image: "/nearby/chandni-chowk.jpg",
     distance: "Approx. 5 km",
     travelTime: "Approx. 30 min drive",
     category: "Markets & Shopping",
