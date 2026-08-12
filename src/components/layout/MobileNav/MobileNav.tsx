@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
@@ -56,7 +57,13 @@ export default function MobileNav() {
       >
         <div className={styles.header}>
           <Link href="/" className={styles.logo} onClick={close}>
-            <span className={styles.brandName}>The Queen&apos;s Head</span>
+            <Image
+              src="/queenslogo.png"
+              alt={SITE_INFO.name}
+              width={2000}
+              height={3548}
+              className={styles.logoImg}
+            />
           </Link>
           <button
             type="button"

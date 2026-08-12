@@ -55,14 +55,9 @@
   text-decoration: none;
 }
 
-.brandName {
-  color: v.$color-text-main;
-  font-family: v.$font-display;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+.logoImg {
+  height: 48px;
+  width: auto;
 }
 
 .closeBtn {

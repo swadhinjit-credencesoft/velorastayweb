@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import {
@@ -18,7 +19,13 @@ export default function Footer() {
           <div className={styles.grid}>
             <div className={styles.brand}>
               <Link href="/" className={styles.logo}>
-                <span className={styles.brandName}>{SITE_INFO.name}</span>
+                <Image
+                  src="/queenslogo.png"
+                  alt={SITE_INFO.name}
+                  width={2000}
+                  height={3548}
+                  className={styles.logoImg}
+                />
               </Link>
               <p className={styles.tagline}>{SITE_INFO.tagline}</p>
 

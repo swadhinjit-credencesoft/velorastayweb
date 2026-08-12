@@ -47,14 +47,10 @@
   text-decoration: none;
 }
 
-.brandName {
-  color: #fff;
-  font-family: v.$font-display;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+.logoImg {
+  height: 64px;
+  width: auto;
+  filter: invert(1);
 }
 
 .tagline {

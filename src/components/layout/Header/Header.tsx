@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon/Icon";
@@ -55,7 +56,14 @@ export default function Header() {
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={SITE_INFO.name}>
-          <span className={styles.brandName}>The Queen&apos;s Head</span>
+          <Image
+            src="/queenslogo.png"
+            alt={SITE_INFO.name}
+            width={2000}
+            height={3548}
+            priority
+            className={styles.logoImg}
+          />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Main navigation">
