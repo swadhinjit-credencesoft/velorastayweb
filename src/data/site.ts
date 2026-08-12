@@ -52,16 +52,16 @@ export const SITE_ASSETS = {
     "/homehero2.png",
     "/homehero3.png",
   ] as const,
-  logo: "/veloralogo-v2.png",
-  logoLight: "/veloralogo-v2.png",
+  logo: "",
+  logoLight: "",
   favicon: "/favicon.ico",
   aboutImage: "/whychooseus.jpeg",
   roomsPreviewImage: "/heroimg2.jpeg",
-  diningImage: "/images/diningarea.avif",
-  eventsImage: "/images/hallroom.avif",
-  contactMapImage: "/images/hallroom1.avif",
-  testimonialBackground: "/images/hallroom.avif",
-  notFoundImage: "/images/whychooseus.avif",
+  diningImage: "/homehero3.png",
+  eventsImage: "/homehero1.png",
+  contactMapImage: "/homehero2.png",
+  testimonialBackground: "/homehero1.png",
+  notFoundImage: "/whychooseus.jpeg",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [

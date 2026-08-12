@@ -1,10 +1,10 @@
-import type { SectionContent, Facility } from "@/types";
+﻿import type { SectionContent, Facility } from "@/types";
 
 export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Hotel Amenities",
   heading: "Hotel Amenities",
   description:
-    "Stay connected and comfortable throughout your visit with complimentary Wi-Fi, air conditioning, a 24-hour front desk, an on-site restaurant and more at The Queen's Head – Paharganj.",
+    "Stay connected and comfortable throughout your visit with complimentary Wi-Fi, air conditioning, a 24-hour front desk, an on-site restaurant and more at The Queen's Head â€“ Paharganj.",
 };
 
 export const FACILITIES: Facility[] = [
@@ -15,7 +15,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Stay connected throughout your visit with complimentary Wi-Fi across the hotel.",
     icon: "lucide:wifi",
-    image: "/images/hallroom.avif",
+    image: "/homehero1.png",
     features: ["Complimentary", "All rooms", "Workspaces"],
     category: "basic",
   },
@@ -26,7 +26,7 @@ export const FACILITIES: Facility[] = [
     description:
       "All listed accommodation is air-conditioned for a comfortable stay.",
     icon: "lucide:snowflake",
-    image: "/images/hallroom1.avif",
+    image: "/homehero2.png",
     features: ["All rooms", "Comfort climate control"],
     category: "comfort",
   },
@@ -37,7 +37,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Relax in your room with in-room television entertainment.",
     icon: "lucide:tv",
-    image: "/images/hallroom.avif",
+    image: "/homehero1.png",
     features: ["In-room entertainment", "Multiple channels"],
     category: "entertainment",
   },
@@ -48,7 +48,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Selected room facilities include work desks for guests travelling on business.",
     icon: "lucide:desk",
-    image: "/images/hallroom1.avif",
+    image: "/homehero2.png",
     features: ["Business travellers", "Comfortable workspace"],
     category: "basic",
   },
@@ -59,7 +59,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Our front desk operates 24 hours to assist guests with their stay, bookings and local information.",
     icon: "lucide:headphones",
-    image: "/images/hallroom.avif",
+    image: "/homehero1.png",
     features: ["Always available", "Check-in & check-out assistance", "Guest support"],
     category: "service",
   },
@@ -70,7 +70,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Enjoy Indian and Chinese cuisine at the hotel's on-site restaurant.",
     icon: "lucide:utensils",
-    image: "/images/diningarea.avif",
+    image: "/homehero3.png",
     features: ["Indian cuisine", "Chinese cuisine", "On-site dining"],
     category: "services",
   },
@@ -81,7 +81,7 @@ export const FACILITIES: Facility[] = [
     description:
       "A convenient coffee option is available on the property.",
     icon: "lucide:coffee",
-    image: "/images/diningarea1.avif",
+    image: "/homehero2.png",
     features: ["Coffee & refreshments", "Convenient location"],
     category: "services",
   },
@@ -92,7 +92,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Guests can receive assistance with local information and hotel services.",
     icon: "lucide:bell",
-    image: "/images/hallroom.avif",
+    image: "/homehero1.png",
     features: ["Local information", "Hotel services"],
     category: "service",
   },
@@ -103,7 +103,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Plan sightseeing and explore Delhi with assistance from the hotel's tour services.",
     icon: "lucide:compass",
-    image: "/images/hallroom1.avif",
+    image: "/homehero2.png",
     features: ["Sightseeing assistance", "Delhi attractions"],
     category: "services",
   },
@@ -125,7 +125,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Free private parking is listed among the hotel facilities. Please confirm operational policy with the front desk before arrival.",
     icon: "lucide:car",
-    image: "/images/swimmingpool.avif",
+    image: "/deluxeroomimage/DeluxeDoubleRoom1.png",
     features: ["On-site parking", "Guest parking"],
     category: "transport",
   },
@@ -136,7 +136,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Regular housekeeping keeps your room fresh and comfortable throughout your stay.",
     icon: "lucide:sparkles",
-    image: "/images/hallroom.avif",
+    image: "/homehero1.png",
     features: ["Daily cleaning", "Fresh towels & linen"],
     category: "service",
   },
@@ -147,7 +147,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Convenient luggage storage is available for guests arriving early or departing late.",
     icon: "lucide:archive",
-    image: "/images/hallroom1.avif",
+    image: "/homehero2.png",
     features: ["Early arrival", "Late departure"],
     category: "service",
   },
@@ -158,7 +158,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Laundry services are available to keep your clothes fresh during longer stays.",
     icon: "lucide:washing-machine",
-    image: "/images/hallroom.avif",
+    image: "/homehero1.png",
     features: ["Washing & ironing", "Convenient turnaround"],
     category: "services",
   },
