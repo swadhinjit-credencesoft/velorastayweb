@@ -48,9 +48,9 @@ export const SOCIAL_LINKS: SocialLinks = {
 
 export const SITE_ASSETS = {
   heroImages: [
-    "/heroimg1.jpeg",
-    "/heroimg2.jpeg",
-    "/heroimg3.jpeg",
+    "/homehero1.png",
+    "/homehero2.png",
+    "/homehero3.png",
   ] as const,
   logo: "/veloralogo-v2.png",
   logoLight: "/veloralogo-v2.png",
@@ -67,7 +67,7 @@ export const SITE_ASSETS = {
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
-    image: "/heroimg1.jpeg",
+    image: "/homehero1.png",
     title: "Comfortable Stays in the Heart of Paharganj",
     subtitle:
       "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
@@ -75,7 +75,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-2",
-    image: "/heroimg2.jpeg",
+    image: "/homehero2.png",
     title: "Your Convenient Base in Central Delhi",
     subtitle:
       "Close to New Delhi Railway Station, Connaught Place and major attractions — ideal for business, leisure and short city stays.",
@@ -83,7 +83,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-3",
-    image: "/heroimg3.jpeg",
+    image: "/homehero3.png",
     title: "Indian & Chinese Dining On-Site",
     subtitle:
       "Enjoy a selection of Indian and Chinese dishes at our on-site restaurant without leaving the property.",

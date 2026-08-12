@@ -49,12 +49,20 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-sm;
   text-decoration: none;
 }
 
-.logoImage {
-  width: auto;
-  height: 80px;
+.brandName {
+  color: v.$color-text-main;
+  font-family: v.$font-display;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .closeBtn {

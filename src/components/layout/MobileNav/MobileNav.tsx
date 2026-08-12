@@ -1,11 +1,10 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
-import { SITE_ASSETS, SITE_INFO } from "@/data/site";
+import { SITE_INFO } from "@/data/site";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setMobileNavOpen } from "@/store/slices/uiSlice";
 import type { NavGroup } from "@/types";
@@ -57,13 +56,7 @@ export default function MobileNav() {
       >
         <div className={styles.header}>
           <Link href="/" className={styles.logo} onClick={close}>
-            <Image
-              src={SITE_ASSETS.logo}
-              alt={SITE_INFO.name}
-              width={664}
-              height={453}
-              className={styles.logoImage}
-            />
+            <span className={styles.brandName}>The Queen&apos;s Head</span>
           </Link>
           <button
             type="button"
