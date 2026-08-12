@@ -46,27 +46,40 @@ export const MEAL_PACKAGES: MealPackage[] = [
   {
     id: "pkg-full-meal",
     name: "Full Meal Package",
-    price: "Rs. 1,300/- per adult",
+    price: "Rs. 1,400/- per adult",
     description: "Includes lunch, hi tea, dinner & breakfast.",
     includes: [
-      "Rs. 1,300/- per adult (above 12 years)",
-      "Rs. 650/- per child (above 6 years)",
+      "Rs. 1,400/- per adult (above 12 years)",
+      "Rs. 700/- per child (above 6 years)",
       "No charge for kids below 6 years",
     ],
     premium: true,
   },
   {
-    id: "pkg-a-la-carte",
-    name: "À La Carte — Individual Meals",
-    price: "As per meal",
-    description: "Opt for individual meals instead of the full meal package.",
+    id: "pkg-half-meal",
+    name: "Half Package",
+    price: "Rs. 1,000/- per adult",
+    description: "Includes hi tea, dinner & breakfast.",
     includes: [
-      "Breakfast — Rs. 250/- per person",
-      "Lunch — Rs. 500/- per person",
-      "Hi Tea — Rs. 200/- per person",
-      "Dinner — Rs. 500/- per person",
+      "Rs. 1,000/- per adult (above 12 years)",
+      "Rs. 500/- per child (above 6 years)",
+      "No charge for kids below 6 years",
     ],
+    premium: true,
   },
+  // À La Carte — Individual Meals hidden on request — kept commented for future use
+  // {
+  //   id: "pkg-a-la-carte",
+  //   name: "À La Carte — Individual Meals",
+  //   price: "As per meal",
+  //   description: "Opt for individual meals instead of the full meal package.",
+  //   includes: [
+  //     "Breakfast — Rs. 250/- per person",
+  //     "Lunch — Rs. 500/- per person",
+  //     "Hi Tea — Rs. 200/- per person",
+  //     "Dinner — Rs. 500/- per person",
+  //   ],
+  // },
 ];
 
 export const ALA_CARTE_PRICES: AlaCartePrice[] = [

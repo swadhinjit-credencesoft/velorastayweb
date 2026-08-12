@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { SITE_INFO } from "@/data/site";
-import { ALA_CARTE_BBQ, ALA_CARTE_PRICES, DINING_CONTENT, MEAL_PACKAGES } from "@/data/dining";
+import { DINING_CONTENT, MEAL_PACKAGES } from "@/data/dining";
 import styles from "./food-menu.module.scss";
 
 export const metadata: Metadata = {
@@ -104,6 +104,7 @@ export default function FoodMenuPage() {
             ))}
           </div>
 
+          {/* À La Carte price table hidden on request — kept commented for future use
           <h3 className={styles.priceTableTitle}>À La Carte — Prices per Person</h3>
           <div className={styles.priceTableWrap}>
             <table className={styles.priceTable}>
@@ -128,6 +129,7 @@ export default function FoodMenuPage() {
             </table>
             <p className={styles.bbqNote}>{ALA_CARTE_BBQ}</p>
           </div>
+          */}
         </div>
       </section>
 
