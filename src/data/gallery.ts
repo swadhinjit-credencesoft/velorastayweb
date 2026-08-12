@@ -10,7 +10,7 @@ export const GALLERY_CATEGORIES: GalleryCategory[] = [
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { id: "gal-ext-1", src: "/whychooseus.jpeg", alt: "The Queen's Head hotel exterior in Paharganj Delhi", category: "exterior", caption: "Hotel exterior" },
+  { id: "gal-ext-1", src: "/whychooseus.png", alt: "The Queen's Head hotel exterior in Paharganj Delhi", category: "exterior", caption: "Hotel exterior" },
   { id: "gal-ext-2", src: "/heroimg1.jpeg", alt: "The Queen's Head hotel front view", category: "exterior", caption: "Hotel front view" },
   { id: "gal-ext-3", src: "/heroimg2.jpeg", alt: "The Queen's Head hotel Paharganj New Delhi", category: "exterior", caption: "Rajguru Marg, Paharganj" },
 
@@ -54,7 +54,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
 
   { id: "gal-com-1", src: "/deluxeroomimage/DeluxeDoubleRoom2.png", alt: "Hotel common area Paharganj", category: "common", caption: "Common area" },
   { id: "gal-com-2", src: "/homehero1.png", alt: "Hotel corridors and common spaces", category: "common", caption: "Corridor" },
-  { id: "gal-com-3", src: "/whychooseus.jpeg", alt: "The Queen's Head hotel common spaces", category: "common", caption: "Common space" },
+  { id: "gal-com-3", src: "/whychooseus.png", alt: "The Queen's Head hotel common spaces", category: "common", caption: "Common space" },
 
   { id: "gal-pah-1", src: "/Pawnalake.jpg", alt: "Paharganj New Delhi street", category: "paharganj", caption: "Paharganj market" },
   { id: "gal-pah-2", src: "/BhushiDam.webp", alt: "Connaught Place New Delhi", category: "paharganj", caption: "Connaught Place" },

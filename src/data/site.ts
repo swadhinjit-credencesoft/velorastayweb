@@ -55,13 +55,13 @@ export const SITE_ASSETS = {
   logo: "",
   logoLight: "",
   favicon: "/favicon.ico",
-  aboutImage: "/whychooseus.jpeg",
+  aboutImage: "/whychooseus.png",
   roomsPreviewImage: "/heroimg2.jpeg",
   diningImage: "/homehero3.png",
   eventsImage: "/homehero1.png",
   contactMapImage: "/homehero2.png",
   testimonialBackground: "/homehero1.png",
-  notFoundImage: "/whychooseus.jpeg",
+  notFoundImage: "/whychooseus.png",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [

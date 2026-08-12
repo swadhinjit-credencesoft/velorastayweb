@@ -35,8 +35,15 @@ export default function LegalPage({ params }: Props) {
     <>
       <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: page.title, url: `/legal/${page.slug}` }])} />
 
-      <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 pt-32">
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url(/homehero3.png)" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: page.title, href: `/legal/${page.slug}` }]} />
           <h1 className="text-4xl font-bold text-white mt-4">{page.title}</h1>
           <p className="mt-2 text-gray-300">Last Updated: {page.lastUpdated}</p>

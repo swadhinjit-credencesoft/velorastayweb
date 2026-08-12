@@ -114,7 +114,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Family accommodation options are available for a comfortable stay together.",
     icon: "lucide:users",
-    image: "/whychooseus.jpeg",
+    image: "/whychooseus.png",
     features: ["Family-friendly", "Comfortable bedding", "Extra bed available"],
     category: "family",
   },

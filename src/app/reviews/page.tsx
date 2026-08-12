@@ -18,8 +18,15 @@ export default function ReviewsPage() {
       <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Reviews", url: "/reviews" }])} />
       <JsonLd schema={generateHotelSchema()} />
 
-      <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 pt-32">
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url(/homehero1.png)" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Reviews", href: "/reviews" }]} />
           <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">{REVIEWS_CONTENT.eyebrow}</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">{REVIEWS_CONTENT.heading}</h1>

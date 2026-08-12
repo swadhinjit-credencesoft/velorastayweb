@@ -738,3 +738,53 @@
 @media print {
   .no-print { display: none !important; }
 }
+
+// ─── 36. Background Image Sizing / Position ──────────────────
+.bg-cover { background-size: cover; }
+.bg-contain { background-size: contain; }
+.bg-center { background-position: center; }
+.bg-top { background-position: top; }
+.bg-bottom { background-position: bottom; }
+
+// ─── 37. Extra sizes (not covered by loops) ──────────────────
+.h-72 { height: 18rem; }
+.h-11 { height: 2.75rem; }
+.w-11 { width: 2.75rem; }
+.h-\[420px\] { height: 420px; }
+.min-h-\[60vh\] { min-height: 60vh; }
+.py-3\.5 { padding-top: 0.875rem; padding-bottom: 0.875rem; }
+
+.shrink-0 { flex-shrink: 0; }
+.opacity-90 { opacity: 0.9; }
+
+.animate-spin { animation: spin 1s linear infinite; }
+
+.font-oswald { font-family: var(--font-oswald), sans-serif; }
+
+// ─── 38. Extra colors ────────────────────────────────────────
+.bg-green-500 { background-color: #22c55e; }
+
+.border-4 { border-width: 4px; border-style: solid; }
+.border-t-transparent { border-top-color: transparent; }
+
+.hover\:bg-amber-500:hover { background-color: #f59e0b; }
+.hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+.hover\:bg-green-600:hover { background-color: #16a34a; }
+.hover\:text-white:hover { color: #ffffff; }
+
+// ─── 39. Extra gradient variants ─────────────────────────────
+.from-\[\#1a1a2e\]\/70 { --tw-gradient-from: rgba(26, 26, 46, 0.7); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+.from-\[\#1a1a2e\]\/80 { --tw-gradient-from: rgba(26, 26, 46, 0.8); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+.to-\[\#16213e\]\/60 { --tw-gradient-to: rgba(22, 33, 62, 0.6); }
+.to-\[\#16213e\]\/70 { --tw-gradient-to: rgba(22, 33, 62, 0.7); }
+
+// ─── 40. Extra responsive ────────────────────────────────────
+@media (min-width: 640px) {
+  .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .sm\:p-8 { padding: 2rem; }
+  .sm\:col-span-2 { grid-column: span 2 / span 2; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

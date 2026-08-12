@@ -24,7 +24,7 @@ export default function GalleryPage() {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/heroimg2.jpeg"
+            src="/homehero2.png"
             alt="The Queen's Head – Paharganj gallery"
             fill
             className="object-cover"

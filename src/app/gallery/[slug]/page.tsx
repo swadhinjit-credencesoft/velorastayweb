@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -17,14 +17,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = GALLERY_CATEGORIES.find((c) => c.slug === params.slug);
   if (!category) return { title: "Gallery Not Found" };
   return {
-    title: `${category.name} Gallery | The Queen's Head – Paharganj`,
-    description: `Photo gallery of ${category.name} at The Queen's Head – Paharganj, New Delhi.`,
+    title: `${category.name} Gallery | The Queen's Head â€“ Paharganj`,
+    description: `Photo gallery of ${category.name} at The Queen's Head â€“ Paharganj, New Delhi.`,
     alternates: { canonical: `/gallery/${category.slug}` },
     openGraph: {
-      title: `${category.name} Gallery | The Queen's Head – Paharganj`,
-      description: `Photo gallery of ${category.name} at The Queen's Head – Paharganj.`,
+      title: `${category.name} Gallery | The Queen's Head â€“ Paharganj`,
+      description: `Photo gallery of ${category.name} at The Queen's Head â€“ Paharganj.`,
       url: `https://shivharehotelsandtravel.com/gallery/${category.slug}`,
-      images: [{ url: "/heroimg2.jpeg", alt: category.name }],
+      images: [{ url: "/homehero2.png", alt: category.name }],
     },
   };
 }
@@ -55,7 +55,7 @@ export default function GalleryCategoryPage({ params }: Props) {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/heroimg2.jpeg"
+            src="/homehero2.png"
             alt={category.name}
             fill
             className="object-cover"
@@ -67,7 +67,7 @@ export default function GalleryCategoryPage({ params }: Props) {
           <Breadcrumb items={breadcrumbs} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">{category.name}</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
-            Photos of the {category.name.toLowerCase()} at The Queen&apos;s Head – Paharganj.
+            Photos of the {category.name.toLowerCase()} at The Queen&apos;s Head â€“ Paharganj.
           </p>
         </div>
       </section>

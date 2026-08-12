@@ -143,7 +143,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Concierge",
       "Central Delhi location",
     ],
-    image: "/whychooseus.jpeg",
+    image: "/whychooseus.png",
   },
   {
     slug: "family-hotel-paharganj",

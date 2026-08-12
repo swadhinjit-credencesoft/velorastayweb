@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { ROOMS, ROOMS_CONTENT } from "@/data/rooms";
@@ -10,12 +10,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Rooms & Suites | The Queen's Head – Paharganj",
+  title: "Rooms & Suites | The Queen's Head â€“ Paharganj",
   description:
-    "Explore rooms at The Queen's Head – Paharganj: Deluxe Double, Premium Double, Premium Double with City View and Triple Suite with Jacuzzi. Air-conditioned rooms with free Wi-Fi in the heart of Paharganj.",
+    "Explore rooms at The Queen's Head â€“ Paharganj: Deluxe Double, Premium Double, Premium Double with City View and Triple Suite with Jacuzzi. Air-conditioned rooms with free Wi-Fi in the heart of Paharganj.",
   alternates: { canonical: "/rooms" },
   openGraph: {
-    title: "Rooms & Suites | The Queen's Head – Paharganj",
+    title: "Rooms & Suites | The Queen's Head â€“ Paharganj",
     description: "Comfortable air-conditioned rooms in Paharganj, New Delhi.",
     url: generateCanonicalUrl("/rooms"),
   },
@@ -35,7 +35,7 @@ export default function RoomsPage() {
         heading={ROOMS_CONTENT.heading}
         description={ROOMS_CONTENT.description}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms & Suites", href: "/rooms" }]}
-        bgImage="/heroimg1.jpeg"
+        bgImage="/homehero1.png"
       />
 
       <section className={styles.gridSection}>
