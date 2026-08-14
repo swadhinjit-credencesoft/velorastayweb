@@ -1,10 +1,10 @@
 ﻿import type { Metadata } from "next";
-import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
+import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import styles from "./Gallery.module.scss";
 
 export const metadata: Metadata = {
@@ -56,17 +56,16 @@ export default function GalleryPage() {
         ))}
       </div>
 
-      <div className={styles.grid}>
-        {GALLERY_IMAGES.map((image) => (
-          <div key={image.id} className={styles.item}>
-            <Image src={image.src} alt={image.alt} width={400} height={300} />
-            {image.caption && (
-              <div className={styles.overlay}>
-                <span className={styles.overlayText}>{image.caption}</span>
-              </div>
-            )}
-          </div>
-        ))}
+      <div className={styles.gridWrap}>
+        <GalleryGrid
+          columns={4}
+          images={GALLERY_IMAGES.map((img) => ({
+            id: img.id,
+            src: img.src,
+            alt: img.alt,
+            caption: img.caption,
+          }))}
+        />
       </div>
 
       <p className={styles.count}>

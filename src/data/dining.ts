@@ -46,7 +46,7 @@ export const MEAL_PACKAGES: MealPackage[] = [
   {
     id: "pkg-full-meal",
     name: "Full Meal Package",
-    price: "Rs. 1,400/- per adult",
+    price: "Rs. 1,400/- per adult + GST AS APPLICABLE",
     description: "Includes lunch, hi tea, dinner & breakfast.",
     includes: [
       "Rs. 1,400/- per adult (above 12 years)",
@@ -58,7 +58,7 @@ export const MEAL_PACKAGES: MealPackage[] = [
   {
     id: "pkg-half-meal",
     name: "Half Package",
-    price: "Rs. 1,000/- per adult",
+    price: "Rs. 1,000/- per adult + GST AS APPLICABLE",
     description: "Includes hi tea, dinner & breakfast.",
     includes: [
       "Rs. 1,000/- per adult (above 12 years)",

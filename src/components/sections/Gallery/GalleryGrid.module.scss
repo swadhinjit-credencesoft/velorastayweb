@@ -1,0 +1,131 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+
+  @media (min-width: v.$bp-md) {
+    gap: v.$space-md;
+  }
+}
+
+.cols2 {
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cols3 {
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cols4 {
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform v.$duration-slow v.$ease-standard;
+
+  .item:hover & {
+    transform: scale(1.08);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-sm;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  opacity: 0;
+  transition: all v.$duration-standard v.$ease-standard;
+
+  .item:hover & {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.caption {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 v.$space-md;
+  text-align: center;
+}
+
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-md;
+}
+
+.lightboxMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImg {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: v.$radius-md;
+}
+
+.lightboxCaption {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: v.$color-text-muted;
+}
+
+.lightboxNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-md;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: v.$radius-full;
+  border: 1px solid v.$color-border;
+  color: v.$color-text-muted;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$neutral-100;
+    color: v.$color-primary;
+  }
+}
+
+.lightboxCount {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: v.$color-text-muted;
+}

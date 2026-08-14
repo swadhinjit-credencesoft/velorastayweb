@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useVeloraData } from "@/hooks/useVeloraData";
 import { VILLAS } from "@/data/villas";
+import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import type { VillaType } from "@/types";
 
 function uniqueImages(villa: VillaType): VillaType["images"] {
@@ -29,27 +30,14 @@ export default function GalleryVillaSections() {
           <section key={villa.id} className="py-12 bg-white border-b last:border-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{villa.name}</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {images.map((img) => (
-                  <div
-                    key={img.id}
-                    className="relative aspect-[4/3] rounded-xl overflow-hidden group"
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt || villa.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-end p-3">
-                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        {img.caption || img.alt || villa.name}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <GalleryGrid
+                images={images.map((img) => ({
+                  id: img.id,
+                  src: img.src,
+                  alt: img.alt || villa.name,
+                  caption: img.caption || img.alt || villa.name,
+                }))}
+              />
             </div>
           </section>
         );

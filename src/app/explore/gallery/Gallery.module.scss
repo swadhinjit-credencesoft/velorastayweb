@@ -69,6 +69,11 @@
   }
 }
 
+.gridWrap {
+  @include m.container;
+  padding-block: v.$space-xl;
+}
+
 .grid {
   @include m.container;
   display: grid;

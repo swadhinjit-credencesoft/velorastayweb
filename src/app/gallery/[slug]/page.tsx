@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { VILLAS, getVillaBySlug } from "@/data/villas";
+import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 
 type Props = { params: { slug: string } };
 
@@ -82,27 +83,14 @@ export default function VillaGalleryPage({ params }: Props) {
           </div>
 
           {villa.images.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {villa.images.map((img) => (
-                <div
-                  key={img.id}
-                  className="relative aspect-[4/3] rounded-xl overflow-hidden group"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-end p-3">
-                    <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      {img.caption || img.alt}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <GalleryGrid
+              images={villa.images.map((img) => ({
+                id: img.id,
+                src: img.src,
+                alt: img.alt,
+                caption: img.caption || img.alt,
+              }))}
+            />
           ) : (
             <p className="text-gray-600">No photos available for this villa yet.</p>
           )}
