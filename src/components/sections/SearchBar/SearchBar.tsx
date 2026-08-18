@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   setCheckIn,
@@ -11,6 +10,8 @@ import {
 } from "@/store/slices/bookingSlice";
 import Icon from "@/components/Icon/Icon";
 import styles from "./SearchBar.module.scss";
+
+const BOOKING_ENGINE_URL = "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true";
 
 interface SearchBarProps {
   variant?: "hero" | "compact";
@@ -102,10 +103,15 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
         </select>
       </div>
 
-      <Link href="/book-now" className={`${styles.searchBtn} ${styles.searchBtnAccent}`}>
+      <a
+        href={BOOKING_ENGINE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.searchBtn} ${styles.searchBtnAccent}`}
+      >
         <Icon icon="lucide:calendar-check" width={18} height={18} />
         Check Availability
-      </Link>
+      </a>
     </div>
   );
 }

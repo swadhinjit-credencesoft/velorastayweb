@@ -71,7 +71,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: "Comfortable Stays in Paharganj",
     subtitle:
       "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
-    cta: { label: "Check Availability", href: "/book-now" },
+    cta: { label: "Check Availability", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" },
   },
   {
     id: "hero-slide-2",
@@ -188,10 +188,10 @@ export const NAV_LINKS: NavLink[] = [
   { id: "nav-contact", label: "Contact Us", href: "/contact" },
 ];
 
-export const BOOKING_URL = "/book-now";
+export const BOOKING_URL = "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true";
 
 export const NAV_CTA = {
   label: "Book Now",
-  href: "/book-now",
+  href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true",
   icon: "lucide:calendar-check",
 };

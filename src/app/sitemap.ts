@@ -32,7 +32,6 @@ const staticPages: {
   { path: "/reviews", priority: 0.6, changeFrequency: "weekly" },
   { path: "/faq", priority: 0.5, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/book-now", priority: 0.9, changeFrequency: "monthly" },
 ];
 
 function entry(

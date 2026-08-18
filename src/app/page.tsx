@@ -30,7 +30,7 @@ export default function HomePage() {
         heading="Book Your Room at The Queen's Head"
         description="Comfortable air-conditioned rooms, free Wi-Fi and a 24-hour front desk in the heart of Paharganj — close to New Delhi Railway Station and Central Delhi attractions."
         buttons={[
-          { label: "Book Now", href: "/book-now", variant: "primary" },
+          { label: "Book Now", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true", variant: "primary" },
           { label: "View Rooms", href: "/rooms", variant: "outline" },
           { label: "WhatsApp Us", href: WHATSAPP_LINK, variant: "ghost" },
         ]}

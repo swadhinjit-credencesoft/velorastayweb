@@ -159,7 +159,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const NAV_CTA = {
   label: "Book Now",
-  href: "/book-now",
+  href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true",
   icon: "lucide:calendar-check",
 };
 
@@ -184,7 +184,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
       { id: "footer-premium", label: "Premium Double Room", href: "/rooms/premium-double-room" },
       { id: "footer-city", label: "Premium Double City View", href: "/rooms/premium-double-room-with-city-view" },
       { id: "footer-suite", label: "Triple Suite with Jacuzzi", href: "/rooms/triple-suite-with-jacuzzi" },
-      { id: "footer-book", label: "Book Your Stay", href: "/book-now" },
+      { id: "footer-book", label: "Book Your Stay", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" },
     ],
   },
   {
@@ -205,7 +205,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     links: [
       { id: "footer-contact", label: "Contact Us", href: "/contact" },
       { id: "footer-faq", label: "FAQs", href: "/faq" },
-      { id: "footer-book", label: "Book Now", href: "/book-now" },
+      { id: "footer-book", label: "Book Now", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" },
     ],
   },
   {
