@@ -68,7 +68,7 @@ export const SITE_ASSETS = {
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
-    image: "/homehero1.png",
+    image: "/whychooseus.png",
     title: "Comfortable Stays in Paharganj",
     subtitle:
       "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
@@ -82,9 +82,9 @@ export const HERO_SLIDES: HeroSlide[] = [
       "Close to New Delhi Railway Station, Connaught Place and major attractions — ideal for business, leisure and short city stays.",
     cta: { label: "Explore Rooms", href: "/rooms" },
   },
-  {
+  { 
     id: "hero-slide-3",
-    image: "/homehero3.png",
+    image: "/homehero1.png",
     title: "Indian & Chinese Dining On-Site",
     subtitle:
       "Enjoy a selection of Indian and Chinese dishes at our on-site restaurant without leaving the property.",

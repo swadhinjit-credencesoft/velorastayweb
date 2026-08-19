@@ -25,7 +25,7 @@ export function generateHotelSchema() {
     priceRange: "₹2800 - ₹6200",
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
-    image: `${SITE_INFO.url}/homehero1.png`,
+    image: `${SITE_INFO.url}/schemaimg.png`,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
