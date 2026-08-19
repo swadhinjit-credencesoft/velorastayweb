@@ -3,23 +3,35 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { ROOMS, ROOM_AMENITIES, getRoomBySlug } from "@/data/rooms";
-import { SITE_INFO, WHATSAPP_LINK } from "@/data/site";
+import { ROOM_AMENITIES } from "@/data/rooms";
+import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
+import { checkAvailability } from "@/lib/api";
+import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "./room-detail.module.scss";
 
 interface RoomPageProps {
   params: { slug: string };
 }
 
-export function generateStaticParams() {
-  return ROOMS.map((room) => ({ slug: room.slug }));
+export async function generateStaticParams() {
+  const property = await checkAvailability();
+  if (!property) return [];
+  return property.roomList.map((room) => {
+    const mapped = apiRoomToRoomType(room);
+    return { slug: mapped.slug };
+  });
 }
 
 export async function generateMetadata({ params }: RoomPageProps): Promise<Metadata> {
-  const room = getRoomBySlug(params.slug);
-  if (!room) return { title: "Room Not Found" };
+  const property = await checkAvailability();
+  const apiRoom = property?.roomList?.find((r) => {
+    const mapped = apiRoomToRoomType(r);
+    return mapped.slug === params.slug;
+  });
+  if (!apiRoom) return { title: "Room Not Found" };
+  const room = apiRoomToRoomType(apiRoom);
   return {
     title: `${room.name} | Book at ${SITE_INFO.name}`,
     description: `${room.name} at ${SITE_INFO.name} starting from ₹${room.price}/night (Room Only). ${room.description.substring(0, 150)}. Book by phone or WhatsApp for the best rates.`,
@@ -33,9 +45,15 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
   };
 }
 
-export default function RoomDetailPage({ params }: RoomPageProps) {
-  const room = getRoomBySlug(params.slug);
-  if (!room) notFound();
+export default async function RoomDetailPage({ params }: RoomPageProps) {
+  const property = await checkAvailability();
+  const apiRoom = property?.roomList?.find((r) => {
+    const mapped = apiRoomToRoomType(r);
+    return mapped.slug === params.slug;
+  });
+  if (!apiRoom) notFound();
+
+  const room = apiRoomToRoomType(apiRoom);
 
   const amenities = room.amenities
     .map((id) => ROOM_AMENITIES.find((a) => a.id === id))
@@ -183,7 +201,7 @@ export default function RoomDetailPage({ params }: RoomPageProps) {
                   </span>
                 </div>
                 <p className={styles.priceUnit}>per {room.priceUnit} — Room Only</p>
-                <a href={WHATSAPP_LINK} className={styles.bookBtn}>Book on WhatsApp</a>
+                <a href="https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>Book Now</a>
                 <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
                 <div className={styles.bookingDetails}>
                   <div className={styles.bookingDetailRow}>

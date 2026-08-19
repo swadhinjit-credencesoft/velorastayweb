@@ -1,27 +1,32 @@
 ﻿import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { ROOMS, ROOMS_CONTENT } from "@/data/rooms";
+import { ROOMS_CONTENT } from "@/data/rooms";
 import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
+import { checkAvailability } from "@/lib/api";
+import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "./rooms.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Rooms & Suites | The Queen's Head â€“ Paharganj",
+  title: "Rooms & Suites | The Queen's Head – Paharganj",
   description:
-    "Explore rooms at The Queen's Head â€“ Paharganj: Deluxe Double, Premium Double, Premium Double with City View and Triple Suite with Jacuzzi. Air-conditioned rooms with free Wi-Fi in the heart of Paharganj.",
+    "Explore rooms at The Queen's Head – Paharganj: Deluxe Double, Premium Double, Premium Double with City View and Triple Suite with Jacuzzi. Air-conditioned rooms with free Wi-Fi in the heart of Paharganj.",
   alternates: { canonical: "/rooms" },
   openGraph: {
-    title: "Rooms & Suites | The Queen's Head â€“ Paharganj",
+    title: "Rooms & Suites | The Queen's Head – Paharganj",
     description: "Comfortable air-conditioned rooms in Paharganj, New Delhi.",
     url: generateCanonicalUrl("/rooms"),
   },
 };
 
-export default function RoomsPage() {
+export default async function RoomsPage() {
+  const property = await checkAvailability();
+  const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
+
   return (
     <>
       <JsonLd
@@ -40,7 +45,7 @@ export default function RoomsPage() {
 
       <section className={styles.gridSection}>
         <div className={styles.grid}>
-          {ROOMS.map((room) => (
+          {rooms.map((room) => (
             <Link key={room.id} href={`/rooms/${room.slug}`} className={styles.card}>
               <div className={styles.imageWrap}>
                 <Image

@@ -2,11 +2,16 @@ import Button from "@/components/ui/Button/Button";
 import RoomCard from "@/components/ui/Card/Card";
 import PriceDisplay from "@/components/ui/PriceDisplay/PriceDisplay";
 import Icon from "@/components/Icon/Icon";
-import { ROOMS_CONTENT, getPopularRooms } from "@/data/rooms";
+import { ROOMS_CONTENT } from "@/data/rooms";
+import { checkAvailability } from "@/lib/api";
+import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "./FeaturedRooms.module.scss";
 
-export default function FeaturedRooms() {
-  const popularRooms = getPopularRooms();
+export default async function FeaturedRooms() {
+  const property = await checkAvailability();
+  const popularRooms = (property?.roomList ?? [])
+    .map(apiRoomToRoomType)
+    .filter((room) => room.popular);
 
   return (
     <section className={styles.section}>

@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { SITE_INFO } from "@/data/site";
-import { ROOMS } from "@/data/rooms";
 import { GALLERY_CATEGORIES } from "@/data/gallery";
 import { LOCAL_SEO_PAGES } from "@/data/seoPages";
 import { LEGAL_PAGES } from "@/data/legal";
+import { checkAvailability } from "@/lib/api";
+import { apiRoomToRoomType } from "@/lib/rooms";
 
 const BASE_URL = SITE_INFO.url;
 const NOW = new Date();
@@ -50,14 +51,16 @@ function entry(
   };
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries = staticPages.map((page) =>
     entry(page.path, page.priority, page.changeFrequency)
   );
 
-  const roomEntries = ROOMS.map((room) =>
-    entry(`/rooms/${room.slug}`, 0.9, "weekly")
-  );
+  const property = await checkAvailability();
+  const roomEntries = (property?.roomList ?? []).map((room) => {
+    const mapped = apiRoomToRoomType(room);
+    return entry(`/rooms/${mapped.slug}`, 0.9, "weekly");
+  });
 
   const galleryEntries = GALLERY_CATEGORIES.map((cat) =>
     entry(`/gallery/${cat.slug}`, 0.5, "monthly")
