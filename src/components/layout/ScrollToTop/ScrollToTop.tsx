@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import styles from "./ScrollToTop.module.scss";
 
 const SCROLL_THRESHOLD = 400;

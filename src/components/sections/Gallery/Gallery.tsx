@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import Modal from "@/components/ui/Modal/Modal";
 import { GALLERY_IMAGES } from "@/data/gallery";
 import styles from "./Gallery.module.scss";

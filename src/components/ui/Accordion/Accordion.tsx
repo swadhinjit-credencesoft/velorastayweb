@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import styles from "./Accordion.module.scss";
 
 interface AccordionItem {

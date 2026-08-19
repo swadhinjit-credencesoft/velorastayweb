@@ -1,6 +1,6 @@
 "use client";
 
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import { CONTACT_INFO, CONTACT_DEPARTMENT } from "@/data/contact";
 import { SITE_INFO, GOOGLE_MAPS_URL } from "@/data/site";
 import styles from "./ContactForm.module.scss";

@@ -4,7 +4,7 @@ import { useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
 import { SITE_INFO } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";

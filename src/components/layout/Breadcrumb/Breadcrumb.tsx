@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import { SITE_INFO } from "@/data/site";
 import type { BreadcrumbItem } from "@/types";
 import styles from "./Breadcrumb.module.scss";

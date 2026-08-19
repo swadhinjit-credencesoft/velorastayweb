@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Hotel Amenities",
   heading: "Hotel Amenities",
   description:
-    "Stay connected and comfortable throughout your visit with complimentary Wi-Fi, air conditioning, a 24-hour front desk, an on-site restaurant and more at The Queen's Head â€“ Paharganj.",
+    "Stay connected and comfortable throughout your visit with complimentary Wi-Fi, air conditioning, a 24-hour front desk, an on-site restaurant and more at The Queen's Head – Paharganj.",
 };
 
 export const FACILITIES: Facility[] = [

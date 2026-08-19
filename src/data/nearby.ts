@@ -4,7 +4,7 @@ export const NEARBY_CONTENT: SectionContent = {
   eyebrow: "Explore Delhi from Paharganj",
   heading: "Places to Visit Near The Queen's Head",
   description:
-    "The Queen's Head â€“ Paharganj places you in a convenient part of New Delhi, close to major transport links, shopping areas and some of the city's most popular landmarks.",
+    "The Queen's Head – Paharganj places you in a convenient part of New Delhi, close to major transport links, shopping areas and some of the city's most popular landmarks.",
 };
 
 export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
@@ -72,7 +72,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
       "One of India's busiest railway stations, conveniently close to the hotel for train travellers.",
     image: "/nearby/new-delhi-railway-station.jpg",
     distance: "Walking distance",
-    travelTime: "Approx. 5â€“10 min walk",
+    travelTime: "Approx. 5–10 min walk",
     category: "Transport Hubs",
     highlights: ["Major railway hub", "Convenient access"],
     tips: "Allow extra time during peak hours and festivals.",
@@ -86,10 +86,10 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
       "Indira Gandhi International Airport connects Delhi with destinations across India and the world.",
     image: "/nearby/delhi-airport.jpg",
     distance: "Approx. 15 km",
-    travelTime: "Approx. 45â€“60 min drive (traffic dependent)",
+    travelTime: "Approx. 45–60 min drive (traffic dependent)",
     category: "Transport Hubs",
     highlights: ["International airport", "Airport transfers"],
-    tips: "Delhi traffic can significantly change travel time â€” plan ahead.",
+    tips: "Delhi traffic can significantly change travel time — plan ahead.",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=Indira+Gandhi+International+Airport",
   },
   {
@@ -117,7 +117,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     travelTime: "Approx. 30 min drive",
     category: "Monuments & Landmarks",
     highlights: ["War memorial", "Evening lights"],
-    tips: "Beautifully lit in the evening â€” a favourite spot for a night walk.",
+    tips: "Beautifully lit in the evening — a favourite spot for a night walk.",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=India+Gate+New+Delhi",
   },
   {

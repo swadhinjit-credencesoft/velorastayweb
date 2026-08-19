@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import Spinner from "@/components/ui/Spinner/Spinner";
 import styles from "./Button.module.scss";
 

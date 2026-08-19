@@ -1,7 +1,7 @@
 import Button from "@/components/ui/Button/Button";
 import RoomCard from "@/components/ui/Card/Card";
 import PriceDisplay from "@/components/ui/PriceDisplay/PriceDisplay";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import { ROOMS_CONTENT } from "@/data/rooms";
 import { checkAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";

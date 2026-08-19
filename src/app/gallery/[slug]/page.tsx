@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = GALLERY_CATEGORIES.find((c) => c.slug === params.slug);
   if (!category) return { title: "Gallery Not Found" };
   return {
-    title: `${category.name} Gallery | The Queen's Head â€“ Paharganj`,
-    description: `Photo gallery of ${category.name} at The Queen's Head â€“ Paharganj, New Delhi.`,
+    title: `${category.name} Gallery | The Queen's Head – Paharganj`,
+    description: `Photo gallery of ${category.name} at The Queen's Head – Paharganj, New Delhi.`,
     alternates: { canonical: `/gallery/${category.slug}` },
     openGraph: {
-      title: `${category.name} Gallery | The Queen's Head â€“ Paharganj`,
-      description: `Photo gallery of ${category.name} at The Queen's Head â€“ Paharganj.`,
+      title: `${category.name} Gallery | The Queen's Head – Paharganj`,
+      description: `Photo gallery of ${category.name} at The Queen's Head – Paharganj.`,
       url: `https://shivharehotelsandtravel.com/gallery/${category.slug}`,
       images: [{ url: "/homehero2.png", alt: category.name }],
     },
@@ -67,7 +67,7 @@ export default function GalleryCategoryPage({ params }: Props) {
           <Breadcrumb items={breadcrumbs} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">{category.name}</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
-            Photos of the {category.name.toLowerCase()} at The Queen&apos;s Head â€“ Paharganj.
+            Photos of the {category.name.toLowerCase()} at The Queen&apos;s Head – Paharganj.
           </p>
         </div>
       </section>

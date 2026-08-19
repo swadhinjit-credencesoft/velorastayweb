@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";

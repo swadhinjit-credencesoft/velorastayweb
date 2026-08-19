@@ -1,7 +1,7 @@
 "use client";
 
 import { useId } from "react";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import styles from "./Select.module.scss";
 
 interface SelectOption {

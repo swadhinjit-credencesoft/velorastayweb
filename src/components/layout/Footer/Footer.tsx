@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import {
   FOOTER_GROUPS,
   FOOTER_SOCIAL,

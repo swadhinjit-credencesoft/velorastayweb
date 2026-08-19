@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import { TRUST_BADGES, SITE_ASSETS, SITE_INFO } from "@/data/site";
 import styles from "./WhyChooseUs.module.scss";
 

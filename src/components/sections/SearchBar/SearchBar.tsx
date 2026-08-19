@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   setCheckIn,
@@ -8,10 +8,10 @@ import {
   setAdults,
   setChildren,
 } from "@/store/slices/bookingSlice";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import styles from "./SearchBar.module.scss";
 
-const BOOKING_ENGINE_URL = "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true";
+const BOOKING_ENGINE_BASE = "https://bookone.io/Hotel-The-Queen-S-Head-Delhi";
 
 interface SearchBarProps {
   variant?: "hero" | "compact";
@@ -31,6 +31,34 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
       dispatch(setCheckOut(tomorrow.toISOString().split("T")[0]));
     }
   }, [checkIn, dispatch]);
+
+  const bookingUrl = useMemo(() => {
+    const ci = checkIn ? new Date(checkIn + "T00:00:00") : new Date();
+    const co = checkOut ? new Date(checkOut + "T00:00:00") : new Date(Date.now() + 86400000);
+    const nights = Math.max(1, Math.round((co.getTime() - ci.getTime()) / 86400000));
+    const numAdults = adults ?? 2;
+    const numChildren = children ?? 0;
+    const totalGuests = numAdults + numChildren;
+
+    const params = new URLSearchParams({
+      checkinDay: String(ci.getDate()),
+      checkinMonth: String(ci.getMonth() + 1),
+      checkinYear: String(ci.getFullYear()),
+      checkoutDay: String(co.getDate()),
+      checkoutMonth: String(co.getMonth() + 1),
+      checkoutYear: String(co.getFullYear()),
+      checkOut: checkOut ?? "",
+      toDate: checkOut ?? "",
+      date_to: checkOut ?? "",
+      nights: String(nights),
+      numGuests: String(totalGuests),
+      numAdults: String(numAdults),
+      Children: String(numChildren),
+      rooms: "1",
+    });
+
+    return `${BOOKING_ENGINE_BASE}?${params.toString()}`;
+  }, [checkIn, checkOut, adults, children]);
 
   const guestOptions = Array.from({ length: 6 }, (_, i) => ({
     value: i + 1,
@@ -104,7 +132,7 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
       </div>
 
       <a
-        href={BOOKING_ENGINE_URL}
+        href={bookingUrl}
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles.searchBtn} ${styles.searchBtnAccent}`}

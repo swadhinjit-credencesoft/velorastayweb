@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import Accordion from "@/components/ui/Accordion/Accordion";
 import { FAQ_CATEGORIES } from "@/data/faq";
 import styles from "./FAQ.module.scss";

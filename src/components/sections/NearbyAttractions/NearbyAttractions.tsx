@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import Badge from "@/components/ui/Badge/Badge";
 import { NEARBY_CONTENT, NEARBY_ATTRACTIONS } from "@/data/nearby";
 import styles from "./NearbyAttractions.module.scss";

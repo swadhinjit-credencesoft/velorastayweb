@@ -6,12 +6,12 @@ import { RESTAURANT_CONTENT, RESTAURANT_HIGHLIGHTS, RESTAURANT_DETAILS } from "@
 import { WHATSAPP_LINK } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Restaurant | Dining at The Queen's Head â€“ Paharganj",
+  title: "Restaurant | Dining at The Queen's Head – Paharganj",
   description:
-    "Dining at The Queen's Head â€“ Paharganj. Enjoy Indian and Chinese cuisine at our on-site restaurant, with breakfast available on request.",
+    "Dining at The Queen's Head – Paharganj. Enjoy Indian and Chinese cuisine at our on-site restaurant, with breakfast available on request.",
   alternates: { canonical: "/restaurant" },
   openGraph: {
-    title: "Restaurant | The Queen's Head â€“ Paharganj",
+    title: "Restaurant | The Queen's Head – Paharganj",
     description: RESTAURANT_CONTENT.description,
   },
 };
@@ -63,7 +63,7 @@ export default function RestaurantPage() {
             <ul className="space-y-3 mb-6">
               {RESTAURANT_HIGHLIGHTS.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">âœ“</span>
+                  <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">✓</span>
                   {item}
                 </li>
               ))}

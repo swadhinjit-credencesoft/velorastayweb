@@ -6,9 +6,9 @@ import { NEARBY_ATTRACTIONS, NEARBY_CONTENT } from "@/data/nearby";
 import { SITE_INFO, GOOGLE_MAPS_URL } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Location & Nearby Attractions | The Queen's Head â€“ Paharganj",
+  title: "Location & Nearby Attractions | The Queen's Head – Paharganj",
   description:
-    "Located at 2282â€“2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi. Explore nearby attractions: Ramakrishna Mission, Gurudwara Bangla Sahib, Jantar Mantar, Connaught Place and more.",
+    "Located at 2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi. Explore nearby attractions: Ramakrishna Mission, Gurudwara Bangla Sahib, Jantar Mantar, Connaught Place and more.",
   keywords: [
     "hotel in Paharganj New Delhi",
     "hotel near New Delhi Railway Station",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/location" },
   openGraph: {
-    title: "Location & Nearby Attractions | The Queen's Head â€“ Paharganj",
+    title: "Location & Nearby Attractions | The Queen's Head – Paharganj",
     description: NEARBY_CONTENT.description,
   },
 };
@@ -86,7 +86,7 @@ export default function LocationPage() {
                   </h3>
                   <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
                     <span>{attraction.distance}</span>
-                    <span>â€¢</span>
+                    <span>•</span>
                     <span>{attraction.travelTime}</span>
                   </div>
                   <p className="mt-2 text-gray-600 text-sm line-clamp-2">
@@ -98,7 +98,7 @@ export default function LocationPage() {
                     rel="noopener noreferrer"
                     className="inline-block mt-3 text-sm font-semibold text-amber-600 hover:text-amber-700"
                   >
-                    View on Map â†’
+                    View on Map →
                   </a>
                 </div>
               </div>

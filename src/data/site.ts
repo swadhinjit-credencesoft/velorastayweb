@@ -7,6 +7,7 @@ import type {
   TrustBadge,
   NavLink,
 } from "@/types";
+import { BOOKING_ENGINE_URL } from "@/config";
 
 export const SITE_INFO: SiteInfo = {
   name: "The Queen's Head – Paharganj",
@@ -71,7 +72,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: "Comfortable Stays in Paharganj",
     subtitle:
       "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
-    cta: { label: "Check Availability", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" },
+    cta: { label: "Check Availability", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
   },
   {
     id: "hero-slide-2",
@@ -188,10 +189,10 @@ export const NAV_LINKS: NavLink[] = [
   { id: "nav-contact", label: "Contact Us", href: "/contact" },
 ];
 
-export const BOOKING_URL = "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true";
+export const BOOKING_URL = `${BOOKING_ENGINE_URL}?bookingEngine=true`;
 
 export const NAV_CTA = {
   label: "Book Now",
-  href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true",
+  href: `${BOOKING_ENGINE_URL}?bookingEngine=true`,
   icon: "lucide:calendar-check",
 };

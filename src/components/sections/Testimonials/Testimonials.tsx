@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import Rating from "@/components/ui/Rating/Rating";
 import { REVIEWS_CONTENT, REVIEWS, REVIEW_PLATFORMS } from "@/data/reviews";
 import styles from "./Testimonials.module.scss";

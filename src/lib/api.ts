@@ -1,7 +1,5 @@
 import type { ApiPropertyResponse, ApiCheckAvailabilityParams } from "@/types/api";
-
-const API_BASE_URL = "https://api.thehotelmate.co/api/thm";
-const PROPERTY_ID = 3622;
+import { API_BASE_URL, PROPERTY_ID } from "@/config";
 
 function getDefaultDates() {
   const today = new Date();

@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button/Button";
-import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon";
 import { SITE_ASSETS } from "@/data/site";
 import styles from "./NotFound.module.scss";
 
