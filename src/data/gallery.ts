@@ -6,7 +6,7 @@ export const GALLERY_CATEGORIES: GalleryCategory[] = [
   { id: "cat-rooms", slug: "rooms", name: "Rooms", count: 29 },
   { id: "cat-dining", slug: "dining", name: "Restaurant & Dining", count: 3 },
   { id: "cat-common", slug: "common", name: "Common Areas", count: 3 },
-  { id: "cat-paharganj", slug: "paharganj", name: "Paharganj & Delhi", count: 3 },
+  { id: "cat-paharganj", slug: "paharganj", name: "Paharganj & Delhi", count: 0 },
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
@@ -55,8 +55,4 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { id: "gal-com-1", src: "/deluxeroomimage/DeluxeDoubleRoom2.png", alt: "Hotel common area Paharganj", category: "common", caption: "Common area" },
   { id: "gal-com-2", src: "/homehero1.png", alt: "Hotel corridors and common spaces", category: "common", caption: "Corridor" },
   { id: "gal-com-3", src: "/whychooseus.png", alt: "The Queen's Head hotel common spaces", category: "common", caption: "Common space" },
-
-  { id: "gal-pah-1", src: "/nearby/chandni-chowk.jpg", alt: "Paharganj New Delhi street", category: "paharganj", caption: "Paharganj market" },
-  { id: "gal-pah-2", src: "/nearby/connaught-place.jpg", alt: "Connaught Place New Delhi", category: "paharganj", caption: "Connaught Place" },
-  { id: "gal-pah-3", src: "/nearby/india-gate.jpg", alt: "Delhi landmarks near the hotel", category: "paharganj", caption: "Delhi landmarks" },
 ];
