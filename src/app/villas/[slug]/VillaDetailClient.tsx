@@ -130,7 +130,7 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
                 )}
               </div>
               <p className={styles.priceUnit}>per {villa.priceUnit}</p>
-              {/* <a href={BOOKING_ENGINE_URL} className={styles.bookBtn}>Book Now</a> */}
+              <a href={BOOKING_ENGINE_URL} className={styles.bookBtn}>Book Now</a>
               <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
               <div className={styles.bookingDetails}>
                 <div className={styles.bookingDetailRow}>
