@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
 import WhatsAppButton from "@/components/layout/WhatsAppButton/WhatsAppButton";
 import { SITE_INFO } from "@/data/site";
+import GoogleTagManager from "@/components/analytics/GoogleTagManager";
 import "./globals.scss";
 
 const inter = Inter({
@@ -86,6 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
       <body className="antialiased">
+        <GoogleTagManager />
         <ReduxProvider>
           <Header />
           <MobileNav />
