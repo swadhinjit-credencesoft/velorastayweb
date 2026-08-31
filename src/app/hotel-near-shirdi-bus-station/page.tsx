@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { getLocalSeoPage } from "@/data/seoPages";
 import LocalSeoPageView from "@/components/seo/LocalSeoPageView/LocalSeoPageView";
 
-const page = getLocalSeoPage("family-hotel-paharganj")!;
+const page = getLocalSeoPage("hotel-near-shirdi-bus-station")!;
 
 export const metadata: Metadata = {
   title: page.metaTitle,

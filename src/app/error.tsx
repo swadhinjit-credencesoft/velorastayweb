@@ -8,7 +8,7 @@ export default function Error({
   reset: () => void;
 }) {
   console.error(
-    "[The Queen's Head – Paharganj] Unhandled render error",
+    "[Hotel Yogiraj] Unhandled render error",
     error?.message ?? error,
     error?.digest ?? ""
   );

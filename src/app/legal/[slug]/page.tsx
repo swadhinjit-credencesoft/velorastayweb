@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getLegalPage(params.slug);
   if (!page) return { title: "Page Not Found" };
-  const desc = `${page.title} — ${SITE_INFO.name} hotel in Paharganj, New Delhi.`;
+  const desc = `${page.title} — ${SITE_INFO.name} hotel near Sai Baba Temple, Shirdi.`;
   return {
     title: `${page.title} | ${SITE_INFO.name}`,
     description: desc,

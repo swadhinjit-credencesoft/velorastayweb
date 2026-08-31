@@ -4,22 +4,23 @@ import Icon from "@/components/Icon";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
+import { SITE_INFO } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Hotel Amenities | The Queen's Head – Paharganj",
+  title: "Hotel Amenities | Hotel Yogiraj, Shirdi",
   description:
-    "Hotel amenities at The Queen's Head – Paharganj: free Wi-Fi, air conditioning, 24-hour front desk, on-site restaurant, family rooms, laundry and more in Paharganj, New Delhi.",
+    "Hotel amenities at Hotel Yogiraj, Shirdi: free Wi-Fi, air conditioning, 24-hour front desk, in-house vegetarian restaurant, free parking, CCTV and more near the Sai Baba Temple.",
   keywords: [
-    "hotel amenities Paharganj",
-    "hotel facilities New Delhi",
-    "free WiFi hotel Paharganj",
-    "24 hour front desk hotel Delhi",
+    "hotel amenities Shirdi",
+    "hotel facilities Shirdi",
+    "free WiFi hotel Shirdi",
+    "24 hour front desk hotel Shirdi",
   ],
   alternates: { canonical: "/amenities" },
   openGraph: {
-    title: "Hotel Amenities | The Queen's Head – Paharganj",
+    title: "Hotel Amenities | Hotel Yogiraj, Shirdi",
     description: FACILITIES_CONTENT.description,
-    url: "https://shivharehotelsandtravel.com/amenities",
+    url: `${SITE_INFO.url}/amenities`,
   },
 };
 

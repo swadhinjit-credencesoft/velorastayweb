@@ -10,6 +10,7 @@ import CTA from "@/components/sections/CTA/CTA";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateHotelSchema, generateWebsiteSchema } from "@/utils/schema";
 import { SITE_INFO, WHATSAPP_LINK } from "@/data/site";
+import { BOOKING_ENGINE_URL } from "@/config";
 
 export default function HomePage() {
   return (
@@ -26,11 +27,11 @@ export default function HomePage() {
       <NearbyAttractions />
       <FAQ />
       <CTA
-        eyebrow="Ready to Stay in Paharganj?"
-        heading="Book Your Room at The Queen's Head"
-        description="Comfortable air-conditioned rooms, free Wi-Fi and a 24-hour front desk in the heart of Paharganj — close to New Delhi Railway Station and Central Delhi attractions."
+        eyebrow="Ready to Stay in Shirdi?"
+        heading="Book Your Room at Hotel Yogiraj"
+        description="Comfortable rooms, free Wi-Fi and a 24-hour front desk near the Sai Baba Temple in Shirdi — a short walk from the temple and close to the bus stand."
         buttons={[
-          { label: "Book Now", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true", variant: "primary" },
+          { label: "Book Now", href: `${BOOKING_ENGINE_URL}?bookingEngine=true`, variant: "primary" },
           { label: "View Rooms", href: "/rooms", variant: "outline" },
           { label: "WhatsApp Us", href: WHATSAPP_LINK, variant: "ghost" },
         ]}

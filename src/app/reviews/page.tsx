@@ -5,11 +5,11 @@ import { generateBreadcrumbSchema, generateHotelSchema } from "@/utils/schema";
 import { REVIEWS, REVIEWS_CONTENT, REVIEW_PLATFORMS } from "@/data/reviews";
 
 export const metadata: Metadata = {
-  title: "Guest Reviews | The Queen's Head – Paharganj",
+  title: "Guest Reviews | Hotel Yogiraj, Shirdi",
   description:
-    "Read guest reviews for The Queen's Head – Paharganj. See ratings from Google, Booking.com, MakeMyTrip, and more.",
+    "Read guest reviews for Hotel Yogiraj, Shirdi. See ratings from Google, Booking.com, Agoda, and Tripadvisor.",
   alternates: { canonical: "/reviews" },
-  openGraph: { title: "Guest Reviews | The Queen's Head – Paharganj", description: REVIEWS_CONTENT.description },
+  openGraph: { title: "Guest Reviews | Hotel Yogiraj, Shirdi", description: REVIEWS_CONTENT.description },
 };
 
 export default function ReviewsPage() {

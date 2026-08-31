@@ -22,15 +22,16 @@ export function generateHotelSchema() {
       latitude: SITE_INFO.geo.latitude,
       longitude: SITE_INFO.geo.longitude,
     },
-    priceRange: "₹2800 - ₹6200",
+    priceRange: "₹1000 - ₹2999",
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
     image: `${SITE_INFO.url}/schemaimg.png`,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "24-Hour Front Desk", value: true },
-      { "@type": "LocationFeatureSpecification", name: "On-Site Restaurant", value: true },
+      { "@type": "LocationFeatureSpecification", name: "In-House Restaurant", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
     ],
   };
 

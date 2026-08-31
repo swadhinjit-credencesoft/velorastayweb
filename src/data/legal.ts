@@ -5,11 +5,11 @@
   content: string;
 }
 
-const HOTEL_NAME = "The Queen's Head – Paharganj";
+const HOTEL_NAME = "Hotel Yogiraj";
 const HOTEL_ADDRESS =
-  "2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055, India";
-const HOTEL_PHONE = "+91 9899739777";
-const HOTEL_EMAIL = "shivharehotelsandtravel@gmail.com";
+  "Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109, India";
+const HOTEL_PHONE = "+91 95955 33535";
+const HOTEL_EMAIL = "info@yogirajhotel.com";
 
 export const LEGAL_PAGES: LegalPage[] = [
   {

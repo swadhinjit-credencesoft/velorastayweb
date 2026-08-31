@@ -1,23 +1,25 @@
 import type { SectionContent } from "@/types";
 
 export const RESTAURANT_CONTENT: SectionContent = {
-  eyebrow: "On-Site Restaurant",
-  heading: "Dining at The Queen's Head",
+  eyebrow: "In-House Restaurant",
+  heading: "Dining at Hotel Yogiraj",
   description:
-    "Enjoy a selection of Indian and Chinese dishes at our on-site restaurant, designed for hotel guests and visitors looking for a convenient dining option during their Delhi stay.",
+    "Enjoy delicious vegetarian meals at our in-house restaurant in Shirdi, including a complimentary breakfast buffet — a convenient dining option for guests after temple darshan.",
 };
 
 export const RESTAURANT_HIGHLIGHTS: string[] = [
-  "Indian cuisine",
-  "Chinese cuisine",
-  "Comfortable dining",
-  "Convenient on-site location",
-  "Guest-friendly service",
+  "Pure vegetarian cuisine",
+  "Complimentary breakfast buffet",
+  "Comfortable dining hall",
+  "Convenient in-house location",
+  "24-hour room service",
+  "Friendly service",
 ];
 
 export const RESTAURANT_DETAILS: { label: string; value: string }[] = [
-  { label: "Cuisine", value: "Indian & Chinese" },
-  { label: "Breakfast", value: "Available on request (₹350 per person)" },
+  { label: "Cuisine", value: "Vegetarian" },
+  { label: "Breakfast", value: "Complimentary buffet included" },
+  { label: "Lunch & Dinner", value: "Available on request" },
   { label: "Timings", value: "Please confirm current timings with the front desk" },
-  { label: "Room Service", value: "Available — please ask at the front desk" },
+  { label: "Room Service", value: "Available 24 hours" },
 ];

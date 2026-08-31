@@ -5,10 +5,10 @@ import { generateBreadcrumbSchema, generateFAQSchema } from "@/utils/schema";
 import { FAQ_CATEGORIES } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | The Queen's Head – Paharganj",
-  description: "Find answers to common questions about booking, rooms, dining, facilities, payment, and policies at The Queen's Head – Paharganj, New Delhi.",
+  title: "Frequently Asked Questions | Hotel Yogiraj, Shirdi",
+  description: "Find answers to common questions about booking, rooms, dining, facilities, payment, and policies at Hotel Yogiraj, Shirdi, Maharashtra.",
   alternates: { canonical: "/faq" },
-  openGraph: { title: "FAQ | The Queen's Head – Paharganj", description: "Get answers to all your questions about staying at The Queen's Head – Paharganj." },
+  openGraph: { title: "FAQ | Hotel Yogiraj, Shirdi", description: "Get answers to all your questions about staying at Hotel Yogiraj, Shirdi." },
 };
 
 export default function FAQPage() {

@@ -9,9 +9,10 @@ import {
   setChildren,
 } from "@/store/slices/bookingSlice";
 import Icon from "@/components/Icon";
+import { BOOKING_ENGINE_URL } from "@/config";
 import styles from "./SearchBar.module.scss";
 
-const BOOKING_ENGINE_BASE = "https://bookone.io/Hotel-The-Queen-S-Head-Delhi";
+const BOOKING_ENGINE_BASE = BOOKING_ENGINE_URL;
 
 interface SearchBarProps {
   variant?: "hero" | "compact";

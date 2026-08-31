@@ -22,7 +22,7 @@ export default function ContactForm() {
             <h2 className={styles.heading}>Ways To Get In Touch</h2>
             <p className={styles.description}>
               Call, WhatsApp, or email us — our front desk is available 24/7 to help
-              plan your stay in Paharganj, New Delhi.
+              plan your stay in Shirdi, near the Sai Baba Temple.
             </p>
           </div>
 
@@ -95,15 +95,15 @@ export default function ContactForm() {
             <span className={styles.eyebrow}>Find Us</span>
             <h2 className={styles.heading}>Our Location</h2>
             <p className={styles.description}>
-              {SITE_INFO.address.full} — a central location close to New Delhi
-              Railway Station and Central Delhi attractions.
+              {SITE_INFO.address.full} — a central location close to the Sai Baba
+              Temple and Shirdi Bus Station.
             </p>
           </div>
           <div className={styles.mapCard}>
             <iframe
               src={GOOGLE_MAPS_URL}
               className={styles.map}
-              title="The Queen's Head Paharganj location map"
+              title="Hotel Yogiraj Shirdi location map"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"

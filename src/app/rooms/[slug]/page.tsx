@@ -9,6 +9,7 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 import { checkAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
+import { BOOKING_ENGINE_URL } from "@/config";
 import styles from "./room-detail.module.scss";
 
 interface RoomPageProps {
@@ -64,13 +65,13 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
       <JsonLd
         schema={generateBreadcrumbSchema([
           { name: "Home", url: SITE_INFO.url },
-          { name: "Rooms & Suites", url: `${SITE_INFO.url}/rooms` },
+          { name: "Rooms & Rates", url: `${SITE_INFO.url}/rooms` },
           { name: room.name, url: `${SITE_INFO.url}/rooms/${room.slug}` },
         ])}
       />
       <Breadcrumb
         items={[
-          { label: "Rooms & Suites", href: "/rooms" },
+          { label: "Rooms & Rates", href: "/rooms" },
           { label: room.name, href: `/rooms/${room.slug}` },
         ]}
       />
@@ -201,7 +202,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   </span>
                 </div>
                 <p className={styles.priceUnit}>per {room.priceUnit} — Room Only</p>
-                <a href="https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>Book Now</a>
+                <a href={`${BOOKING_ENGINE_URL}?bookingEngine=true`} target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>Book Now</a>
                 <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
                 <div className={styles.bookingDetails}>
                   <div className={styles.bookingDetailRow}>

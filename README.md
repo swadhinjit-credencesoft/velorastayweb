@@ -1,13 +1,13 @@
-# The Queen's Head – Paharganj
+# Hotel Yogiraj – Shirdi
 
-Marketing site for The Queen's Head – Paharganj, a hotel at 2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi. Built with:
+Marketing site for Hotel Yogiraj, a hotel at Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109. Built with:
 
 - **Next.js 14** (App Router) + **TypeScript**
 - **SCSS Modules** for component styling, with a shared token/mixin layer
 - **Redux Toolkit** for UI state (mobile nav, mega menu, booking form state)
 - **Iconify (`@iconify/react`)** for the Lucide icon set
 - Content fully driven by typed data files — no copy or config hard-coded in components
-- Static export (`output: "export"`) with WhatsApp-based booking flow
+- BookOne booking engine (`https://bookone.io/Hotel-Yogiraj`) with live availability via the THM hotel API
 
 ## Getting started
 
@@ -27,7 +27,7 @@ npm run start
 
 ## Booking flow
 
-All booking actions (room pages, `/book-now`, homepage CTAs) open a pre-filled WhatsApp chat with the hotel on **+91 9899739777**. No booking engine or third-party API is used.
+Booking actions (room pages, homepage CTAs, search bar) open the BookOne engine at **https://bookone.io/Hotel-Yogiraj?bookingEngine=true**. Live room availability and prices (property **651**) are fetched from the THM API. Guests can also reach the hotel directly on **+91 95955 33535** (call/WhatsApp) or **info@yogirajhotel.com**.
 
 ## File structure
 
@@ -53,10 +53,13 @@ velorastayweb/
 │   │   ├── faq/              # FAQ page
 │   │   ├── contact/          # Contact page
 │   │   ├── legal/            # Privacy, terms, cancellation, cookies, accessibility
-│   │   ├── hotel-near-*/     # Local-SEO landing pages (New Delhi Railway Station, etc.)
-│   │   ├── business-hotel-paharganj/   # Local-SEO landing page
-│   │   ├── family-hotel-paharganj/     # Local-SEO landing page
-│   │   ├── hotel-near-delhi-airport/   # Local-SEO landing page
+│   │   ├── hotel-in-shirdi/  # Local-SEO landing page
+│   │   ├── hotel-near-sai-baba-temple/         # Local-SEO landing page
+│   │   ├── hotel-near-shirdi-bus-station/      # Local-SEO landing page
+│   │   ├── hotel-near-shirdi-airport/          # Local-SEO landing page
+│   │   ├── hotel-for-sai-baba-pilgrims/        # Local-SEO landing page
+│   │   ├── family-hotel-shirdi/                # Local-SEO landing page
+│   │   ├── budget-hotel-in-shirdi/             # Local-SEO landing page
 │   │   ├── sitemap.ts        # Sitemap generator
 │   │   ├── robots.ts         # Robots.txt generator
 │   │   └── not-found.tsx     # Custom 404
@@ -96,5 +99,5 @@ velorastayweb/
 
 ## Notes
 
-- Placeholder images under `public/` (e.g. `Pawnalake.jpg`, `Karlacaves.jpg`, `BhushiDam.webp`) are used as stand-ins in gallery/nearby/SEO pages — replace them with real hotel photos when available.
-- The logo file `public/veloralogo-v2.png` still carries the old Velora mark — replace it with the new brand logo when ready.
+- Room, gallery and nearby images under `public/` are still placeholders (e.g. `homehero*.png`, `whychooseus.png`, the room folders under `deluxeroomimage/`, `PremiumDoubleRoom/`, etc.) — replace them with real Hotel Yogiraj photos when available.
+- The nav/header logo still uses `public/yogirajlogo.webp` (the old Queen's Head mark). Replace it with a Hotel Yogiraj logo file and update `SITE_ASSETS.logo` plus the `src` refs in `Header.tsx`, `Footer.tsx` and `MobileNav.tsx`.

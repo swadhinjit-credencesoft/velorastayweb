@@ -4,6 +4,7 @@ import type {
   FooterGroup,
   SocialLink,
 } from "@/types";
+import { BOOKING_ENGINE_URL } from "@/config";
 
 export const NAV_GROUPS: NavGroup[] = [
   {
@@ -19,32 +20,32 @@ export const NAV_GROUPS: NavGroup[] = [
         icon: "lucide:layout-grid",
       },
       {
-        id: "nav-rooms-deluxe",
-        label: "Deluxe Double Room",
-        href: "/rooms/deluxe-double-room",
-        description: "Comfortable stay for couples and solo travellers",
+        id: "nav-rooms-double-na",
+        label: "Double Bed Non-AC Room",
+        href: "/rooms/double-bed-non-ac-room",
+        description: "Budget stay for couples",
         icon: "lucide:bed-double",
       },
       {
-        id: "nav-rooms-premium",
-        label: "Premium Double Room",
-        href: "/rooms/premium-double-room",
-        description: "More space and added comfort",
+        id: "nav-rooms-double",
+        label: "Double Bed Room",
+        href: "/rooms/double-bed-room",
+        description: "Comfortable stay for two",
         icon: "lucide:bed",
       },
       {
-        id: "nav-rooms-city-view",
-        label: "Premium Double with City View",
-        href: "/rooms/premium-double-room-with-city-view",
-        description: "Enjoy views of the city from your room",
-        icon: "lucide:building-2",
+        id: "nav-rooms-triple",
+        label: "Triple Bed AC Room",
+        href: "/rooms/triple-bed-ac-room",
+        description: "Cool comfort for families and groups",
+        icon: "lucide:bed-double",
       },
       {
-        id: "nav-rooms-suite",
-        label: "Triple Suite with Jacuzzi",
-        href: "/rooms/triple-suite-with-jacuzzi",
-        description: "Our signature suite for a relaxing stay",
-        icon: "lucide:sparkles",
+        id: "nav-rooms-four",
+        label: "Four Bed AC Room",
+        href: "/rooms/four-bed-ac-room",
+        description: "Spacious family room",
+        icon: "lucide:users",
       },
     ],
   },
@@ -57,14 +58,14 @@ export const NAV_GROUPS: NavGroup[] = [
         id: "nav-amenities",
         label: "Hotel Amenities",
         href: "/amenities",
-        description: "Wi-Fi, air conditioning, 24-hour front desk and more",
+        description: "Free Wi-Fi, restaurant, parking and more",
         icon: "lucide:star",
       },
       {
         id: "nav-restaurant",
         label: "Restaurant",
         href: "/restaurant",
-        description: "Indian & Chinese cuisine on-site",
+        description: "Vegetarian dining & breakfast buffet",
         icon: "lucide:utensils",
       },
       {
@@ -85,29 +86,29 @@ export const NAV_GROUPS: NavGroup[] = [
         id: "nav-loc-overview",
         label: "Location & Directions",
         href: "/location",
-        description: "Find us in Chuna Mandi, Paharganj",
+        description: "Find us near Sai Baba Temple, Shirdi",
         icon: "lucide:map-pin",
       },
       {
-        id: "nav-loc-railway",
-        label: "Near New Delhi Railway Station",
-        href: "/hotel-near-new-delhi-railway-station",
-        description: "Convenient for train travellers",
-        icon: "lucide:train-front",
+        id: "nav-loc-temple",
+        label: "Hotel Near Sai Baba Temple",
+        href: "/hotel-near-sai-baba-temple",
+        description: "Just minutes from the temple",
+        icon: "lucide:landmark",
       },
       {
-        id: "nav-loc-cp",
-        label: "Near Connaught Place",
-        href: "/hotel-near-connaught-place",
-        description: "Central Delhi shopping and dining",
+        id: "nav-loc-shirdi",
+        label: "Hotel in Shirdi",
+        href: "/hotel-in-shirdi",
+        description: "Central Shirdi accommodation",
         icon: "lucide:building-2",
       },
       {
-        id: "nav-loc-airport",
-        label: "Near Delhi Airport",
-        href: "/hotel-near-delhi-airport",
-        description: "Ideal for airport travellers",
-        icon: "lucide:plane",
+        id: "nav-loc-bus",
+        label: "Near Shirdi Bus Station",
+        href: "/hotel-near-shirdi-bus-station",
+        description: "Convenient for bus travellers",
+        icon: "lucide:bus",
       },
     ],
   },
@@ -120,7 +121,7 @@ export const NAV_GROUPS: NavGroup[] = [
         id: "nav-more-about",
         label: "About Us",
         href: "/about",
-        description: "Welcome to The Queen's Head – Paharganj",
+        description: "Welcome to Hotel Yogiraj",
         icon: "lucide:info",
       },
       {
@@ -159,7 +160,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const NAV_CTA = {
   label: "Book Now",
-  href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true",
+  href: `${BOOKING_ENGINE_URL}?bookingEngine=true`,
   icon: "lucide:calendar-check",
 };
 
@@ -180,11 +181,11 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     id: "footer-rooms",
     title: "Rooms & Rates",
     links: [
-      { id: "footer-deluxe", label: "Deluxe Double Room", href: "/rooms/deluxe-double-room" },
-      { id: "footer-premium", label: "Premium Double Room", href: "/rooms/premium-double-room" },
-      { id: "footer-city", label: "Premium Double City View", href: "/rooms/premium-double-room-with-city-view" },
-      { id: "footer-suite", label: "Triple Suite with Jacuzzi", href: "/rooms/triple-suite-with-jacuzzi" },
-      { id: "footer-book", label: "Book Your Stay", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" },
+      { id: "footer-double-na", label: "Double Bed Non-AC Room", href: "/rooms/double-bed-non-ac-room" },
+      { id: "footer-double", label: "Double Bed Room", href: "/rooms/double-bed-room" },
+      { id: "footer-triple", label: "Triple Bed AC Room", href: "/rooms/triple-bed-ac-room" },
+      { id: "footer-four", label: "Four Bed AC Room", href: "/rooms/four-bed-ac-room" },
+      { id: "footer-book", label: "Book Your Stay", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
     ],
   },
   {
@@ -192,11 +193,11 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     title: "Location & Nearby",
     links: [
       { id: "footer-location-page", label: "Location & Directions", href: "/location" },
-      { id: "footer-railway", label: "Near New Delhi Railway Station", href: "/hotel-near-new-delhi-railway-station" },
-      { id: "footer-cp", label: "Near Connaught Place", href: "/hotel-near-connaught-place" },
-      { id: "footer-airport", label: "Near Delhi Airport", href: "/hotel-near-delhi-airport" },
-      { id: "footer-family", label: "Family Hotel in Paharganj", href: "/family-hotel-paharganj" },
-      { id: "footer-business", label: "Business Hotel in Paharganj", href: "/business-hotel-paharganj" },
+      { id: "footer-temple", label: "Hotel Near Sai Baba Temple", href: "/hotel-near-sai-baba-temple" },
+      { id: "footer-shirdi", label: "Hotel in Shirdi", href: "/hotel-in-shirdi" },
+      { id: "footer-bus", label: "Near Shirdi Bus Station", href: "/hotel-near-shirdi-bus-station" },
+      { id: "footer-family", label: "Family Hotel in Shirdi", href: "/family-hotel-shirdi" },
+      { id: "footer-pilgrim", label: "Hotel for Sai Baba Pilgrims", href: "/hotel-for-sai-baba-pilgrims" },
     ],
   },
   {
@@ -205,7 +206,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     links: [
       { id: "footer-contact", label: "Contact Us", href: "/contact" },
       { id: "footer-faq", label: "FAQs", href: "/faq" },
-      { id: "footer-book", label: "Book Now", href: "https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true" },
+      { id: "footer-book", label: "Book Now", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
     ],
   },
   {
@@ -224,17 +225,17 @@ export const FOOTER_SOCIAL: SocialLink[] = [
   {
     id: "footer-social-google",
     icon: "lucide:map-pin",
-    href: "https://maps.google.com/?q=The+Queens+Head+Paharganj+New+Delhi",
+    href: "https://maps.google.com/?q=Hotel+Yogiraj+Shirdi+Maharashtra",
     label: "Google Maps",
   },
 ];
 
 export const FOOTER_CONTACT = {
   address:
-    "2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055, India",
-  phone: "+91 9899739777",
-  email: "shivharehotelsandtravel@gmail.com",
+    "Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109, India",
+  phone: "+91 95955 33535",
+  email: "info@yogirajhotel.com",
   hours: "24-Hour Front Desk",
 };
 
-export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} The Queen's Head – Paharganj. All rights reserved.`;
+export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Hotel Yogiraj, Shirdi. All rights reserved.`;

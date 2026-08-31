@@ -12,13 +12,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Rooms & Suites | The Queen's Head – Paharganj",
+  title: "Rooms & Rates | Hotel Yogiraj, Shirdi",
   description:
-    "Explore rooms at The Queen's Head – Paharganj: Deluxe Double, Premium Double, Premium Double with City View and Triple Suite with Jacuzzi. Air-conditioned rooms with free Wi-Fi in the heart of Paharganj.",
+    "Explore rooms at Hotel Yogiraj, Shirdi: Double Bed Non-AC, Double Bed, Triple Bed AC/Non-AC and Four Bed AC/Non-AC rooms with free Wi-Fi, near the Sai Baba Temple.",
   alternates: { canonical: "/rooms" },
   openGraph: {
-    title: "Rooms & Suites | The Queen's Head – Paharganj",
-    description: "Comfortable air-conditioned rooms in Paharganj, New Delhi.",
+    title: "Rooms & Rates | Hotel Yogiraj, Shirdi",
+    description: "Comfortable rooms in Shirdi, near the Sai Baba Temple.",
     url: generateCanonicalUrl("/rooms"),
   },
 };
@@ -32,14 +32,14 @@ export default async function RoomsPage() {
       <JsonLd
         schema={generateBreadcrumbSchema([
           { name: "Home", url: SITE_INFO.url },
-          { name: "Rooms & Suites", url: `${SITE_INFO.url}/rooms` },
+          { name: "Rooms & Rates", url: `${SITE_INFO.url}/rooms` },
         ])}
       />
       <PageHero
         eyebrow={ROOMS_CONTENT.eyebrow}
         heading={ROOMS_CONTENT.heading}
         description={ROOMS_CONTENT.description}
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms & Suites", href: "/rooms" }]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms & Rates", href: "/rooms" }]}
         bgImage="/homehero1.png"
       />
 

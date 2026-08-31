@@ -6,18 +6,19 @@ import { NEARBY_ATTRACTIONS, NEARBY_CONTENT } from "@/data/nearby";
 import { SITE_INFO, GOOGLE_MAPS_URL } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Location & Nearby Attractions | The Queen's Head – Paharganj",
+  title: "Location & Nearby Attractions | Hotel Yogiraj, Shirdi",
   description:
-    "Located at 2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi. Explore nearby attractions: Ramakrishna Mission, Gurudwara Bangla Sahib, Jantar Mantar, Connaught Place and more.",
+    "Located at Pimpalwadi Rd, near Sai Baba Temple, Shirdi, Maharashtra. Explore nearby attractions: Sai Baba Temple, Dwarkamai, Chavadi, Shirdi Bus Station and more.",
   keywords: [
-    "hotel in Paharganj New Delhi",
-    "hotel near New Delhi Railway Station",
-    "hotel near Ramakrishna Mission",
-    "hotel near Gurudwara Bangla Sahib",
+    "hotel in Shirdi",
+    "hotel near Sai Baba Temple",
+    "hotel near Shirdi bus stand",
+    "hotel near Dwarkamai",
+    "hotel near Sai Teerth",
   ],
   alternates: { canonical: "/location" },
   openGraph: {
-    title: "Location & Nearby Attractions | The Queen's Head – Paharganj",
+    title: "Location & Nearby Attractions | Hotel Yogiraj, Shirdi",
     description: NEARBY_CONTENT.description,
   },
 };

@@ -20,7 +20,7 @@ export default function Footer() {
             <div className={styles.brand}>
               <Link href="/" className={styles.logo}>
                 <Image
-                  src="/queenslogo.png"
+                  src="/yogirajlogo.webp"
                   alt={SITE_INFO.name}
                   width={2000}
                   height={3548}

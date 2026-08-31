@@ -7,13 +7,13 @@ import { ABOUT_STORY, ABOUT_MISSION, ABOUT_VISION } from "@/data/about";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "About Us | The Queen's Head – Paharganj",
+  title: "About Us | Hotel Yogiraj, Shirdi",
   description:
-    "Discover the story behind The Queen's Head – Paharganj — a comfortable hotel in the heart of Paharganj, New Delhi. Learn about our mission and commitment to welcoming hospitality.",
+    "Discover the story behind Hotel Yogiraj, Shirdi — a comfortable hotel near the Sai Baba Temple in Shirdi, Maharashtra. Learn about our mission and commitment to welcoming hospitality.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Us | The Queen's Head – Paharganj",
-    description: "Learn about The Queen's Head – Paharganj, our story, and mission.",
+    title: "About Us | Hotel Yogiraj, Shirdi",
+    description: "Learn about Hotel Yogiraj, Shirdi, our story, and mission.",
     url: `${SITE_INFO.url}/about`,
   },
 };
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
-          <Image src="/homehero3.png" alt="About The Queen's Head – Paharganj" fill className="object-cover" sizes="100vw" />
+          <Image src="/homehero3.png" alt="About Hotel Yogiraj, Shirdi" fill className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">About Us</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">{ABOUT_STORY.title}</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover the story behind The Queen&apos;s Head – Paharganj.
+            Discover the story behind Hotel Yogiraj, Shirdi.
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function AboutPage() {
 
       <section className="py-16 bg-amber-500 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Experience The Queen&apos;s Head Difference</h2>
+          <h2 className="text-3xl font-bold mb-4">Experience The Hotel Yogiraj Difference</h2>
           <p className="mb-6 opacity-90">Book your stay and discover why guests keep coming back.</p>
           <a
             href={WHATSAPP_LINK}

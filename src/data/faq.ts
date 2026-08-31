@@ -8,9 +8,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-booking-01",
-        question: "How can I book a room at The Queen's Head – Paharganj?",
+        question: "How can I book a room at Hotel Yogiraj, Shirdi?",
         answer:
-          "You can book directly through our website by filling in the booking form with your check-in and check-out dates, room type and guest details. Alternatively, you can call or WhatsApp our reservations team at +91 9899739777 or email us at shivharehotelsandtravel@gmail.com.",
+          "You can book directly through our website by filling in the booking form with your check-in and check-out dates, room type and guest details. Alternatively, you can call or WhatsApp our reservations team at +91 95955 33535 or email us at info@yogirajhotel.com.",
       },
       {
         id: "faq-booking-02",
@@ -20,9 +20,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         id: "faq-booking-03",
-        question: "Do you accept group or corporate bookings?",
+        question: "Do you accept group or pilgrim bookings?",
         answer:
-          "Yes. We accept group, family and corporate bookings. Please contact our front desk or reservations team directly to arrange group rates and availability.",
+          "Yes. We accept group, family, pilgrim and corporate bookings. Please contact our front desk or reservations team directly to arrange group rates and availability.",
       },
       {
         id: "faq-booking-04",
@@ -41,25 +41,25 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-stay-01",
         question: "What room types are available?",
         answer:
-          "We offer Deluxe Double Rooms, Premium Double Rooms, Premium Double Rooms with City View and our signature Triple Suite with Jacuzzi.",
+          "We offer Double Bed Non-AC, Double Bed, Triple Bed AC, Triple Bed Non-AC, Four Bed AC and Four Bed Non-AC rooms — ideal for couples, pilgrims, families and groups.",
       },
       {
         id: "faq-stay-02",
         question: "Does the hotel offer Wi-Fi?",
         answer:
-          "Yes. Complimentary Wi-Fi is available for guests.",
+          "Yes. Complimentary free and fast Wi-Fi is available for guests.",
       },
       {
         id: "faq-stay-03",
         question: "Does the hotel have air conditioning?",
         answer:
-          "Yes. Air-conditioned accommodation is available.",
+          "Yes. Both AC and Non-AC room options are available.",
       },
       {
         id: "faq-stay-04",
         question: "Are extra beds available?",
         answer:
-          "Yes. An extra bed is available at ₹750 per night, subject to availability.",
+          "Yes. An extra bed is available at a nominal charge per night, subject to availability.",
       },
       {
         id: "faq-stay-05",
@@ -71,7 +71,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-stay-06",
         question: "Is the hotel suitable for families?",
         answer:
-          "Yes. Family rooms are available and extra beds can be arranged, making the hotel suitable for family stays.",
+          "Yes. Family-friendly four-bed rooms are available and extra beds can be arranged, making the hotel suitable for family stays.",
       },
     ],
   },
@@ -84,13 +84,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-dining-01",
         question: "Does the hotel have a restaurant?",
         answer:
-          "Yes. The property has an on-site restaurant serving Indian and Chinese cuisine.",
+          "Yes. The hotel has an in-house restaurant serving delicious vegetarian meals, including a complimentary breakfast buffet.",
       },
       {
         id: "faq-dining-02",
         question: "Is breakfast available?",
         answer:
-          "Breakfast is available at ₹350 per person and is included in the CP (room + breakfast) tariff.",
+          "Yes. A complimentary breakfast buffet is available, along with lunch and dinner on request.",
       },
     ],
   },
@@ -109,13 +109,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-facilities-02",
         question: "Does the hotel have parking?",
         answer:
-          "Current listings indicate free private parking, but this should be reconfirmed with hotel management before you arrive.",
+          "Yes. Free car parking is available for guests.",
       },
       {
         id: "faq-facilities-03",
-        question: "Does the hotel offer airport transfers?",
+        question: "Does the hotel offer airport or railway transfers?",
         answer:
-          "Please contact the front desk for airport transfer and taxi information. Delhi International Airport is approximately 15 km away.",
+          "Please contact the front desk for airport, bus and railway transfer assistance. Shirdi Airport is approximately 15 km away and Shirdi Bus Station is about 200 m from the hotel.",
       },
     ],
   },
@@ -126,33 +126,33 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-location-01",
-        question: "Where is The Queen's Head located?",
+        question: "Where is Hotel Yogiraj located?",
         answer:
-          "The Queen's Head is located at 2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055.",
+          "Hotel Yogiraj is located at Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109.",
       },
       {
         id: "faq-location-02",
-        question: "Is the hotel near New Delhi Railway Station?",
+        question: "Is the hotel near the Sai Baba Temple?",
         answer:
-          "Yes. The hotel is located in Paharganj, within walking distance of New Delhi Railway Station.",
+          "Yes. The hotel is within easy walking distance of the Shri Sai Baba Temple — one of the best locations in Shirdi.",
       },
       {
         id: "faq-location-03",
-        question: "Is the hotel near Ramakrishna Mission?",
+        question: "Is the hotel near Shirdi Bus Station?",
         answer:
-          "Ramakrishna Mission is approximately 0.9 km from the hotel.",
+          "Yes. Shirdi Bus Station is approximately 200 m from the hotel.",
       },
       {
         id: "faq-location-04",
-        question: "How far is Gurudwara Bangla Sahib?",
+        question: "How far is Shirdi Airport?",
         answer:
-          "Gurudwara Bangla Sahib is approximately 2.2 km from the hotel.",
+          "Shirdi Airport (SAG) is approximately 15 km from the hotel.",
       },
       {
         id: "faq-location-05",
-        question: "How far is Delhi Airport?",
+        question: "What is near the hotel?",
         answer:
-          "Delhi International Airport is approximately 15 km from the property.",
+          "Sai Baba Temple, Dwarkamai, Baba's Chavadi, Khandoba Temple and several restaurants are all close by.",
       },
     ],
   },

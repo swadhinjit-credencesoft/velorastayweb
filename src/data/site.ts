@@ -10,32 +10,32 @@ import type {
 import { BOOKING_ENGINE_URL } from "@/config";
 
 export const SITE_INFO: SiteInfo = {
-  name: "The Queen's Head – Paharganj",
-  tagline: "Comfortable Stays in Paharganj",
+  name: "Hotel Yogiraj",
+  tagline: "A Comfortable Stay Close to Sai Baba Temple",
   description:
-    "Stay at The Queen's Head – Paharganj, New Delhi. Enjoy comfortable rooms, free Wi-Fi, air conditioning, an on-site restaurant, a 24-hour front desk and convenient access to Central Delhi attractions.",
-  url: "https://shivharehotelsandtravel.com",
-  phone: "+91 9899739777",
-  whatsapp: "+91 9899739777",
-  email: "shivharehotelsandtravel@gmail.com",
+    "Stay at Hotel Yogiraj, Shirdi — a budget-friendly hotel just moments from the Sai Baba Temple. Enjoy comfortable AC & non-AC rooms, free Wi-Fi, an in-house restaurant, car parking and 24-hour front-desk assistance for pilgrims, families and travellers.",
+  url: "https://yogirajhotel.com",
+  phone: "+91 95955 33535",
+  whatsapp: "+91 95955 33535",
+  email: "info@yogirajhotel.com",
   address: {
-    street: "2282–2285, Rajguru Marg",
-    area: "Chuna Mandi, Paharganj",
-    city: "New Delhi",
-    state: "Delhi",
-    pincode: "110055",
+    street: "Pimpalwadi Rd, near Sai Baba Temple, near Sai Sh corner",
+    area: "Shiv Nagar",
+    city: "Shirdi",
+    state: "Maharashtra",
+    pincode: "423109",
     country: "India",
     full:
-      "2282–2285, Rajguru Marg, Chuna Mandi, Paharganj, New Delhi, Delhi 110055, India",
+      "Pimpalwadi Rd, near Sai Baba Temple, near Sai Sh corner, Shiv Nagar, Shirdi, Maharashtra 423109, India",
   },
   geo: {
-    latitude: 28.6446,
-    longitude: 77.2131,
+    latitude: 19.76695517,
+    longitude: 74.48043686,
   },
   checkIn: "12:00 PM",
   checkOut: "11:00 AM",
-  rating: 5.0,
-  reviewCount: 0,
+  rating: 4.4,
+  reviewCount: 2298,
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
@@ -44,7 +44,7 @@ export const SOCIAL_LINKS: SocialLinks = {
   twitter: "",
   youtube: "",
   tripadvisor: "",
-  google: "https://maps.google.com/?q=The+Queens+Head+Paharganj+New+Delhi",
+  google: "https://maps.google.com/?q=Hotel+Yogiraj+Shirdi+Maharashtra",
 };
 
 export const SITE_ASSETS = {
@@ -53,10 +53,10 @@ export const SITE_ASSETS = {
     "/homehero2.png",
     "/homehero3.png",
   ] as const,
-  logo: "",
+  logo: "/yogirajlogo.webp",
   logoLight: "",
   favicon: "/favicon.ico",
-  aboutImage: "/whychooseus.png",
+  aboutImage: "/yogirajimg/01.avif",
   roomsPreviewImage: "/homehero2.png",
   diningImage: "/homehero3.png",
   eventsImage: "/homehero1.png",
@@ -68,36 +68,36 @@ export const SITE_ASSETS = {
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
-    image: "/whychooseus.png",
-    title: "Comfortable Stays in Paharganj",
+    image: "/yogirajimg/01.avif",
+    title: "Stay Minutes from Sai Baba Temple",
     subtitle:
-      "Welcome to The Queen's Head – Paharganj, a contemporary hotel in Chuna Mandi with air-conditioned rooms, free Wi-Fi and a 24-hour front desk.",
+      "Welcome to Hotel Yogiraj, Shirdi — a comfortable, budget-friendly hotel right near the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
     cta: { label: "Check Availability", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
   },
   {
     id: "hero-slide-2",
-    image: "/homehero2.png",
-    title: "Your Convenient Base in Central Delhi",
+    image: "/yogirajimg/4.avif",
+    title: "Comfortable Rooms for Every Traveller",
     subtitle:
-      "Close to New Delhi Railway Station, Connaught Place and major attractions — ideal for business, leisure and short city stays.",
+      "From double bed rooms to family-friendly four-bed rooms, choose the perfect stay for your Shirdi pilgrimage or family trip.",
     cta: { label: "Explore Rooms", href: "/rooms" },
   },
   { 
     id: "hero-slide-3",
-    image: "/homehero1.png",
-    title: "Indian & Chinese Dining On-Site",
+    image: "/yogirajimg/3.avif",
+    title: "In-House Restaurant & Parking",
     subtitle:
-      "Enjoy a selection of Indian and Chinese dishes at our on-site restaurant without leaving the property.",
+      "Enjoy delicious vegetarian meals at our in-house restaurant, plus convenient car parking, free Wi-Fi and a 24-hour front desk.",
     cta: { label: "View Amenities", href: "/amenities" },
   },
 ];
 
 export const HERO_STATS: HeroStat[] = [
   {
-    id: "stat-frontdesk",
-    value: "24/7",
-    label: "Front Desk Assistance",
-    icon: "lucide:headphones",
+    id: "stat-temple",
+    value: "2 min",
+    label: "Walk to Sai Baba Temple",
+    icon: "lucide:map-pin",
   },
   {
     id: "stat-wifi",
@@ -106,15 +106,15 @@ export const HERO_STATS: HeroStat[] = [
     icon: "lucide:wifi",
   },
   {
-    id: "stat-location",
-    value: "Central",
-    label: "Paharganj Location",
-    icon: "lucide:map-pin",
+    id: "stat-rooms",
+    value: "7",
+    label: "Room Categories",
+    icon: "lucide:bed-double",
   },
   {
     id: "stat-restaurant",
-    value: "On-Site",
-    label: "Indian & Chinese Restaurant",
+    value: "In-House",
+    label: "Vegetarian Restaurant",
     icon: "lucide:utensils",
   },
 ];
@@ -130,28 +130,28 @@ export const HERO_SOCIAL_LINKS: SocialLink[] = [
 
 export const TRUST_BADGES: TrustBadge[] = [
   {
+    id: "badge-temple",
+    icon: "lucide:map-pin",
+    label: "Close to Sai Baba Temple",
+    value: "Walkable",
+  },
+  {
     id: "badge-wifi",
     icon: "lucide:wifi",
     label: "Free Wi-Fi",
     value: "Complimentary",
   },
   {
-    id: "badge-ac",
-    icon: "lucide:snowflake",
-    label: "Air Conditioning",
-    value: "All Rooms",
-  },
-  {
-    id: "badge-frontdesk",
-    icon: "lucide:headphones",
-    label: "24-Hour Front Desk",
-    value: "Always Available",
+    id: "badge-parking",
+    icon: "lucide:car",
+    label: "Car Parking",
+    value: "Available",
   },
   {
     id: "badge-restaurant",
     icon: "lucide:utensils",
-    label: "On-Site Restaurant",
-    value: "Indian & Chinese",
+    label: "In-House Restaurant",
+    value: "Vegetarian",
   },
   {
     id: "badge-family",
@@ -160,16 +160,16 @@ export const TRUST_BADGES: TrustBadge[] = [
     value: "Comfortable Stays",
   },
   {
-    id: "badge-location",
-    icon: "lucide:map-pin",
-    label: "Prime Location",
-    value: "Paharganj, New Delhi",
+    id: "badge-ac",
+    icon: "lucide:snowflake",
+    label: "AC & Non-AC Rooms",
+    value: "All Options",
   },
 ];
 
 const whatsappPhone = SITE_INFO.whatsapp.replace(/\s+/g, "").replace("+", "");
 const whatsappMessage = [
-  "Hello The Queen's Head – Paharganj,",
+  "Hello Hotel Yogiraj, Shirdi,",
   "I would like to enquire about a booking.",
   "Name: ",
   "Check-in: ",

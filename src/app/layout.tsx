@@ -25,18 +25,20 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_INFO.name} | Hotel in Paharganj, New Delhi`,
+    default: `${SITE_INFO.name} | Hotel Near Sai Baba Temple, Shirdi`,
     template: `%s | ${SITE_INFO.name}`,
   },
   description: SITE_INFO.description,
   keywords: [
-    "hotel in Paharganj New Delhi",
-    "hotel near New Delhi Railway Station",
-    "The Queen's Head Paharganj",
-    "hotel in Chuna Mandi Delhi",
-    "rooms near Connaught Place",
-    "budget hotel Paharganj",
-    "The Queen's Head Delhi",
+    "hotel in Shirdi",
+    "hotels in Shirdi",
+    "Hotel Yogiraj Shirdi",
+    "hotel near Sai Baba Temple",
+    "hotel near Sai Baba Mandir Shirdi",
+    "budget hotel in Shirdi",
+    "family hotel in Shirdi",
+    "hotel near Shirdi temple",
+    "Shirdi hotel booking",
   ],
   applicationName: SITE_INFO.name,
   authors: [{ name: SITE_INFO.name }],
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_INFO.url,
     siteName: SITE_INFO.name,
-    title: `${SITE_INFO.name} | Hotel in Paharganj, New Delhi`,
+    title: `${SITE_INFO.name} | Hotel Near Sai Baba Temple, Shirdi`,
     description: SITE_INFO.description,
     images: [
       {
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_INFO.name} | Hotel in Paharganj, New Delhi`,
+    title: `${SITE_INFO.name} | Hotel Near Sai Baba Temple, Shirdi`,
     description: SITE_INFO.description,
     images: [`${SITE_INFO.url}/homehero1.png`],
   },

@@ -8,13 +8,13 @@ import { generateCanonicalUrl } from "@/utils/seo";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | The Queen's Head – Paharganj",
+  title: "Contact Us | Hotel Yogiraj, Shirdi",
   description:
-    "Get in touch with The Queen's Head – Paharganj. Contact us for bookings, inquiries, or assistance with your stay in Paharganj, New Delhi.",
+    "Get in touch with Hotel Yogiraj, Shirdi. Contact us for bookings, inquiries, or assistance with your stay near the Sai Baba Temple in Shirdi.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Us | The Queen's Head – Paharganj",
-    description: "Get in touch with The Queen's Head – Paharganj for bookings and inquiries.",
+    title: "Contact Us | Hotel Yogiraj, Shirdi",
+    description: "Get in touch with Hotel Yogiraj, Shirdi for bookings and inquiries.",
     url: generateCanonicalUrl("/contact"),
   },
 };

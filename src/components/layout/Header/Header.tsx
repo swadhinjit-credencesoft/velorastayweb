@@ -57,7 +57,7 @@ export default function Header() {
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={SITE_INFO.name}>
           <Image
-            src="/queenslogo.png"
+            src="/yogirajlogo.webp"
             alt={SITE_INFO.name}
             width={2000}
             height={3548}

@@ -8,7 +8,7 @@ export default function WhyChooseUs() {
     { value: `${SITE_INFO.rating}`, label: "Guest Rating", icon: "lucide:star" },
     { value: "24/7", label: "Front Desk", icon: "lucide:headphones" },
     { value: "Free", label: "Wi-Fi", icon: "lucide:wifi" },
-    { value: "Central", label: "Paharganj Location", icon: "lucide:map-pin" },
+    { value: "Central", label: "Near Sai Baba Temple", icon: "lucide:map-pin" },
   ];
 
   return (
@@ -30,13 +30,14 @@ export default function WhyChooseUs() {
           <div className={styles.contentCol}>
             <span className={styles.eyebrow}>Why Choose Us</span>
             <h2 className={`${styles.heading} font-oswald`}>
-              The Queen&apos;s Head Difference
+              Hotel Yogiraj Difference
             </h2>
             <p className={styles.description}>
-              From our central Paharganj location to comfortable rooms and dependable
-              24-hour service, every detail is designed to make your Delhi stay
-              simple and comfortable. We combine modern conveniences with warm
-              Indian hospitality to create a welcoming home away from home.
+              From our location near the Sai Baba Temple to comfortable rooms and
+              dependable 24-hour service, every detail is designed to make your
+              Shirdi stay simple and comfortable. We combine modern conveniences
+              with warm Indian hospitality to create a welcoming home away from
+              home for every pilgrim and traveller.
             </p>
 
             <div className={styles.statsGrid}>

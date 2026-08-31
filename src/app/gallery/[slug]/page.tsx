@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_CATEGORIES, GALLERY_IMAGES } from "@/data/gallery";
+import { SITE_INFO } from "@/data/site";
 
 type Props = { params: { slug: string } };
 
@@ -17,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = GALLERY_CATEGORIES.find((c) => c.slug === params.slug);
   if (!category) return { title: "Gallery Not Found" };
   return {
-    title: `${category.name} Gallery | The Queen's Head – Paharganj`,
-    description: `Photo gallery of ${category.name} at The Queen's Head – Paharganj, New Delhi.`,
+    title: `${category.name} Gallery | Hotel Yogiraj, Shirdi`,
+    description: `Photo gallery of ${category.name} at Hotel Yogiraj, Shirdi, Maharashtra.`,
     alternates: { canonical: `/gallery/${category.slug}` },
     openGraph: {
-      title: `${category.name} Gallery | The Queen's Head – Paharganj`,
-      description: `Photo gallery of ${category.name} at The Queen's Head – Paharganj.`,
-      url: `https://shivharehotelsandtravel.com/gallery/${category.slug}`,
+      title: `${category.name} Gallery | Hotel Yogiraj, Shirdi`,
+      description: `Photo gallery of ${category.name} at Hotel Yogiraj, Shirdi.`,
+      url: `${SITE_INFO.url}/gallery/${category.slug}`,
       images: [{ url: "/homehero2.png", alt: category.name }],
     },
   };
@@ -67,7 +68,7 @@ export default function GalleryCategoryPage({ params }: Props) {
           <Breadcrumb items={breadcrumbs} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">{category.name}</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
-            Photos of the {category.name.toLowerCase()} at The Queen&apos;s Head – Paharganj.
+            Photos of the {category.name.toLowerCase()} at Hotel Yogiraj, Shirdi.
           </p>
         </div>
       </section>

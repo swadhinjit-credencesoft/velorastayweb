@@ -12,8 +12,8 @@ RewriteEngine On
 ############################################
 
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.shivharehotelsandtravel\.com$ [NC]
-RewriteRule ^(.*)$ https://shivharehotelsandtravel.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.yogirajhotel\.com$ [NC]
+RewriteRule ^(.*)$ https://yogirajhotel.com/$1 [R=301,L]
 
 ############################################
 # REDIRECT OLD BRAND ROUTES TO NEW HOTEL ROUTES
@@ -24,8 +24,8 @@ RewriteRule ^villas/.+ /rooms [R=301,L]
 RewriteRule ^facilities/?$ /amenities [R=301,L]
 RewriteRule ^facilities/.+ /amenities [R=301,L]
 RewriteRule ^nearby/?$ /location [R=301,L]
-RewriteRule ^booking/?$ https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true [R=302,L]
-RewriteRule ^book-now/?$ https://bookone.io/Hotel-The-Queen-S-Head-Delhi?bookingEngine=true [R=302,L]
+RewriteRule ^booking/?$ https://bookone.io/Hotel-Yogiraj?bookingEngine=true [R=302,L]
+RewriteRule ^book-now/?$ https://bookone.io/Hotel-Yogiraj?bookingEngine=true [R=302,L]
 RewriteRule ^food-menu/?$ /restaurant [R=301,L]
 RewriteRule ^privacy/?$ /legal/privacy-policy [R=301,L]
 RewriteRule ^refund/?$ /legal/cancellation-policy [R=301,L]

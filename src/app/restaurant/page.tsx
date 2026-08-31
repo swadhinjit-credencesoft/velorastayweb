@@ -6,12 +6,12 @@ import { RESTAURANT_CONTENT, RESTAURANT_HIGHLIGHTS, RESTAURANT_DETAILS } from "@
 import { WHATSAPP_LINK } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Restaurant | Dining at The Queen's Head – Paharganj",
+  title: "Restaurant | Dining at Hotel Yogiraj, Shirdi",
   description:
-    "Dining at The Queen's Head – Paharganj. Enjoy Indian and Chinese cuisine at our on-site restaurant, with breakfast available on request.",
+    "Dining at Hotel Yogiraj, Shirdi. Enjoy pure vegetarian meals at our in-house restaurant, with complimentary breakfast for guests and 24-hour room service.",
   alternates: { canonical: "/restaurant" },
   openGraph: {
-    title: "Restaurant | The Queen's Head – Paharganj",
+    title: "Restaurant | Hotel Yogiraj, Shirdi",
     description: RESTAURANT_CONTENT.description,
   },
 };
@@ -57,8 +57,8 @@ export default function RestaurantPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">A Convenient Dining Option</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Our on-site restaurant serves Indian and Chinese cuisine, offering a convenient
-              dining option for hotel guests and visitors exploring Paharganj and Central Delhi.
+              Our in-house vegetarian restaurant offers a convenient dining option for
+              hotel guests and pilgrims visiting Shirdi and the Sai Baba Temple.
             </p>
             <ul className="space-y-3 mb-6">
               {RESTAURANT_HIGHLIGHTS.map((item) => (

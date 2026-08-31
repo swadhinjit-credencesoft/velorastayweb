@@ -5,15 +5,21 @@ import type {
 
 export const ROOMS_CONTENT: SectionContent = {
   eyebrow: "Rooms & Suites",
-  heading: "Rooms at The Queen's Head",
+  heading: "Rooms at Hotel Yogiraj",
   description:
-    "Relax in comfortable, air-conditioned accommodation in the heart of Paharganj. Each room is designed to provide the essential comforts travellers need during a Delhi stay.",
+    "Choose from comfortable AC and Non-AC rooms in Shirdi, from budget double rooms to spacious family-friendly four-bed rooms — all within easy reach of the Sai Baba Temple.",
 };
 
 export const ROOM_AMENITIES: RoomAmenity[] = [
   { id: "wifi", icon: "lucide:wifi", label: "Free Wi-Fi", category: "basic" },
+  { id: "air-condition", icon: "lucide:snowflake", label: "Air Conditioning", category: "comfort" },
+  { id: "free-parking", icon: "lucide:car", label: "Free Parking", category: "accessibility" },
+  { id: "24-hours-room-service", icon: "lucide:bell", label: "24-Hour Room Service", category: "comfort" },
+  { id: "non-smoking-room", icon: "lucide:ban", label: "Non-Smoking Room", category: "basic" },
+  { id: "restaurant", icon: "lucide:utensils", label: "Restaurant", category: "food" },
+  { id: "geyser", icon: "lucide:droplets", label: "Geyser (Hot Water)", category: "bathroom" },
   { id: "ac", icon: "lucide:snowflake", label: "Air Conditioning", category: "comfort" },
-  { id: "tv", icon: "lucide:tv", label: "Flat-Screen TV", category: "entertainment" },
+  { id: "tv", icon: "lucide:tv", label: "Satellite & Cable TV", category: "entertainment" },
   { id: "workdesk", icon: "lucide:desk", label: "Work Desk", category: "basic" },
   { id: "bathroom", icon: "lucide:shower-head", label: "Private Bathroom", category: "bathroom" },
   { id: "towels", icon: "lucide:droplets", label: "Towels", category: "bathroom" },
