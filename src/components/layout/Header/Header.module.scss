@@ -42,10 +42,6 @@
   @media (min-width: v.$bp-md) {
     height: 80px;
   }
-
-  .home & {
-    filter: invert(1);
-  }
 }
 
 .desktopNav {
