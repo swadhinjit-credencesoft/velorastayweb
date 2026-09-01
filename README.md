@@ -100,4 +100,4 @@ velorastayweb/
 ## Notes
 
 - Site images now use the real Hotel Yogiraj photos under `public/yogirajimg/` (gallery, pages, backgrounds, seo) and `public/nearby/` (Shirdi place photos). Legacy placeholder assets (`homehero*.png`, `whychooseus.png`, `schemaimg.png`, `deluxeroomimage/`, `PremiumDoubleRoom/`, `TripleSuitewithJacuzzi/`, `queenslogo.png`) have been removed. Note: room listing images come from the booking API (`ApiRoom.imageList`), not `public/`.
-- The nav/header logo still uses `public/yogirajlogo.webp` (the old Queen's Head mark). Replace it with a Hotel Yogiraj logo file and update `SITE_ASSETS.logo` plus the `src` refs in `Header.tsx`, `Footer.tsx` and `MobileNav.tsx`.
+- The nav/header logo still uses `public/yogirajlogo.png` (the old Queen's Head mark). Replace it with a Hotel Yogiraj logo file and update `SITE_ASSETS.logo` plus the `src` refs in `Header.tsx`, `Footer.tsx` and `MobileNav.tsx`.

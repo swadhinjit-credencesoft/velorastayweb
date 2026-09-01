@@ -58,7 +58,7 @@ export default function MobileNav() {
         <div className={styles.header}>
           <Link href="/" className={styles.logo} onClick={close}>
             <Image
-              src="/yogirajlogo.webp"
+              src="/yogirajlogo.png"
               alt={SITE_INFO.name}
               width={2000}
               height={3548}

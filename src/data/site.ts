@@ -53,7 +53,7 @@ export const SITE_ASSETS = {
     "/yogirajimg/AKS08604.avif",
     "/yogirajimg/AKS08582.avif",
   ] as const,
-  logo: "/yogirajlogo.webp",
+  logo: "/yogirajlogo.png",
   logoLight: "",
   favicon: "/favicon.ico",
   aboutImage: "/yogirajimg/01.avif",
