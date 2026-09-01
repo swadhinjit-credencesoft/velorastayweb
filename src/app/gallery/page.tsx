@@ -24,7 +24,7 @@ export default function GalleryPage() {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/homehero2.png"
+            src="/yogirajimg/AKS08545.avif"
             alt="Hotel Yogiraj, Shirdi gallery"
             fill
             className="object-cover"

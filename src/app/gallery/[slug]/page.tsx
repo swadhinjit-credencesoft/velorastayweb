@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${category.name} Gallery | Hotel Yogiraj, Shirdi`,
       description: `Photo gallery of ${category.name} at Hotel Yogiraj, Shirdi.`,
       url: `${SITE_INFO.url}/gallery/${category.slug}`,
-      images: [{ url: "/homehero2.png", alt: category.name }],
+      images: [{ url: "/yogirajimg/AKS08545.avif", alt: category.name }],
     },
   };
 }
@@ -56,7 +56,7 @@ export default function GalleryCategoryPage({ params }: Props) {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/homehero2.png"
+            src="/yogirajimg/AKS08545.avif"
             alt={category.name}
             fill
             className="object-cover"

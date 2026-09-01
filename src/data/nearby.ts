@@ -14,7 +14,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Shri Sai Baba Temple",
     description:
       "The sacred main temple of Shirdi housing the Samadhi of Shri Sai Baba — the heart of Shirdi and the primary destination for pilgrims.",
-    image: "/homehero1.png",
+    image: "/nearby/sai-baba-temple.jpg",
     distance: "Very close",
     travelTime: "Approx. 2 min walk",
     category: "Religious & Spiritual",
@@ -28,7 +28,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Dwarkamai",
     description:
       "A sacred mosque where Sai Baba lived and preached — a key pilgrimage site filled with spiritual significance.",
-    image: "/homehero2.png",
+    image: "/nearby/dwarkamai.jpg",
     distance: "Nearby",
     travelTime: "Short walk",
     category: "Religious & Spiritual",
@@ -42,7 +42,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Baba's Chavadi",
     description:
       "Where Sai Baba used to spend alternate nights — now a well-preserved shrine visited by devotees.",
-    image: "/homehero3.png",
+    image: "/nearby/chavadi.jpg",
     distance: "Nearby",
     travelTime: "Short walk",
     category: "Religious & Spiritual",
@@ -56,7 +56,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Shri Khandoba Mandir",
     description:
       "A temple dedicated to Lord Khandoba, located close to the Samadhi Mandir and visited as part of the Shirdi pilgrimage circuit.",
-    image: "/homehero1.png",
+    image: "/nearby/khandoba-mandir.jpg",
     distance: "Nearby",
     travelTime: "Walk / short auto ride",
     category: "Religious & Spiritual",
@@ -70,7 +70,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Sai Teerth Spiritual Theme Park",
     description:
       "A spiritual theme park showcasing the life and teachings of Sai Baba through light, sound and 3D shows.",
-    image: "/homehero2.png",
+    image: "/nearby/sai-teerth.jpg",
     distance: "Nearby",
     travelTime: "Short auto / car ride",
     category: "Theme Parks & Attractions",
@@ -84,7 +84,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Prasadalaya",
     description:
       "The Shri Sai Baba Sansthan's dining hall where free prasadam meals are served to thousands of devotees daily.",
-    image: "/homehero3.png",
+    image: "/nearby/prasadalaya.jpg",
     distance: "Approx. 2 km",
     travelTime: "Short walk / auto ride",
     category: "Religious & Spiritual",
@@ -98,7 +98,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "DakshinMukhi Hanuman Temple",
     description:
       "A dedicated temple of Lord Hanuman, popular among devotees visiting Shirdi.",
-    image: "/homehero1.png",
+    image: "/nearby/hanuman-temple.jpg",
     distance: "Nearby",
     travelTime: "Short walk",
     category: "Religious & Spiritual",
@@ -112,7 +112,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Sai Baba Statue & Heritage Village",
     description:
       "Large Sai Baba statues and the recreated heritage village offer a glimpse into Baba's era and teachings.",
-    image: "/homehero2.png",
+    image: "/nearby/sai-baba-statue.jpg",
     distance: "Nearby",
     travelTime: "Short auto / car ride",
     category: "Attractions",
@@ -126,7 +126,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Shirdi Airport (SAG)",
     description:
       "Shirdi Airport connects the pilgrim town with several Indian cities, including flights from major metros.",
-    image: "/homehero3.png",
+    image: "/nearby/shirdi-airport.jpg",
     distance: "Approx. 15 km",
     travelTime: "Approx. 30–40 min drive",
     category: "Transport Hubs",
@@ -140,7 +140,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     name: "Shirdi Bus Station",
     description:
       "The main bus stand of Shirdi, approximately 200 m from the hotel, connecting the town with surrounding cities.",
-    image: "/homehero1.png",
+    image: "/nearby/bus-station.jpg",
     distance: "Approx. 200 m",
     travelTime: "Approx. 3 min walk",
     category: "Transport Hubs",
