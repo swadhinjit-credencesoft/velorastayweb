@@ -49,20 +49,20 @@ export const SOCIAL_LINKS: SocialLinks = {
 
 export const SITE_ASSETS = {
   heroImages: [
-    "/homehero1.png",
-    "/homehero2.png",
-    "/homehero3.png",
+    "/yogirajimg/AKS08567.avif",
+    "/yogirajimg/AKS08604.avif",
+    "/yogirajimg/AKS08582.avif",
   ] as const,
   logo: "/yogirajlogo.webp",
   logoLight: "",
   favicon: "/favicon.ico",
   aboutImage: "/yogirajimg/01.avif",
-  roomsPreviewImage: "/homehero2.png",
-  diningImage: "/homehero3.png",
-  eventsImage: "/homehero1.png",
-  contactMapImage: "/homehero2.png",
-  testimonialBackground: "/homehero1.png",
-  notFoundImage: "/whychooseus.png",
+  roomsPreviewImage: "/yogirajimg/AKS08605.avif",
+  diningImage: "/yogirajimg/AKS08641.avif",
+  eventsImage: "/yogirajimg/AKS08587.avif",
+  contactMapImage: "/yogirajimg/4.avif",
+  testimonialBackground: "/yogirajimg/AKS08625.avif",
+  notFoundImage: "/yogirajimg/AKS08545.avif",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [

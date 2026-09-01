@@ -15,7 +15,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Stay connected throughout your visit with complimentary fast Wi-Fi across the hotel.",
     icon: "lucide:wifi",
-    image: "/homehero1.png",
+    image: "/yogirajimg/AKS08582.avif",
     features: ["Complimentary", "All rooms", "Fast connection"],
     category: "basic",
   },
@@ -26,7 +26,7 @@ export const FACILITIES: Facility[] = [
     description:
       "AC rooms are available for a cool and comfortable stay.",
     icon: "lucide:snowflake",
-    image: "/homehero2.png",
+    image: "/yogirajimg/AKS08605.avif",
     features: ["AC rooms", "Comfort climate control"],
     category: "comfort",
   },
@@ -37,7 +37,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Relax in your room with in-room television entertainment via satellite and cable.",
     icon: "lucide:tv",
-    image: "/homehero1.png",
+    image: "/yogirajimg/AKS08584.avif",
     features: ["In-room entertainment", "Satellite & cable channels"],
     category: "entertainment",
   },
@@ -48,7 +48,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Enjoy delicious vegetarian meals at our in-house restaurant, including a complimentary breakfast buffet.",
     icon: "lucide:utensils",
-    image: "/homehero3.png",
+    image: "/yogirajimg/AKS08641.avif",
     features: ["Vegetarian cuisine", "Breakfast buffet", "Complimentary breakfast"],
     category: "services",
   },
@@ -59,7 +59,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Our room service is available 24 hours to assist guests with dining and requests.",
     icon: "lucide:bell",
-    image: "/homehero1.png",
+    image: "/yogirajimg/AKS08587.avif",
     features: ["Round-the-clock", "Dining in your room"],
     category: "service",
   },
@@ -70,7 +70,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Free car parking is available for guests travelling by their own vehicle.",
     icon: "lucide:car",
-    image: "/deluxeroomimage/DeluxeDoubleRoom1.png",
+    image: "/yogirajimg/AKS08545.avif",
     features: ["On-site parking", "Free for guests"],
     category: "transport",
   },
@@ -81,7 +81,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Our front desk operates 24 hours to assist guests with their stay, bookings, temple guidance and local information.",
     icon: "lucide:headphones",
-    image: "/homehero1.png",
+    image: "/yogirajimg/AKS08567.avif",
     features: ["Always available", "Check-in & check-out assistance", "Temple guidance"],
     category: "service",
   },
@@ -92,7 +92,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Enjoy hot water in your bathroom thanks to in-room geysers.",
     icon: "lucide:droplets",
-    image: "/homehero2.png",
+    image: "/yogirajimg/AKS08614.avif",
     features: ["Hot water", "Private bathrooms"],
     category: "bathroom",
   },
@@ -103,7 +103,7 @@ export const FACILITIES: Facility[] = [
     description:
       "A convenient coffee machine is available for guests' refreshment.",
     icon: "lucide:coffee",
-    image: "/homehero2.png",
+    image: "/yogirajimg/AKS08635.avif",
     features: ["Coffee & refreshments", "Convenient location"],
     category: "services",
   },
@@ -114,7 +114,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Convenient digital and card payment options are accepted at the hotel.",
     icon: "lucide:credit-card",
-    image: "/homehero1.png",
+    image: "/yogirajimg/AKS08625.avif",
     features: ["Card payments", "Digital payments"],
     category: "services",
   },
@@ -125,7 +125,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Power backup ensures uninterrupted comfort during your stay.",
     icon: "lucide:zap",
-    image: "/homehero2.png",
+    image: "/yogirajimg/3.avif",
     features: ["Uninterrupted power", "Reliable supply"],
     category: "service",
   },
@@ -136,7 +136,7 @@ export const FACILITIES: Facility[] = [
     description:
       "CCTV cameras are installed for the safety and security of guests.",
     icon: "lucide:camera",
-    image: "/homehero1.png",
+    image: "/yogirajimg/AKS08604.avif",
     features: ["24-hour surveillance", "Guest safety"],
     category: "safety",
   },
@@ -147,7 +147,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Fire extinguishers are available across the property for guest safety.",
     icon: "lucide:flame",
-    image: "/homehero2.png",
+    image: "/yogirajimg/4.avif",
     features: ["Fire safety", "Guest protection"],
     category: "safety",
   },
@@ -158,7 +158,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Regular housekeeping keeps your room fresh and comfortable throughout your stay.",
     icon: "lucide:sparkles",
-    image: "/homehero1.png",
+    image: "/yogirajimg/01.avif",
     features: ["Daily cleaning", "Fresh towels & linen"],
     category: "service",
   },

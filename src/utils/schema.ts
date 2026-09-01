@@ -25,7 +25,7 @@ export function generateHotelSchema() {
     priceRange: "₹1000 - ₹2999",
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
-    image: `${SITE_INFO.url}/schemaimg.png`,
+    image: `${SITE_INFO.url}/yogirajimg/AKS08545.avif`,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
