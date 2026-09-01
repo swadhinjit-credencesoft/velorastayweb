@@ -7,3 +7,144 @@
 
  ✓ Starting...
  ✓ Ready in 2.8s
+ ○ Compiling / ...
+ ✓ Compiled /restaurant in 30.1s (748 modules)
+ ○ Compiling /location ...
+ ✓ Compiled /about in 3.6s (738 modules)
+ ✓ Compiled /_not-found in 364ms (741 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 805ms
+ GET /_next/static/css/app/rooms/page.css?v=1788265526399 404 in 840ms
+ ✓ Compiled in 39ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 619ms (327 modules)
+ ⨯ TypeError: Cannot read properties of undefined (reading 'clientModules')
+    at C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:40:25679
+    at C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\lib\trace\tracer.js:191:62
+    at C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\lib\trace\tracer.js:140:36
+    at NoopContextManager.with (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NoopTracer.startActiveSpan (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18093)
+    at ProxyTracer.startActiveSpan (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18854)
+    at C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\lib\trace\tracer.js:122:103
+    at NoopContextManager.with (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NextTracerImpl.trace (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\lib\trace\tracer.js:122:28)
+    at C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\lib\trace\tracer.js:191:31
+    at ne (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:1678)
+    at async doRender (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\base-server.js:1427:30)
+    at async cacheEntry.responseCache.get.routeKind (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\base-server.js:1588:28) {
+  page: '/about'
+}
+ ○ Compiling / ...
+ ✓ Compiled / in 5.5s (963 modules)
+ ⨯ C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\vendor-chunks\next.js:42
+eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\n0 && (0);\nfunction _export(target, all)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+    at Module._compile (node:internal/modules/cjs/loader:1495:20)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at mod.require (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:182:18)
+    at __webpack_require__.f.require (C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\webpack-runtime.js:198:28)
+    at C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\webpack-runtime.js:162:22)
+    at C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\pages\_document.js:63:47
+    at Object.<anonymous> (C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\pages\_document.js:66:3)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at mod.require (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:182:18)
+    at requirePage (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js:109:84)
+    at C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\next-server.js:714:36)
+ GET /about 500 in 18883ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 927ms (420 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1696ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/amenities/page' in C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/amenities/page' in 'C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/amenities/page (expected C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js)
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\handle-externals.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\handle-externals.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/restaurant/page' in C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\restaurant\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/restaurant/page' in 'C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/restaurant/page (expected C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\restaurant\page.js)
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\handle-externals.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\handle-externals.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/amenities/page' in C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/amenities/page' in 'C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/amenities/page (expected C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js)
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/restaurant/page' in C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\restaurant\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/restaurant/page' in 'C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/restaurant/page (expected C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\restaurant\page.js)
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+ ✓ Compiled in 270ms (48 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/amenities/page' in C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/amenities/page' in 'C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/amenities/page (expected C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\amenities\page.js)
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/restaurant/page' in C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\restaurant\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/restaurant/page' in 'C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/restaurant/page (expected C:\Users\hp\Documents\GitHub\velorastayweb\.next\server\app\restaurant\page.js)
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\hp\Documents\GitHub\velorastayweb\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js

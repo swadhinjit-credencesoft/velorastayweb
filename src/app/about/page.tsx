@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { SITE_INFO, WHATSAPP_LINK } from "@/data/site";
+import { SITE_INFO, BOOKING_URL } from "@/data/site";
 import { ABOUT_STORY, ABOUT_MISSION, ABOUT_VISION } from "@/data/about";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/schema";
 
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-4">Experience The Hotel Yogiraj Difference</h2>
           <p className="mb-6 opacity-90">Book your stay and discover why guests keep coming back.</p>
           <a
-            href={WHATSAPP_LINK}
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"

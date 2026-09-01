@@ -17,7 +17,7 @@ export const ABOUT_STORY: AboutStory = {
     "Our hotel blends modern conveniences with traditional hospitality, offering clean and comfortable AC and Non-AC rooms, free Wi-Fi, an in-house vegetarian restaurant, car parking, a geyser for hot water and a 24-hour front desk.\n\n" +
     "Conveniently located near Shirdi Bus Station and easily reachable from Shirdi Airport and the railway station, Hotel Yogiraj is an ideal choice for your Shirdi stay.\n\n" +
     "Whether you are visiting for darshan at the Sai Baba Temple, a family trip or a short city break, Hotel Yogiraj provides a comfortable, serene place to rest and rejuvenate.",
-  image: "/yogirajimg/AKS08614.avif",
+  image: "/yogirajimg/01.avif",
 };
 
 export const ABOUT_MISSION: AboutMission = {
