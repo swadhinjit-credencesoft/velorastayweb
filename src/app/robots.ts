@@ -4,7 +4,7 @@ import { SITE_INFO } from "@/data/site";
 export const dynamic = "force-static";
 
 export function generateStaticParams() {
-  return [{ __metadata_id__: "robots.txt" }];
+  return [{ __metadata_id__: ["robots.txt"] }];
 }
 
 export default function robots(): MetadataRoute.Robots {

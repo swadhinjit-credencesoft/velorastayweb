@@ -1,4 +1,3 @@
-import type { MetadataRoute } from "next";
 import { SITE_INFO } from "@/data/site";
 import { VILLAS } from "@/data/villas";
 import { FACILITIES } from "@/data/facilities";
@@ -9,12 +8,6 @@ import { LEGAL_PAGES } from "@/data/legal";
 
 const BASE_URL = SITE_INFO.url;
 const NOW = new Date();
-
-export const dynamic = "force-static";
-
-export function generateStaticParams() {
-  return [{ __metadata_id__: "sitemap.xml" }];
-}
 
 type ChangeFrequency =
   | "always"
@@ -61,63 +54,78 @@ const staticPages: {
   { path: "/explore/virtual-tour", priority: 0.4, changeFrequency: "yearly" },
 ];
 
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 function entry(
   path: string,
   priority: number,
   changeFrequency: ChangeFrequency,
   lastModified?: Date
-): MetadataRoute.Sitemap[number] {
-  const url = `${BASE_URL}${path}`;
-  return {
-    url,
-    lastModified: lastModified ?? NOW,
-    changeFrequency,
-    priority,
-    alternates: { languages: { en: url } },
-  };
+): string {
+  const url = escapeXml(`${BASE_URL}${path}`);
+  return [
+    "  <url>",
+    `    <loc>${url}</loc>`,
+    `    <lastmod>${(lastModified ?? NOW).toISOString()}</lastmod>`,
+    `    <changefreq>${changeFrequency}</changefreq>`,
+    `    <priority>${priority.toFixed(1)}</priority>`,
+    "  </url>",
+  ].join("\n");
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries = staticPages.map((page) =>
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return [];
+}
+
+export function GET() {
+  const entries: string[] = staticPages.map((page) =>
     entry(page.path, page.priority, page.changeFrequency)
   );
 
-  const villaEntries = VILLAS.map((villa) =>
-    entry(`/rooms/${villa.slug}`, 0.9, "weekly")
-  );
+  VILLAS.forEach((villa) => {
+    entries.push(entry(`/rooms/${villa.slug}`, 0.9, "weekly"));
+  });
 
-  const facilityEntries = FACILITIES.map((facility) =>
-    entry(`/facilities/${facility.slug}`, 0.7, "yearly")
-  );
+  FACILITIES.forEach((facility) => {
+    entries.push(entry(`/facilities/${facility.slug}`, 0.7, "yearly"));
+  });
 
-  const nearbyEntries = NEARBY_ATTRACTIONS.map((attraction) =>
-    entry(`/nearby/${attraction.slug}`, 0.7, "yearly")
-  );
+  NEARBY_ATTRACTIONS.forEach((attraction) => {
+    entries.push(entry(`/nearby/${attraction.slug}`, 0.7, "yearly"));
+  });
 
-  const tourEntries = TOUR_PACKAGES.map((tour) =>
-    entry(`/tours/${tour.slug}`, 0.8, "monthly")
-  );
+  TOUR_PACKAGES.forEach((tour) => {
+    entries.push(entry(`/tours/${tour.slug}`, 0.8, "monthly"));
+  });
 
-  const blogEntries = BLOG_POSTS.map((post) =>
-    entry(
-      `/blog/${post.slug}`,
-      0.7,
-      "monthly",
-      new Date(post.publishedAt)
-    )
-  );
+  BLOG_POSTS.forEach((post) => {
+    entries.push(
+      entry(`/blog/${post.slug}`, 0.7, "monthly", new Date(post.publishedAt))
+    );
+  });
 
-  const legalEntries = LEGAL_PAGES.map((page) =>
-    entry(`/legal/${page.slug}`, 0.3, "yearly")
-  );
+  LEGAL_PAGES.forEach((page) => {
+    entries.push(entry(`/legal/${page.slug}`, 0.3, "yearly"));
+  });
 
-  return [
-    ...staticEntries,
-    ...villaEntries,
-    ...facilityEntries,
-    ...nearbyEntries,
-    ...tourEntries,
-    ...blogEntries,
-    ...legalEntries,
-  ];
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...entries,
+    "</urlset>",
+    "",
+  ].join("\n");
+
+  return new Response(xml, {
+    headers: { "Content-Type": "application/xml; charset=utf-8" },
+  });
 }
