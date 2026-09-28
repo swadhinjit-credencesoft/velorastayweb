@@ -8,13 +8,13 @@ import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import styles from "./Gallery.module.scss";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Velora Stays Lonavala",
+  title: "Photo Gallery | Bishnu Bhaban",
   description:
-    "Browse stunning photos of Velora Stays — our elegant villas, fine dining, event spaces, and the vibrant city of Lonavala. A visual journey through our villa and destination.",
+    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk at the West Gate of the Jagannath Temple, the guest rooms, the dining area, and the common areas.",
   alternates: { canonical: "/explore/gallery" },
   openGraph: {
-    title: "Photo Gallery | Velora Stays Lonavala",
-    description: "Explore our villa and Lonavala through stunning photographs.",
+    title: "Photo Gallery | Bishnu Bhaban",
+    description: "A look at the property before you book.",
     url: `${SITE_INFO.url}/explore/gallery`,
   },
 };
@@ -41,8 +41,8 @@ export default function GalleryPage() {
           <p className={styles.eyebrow}>Explore</p>
           <h1 className={styles.title}>Gallery</h1>
           <p className={styles.subtitle}>
-            A visual journey through Velora Stays and the enchanting city of
-            Lonavala. Browse our curated collection of photographs.
+            A look around the property before you book. If you want to see a specific
+            room, ask the front desk and we will show you.
           </p>
         </div>
       </section>

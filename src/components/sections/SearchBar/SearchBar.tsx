@@ -10,12 +10,12 @@ import {
   setRooms,
   setSelectedRoomId,
 } from "@/store/slices/bookingSlice";
-import { useVeloraData } from "@/hooks/useVeloraData";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import { VILLAS } from "@/data/villas";
 import Icon from "@/components/Icon/Icon";
 import styles from "./SearchBar.module.scss";
 
-const BOOKING_BASE = "https://bookone.io/Velora-Stays";
+const BOOKING_BASE = "https://bookone.io/Bishnu-Bhavan";
 
 interface SearchBarProps {
   variant?: "hero" | "compact";
@@ -80,7 +80,7 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
     }
   }, [checkIn, dispatch]);
 
-  const { villas, error } = useVeloraData();
+  const { villas, error } = useBhabanData();
   const villaOptions = [...(!error && villas.length > 0 ? villas : VILLAS)]
     .sort((a, b) => a.bedrooms - b.bedrooms)
     .map((villa) => ({ value: villa.slug, label: villa.name }));

@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const villa = getVillaBySlug(params.slug);
   if (!villa) return { title: "Gallery Not Found" };
   return {
-    title: `${villa.name} Gallery | Velora Stays`,
-    description: `Photo gallery of ${villa.name} at Velora Stays. ${villa.tagline}.`,
+    title: `${villa.name} Gallery | Bishnu Bhaban`,
+    description: `Photo gallery of ${villa.name} at Bishnu Bhaban. ${villa.tagline}.`,
     alternates: { canonical: `/gallery/${villa.slug}` },
     openGraph: {
-      title: `${villa.name} Gallery | Velora Stays`,
+      title: `${villa.name} Gallery | Bishnu Bhaban`,
       description: villa.tagline,
-      url: `https://velorastays.in/gallery/${villa.slug}`,
+      url: `https://bishnubhaban.com/gallery/${villa.slug}`,
       images: [{ url: villa.images[0]?.src || "/heroimg2.jpeg", alt: villa.name }],
     },
   };

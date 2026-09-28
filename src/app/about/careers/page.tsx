@@ -5,12 +5,12 @@ import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "Careers at Velora Stays | Join Our Team",
-  description: "Explore career opportunities at Velora Stays. Join our growing team of hospitality professionals in Lonavala.",
+  title: "Careers at Bishnu Bhaban | Join Our Team",
+    description: "Career opportunities at Bishnu Bhaban. Join our small team running a budget hotel at the West Gate of the Jagannath Temple in Puri.",
   alternates: { canonical: "/about/careers" },
   openGraph: {
-    title: "Careers at Velora Stays",
-    description: "Explore career opportunities at Velora Stays. Join our growing team of hospitality professionals in Lonavala.",
+    title: "Careers at Bishnu Bhaban",
+  description: "Career opportunities at Bishnu Bhaban. Join our small team running a budget hotel at the West Gate of the Jagannath Temple in Puri.",
   },
 };
 
@@ -21,7 +21,7 @@ export default function CareersPage() {
       <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Careers", href: "/about/careers" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Careers at Velora Stays</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Careers at Bishnu Bhaban</h1>
           <p className="mt-3 text-gray-300">Join our growing team and build your career in hospitality.</p>
         </div>
       </section>
@@ -30,7 +30,7 @@ export default function CareersPage() {
           <div className="bg-gray-50 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Work With Us?</h2>
             <p className="text-gray-600 leading-relaxed">
-              At Velora Stays, our team is our greatest asset. We foster a supportive, inclusive, and growth-oriented work environment where every team member has the opportunity to learn, develop, and advance their career in hospitality. We offer competitive compensation, ongoing training programs, and a culture that values innovation and teamwork.
+              At Bishnu Bhaban, our team is our greatest asset. We foster a supportive, inclusive, and growth-oriented work environment where every team member has the opportunity to learn, develop, and advance their career in hospitality. We offer competitive compensation, ongoing training programs, and a culture that values innovation and teamwork.
             </p>
           </div>
           <div className="bg-amber-50 rounded-xl p-8">

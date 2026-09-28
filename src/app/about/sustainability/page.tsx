@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { SUSTAINABILITY } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Sustainability | Velora Stays",
-  description: "Learn about Velora Stays' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+  title: "Sustainability | Bishnu Bhaban",
+  description: "Learn about Bishnu Bhaban' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
   alternates: { canonical: "/about/sustainability" },
   openGraph: {
-    title: "Sustainability | Velora Stays",
-    description: "Learn about Velora Stays' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+    title: "Sustainability | Bishnu Bhaban",
+    description: "Learn about Bishnu Bhaban' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
   },
 };
 

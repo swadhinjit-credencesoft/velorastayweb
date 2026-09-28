@@ -10,75 +10,84 @@ const TOUR_AREAS = [
     id: "entrance",
     label: "Entrance",
     icon: "lucide:door-open",
-    title: "Welcome Pavilion",
+    title: "Entrance & Front Desk",
     description:
-      "Step through the villa gates into a welcoming space where the beauty of the Sahyadri mountains and the tranquility of Pawna Lake set the tone for your stay. Traditional Maharashtrian hospitality meets modern comfort.",
+      "You come in through a gate on Grand Road, a short walk from the West Gate of the Jagannath Temple. The front desk is staffed from 7:00 AM to 11:00 PM, so if you are arriving very late or leaving before dawn, call ahead and we will arrange it.",
     highlights: [
-      "Personalised welcome by caretaker",
-      "Complimentary welcome refreshments",
-      "Open-air seating with mountain views",
-      "Traditional Maharashtrian decor",
-      "Luggage assistance and parking",
+      "Front desk 7:00 AM to 11:00 PM",
+      "Luggage storage before check-in or after check-out",
+      "CCTV covering entry and exit points",
+      "A few minutes' walk to the temple gate",
     ],
   },
   {
-    id: "deluxe-villa",
-    label: "Luxury Villa",
+    id: "standard-room",
+    label: "Standard Room",
     icon: "lucide:bed-double",
-    title: "Luxury Villa",
+    title: "Standard Room",
     description:
-      "Experience our beautifully appointed Luxury Villa featuring plush bedding, modern amenities, and thoughtful design. Every detail is curated for your comfort, from the premium linens to the ambient lighting.",
+      "The straightforward option, and the one most of our guests book. Air-conditioned, with an attached western-style bathroom, hot water at any hour, television, and free WiFi. Cleaned daily whether or not the previous guest checked out.",
     highlights: [
-      "King-size premium mattress",
-      "Rain shower bathroom",
-      "Smart TV with streaming",
-      "High-speed WiFi",
-      "Private balcony with lake view",
+      "Air conditioning",
+      "Attached western-style bathroom",
+      "24-hour hot water",
+      "Television and free WiFi",
+    ],
+  },
+  {
+    id: "deluxe-room",
+    label: "Deluxe Room",
+    icon: "lucide:bed-double",
+    title: "Deluxe Room",
+    description:
+      "More space than the Standard Room, for guests who are spending several days in Puri and would like somewhere slightly less compact to work and unwind. Same cleaning standard, same facilities, more room to move around.",
+    highlights: [
+      "Larger layout than the Standard Room",
+      "Air conditioning",
+      "Attached western-style bathroom",
+      "Television and free WiFi",
     ],
   },
   {
     id: "dining",
-    label: "Dining Area",
+    label: "Dining",
     icon: "lucide:utensils",
-    title: "Private  Central Kitchen",
+    title: "Dining",
     description:
-      "Our  Central Kitchen and BBQ area offers a culinary experience through local and international cuisines. Cook with the freshest local ingredients or enjoy our curated meal packages in an inviting, elegant setting.",
+      "Our in-house kitchen prepares Odia home cooking alongside North Indian options. Meals are ordered separately and can be added to your booking. If you are leaving before four in the morning for darshan, tell us the night before and we will have breakfast ready early.",
     highlights: [
-      "Fully equipped modern kitchen",
-      "BBQ grill and outdoor dining",
-      "Private dining on the lawn",
-      "Curated meal packages available",
-      "Bonfire dinner experience",
+      "Odia and North Indian home cooking",
+      "Vegetarian and Jain food on advance request",
+      "Meal plans available with your booking",
+      "Early breakfast arranged on request",
     ],
   },
   {
-    id: "rooftop",
-    label: "Rooftop",
-    icon: "lucide:sun",
-    title: "Rooftop Terrace",
+    id: "multi-bed-room",
+    label: "Multi-Bed Room",
+    icon: "lucide:users",
+    title: "Multi-Bed Room",
     description:
-      "Escape to our rooftop terrace for panoramic views of the Sahyadri mountains and Pawna Lake. Perfect for evening stargazing, sunset photography, or simply unwinding under the stars after a day of exploration.",
+      "The practical choice for families and groups who would rather stay together than split across properties. Tell us how many people you are and who needs what kind of bed, and we will allocate the right room before you arrive.",
     highlights: [
-      "Panoramic mountain and lake views",
-      "Sunset views over Pawna Lake",
-      "Open-air lounge seating",
-      "Perfect for photography",
-      "Evening ambiance lighting",
+      "Multiple beds in one room",
+      "Suitable for families and groups",
+      "Room allocation based on your requirements",
+      "Air conditioning and attached bathroom",
     ],
   },
   {
-    id: "garden",
-    label: "Garden",
-    icon: "lucide:trees",
-    title: "Garden Courtyard",
+    id: "common",
+    label: "Common Areas",
+    icon: "lucide:sofa",
+    title: "Common Areas",
     description:
-      "Our serene garden courtyard offers a peaceful retreat surrounded by nature. Lush greenery, a gentle water feature, and comfortable seating create a tranquil oasis for relaxation.",
+      "Shared space at the front of the property, used mostly for waiting, luggage, and asking the front desk about temple timings. Grand Road closes to traffic in the evening, so it is worth asking us before booking a car for that window.",
     highlights: [
-      "Lush tropical landscaping",
-      "Water feature and seating",
-      "Morning yoga space",
-      "Perfect for reading",
-      "Evening ambient lighting",
+      "Seating near the front desk",
+      "Help with darshan and travel timings",
+      "Laundry available on request",
+      "Local maps and contacts",
     ],
   },
 ];
@@ -100,7 +109,7 @@ export default function VirtualTourViewer() {
           <p className={styles.eyebrow}>Explore</p>
           <h1 className={styles.title}>Virtual Tour</h1>
           <p className={styles.subtitle}>
-            Take an immersive 360° virtual tour of Velora Stays from anywhere
+            Take an immersive 360° virtual tour of Bishnu Bhaban from anywhere
             in the world. Explore our spaces before you arrive.
           </p>
         </div>

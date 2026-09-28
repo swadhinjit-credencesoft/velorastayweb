@@ -58,7 +58,7 @@ export default function VillaPricing({
       </div>
 
       <a
-        href="https://bookone.io/Velora-Stays?bookingEngine=true"
+        href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true"
         className={`${styles.bookButton} ${styles.accentButton}`}
         target="_blank"
         rel="noopener noreferrer"

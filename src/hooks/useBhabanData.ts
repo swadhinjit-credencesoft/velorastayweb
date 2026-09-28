@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import { getProperty, mapPropertyVillas, type TmProperty } from "@/lib/api/thehotelmate";
 import type { VillaType } from "@/types";
 
-interface VeloraData {
+interface BhabanData {
   property: TmProperty | null;
   villas: VillaType[];
   loading: boolean;
   error: Error | null;
 }
 
-export function useVeloraData(): VeloraData {
+export function useBhabanData(): BhabanData {
   const [property, setProperty] = useState<TmProperty | null>(null);
   const [villas, setVillas] = useState<VillaType[]>([]);
   const [error, setError] = useState<Error | null>(null);
@@ -58,7 +58,7 @@ export function useVillaBySlug(slug: string): {
   loading: boolean;
   error: Error | null;
 } {
-  const { villas, loading, error } = useVeloraData();
+  const { villas, loading, error } = useBhabanData();
   const villa = villas.find((v) => v.slug === slug);
   return { villa, loading, error };
 }

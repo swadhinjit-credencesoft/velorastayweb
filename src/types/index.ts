@@ -261,7 +261,7 @@ export interface Facility {
   images?: string[];
   features: string[];
   timing?: string;
-  category: "outdoor" | "entertainment" | "kitchen" | "service" | "bathroom" | "comfort" | "transport" | "services" | "safety" | "family" | "basic";
+  category: "outdoor" | "entertainment" | "kitchen" | "service" | "bathroom" | "comfort" | "transport" | "services" | "safety" | "family" | "basic" | "location";
 }
 
 // ─── Experiences ──────────────────────────────────────────

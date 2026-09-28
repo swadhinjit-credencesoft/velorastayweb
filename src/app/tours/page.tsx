@@ -7,19 +7,19 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { TOUR_PACKAGES, TOURS_CONTENT } from "@/data/tours";
 
 export const metadata: Metadata = {
-  title: "Lonavala Tour Packages | Velora Stays",
+  title: "Day Plans for Puri | Bishnu Bhaban",
   description:
-    "Explore Lonavala with curated tour packages from Velora Stays. City tours, heritage walks, food trails, temple tours, photography tours, and more.",
+    "Practical day plans for guests staying at Bishnu Bhaban in Puri: temple and Grand Road timings, a Konark day trip, and a beach and bazaar day.",
   keywords: [
-    "Lonavala tour packages",
-    "Lonavala sightseeing",
-    "city tour Lonavala",
-    "heritage walk Lonavala",
-    "food trail Lonavala",
+    "Puri day plan",
+    "Konark day trip from Puri",
+    "Puri beach guide",
+    "Jagannath Temple timings",
+    "Puri itinerary",
   ],
   alternates: { canonical: "/tours" },
   openGraph: {
-    title: "Lonavala Tour Packages | Velora Stays",
+    title: "Day Plans for Puri | Bishnu Bhaban",
     description: TOURS_CONTENT.description,
   },
 };
@@ -30,13 +30,13 @@ export default function ToursPage() {
       <JsonLd
         schema={generateBreadcrumbSchema([
           { name: "Home", url: "/" },
-          { name: "Tours", url: "/tours" },
+          { name: "Day Plans", url: "/tours" },
         ])}
       />
 
       <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Tours", href: "/tours" }]} />
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Day Plans", href: "/tours" }]} />
           <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">
             {TOURS_CONTENT.eyebrow}
           </p>
@@ -78,16 +78,24 @@ export default function ToursPage() {
                   <p className="mt-2 text-gray-600 text-sm line-clamp-2">{tour.description}</p>
                   <div className="flex items-center justify-between mt-4">
                     <div>
-                      <span className="text-2xl font-bold text-gray-900">
-                        {tour.currency}{tour.price}
-                      </span>
-                      {tour.originalPrice && (
-                        <span className="ml-2 text-sm text-gray-400 line-through">
-                          {tour.currency}{tour.originalPrice}
-                        </span>
+                      {tour.price > 0 ? (
+                        <>
+                          <span className="text-2xl font-bold text-gray-900">
+                            {tour.currency}
+                            {tour.price}
+                          </span>
+                          {tour.originalPrice && (
+                            <span className="ml-2 text-sm text-gray-400 line-through">
+                              {tour.currency}
+                              {tour.originalPrice}
+                            </span>
+                          )}
+                        </>
+                      ) : (
+                        <span className="text-lg font-bold text-gray-900">Planning guide</span>
                       )}
                     </div>
-                    <span className="text-sm text-gray-500">{tour.groupSize} guests</span>
+                    <span className="text-sm text-gray-500">{tour.groupSize}</span>
                   </div>
                 </div>
               </Link>

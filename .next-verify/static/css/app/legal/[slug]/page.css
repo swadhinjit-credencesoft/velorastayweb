@@ -1,0 +1,62 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[9].use[5]!./src/components/layout/Breadcrumb/Breadcrumb.module.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Breadcrumb_breadcrumb__ZRSMG {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 640px) {
+  .Breadcrumb_breadcrumb__ZRSMG {
+    padding-inline: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .Breadcrumb_breadcrumb__ZRSMG {
+    padding-inline: 64px;
+  }
+}
+.Breadcrumb_breadcrumb__ZRSMG {
+  padding-block: 16px;
+}
+
+.Breadcrumb_list__PwSDK {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Breadcrumb_item___i0FR {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.Breadcrumb_separator__25VSy {
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.Breadcrumb_link__yHIgL {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.Breadcrumb_link__yHIgL:hover {
+  color: #fff;
+}
+
+.Breadcrumb_current__TLKHR {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}

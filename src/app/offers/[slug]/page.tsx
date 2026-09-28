@@ -23,11 +23,11 @@ export function generateStaticParams() {
 //   const offer = getOfferBySlug(params.slug);
 //   if (!offer) return { title: "Offer Not Found" };
 //   return {
-//     title: `${offer.name} | Velora Stays Offers`,
+//     title: `${offer.name} | Bishnu Bhaban Offers`,
 //     description: offer.description,
 //     alternates: { canonical: `/offers/${offer.slug}` },
 //     openGraph: {
-//       title: `${offer.name} | Velora Stays`,
+//       title: `${offer.name} | Bishnu Bhaban`,
 //       description: offer.tagline,
 //       images: [{ url: offer.image, width: 1200, height: 630, alt: offer.name }],
 //     },
@@ -115,7 +115,7 @@ export default function OfferDetailPage() {
               <hr className={styles.sidebarDivider} />
               <p className={styles.sidebarLabel}>Use promo code</p>
               <p className={styles.sidebarCode}>{offer.code}</p>
-              <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className={styles.bookBtn}>Book Now</a>
+              <a href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" className={styles.bookBtn}>Book Now</a>
               <Link href="/contact" className={styles.askBtn}>Ask a Question</Link>
             </div>
 

@@ -1,5 +1,8 @@
 import { SITE_INFO } from "@/data/site";
 
+const HOTEL_IMAGE =
+  "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200&h=630&fit=crop";
+
 interface SchemaOrgProps {
   type: string;
   data?: Record<string, unknown>;
@@ -38,13 +41,10 @@ export function generateHotelSchema() {
       bestRating: 5,
       worstRating: 1,
     },
-    priceRange: "₹8000 - ₹35000",
+    priceRange: "₹1210 - ₹2400",
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
-    image: "/schemaimage.jpeg",
-    sameAs: [
-      "https://www.instagram.com/the_explorerstays",
-    ],
+    image: HOTEL_IMAGE,
   };
 }
 
@@ -71,13 +71,13 @@ export function generateLocalBusinessSchema() {
       latitude: SITE_INFO.geo.latitude,
       longitude: SITE_INFO.geo.longitude,
     },
-    image: "/schemaimage.jpeg",
-    priceRange: "₹8000-₹35000",
+    image: HOTEL_IMAGE,
+    priceRange: "₹1210-₹2400",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
+      opens: "07:00",
+      closes: "23:00",
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -94,7 +94,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_INFO.name,
     url: SITE_INFO.url,
-    logo: "/veloralogo-v2.png",
+    logo: "/bishnubhaban-logo.svg",
     description: SITE_INFO.description,
     address: {
       "@type": "PostalAddress",
@@ -108,7 +108,7 @@ export function generateOrganizationSchema() {
       "@type": "ContactPoint",
       telephone: SITE_INFO.phone,
       contactType: "customer service",
-      availableLanguage: ["English", "Hindi", "Marathi"],
+      availableLanguage: ["English", "Hindi", "Odia"],
     },
   };
 }

@@ -7,13 +7,14 @@ import { SITE_INFO } from "@/data/site";
 import styles from "./Explore.module.scss";
 
 export const metadata: Metadata = {
-  title: "Explore Lonavala | Things to Do Near Velora Stays",
+  title: "Explore Puri | Bishnu Bhaban",
   description:
-    "Discover Lonavala from Velora Stays — curated experiences, nearby attractions, tour packages, photo gallery, and virtual tours of Pawna Lake.",
+    "Explore Puri from Bishnu Bhaban — things to do, nearby attractions, day plans, photo gallery, and a walkthrough of the property at the West Gate of the Jagannath Temple.",
   alternates: { canonical: "/explore" },
   openGraph: {
-    title: "Explore Lonavala | Velora Stays",
-    description: "Curated experiences, attractions, tours, and more — everything you need to explore Lonavala.",
+    title: "Explore Puri | Bishnu Bhaban",
+    description:
+      "Things to do, places to go, and a walkthrough of the property, from a hotel at the temple gate.",
     url: `${SITE_INFO.url}/explore`,
   },
 };
@@ -21,43 +22,48 @@ export const metadata: Metadata = {
 const EXPLORE_CARDS = [
   {
     id: "exp-card-experiences",
-    title: "Curated Experiences",
-    description: "Immerse yourself in Lonavala with handpicked heritage walks, food tours, art explorations, and river cruises curated by local experts.",
+    title: "Things to Do",
+    description:
+      "Darshan timings, Grand Road in the evening, the beach, Konark, Odia food, and the handloom market, written up honestly.",
     href: "/explore/experiences",
     icon: "lucide:sparkles",
-    image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
   },
   {
     id: "exp-card-nearby",
     title: "Nearby Attractions",
-    description: "From iconic Lion's Point to bustling Lonavala Market, explore the landmarks, temples, parks, and hidden gems near our villa.",
+    description:
+      "What is within walking distance of the West Gate, and what is worth the journey further afield if you have the time.",
     href: "/explore/nearby-attractions",
     icon: "lucide:map-pin",
-    image: "https://images.unsplash.com/photo-1590766940554-634f0e1593d4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
   },
   {
     id: "exp-card-tours",
-    title: "Tour Packages",
-    description: "Join our expertly guided fort treks, temple visits, photography walks, and lakeside adventures tailored for every traveller.",
+    title: "Day Plans",
+    description:
+      "Sample itineraries for the temple day, a Konark trip, and a slow beach and bazaar day. Planning guides, not tours.",
     href: "/explore/tour-packages",
     icon: "lucide:route",
-    image: "https://images.unsplash.com/photo-1569974507005-6dc61f97fb3c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
   },
   {
     id: "exp-card-gallery",
     title: "Gallery",
-    description: "Browse stunning photos of our villas, dining spaces, events, and the vibrant city of Lonavala in our curated image gallery.",
+    description:
+      "Photographs of the property, the rooms, and the surroundings of the West Gate area.",
     href: "/explore/gallery",
     icon: "lucide:camera",
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
   },
   {
     id: "exp-card-virtual-tour",
-    title: "Virtual Tour",
-    description: "Take a 360° virtual tour of our villa from the comfort of your home. Explore our villas, restaurant, and rooftop before you arrive.",
+    title: "Walkthrough",
+    description:
+      "A look at the entrance, each room category, the dining area, and the multi-bed rooms before you book.",
     href: "/explore/virtual-tour",
     icon: "lucide:glasses",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
   },
 ];
 
@@ -68,11 +74,11 @@ export default function ExplorePage() {
         <div className={styles.heroInner}>
           <Breadcrumb items={[{ label: "Explore", href: "/explore" }]} />
           <p className={styles.eyebrow}>Explore</p>
-          <h1 className={styles.title}>Explore Lonavala</h1>
+          <h1 className={styles.title}>Explore Puri</h1>
           <p className={styles.subtitle}>
-            From ancient hill forts to serene lakeside trails, discover the
-            very best of Pawna Lake and Lonavala with our curated guides, tours, and
-            experiences.
+            You are fifty metres from the West Gate of the Jagannath Temple, so
+            exploring Puri is mostly a question of how far you want to walk and
+            when you want to go. Start here.
           </p>
         </div>
       </section>

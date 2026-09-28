@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useVeloraData } from "@/hooks/useVeloraData";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import { VILLAS } from "@/data/villas";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import type { VillaType } from "@/types";
@@ -16,7 +16,7 @@ function uniqueImages(villa: VillaType): VillaType["images"] {
 }
 
 export default function GalleryVillaSections() {
-  const { villas, error } = useVeloraData();
+  const { villas, error } = useBhabanData();
   const items = !error && villas.length > 0 ? villas : VILLAS;
 
   const sorted = [...items].sort((a, b) => b.bedrooms - a.bedrooms);

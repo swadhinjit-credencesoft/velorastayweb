@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useVillaBySlug } from "@/hooks/useVeloraData";
+import { useVillaBySlug } from "@/hooks/useBhabanData";
 import { VILLA_AMENITIES } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
 import { BOOKING_ENGINE_URL } from "@/lib/api/thehotelmate";

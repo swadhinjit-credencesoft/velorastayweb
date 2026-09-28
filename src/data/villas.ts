@@ -1,390 +1,297 @@
 import type { VillaType, VillaAmenity, SectionContent } from "@/types";
 
 export const VILLAS_CONTENT: SectionContent = {
-  eyebrow: "Our Villas",
-  heading: "Flexible Luxury Accommodations for Every Group Size",
+  eyebrow: "Our Rooms",
+  heading: "Clean, Comfortable Rooms Steps from Jagannath Temple",
   description:
-    "At Velora Stays, we understand that no two getaways are the same. Choose from our range of private villas — from villa 2 (2 BHK) for couples to an expansive villa 7(7 BHK) for large families and grand celebrations. Every villa features modern amenities, a  Central Kitchen, and easy access to Pawna Lake.",
+    "At Bishnu Bhaban, we keep things simple and dependable. Choose from standard, deluxe, and multi-bed rooms at the West Gate of the Shree Jagannath Temple in Puri. Every room is air-conditioned, has an attached western-style bathroom with hot water, and is serviced daily.",
 };
 
 export const VILLA_AMENITIES: VillaAmenity[] = [
-  { id: "pool", icon: "lucide:waves", label: "Private Swimming Pool", category: "outdoor" },
-  { id: "lake-view", icon: "lucide:mountain", label: "Lake & Mountain View", category: "outdoor" },
-  { id: "lawn", icon: "lucide:trees", label: "Expansive Living Lawn", category: "outdoor" },
-  { id: "bonfire", icon: "flame:flame", label: "Bonfire Setup", category: "outdoor" },
-  { id: "bbq", icon: "lucide:flame", label: "BBQ Equipment", category: "outdoor" },
-  { id: "parking", icon: "lucide:car", label: "Secure Parking", category: "outdoor" },
-  { id: "wifi", icon: "lucide:wifi", label: "High-Speed WiFi", category: "basic" },
   { id: "ac", icon: "lucide:wind", label: "Air Conditioning", category: "basic" },
-  { id: "smart-tv", icon: "lucide:tv", label: "Smart TV", category: "entertainment" },
-  { id: "bluetooth-speaker", icon: "lucide:speaker", label: "Bluetooth Speaker", category: "entertainment" },
-  { id: "board-games", icon: "lucide:gamepad-2", label: "Board Games", category: "entertainment" },
-  { id: "kitchen", icon: "lucide:chef-hat", label: " Central Kitchen", category: "kitchen" },
-  { id: "refrigerator", icon: "lucide:refrigerator", label: "Refrigerator", category: "kitchen" },
-  { id: "microwave", icon: "lucide:microwave", label: "Microwave", category: "kitchen" },
-  { id: "electric-kettle", icon: "lucide:flame", label: "Electric Kettle", category: "kitchen" },
-  { id: "tea-coffee", icon: "lucide:coffee", label: "Tea/Coffee Setup", category: "kitchen" },
+  { id: "hot-water", icon: "lucide:droplets", label: "24/7 Hot Water", category: "bathroom" },
+  { id: "attached-bathroom", icon: "lucide:shower-head", label: "Attached Western Bathroom", category: "bathroom" },
+  { id: "toiletries", icon: "lucide:bottle", label: "Toiletries on Request", category: "bathroom" },
+  { id: "wifi", icon: "lucide:wifi", label: "Free WiFi", category: "basic" },
+  { id: "smart-tv", icon: "lucide:tv", label: "Television", category: "entertainment" },
+  { id: "daily-housekeeping", icon: "lucide:sparkles", label: "Daily Housekeeping", category: "service" },
+  { id: "room-service", icon: "lucide:concierge-bell", label: "Room Service", category: "service" },
+  { id: "front-desk", icon: "lucide:headphones", label: "Front Desk 7 AM – 11 PM", category: "service" },
+  { id: "cctv", icon: "lucide:shield-check", label: "CCTV Security", category: "service" },
+  { id: "parking", icon: "lucide:car", label: "Parking Facility", category: "outdoor" },
+  { id: "restaurant", icon: "lucide:utensils", label: "In-House Restaurant", category: "basic" },
+  { id: "laundry", icon: "lucide:shirt", label: "Laundry Service", category: "service" },
   { id: "power-backup", icon: "lucide:battery-charging", label: "Power Backup", category: "basic" },
-  { id: "housekeeping", icon: "lucide:sparkles", label: "Daily Housekeeping", category: "service" },
-  { id: "caretaker", icon: "lucide:user-check", label: "Dedicated Caretaker", category: "service" },
-  { id: "hot-water", icon: "lucide:droplets", label: "Hot Water", category: "bathroom" },
-  { id: "toiletries", icon: "lucide:bottle", label: "Premium Toiletries", category: "bathroom" },
-  { id: "premium-bedding", icon: "lucide:bed", label: "King Size Beds", category: "comfort" },
-  { id: "dining-area", icon: "lucide:utensils", label: "Dining Area", category: "basic" },
-  { id: "balcony", icon: "lucide:landmark", label: "Private Balcony", category: "outdoor" },
+  { id: "bed-linen", icon: "lucide:bed", label: "Fresh Linen Daily", category: "comfort" },
+  { id: "luggage-storage", icon: "lucide:luggage", label: "Luggage Storage", category: "service" },
+];
+
+const ROOM_NEARBY = [
+  "Shree Jagannath Temple — 50 m walk",
+  "Vimala Temple — 400 m",
+  "Puri Beach — 1.5 km",
+];
+
+const ROOM_POLICIES = [
+  {
+    id: "checkin",
+    title: "Check-in & Check-out",
+    description:
+      "Check-in time is 2:00 PM and check-out is 11:00 AM. Early check-in and late check-out are available on request, subject to availability.",
+  },
+  {
+    id: "cancel",
+    title: "Cancellation Policy",
+    description:
+      "Free cancellation up to 7 days before check-in. Cancellations within 2 days may incur a charge of one night's stay.",
+  },
+  {
+    id: "guests",
+    title: "Guest Policy",
+    description:
+      "Aadhaar, any government photo ID and passport are accepted as ID proof. Additional guests can be accommodated at an extra charge, subject to room capacity.",
+  },
+  {
+    id: "groups",
+    title: "Groups & Male Only Bookings",
+    description:
+      "Group bookings and bookings with only male guests are accepted. Please mention the requirement at the time of booking so we can allocate suitable rooms.",
+  },
 ];
 
 export const VILLAS: VillaType[] = [
   {
-    id: "room-8802",
-    slug: "2-bhk-villa",
-    name: " Velora 2(2 BHK Villa)",
-    tagline: "Cozy 2-bedroom villa perfect for couples and small families",
+    id: "room-standard",
+    slug: "standard-room",
+    name: "Standard Room",
+    tagline: "Clean air-conditioned room with attached bathroom and hot water",
     description:
-      "Cozy Velora 2(2 BHK Villa)  featuring comfortable bedrooms, a bright living area, a  Central Kitchen, essential modern amenities, and a relaxing stay for couples or small families.",
+      "Our Standard Room is the straightforward, well-maintained choice for couples, solo travellers, and friends travelling to Puri. It comes with air conditioning, an attached western-style bathroom with 24-hour hot water, and complimentary WiFi.",
     longDescription:
-      "The  Velora 2(2 BHK Villa) at Velora Stays is an intimate retreat designed for couples and small families. Enjoy comfortable bedrooms, a bright and airy living area, and a  Central Kitchen for self-catering. Just a short drive from Pawna Lake, it is the perfect base for a peaceful weekend getaway with modern comfort and privacy.",
-    price: 6000,
-    originalPrice: 8000,
+      "The Standard Room at Bishnu Bhaban is located at the West Gate of the Shree Jagannath Temple, roughly 50 metres from the main gate, which means you can walk to darshan in a few minutes rather than queueing for a taxi. The room is air-conditioned and cleaned daily, with fresh linen, hot water available around the clock, and free WiFi. It suits couples, solo travellers, and friends who want a straightforward, well-kept room close to the temple without paying for anything they will not use.",
+    price: 1210,
+    originalPrice: 1555,
     currency: "₹",
     priceUnit: "per night",
-    bedrooms: 2,
-    bathrooms: 2,
-    maxOccupancy: 8,
+    bedrooms: 1,
+    bathrooms: 1,
+    maxOccupancy: 3,
     images: [
       {
-        id: "villa2-1",
+        id: "standard-1",
         src: "https://bookonelocal.in/cdn/2026-07-24-115513437-e2.jpg",
-        alt: "2 BHK Villa at Velora Stays near Pawna Lake",
-        caption: "Cozy 2 BHK villa",
+        alt: "Standard Room at Bishnu Bhaban, Puri",
+        caption: "Standard Room",
       },
       {
-        id: "villa2-2",
+        id: "standard-2",
         src: "https://bookonelocal.in/cdn/2026-07-24-115527521-c2.jpg",
-        alt: "2 BHK Villa interior at Velora Stays",
-        caption: "Comfortable living area",
+        alt: "Standard Room interior at Bishnu Bhaban",
+        caption: "Attached bathroom",
       },
       {
-        id: "villa2-3",
+        id: "standard-3",
         src: "https://bookonelocal.in/cdn/2026-07-24-115550734-g2.jpg",
-        alt: "2 BHK Villa bedroom at Velora Stays",
-        caption: "Well-appointed bedroom",
+        alt: "Standard Room bedroom at Bishnu Bhaban",
+        caption: "Bedding and linen",
       },
     ],
     amenities: [
-      "pool", "wifi", "ac", "smart-tv", "parking", "refrigerator", "hot-water", "premium-bedding", "dining-area",
+      "ac",
+      "hot-water",
+      "attached-bathroom",
+      "wifi",
+      "smart-tv",
+      "daily-housekeeping",
+      "front-desk",
+      "cctv",
     ],
     highlights: [
-      "2 comfortable bedrooms",
-      "High-speed WiFi",
-      "Free on-site parking",
+      "50 m from the Jagannath Temple gate",
+      "Air-conditioned with attached bathroom",
+      "24-hour hot water and front desk",
     ],
     features: [
-      "King-size beds with premium linens",
-      "Individual AC in every bedroom",
-      "Smart TV in living area",
-      "Housekeeping on request",
+      "Air conditioning",
+      "Attached western-style bathroom",
+      "24-hour hot water supply",
+      "Free WiFi access",
     ],
-    policies: [
-      {
-        id: "villa2-checkin",
-        title: "Check-in & Check-out",
-        description:
-          "Check-in time is 2:00 PM and check-out is 11:00 AM. Early check-in and late check-out are available on request, subject to availability.",
-      },
-      {
-        id: "villa2-cancel",
-        title: "Cancellation Policy",
-        description:
-          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
-      },
-      {
-        id: "villa2-guests",
-        title: "Guest Policy",
-        description:
-          "Maximum occupancy is 8 guests. Extra adults can be accommodated at an additional charge.",
-      },
-    ],
+    policies: ROOM_POLICIES,
     faqs: [
       {
-        id: "villa2-faq-1",
-        question: "Is the 2 BHK Villa suitable for families with children?",
+        id: "standard-faq-1",
+        question: "How far is the Standard Room from Jagannath Temple?",
         answer:
-          "Absolutely. The 2 BHK Villa is ideal for couples and small families, offering comfortable bedrooms and a  Central Kitchen.",
+          "Bishnu Bhaban sits at the West Gate of the temple complex, so the distance on foot is roughly 50 to 280 metres depending on the entry point you use.",
+      },
+      {
+        id: "standard-faq-2",
+        question: "Is hot water available at all hours?",
+        answer:
+          "Yes. Hot water is available 24 hours a day in all rooms, which matters in Puri where early morning temple visits start before sunrise.",
       },
     ],
-    nearby: [
-      "Pawna Lake — 5 min drive",
-      "Lonavala  - Market",
-    ],
+    nearby: ROOM_NEARBY,
     popular: true,
     available: true,
     tag: "Best Value",
   },
   {
-    id: "room-8801",
-    slug: "4-bhk-villa",
-    name: " Velora 4(4 BHK Villa)",
-    tagline: "Comfortable 4-bedroom villa for families and small groups",
+    id: "room-deluxe",
+    slug: "deluxe-room",
+    name: "Deluxe Room",
+    tagline: "Spacious deluxe room with extra comfort for longer Puri stays",
     description:
-      "Comfortable Velora 4(4 BHK Villa)  offering well-appointed bedrooms, a cozy living space, a functional kitchen, modern amenities, and an ideal retreat for families or small groups.",
+      "The Deluxe Room gives you more floor space and a calmer sleeping arrangement than the Standard Room, along with the same air conditioning, hot water, and daily housekeeping. It is our most popular choice for guests staying three nights or more.",
     longDescription:
-      "The  Velora 4(4 BHK Villa) at Velora Stays is the perfect choice for families and small groups looking for premium privacy and comfort. It features well-appointed bedrooms, a cozy living space, a functional kitchen, and modern amenities — all nestled near Pawna Lake with easy access to the surrounding hills and scenic viewpoints.",
-    price: 12000,
-    originalPrice: 16000,
+      "The Deluxe Room is a step up from the Standard Room in exactly the way that matters on a longer trip: more space, better ventilation, and a quieter corner of the property. It is fully air-conditioned, has an attached western-style bathroom with 24-hour hot water, and is cleaned every day with fresh linen. Guests who stay a week or more often work out that the extra space pays for itself, especially during the busy Rath Yatra season when rooms near the temple are in demand. The front desk operates 24 hours, so early morning departures and late night arrivals are both straightforward.",
+    price: 1820,
+    originalPrice: 2200,
     currency: "₹",
     priceUnit: "per night",
-    bedrooms: 4,
-    bathrooms: 4,
-    maxOccupancy: 10,
+    bedrooms: 1,
+    bathrooms: 1,
+    maxOccupancy: 4,
     images: [
       {
-        id: "villa4-1",
-        src: "https://bookonelocal.in/cdn/2026-07-24-115222181-a4.jpg",
-        alt: "4 BHK Villa at Velora Stays near Pawna Lake",
-        caption: "Comfortable 4 BHK villa",
+        id: "deluxe-1",
+        src: "https://bookonelocal.in/cdn/2026-07-24-114505800-b7.jpg",
+        alt: "Deluxe Room at Bishnu Bhaban, Puri",
+        caption: "Deluxe Room",
       },
       {
-        id: "villa4-2",
-        src: "https://bookonelocal.in/cdn/2026-07-24-115239530-b4.jpg",
-        alt: "4 BHK Villa interior at Velora Stays",
-        caption: "Elegant living space",
+        id: "deluxe-2",
+        src: "https://bookonelocal.in/cdn/2026-07-24-114518458-a7.jpg",
+        alt: "Deluxe Room interior at Bishnu Bhaban",
+        caption: "Room interior",
       },
       {
-        id: "villa4-3",
-        src: "https://bookonelocal.in/cdn/2026-07-24-115310249-c4.jpg",
-        alt: "4 BHK Villa bedroom at Velora Stays",
-        caption: "Well-appointed bedroom",
+        id: "deluxe-3",
+        src: "https://bookonelocal.in/cdn/2026-07-24-114527781-c7.jpg",
+        alt: "Deluxe Room bedroom at Bishnu Bhaban",
+        caption: "Bedroom",
       },
     ],
     amenities: [
-      "pool", "lake-view", "lawn", "bonfire", "bbq", "parking",
-      "wifi", "ac", "smart-tv", "refrigerator", "microwave",
-      "hot-water", "premium-bedding", "dining-area",
+      "ac",
+      "hot-water",
+      "attached-bathroom",
+      "wifi",
+      "smart-tv",
+      "daily-housekeeping",
+      "room-service",
+      "front-desk",
+      "cctv",
+      "power-backup",
     ],
     highlights: [
-      "4 well-appointed bedrooms",
-      "Private pool and lawn",
-      "High-speed WiFi",
+      "More space than the Standard Room",
+      "Best value for stays of 3 nights or more",
+      "24-hour room service and front desk",
     ],
     features: [
-      "King-size beds with premium linens",
-      "Individual AC in every bedroom",
-      "Smart TV in living area",
-      "Bonfire and BBQ setup",
+      "Air conditioning",
+      "Attached western-style bathroom",
+      "24-hour hot water supply",
+      "Free WiFi access",
     ],
-    policies: [
-      {
-        id: "villa4-checkin",
-        title: "Check-in & Check-out",
-        description:
-          "Check-in time is 2:00 PM and check-out is 11:00 AM. Early check-in and late check-out are available on request, subject to availability.",
-      },
-      {
-        id: "villa4-cancel",
-        title: "Cancellation Policy",
-        description:
-          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
-      },
-      {
-        id: "villa4-guests",
-        title: "Guest Policy",
-        description:
-          "Maximum occupancy is 10 guests. Extra adults can be accommodated at an additional charge.",
-      },
-    ],
+    policies: ROOM_POLICIES,
     faqs: [
       {
-        id: "villa4-faq-1",
-        question: "Can we bring our own food and cook?",
+        id: "deluxe-faq-1",
+        question: "Is the Deluxe Room worth the extra cost?",
         answer:
-          "Absolutely! The villa comes with a  Central Kitchen. You can also opt for our in-house chef packages for a hassle-free dining experience.",
-      },
-    ],
-    nearby: [
-      "Pawna Lake — 49 m  drive",
-      "Lonavala  - Market — 50 m drive"
-    ],
-    popular: true,
-    available: true,
-    tag: "Popular Choice",
-  },
-  {
-    id: "room-8800",
-    slug: "5-bhk-villa",
-    name: "5 BHK Villa",
-    tagline: "Spacious 5-bedroom villa ideal for family getaways and friend groups",
-    description:
-      "Luxury Velora 5(5 BHK Villa)  with stylish bedrooms, spacious living and dining areas, a  Central Kitchen, modern comforts, and the perfect setting for family gatherings or group stays.",
-    longDescription:
-      "The  Velora 5(5 BHK Villa) at Velora Stays is a luxurious retreat offering stylish bedrooms, spacious living and dining areas, and a  Central Kitchen. Perfect for family gatherings or group stays, it combines modern comforts with the natural beauty of Pawna Lake and the surrounding hills.",
-    price: 15000,
-    originalPrice: 20000,
-    currency: "₹",
-    priceUnit: "per night",
-    bedrooms: 5,
-    bathrooms: 5,
-    maxOccupancy: 15,
-    images: [
-      {
-        id: "villa5-1",
-        src: "https://bookonelocal.in/cdn/2026-07-24-114924143-d5.jpg",
-        alt: "5 BHK Villa at Velora Stays near Pawna Lake",
-        caption: "Luxury 5 BHK villa",
+          "If you are staying three nights or more, or travelling with a child, the extra space usually pays for itself. For a single night in a Standard Room is usually enough.",
       },
       {
-        id: "villa5-2",
-        src: "https://bookonelocal.in/cdn/2026-07-24-115014854-c5.jpg",
-        alt: "5 BHK Villa interior at Velora Stays",
-        caption: "Spacious living area",
-      },
-      {
-        id: "villa5-3",
-        src: "https://bookonelocal.in/cdn/2026-07-24-115045162-e5.jpg",
-        alt: "5 BHK Villa bedroom at Velora Stays",
-        caption: "Stylish bedroom",
-      },
-    ],
-    amenities: [
-      "pool", "lake-view", "lawn", "bonfire", "bbq", "parking",
-      "wifi", "ac", "smart-tv", "bluetooth-speaker", "board-games",
-       "refrigerator", "microwave", "hot-water", "premium-bedding", "dining-area",
-    ],
-    highlights: [
-      "5 stylish bedrooms",
-      "Spacious living and dining areas",
-      " Central Kitchen",
-      "Private pool and lawn",
-    ],
-    features: [
-      "King-size beds with premium linens",
-      "Individual AC in every bedroom",
-      "Smart TV in living area",
-      "Dedicated caretaker on site",
-    ],
-    policies: [
-      {
-        id: "villa5-checkin",
-        title: "Check-in & Check-out",
-        description:
-          "Check-in time is 2:00 PM and check-out is 11:00 AM. Early check-in and late check-out are available on request.",
-      },
-      {
-        id: "villa5-cancel",
-        title: "Cancellation Policy",
-        description:
-          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
-      },
-      {
-        id: "villa5-guests",
-        title: "Guest Policy",
-        description:
-          "Maximum occupancy is 15 guests. Extra mattresses available on request.",
-      },
-    ],
-    faqs: [
-      {
-        id: "villa5-faq-1",
-        question: "Can we host events at the villa?",
+        id: "deluxe-faq-2",
+        question: "Is breakfast included?",
         answer:
-          "Yes, the villa is perfect for birthdays, anniversaries, and corporate offsites. Contact us for event packages.",
+          "Breakfast is available at our in-house restaurant. Meal plans can be added at the time of booking.",
       },
     ],
-    nearby: [
-      "Pawna Lake — 5 min drive",
-      "lonavala - market - 25 min drive"
-    ],
+    nearby: ROOM_NEARBY,
     popular: true,
     available: true,
     tag: "Most Popular",
   },
   {
-    id: "room-8799",
-    slug: "7-bhk-villa",
-    name: "7 BHK Villa",
-    tagline: "The ultimate choice for large groups and grand celebrations",
+    id: "room-multi-bed",
+    slug: "multi-bed-room",
+    name: "Multi-Bed Room",
+    tagline: "Multi-bed setup for families and groups travelling together",
     description:
-      "Spacious Velora 7(7 BHK Villa)  featuring elegant bedrooms, a  Central Kitchen, comfortable living areas, modern amenities, and ample space for large families, reunions, or group vacations.",
+      "The Multi-Bed Room is set up for families and groups who want to stay under one roof. Multiple beds share a single attached bathroom, which makes it the most economical option for four to six people travelling together for temple darshan.",
     longDescription:
-      "The  Velora 7(7 BHK Villa) is the crown jewel of Velora Stays — an expansive villa designed for large families, reunions, and group vacations. With elegant bedrooms, comfortable living areas and ample outdoor space, it comfortably hosts up to 28 guests near Pawna Lake.",
-    price: 21000,
-    originalPrice: 28000,
+      "The Multi-Bed Room is the practical choice for families and groups. Rather than booking and paying for two separate rooms, everyone shares one room with multiple beds and a single attached western-style bathroom with 24-hour hot water. It is the configuration most groups visiting Puri for darshan actually want: everyone is together, the location at the West Gate is the same, and the total cost per person is lower. The room is air-conditioned and serviced daily, and our front desk can arrange extra beds, luggage storage, and early breakfast for departure days.",
+    price: 2400,
     currency: "₹",
     priceUnit: "per night",
-    bedrooms: 7,
-    bathrooms: 7,
-    maxOccupancy: 28,
+    bedrooms: 3,
+    bathrooms: 1,
+    maxOccupancy: 6,
     images: [
       {
-        id: "villa7-1",
-        src: "https://bookonelocal.in/cdn/2026-07-24-114505800-b7.jpg",
-        alt: "7 BHK Villa at Velora Stays near Pawna Lake",
-        caption: "Spacious 7 BHK villa",
+        id: "multibed-1",
+        src: "https://bookonelocal.in/cdn/2026-07-24-115222181-a4.jpg",
+        alt: "Multi-Bed Room at Bishnu Bhaban, Puri",
+        caption: "Multi-Bed Room",
       },
       {
-        id: "villa7-2",
-        src: "https://bookonelocal.in/cdn/2026-07-24-114518458-a7.jpg",
-        alt: "7 BHK Villa interior at Velora Stays",
-        caption: "Elegant living area",
+        id: "multibed-2",
+        src: "https://bookonelocal.in/cdn/2026-07-24-115239530-b4.jpg",
+        alt: "Multi-Bed Room interior at Bishnu Bhaban",
+        caption: "Shared sleeping space",
       },
       {
-        id: "villa7-3",
-        src: "https://bookonelocal.in/cdn/2026-07-24-114527781-c7.jpg",
-        alt: "7 BHK Villa bedroom at Velora Stays",
-        caption: "Well-appointed bedroom",
+        id: "multibed-3",
+        src: "https://bookonelocal.in/cdn/2026-07-24-115310249-c4.jpg",
+        alt: "Multi-Bed Room bathroom at Bishnu Bhaban",
+        caption: "Attached bathroom",
       },
     ],
     amenities: [
-      "pool", "lake-view", "lawn", "bonfire", "bbq", "parking",
-      "wifi", "ac", "smart-tv", "bluetooth-speaker", "board-games",
-     "refrigerator", "microwave", "hot-water", "premium-bedding", "dining-area",
+      "ac",
+      "hot-water",
+      "attached-bathroom",
+      "wifi",
+      "daily-housekeeping",
+      "room-service",
+      "front-desk",
+      "cctv",
+      "luggage-storage",
     ],
     highlights: [
-      "7 elegant bedrooms",
-      "Ample space for large groups",
-      "Private pool and lawn",
+      "Sleeps up to 6 guests",
+      "One room, one bathroom, one rate",
+      "Groups and male-only bookings welcome",
     ],
     features: [
-      "King-size beds with premium linens",
-      "Individual AC in every bedroom",
-      "Multiple living areas",
-      "Grand bonfire and BBQ area",
+      "Multiple beds in a single room",
+      "Attached western-style bathroom",
+      "24-hour hot water supply",
+      "Free WiFi access",
     ],
-    policies: [
-      {
-        id: "villa7-checkin",
-        title: "Check-in & Check-out",
-        description:
-          "Check-in time is 2:00 PM and check-out is 11:00 AM. Priority early check-in for large group bookings.",
-      },
-      {
-        id: "villa7-cancel",
-        title: "Cancellation Policy",
-        description:
-          "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
-      },
-      {
-        id: "villa7-guests",
-        title: "Guest Policy",
-        description:
-          "Maximum occupancy is 28 guests. Contact us for full-property arrangements.",
-      },
-    ],
+    policies: ROOM_POLICIES,
     faqs: [
       {
-        id: "villa7-faq-1",
-        question: "Can we host a large family reunion or group vacation?",
+        id: "multibed-faq-1",
+        question: "How many people can stay in the Multi-Bed Room?",
         answer:
-          "Absolutely. The 7 BHK Villa is ideal for large families, reunions, and group vacations with ample space and modern amenities.",
+          "The room is configured to sleep up to 6 guests. Additional guests can be accommodated at an extra charge, subject to capacity.",
+      },
+      {
+        id: "multibed-faq-2",
+        question: "Do you allow groups with only male guests?",
+        answer:
+          "Yes, group bookings and bookings with only male guests are accepted. Please mention this when making your reservation.",
       },
     ],
-    nearby: [
-      "Pawna Lake — 5 min drive",
-      "lonavala - market - 25 min drive"
-    ],
+    nearby: ROOM_NEARBY,
     popular: true,
     available: true,
-    tag: "Premium Choice",
+    tag: "Group Friendly",
   },
 ];
 

@@ -22,7 +22,7 @@ export default function ContactForm() {
             <h2 className={styles.heading}>Ways To Get In Touch</h2>
             <p className={styles.description}>
               Call, WhatsApp, or email us — our team is available 24/7 to help
-              plan your stay near Pawna Lake.
+              plan your stay at the West Gate of the Jagannath Temple.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function ContactForm() {
             <iframe
               src={GOOGLE_MAPS_URL}
               className={styles.map}
-              title="Velora Stays location map"
+              title="Bishnu Bhaban location map"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"

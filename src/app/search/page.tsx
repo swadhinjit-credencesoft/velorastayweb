@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import SearchForm from "./SearchForm";
 
 export const metadata: Metadata = {
-  title: "Search | Velora Stays",
+  title: "Search | Bishnu Bhaban",
   description:
-    "Search villas, facilities, and blog posts at Velora Stays near Pawna Lake, Lonavala.",
+    "Search rooms, facilities, and blog posts at Bishnu Bhaban, a budget hotel at the West Gate of the Jagannath Temple in Puri.",
   robots: { index: false, follow: false },
   alternates: { canonical: "/search" },
   openGraph: {
-    title: "Search | Velora Stays",
-    description: "Search villas, facilities, and blog posts at Velora Stays.",
-    url: "https://velorastays.in/search",
+    title: "Search | Bishnu Bhaban",
+    description: "Search villas, facilities, and blog posts at Bishnu Bhaban.",
+    url: "https://bishnubhaban.com/search",
   },
 };
 

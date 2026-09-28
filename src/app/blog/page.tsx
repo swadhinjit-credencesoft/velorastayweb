@@ -7,19 +7,19 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { BLOG_POSTS, BLOG_CONTENT, BLOG_CATEGORIES } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Travel Blog | Velora Stays",
+  title: "Puri Notes | Bishnu Bhaban",
   description:
-    "Read travel guides, villa tips, food recommendations, and local insights for Lonavala from the Velora Stays blog.",
+    "Practical guides to Puri from the front desk of a hotel at the temple gate: darshan timings, when to visit, planning around a departure time, and where it is safe to swim.",
   keywords: [
-    "Lonavala travel blog",
-    "Lonavala guide",
-    "villa tips",
-    "travel tips Lonavala",
-    "Lonavala food guide",
+    "Puri travel guide",
+    "Puri blog",
+    "darshan timings",
+    "best time to visit Puri",
+    "Puri safety",
   ],
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Travel Blog | Velora Stays",
+    title: "Puri Notes | Bishnu Bhaban",
     description: BLOG_CONTENT.description,
   },
 };

@@ -9,12 +9,12 @@
 // import styles from "./offers.module.scss";
 
 // export const metadata: Metadata = {
-//   title: "Special Offers & Deals | Velora Stays",
+//   title: "Special Offers & Deals | Bishnu Bhaban",
 //   description:
-//     "Save big with exclusive villa offers at Velora Stays. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
+//     "Save big with exclusive villa offers at Bishnu Bhaban. Weekend getaways, early bird discounts, long stay deals, couple packages, and more in Lonavala.",
 //   alternates: { canonical: "/offers" },
 //   openGraph: {
-//     title: "Special Offers | Velora Stays",
+//     title: "Special Offers | Bishnu Bhaban",
 //     description: OFFERS_CONTENT.description,
 //     url: `${SITE_INFO.url}/offers`,
 //   },

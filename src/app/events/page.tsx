@@ -7,9 +7,9 @@
 // import { EVENT_TYPES, EVENTS_CONTENT } from "@/data/events";
 
 // export const metadata: Metadata = {
-//   title: "Events & Celebrations | Velora Stays",
+//   title: "Events & Celebrations | Bishnu Bhaban",
 //   description:
-//     "Host weddings, conferences, birthday parties, and social gatherings at Velora Stays. Versatile event spaces with dedicated planning team in Lonavala.",
+//     "Host weddings, conferences, birthday parties, and social gatherings at Bishnu Bhaban. Versatile event spaces with dedicated planning team in Lonavala.",
 //   keywords: [
 //     "villa events Lonavala",
 //     "wedding venue Lonavala",
@@ -20,9 +20,9 @@
 //   ],
 //   alternates: { canonical: "/events" },
 //   openGraph: {
-//     title: "Events & Celebrations | Velora Stays",
+//     title: "Events & Celebrations | Bishnu Bhaban",
 //     description:
-//       "From grand weddings to intimate gatherings, Velora Stays offers versatile event spaces and expert planning for every occasion.",
+//       "From grand weddings to intimate gatherings, Bishnu Bhaban offers versatile event spaces and expert planning for every occasion.",
 //   },
 // };
 
@@ -52,7 +52,7 @@ export default function EventsPage() {
         schema={{
           "@context": "https://schema.org",
           "@type": "EventVenue",
-          name: "Velora Stays Events",
+          name: "Bishnu Bhaban Events",
           description: EVENTS_CONTENT.description,
           url: "/events",
         }}

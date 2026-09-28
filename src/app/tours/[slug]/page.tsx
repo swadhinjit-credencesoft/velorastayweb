@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { TOUR_PACKAGES, getTourBySlug } from "@/data/tours";
+import { SITE_INFO } from "@/data/site";
 
 type Props = { params: { slug: string } };
 
@@ -17,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tour = getTourBySlug(params.slug);
   if (!tour) return { title: "Tour Not Found" };
   return {
-    title: `${tour.name} | Velora Stays Tours`,
+    title: `${tour.name} | Bishnu Bhaban`,
     description: tour.description,
     alternates: { canonical: `/tours/${tour.slug}` },
     openGraph: {
-      title: `${tour.name} | Velora Stays`,
+      title: `${tour.name} | Bishnu Bhaban`,
       description: tour.tagline,
       images: [{ url: tour.image, width: 1200, height: 630, alt: tour.name }],
     },
@@ -36,7 +37,7 @@ export default function TourDetailPage({ params }: Props) {
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    { label: "Tours", href: "/tours" },
+    { label: "Day Plans", href: "/tours" },
     { label: tour.name, href: `/tours/${tour.slug}` },
   ];
 
@@ -44,9 +45,9 @@ export default function TourDetailPage({ params }: Props) {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Tours", url: "/tours" },
-          { name: tour.name, url: `/tours/${tour.slug}` },
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Day Plans", url: `${SITE_INFO.url}/tours` },
+          { name: tour.name, url: `${SITE_INFO.url}/tours/${tour.slug}` },
         ])}
       />
 
@@ -61,7 +62,7 @@ export default function TourDetailPage({ params }: Props) {
                 {tour.duration}
               </span>
               <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
-                {tour.groupSize} guests
+                {tour.groupSize}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mt-3">{tour.name}</h1>
@@ -75,7 +76,7 @@ export default function TourDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-10">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">About This Tour</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">About This Plan</h2>
                 <p className="text-gray-600 leading-relaxed whitespace-pre-line">
                   {tour.longDescription}
                 </p>
@@ -133,18 +134,31 @@ export default function TourDetailPage({ params }: Props) {
             <aside className="space-y-6">
               <div className="bg-gray-50 rounded-xl p-6 sticky top-24 space-y-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">
-                    {tour.currency}{tour.price}
-                  </div>
-                  {tour.originalPrice && (
-                    <div className="text-gray-400 line-through">
-                      {tour.currency}{tour.originalPrice}
-                    </div>
+                  {tour.price > 0 ? (
+                    <>
+                      <div className="text-3xl font-bold text-gray-900">
+                        {tour.currency}
+                        {tour.price}
+                      </div>
+                      {tour.originalPrice && (
+                        <div className="text-gray-400 line-through">
+                          {tour.currency}
+                          {tour.originalPrice}
+                        </div>
+                      )}
+                      <div className="text-sm text-gray-500 mt-1">per person</div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-2xl font-bold text-gray-900">Planning guide</div>
+                      <div className="text-sm text-gray-500 mt-1">
+                        No charge. Ask the front desk for the latest timings.
+                      </div>
+                    </>
                   )}
-                  <div className="text-sm text-gray-500 mt-1">per person</div>
                 </div>
                 <hr />
-                <h4 className="font-semibold text-gray-900">What&apos;s Included</h4>
+                <h4 className="font-semibold text-gray-900">What this plan covers</h4>
                 <ul className="space-y-2">
                   {tour.includes.map((item: string) => (
                     <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
@@ -156,13 +170,13 @@ export default function TourDetailPage({ params }: Props) {
                   href="/contact"
                   className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white py-3 rounded-lg font-semibold transition-colors"
                 >
-                  Book This Tour
+                  Ask the Front Desk
                 </Link>
               </div>
 
               {related.length > 0 && (
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-900">More Tours</h4>
+                  <h4 className="font-semibold text-gray-900">More Day Plans</h4>
                   {related.map((t) => (
                     <Link
                       key={t.id}
@@ -174,9 +188,14 @@ export default function TourDetailPage({ params }: Props) {
                       </div>
                       <div>
                         <h5 className="font-semibold text-sm text-gray-900">{t.name}</h5>
-                        <span className="text-amber-600 font-bold text-sm">
-                          {t.currency}{t.price}
-                        </span>
+                        {t.price > 0 ? (
+                          <span className="text-amber-600 font-bold text-sm">
+                            {t.currency}
+                            {t.price}
+                          </span>
+                        ) : (
+                          <span className="text-amber-600 font-bold text-sm">Planning guide</span>
+                        )}
                       </div>
                     </Link>
                   ))}

@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_MISSION } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Mission | Velora Stays",
-  description: "Discover the mission behind Velora Stays — redefining luxury hospitality with quality, cleanliness, and genuine care.",
+  title: "Our Mission | Bishnu Bhaban",
+  description: "Discover the mission behind Bishnu Bhaban — redefining luxury hospitality with quality, cleanliness, and genuine care.",
   alternates: { canonical: "/about/mission" },
   openGraph: {
-    title: "Our Mission | Velora Stays",
-    description: "Discover the mission behind Velora Stays — redefining luxury hospitality with quality, cleanliness, and genuine care.",
+    title: "Our Mission | Bishnu Bhaban",
+    description: "Discover the mission behind Bishnu Bhaban — redefining luxury hospitality with quality, cleanliness, and genuine care.",
   },
 };
 

@@ -1,9 +1,9 @@
 import type { VillaType } from "@/types";
 
-export const PROPERTY_ID = 3607;
+export const PROPERTY_ID = 3637;
 export const API_BASE = "https://api.thehotelmate.co/api/thm";
 
-export const BOOKING_ENGINE_URL = "https://bookone.io/Velora-Stays?bookingEngine=true";
+export const BOOKING_ENGINE_URL = "https://bookone.io/Bishnu-Bhavan?bookingEngine=true";
 
 interface TmImage {
   id: number | null;
@@ -109,13 +109,13 @@ export async function getProperty(options?: { refresh?: boolean }): Promise<TmPr
     try {
       const res = await fetch(propertyAvailabilityUrl());
       if (!res.ok) {
-        throw new Error(`Velora API error: ${res.status} ${res.statusText}`);
+        throw new Error(`Bishnu Bhaban API error: ${res.status} ${res.statusText}`);
       }
       data = (await res.json()) as TmProperty;
     } catch (error) {
       throw error instanceof Error
         ? error
-        : new Error("Velora API request failed");
+        : new Error("Bishnu Bhaban API request failed");
     }
     if (!Array.isArray(data.roomList)) {
       data = { ...data, roomList: [] };
@@ -148,25 +148,28 @@ function extractBhk(roomName: string): number {
 }
 
 const SERVICE_AMENITY_MAP: Record<string, string> = {
-  "Swimming Pool": "pool",
   "Free WiFi": "wifi",
   "Flat screen TV (features)": "smart-tv",
   "Free Hotel Parking": "parking",
   "Housekeeping": "housekeeping",
-  "Terrace": "balcony",
+  "Room Service": "room-service",
+  "CCTV Security": "cctv",
+  "Hot Water": "hot-water",
+  "Air Conditioning": "ac",
+  "Restaurant": "restaurant",
+  "Laundry Service": "laundry",
 };
 
-const BASE_VILLA_AMENITIES = [
+const BASE_ROOM_AMENITIES = [
   "ac",
-  "kitchen",
-  "refrigerator",
   "hot-water",
-  "premium-bedding",
-  "dining-area",
+  "wifi",
+  "cctv",
+  "daily-housekeeping",
 ];
 
 function buildAmenityIds(services: TmService[]): string[] {
-  const ids = new Set<string>(BASE_VILLA_AMENITIES);
+  const ids = new Set<string>(BASE_ROOM_AMENITIES);
   services.forEach((service) => {
     const id = SERVICE_AMENITY_MAP[service.name];
     if (id) ids.add(id);
@@ -174,33 +177,56 @@ function buildAmenityIds(services: TmService[]): string[] {
   return Array.from(ids);
 }
 
-const SLUG_BY_BHK: Record<number, string> = {
-  2: "2-bhk-villa",
-  4: "4-bhk-villa",
-  5: "5-bhk-villa",
-  7: "7-bhk-villa",
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function extractBedCount(roomName: string): number {
+  const match = roomName.match(/(\d+)\s*(?:bed|beds)/i);
+  return match ? parseInt(match[1], 10) : 2;
+}
+
+const ROOM_TAGLINES: Record<string, string> = {
+  standard:
+    "Clean air-conditioned standard room with attached bathroom and hot water",
+  deluxe:
+    "Spacious deluxe room with extra comfort, ideal for longer Puri stays",
+  "multi-bed":
+    "Multi-bed room set up for families and groups travelling together",
 };
 
-const VILLA_TAGLINES: Record<number, string> = {
-  2: "Cozy 2-bedroom villa perfect for couples and small families",
-  4: "Comfortable 4-bedroom villa for families and small groups",
-  5: "Spacious 5-bedroom villa ideal for family getaways and friend groups",
-  7: "The ultimate choice for large groups and grand celebrations",
+const ROOM_TAGS: Record<string, string> = {
+  standard: "Best Value",
+  deluxe: "Most Popular",
+  "multi-bed": "Group Friendly",
 };
 
-const VILLA_TAGS: Record<number, string> = {
-  2: "Best Value",
-  4: "Popular Choice",
-  5: "Most Popular",
-  7: "Premium Choice",
-};
+function tagForRoomName(roomName: string): string {
+  const normalized = roomName.toLowerCase();
+  if (normalized.includes("deluxe")) return ROOM_TAGS.deluxe;
+  if (normalized.includes("multi") || normalized.includes("family"))
+    return ROOM_TAGS["multi-bed"];
+  return ROOM_TAGS.standard;
+}
 
-const VILLA_NEARBY = [
-  "Pawna Lake - 5 min Drive",
-  "Lonavala Market - 50min drive",
-]
+function taglineForRoomName(roomName: string): string {
+  const normalized = roomName.toLowerCase();
+  if (normalized.includes("deluxe")) return ROOM_TAGLINES.deluxe;
+  if (normalized.includes("multi") || normalized.includes("family"))
+    return ROOM_TAGLINES["multi-bed"];
+  return ROOM_TAGLINES.standard;
+}
 
-const VILLA_POLICIES = [
+const ROOM_NEARBY = [
+  "Shree Jagannath Temple - 50 m walk",
+  "Puri Beach - 1.5 km",
+  "Vimala Temple - 400 m",
+];
+
+const ROOM_POLICIES = [
   {
     id: "checkin",
     title: "Check-in & Check-out",
@@ -211,13 +237,18 @@ const VILLA_POLICIES = [
     id: "cancel",
     title: "Cancellation Policy",
     description:
-      "Free cancellation up to 15 days before check-in. Cancellations within 7 days incur a charge of 50% of the booking amount.",
+      "Free cancellation up to 7 days before check-in. Cancellations within 2 days may incur a charge of one night's stay.",
   },
   {
     id: "guests",
     title: "Guest Policy",
     description:
-      "Extra adults can be accommodated at an additional charge. Contact our team for group bookings and customised arrangements.",
+      "Aadhaar, any government photo ID and passport are accepted as ID proof. Additional guests can be accommodated at an extra charge, subject to room capacity.",
+  },
+  {
+    id: "pets",
+    title: "Pets",
+    description: "Pets are not permitted on the property.",
   },
 ];
 
@@ -237,59 +268,92 @@ function isAvailable(room: TmRoom): boolean {
   );
 }
 
+const CANONICAL_ROOM_SLUGS: { slug: string; patterns: RegExp[] }[] = [
+  { slug: "deluxe-room", patterns: [/deluxe/, /luxury/, /premium/, /supreme/] },
+  {
+    slug: "multi-bed-room",
+    patterns: [/multi/, /family/, /group/, /triple/, /quad/, /3\s*bed/, /4\s*bed/],
+  },
+  { slug: "standard-room", patterns: [/standard/, /regular/, /double/, /non[-\s]?ac/, /single/] },
+];
+
+function canonicalRoomSlug(roomName: string, index: number): string {
+  const normalized = roomName.toLowerCase();
+  for (const { slug, patterns } of CANONICAL_ROOM_SLUGS) {
+    if (patterns.some((pattern) => pattern.test(normalized))) return slug;
+  }
+  return slugify(roomName) || `room-${index + 1}`;
+}
+
 export function mapRoomToVilla(room: TmRoom, services: TmService[], index: number): VillaType {
-  const roomName = room.name ?? `Villa ${index + 1}`;
-  const bedrooms = extractBhk(roomName) || 0;
-  const description = stripHtml(room.description || `${roomName} at Velora Stays`);
+  const roomName = room.name ?? `Room ${index + 1}`;
+  const slug = canonicalRoomSlug(roomName, index);
+  const beds = extractBedCount(roomName);
+  const description = stripHtml(room.description || `${roomName} at Bishnu Bhaban`);
   const planAmount = pickPlanAmount(room);
   const roomOnlyPrice = typeof room.roomOnlyPrice === "number" ? room.roomOnlyPrice : 0;
   const originalPrice =
     planAmount && planAmount > roomOnlyPrice ? planAmount : undefined;
+  const maxOccupancy = room.maximumOccupancy ?? beds;
 
   return {
     id: `room-${room.id ?? index}`,
-    slug: SLUG_BY_BHK[bedrooms] ?? roomName.toLowerCase().replace(/\s+/g, "-"),
+    slug,
     name: roomName,
-    tagline: VILLA_TAGLINES[bedrooms] ?? `${roomName} at Velora Stays`,
+    tagline: taglineForRoomName(roomName),
     description,
     longDescription: description,
     price: roomOnlyPrice,
     originalPrice,
     currency: "₹",
     priceUnit: "per night",
-    bedrooms,
-    bathrooms: Math.max(1, bedrooms),
-    maxOccupancy: room.maximumOccupancy ?? bedrooms * 2,
+    bedrooms: beds,
+    bathrooms: 1,
+    maxOccupancy,
     images: (room.imageList ?? []).map((img, i) => ({
       id: `${room.id ?? index}-${i}`,
       src: img.url,
-      alt: `${roomName} at Velora Stays`,
-      caption: roomName,
+      alt: img.description?.trim() || `${roomName} at Bishnu Bhaban`,
+      caption: img.description?.trim() || roomName,
     })),
     amenities: buildAmenityIds(services),
     highlights: [
-      `${bedrooms} BHK private villa`,
-      `Hosts up to ${room.maximumOccupancy ?? bedrooms * 2} guests`,
-      "Private pool and lawn access",
-      " Central Kitchen",
+      `${beds} bed${beds === 1 ? "" : "s"} with attached bathroom`,
+      "24-hour hot water",
+      "Free WiFi in room",
+      "Daily housekeeping",
     ],
     features: [
-      "King-size beds with premium linens",
-      "Individual AC in every bedroom",
-      "High-speed WiFi",
-      "Dedicated caretaker on site",
+      "Air-conditioned room",
+      "Attached western-style bathroom",
+      "24-hour hot water supply",
+      "Free WiFi access",
     ],
-    policies: VILLA_POLICIES,
+    policies: ROOM_POLICIES,
     faqs: [],
-    nearby: VILLA_NEARBY,
+    nearby: ROOM_NEARBY,
     popular: true,
     available: isAvailable(room),
-    tag: VILLA_TAGS[bedrooms],
+    tag: tagForRoomName(roomName),
   };
 }
 
 export function mapPropertyVillas(property: TmProperty): VillaType[] {
-  return (property.roomList ?? [])
-    .map((room, index) => mapRoomToVilla(room, property.propertyServicesList ?? [], index))
-    .sort((a, b) => a.price - b.price);
+  const mapped = (property.roomList ?? []).map((room, index) =>
+    mapRoomToVilla(room, property.propertyServicesList ?? [], index),
+  );
+
+  const used = new Set<string>();
+  for (const villa of mapped) {
+    if (!used.has(villa.slug)) {
+      used.add(villa.slug);
+      continue;
+    }
+    let suffix = 2;
+    while (used.has(`${villa.slug}-${suffix}`)) suffix += 1;
+    villa.slug = `${villa.slug}-${suffix}`;
+    used.add(villa.slug);
+  }
+
+  return mapped.sort((a, b) => a.price - b.price);
 }

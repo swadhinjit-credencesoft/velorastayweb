@@ -8,10 +8,10 @@ import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import GalleryVillaSections from "./GalleryVillaSections";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Velora Stays",
-  description: "Explore photos of villas, dining, events, facilities, and nearby attractions at Velora Stays Lonavala.",
+  title: "Photo Gallery | Bishnu Bhaban",
+  description: "Photos of Bishnu Bhaban in Puri: the West Gate entrance, guest rooms, the dining area, and the common areas.",
   alternates: { canonical: "/gallery" },
-  openGraph: { title: "Photo Gallery | Velora Stays", description: "Take a visual tour of Velora Stays through our photo gallery." },
+  openGraph: { title: "Photo Gallery | Bishnu Bhaban", description: "Take a visual tour of Bishnu Bhaban through our photo gallery." },
 };
 
 export default function GalleryPage() {
@@ -22,8 +22,8 @@ export default function GalleryPage() {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/heroimg2.jpeg"
-            alt="Velora Stays gallery"
+            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600"
+            alt="Bishnu Bhaban gallery"
             fill
             className="object-cover"
             sizes="100vw"
@@ -33,7 +33,7 @@ export default function GalleryPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Gallery", href: "/gallery" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Photo Gallery</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Take a visual tour of Velora Stays and discover what makes us special.</p>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Take a visual tour of Bishnu Bhaban and discover what makes us special.</p>
         </div>
       </section>
 

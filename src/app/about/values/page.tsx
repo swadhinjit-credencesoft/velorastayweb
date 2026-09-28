@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_VALUES } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Values | Velora Stays",
-  description: "The core values that guide every aspect of hospitality at Velora Stays — cleanliness, guest-centricity, and continuous improvement.",
+  title: "Our Values | Bishnu Bhaban",
+  description: "The core values that guide every aspect of hospitality at Bishnu Bhaban — cleanliness, guest-centricity, and continuous improvement.",
   alternates: { canonical: "/about/values" },
   openGraph: {
-    title: "Our Values | Velora Stays",
-    description: "The core values that guide every aspect of hospitality at Velora Stays — cleanliness, guest-centricity, and continuous improvement.",
+    title: "Our Values | Bishnu Bhaban",
+    description: "The core values that guide every aspect of hospitality at Bishnu Bhaban — cleanliness, guest-centricity, and continuous improvement.",
   },
 };
 

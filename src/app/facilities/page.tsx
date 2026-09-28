@@ -9,27 +9,29 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
 
 export const metadata: Metadata = {
-  title: "Facilities & Amenities | Velora Stays",
+  title: "Facilities & Amenities | Bishnu Bhaban",
   description:
-    "Explore world-class facilities at Velora Stays: private pool, BBQ, high-speed WiFi,  Central Kitchen, power backup, and more amenities near Pawna Lake, Lonavala.",
+    "The facilities at Bishnu Bhaban, a budget hotel at the West Gate of the Jagannath Temple in Puri: air conditioning, 24-hour hot water, attached bathroom, free WiFi, daily housekeeping, and a front desk open from 7 AM to 11 PM.",
   keywords: [
-    "villa amenities Lonavala",
-    "villa facilities Pawna Lake",
-    "free WiFi villa Lonavala",
-    "private pool villa Lonavala",
+    "hotel near Jagannath Temple",
+    "budget hotel Puri amenities",
+    "Puri hotel air conditioning",
+    "hotel with 24 hour hot water Puri",
+    "Puri hotel free WiFi",
   ],
   alternates: { canonical: "/facilities" },
   openGraph: {
-    title: "Facilities & Amenities | Velora Stays",
+    title: "Facilities & Amenities | Bishnu Bhaban",
     description: FACILITIES_CONTENT.description,
-    url: "https://velorastays.in/facilities",
+    url: "https://bishnubhaban.com/facilities",
   },
 };
 
 const categoryLabels: Record<string, string> = {
+  location: "Location",
   outdoor: "Outdoor & Pool",
   entertainment: "Entertainment",
-  kitchen: " Central Kitchen",
+  kitchen: "Dining & Kitchen",
   comfort: "Comfort",
   service: "Service",
   bathroom: "Bathroom",
@@ -58,16 +60,7 @@ export default function FacilitiesPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <video
-            className="h-full w-full object-cover"
-            src="https://bookonelocal.in/cdn/done7bhk.mp4"
-            poster="/images/swimmingpool.avif"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          />
+          <Image src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600" alt="" fill className="object-cover" sizes="100vw" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/60 to-[#16213e]/50" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -96,7 +89,10 @@ export default function FacilitiesPage() {
                   >
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={facility.image || "/schemaimage.jpeg"}
+                        src={
+                          facility.image ||
+                          "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=800"
+                        }
                         alt={facility.name}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"

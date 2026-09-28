@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
             <div className={styles.imageWrap}>
               <Image
                 src={SITE_ASSETS.aboutImage}
-                alt="Velora Stays villa entrance"
+                alt="Bishnu Bhaban villa entrance"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className={styles.image}
@@ -30,12 +30,14 @@ export default function WhyChooseUs() {
           <div className={styles.contentCol}>
             <span className={styles.eyebrow}>Why Choose Us</span>
             <h2 className={`${styles.heading} font-oswald`}>
-              The Velora Stays Difference
+              Bishnu Bhaban Difference
             </h2>
             <p className={styles.description}>
-              From our prime Pawna Lake location to our unwavering commitment to cleanliness and
-              guest satisfaction, every detail is designed to make your stay exceptional. We combine
-              modern comforts with warm Indian hospitality to create a home away from home.
+              We are a budget hotel fifty metres from the West Gate of the Jagannath
+              Temple, and we do not pretend to be more than that. What we commit to is
+              the set of things that decide whether a Puri trip went well: a clean room
+              every time, hot water at any hour, a front desk open from 7 AM to 11 PM,
+              and a price that does not need justifying.
             </p>
 
             <div className={styles.statsGrid}>

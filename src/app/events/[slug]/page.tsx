@@ -22,11 +22,11 @@ export function generateStaticParams() {
 //   const event = getEventBySlug(params.slug);
 //   if (!event) return { title: "Event Not Found" };
 //   return {
-//     title: `${event.name} | Velora Stays Events`,
+//     title: `${event.name} | Bishnu Bhaban Events`,
 //     description: event.description,
 //     alternates: { canonical: `/events/${event.slug}` },
 //     openGraph: {
-//       title: `${event.name} | Velora Stays`,
+//       title: `${event.name} | Bishnu Bhaban`,
 //       description: event.tagline,
 //       images: [{ url: event.image, width: 1200, height: 630, alt: event.name }],
 //     },
@@ -60,7 +60,7 @@ export default function EventDetailPage() {
           description: event.description,
           startDate: "2026-01-01",
           endDate: "2026-12-31",
-          location: "Velora Stays, Lonavala, Maharashtra",
+          location: "Bishnu Bhaban, Lonavala, Maharashtra",
         })}
       />
 

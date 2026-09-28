@@ -32,14 +32,14 @@ export interface AlaCartePrice {
 }
 
 export const DINING_CONTENT = {
-  eyebrow: "Velora Stays",
-  tagline: "Greener · Healthier · Natural",
+  eyebrow: "Bishnu Bhaban",
+  tagline: "Odia Home Cooking · Freshly Prepared",
   heading: "Food Menu & Packages",
   description:
-    "Relish home-style vegetarian and non-vegetarian meals prepared fresh by our in-house chef, served with the essence of nature.",
+    "Our in-house kitchen prepares Odia home cooking alongside North Indian and continental options. Meal plans can be added at the time of booking, and we can cater early breakfasts for guests leaving before dawn for darshan.",
   referenceNote: "Please note: the menu is for reference only and is subject to availability.",
   feedback:
-    "Food filled with the essence of Nature. Let us know how your overall experience was — your feedback helps us enhance!",
+    "Let us know how the food was. Guest feedback is what tells us what to keep and what to change.",
 };
 
 export const MEAL_PACKAGES: MealPackage[] = [

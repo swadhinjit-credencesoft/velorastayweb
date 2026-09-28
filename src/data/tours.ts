@@ -1,460 +1,257 @@
 ﻿import type { TourPackage, SectionContent } from "@/types";
 
 export const TOURS_CONTENT: SectionContent = {
-  eyebrow: "Pawna Experience",
-  heading: "Explore the Beauty of Lonavala",
+  eyebrow: "Day Plans",
+  heading: "How to Spend Your Days in Puri",
   description:
-    "Discover the magic of Pawna Lake and the surrounding Sahyadri mountains with our curated experiences. From historic forts to thrilling adventures, each experience is designed to give you an authentic and unforgettable taste of Lonavala. Let our knowledgeable local guides show you the best of the region while you enjoy the journey.",
+    "We are not a tour operator and we do not run guided excursions. What we can do is help you plan: these are day plans built around staying here, with realistic timings based on what the front desk has seen work for guests. Treat them as starting points, not fixed schedules — temple timings change seasonally, and the front desk will tell you what is happening on the day you arrive.",
 };
 
 export const TOUR_PACKAGES: TourPackage[] = [
   {
-    id: "tour-lake-adventure",
-    slug: "pawna-lake-adventure",
-    name: "Pawna Lake Adventure",
-    tagline: "Experience the best of Pawna Lake in a single day",
+    id: "plan-temple",
+    slug: "temple-and-grand-road",
+    name: "Temple & Grand Road Day",
+    tagline: "The reason most people are in Puri, done without the stress",
     description:
-      "A comprehensive full-day experience that covers the most exciting activities around Pawna Lake, from boating and kayaking to lakeside camping. Perfect for adventure seekers who want to soak in the natural beauty of the Sahyadris.",
+      "A plan for the Jagannath Temple itself and the surrounding Grand Road, built around how the temple actually works: early darshan, a rest in the middle of the day, and the evening when the street comes alive.",
     longDescription:
-      "The Pawna Lake Adventure is our most popular offering, designed to give you a complete taste of what makes this region so special. Over the course of a full day, you will experience four of Pawna Lake's most beloved activities, each offering a unique perspective on this stunning landscape. Your journey begins with a scenic drive from the villa to the lake, where you will board a traditional boat for a cruise through the calm waters. As you glide across the lake, you will spot the ancient Tikona Fort perched on a nearby hill and witness the stunning backdrop of the Sahyadri mountains. From there, you will try your hand at kayaking, paddling through the serene waters while enjoying panoramic views of the surrounding hills. Next, you will visit a local fishing village to learn about the unique way of life of the communities that call this area home. After a lakeside lunch featuring fresh fish and local delicacies, you will embark on a guided trek through the lush green trails that wind through the hills. The trek offers breathtaking views of the lake and the surrounding valleys, especially during the monsoon season when the landscape is at its most vibrant. The experience concludes with a relaxing evening by the campfire at your villa, where you can share stories of the day's adventures under a canopy of stars.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    duration: "Full Day",
-    price: 2500,
-    originalPrice: 3000,
-    currency: "\u20B9",
-    groupSize: "2-10",
+      "Most guests are staying here for the temple, so this is the plan we walk through with you at check-in. The important thing to understand about darshan at the Jagannath Temple is that it is not a single fixed event. There are several aartha timings across the day, from the pre-dawn slot through to the evening, and which one you can realistically attend depends on the season, the day of the week, and the festival calendar. The temple is at the West Gate of Grand Road, so from our rooms it is a short walk rather than a journey. For pre-dawn darshan, leave your room at around 3:00 to 3:30 AM; the gates open well before sunrise and the queue is far shorter than it will be at seven in the morning. Breakfast afterwards is the practical problem, which is why we can serve it early if you tell us the night before. Between darshan and the evening, Puri in the middle of the day is hot and there is not much that demands doing. This is a good time to rest, to visit the Jagannath Temple Museum on the temple grounds if it is open that day, or to swim before the afternoon heat. In the evening, Grand Road changes character completely. The road closes to traffic, the stalls come out, and the whole area fills with people. The evening aarti is the other darshan worth planning around, and the crowd around it is significant. Wear clothes you can walk in, carry something small in cash for the stalls, and be aware that footwear needs to come off well before you reach the temple gates — there are places to leave it, and it is easier to use them than to carry them.",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    duration: "Full day",
+    price: 0,
+    currency: "₹",
+    groupSize: "Any number of guests",
     includes: [
-      "AC transport for the entire tour",
-      "Professional English-speaking guide",
-      "Lakeside lunch at a local restaurant",
-      "Boating and kayaking activities",
-      "Guided trek through the hills",
-      "Bottled water during the tour",
+      "A realistic hour-by-hour plan rather than a fixed schedule",
+      "Guidance on darshan timings and what changes by season",
+      "Early breakfast arranged on request for pre-dawn darshan",
+      "Advice on footwear, dress, and what to carry through the gates",
     ],
     itinerary: [
       {
-        id: "pla-1",
-        time: "8:00 AM",
-        activity: "Pawna Lake Boating",
+        id: "tg-1",
+        time: "3:00 AM",
+        activity: "Leave for the temple",
         description:
-          "Begin your day with a scenic boat ride on Pawna Lake. Glide through the calm waters while enjoying stunning views of Tikona Fort and the Sahyadri mountains. Keep an eye out for local birds and the beautiful reflections on the water.",
+          "For pre-dawn aartha darshan, leave your room around 3:00 to 3:30 AM. The walk to the West Gate takes a couple of minutes, but the queue forms well before the gates open, and it is much shorter at this hour than later in the morning.",
       },
       {
-        id: "pla-2",
-        time: "10:00 AM",
-        activity: "Kayaking Experience",
+        id: "tg-2",
+        time: "4:00 – 6:00 AM",
+        activity: "Darshan",
         description:
-          "Try your hand at kayaking on the serene waters of Pawna Lake. Paddle at your own pace while enjoying panoramic views of the surrounding hills and the ancient forts that dot the landscape.",
+          "The earliest aartha timings. Exact timings vary by season and by day of the week, so ask the front desk the previous evening what applies on the morning you are here. Photography inside the temple complex is restricted, so plan on seeing rather than recording.",
       },
       {
-        id: "pla-3",
-        time: "12:00 PM",
-        activity: "Village Visit",
+        id: "tg-3",
+        time: "6:30 AM",
+        activity: "Early breakfast back at the property",
         description:
-          "Visit a local fishing village near Pawna Lake. Meet the local communities, learn about their unique culture and traditions, see how they coexist with nature, and enjoy a home-cooked lunch featuring fresh fish.",
+          "Tell us the night before if you want breakfast this early and we will have it ready. It is a small thing, but it makes the difference between a good morning and a rushed one.",
       },
       {
-        id: "pla-4",
-        time: "2:00 PM",
-        activity: "Guided Trek",
+        id: "tg-4",
+        time: "9:00 AM – 4:00 PM",
+        activity: "Rest, and the middle of the day",
         description:
-          "Embark on a guided trek through the lush green trails that wind through the Sahyadri hills. The trek offers breathtaking views of the lake and the surrounding valleys, with opportunities to spot local flora and fauna.",
+          "Puri is hot between late morning and mid-afternoon and most visitors rest through it. This is a good window for the Jagannath Temple Museum on the temple grounds, shopping on Grand Road, or simply recovering before the evening.",
       },
       {
-        id: "pla-5",
-        time: "5:00 PM",
-        activity: "Evening by the Lake",
+        id: "tg-5",
+        time: "5:00 – 8:00 PM",
+        activity: "Grand Road in the evening",
         description:
-          "Conclude your day with a relaxing evening by the lake. Watch the sunset paint the sky in shades of orange and pink, and enjoy a warm cup of tea while reflecting on the day's adventures.",
+          "The road closes to traffic and fills with stalls and people. Watch the evening aarti if timings suit, browse the sweet shops, and expect the crowd density to be high right around the procession route.",
       },
     ],
     highlights: [
-      "Experience 4 exciting activities around Pawna Lake",
-      "Boating with stunning fort views",
-      "Kayaking on serene waters",
-      "Guided trek through the Sahyadris",
-      "Lakeside lunch at a local restaurant",
-      "Small group size for a personalised experience",
+      "Pre-dawn darshan with the shortest queues",
+      "Early breakfast arranged the night before",
+      "Honest guidance on darshan timings for the day you are here",
+      "Evening Grand Road when the street opens up",
     ],
     faqs: [
       {
-        id: "pla-faq-1",
-        question: "Is the tour suitable for elderly visitors?",
+        id: "tg-faq-1",
+        question: "Can we book darshan through the hotel?",
         answer:
-          "Yes, the tour is designed to be comfortable for all ages. We use AC transport between locations, and while there is walking involved, the pace is relaxed with adequate rest breaks.",
+          "No. We are not a temple booking agent and cannot reserve slots on your behalf. Darshan and puja bookings must be made through the official Jagannath Temple Management Committee channels. We can explain how the system works so you know what to do when you arrive.",
       },
       {
-        id: "pla-faq-2",
-        question: "What should I wear for the tour?",
+        id: "tg-faq-2",
+        question: "How far is the temple from the hotel?",
         answer:
-          "We recommend comfortable, casual clothing and sturdy walking shoes. Carry a hat and sunscreen during summer months. During monsoon, rain jackets are recommended.",
+          "We are at the West Gate of the Jagannath Temple on Grand Road, so it is a short walk rather than a drive. Grand Road itself closes to traffic in the evenings, which is convenient on foot and confusing if you are trying to reach us by car during that window.",
       },
       {
-        id: "pla-faq-3",
-        question: "Can the itinerary be customised?",
+        id: "tg-faq-3",
+        question: "Is there a dress code for the temple?",
         answer:
-          "While the standard itinerary covers our curated selection of activities, we can adjust the experience for private bookings. Please contact us at least 48 hours in advance to discuss any modifications.",
+          "Yes. Traditional dress is expected, and items made of leather are generally not permitted inside. Decent clothing covering shoulders and knees works for everyone. If you are unsure about anything specific, ask at the gate or ask us before you go.",
       },
     ],
   },
 
   {
-    id: "tour-fort-trek",
-    slug: "fort-trekking",
-    name: "Fort Trekking Experience",
-    tagline: "Explore ancient forts in the Sahyadris",
+    id: "plan-konark",
+    slug: "konark-day-trip",
+    name: "Konark Day Trip",
+    tagline: "The Sun Temple, and what to combine it with",
     description:
-      "A guided trekking experience through the historic forts of Lonavala, from the majestic Lohagad Fort to the scenic Tikona Fort, offering a deep dive into the rich history and natural beauty of the region.",
+      "A day plan for Konark Sun Temple, roughly 60 to 65 km from Puri, with options to add Dhauli or Chilika if you have the time and the energy.",
     longDescription:
-      "The forts of Lonavala are among the most historically significant and visually stunning in all of Maharashtra. The Fort Trekking Experience is a carefully curated guided trek that takes you through two of the region's most beloved forts, each offering a unique perspective on the Maratha Empire and the natural beauty of the Sahyadri mountains. Your journey begins at Lohagad Fort, a majestic fortress that stands at an elevation of 1,033 metres above sea level. The trek to the top takes you through lush green trails, ancient stone steps, and massive gateways that once protected the fort from invaders. At the summit, you will be rewarded with breathtaking panoramic views of the Pawna Lake, the surrounding valleys, and the distant Western Ghats. From there, you will travel to Tikona Fort, a smaller but equally fascinating fort perched on a conical hill. The trek to Tikona offers stunning views of the Pawna Lake and the Lohagad Fort in the distance. The fort's well-preserved structures, including the Vinayak Temple and the ancient water cisterns, provide a fascinating glimpse into the region's past. Throughout the day, your knowledgeable guide will share stories of the Maratha warriors, the strategic importance of these forts, and the natural history of the Sahyadri mountains.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    duration: "Full Day",
-    price: 2000,
-    originalPrice: 2500,
-    currency: "\u20B9",
-    groupSize: "2-12",
+      "The Konark Sun Temple is the reason many travellers come to this part of Odisha, and it deserves a full day rather than a hurried stop. It sits about 60 to 65 km from Puri, which in practice means somewhere between an hour and a half and two and a half hours each way depending on traffic, and traffic on this road is not always predictable. If you want to make a day of it, leave early — by 6:00 to 6:30 AM — and you will arrive before the worst of the heat and before the midday crowd. The temple itself is a UNESCO World Heritage Site, and the part that surprises people is not just the architecture but the fact that the wheels at the base of the structure are carved to look like they are turning. Give yourself a couple of hours; there is more detail in the carvings the longer you stay. In the afternoon you have a choice. Dhauli, with the Ashokan edicts and the Peace Pagoda, is on the road and makes a natural addition to the return journey. Chilika Lake, the brackish water lagoon an hour or so further south, is larger and less convenient, and honestly is a stretch for a single day unless you leave very early and do not mind a long drive. The other option, and often the better one, is to come back and stay in Puri, eat properly, and let the day be one thing rather than three. If you are going to hire a car, arrange it in advance and confirm the total cost including waiting time and tolls before you set off. If you prefer to go on your own, buses and shared jeeps leave Puri for Konark regularly, but the timings are less flexible and the return schedule is fixed, which makes it a poor fit for a pre-dawn temple visit followed by a relaxed afternoon.",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    duration: "Full day",
+    price: 0,
+    currency: "₹",
+    groupSize: "Any number of guests",
     includes: [
-      "Professional trekking guide",
-      "AC transport between forts",
-      "Entry fees to all forts",
-      "Packed lunch and refreshments",
-      "Trekking poles and basic first aid",
-      "Bottled water",
+      "A realistic assessment of travel times and what is achievable in a day",
+      "Advice on transport options, including when to hire a car",
+      "Combination suggestions for Dhauli and Chilika",
+      "Breakfast arranged early so you can leave on time",
     ],
     itinerary: [
       {
-        id: "ft-1",
-        time: "7:00 AM",
-        activity: "Lohagad Fort Trek",
+        id: "ko-1",
+        time: "6:00 AM",
+        activity: "Leave Puri",
         description:
-          "Begin your trekking adventure at the majestic Lohagad Fort. The trail takes you through lush green vegetation, ancient stone pathways, and massive gateways. The trek takes approximately 2 hours to reach the summit.",
+          "An early start matters more than anything else on this trip. Leave by 6:30 AM at the latest if you want to see the temple in relative quiet and avoid the worst heat of the day.",
       },
       {
-        id: "ft-2",
-        time: "10:00 AM",
-        activity: "Fort Exploration",
+        id: "ko-2",
+        time: "8:00 – 9:00 AM",
+        activity: "Arrive at Konark",
         description:
-          "Explore the well-preserved structures of Lohagad Fort, including the Visapur Gate, the Shivaji-era fortifications, and the ancient water cisterns. Enjoy breathtaking panoramic views of Pawna Lake from the summit.",
+          "Allow for the possibility of a longer journey than the map suggests. The Archaeological Survey of India site opens early; confirm current timings before you go, as opening hours are adjusted seasonally.",
       },
       {
-        id: "ft-3",
-        time: "12:00 PM",
-        activity: "Lunch Break",
+        id: "ko-3",
+        time: "9:00 – 11:30 AM",
+        activity: "Konark Sun Temple",
         description:
-          "Enjoy a packed lunch with stunning views of the Sahyadri mountains. Rest and recharge before heading to the next fort.",
+          "Two hours is a reasonable minimum. The main temple, the Natya Mandapa, and the surrounding complex are all part of one site, and the details are in the carvings rather than in a single viewpoint.",
       },
       {
-        id: "ft-4",
-        time: "1:30 PM",
-        activity: "Tikona Fort Trek",
+        id: "ko-4",
+        time: "12:30 PM",
+        activity: "Lunch and a decision about the afternoon",
         description:
-          "Drive to Tikona Fort and begin the scenic trek to the top. The trail offers stunning views of Pawna Lake and the surrounding valleys. The trek takes approximately 1.5 hours.",
+          "There are restaurants near the site. After lunch you have to commit: Dhauli on the way back, Chilika if you have a long day and a driver, or return directly to Puri and stop rushing.",
       },
       {
-        id: "ft-5",
+        id: "ko-5",
+        time: "2:00 – 5:00 PM",
+        activity: "Dhauli or direct return",
+        description:
+          "Dhauli sits on the return route and is a straightforward stop. If you pushed hard in the morning, returning to Puri and unwinding is a perfectly good afternoon plan.",
+      },
+    ],
+    highlights: [
+      "Konark Sun Temple with enough time to see the detail",
+      "Dhauli as an easy addition on the return road",
+      "Honest guidance on whether Chilika fits in a day",
+      "Early breakfast so you can leave on schedule",
+    ],
+    faqs: [
+      {
+        id: "ko-faq-1",
+        question: "Can you arrange a car and driver for Konark?",
+        answer:
+          "We can help you contact a driver, but the vehicle and the driver are not ours. We would encourage you to agree the total cost, including waiting time, tolls, and overtime, before you set off, and to confirm the return time in advance so nobody is left waiting.",
+      },
+      {
+        id: "ko-faq-2",
+        question: "How long should we allow at the temple?",
+        answer:
+          "Two hours is a reasonable minimum and three is better if you want to read the carvings properly. Photographs of the main temple from outside the complex are generally permitted; photography inside is restricted, so plan to see rather than record.",
+      },
+      {
+        id: "ko-faq-3",
+        question: "Is it worth doing Chilika in the same day?",
+        answer:
+          "It is possible, but it makes a long day and the lagoon deserves more time than that. If Chilika is important to you, consider staying a night nearer the lake and doing Konark on a separate day.",
+      },
+    ],
+  },
+
+  {
+    id: "plan-beach",
+    slug: "beach-and-bazaar",
+    name: "Beach, Bazaar & Swamiji Day",
+    tagline: "A day without the temple, for a change of pace",
+    description:
+      "A plan for the Puri beach, the Grand Road sweet shops, and the old part of the city, for guests who have already done the temple or simply want a slow day.",
+    longDescription:
+      "Not every day in Puri has to be a temple day. This plan is for the beach at one end of Grand Road, the market in the middle, and the older streets behind it — and it works well as a rest day between temple visits. Puri Beach runs a long way north from the main area, and the interesting thing about it is that it is not one beach but a series of them with different characters. The stretch closest to Grand Road is busy and commercial. Further north it becomes progressively more open and, depending on the season, you can walk a considerable distance with relatively few people around. The water here is rough and the currents are strong; the sea is not somewhere to be casual, and swimming here is genuinely risky. Come to walk, watch the sunset, or sit on the sand, and treat the water with respect. The Grand Road sweet shops are the other reason people linger. Puri has a long-standing tradition of sweet-making, and the shops along Grand Road sell everything from the light chena poda that is meant to be eaten within a day of making to packaged items you can carry home. Buy from the shops where the sweet is being made in front of you, and it is noticeably better. The back streets behind Grand Road are quieter and worth a walk, particularly in the early evening when the traffic has thinned and the shutters are half down. If you are in Puri for a longer stay, this is a good afternoon to simply wander rather than schedule.",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    duration: "Half day",
+    price: 0,
+    currency: "₹",
+    groupSize: "Any number of guests",
+    includes: [
+      "Guidance on which part of the beach suits what you want",
+      "Advice on where the sweets are worth buying",
+      "A gentle walk route through the older streets behind Grand Road",
+      "No fixed schedule, so you can take as long as you like",
+    ],
+    itinerary: [
+      {
+        id: "bb-1",
         time: "4:00 PM",
-        activity: "Tikona Fort Exploration",
+        activity: "Walk to the beach",
         description:
-          "Explore the ancient structures of Tikona Fort, including the Vinayak Temple and the historic fortifications. Enjoy the stunning sunset views from the summit before descending.",
-      },
-    ],
-    highlights: [
-      "Trek through two historic forts in the Sahyadris",
-      "Explore Lohagad Fort at 1,033 metres elevation",
-      "Discover the ancient Tikona Fort",
-      "Breathtaking panoramic views of Pawna Lake",
-      "Learn about Maratha history and heritage",
-      "Expert trekking guide throughout",
-    ],
-    faqs: [
-      {
-        id: "ft-faq-1",
-        question: "How difficult is the trek?",
-        answer:
-          "Both treks are of moderate difficulty. A basic level of fitness is required. The trails are well-maintained and our guides ensure a safe and enjoyable experience for all participants.",
+          "The beach is a short walk along Grand Road. Late afternoon is the best time — the heat has dropped and the light is better for walking.",
       },
       {
-        id: "ft-faq-2",
-        question: "Is the trek suitable for beginners?",
-        answer:
-          "Yes, the treks are suitable for beginners with a reasonable level of fitness. Our guides provide support and encouragement throughout, and the pace is adjusted to suit the group.",
-      },
-      {
-        id: "ft-faq-3",
-        question: "What should I bring for the trek?",
-        answer:
-          "Bring comfortable trekking shoes, a hat, sunscreen, sunglasses, a small backpack, and a water bottle. We provide trekking poles and basic first aid.",
-      },
-    ],
-  },
-
-  {
-    id: "tour-lakeside-camping",
-    slug: "lakeside-camping",
-    name: "Lakeside Camping",
-    tagline: "Spend a night under the stars by Pawna Lake",
-    description:
-      "An overnight camping experience by the serene Pawna Lake, with bonfire, stargazing, and lakeside activities for a perfect escape from the city.",
-    longDescription:
-      "There is something magical about spending a night under the stars by a tranquil lake. The Lakeside Camping experience is an overnight adventure that takes you to a premium campsite on the shores of Pawna Lake, where you can disconnect from the chaos of city life and reconnect with nature. Your adventure begins in the afternoon with a welcome drink and a brief orientation about the campsite and its surroundings. As the sun begins to set, you will gather around a crackling bonfire for an evening of music, storytelling, and delicious barbecue. The campsite offers stunning views of the lake and the surrounding hills, which become even more magical as the stars come out. Our experienced guides will help you identify constellations and share stories about the night sky. The evening concludes with a hearty dinner featuring local Maharashtrian cuisine, served under the open sky. You will sleep in comfortable tents equipped with sleeping bags and mats, with the gentle sounds of the lake as your lullaby. The next morning, wake up to a spectacular sunrise over the lake, followed by a refreshing breakfast before heading back to your villa.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    duration: "1 Night",
-    price: 3500,
-    originalPrice: 4500,
-    currency: "\u20B9",
-    groupSize: "4-20",
-    includes: [
-      "Premium lakeside campsite",
-      "Comfortable tents with sleeping bags",
-      "Welcome drink and snacks",
-      "Barbecue dinner under the stars",
-      "Bonfire with music",
-      "Stargazing session",
-      "Breakfast the next morning",
-    ],
-    itinerary: [
-      {
-        id: "lc-1",
-        time: "4:00 PM",
-        activity: "Campsite Arrival",
+        id: "bb-2",
+        time: "5:00 – 6:30 PM",
+        activity: "Beach time",
         description:
-          "Arrive at the premium lakeside campsite and receive a warm welcome with refreshing drinks. Settle into your comfortable tents and get oriented with the campsite facilities.",
+          "Walk, sit, or watch the fishing boats coming in. Note that currents are strong and swimming is not safe in this stretch of the coast.",
       },
       {
-        id: "lc-2",
-        time: "6:00 PM",
-        activity: "Bonfire & Barbecue",
+        id: "bb-3",
+        time: "6:30 PM",
+        activity: "Grand Road sweet shops",
         description:
-          "Gather around a crackling bonfire as the sun sets over Pawna Lake. Enjoy a delicious barbecue with grilled vegetables, paneer, and non-vegetarian options, accompanied by music and storytelling.",
+          "The shops are best before the evening crowd builds. Look for the ones making chena poda on the premises, and buy it the same day.",
       },
       {
-        id: "lc-3",
-        time: "8:00 PM",
-        activity: "Stargazing",
-        description:
-          "As darkness falls, our experienced guides will help you identify constellations and planets visible in the clear night sky. Learn about the stories behind the stars and enjoy the peaceful ambiance of the campsite.",
-      },
-      {
-        id: "lc-4",
-        time: "9:30 PM",
-        activity: "Dinner",
-        description:
-          "Enjoy a hearty dinner featuring local Maharashtrian cuisine served under the open sky. Share stories with fellow campers while enjoying the serene lakeside atmosphere.",
-      },
-      {
-        id: "lc-5",
-        time: "7:00 AM",
-        activity: "Sunrise & Breakfast",
-        description:
-          "Wake up to a spectacular sunrise over Pawna Lake. Enjoy a refreshing breakfast with fresh fruits, parathas, and hot beverages before checking out and heading back to your villa.",
-      },
-    ],
-    highlights: [
-      "Overnight camping by serene Pawna Lake",
-      "Bonfire and barbecue under the stars",
-      "Stargazing with expert guides",
-      "Comfortable tents with sleeping bags",
-      "Sunrise views over the lake",
-      "Local Maharashtrian cuisine",
-    ],
-    faqs: [
-      {
-        id: "lc-faq-1",
-        question: "Is the camping safe?",
-        answer:
-          "Yes, safety is our top priority. The campsite is well-lit, has 24-hour security, and our guides are trained in first aid. The tents are durable and weather-resistant.",
-      },
-      {
-        id: "lc-faq-2",
-        question: "What if it rains?",
-        answer:
-          "The campsite has covered areas where you can take shelter. Our tents are waterproof and we provide rain gear if needed. The monsoon camping experience is actually quite magical!",
-      },
-      {
-        id: "lc-faq-3",
-        question: "Is the camping suitable for children?",
-        answer:
-          "Yes, children above 8 years are welcome to join the camping experience. The bonfire, stargazing, and barbecue are always a hit with kids.",
-      },
-    ],
-  },
-
-  {
-    id: "tour-adventure-activities",
-    slug: "adventure-activities",
-    name: "Adventure Activities",
-    tagline: "Thrilling adventures in the Sahyadris",
-    description:
-      "An action-packed day of adventure activities around Lonavala, from rappelling and zip-lining to ATV rides and rock climbing.",
-    longDescription:
-      "For the adventure seeker, the Adventure Activities package offers an action-packed day of thrilling experiences in the stunning Sahyadri mountains. This full-day adventure takes you through a series of exciting activities designed to get your adrenaline pumping while showcasing the natural beauty of the Lonavala region. Your adventure begins with rappelling down a majestic cliff face, where you will descend while enjoying breathtaking views of the surrounding valleys. From there, you will experience the thrill of zip-lining across a gorge, soaring through the air with the wind in your hair and the lush green landscape below. The adventure continues with ATV rides through rugged terrain, where you will navigate rocky paths and muddy trails while taking in the scenic beauty of the Sahyadris. For those who enjoy a challenge, rock climbing on natural rock formations offers the perfect opportunity to test your strength and determination. The day concludes with a relaxing lakeside lunch, where you can share stories of your adventures while enjoying the serene beauty of Pawna Lake. Throughout the day, experienced instructors ensure your safety while encouraging you to push your limits.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    duration: "Full Day",
-    price: 3000,
-    originalPrice: 4000,
-    currency: "\u20B9",
-    groupSize: "4-15",
-    includes: [
-      "Professional adventure instructors",
-      "All safety equipment and gear",
-      "AC transport for the entire tour",
-      "Lakeside lunch",
-      "Bottled water and refreshments",
-      "Photography of your adventures",
-    ],
-    itinerary: [
-      {
-        id: "aa-1",
-        time: "8:00 AM",
-        activity: "Rappelling",
-        description:
-          "Begin your adventure with rappelling down a majestic cliff face. Our professional instructors will guide you through the basics before you descend while enjoying breathtaking views of the surrounding valleys.",
-      },
-      {
-        id: "aa-2",
-        time: "10:00 AM",
-        activity: "Zip-lining",
-        description:
-          "Experience the thrill of zip-lining across a gorge. Soar through the air with the wind in your hair while enjoying panoramic views of the lush green landscape below.",
-      },
-      {
-        id: "aa-3",
-        time: "12:00 PM",
-        activity: "ATV Riding",
-        description:
-          "Navigate rugged terrain on powerful ATVs. Drive through rocky paths, muddy trails, and scenic routes while taking in the beauty of the Sahyadri mountains.",
-      },
-      {
-        id: "aa-4",
-        time: "2:00 PM",
-        activity: "Lakeside Lunch",
-        description:
-          "Enjoy a well-deserved lunch by Pawna Lake. Share stories of your adventures while enjoying delicious food with stunning views of the lake and surrounding hills.",
-      },
-      {
-        id: "aa-5",
-        time: "3:30 PM",
-        activity: "Rock Climbing",
-        description:
-          "Test your strength and determination with rock climbing on natural rock formations. Our instructors will guide you through various routes suitable for different skill levels.",
-      },
-    ],
-    highlights: [
-      "Rappelling down a majestic cliff face",
-      "Zip-lining across a scenic gorge",
-      "ATV riding through rugged terrain",
-      "Rock climbing on natural formations",
-      "Lakeside lunch with stunning views",
-      "Professional instructors throughout",
-    ],
-    faqs: [
-      {
-        id: "aa-faq-1",
-        question: "Is the adventure suitable for beginners?",
-        answer:
-          "Yes, all activities are designed to be safe and enjoyable for beginners. Our professional instructors provide thorough briefings and safety instructions before each activity.",
-      },
-      {
-        id: "aa-faq-2",
-        question: "What is the minimum age for adventure activities?",
-        answer:
-          "Participants must be at least 12 years old for most activities. Some activities like rock climbing have a minimum age of 14 years. Please check with us for specific requirements.",
-      },
-      {
-        id: "aa-faq-3",
-        question: "What should I wear for the activities?",
-        answer:
-          "Wear comfortable, athletic clothing and sturdy sports shoes. Avoid loose jewelry or accessories. We provide all necessary safety equipment including helmets, harnesses, and gloves.",
-      },
-    ],
-  },
-
-  {
-    id: "tour-sunset-experience",
-    slug: "sunset-experience",
-    name: "Sunset Experience",
-    tagline: "Witness magical sunsets over Pawna Lake",
-    description:
-      "A curated evening experience that takes you to the best sunset viewpoints around Pawna Lake, with refreshments and photography opportunities.",
-    longDescription:
-      "The sunsets at Pawna Lake are legendary, painting the sky in vibrant shades of orange, pink, and purple that reflect off the calm waters. The Sunset Experience is a curated evening that takes you to the best viewpoints around the lake, ensuring you witness nature's most spectacular show in the most beautiful settings. Your evening begins with a drive to a scenic hilltop viewpoint that offers panoramic views of Pawna Lake and the surrounding Sahyadri mountains. As the sun begins its descent, you will enjoy refreshing drinks and light snacks while watching the sky transform into a canvas of colours. Our guide will share stories about the region and help you capture the perfect photograph. From there, you will move to the lakeside, where you will witness the final moments of the sunset reflected on the water. The experience includes a short boat ride on the lake during the golden hour, offering unique perspectives of the landscape as the light changes. The evening concludes with a warm cup of chai at a local tea stall, where you can reflect on the beauty you have witnessed while enjoying the peaceful ambiance of the lakeside.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    duration: "Evening",
-    price: 1500,
-    originalPrice: 2000,
-    currency: "\u20B9",
-    groupSize: "2-8",
-    includes: [
-      "Professional guide",
-      "AC transport to viewpoints",
-      "Refreshments and snacks",
-      "Short boat ride during golden hour",
-      "Photography assistance",
-      "Chai at local tea stall",
-    ],
-    itinerary: [
-      {
-        id: "se-1",
-        time: "4:30 PM",
-        activity: "Hilltop Viewpoint",
-        description:
-          "Drive to a scenic hilltop that offers panoramic views of Pawna Lake. Enjoy refreshments while watching the sky begin to change colours as the sun approaches the horizon.",
-      },
-      {
-        id: "se-2",
-        time: "5:30 PM",
-        activity: "Sunset Photography",
-        description:
-          "Capture the stunning sunset with guidance from our experienced photographer. Learn tips and techniques for photographing the golden hour and the vibrant colours of the sky.",
-      },
-      {
-        id: "se-3",
-        time: "6:15 PM",
-        activity: "Lakeside Sunset",
-        description:
-          "Move to the lakeside to witness the final moments of the sunset reflected on the calm waters of Pawna Lake. The reflection creates a mirror effect that doubles the beauty of the sky.",
-      },
-      {
-        id: "se-4",
-        time: "6:45 PM",
-        activity: "Golden Hour Boat Ride",
-        description:
-          "Take a short boat ride on Pawna Lake during the golden hour. The changing light creates a magical atmosphere, with the hills and forts taking on warm golden hues.",
-      },
-      {
-        id: "se-5",
+        id: "bb-4",
         time: "7:30 PM",
-        activity: "Chai by the Lake",
+        activity: "Back streets behind Grand Road",
         description:
-          "Conclude your evening with a warm cup of chai at a local lakeside tea stall. Reflect on the beauty you have witnessed while enjoying the peaceful ambiance of the lake at dusk.",
+          "Quieter than the main road, and pleasant once the traffic thins. A good walk after dinner, and an easy way to end the day.",
       },
     ],
     highlights: [
-      "Witness stunning sunsets over Pawna Lake",
-      "Panoramic views from hilltop viewpoints",
-      "Golden hour boat ride on the lake",
-      "Photography tips from an expert",
-      "Refreshments and chai included",
-      "Small group size for intimacy",
+      "The quieter northern stretch of Puri Beach",
+      "Grand Road sweets, bought from the shop that made them",
+      "A walk through the older streets behind Grand Road",
+      "No schedule to keep to",
     ],
     faqs: [
       {
-        id: "se-faq-1",
-        question: "What if the weather is not good?",
+        id: "bb-faq-1",
+        question: "Is it safe to swim at Puri Beach?",
         answer:
-          "Overcast skies can actually create dramatic sunset colours. However, in case of heavy rain, we may reschedule or offer a full refund. The best sunsets often happen after a light shower.",
+          "We would not recommend swimming. The currents along this stretch of the Odisha coast are strong and there have been drownings in the surf zone in tourist season. The beach is a good place to walk, sit, and watch the sunset, and that is what most guests do.",
       },
       {
-        id: "se-faq-2",
-        question: "Is the experience suitable for couples?",
+        id: "bb-faq-2",
+        question: "What sweets should we buy?",
         answer:
-          "Absolutely! The Sunset Experience is perfect for couples looking for a romantic evening by the lake. The intimate setting and stunning views create a magical atmosphere.",
+          "Chena poda is the classic Puri sweet and is at its best the day it is made. The shops along Grand Road also sell kharvasana, a fried sweet coated in sugar syrup, and a range of packaged Odia sweets. Buy from the shop where the sweet is being made rather than from a reseller.",
       },
       {
-        id: "se-faq-3",
-        question: "Can I bring my own camera?",
+        id: "bb-faq-3",
+        question: "Do you have beach access from the hotel?",
         answer:
-          "Of course! We encourage you to bring your own camera or smartphone. Our guide will help you capture the best shots and share photography tips.",
+          "No. We are on Grand Road at the West Gate, and the beach is a walk away through the main town. The walk is easy and flat, but it takes you through busy public areas rather than a direct route from the door.",
       },
     ],
   },
@@ -462,4 +259,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
 
 export function getTourBySlug(slug: string): TourPackage | undefined {
   return TOUR_PACKAGES.find((tour) => tour.slug === slug);
+}
+
+export function getAllTours(): TourPackage[] {
+  return TOUR_PACKAGES;
 }

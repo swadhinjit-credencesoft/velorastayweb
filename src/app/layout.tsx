@@ -24,20 +24,23 @@ const oswald = Oswald({
   display: "swap",
 });
 
+const OG_IMAGE =
+  "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200&h=630&fit=crop";
+
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_INFO.name} | Luxury Villas Near Pawna Lake, Lonavala`,
+    default: `${SITE_INFO.name} | Rooms Near Jagannath Temple, Puri`,
     template: `%s | ${SITE_INFO.name}`,
   },
   description: SITE_INFO.description,
   keywords: [
-    "luxury villa Pawna Lake",
-    "villa near Lonavala",
-    "Pawna Lake villa booking",
-    "weekend getaway Lonavala",
-    "private pool villa Maharashtra",
-    "group stay Pawna Lake",
-    "Velora Stays",
+    "hotel near Jagannath Temple",
+    "Bishnu Bhaban Puri",
+    "budget hotel in Puri",
+    "Puri darshan hotel",
+    "rooms at Jagannath Temple gate",
+    "Puri Grand Road hotel",
+    "temple visit accommodation Puri",
   ],
   applicationName: SITE_INFO.name,
   authors: [{ name: SITE_INFO.name }],
@@ -51,11 +54,11 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_INFO.url,
     siteName: SITE_INFO.name,
-    title: `${SITE_INFO.name} | Luxury Villas Near Pawna Lake, Lonavala`,
+    title: `${SITE_INFO.name} | Rooms Near Jagannath Temple, Puri`,
     description: SITE_INFO.description,
     images: [
       {
-        url: `${SITE_INFO.url}/schemaimage.jpeg`,
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
         alt: SITE_INFO.name,
@@ -64,9 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_INFO.name} | Luxury Villas Near Pawna Lake, Lonavala`,
+    title: `${SITE_INFO.name} | Rooms Near Jagannath Temple, Puri`,
     description: SITE_INFO.description,
-    images: [`${SITE_INFO.url}/schemaimage.jpeg`],
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,

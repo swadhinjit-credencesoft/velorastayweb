@@ -17,7 +17,7 @@ const CATEGORY_LABELS: Record<Category, string> = {
   basic: "Basic Amenities",
   bathroom: "Bathroom",
   entertainment: "Entertainment",
-  kitchen: " Central Kitchen",
+  kitchen: "Dining & Kitchen",
   comfort: "Comfort",
   service: "Service",
   outdoor: "Outdoor",

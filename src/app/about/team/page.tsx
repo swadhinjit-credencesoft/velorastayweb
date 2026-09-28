@@ -7,14 +7,14 @@ import { TEAM_MEMBERS, AWARDS } from "@/data/team";
 import styles from "./TeamPage.module.scss";
 
 export const metadata: Metadata = {
-  title: "Our Team | Velora Stays",
+  title: "Our Team | Bishnu Bhaban",
   description:
-    "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
+    "Meet the dedicated team behind Bishnu Bhaban — passionate hospitality professionals committed to your comfort.",
   alternates: { canonical: "/about/team" },
   openGraph: {
-    title: "Our Team | Velora Stays",
+    title: "Our Team | Bishnu Bhaban",
     description:
-      "Meet the dedicated team behind Velora Stays — passionate hospitality professionals committed to your comfort.",
+      "Meet the dedicated team behind Bishnu Bhaban — passionate hospitality professionals committed to your comfort.",
   },
 };
 
@@ -23,9 +23,9 @@ export default function TeamPage() {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "https://velorastays.in" },
-          { name: "About", url: "https://velorastays.in/about" },
-          { name: "Team", url: "https://velorastays.in/about/team" },
+          { name: "Home", url: "https://bishnubhaban.com" },
+          { name: "About", url: "https://bishnubhaban.com/about" },
+          { name: "Team", url: "https://bishnubhaban.com/about/team" },
         ])}
       />
       <PageHero
@@ -43,7 +43,7 @@ export default function TeamPage() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <span className={styles.eyebrow}>Dedicated Hospitality</span>
-            <h2 className={styles.heading}>The Faces Behind Velora Stays</h2>
+            <h2 className={styles.heading}>The Faces Behind Bishnu Bhaban</h2>
             <p className={styles.description}>
               From first enquiry to farewell, our team works around the clock to
               craft a stay worth remembering.
@@ -88,10 +88,9 @@ export default function TeamPage() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <span className={styles.eyebrow}>Recognition</span>
-            <h2 className={styles.heading}>Awards &amp; Recognition</h2>
+            <h2 className={styles.heading}>Guest Feedback</h2>
             <p className={styles.description}>
-              We are honoured by the trust and appreciation of our guests and
-              partners.
+              Our record on Google, and the one figure we hold ourselves to.
             </p>
           </div>
 

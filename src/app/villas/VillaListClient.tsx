@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useVeloraData } from "@/hooks/useVeloraData";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import type { VillaType } from "@/types";
 import styles from "./villas.module.scss";
 
@@ -11,7 +11,7 @@ interface VillaListClientProps {
 }
 
 export default function VillaListClient({ fallbackVillas }: VillaListClientProps) {
-  const { villas, error } = useVeloraData();
+  const { villas, error } = useBhabanData();
   const items = !error && villas.length > 0 ? villas : fallbackVillas;
 
   return (

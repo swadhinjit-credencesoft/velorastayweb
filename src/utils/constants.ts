@@ -1,19 +1,19 @@
 export const SITE_CONSTANTS = {
-  PROPERTY_NAME: "Velora Stays",
-  PROPERTY_TAGLINE: "Luxury Villas Near Pawna Lake, Lonavala",
-  BOOKING_ENGINE_URL: "https://bookone.io/Velora-Stays?bookingEngine=true",
+  PROPERTY_NAME: "Bishnu Bhaban",
+  PROPERTY_TAGLINE: "Budget Hotel Near Jagannath Temple, Puri",
+  BOOKING_ENGINE_URL: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true",
   DEFAULT_CURRENCY: "₹",
-  MIN_PRICE: 8000,
-  MAX_PRICE: 35000,
-  MAX_OCCUPANCY: 25,
+  MIN_PRICE: 1000,
+  MAX_PRICE: 4000,
+  MAX_OCCUPANCY: 12,
   CHECK_IN_TIME: "14:00",
   CHECK_OUT_TIME: "11:00",
   MAX_GALLERY_IMAGES_PER_PAGE: 24,
   BLOG_POSTS_PER_PAGE: 9,
   REVIEWS_PER_PAGE: 10,
-  WHATSAPP_NUMBER: "+919004126958",
-  EMERGENCY_NUMBER: "+917326079861",
-  RECEPTION_NUMBER: "+917326079861",
+  WHATSAPP_NUMBER: "+919861229896",
+  EMERGENCY_NUMBER: "+919078922710",
+  RECEPTION_NUMBER: "+919078922710",
 } as const;
 
 export const NAVIGATION_TIMEOUT = 300;

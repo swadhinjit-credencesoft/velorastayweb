@@ -7,12 +7,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_STORY, ABOUT_MILESTONES } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Story | Velora Stays",
-  description: "Learn the story behind Velora Stays, from our founding in 2020 to becoming one of Lonavala's top-rated luxury villas.",
+  title: "Our Story | Bishnu Bhaban",
+  description: "The story of Bishnu Bhaban: a budget property at the West Gate of the Jagannath Temple in Puri, built around one idea — that people coming to Puri need a clean, affordable room close to the gate.",
   alternates: { canonical: "/about/story" },
   openGraph: {
-    title: "Our Story | Velora Stays",
-    description: "Learn the story behind Velora Stays, from our founding in 2020 to becoming one of Lonavala's top-rated luxury villas.",
+    title: "Our Story | Bishnu Bhaban",
+    description: "A budget property at the West Gate of the Jagannath Temple, built around one idea.",
   },
 };
 
@@ -29,7 +29,7 @@ export default function StoryPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative h-80 rounded-xl overflow-hidden mb-10">
-            <Image src={ABOUT_STORY.image} alt="Velora Stays" fill className="object-cover" />
+            <Image src={ABOUT_STORY.image} alt="Bishnu Bhaban" fill className="object-cover" />
           </div>
           <div className="prose prose-lg max-w-none">
             {ABOUT_STORY.description.split("\n\n").map((p, i) => <p key={i}>{p}</p>)}

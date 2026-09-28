@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const attraction = getAttractionBySlug(params.slug);
   if (!attraction) return { title: "Attraction Not Found" };
   return {
-    title: `${attraction.name} | Velora Stays Nearby Attractions`,
+    title: `${attraction.name} | Bishnu Bhaban Nearby Attractions`,
     description: attraction.description,
     alternates: { canonical: `/nearby/${attraction.slug}` },
     openGraph: {
-      title: `${attraction.name} | Velora Stays`,
+      title: `${attraction.name} | Bishnu Bhaban`,
       description: attraction.description,
       images: [{ url: attraction.image, width: 1200, height: 630, alt: attraction.name }],
     },
@@ -110,7 +110,7 @@ export default function AttractionDetailPage({ params }: Props) {
 
           {related.length > 0 && (
             <div className="mt-14">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">More {attraction.category} Near Lonavala</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">More {attraction.category} in Puri</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {related.map((a) => (
                   <Link

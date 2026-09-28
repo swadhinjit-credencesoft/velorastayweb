@@ -9,13 +9,13 @@ import { TOUR_PACKAGES, TOURS_CONTENT } from "@/data/tours";
 import styles from "./Tours.module.scss";
 
 export const metadata: Metadata = {
-  title: "Tour Packages in Lonavala | Velora Stays",
+  title: "Day Plans for Puri | Bishnu Bhaban",
   description:
-    "Explore Lonavala with our expertly guided tour packages — fort treks, heritage walks, food trails, temple visits, photography tours, and lakeside adventures. Book at Velora Stays.",
+    "Sample day plans for guests at Bishnu Bhaban in Puri: a temple and Grand Road day, a Konark day trip, and a beach and bazaar day. Planning guides rather than guided tours.",
   alternates: { canonical: "/explore/tour-packages" },
   openGraph: {
-    title: "Tour Packages | Velora Stays Lonavala",
-    description: "Expertly guided tours to experience the best of Pawna Lake and Lonavala.",
+    title: "Day Plans | Bishnu Bhaban",
+    description: "Realistic day plans for Puri, built around staying at the temple gate.",
     url: `${SITE_INFO.url}/explore/tour-packages`,
   },
 };
@@ -27,7 +27,7 @@ export default function TourPackagesPage() {
         schema={generateBreadcrumbSchema([
           { name: "Home", url: SITE_INFO.url },
           { name: "Explore", url: `${SITE_INFO.url}/explore` },
-          { name: "Tour Packages", url: `${SITE_INFO.url}/explore/tour-packages` },
+          { name: "Day Plans", url: `${SITE_INFO.url}/explore/tour-packages` },
         ])}
       />
 
@@ -36,7 +36,7 @@ export default function TourPackagesPage() {
           <Breadcrumb
             items={[
               { label: "Explore", href: "/explore" },
-              { label: "Tour Packages", href: "/explore/tour-packages" },
+              { label: "Day Plans", href: "/explore/tour-packages" },
             ]}
           />
           <p className={styles.eyebrow}>{TOURS_CONTENT.eyebrow}</p>
@@ -58,13 +58,21 @@ export default function TourPackagesPage() {
               <p className={styles.cardDesc}>{tour.description}</p>
               <div className={styles.cardFooter}>
                 <div className={styles.price}>
-                  <span className={styles.priceValue}>
-                    {tour.currency}{tour.price.toLocaleString("en-IN")}
-                  </span>
-                  {tour.originalPrice && (
-                    <span className={styles.priceOriginal}>
-                      {tour.currency}{tour.originalPrice.toLocaleString("en-IN")}
-                    </span>
+                  {tour.price > 0 ? (
+                    <>
+                      <span className={styles.priceValue}>
+                        {tour.currency}
+                        {tour.price.toLocaleString("en-IN")}
+                      </span>
+                      {tour.originalPrice && (
+                        <span className={styles.priceOriginal}>
+                          {tour.currency}
+                          {tour.originalPrice.toLocaleString("en-IN")}
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    <span className={styles.priceValue}>Planning guide</span>
                   )}
                 </div>
                 <span className={styles.groupSize}>

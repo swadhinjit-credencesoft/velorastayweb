@@ -12,17 +12,14 @@ RewriteEngine On
 ############################################
 
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.velorastays\.in$ [NC]
-RewriteRule ^(.*)$ https://velorastays.in/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.bishnubhaban\.com$ [NC]
+RewriteRule ^(.*)$ https://bishnubhaban.com/$1 [R=301,L]
 
 ############################################
-# REDIRECT OLD WRONG VILLA URLS TO CORRECT SLUGS
+# REDIRECT LEGACY VILLA URLS TO THE ROOMS LISTING
 ############################################
 
-RewriteRule ^villas/velora-2-\(2-bhk\)/?$ /villas/2-bhk-villa [R=301,L]
-RewriteRule ^villas/velora-4-\(4-bhk\)/?$ /villas/4-bhk-villa [R=301,L]
-RewriteRule ^villas/velora-5-\(5-bhk\)/?$ /villas/5-bhk-villa [R=301,L]
-RewriteRule ^villas/velora-7-\(7-bhk\)/?$ /villas/7-bhk-villa [R=301,L]
+RewriteRule ^villas/(velora-)?[0-9]+-?\(?-?(bhk|villa).* /villas [R=301,L]
 
 ############################################
 # REMOVE index.html

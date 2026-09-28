@@ -3,41 +3,41 @@ import type { TeamMember, Award } from "@/types";
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "team-founder",
-    name: "The DC Developer  Team",
-    role: "Founders",
+    name: "The DC Developer Team",
+    role: "Owners",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-    bio: "Founded by a group of passionate travellers and hospitality enthusiasts, Theveloras  stayscreated Velora Stays with a vision to provide luxury private villa experiences near Pawna Lake. With a deep love for the Sahyadri mountains and a commitment to exceptional hospitality, the team has built Velora Stays into one of the most trusted villa properties in Lonavala.",
+    bio: "The group behind Bishnu Bhaban. Rather than build a larger hotel somewhere cheaper, they took a property at the West Gate of the Shree Jagannath Temple and set out to make a clean, well-run budget stay that pilgrims could rely on. Their focus has stayed on maintenance and honest pricing rather than expansion.",
     social: [
       { platform: "instagram", url: "" },
     ],
   },
   {
     id: "team-caretaker",
-    name: " preveen dhabal",
+    name: "Preveen Dhabal",
     role: "Head Caretaker",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    bio: "Ravi leads the caretaker team at Velora Stays with meticulous attention to detail. With over 15 years of experience in hospitality and a deep knowledge of the Lonavala region, he ensures that every guest receives personalised care and has an unforgettable experience. From arranging local activities to coordinating special events, Ravi goes above and beyond for every guest.",
+    bio: "Preveen looks after the physical side of the property. With well over a decade of experience in hospitality, he oversees daily housekeeping schedules, room inspections before guest arrival, and the maintenance log. He knows which rooms get used hardest during festival season and schedules the deep cleaning accordingly.",
     social: [
       { platform: "linkedin", url: "" },
     ],
   },
   {
     id: "team-manager",
-    name: " Avinash",
+    name: "Avinash",
     role: "Guest Experience Manager",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
-    bio: "Priya oversees the guest experience at Velora Stays with a passion for creating memorable stays. With a background in hospitality management and a genuine love for the villa hospitality industry, she ensures that every detail is taken care of, from the moment a guest inquires about a booking to the farewell at checkout. Her focus on personalised service has been instrumental in maintaining the property's 5.0-star rating.",
+    bio: "Avinash handles the front desk and most of the guest contact. He manages the desk rota, luggage storage, and early breakfast requests for guests departing at dawn, and arranges late check-ins for people who call ahead. He also reads the guest reviews and feeds what comes back into the maintenance schedule.",
     social: [
       { platform: "linkedin", url: "" },
       { platform: "instagram", url: "" },
     ],
   },
   {
-    id: "team-chef",
-    name: " mr Yogesh",
+    id: "team-kitchen",
+    name: "Yogesh",
     role: "Kitchen Manager",
     image: "https://images.unsplash.com/photo-1577219491135-ce3967c4d049?w=400&h=400&fit=crop&crop=face",
-    bio: "Chef Suresh brings the authentic flavours of Maharashtra to the Velora Stays dining experience. Trained in traditional Maharashtrian cuisine and having worked at several premium properties, he combines local recipes with contemporary techniques. His BBQ setups and home-cooked meals are among the most talked-about features among our guests.",
+    bio: "Yogesh runs the in-house kitchen, which is what many guests mention when they talk about the food. He keeps it focused on Odia home cooking alongside North Indian and continental options, and he is used to cooking meal plans for groups arriving and leaving at unusual hours around temple timings.",
     social: [
       { platform: "instagram", url: "" },
     ],
@@ -47,42 +47,10 @@ export const TEAM_MEMBERS: TeamMember[] = [
 export const AWARDS: Award[] = [
   {
     id: "award-01",
-    title: "Top Rated Villa Stay",
+    title: "500+ Guest Reviews on Google",
     organization: "Google",
-    year: "2025",
-    description:
-      "Recognised as one of the top-rated villa stays near Pawna Lake with a perfect 5.0-star rating from 47+ verified Google reviews. The award honours properties that deliver exceptional experiences and consistently earn glowing reviews from guests.",
-  },
-  {
-    id: "award-02",
-    title: "Guest Favourite",
-    organization: "Airbnb",
-    year: "2025",
-    description:
-      "Awarded by Airbnb for consistently high guest review scores and outstanding hospitality. Velora Stays achieved a 4.95 rating based on verified guest reviews, placing it among the top-rated villa properties in the Lonavala region.",
-  },
-  {
-    id: "award-03",
-    title: "Best Luxury Villa Experience",
-    organization: "MakeMyTrip",
     year: "2026",
     description:
-      "Honoured by MakeMyTrip for providing the best luxury villa experience near Pawna Lake. This award recognises the property's commitment to privacy, luxury, and creating experiences that guests are eager to share with others.",
-  },
-  {
-    id: "award-04",
-    title: "Excellence in Hospitality",
-    organization: "Goibibo",
-    year: "2025",
-    description:
-      "Goibibo Excellence Award for outstanding hospitality and service standards. This accolade is given to properties that consistently earn great reviews from travellers and maintain the highest standards of guest care across all touchpoints.",
-  },
-  {
-    id: "award-05",
-    title: "Best Weekend Getaway",
-    organization: "Lonavala Tourism",
-    year: "2026",
-    description:
-      "Awarded for being the best weekend getaway destination near Pawna Lake. The award evaluates properties on villa quality, amenities, service, location, and overall guest experience, and Velora Stays came out on top.",
+      "The property has passed 500 guest reviews on Google, with an overall rating of 3.8. For a budget hotel at the temple gate, the volume of guest feedback is the marker that matters, and it is what keeps us honest about what still needs fixing.",
   },
 ];

@@ -28,12 +28,12 @@ export default function HomePage() {
       <NearbyAttractions />
       <FAQ />
       <CTA
-        eyebrow="Ready to Experience Velora Stays?"
-        heading="Book Your Perfect Villa Today"
-        description="Join hundreds of happy guests who have chosen Velora Stays for their Pawna Lake getaway. Private pool, bonfire, BBQ, and stunning lake views await."
+        eyebrow="Ready to Stay in Puri?"
+        heading="Book Your Room Today"
+        description="A budget hotel fifty metres from the West Gate of the Jagannath Temple in Puri. Clean air-conditioned rooms, attached bathrooms, 24-hour hot water, and a front desk open from 7 AM to 11 PM."
         buttons={[
-          { label: "Book Now", href: "https://bookone.io/Velora-Stays?bookingEngine=true", variant: "primary" },
-          { label: "View Villas", href: "/villas", variant: "outline" },
+          { label: "Book Now", href: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true", variant: "primary" },
+          { label: "View Rooms", href: "/villas", variant: "outline" },
         ]}
       />
     </>

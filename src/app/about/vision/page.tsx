@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_VISION } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Vision | Velora Stays",
-  description: "Explore the vision driving Velora Stays — to become Lonavala's most trusted and beloved luxury villa brand.",
+  title: "Our Vision | Bishnu Bhaban",
+    description: "The vision driving Bishnu Bhaban — to be the budget stay people think of first when planning a trip to the Jagannath Temple.",
   alternates: { canonical: "/about/vision" },
   openGraph: {
-    title: "Our Vision | Velora Stays",
-    description: "Explore the vision driving Velora Stays — to become Lonavala's most trusted and beloved luxury villa brand.",
+    title: "Our Vision | Bishnu Bhaban",
+  description: "The vision driving Bishnu Bhaban — to be the budget stay people think of first when planning a trip to the Jagannath Temple.",
   },
 };
 

@@ -2,24 +2,24 @@ import type { SectionContent, ContactInfo } from "@/types";
 
 export const CONTACT_CONTENT: SectionContent = {
   eyebrow: "Get In Touch",
-  heading: "Plan Your Next Getaway With Us",
+  heading: "Questions About Rooms, Rates, or Availability?",
   description:
-    "Have questions about our pricing, flexible villa configurations, or want to host a private event? Our team is here to assist you. Reach out to us through any of the channels below and we will get back to you as quickly as possible.",
+    "Most guests reach us with a simple question: is a room free, and how much. Call the reservations line, send a WhatsApp message, or email us and we will answer directly rather than through a form that takes two days to reply to. Reception is staffed 7:00 AM to 11:00 PM, and the front desk is available around the clock for guests already staying with us.",
 };
 
 export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "Direct Phone",
     icon: "lucide:phone",
-    value: "+91 7326079861",
-    href: "tel:+917326079861",
+    value: "+91 9078922710",
+    href: "tel:+919078922710",
     primary: true,
   },
   {
     label: "WhatsApp",
     icon: "lucide:message-circle",
-    value: "+91 9004126958",
-    href: "https://api.whatsapp.com/send?phone=919004126958&text=*This%20is%20an%20Enquiry%20from%20%3A*%20The%20HotelMate%20Website%0AHotel%20Name%3A%20Velora%20Stays%2C%0AProperty%20Id%3A%203607%2C%0AexternalSite%3A%20WebSite%2C%0AAddress%3A%20PC37%2B579%2CNear%20Pawna%20Lake%2C%20Lonavala%2Chotels-in-pune%2CGevhande%20Apati%2CIndia",
+    value: "+91 9861229896",
+    href: "https://api.whatsapp.com/send?phone=919861229896&text=*This%20is%20an%20Enquiry%20from%20%3A*%20The%20HotelMate%20Website%0AHotel%20Name%3A%20Bishnu%20Bhaban%2C%0AProperty%20Id%3A%203637%2C%0AexternalSite%3A%20WebSite%2C%0AAddress%3A%20West%20Gate%20of%20Jagannath%20Temple%2C%20Grand%20Road%2C%20Puri%2C%20Odisha%2C%20India",
     primary: true,
   },
   {
@@ -32,13 +32,13 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "Address",
     icon: "lucide:map-pin",
-    value: "Gevhande Apati, Near Pawna Lake, Lonavala, Maharashtra 410401",
-    href: "https://maps.google.com/?q=Velora+Stays+Pawna+Lake+Lonavala",
+    value: "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001",
+    href: "https://maps.google.com/?q=Bishnu+Bhaban+West+Gate+of+Jagannath+Temple+Puri",
   },
   {
-    label: "Working Hours",
+    label: "Reception Hours",
     icon: "lucide:clock",
-    value: "24/7 Guest Support",
+    value: "7:00 AM – 11:00 PM",
     href: "#",
   },
 ];
@@ -56,32 +56,32 @@ export const CONTACT_DEPARTMENT: Department[] = [
     id: "dept-general",
     name: "General Enquiries",
     email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    phone: "+91 9078922710",
     description:
-      "For any general questions about Velora Stays, our villa configurations, amenities, or policies, our team is happy to help.",
+      "For any general questions about Bishnu Bhaban, our room types, amenities, or policies, our team is happy to help.",
   },
   {
     id: "dept-reservations",
     name: "Reservations",
     email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    phone: "+91 9078922710",
     description:
-      "Our dedicated reservations team handles all booking-related queries including villa availability, rate inquiries, and special requests.",
+      "Our reservations team handles all booking-related queries including room availability, rate inquiries, group bookings, and special requests.",
   },
   {
-    id: "dept-events",
-    name: "Events & Celebrations",
+    id: "dept-groups",
+    name: "Group Bookings",
     email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    phone: "+91 9078922710",
     description:
-      "From birthday celebrations to corporate retreats, our team will help you plan and execute a memorable occasion at our villa.",
+      "Travelling as a family or a group, or with male guests only? Contact us a few days in advance so we can allocate rooms together and confirm the total rate.",
   },
   {
     id: "dept-feedback",
     name: "Feedback & Support",
     email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    phone: "+91 9078922710",
     description:
-      "Your feedback helps us improve. Whether you want to share a positive experience or suggest improvements, we take every comment seriously.",
+      "Your feedback helps us improve. Whether you want to share a positive experience or flag something that needs fixing, we take every comment seriously.",
   },
 ];

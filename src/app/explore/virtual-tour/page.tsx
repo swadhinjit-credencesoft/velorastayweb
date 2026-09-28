@@ -5,14 +5,14 @@ import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "Virtual Tour | Velora Stays",
+  title: "Walkthrough | Bishnu Bhaban",
   description:
-    "Take an immersive 360° virtual tour of Velora Stays luxury villas near Pawna Lake, Lonavala. Explore our spaces before you arrive.",
+    "A walkthrough of Bishnu Bhaban in Puri: the entrance and front desk, each room category, the dining area, and the multi-bed rooms.",
   alternates: { canonical: "/explore/virtual-tour" },
   openGraph: {
-    title: "Virtual Tour | Velora Stays",
-    description: "Take a 360° virtual tour of Velora Stays luxury villas.",
-    url: "https://velorastays.in/explore/virtual-tour",
+    title: "Walkthrough | Bishnu Bhaban",
+    description: "A look at the entrance, the rooms, and the dining area before you book.",
+    url: "https://bishnubhaban.com/explore/virtual-tour",
   },
 };
 

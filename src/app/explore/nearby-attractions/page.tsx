@@ -9,13 +9,13 @@ import { NEARBY_ATTRACTIONS, NEARBY_CONTENT, getAllCategories } from "@/data/nea
 import styles from "./Nearby.module.scss";
 
 export const metadata: Metadata = {
-  title: "Explore Nearby Attractions | Velora Stays",
+  title: "Nearby Attractions | Bishnu Bhaban",
   description:
-    "Discover the best attractions near Velora Stays in Pawna Lake, Lonavala — Lion's Point, Bhushi Dam, temples, markets, and more.",
+    "What is near Bishnu Bhaban at the West Gate of the Jagannath Temple in Puri: Vimala Temple, the temple museum, Grand Road, Puri Beach, Konark, Dhauli, and Chilika.",
   alternates: { canonical: "/explore/nearby-attractions" },
   openGraph: {
-    title: "Nearby Attractions | Velora Stays Lonavala",
-    description: "Discover landmarks, temples, markets, and parks near our villa in Pawna Lake.",
+    title: "Nearby Attractions | Bishnu Bhaban",
+    description: "What is within walking distance of the West Gate, and what is worth the journey.",
     url: `${SITE_INFO.url}/explore/nearby-attractions`,
   },
 };

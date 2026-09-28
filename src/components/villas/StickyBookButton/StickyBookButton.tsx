@@ -44,7 +44,7 @@ export default function StickyBookButton({
             <span className={styles.unit}>/ night</span>
           </span>
         </div>
-        <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className={styles.bookBtn}>
+        <a href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" className={styles.bookBtn}>
           <Icon icon="lucide:calendar-check" width={16} height={16} />
           Book Now
         </a>

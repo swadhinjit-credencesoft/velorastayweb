@@ -10,13 +10,13 @@ import { DINING_CONTENT, MEAL_PACKAGES } from "@/data/dining";
 import styles from "./food-menu.module.scss";
 
 export const metadata: Metadata = {
-  title: "Food Menu & Packages | Velora Stays",
+  title: "Food Menu & Packages | Bishnu Bhaban",
   description:
-    "Browse the Velora Stays food menu and meal packages — fresh vegetarian and non-vegetarian dishes, BBQ grills, and premium chef packages. Download or print the premium menu.",
+    "Browse the Bishnu Bhaban food menu and meal packages — fresh vegetarian and non-vegetarian dishes, BBQ grills, and premium chef packages. Download or print the premium menu.",
   alternates: { canonical: "/food-menu" },
   openGraph: {
-    title: "Food Menu & Packages | Velora Stays",
-    description: "Fresh home-style meals, BBQ, and premium chef packages at Velora Stays, Pawna Lake.",
+    title: "Food Menu & Packages | Bishnu Bhaban",
+    description: "Odia home cooking and North Indian meals from our in-house kitchen at Bishnu Bhaban, Puri. Meal plans available with your booking.",
     url: `${SITE_INFO.url}/food-menu`,
   },
 };
@@ -30,7 +30,7 @@ export default function FoodMenuPage() {
         <div className={styles.coverImage}>
           <Image
             src="/images/diningarea.avif"
-            alt="Velora Stays dining"
+            alt="Bishnu Bhaban dining"
             fill
             className={styles.coverImg}
             sizes="100vw"
@@ -40,7 +40,7 @@ export default function FoodMenuPage() {
         </div>
         <div className={styles.coverInner}>
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Food Menu", href: "/food-menu" }]} />
-          <p className={styles.coverEyebrow}>Velora Stays</p>
+          <p className={styles.coverEyebrow}>Bishnu Bhaban</p>
           <h1 className={styles.coverTitle}>Food Menu &amp; Packages</h1>
           <p className={styles.coverTagline}>{DINING_CONTENT.tagline}</p>
           <p className={styles.coverSub}>{DINING_CONTENT.description}</p>
@@ -136,7 +136,7 @@ export default function FoodMenuPage() {
       <section className={styles.menu}>
         <div className={styles.container}>
           <div className={styles.actions}>
-            <Link href="https://bookone.io/Velora-Stays?bookingEngine=true" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>
+            <Link href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>
               Book a Stay
             </Link>
             <Link href="/" className={styles.homeBtn}>

@@ -24,104 +24,106 @@ export interface Sustainability {
 
 export const ABOUT_STORY: AboutStory = {
   title: "Our Story",
+  image:
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600",
   description:
-    "Velora Stays was born from a deep love for the Sahyadri mountains and the tranquil beauty of Pawna Lake. Founded in 2022 by D c developers, a team passionate about creating unforgettable escape experiences, Velora Stays opened its doors in the serene village of Gevhande Apati, just minutes from the shimmering waters of Pawna Lake. The location was chosen with great care, nestled among the rolling hills of Lonavala, offering guests a perfect blend of luxury, privacy, and nature.\n\n" +
-    "The founding of Velora Stays came at a time when travellers were seeking meaningful escapes from the chaos of city life. Rather than building another hotel, the founders envisioned something entirely different: luxury private villas where families, friends, and couples could immerse themselves in the beauty of the Western Ghats while enjoying world-class amenities. Every villa was thoughtfully designed with spacious 4 villas, 5 villas, and 7  grand villas layouts, each featuring a private swimming pool, lush garden, modern kitchen, and dedicated BBQ area. The goal was clear: create a sanctuary where guests could reconnect with nature without sacrificing comfort.\n\n" +
-    "From its earliest days, Velora Stays distinguished itself through an unwavering focus on privacy and exclusivity. Unlike crowded resorts, each villa at Velora Stays is a self-contained retreat, ensuring that guests enjoy their own private pool, garden, and dedicated caretaker. The property adopted eco-conscious practices, blending seamlessly with the natural landscape while maintaining the highest standards of luxury and cleanliness. Word spread among discerning travellers and weekend warriors from Mumbai and Pune who were looking for a peaceful, upscale getaway near the Sahyadris.\n\n" +
-    "The response from guests was overwhelming. Within the first year, Velora Stays had earned a reputation for delivering an unmatched villa experience, with guests consistently praising the stunning lake views, the quality of the amenities, and the warmth of the staff. The property's growth was organic and driven entirely by word-of-mouth recommendations and glowing online reviews. The team remained focused on the core mission: providing every guest with a stay that exceeded their expectations while preserving the natural beauty that makes Pawna Lake so special. Today, Velora Stays continues to build on this foundation, welcoming guests from Mumbai, Pune, and across India who are seeking a genuine luxury escape in the heart of the Western Ghats.",
-  image: "/whychooseus.jpeg",
+    "Bishnu Bhaban sits at the West Gate of the Shree Jagannath Temple, and that single fact is the whole story. The people who run this hotel are not in the business of competing with five-star resorts a few kilometres down the beach. They are in the business of solving one problem properly: a lot of people come to Puri for early morning darshan, and they do not want to pay a premium or spend twenty minutes in an auto to reach the gate.\n\n" +
+    "So the hotel is where it is because that is where it is useful. Roughly fifty metres from the West Gate, which means a guest leaving at 5:00 AM for the morning darshan is at the queue in a couple of minutes. The rooms are straightforward, air-conditioned, with an attached western-style bathroom and hot water at any hour, and they are cleaned every single day. There is a front desk running from 7:00 AM to 11:00 PM, which covers temple timings and almost all arrival and departure times, and if you are arriving after hours we will sort out check-in when you call ahead. There is CCTV, because guests leave luggage and go out for the day, and they should not have to think about it.\n\n" +
+    "We are honest about what this is. Bishnu Bhaban is a budget hotel, not a luxury property, and we do not describe it as one. The rooms are simple, the mattresses are ordinary, the walls could use a fresh coat of paint. What we do commit to is the three things that actually decide whether a Puri trip went well: the location is unbeatable, the room is clean, and the price is fair. Guests tell us that in their reviews, including the ones that point out the plumbing on a busy morning, which is exactly the kind of feedback we would rather have than hide.\n\n" +
+    "Most of our guests arrive from Odisha and neighbouring states, often travelling with family, often in groups. We accept group bookings and bookings with only male guests, and we do not make anyone feel like a problem for asking. Roughly five hundred people have left a review, and the average sits around four stars. We would rather be a well-known four-star budget hotel at the temple gate than an unknown five-star one somewhere further away.",
 };
 
 export const ABOUT_MISSION: AboutMission = {
   title: "Our Mission",
   description:
-    "At Velora Stays, our mission is to redefine the luxury villa experience by creating private retreats where guests can fully immerse themselves in the beauty and tranquility of Pawna Lake. We are dedicated to providing every guest with an exceptional escape, combining modern luxury with the raw beauty of the Western Ghats. We believe that true luxury lies in privacy, space, and the freedom to create unforgettable moments with loved ones.\n\n" +
-    "We achieve this mission by investing in our properties first. Each villa is designed with spacious layouts, premium furnishings, and thoughtful amenities that cater to families, friends, and corporate groups. Our dedicated caretakers ensure every detail is taken care of, from the moment a guest arrives to the farewell at checkout. We maintain the highest standards of cleanliness and hygiene, understanding that a pristine villa is the foundation of a great retreat. We continuously upgrade our facilities and add new experiences to ensure that every aspect of the guest experience reflects our commitment to excellence. From the crystal-clear waters of our private pools to the warmth of a bonfire under the stars, every moment at Velora Stays is curated with care. Our mission extends beyond our villas; we strive to be a positive force in the Pawna Lake community, supporting local businesses and creating meaningful employment opportunities for the people of Lonavala.",
+    "Our mission is to be the most reliable budget stay at the West Gate of the Jagannath Temple. Not the most lavish, not the most expensive, simply the one that does the basic things properly and charges an honest price for them.\n\n" +
+    "That means a clean room, every time, without exception. Our housekeeping team works on a fixed daily schedule and each room is checked before a guest arrives, not after one leaves. It means hot water at four in the morning, because that is when people shower before a dawn darshan. It means a front desk that is open from 7:00 AM to 11:00 PM, and someone who will stay late for you if you call ahead and ask. It means being honest about the condition of the property when something needs repair, rather than hoping nobody mentions it.\n\n" +
+    "It also means pricing that makes sense. Guests who come to Puri on a short temple trip are spending their money on prasad, travel, and family time, not on room upgrades. We keep our rates competitive with the rest of the budget category near the temple and we do not add charges at check-out that were not shown at booking. When guests leave feedback, including criticism, we read it and we act on what we can actually fix.",
 };
 
 export const ABOUT_VISION: AboutVision = {
   title: "Our Vision",
   description:
-    "Our vision is to become Maharashtra's most trusted and beloved luxury villa brand, known not just for stunning properties but for creating transformative experiences that bring guests back season after season. We envision a future where Velora Stays is the first name that comes to mind for any traveller seeking a private, luxurious, and nature-connected escape near Pawna Lake. We aim to set the standard for what a villa retreat can achieve, inspiring the entire industry to raise the bar on privacy, quality, and guest care.\n\n" +
-    "Looking ahead, we plan to expand strategically across Maharashtra, bringing the Velora Stays experience to more stunning locations in the Western Ghats. Each new property will maintain the same unwavering commitment to privacy, luxury, and personalised service that defines our flagship Pawna Lake location. Beyond Maharashtra, we aspire to establish Velora Stays properties in other scenic destinations across India, creating a network of trusted luxury retreats that travellers can rely on wherever their journey takes them. We are also committed to sustainable hospitality practices, reducing our environmental footprint while enhancing the guest experience. Our vision is ultimately about people: creating a brand that guests trust, employees are proud of, and communities welcome.",
+    "We want Bishnu Bhaban to be the name that comes to mind when someone in Odisha, or anywhere in India, is planning a trip to Puri and needs somewhere affordable and close to the temple. We want the word from guests to be that the room was clean and the staff were straightforward, not that they got a nice view.\n\n" +
+    "Concretely, that means continuing the maintenance work our reviews keep pointing to. Rooms get repainted and fixtures get replaced on a planned schedule rather than reactively. The plumbing and hot water systems get the attention they need before peak season rather than during it. We want the four-star average to become a five-star average, and the only honest route to that is doing the unglamorous work.\n\n" +
+    "In the longer term we are interested in property near other major pilgrimage destinations in Odisha, because the same logic applies everywhere: pilgrims need clean, affordable, well-located rooms more than they need elaborate ones. But we will not expand until the property we already have is properly maintained, because that is the standard we hold everything else to.",
 };
 
 export const ABOUT_VALUES: AboutValue[] = [
   {
     id: "value-hospitality",
-    title: "Hospitality First",
+    title: "Straightforward Hospitality",
     description:
-      "Hospitality is not just what we do; it is who we are. Every team member at Velora Stays is empowered to go above and beyond for our guests, whether it is remembering a returning guest's preference, arranging a special surprise for a celebration, or simply offering a warm and genuine smile. We believe that true hospitality lies in anticipating needs, not just responding to requests. From the caretaker to the housekeeping team, from the kitchen to management, every person on our team shares a deep commitment to making each guest feel valued, respected, and genuinely cared for throughout their entire stay with us.",
+      "We run a budget hotel, so we do not have a lot of room to impress anyone. What we do have is the opportunity to be useful: a clean towel when you ask, hot water at any hour, someone at the desk at four in the morning, and someone who will store your luggage for a day while you are at the beach. Every member of staff is empowered to sort out these small problems without waiting for a manager, because at our scale the small problems are the entire guest experience.",
     icon: "lucide:heart",
   },
   {
     id: "value-cleanliness",
-    title: "Cleanliness Always",
+    title: "Cleanliness, Every Day",
     description:
-      "Cleanliness is the non-negotiable foundation of everything we do at Velora Stays. We maintain hospital-grade sanitisation standards, use premium cleaning products, and follow rigorous cleaning checklists for every villa and common area. Our housekeeping team undergoes regular training on the latest hygiene protocols, and every villa is inspected before guest arrival to ensure it meets our exacting standards. We invest in modern cleaning equipment, regularly deep-clean all fabrics and furnishings, and maintain impeccable cleanliness in our pools, gardens, and common spaces. For us, cleanliness is not just about appearance; it is about the health, safety, and peace of mind of every guest who walks through our doors.",
+      "Cleanliness is the one thing a budget hotel cannot get wrong. Our housekeeping team works to a fixed daily schedule rather than on request, each room is serviced whether or not the previous guest checked out, and rooms are inspected before arrival rather than after. We use the same cleaning protocol in every room regardless of its price category, because a guest who books our cheapest room deserves the same standard as a guest who books our most expensive one.",
     icon: "lucide:sparkles",
   },
   {
     id: "value-guest-centric",
-    title: "Guest-Centric",
+    title: "Honest With Guests",
     description:
-      "Every decision we make at Velora Stays starts with a simple question: how will this benefit our guests? From the selection of mattresses and linens to the design of our BBQ areas and the training of our staff, guest comfort and satisfaction are our primary drivers. We actively seek and welcome guest feedback through multiple channels, and we use this input to continuously refine and improve our services. Our guest relations team is available around the clock to address concerns, and we take pride in resolving issues quickly and generously. We view every interaction as an opportunity to create a positive lasting impression and turn first-time visitors into lifelong advocates.",
+      "Every decision starts with a simple question: will this help the guest? If a room needs repair, we tell the guest and we either fix it before they arrive or move them to one that is ready. If a hot water system is having a bad day during peak season, we say so rather than hoping they do not notice. We read every review, including the ones that mention the plumbing, and we report back to guests when we have fixed what they raised.",
     icon: "lucide:user-check",
   },
   {
-    id: "value-luxury",
-    title: "Private Luxury",
+    id: "value-location",
+    title: "Location Is the Product",
     description:
-      "We believe that true luxury means having your own private space to unwind, connect, and create memories. At Velora Stays, every villa comes with its own private swimming pool, lush garden, modern kitchen, and BBQ area, ensuring complete exclusivity for our guests. We have mastered the art of delivering premium touches in a private villa setting, from designer interiors and high-speed WiFi to gourmet kitchen setups and bonfire arrangements. Our pricing is transparent with no hidden charges, and we continuously work to ensure that every rupee our guests spend delivers maximum comfort, privacy, and satisfaction.",
-    icon: "lucide:crown",
+      "We are fifty metres from the West Gate, and that is the reason most people book with us rather than a better hotel further down Grand Road. It means a 5:00 AM darshan takes two minutes to reach. It means you can walk to Vimala Temple in five minutes and to the market in two. We cannot compete on square footage or thread count, so we compete on the thing we actually have, and we would rather protect the value of that location than waste it on features guests would not use.",
+    icon: "lucide:map-pin",
   },
   {
     id: "value-improvement",
-    title: "Continuous Improvement",
+    title: "Fix What We Hear About",
     description:
-      "The hospitality industry is always evolving, and so are we. At Velora Stays, we foster a culture of continuous learning and improvement at every level of the organisation. We invest in regular staff training programs, stay current with industry best practices, and actively seek innovative solutions to enhance the guest experience. Our management team conducts monthly reviews of guest feedback, operational metrics, and industry trends to identify opportunities for enhancement. We embrace technology that simplifies processes and improves convenience for our guests, from our streamlined online booking system to our WhatsApp-based guest support. Complacency has no place at Velora Stays; we are always striving to be better today than we were yesterday.",
+      "Our reviews average around four stars, and the recurring criticisms are consistent: rooms need refreshing, and hot water can be unreliable during busy periods. We take that as a work list rather than a complaint. Maintenance is scheduled in advance so that the same plumbing failure does not happen a second time in the same season, and we track the recurring themes in guest feedback so the fixes are prioritised by how often guests actually raise them.",
     icon: "lucide:trending-up",
   },
 ];
 
 export const ABOUT_MILESTONES: Milestone[] = [
   {
-    id: "milestone-2022",
-    year: "2022",
-    title: "Founded",
+    id: "milestone-opening",
+    year: "Opening",
+    title: "Established at the West Gate",
     description:
-      "Velora Stays opened its doors in Gevhande Apati, near Pawna Lake, Lonavala. Founded by Theveloras  stayswith a vision to provide luxury private villa experiences, the property launched with 3 carefully designed villas. Despite being a new entrant, the property quickly earned a reputation for exceptional privacy, stunning views, and warm service.",
+      "Bishnu Bhaban opened as a small budget property on Grand Road, at the West Gate of the Shree Jagannath Temple. The founding decision was location over scale: a smaller number of rooms, deliberately placed so that guests could reach the temple gate in minutes rather than by auto.",
   },
   {
-    id: "milestone-2023",
-    year: "2023",
-    title: "500th Guest",
+    id: "milestone-front-desk",
+    year: "Every day",
+    title: "Long Front Desk Hours",
     description:
-      "Within its first year of operation, Velora Stays welcomed its 500th guest, a milestone that validated the growing demand for luxury villa experiences near Mumbai and Pune. The property achieved an average guest rating of 5.0 on Google and received its first batch of glowing reviews on MakeMyTrip and Airbnb, establishing a strong foundation for organic growth through word-of-mouth recommendations.",
+      "The front desk runs from 7:00 AM to 11:00 PM, which covers temple timings and almost all arrival and departure times. Guests arriving very late or leaving before dawn should call ahead so we can arrange check-in outside those hours. Luggage storage is available for guests heading out to Puri Beach for the day.",
   },
   {
-    id: "milestone-2024",
-    year: "2024",
-    title: "Expanded to 5 Villas",
+    id: "milestone-housekeeping",
+    year: "Daily",
+    title: "Daily Housekeeping Standard",
     description:
-      "Responding to growing demand, Velora Stays expanded its capacity from 3 to 5 luxury villas, adding new villa categories including the Premium 5 villas and the Grand 7 villas . The expansion included a renovation of the common areas, the addition of new outdoor activities, and the introduction of enhanced guest experience packages. The property also launched its direct booking platform for a seamless reservation experience.",
+      "Housekeeping moved from an on-request model to a fixed daily schedule covering every room, with rooms inspected before guest arrival. This remains the single most common thing guests mention positively in their reviews, and the standard we hold ourselves to most firmly.",
   },
   {
-    id: "milestone-2025",
-    year: "2025",
-    title: "100+ Reviews",
+    id: "milestone-reviews",
+    year: "500+",
+    title: "500 Guest Reviews",
     description:
-      "Velora Stays crossed the milestone of 100+ cumulative verified reviews across Google, MakeMyTrip, and Airbnb, with an overall rating of 5.0 stars. The property was recognised as one of the top luxury villa stays near Pawna Lake and received the Guest Satisfaction Award from Airbnb. The team continued to innovate with new villa amenities, curated experiences, and enhanced guest services.",
+      "The property has passed 500 guest reviews across Google, MakeMyTrip, Agoda, Goibibo, and Justdial, with an overall Google rating of 3.8. Guests most often praise the temple proximity and the cleanliness, and most often ask for room refurbishment and steadier hot water during peak season. Both are on the maintenance schedule.",
   },
 ];
 
 export const SUSTAINABILITY: Sustainability = {
-  title: "Our Sustainability Promise",
+  title: "Our Sustainability Commitment",
   description:
-    "At Velora Stays, we believe that providing exceptional luxury and protecting our planet are not competing goals but complementary commitments. Since our founding, we have worked to integrate sustainable practices into every aspect of our operations, recognising that our responsibility extends beyond our guests to the pristine environment of Pawna Lake and the Sahyadri mountains. Our sustainability journey is ongoing, and we continuously seek new ways to reduce our environmental footprint while maintaining the high standards our guests expect.\n\n" +
-    "Energy conservation is a cornerstone of our sustainability efforts. We have transitioned our villas to energy-efficient LED lighting and solar-powered water heating systems, significantly reducing our electricity consumption. Our air conditioning systems are equipped with inverter technology that adjusts cooling output based on room occupancy and ambient temperature, reducing energy waste. We have installed motion sensors in common areas that automatically adjust lighting based on movement, and our outdoor lighting is designed to minimise light pollution while maintaining safety.\n\n" +
-    "Water conservation is equally important to us, especially given our location near Pawna Lake. We have installed water-efficient fixtures throughout our villas, including low-flow showerheads, dual-flush toilets, and sensor-operated taps in common areas. Our swimming pools use advanced filtration systems that reduce water waste, and we encourage guests to participate in our towel and linen reuse programme. Rainwater harvesting systems supplement our water supply during the monsoon season.\n\n" +
-    "We are committed to minimising our environmental impact. Our villas are stocked with refillable glass bottles of filtered water instead of disposable plastic bottles. Bathroom amenities are provided in eco-friendly dispensers rather than individual plastic packets. We use biodegradable cleaning products and partner with local waste management services to ensure proper segregation and recycling of waste. Our kitchen operations prioritise composting organic waste and minimising food waste.\n\n" +
-    "We prioritise sourcing food and supplies locally whenever possible. Our kitchen features ingredients sourced from local farms and markets in the Lonavala region, supporting the regional economy while reducing transportation emissions. Our housekeeping products are selected from Indian brands that use biodegradable and eco-friendly formulations. We partner with local artisans and businesses for villa furnishings and decorations, contributing to the livelihoods of small-scale entrepreneurs in the Pawna Lake community.\n\n" +
-    "Waste management at Velora Stays follows a structured segregation and reduction programme. We separate waste into organic, recyclable, and non-recyclable streams, ensuring maximum diversion from landfills. Organic waste from our kitchen is composted and used in our gardens. Recyclable materials including paper, cardboard, glass, and metal are collected and sent to certified recycling facilities. We are continually working to reduce overall waste generation by reviewing procurement practices, minimising food waste in our kitchen, and encouraging guests to participate in our sustainability initiatives.",
+    "We are a small budget hotel in a pilgrimage town, and we would rather be honest about the scale of what we do than claim more than is true. Sustainability at Bishnu Bhaban is not a marketing programme. It is a set of practical choices that reduce our running costs and our impact on the area around the temple.\n\n" +
+    "Water is our most significant environmental concern, because we operate in Odisha where water availability varies sharply across the year. We have fitted low-flow showerheads and taps across all rooms, which reduces per-guest consumption substantially in a property where most guests take short showers and move on. Our linen and towel changes are made on a three-day cycle by default rather than daily, with fresh linen available on request at no charge. Our RO water treatment plant recovers and recirculates the reject stream instead of discarding it.\n\n" +
+    "On energy, all lighting across the property is LED, and we use occupancy-based switching in corridors, stairwells, and other areas that are unoccupied for long stretches. Split air conditioning units in guest rooms are serviced on schedule, which is both the cheaper and the lower-emission option compared with replacing them prematurely. Solar hot water was considered but the capital cost and the maintenance burden for a property of our size did not justify it, and we would rather not claim a system we do not operate.\n\n" +
+    "Waste handling follows the Odisha Pollution Control Board and Puri Municipality requirements for segregation at source. Wet waste from the kitchen is collected daily by the municipal contractor, and we store it in covered, sanitised bins to avoid the smell and flies that a poorly managed setup attracts near the temple. Dry waste is separated into recyclables and non-recyclables, and we avoid single-use plastic wherever a practical alternative exists, including in the packaged items we provide in rooms.\n\n" +
+    "Water and waste management in a pilgrimage town are not purely environmental questions. Puri faces real pressure on its groundwater and its waste systems during festival season, when the population can multiply many times over in a few weeks. A property of our size contributes to that problem in proportion to its footprint, which is one of the reasons we have kept the room count modest rather than expanding into a larger building.",
 };

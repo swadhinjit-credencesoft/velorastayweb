@@ -7,13 +7,13 @@ import { ABOUT_STORY, ABOUT_MISSION, ABOUT_VISION } from "@/data/about";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "About Us | Velora Stays",
+  title: "About Us | Bishnu Bhaban",
   description:
-    "Discover the story behind Velora Stays — a premium luxury villa in Pawna Lake, Lonavala. Learn about our mission and commitment to exceptional hospitality.",
+    "Discover the story behind Bishnu Bhaban — a budget hotel at the West Gate of the Jagannath Temple in Puri. Learn about our mission and how we work.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Us | Velora Stays",
-    description: "Learn about Velora Stays, our story, and mission.",
+    title: "About Us | Bishnu Bhaban",
+    description: "Learn about Bishnu Bhaban, our story, and mission.",
     url: `${SITE_INFO.url}/about`,
   },
 };
@@ -26,14 +26,14 @@ export default function AboutPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
-          <Image src="/heroimg3.jpeg" alt="About Velora Stays" fill className="object-cover" sizes="100vw" />
+          <Image src="https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1600" alt="About Bishnu Bhaban" fill className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]} />
           <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">About Us</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">{ABOUT_STORY.title}</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Discover the story behind Velora Stays.</p>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Discover the story behind Bishnu Bhaban.</p>
         </div>
       </section>
 
@@ -71,9 +71,9 @@ export default function AboutPage() {
 
       <section className="py-16 bg-amber-500 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Experience the Velora Stays Difference</h2>
+          <h2 className="text-3xl font-bold mb-4">Experience the Bishnu Bhaban Difference</h2>
           <p className="mb-6 opacity-90">Book your stay and discover why guests keep coming back.</p>
-          <a href="https://bookone.io/Velora-Stays?bookingEngine=true" className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <a href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Book Your Stay
           </a>
         </div>
