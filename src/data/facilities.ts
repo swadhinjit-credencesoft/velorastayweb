@@ -188,7 +188,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Puri Beach is about 1.5 kilometres away, a short auto ride or roughly a twenty minute walk. Chandrabhaga Beach, the quieter northern end, is around 3 kilometres. We cannot arrange swimming here, but the desk will happily call you an auto at whatever hour you want to leave.",
     icon: "lucide:waves",
-    image: "https://images.unsplash.com/photo-1591017428765-6f2b0c1e6b1a?q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200",
     features: ["1.5 km to Puri Beach", "3 km to Chandrabhaga", "Autos on request"],
     category: "location",
   },

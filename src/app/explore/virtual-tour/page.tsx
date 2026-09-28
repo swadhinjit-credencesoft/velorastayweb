@@ -5,12 +5,12 @@ import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "Walkthrough | Bishnu Bhaban",
+  title: "Property Walkthrough | Bishnu Bhaban",
   description:
-    "A walkthrough of Bishnu Bhaban in Puri: the entrance and front desk, each room category, the dining area, and the multi-bed rooms.",
+    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk, guest rooms, bedding, the attached bathroom, and the dining area.",
   alternates: { canonical: "/explore/virtual-tour" },
   openGraph: {
-    title: "Walkthrough | Bishnu Bhaban",
+    title: "Property Walkthrough | Bishnu Bhaban",
     description: "A look at the entrance, the rooms, and the dining area before you book.",
     url: "https://bishnubhaban.com/explore/virtual-tour",
   },
@@ -23,7 +23,7 @@ export default function VirtualTourPage() {
         schema={generateBreadcrumbSchema([
           { name: "Home", url: SITE_INFO.url },
           { name: "Explore", url: `${SITE_INFO.url}/explore` },
-          { name: "Virtual Tour", url: `${SITE_INFO.url}/explore/virtual-tour` },
+          { name: "Property Walkthrough", url: `${SITE_INFO.url}/explore/virtual-tour` },
         ])}
       />
       <VirtualTourViewer />

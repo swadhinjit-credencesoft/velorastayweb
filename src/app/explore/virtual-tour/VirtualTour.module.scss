@@ -83,50 +83,27 @@
   border-radius: v.$radius-xl;
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: v.$color-text-on-dark;
-  text-align: center;
-  margin-bottom: v.$space-lg;
+  background: v.$neutral-200;
+  margin: 0 0 v.$space-lg;
 }
 
-.viewerIcon {
-  width: 80px;
-  height: 80px;
+.viewerImage {
+  object-fit: cover;
+}
+
+.viewerCaption {
+  position: absolute;
+  left: v.$space-md;
+  bottom: v.$space-md;
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-xs;
+  padding: 8px 14px;
   border-radius: v.$radius-full;
-  border: 2px solid rgba(201, 169, 110, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: v.$space-md;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 0 16px rgba(201, 169, 110, 0);
-  }
-}
-
-.viewerTitle {
-  font-family: v.$font-display;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: v.$space-xs;
-}
-
-.viewerSub {
-  font-size: 0.9rem;
-  color: v.$neutral-400;
-  margin-bottom: v.$space-lg;
+  background: rgba(0, 0, 0, 0.6);
+  color: v.$color-text-on-dark;
+  font-size: 0.85rem;
+  backdrop-filter: blur(4px);
 }
 
 .viewerOverlay {
@@ -135,42 +112,6 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: v.$radius-xl;
   pointer-events: none;
-}
-
-.viewerCorner {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-color: v.$color-accent;
-  opacity: 0.5;
-
-  &.tl {
-    top: v.$space-md;
-    left: v.$space-md;
-    border-top: 2px solid;
-    border-left: 2px solid;
-  }
-
-  &.tr {
-    top: v.$space-md;
-    right: v.$space-md;
-    border-top: 2px solid;
-    border-right: 2px solid;
-  }
-
-  &.bl {
-    bottom: v.$space-md;
-    left: v.$space-md;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
-  }
-
-  &.br {
-    bottom: v.$space-md;
-    right: v.$space-md;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
-  }
 }
 
 .info {
@@ -223,4 +164,8 @@
 
 .launchBtn {
   @include m.button-accent;
+}
+
+.secondaryBtn {
+  @include m.button-secondary;
 }

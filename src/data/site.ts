@@ -27,8 +27,8 @@ export const SITE_INFO: SiteInfo = {
     full: "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
   },
   geo: {
-    latitude: 19.8049,
-    longitude: 85.8176,
+    latitude: 19.8040441,
+    longitude: 85.8162435,
   },
   checkIn: "2:00 PM",
   checkOut: "11:00 AM",
@@ -198,7 +198,7 @@ const whatsappMessage = [
 ].join("\n");
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`;
 
-export const GOOGLE_MAPS_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0!2d${SITE_INFO.geo.longitude}!3d${SITE_INFO.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s${encodeURIComponent(SITE_INFO.address.full)}!5e0!3m2!1sen!2sin!4v1700000000000`;
+export const GOOGLE_MAPS_URL = `https://maps.google.com/maps?q=${SITE_INFO.geo.latitude},${SITE_INFO.geo.longitude}&z=17&hl=en&output=embed`;
 
 export const NAV_LINKS: NavLink[] = [
   { id: "nav-home", label: "Home", href: "/" },

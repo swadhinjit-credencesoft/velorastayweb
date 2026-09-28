@@ -27,7 +27,8 @@ const EXPLORE_CARDS = [
       "Darshan timings, Grand Road in the evening, the beach, Konark, Odia food, and the handloom market, written up honestly.",
     href: "/explore/experiences",
     icon: "lucide:sparkles",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
   },
   {
     id: "exp-card-nearby",
@@ -36,7 +37,8 @@ const EXPLORE_CARDS = [
       "What is within walking distance of the West Gate, and what is worth the journey further afield if you have the time.",
     href: "/explore/nearby-attractions",
     icon: "lucide:map-pin",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80",
   },
   {
     id: "exp-card-tours",
@@ -45,7 +47,8 @@ const EXPLORE_CARDS = [
       "Sample itineraries for the temple day, a Konark trip, and a slow beach and bazaar day. Planning guides, not tours.",
     href: "/explore/tour-packages",
     icon: "lucide:route",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
   },
   {
     id: "exp-card-gallery",
@@ -54,16 +57,18 @@ const EXPLORE_CARDS = [
       "Photographs of the property, the rooms, and the surroundings of the West Gate area.",
     href: "/explore/gallery",
     icon: "lucide:camera",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
   },
   {
     id: "exp-card-virtual-tour",
     title: "Walkthrough",
     description:
-      "A look at the entrance, each room category, the dining area, and the multi-bed rooms before you book.",
+      "Photographs of the entrance, the guest rooms, the attached bathroom, and the dining area, so you know what you are booking.",
     href: "/explore/virtual-tour",
-    icon: "lucide:glasses",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    icon: "lucide:camera",
+    image:
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
   },
 ];
 

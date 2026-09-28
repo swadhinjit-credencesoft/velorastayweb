@@ -29,7 +29,7 @@ const EXPERIENCES = [
     duration: "Pre-dawn or evening",
     price: "Free",
     icon: "lucide:landmark",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80",
   },
   {
     id: "exp-grand-road",
@@ -39,7 +39,7 @@ const EXPERIENCES = [
     duration: "5:00 PM – 9:00 PM",
     price: "Free",
     icon: "lucide:shopping-bag",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
   },
   {
     id: "exp-konark",
@@ -49,7 +49,7 @@ const EXPERIENCES = [
     duration: "Full day trip",
     price: "Transport and entry",
     icon: "lucide:sailboat",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
   },
   {
     id: "exp-beach",
@@ -59,7 +59,7 @@ const EXPERIENCES = [
     duration: "Morning or sunset",
     price: "Free",
     icon: "lucide:waves",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
   },
   {
     id: "exp-odia-food",
@@ -69,7 +69,7 @@ const EXPERIENCES = [
     duration: "Anytime",
     price: "Varies",
     icon: "lucide:utensils",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
   },
   {
     id: "exp-market",
@@ -79,7 +79,7 @@ const EXPERIENCES = [
     duration: "1 – 2 hours",
     price: "Free",
     icon: "lucide:palette",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
   },
 ];
 

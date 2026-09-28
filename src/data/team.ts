@@ -36,7 +36,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "team-kitchen",
     name: "Yogesh",
     role: "Kitchen Manager",
-    image: "https://images.unsplash.com/photo-1577219491135-ce3967c4d049?w=400&h=400&fit=crop&crop=face",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=400&fit=crop&crop=face",
     bio: "Yogesh runs the in-house kitchen, which is what many guests mention when they talk about the food. He keeps it focused on Odia home cooking alongside North Indian and continental options, and he is used to cooking meal plans for groups arriving and leaving at unusual hours around temple timings.",
     social: [
       { platform: "instagram", url: "" },
