@@ -94,7 +94,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_INFO.name,
     url: SITE_INFO.url,
-    logo: "/bishnu-bhaban-logo.png",
+    logo: "/bishnu-bhaban-logo1.png",
     description: SITE_INFO.description,
     address: {
       "@type": "PostalAddress",

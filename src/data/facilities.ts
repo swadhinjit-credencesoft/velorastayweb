@@ -101,21 +101,6 @@ export const FACILITIES: Facility[] = [
     category: "service",
   },
   {
-    id: "facility-restaurant",
-    slug: "in-house-restaurant",
-    name: "In-House Restaurant",
-    description:
-      "Our in-house kitchen serves Odia home cooking alongside North Indian and continental options, and is the value guests mention most often. Meal plans can be added at booking. The kitchen also handles early breakfasts for guests leaving at four in the morning, which is not something most properties bother with.",
-    icon: "lucide:utensils",
-    image: "/images/diningarea.avif",
-    images: [
-      "/images/diningarea.avif",
-      "/images/diningarea1.avif",
-    ],
-    features: ["Odia home cooking", "Meal plans available", "Early breakfast on request"],
-    category: "basic",
-  },
-  {
     id: "facility-tv",
     slug: "television",
     name: "Television",
@@ -168,17 +153,6 @@ export const FACILITIES: Facility[] = [
     icon: "lucide:luggage",
     image: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=800&q=80",
     features: ["Before and after stay", "Day trips", "Secure storage"],
-    category: "service",
-  },
-  {
-    id: "facility-room-service",
-    slug: "room-service",
-    name: "Room Service",
-    description:
-      "Food can be brought to your room from the in-house kitchen, and it is a practical option for guests who return late or who are heading out early the next morning. Room service operates through the night, matching the front desk hours.",
-    icon: "lucide:bell",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
-    features: ["Through the night", "From in-house kitchen", "Delivered to room"],
     category: "service",
   },
   {

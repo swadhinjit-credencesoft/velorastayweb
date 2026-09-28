@@ -7,11 +7,11 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 export const metadata: Metadata = {
   title: "Property Walkthrough | Bishnu Bhaban",
   description:
-    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk, guest rooms, bedding, the attached bathroom, and the dining area.",
+    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk, guest rooms, bedding, the attached bathroom, and the common areas.",
   alternates: { canonical: "/explore/virtual-tour" },
   openGraph: {
     title: "Property Walkthrough | Bishnu Bhaban",
-    description: "A look at the entrance, the rooms, and the dining area before you book.",
+    description: "A look at the entrance, the rooms, and the common areas before you book.",
     url: "https://bishnubhaban.com/explore/virtual-tour",
   },
 };

@@ -14,7 +14,7 @@ export const OFFERS: Offer[] = [
     name: "Early Darshan Stay",
     tagline: "Sleep close to the temple gate, be there for the first darshan",
     description:
-      "The earliest aartha darshan begins is in the pre-dawn hours, and the West Gate gets busy from around 5:00 AM onwards. Staying with us means you are a short walk from the gate instead of across town. Book a room and let us know your darshan time when you arrive, and the front desk will help you plan timings and arrange an early breakfast if you leave before four in the morning.",
+      "The earliest aartha darshan begins is in the pre-dawn hours, and the West Gate gets busy from around 5:00 AM onwards. Staying with us means you are a short walk from the gate instead of across town. Book a room and let us know your darshan time when you arrive, and the front desk will help you plan the timings.",
     image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
     discount: "Best Rate",
     validFrom: "2026-01-01",
@@ -22,12 +22,12 @@ export const OFFERS: Offer[] = [
     code: "DARSHAN",
     terms: [
       "Subject to room availability on the night of your stay.",
-      "Please inform us of your intended darshan time at least one day in advance so we can plan breakfast timings.",
+      "Please inform us of your intended darshan time at least one day in advance so we can help you plan the timings.",
       "Cannot be combined with any other promotional offer.",
     ],
     features: [
       "Rooms a short walk from the West Gate of the Jagannath Temple",
-      "Early breakfast arranged on request for pre-dawn darshan",
+      "Front desk help with pre-dawn darshan timings",
       "Front desk open 7 AM to 11 PM for timings and directions",
     ],
     popular: true,

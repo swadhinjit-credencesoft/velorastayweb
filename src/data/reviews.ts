@@ -93,7 +93,7 @@ export const REVIEWS: Review[] = [
     platform: "google",
     rating: 5,
     date: "2025-11-19",
-    text: "Travelled with five people and we took the multi bed room so everyone stayed together. Much better than booking two rooms. Staff helped us arrange an early breakfast before our 4am departure. Good value for a group.",
+    text: "Travelled with five people and we took the multi bed room so everyone stayed together. Much better than booking two rooms. Staff arranged an early check-out and had our luggage waiting before our 4am departure. Good value for a group.",
     verified: true,
   },
   {
@@ -111,7 +111,7 @@ export const REVIEWS: Review[] = [
     platform: "makemytrip",
     rating: 4,
     date: "2025-10-07",
-    text: "Perfect for what we needed: a clean, affordable room a short walk from the temple. The in house restaurant is good value for simple Odia and North Indian food. Not a fancy hotel and it does not pretend to be, which we actually appreciated.",
+    text: "Perfect for what we needed: a clean, affordable room a short walk from the temple. The Grand Road sweet shops next door are the easiest breakfast stop you could ask for. Not a fancy hotel and it does not pretend to be, which we actually appreciated.",
     verified: true,
   },
   {

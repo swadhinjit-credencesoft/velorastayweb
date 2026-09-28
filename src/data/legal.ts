@@ -35,7 +35,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Information We Collect</h2>\n" +
       "<p>We collect various types of information to provide and improve our services. This includes personal information you voluntarily provide when making a reservation, such as your full name, email address, phone number, and billing details. We also collect identification information when required for check-in, including government-issued ID details, as mandated by Indian law. Every guest must present a valid photo ID at check-in, and Aadhaar, other government photo ID, and passport are all accepted. When you browse our website, we automatically gather certain technical data including your IP address, browser type and version, operating system, referring URLs, pages visited, time spent on pages, and other diagnostic information.</p>\n\n" +
       "<h2>How We Use Your Information</h2>\n" +
-      "<p>We use the information we collect for several important purposes. Primarily, we use your personal data to process and confirm your reservations, manage your stay, and provide the services you request during your visit. This includes room allocation, meal plan requirements, and group arrangements. We use your contact information to send reservation confirmations, pre-arrival communications, and post-stay feedback requests. We will only send you promotional or marketing messages if you have opted in to receive them, and every such message includes a way to unsubscribe.</p>\n\n" +
+      "<p>We use the information we collect for several important purposes. Primarily, we use your personal data to process and confirm your reservations, manage your stay, and provide the services you request during your visit. This includes room allocation, late check-in requests, and group arrangements. We use your contact information to send reservation confirmations, pre-arrival communications, and post-stay feedback requests. We will only send you promotional or marketing messages if you have opted in to receive them, and every such message includes a way to unsubscribe.</p>\n\n" +
       "<h2>Cookies and Tracking Technologies</h2>\n" +
       "<p>Our website uses cookies and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us recognise returning visitors, remember your preferences, and analyse website traffic. You can control cookie preferences through your browser settings. For more detail, please see our Cookie Policy.</p>\n\n" +
       "<h2>CCTV Surveillance</h2>\n" +
@@ -78,13 +78,12 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<li>Free WiFi</li>\n" +
       "<li>Television</li>\n" +
       "<li>Daily housekeeping</li>\n" +
-      "<li>Access to the in-house restaurant and room service</li>\n" +
       "</ul>\n" +
       "<p>The property also provides a front desk staffed from 7:00 AM to 11:00 PM, CCTV surveillance covering entry and exit points, luggage storage, laundry on request, and parking facilities. Late arrival or early departure outside desk hours should be arranged in advance by calling +91 9078922710.</p>\n\n" +
       "<h2>Pet Policy</h2>\n" +
       "<p><strong>Pets are not allowed</strong> at our property. We appreciate your understanding in maintaining a pet-free environment for the comfort of all guests.</p>\n\n" +
       "<h2>Food and Dining</h2>\n" +
-      "<p>Food is provided from our in-house kitchen and must be ordered separately after you make your booking. Meal plans can be added to your reservation, and our team is used to catering guests who leave at four in the morning and need breakfast at three.</p>\n\n" +
+      "<p>We do not operate a restaurant, kitchen, or room service on site. There is no food or meal plan included in your room rate, and guests are welcome to bring outside food into the property and eat in the room or the common areas. Puri has a large number of restaurants within walking distance, and the front desk can point you to whichever are open at the time.</p>\n\n" +
       "<h2>Pricing</h2>\n" +
       "<p>Room rates vary by category, season, and festival dates, and are shown on our website at the time of booking. All prices are quoted in Indian Rupees (INR). Prices displayed on our website may exclude applicable taxes, which will be shown before you confirm payment.</p>\n\n" +
       "<h2>Payment Terms</h2>\n" +

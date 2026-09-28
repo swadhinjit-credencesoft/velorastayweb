@@ -10,7 +10,7 @@ import styles from "./Gallery.module.scss";
 export const metadata: Metadata = {
   title: "Photo Gallery | Bishnu Bhaban",
   description:
-    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk at the West Gate of the Jagannath Temple, the guest rooms, the dining area, and the common areas.",
+    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk at the West Gate of the Jagannath Temple, the guest rooms, and the common areas.",
   alternates: { canonical: "/explore/gallery" },
   openGraph: {
     title: "Photo Gallery | Bishnu Bhaban",

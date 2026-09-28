@@ -26,19 +26,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Avinash",
     role: "Guest Experience Manager",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
-    bio: "Avinash handles the front desk and most of the guest contact. He manages the desk rota, luggage storage, and early breakfast requests for guests departing at dawn, and arranges late check-ins for people who call ahead. He also reads the guest reviews and feeds what comes back into the maintenance schedule.",
+    bio: "Avinash handles the front desk and most of the guest contact. He manages the desk rota, luggage storage, and early check-out requests for guests with dawn departures, and arranges late check-ins for people who call ahead. He also reads the guest reviews and feeds what comes back into the maintenance schedule.",
     social: [
       { platform: "linkedin", url: "" },
-      { platform: "instagram", url: "" },
-    ],
-  },
-  {
-    id: "team-kitchen",
-    name: "Yogesh",
-    role: "Kitchen Manager",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=400&fit=crop&crop=face",
-    bio: "Yogesh runs the in-house kitchen, which is what many guests mention when they talk about the food. He keeps it focused on Odia home cooking alongside North Indian and continental options, and he is used to cooking meal plans for groups arriving and leaving at unusual hours around temple timings.",
-    social: [
       { platform: "instagram", url: "" },
     ],
   },

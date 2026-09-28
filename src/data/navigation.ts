@@ -116,20 +116,6 @@ export const NAV_GROUPS: NavGroup[] = [
         description: "24-hour desk, housekeeping, luggage storage",
         icon: "lucide:concierge-bell",
       },
-      {
-        id: "nav-amenities-dining",
-        label: "In-House Restaurant",
-        href: "/facilities#kitchen",
-        description: "Odia home cooking and meal plans",
-        icon: "lucide:utensils",
-      },
-      {
-        id: "nav-amenities-menu",
-        label: "Food Menu & Packages",
-        href: "/food-menu",
-        description: "Meal packages and à la carte",
-        icon: "lucide:book-open",
-      },
     ],
   },
   {
@@ -220,7 +206,6 @@ export const FOOTER_GROUPS: FooterGroup[] = [
       { id: "footer-about", label: "About Us", href: "/about" },
       { id: "footer-villas", label: "Our Rooms", href: "/rooms" },
       { id: "footer-amenities", label: "Amenities", href: "/facilities" },
-      { id: "footer-dining", label: "Food Menu & Packages", href: "/food-menu" },
       { id: "footer-gallery", label: "Gallery", href: "/gallery" },
       { id: "footer-reviews", label: "Guest Reviews", href: "/reviews" },
     ],

@@ -6,7 +6,7 @@ import { FAQ_CATEGORIES } from "@/data/faq";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Bishnu Bhaban",
-  description: "Find answers to common questions about booking, rooms, dining, facilities, payment, and policies at Bishnu Bhaban Puri.",
+      description: "Find answers to common questions about booking, rooms, facilities, payment, and policies at Bishnu Bhaban Puri.",
   alternates: { canonical: "/faq" },
   openGraph: { title: "FAQ | Bishnu Bhaban", description: "Get answers to all your questions about staying at Bishnu Bhaban in Puri." },
 };

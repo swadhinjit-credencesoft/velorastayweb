@@ -41,12 +41,12 @@ export const EVENT_TYPES: EventType[] = [
       },
       {
         id: "fam-group-early",
-        name: "Group Booking + Early Meal",
-        description: "The same group booking, with an early breakfast arranged for temple timings.",
+        name: "Group Booking + Early Start",
+        description: "The same group booking, with a pre-dawn departure planned around temple timings.",
         price: "On Request",
         includes: [
           "Everything in the Group Booking",
-          "Early breakfast served at the time you need to leave",
+          "Front desk help planning an early start for temple timings",
           "Advance planning of temple and travel timings with the front desk",
           "Luggage storage before check-in or after check-out",
         ],
@@ -63,7 +63,7 @@ export const EVENT_TYPES: EventType[] = [
       {
         id: "fam-faq-2",
         question: "Can you accommodate dietary requirements?",
-        answer: "Our kitchen can prepare vegetarian and Jain food on request with advance notice. For anything more specific, please discuss it before you book so we can be honest about what we can do.",
+        answer: "We do not prepare or serve food on site, so there is nothing for our kitchen to accommodate. Puri has a large number of vegetarian and Jain restaurants within walking distance, and the front desk can point you to whichever ones suit your group.",
       },
       {
         id: "fam-faq-3",
@@ -80,7 +80,7 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Accommodation for groups travelling the Odisha temple circuit, with help planning timings and logistics.",
     longDescription:
-      "A significant part of our group bookings comes from families and small groups travelling the Odisha temple circuit — Puri, Konark, Dhauli, and Chilika along the way, often on tight schedules with fixed train or bus times. In that context, what matters is not decoration but reliability: a room that is ready when you arrive, luggage somewhere safe between checkout and your train, and breakfast at an unreasonable hour if the schedule demands it. We do all three. Tell us your group size, your travel dates, and the times you need to be on the move, and we will be direct about what is possible. We are a modest property with a limited number of rooms, so we would rather confirm early and honestly than overcommit and disappoint you on arrival.",
+      "A significant part of our group bookings comes from families and small groups travelling the Odisha temple circuit — Puri, Konark, Dhauli, and Chilika along the way, often on tight schedules with fixed train or bus times. In that context, what matters is not decoration but reliability: a room that is ready when you arrive, luggage somewhere safe between checkout and your train, and a front desk that will let you leave before it formally opens if the schedule demands it. We do all three. Tell us your group size, your travel dates, and the times you need to be on the move, and we will be direct about what is possible. We are a modest property with a limited number of rooms, so we would rather confirm early and honestly than overcommit and disappoint you on arrival.",
     image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
     gallery: [
       { id: "pil-img-1", src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800", alt: "Pilgrim group arriving at Bishnu Bhaban" },
@@ -99,7 +99,7 @@ export const EVENT_TYPES: EventType[] = [
           "Multiple rooms under a single reservation",
           "Luggage storage after checkout and before departure",
           "Advance notice of darshan and gate timings",
-          "Early breakfast arranged to your travel schedule",
+          "Early start planning around your travel schedule",
         ],
         popular: true,
       },
@@ -117,7 +117,7 @@ export const EVENT_TYPES: EventType[] = [
         popular: false,
       },
     ],
-    features: ["Group Booking", "Luggage Storage", "Early Breakfast", "Front Desk 7 AM–11 PM", "Temple Timings"],
+    features: ["Group Booking", "Luggage Storage", "Early Start Planning", "Front Desk 7 AM–11 PM", "Temple Timings"],
     faqs: [
       {
         id: "pil-faq-1",

@@ -17,7 +17,7 @@ export const GALLERY_CATEGORIES: GalleryCategory[] = [
     id: "gallery-interiors",
     slug: "interiors",
     name: "Interiors & Common Areas",
-    count: 5,
+    count: 3,
   },
 ];
 
@@ -35,8 +35,6 @@ export const GALLERY_IMAGES: GalleryImage[] = [
 
   // ── Interiors & Common Areas ──
   { id: "gallery-int-01", src: "/WhatsApp Image 2026-07-19 at 8.42.19 AM (1).jpeg", alt: "Common seating area at Bishnu Bhaban", category: "interiors", caption: "Common Seating Area" },
-  { id: "gallery-int-02", src: "/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg", alt: "Dining area at Bishnu Bhaban", category: "interiors", caption: "Dining Area" },
-  { id: "gallery-int-03", src: "/images/diningarea.avif", alt: "In-house dining area", category: "interiors", caption: "In-House Dining" },
   { id: "gallery-int-04", src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200", alt: "Corridor at Bishnu Bhaban", category: "interiors", caption: "Corridor" },
   { id: "gallery-int-05", src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200", alt: "Front desk and reception at Bishnu Bhaban", category: "interiors", caption: "Front Desk" },
 ];

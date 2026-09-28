@@ -47,20 +47,13 @@ export const SOCIAL_LINKS: SocialLinks = {
 };
 
 export const SITE_ASSETS = {
-  heroImages: [
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
-  ] as const,
-  logo: "/bishnu-bhaban-logo.png",
-  logoLight: "/bishnu-bhaban-logo.png",
+  logo: "/bishnu-bhaban-logo1.png",
+  logoLight: "/bishnu-bhaban-logo1.png",
   favicon: "/favicon.ico",
   aboutImage:
     "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600",
   roomsPreviewImage:
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
-  diningImage:
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
   eventsImage:
     "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070",
   contactMapImage:
@@ -74,8 +67,7 @@ export const SITE_ASSETS = {
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
-    image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
+    image: "/bishnyhomeimage/homehero1.png",
     title: "Stay Steps from Jagannath Temple",
     subtitle:
       "Clean, air-conditioned budget rooms at the West Gate of the Shree Jagannath Temple in Puri, within easy walking distance.",
@@ -83,8 +75,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-2",
-    image:
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2070",
+    image: "/bishnyhomeimage/homehero2.png",
     title: "Your Base for Puri Darshan",
     subtitle:
       "Hot water, free WiFi and a front desk open 7 AM to 11 PM, all within 50 to 280 metres of the temple complex.",
@@ -92,8 +83,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-3",
-    image:
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200",
+    image: "/bishnyhomeimage/homehero3.png",
     title: "Puri Beach, Temples & Sunrise",
     subtitle:
       "From early morning darshan to evening walks on the beach, everything you need for a Puri trip is close at hand.",

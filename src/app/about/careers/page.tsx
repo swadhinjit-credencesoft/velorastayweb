@@ -37,7 +37,7 @@ export default function CareersPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Current Openings</h2>
             <p className="text-gray-600 mb-4">We are always looking for talented individuals to join our team. Currently, we have openings for:</p>
             <ul className="space-y-3">
-              {["Front Desk Associate", "Housekeeping Staff", "Kitchen Assistant", "Guest Relations Executive"].map((role) => (
+              {["Front Desk Associate", "Housekeeping Staff", "Guest Relations Executive"].map((role) => (
                 <li key={role} className="flex items-center gap-3 text-gray-700">
                   <span className="text-green-500 font-bold">✓</span> {role}
                 </li>

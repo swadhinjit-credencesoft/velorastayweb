@@ -16,7 +16,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     description:
       "A plan for the Jagannath Temple itself and the surrounding Grand Road, built around how the temple actually works: early darshan, a rest in the middle of the day, and the evening when the street comes alive.",
     longDescription:
-      "Most guests are staying here for the temple, so this is the plan we walk through with you at check-in. The important thing to understand about darshan at the Jagannath Temple is that it is not a single fixed event. There are several aartha timings across the day, from the pre-dawn slot through to the evening, and which one you can realistically attend depends on the season, the day of the week, and the festival calendar. The temple is at the West Gate of Grand Road, so from our rooms it is a short walk rather than a journey. For pre-dawn darshan, leave your room at around 3:00 to 3:30 AM; the gates open well before sunrise and the queue is far shorter than it will be at seven in the morning. Breakfast afterwards is the practical problem, which is why we can serve it early if you tell us the night before. Between darshan and the evening, Puri in the middle of the day is hot and there is not much that demands doing. This is a good time to rest, to visit the Jagannath Temple Museum on the temple grounds if it is open that day, or to swim before the afternoon heat. In the evening, Grand Road changes character completely. The road closes to traffic, the stalls come out, and the whole area fills with people. The evening aarti is the other darshan worth planning around, and the crowd around it is significant. Wear clothes you can walk in, carry something small in cash for the stalls, and be aware that footwear needs to come off well before you reach the temple gates — there are places to leave it, and it is easier to use them than to carry them.",
+      "Most guests are staying here for the temple, so this is the plan we walk through with you at check-in. The important thing to understand about darshan at the Jagannath Temple is that it is not a single fixed event. There are several aartha timings across the day, from the pre-dawn slot through to the evening, and which one you can realistically attend depends on the season, the day of the week, and the festival calendar. The temple is at the West Gate of Grand Road, so from our rooms it is a short walk rather than a journey. For pre-dawn darshan, leave your room at around 3:00 to 3:30 AM; the gates open well before sunrise and the queue is far shorter than it will be at seven in the morning. Eating afterwards is the practical problem, and the sweet shops and tea stalls on Grand Road are already open by then, a couple of minutes from the gate. Between darshan and the evening, Puri in the middle of the day is hot and there is not much that demands doing. This is a good time to rest, to visit the Jagannath Temple Museum on the temple grounds if it is open that day, or to swim before the afternoon heat. In the evening, Grand Road changes character completely. The road closes to traffic, the stalls come out, and the whole area fills with people. The evening aarti is the other darshan worth planning around, and the crowd around it is significant. Wear clothes you can walk in, carry something small in cash for the stalls, and be aware that footwear needs to come off well before you reach the temple gates — there are places to leave it, and it is easier to use them than to carry them.",
     image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800",
     duration: "Full day",
     price: 0,
@@ -25,7 +25,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     includes: [
       "A realistic hour-by-hour plan rather than a fixed schedule",
       "Guidance on darshan timings and what changes by season",
-      "Early breakfast arranged on request for pre-dawn darshan",
+      "Early tea and breakfast stops on Grand Road, minutes from the West Gate",
       "Advice on footwear, dress, and what to carry through the gates",
     ],
     itinerary: [
@@ -46,9 +46,9 @@ export const TOUR_PACKAGES: TourPackage[] = [
       {
         id: "tg-3",
         time: "6:30 AM",
-        activity: "Early breakfast back at the property",
+        activity: "Breakfast on Grand Road",
         description:
-          "Tell us the night before if you want breakfast this early and we will have it ready. It is a small thing, but it makes the difference between a good morning and a rushed one.",
+          "The tea stalls and sweet shops along Grand Road open well before the queue at the temple thins out, and they are a couple of minutes from the West Gate. We do not serve food on site, so this is where most guests eat after an early darshan.",
       },
       {
         id: "tg-4",
@@ -67,7 +67,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ],
     highlights: [
       "Pre-dawn darshan with the shortest queues",
-      "Early breakfast arranged the night before",
+      "Grand Road breakfast stops right by the West Gate",
       "Honest guidance on darshan timings for the day you are here",
       "Evening Grand Road when the street opens up",
     ],
@@ -111,7 +111,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "A realistic assessment of travel times and what is achievable in a day",
       "Advice on transport options, including when to hire a car",
       "Combination suggestions for Dhauli and Chilika",
-      "Breakfast arranged early so you can leave on time",
+      "An early start so you are on the road by 6:30 AM",
     ],
     itinerary: [
       {
@@ -154,7 +154,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
       "Konark Sun Temple with enough time to see the detail",
       "Dhauli as an easy addition on the return road",
       "Honest guidance on whether Chilika fits in a day",
-      "Early breakfast so you can leave on schedule",
+      "Pack breakfast from Grand Road the night before",
     ],
     faqs: [
       {

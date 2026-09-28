@@ -64,7 +64,7 @@ const EXPLORE_CARDS = [
     id: "exp-card-virtual-tour",
     title: "Walkthrough",
     description:
-      "Photographs of the entrance, the guest rooms, the attached bathroom, and the dining area, so you know what you are booking.",
+      "Photographs of the entrance, the guest rooms, the attached bathroom, and the common areas, so you know what you are booking.",
     href: "/explore/virtual-tour",
     icon: "lucide:camera",
     image:

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import Icon from "@/components/Icon/Icon";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import Dining from "@/components/sections/Dining/Dining";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
 
@@ -29,9 +28,8 @@ export const metadata: Metadata = {
 
 const categoryLabels: Record<string, string> = {
   location: "Location",
-  outdoor: "Outdoor & Pool",
+  outdoor: "Outdoor",
   entertainment: "Entertainment",
-  kitchen: "Dining & Kitchen",
   comfort: "Comfort",
   service: "Service",
   bathroom: "Bathroom",
@@ -126,8 +124,6 @@ export default function FacilitiesPage() {
           ))}
         </div>
       </section>
-
-      <Dining />
     </>
   );
 }

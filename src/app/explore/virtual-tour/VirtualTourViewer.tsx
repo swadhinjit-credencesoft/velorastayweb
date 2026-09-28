@@ -89,28 +89,12 @@ const TOUR_AREAS = [
     ],
   },
   {
-    id: "dining",
-    label: "Dining",
-    icon: "lucide:utensils",
-    title: "Dining",
-    image: "/WhatsApp Image 2026-07-19 at 8.42.08 AM.jpeg",
-    imageAlt: "Dining area at Bishnu Bhaban",
-    description:
-      "Our in-house kitchen prepares Odia home cooking alongside North Indian options. Meals are ordered separately and can be added to your booking. If you are leaving before four in the morning for darshan, tell us the night before and we will have breakfast ready early.",
-    highlights: [
-      "Odia and North Indian home cooking",
-      "Vegetarian and Jain food on advance request",
-      "Meal plans available with your booking",
-      "Early breakfast arranged on request",
-    ],
-  },
-  {
     id: "common",
     label: "Common Areas",
     icon: "lucide:sofa",
     title: "Common Areas",
-    image: "/images/diningarea.avif",
-    imageAlt: "Common area at Bishnu Bhaban",
+    image: "/WhatsApp Image 2026-07-19 at 8.42.19 AM (1).jpeg",
+    imageAlt: "Common seating area at Bishnu Bhaban",
     description:
       "Shared space at the front of the property, used mostly for waiting, luggage, and asking the front desk about temple timings. Grand Road closes to traffic in the evening, so it is worth asking us before booking a car for that window.",
     highlights: [

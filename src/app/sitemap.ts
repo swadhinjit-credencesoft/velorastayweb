@@ -10,6 +10,12 @@ import { LEGAL_PAGES } from "@/data/legal";
 const BASE_URL = SITE_INFO.url;
 const NOW = new Date();
 
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return [{ __metadata_id__: "sitemap.xml" }];
+}
+
 type ChangeFrequency =
   | "always"
   | "hourly"

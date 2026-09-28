@@ -131,9 +131,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         id: "faq-facilities-02",
-        question: "Is there an in-house restaurant?",
+        question: "Is there food available at the property?",
         answer:
-          "Yes, we have an in-house kitchen serving Odia home cooking alongside North Indian and continental options. Meal plans can be added at the time of booking, and the kitchen is used to catering early breakfasts for guests leaving before dawn.",
+          "We do not run a restaurant or kitchen on site, so there is no in-house dining. Puri has a large number of vegetarian restaurants within a short walk along Grand Road and the lanes behind it, and the front desk is happy to point you to whichever ones are open at the time and within your budget.",
       },
       {
         id: "faq-facilities-03",
