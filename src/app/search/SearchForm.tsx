@@ -27,7 +27,7 @@ export default function SearchForm() {
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Search", href: "/search" }]} />
           <h1 className="text-4xl font-bold text-white mt-4 text-center">Search</h1>
           <div className="mt-6">
-            <input type="text" placeholder="Search villas, facilities, articles..." value={query} onChange={(e) => setQuery(e.target.value)} className="w-full px-6 py-4 rounded-xl text-lg outline-none focus:ring-2 focus:ring-amber-500" autoFocus />
+            <input type="text" placeholder="Search rooms, facilities, articles..." value={query} onChange={(e) => setQuery(e.target.value)} className="w-full px-6 py-4 rounded-xl text-lg outline-none focus:ring-2 focus:ring-amber-500" autoFocus />
           </div>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function SearchForm() {
             <div className="space-y-10">
               {villaResults.length > 0 && (
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">Villas ({villaResults.length})</h2>
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">Rooms ({villaResults.length})</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {villaResults.map((r) => (
                       <Link key={r.id} href={`/rooms/${r.slug}`} className="bg-white rounded-lg p-4 shadow-sm hover:shadow transition-shadow flex gap-4">

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/search" },
   openGraph: {
     title: "Search | Bishnu Bhaban",
-    description: "Search villas, facilities, and blog posts at Bishnu Bhaban.",
+    description: "Search rooms, facilities, and blog posts at Bishnu Bhaban.",
     url: "https://bishnubhaban.com/search",
   },
 };

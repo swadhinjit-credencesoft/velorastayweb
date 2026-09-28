@@ -42,7 +42,7 @@ export default function NotFound() {
             iconPosition="left"
             className={styles.outlineOnDark}
           >
-            Explore Villas
+            Explore Rooms
           </Button>
         </div>
       </div>
