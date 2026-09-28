@@ -18,7 +18,7 @@ export default function FAQ() {
           <span className={styles.eyebrow}>FAQ</span>
           <h2 className={`${styles.heading} font-oswald`}>Frequently Asked Questions</h2>
           <p className={styles.description}>
-            Find answers to the most common questions about booking, villas, dining, and more.
+            Find answers to the most common questions about booking, rooms, dining, and more.
           </p>
         </div>
 

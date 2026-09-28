@@ -184,9 +184,30 @@ function slugify(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+const SPELLED_BED_COUNTS: Record<string, number> = {
+  one: 1,
+  single: 1,
+  two: 2,
+  double: 2,
+  three: 3,
+  triple: 3,
+  four: 4,
+  quad: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+};
+
 function extractBedCount(roomName: string): number {
-  const match = roomName.match(/(\d+)\s*(?:bed|beds)/i);
-  return match ? parseInt(match[1], 10) : 2;
+  const numeric = roomName.match(/(\d+)\s*-?\s*bed/i);
+  if (numeric) {
+    const parsed = parseInt(numeric[1], 10);
+    if (parsed > 0) return parsed;
+  }
+  const spelled = roomName.match(/\b(one|single|two|double|three|triple|four|quad|five|six|seven|eight)\b/i);
+  if (spelled) return SPELLED_BED_COUNTS[spelled[1].toLowerCase()];
+  return 2;
 }
 
 const ROOM_TAGLINES: Record<string, string> = {
@@ -268,24 +289,16 @@ function isAvailable(room: TmRoom): boolean {
   );
 }
 
-const CANONICAL_ROOM_SLUGS: { slug: string; patterns: RegExp[] }[] = [
-  { slug: "deluxe-room", patterns: [/deluxe/, /luxury/, /premium/, /supreme/] },
-  {
-    slug: "multi-bed-room",
-    patterns: [/multi/, /family/, /group/, /triple/, /quad/, /3\s*bed/, /4\s*bed/],
-  },
-  { slug: "standard-room", patterns: [/standard/, /regular/, /double/, /non[-\s]?ac/, /single/] },
-];
-
 function canonicalRoomSlug(roomName: string, index: number): string {
-  const normalized = roomName.toLowerCase();
-  for (const { slug, patterns } of CANONICAL_ROOM_SLUGS) {
-    if (patterns.some((pattern) => pattern.test(normalized))) return slug;
-  }
   return slugify(roomName) || `room-${index + 1}`;
 }
 
-export function mapRoomToVilla(room: TmRoom, services: TmService[], index: number): VillaType {
+export function mapRoomToVilla(
+  room: TmRoom,
+  services: TmService[],
+  index: number,
+  fallbackImages: TmImage[] = []
+): VillaType {
   const roomName = room.name ?? `Room ${index + 1}`;
   const slug = canonicalRoomSlug(roomName, index);
   const beds = extractBedCount(roomName);
@@ -295,6 +308,8 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
   const originalPrice =
     planAmount && planAmount > roomOnlyPrice ? planAmount : undefined;
   const maxOccupancy = room.maximumOccupancy ?? beds;
+
+  const sourceImages = room.imageList?.length ? room.imageList : fallbackImages;
 
   return {
     id: `room-${room.id ?? index}`,
@@ -307,10 +322,11 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
     originalPrice,
     currency: "₹",
     priceUnit: "per night",
-    bedrooms: beds,
+    bedrooms: Math.max(beds, 1),
     bathrooms: 1,
+    beds: Math.max(beds, 1),
     maxOccupancy,
-    images: (room.imageList ?? []).map((img, i) => ({
+    images: sourceImages.map((img, i) => ({
       id: `${room.id ?? index}-${i}`,
       src: img.url,
       alt: img.description?.trim() || `${roomName} at Bishnu Bhaban`,
@@ -319,14 +335,12 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
     amenities: buildAmenityIds(services),
     highlights: [
       `${beds} bed${beds === 1 ? "" : "s"} with attached bathroom`,
-      "24-hour hot water",
       "Free WiFi in room",
       "Daily housekeeping",
     ],
     features: [
       "Air-conditioned room",
       "Attached western-style bathroom",
-      "24-hour hot water supply",
       "Free WiFi access",
     ],
     policies: ROOM_POLICIES,
@@ -339,8 +353,9 @@ export function mapRoomToVilla(room: TmRoom, services: TmService[], index: numbe
 }
 
 export function mapPropertyVillas(property: TmProperty): VillaType[] {
+  const fallbackImages = property.imageList ?? [];
   const mapped = (property.roomList ?? []).map((room, index) =>
-    mapRoomToVilla(room, property.propertyServicesList ?? [], index),
+    mapRoomToVilla(room, property.propertyServicesList ?? [], index, fallbackImages),
   );
 
   const used = new Set<string>();

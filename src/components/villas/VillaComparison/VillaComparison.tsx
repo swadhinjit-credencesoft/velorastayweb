@@ -39,7 +39,7 @@ export default function VillaComparison({ villas }: VillaComparisonProps) {
       {
         label: "Bedrooms",
         icon: "lucide:bed",
-        values: villas.map((r) => `${r.bedrooms} BHK`),
+        values: villas.map((r) => `${r.beds} ${r.beds === 1 ? "Bed" : "Beds"}`),
       },
       {
         label: "Bathrooms",
@@ -107,7 +107,7 @@ export default function VillaComparison({ villas }: VillaComparisonProps) {
                         % OFF
                       </span>
                     )}
-                    <Link href={`/villas/${villa.slug}`} className={styles.bookBtn}>
+                    <Link href={`/rooms/${villa.slug}`} className={styles.bookBtn}>
                       Book
                     </Link>
                   </div>

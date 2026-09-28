@@ -49,9 +49,9 @@ export default function BookingForm() {
                   <input type="date" className="w-full border rounded-lg px-4 py-3" value={form.checkOut} onChange={(e) => setForm({ ...form, checkOut: e.target.value })} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Villa Type</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Room Type</label>
                   <select className="w-full border rounded-lg px-4 py-3" value={form.roomType} onChange={(e) => setForm({ ...form, roomType: e.target.value })}>
-                    <option value="">Select Villa</option>
+                    <option value="">Select Room</option>
                     {VILLAS.map((r) => (<option key={r.id} value={r.slug}>{r.name}</option>))}
                   </select>
                 </div>
@@ -102,7 +102,7 @@ export default function BookingForm() {
                 ))}
               </div>
               <div className="bg-gray-50 rounded-lg p-5 space-y-2">
-                <div className="flex justify-between text-sm"><span className="text-gray-500">Villa Type</span><span className="font-medium">{form.roomType || "Not selected"}</span></div>
+                <div className="flex justify-between text-sm"><span className="text-gray-500">Room Type</span><span className="font-medium">{form.roomType || "Not selected"}</span></div>
                 <div className="flex justify-between text-sm"><span className="text-gray-500">Dates</span><span className="font-medium">{form.checkIn || "—"} to {form.checkOut || "—"}</span></div>
                 <div className="flex justify-between text-sm"><span className="text-gray-500">Guests</span><span className="font-medium">{form.adults} Adults, {form.children} Children</span></div>
               </div>

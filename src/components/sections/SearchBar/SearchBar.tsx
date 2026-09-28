@@ -143,7 +143,7 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
       <div className={styles.field}>
         <label className={styles.label}>
           <Icon icon="lucide:bed-double" width={16} height={16} />
-          Villas
+          Rooms
         </label>
         <select
           className={styles.select}
@@ -153,7 +153,7 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
             dispatch(setRooms(1));
           }}
         >
-          <option value="">Select Villa</option>
+          <option value="">Select Room</option>
           {villaOptions.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}

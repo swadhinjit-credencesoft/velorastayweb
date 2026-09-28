@@ -9,34 +9,34 @@ export const NAV_GROUPS: NavGroup[] = [
   {
     id: "nav-villas",
     label: "Our Rooms",
-    href: "/villas",
+    href: "/rooms",
     children: [
       {
         id: "nav-villas-all",
         label: "All Rooms",
-        href: "/villas",
+        href: "/rooms",
         description: "Browse our complete room collection",
         icon: "lucide:layout-grid",
       },
       {
         id: "nav-villas-standard",
-        label: "Standard Room",
-        href: "/villas/standard-room",
-        description: "Best value for couples and solo travellers",
+        label: "Double Bed AC Room",
+        href: "/rooms/double-bed-ac-room",
+        description: "Air-conditioned double bed, sleeps three",
         icon: "lucide:bed",
       },
       {
         id: "nav-villas-deluxe",
-        label: "Deluxe Room",
-        href: "/villas/deluxe-room",
-        description: "More space for longer stays",
+        label: "Deluxe Temple Facing",
+        href: "/rooms/deluxe-double-bedded-temple-facing-room",
+        description: "Deluxe double bed with a temple view",
         icon: "lucide:bed-double",
       },
       {
         id: "nav-villas-multibed",
-        label: "Multi-Bed Room",
-        href: "/villas/multi-bed-room",
-        description: "Sleeps up to six, best for groups",
+        label: "Four Bed AC Room",
+        href: "/rooms/four-bed-ac-room",
+        description: "Four beds, sleeps up to five",
         icon: "lucide:users",
       },
     ],
@@ -143,7 +143,7 @@ export const NAV_GROUPS: NavGroup[] = [
 
 export const NAV_LINKS: NavLink[] = [
   { id: "nav-home", label: "Home", href: "/" },
-  { id: "nav-villas", label: "Our Rooms", href: "/villas" },
+  { id: "nav-villas", label: "Our Rooms", href: "/rooms" },
   { id: "nav-amenities", label: "Amenities", href: "/facilities" },
   { id: "nav-puri", label: "Puri Experience", href: "/nearby" },
   { id: "nav-gallery", label: "Gallery", href: "/gallery" },
@@ -162,7 +162,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     title: "Rooms",
     links: [
       { id: "footer-about", label: "About Us", href: "/about" },
-      { id: "footer-villas", label: "Our Rooms", href: "/villas" },
+      { id: "footer-villas", label: "Our Rooms", href: "/rooms" },
       { id: "footer-amenities", label: "Amenities", href: "/facilities" },
       { id: "footer-dining", label: "Food Menu & Packages", href: "/food-menu" },
       { id: "footer-gallery", label: "Gallery", href: "/gallery" },
@@ -173,9 +173,9 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     id: "footer-villa-config",
     title: "Room Types",
     links: [
-      { id: "footer-standard", label: "Standard Room", href: "/villas/standard-room" },
-      { id: "footer-deluxe", label: "Deluxe Room", href: "/villas/deluxe-room" },
-      { id: "footer-multibed", label: "Multi-Bed Room", href: "/villas/multi-bed-room" },
+      { id: "footer-standard", label: "Double Bed AC Room", href: "/rooms/double-bed-ac-room" },
+      { id: "footer-deluxe", label: "Deluxe Temple Facing", href: "/rooms/deluxe-double-bedded-temple-facing-room" },
+      { id: "footer-multibed", label: "Four Bed AC Room", href: "/rooms/four-bed-ac-room" },
     ],
   },
   {

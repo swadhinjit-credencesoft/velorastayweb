@@ -6,39 +6,39 @@ import { VILLA_AMENITIES } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
 import { BOOKING_ENGINE_URL } from "@/lib/api/thehotelmate";
 import type { VillaAmenity, VillaType } from "@/types";
-import styles from "./villa-detail.module.scss";
+import styles from "./room-detail.module.scss";
 
-interface VillaDetailClientProps {
+interface RoomDetailClientProps {
   slug: string;
-  fallbackVilla: VillaType;
+  fallbackRoom: VillaType;
 }
 
 function getAmenityById(id: string): VillaAmenity | undefined {
   return VILLA_AMENITIES.find((a) => a.id === id);
 }
 
-export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailClientProps) {
-  const { villa: liveVilla, error } = useVillaBySlug(slug);
-  const villa = !error && liveVilla ? liveVilla : fallbackVilla;
+export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClientProps) {
+  const { villa: liveRoom, error } = useVillaBySlug(slug);
+  const room = !error && liveRoom ? liveRoom : fallbackRoom;
 
-  const amenities = villa.amenities.map(getAmenityById).filter(Boolean) as VillaAmenity[];
+  const amenities = room.amenities.map(getAmenityById).filter(Boolean) as VillaAmenity[];
 
   return (
     <section className={styles.page}>
       <div>
-        {villa.images.length > 0 && (
+        {room.images.length > 0 && (
           <div className={styles.gallery}>
             <Image
-              src={villa.images[0].src}
-              alt={villa.images[0].alt}
+              src={room.images[0].src}
+              alt={room.images[0].alt}
               width={1200}
               height={600}
               className={styles.galleryMain}
               priority
             />
-            {villa.images.length > 1 && (
+            {room.images.length > 1 && (
               <div className={styles.galleryGrid}>
-                {villa.images.slice(1).map((img) => (
+                {room.images.slice(1).map((img) => (
                   <Image
                     key={img.id}
                     src={img.src}
@@ -55,33 +55,33 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
 
         <div className={styles.contentGrid}>
           <div className={styles.main}>
-            <div>{villa.tag && <span className={styles.tag}>{villa.tag}</span>}</div>
-            <h1 className={styles.title}>{villa.name}</h1>
-            <p className={styles.tagline}>{villa.tagline}</p>
+            <div>{room.tag && <span className={styles.tag}>{room.tag}</span>}</div>
+            <h1 className={styles.title}>{room.name}</h1>
+            <p className={styles.tagline}>{room.tagline}</p>
 
             <div className={styles.quickStats}>
               <div className={styles.stat}>
-                <span className={styles.statLabel}>Bedrooms</span>
-                <strong>{villa.bedrooms}</strong>
+                <span className={styles.statLabel}>Beds</span>
+                <strong>{room.beds}</strong>
               </div>
               <div className={styles.stat}>
                 <span className={styles.statLabel}>Bathrooms</span>
-                <strong>{villa.bathrooms}</strong>
+                <strong>{room.bathrooms}</strong>
               </div>
               <div className={styles.stat}>
                 <span className={styles.statLabel}>Guests</span>
-                <strong>Up to {villa.maxOccupancy}</strong>
+                <strong>Up to {room.maxOccupancy}</strong>
               </div>
             </div>
 
-            <h2 className={styles.sectionTitle}>About This Villa</h2>
-            <p className={styles.bodyText}>{villa.longDescription || villa.description}</p>
+            <h2 className={styles.sectionTitle}>About This Room</h2>
+            <p className={styles.bodyText}>{room.longDescription || room.description}</p>
 
-            {villa.highlights && villa.highlights.length > 0 && (
+            {room.highlights && room.highlights.length > 0 && (
               <>
                 <h3 className={styles.sectionTitleSm}>Highlights</h3>
                 <ul className={styles.highlightsList}>
-                  {villa.highlights.map((h, i) => <li key={i}>{h}</li>)}
+                  {room.highlights.map((h, i) => <li key={i}>{h}</li>)}
                 </ul>
               </>
             )}
@@ -95,10 +95,10 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
               ))}
             </div>
 
-            {villa.policies && villa.policies.length > 0 && (
+            {room.policies && room.policies.length > 0 && (
               <>
                 <h2 className={styles.sectionTitle}>Policies</h2>
-                {villa.policies.map((policy) => (
+                {room.policies.map((policy) => (
                   <div key={policy.id} className={styles.policyItem}>
                     <h4 className={styles.policyTitle}>{policy.title}</h4>
                     <p className={styles.policyText}>{policy.description}</p>
@@ -107,11 +107,11 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
               </>
             )}
 
-            {villa.nearby && villa.nearby.length > 0 && (
+            {room.nearby && room.nearby.length > 0 && (
               <>
                 <h2 className={styles.sectionTitle}>Nearby</h2>
                 <ul className={styles.nearbyList}>
-                  {villa.nearby.map((item, i) => <li key={i}>{item}</li>)}
+                  {room.nearby.map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
               </>
             )}
@@ -121,18 +121,16 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
             <div className={styles.bookingCard}>
               <div className={styles.priceRow}>
                 <span className={styles.price}>
-                  {villa.currency}{villa.price.toLocaleString("en-IN")}
+                  {room.currency}{room.price.toLocaleString("en-IN")}
                 </span>
-                {villa.originalPrice && (
+                {room.originalPrice && (
                   <span className={styles.originalPrice}>
-                    {villa.currency}{villa.originalPrice.toLocaleString("en-IN")}
+                    {room.currency}{room.originalPrice.toLocaleString("en-IN")}
                   </span>
                 )}
               </div>
-              <p className={styles.priceUnit}>per {villa.priceUnit}</p>
-              {slug !== "2-bhk-villa" && (
-                <a href={BOOKING_ENGINE_URL} className={styles.bookBtn}>Book Now</a>
-              )}
+              <p className={styles.priceUnit}>per {room.priceUnit}</p>
+              <a href={BOOKING_ENGINE_URL} className={styles.bookBtn}>Book Now</a>
               <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
               <div className={styles.bookingDetails}>
                 <div className={styles.bookingDetailRow}>
@@ -145,7 +143,7 @@ export default function VillaDetailClient({ slug, fallbackVilla }: VillaDetailCl
                 </div>
                 <div className={styles.bookingDetailRow}>
                   <span>Free Cancellation</span>
-                  <strong>Up to 15 days</strong>
+                  <strong>Up to 7 days</strong>
                 </div>
               </div>
             </div>

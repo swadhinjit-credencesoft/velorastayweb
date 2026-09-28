@@ -33,7 +33,7 @@ export default function HomePage() {
         description="A budget hotel fifty metres from the West Gate of the Jagannath Temple in Puri. Clean air-conditioned rooms, attached bathrooms, 24-hour hot water, and a front desk open from 7 AM to 11 PM."
         buttons={[
           { label: "Book Now", href: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true", variant: "primary" },
-          { label: "View Rooms", href: "/villas", variant: "outline" },
+          { label: "View Rooms", href: "/rooms", variant: "outline" },
         ]}
       />
     </>

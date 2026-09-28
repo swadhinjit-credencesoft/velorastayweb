@@ -20,7 +20,7 @@ export default function VillaCard({ villa }: VillaCardProps) {
     : 0;
 
   return (
-    <Link href={`/villas/${villa.slug}`} className={styles.card}>
+    <Link href={`/rooms/${villa.slug}`} className={styles.card}>
       <div className={styles.imageWrap}>
         <Image
           src={villa.images[0]?.src ?? ""}
@@ -60,7 +60,7 @@ export default function VillaCard({ villa }: VillaCardProps) {
           )}
           <span className={styles.metaItem}>
             <Icon icon="lucide:bed" width={14} height={14} />
-            {villa.bedrooms} BHK
+            {villa.beds} {villa.beds === 1 ? "Bed" : "Beds"}
           </span>
         </div>
 

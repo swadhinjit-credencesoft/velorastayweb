@@ -37,7 +37,7 @@ export default function NotFound() {
           <Button
             variant="outline"
             size="lg"
-            href="/villas"
+            href="/rooms"
             icon="lucide:home"
             iconPosition="left"
             className={styles.outlineOnDark}

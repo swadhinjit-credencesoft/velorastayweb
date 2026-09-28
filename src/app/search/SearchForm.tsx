@@ -45,7 +45,7 @@ export default function SearchForm() {
                   <h2 className="text-xl font-bold text-gray-900 mb-4">Villas ({villaResults.length})</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {villaResults.map((r) => (
-                      <Link key={r.id} href={`/villas/${r.slug}`} className="bg-white rounded-lg p-4 shadow-sm hover:shadow transition-shadow flex gap-4">
+                      <Link key={r.id} href={`/rooms/${r.slug}`} className="bg-white rounded-lg p-4 shadow-sm hover:shadow transition-shadow flex gap-4">
                         <div className="relative w-20 h-20 rounded overflow-hidden flex-shrink-0">
                            <Image src={r.images?.[0]?.src || "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800"} alt={r.name} fill className="object-cover" sizes="80px" />
                         </div>

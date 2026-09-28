@@ -170,6 +170,7 @@ export interface VillaType {
   priceUnit: string;
   bedrooms: number;
   bathrooms: number;
+  beds: number;
   maxOccupancy: number;
   bedConfig?: string;
   view?: string;

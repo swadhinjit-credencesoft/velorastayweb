@@ -25,7 +25,7 @@ const staticPages: {
   changeFrequency: ChangeFrequency;
 }[] = [
   { path: "", priority: 1.0, changeFrequency: "daily" },
-  { path: "/villas", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/rooms", priority: 0.9, changeFrequency: "weekly" },
   { path: "/facilities", priority: 0.8, changeFrequency: "weekly" },
   { path: "/nearby", priority: 0.8, changeFrequency: "weekly" },
   { path: "/gallery", priority: 0.6, changeFrequency: "weekly" },
@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const villaEntries = VILLAS.map((villa) =>
-    entry(`/villas/${villa.slug}`, 0.9, "weekly")
+    entry(`/rooms/${villa.slug}`, 0.9, "weekly")
   );
 
   const facilityEntries = FACILITIES.map((facility) =>

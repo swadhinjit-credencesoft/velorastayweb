@@ -44,7 +44,7 @@ export default function FeaturedVillas() {
                     </span>
                     <span className={styles.metaItem}>
                       <Icon icon="lucide:bed" width={14} height={14} />
-                      {villa.bedrooms} BHK
+                      {villa.beds} {villa.beds === 1 ? "Bed" : "Beds"}
                     </span>
                   </div>
                   <div className={styles.roomFooter}>
@@ -54,7 +54,7 @@ export default function FeaturedVillas() {
                       currency={villa.currency}
                       unit={villa.priceUnit}
                     />
-                    <Button variant="outline" size="sm" href={`/villas/${villa.slug}`}>
+                    <Button variant="outline" size="sm" href={`/rooms/${villa.slug}`}>
                       View Details
                     </Button>
                   </div>
@@ -65,8 +65,8 @@ export default function FeaturedVillas() {
         </div>
 
         <div className={styles.cta}>
-          <Button variant="secondary" size="lg" href="/villas" icon="lucide:arrow-right" iconPosition="right">
-            View All Villas
+          <Button variant="secondary" size="lg" href="/rooms" icon="lucide:arrow-right" iconPosition="right">
+            View All Rooms
           </Button>
         </div>
       </div>

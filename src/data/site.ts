@@ -88,7 +88,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: "Your Base for Puri Darshan",
     subtitle:
       "Hot water, free WiFi and a front desk open 7 AM to 11 PM, all within 50 to 280 metres of the temple complex.",
-    cta: { label: "Explore Rooms", href: "/villas" },
+    cta: { label: "Explore Rooms", href: "/rooms" },
   },
   {
     id: "hero-slide-3",
@@ -202,7 +202,7 @@ export const GOOGLE_MAPS_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!
 
 export const NAV_LINKS: NavLink[] = [
   { id: "nav-home", label: "Home", href: "/" },
-  { id: "nav-villas", label: "Our Rooms", href: "/villas" },
+  { id: "nav-villas", label: "Our Rooms", href: "/rooms" },
   { id: "nav-amenities", label: "Amenities", href: "/facilities" },
   { id: "nav-puri", label: "Puri Experience", href: "/nearby" },
   { id: "nav-gallery", label: "Gallery", href: "/gallery" },

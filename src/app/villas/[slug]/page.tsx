@@ -1,68 +1,29 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { VILLAS, getVillaBySlug } from "@/data/villas";
-import { SITE_INFO } from "@/data/site";
-import { generateVillaSchema, generateBreadcrumbSchema } from "@/utils/schema";
-import { generateCanonicalUrl } from "@/utils/seo";
-import VillaDetailClient from "./VillaDetailClient";
+import { redirect } from "next/navigation";
+import { VILLAS } from "@/data/villas";
 
-interface VillaPageProps {
-  params: { slug: string };
-}
+const LEGACY_SLUG_REDIRECTS: Record<string, string> = {
+  "standard-room": "double-bed-ac-room",
+  "deluxe-room": "deluxe-double-bedded-temple-facing-room",
+  "multi-bed-room": "four-bed-ac-room",
+};
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return VILLAS.map((villa) => ({ slug: villa.slug }));
+  const legacy = Object.keys(LEGACY_SLUG_REDIRECTS);
+  const current = VILLAS.map((room) => room.slug);
+  return [...new Set([...legacy, ...current])].map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: VillaPageProps): Promise<Metadata> {
-  const villa = getVillaBySlug(params.slug);
-  if (!villa) return { title: "Villa Not Found" };
-  return {
-    title: `${villa.name} | Book at ${SITE_INFO.name}`,
-    description: `${villa.name} starting from ₹${villa.price}/night. ${villa.description.substring(0, 150)}. Book now for the best rates.`,
-    alternates: { canonical: `/villas/${villa.slug}` },
-    openGraph: {
-      title: `${villa.name} | ${SITE_INFO.name}`,
-      description: villa.description.substring(0, 200),
-      url: generateCanonicalUrl(`/villas/${villa.slug}`),
-      images: [{ url: villa.images[0]?.src, width: 800, height: 600, alt: villa.name }],
-    },
-  };
-}
+export const metadata = {
+  robots: { index: false, follow: true },
+};
 
-export default function VillaDetailPage({ params }: VillaPageProps) {
-  const villa = getVillaBySlug(params.slug);
-  if (!villa) notFound();
-
-  return (
-    <>
-      <JsonLd
-        schema={generateVillaSchema({
-          name: villa.name,
-          description: villa.description,
-          price: villa.price,
-          currency: villa.currency === "₹" ? "INR" : villa.currency,
-          image: villa.images[0]?.src || "",
-          capacity: villa.maxOccupancy,
-        })}
-      />
-      <JsonLd
-        schema={generateBreadcrumbSchema([
-          { name: "Home", url: SITE_INFO.url },
-          { name: "The Villa", url: `${SITE_INFO.url}/villas` },
-          { name: villa.name, url: `${SITE_INFO.url}/villas/${villa.slug}` },
-        ])}
-      />
-      <Breadcrumb
-        items={[
-          { label: "The Villa", href: "/villas" },
-          { label: villa.name, href: `/villas/${villa.slug}` },
-        ]}
-      />
-
-      <VillaDetailClient slug={params.slug} fallbackVilla={villa} />
-    </>
-  );
+export default function LegacyVillaDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const target = LEGACY_SLUG_REDIRECTS[params.slug] ?? params.slug;
+  redirect(`/rooms/${target}`);
 }

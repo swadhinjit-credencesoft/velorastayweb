@@ -16,10 +16,25 @@ RewriteCond %{HTTP_HOST} ^www\.bishnubhaban\.com$ [NC]
 RewriteRule ^(.*)$ https://bishnubhaban.com/$1 [R=301,L]
 
 ############################################
-# REDIRECT LEGACY VILLA URLS TO THE ROOMS LISTING
+# REDIRECT LEGACY /villas URLS TO /rooms
 ############################################
 
-RewriteRule ^villas/(velora-)?[0-9]+-?\(?-?(bhk|villa).* /villas [R=301,L]
+# The rooms section is now served from /rooms. Keep every old link working.
+
+# Retired Velora-era villa slugs, e.g.
+# /villas/2-bhk-villa, /villas/5-bhk-grand-villa, /villas/velora-4-bhk-villa
+RewriteRule ^villas/(?:velora-)?[0-9]+-bhk-(?:grand-)?villa/?$ /rooms [R=301,L]
+
+# Old invented room slugs, mapped to the closest current room
+RewriteRule ^villas/standard-room/?$ /rooms/double-bed-ac-room [R=301,L]
+RewriteRule ^villas/deluxe-room/?$ /rooms/deluxe-double-bedded-temple-facing-room [R=301,L]
+RewriteRule ^villas/multi-bed-room/?$ /rooms/four-bed-ac-room [R=301,L]
+
+# The listing itself
+RewriteRule ^villas/?$ /rooms [R=301,L]
+
+# Any remaining /villas/<slug> keeps its slug under /rooms
+RewriteRule ^villas/([^/]+)/?$ /rooms/$1 [R=301,L]
 
 ############################################
 # REMOVE index.html
