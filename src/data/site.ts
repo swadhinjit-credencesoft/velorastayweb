@@ -52,8 +52,8 @@ export const SITE_ASSETS = {
     "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070",
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
   ] as const,
-  logo: "/bishnubhaban-logo.svg",
-  logoLight: "/bishnubhaban-logo.svg",
+  logo: "/bishnu-bhaban-logo.png",
+  logoLight: "/bishnu-bhaban-logo.png",
   favicon: "/favicon.ico",
   aboutImage:
     "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600",
