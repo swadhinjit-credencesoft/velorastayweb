@@ -1,0 +1,287 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 32px;
+  background: transparent;
+  transition: all $duration-standard ease;
+
+  &.scrolled {
+    padding: 16px 32px;
+    background: rgba(25, 53, 45, 0.94);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(181, 150, 90, 0.2);
+  }
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.brandTitle {
+  font-family: $font-jamindar;
+  font-size: 1.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: $jamindar-ivory;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brandSubtitle {
+  font-family: $font-body;
+  font-size: 0.625rem;
+  letter-spacing: 0.26em;
+  color: $jamindar-gold;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.desktopNav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 231, 0.85);
+  text-decoration: none;
+  position: relative;
+  padding: 8px 0;
+  transition: color $duration-fast ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $jamindar-gold;
+    transition: width $duration-standard ease;
+  }
+
+  &:hover {
+    color: $jamindar-gold;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: $jamindar-gold;
+  color: $jamindar-charcoal;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: $radius-sm;
+  text-decoration: none;
+  transition: all $duration-standard ease;
+  box-shadow: 0 4px 16px rgba(181, 150, 90, 0.25);
+
+  &:hover {
+    background-color: lighten($jamindar-gold, 8%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(181, 150, 90, 0.35);
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: $jamindar-ivory;
+  border-radius: 2px;
+  transition: all $duration-fast ease;
+}
+
+// Mobile Drawer
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 360px;
+  height: 100vh;
+  background: $jamindar-forest;
+  z-index: 1000;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
+  border-left: 1px solid rgba(181, 150, 90, 0.3);
+
+  &.mobileOpen {
+    right: 0;
+  }
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: $jamindar-ivory;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover {
+    color: $jamindar-gold;
+  }
+}
+
+.drawerNav {
+  margin: auto 0;
+}
+
+.drawerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawerLink {
+  font-family: $font-jamindar;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $jamindar-ivory;
+  text-decoration: none;
+  transition: color $duration-fast ease;
+
+  &:hover {
+    color: $jamindar-gold;
+  }
+}
+
+.drawerFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245, 240, 231, 0.15);
+}
+
+.drawerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  color: rgba(245, 240, 231, 0.8);
+  margin: 0;
+  text-decoration: none;
+
+  svg {
+    color: $jamindar-gold;
+  }
+}
+
+.drawerCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background-color: $jamindar-gold;
+  color: $jamindar-charcoal;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: $radius-sm;
+  text-decoration: none;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+@media (max-width: $bp-lg) {
+  .desktopNav,
+  .actions .ctaButton {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header {
+    padding: 18px 20px;
+  }
+}

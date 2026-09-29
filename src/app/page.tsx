@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero/Hero";
 import SearchBar from "@/components/sections/SearchBar/SearchBar";
 import FeaturedVillas from "@/components/sections/FeaturedVillas/FeaturedVillas";
+import JamindarPromo from "@/components/jamindar/JamindarPromo/JamindarPromo";
 import WhyChooseUs from "@/components/sections/WhyChooseUs/WhyChooseUs";
 import Testimonials from "@/components/sections/Testimonials/Testimonials";
 import Gallery from "@/components/sections/Gallery/Gallery";
@@ -20,6 +21,7 @@ export default function HomePage() {
         <SearchBar />
       </Hero>
       <FeaturedVillas />
+      <JamindarPromo />
       <WhyChooseUs />
       <Testimonials />
       <Gallery />

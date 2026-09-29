@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter, Oswald, Cormorant_Garamond } from "next/font/google";
 import ReduxProvider from "@/providers/ReduxProvider";
 import Header from "@/components/layout/Header/Header";
 import MobileNav from "@/components/layout/MobileNav/MobileNav";
@@ -21,6 +21,13 @@ const oswald = Oswald({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-oswald",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -88,7 +95,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
+    <html lang="en" className={`${inter.variable} ${oswald.variable} ${cormorant.variable}`}>
       <body className="antialiased">
         <GoogleTagManager />
         <ReduxProvider>

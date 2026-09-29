@@ -1,0 +1,189 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.horizonSection {
+  position: relative;
+  background-color: $jamindar-charcoal;
+  color: $jamindar-ivory;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.imageSlide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: scale(1.04);
+  pointer-events: none;
+
+  &.activeSlide {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 53, 45, 0.5) 0%,
+    rgba(36, 34, 30, 0.65) 50%,
+    rgba(25, 53, 45, 0.85) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.topInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 8px;
+}
+
+.mainTitle {
+  font-family: $font-jamindar;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $jamindar-ivory;
+  margin: 0;
+}
+
+.centerDrama {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sceneIndex {
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 12px;
+}
+
+.heroKeyword {
+  font-family: $font-jamindar;
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $jamindar-ivory;
+  margin: 0 0 16px;
+  line-height: 1;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.sceneCaption {
+  font-family: $font-body;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  max-width: 580px;
+  color: rgba(245, 240, 231, 0.88);
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: rgba(245, 240, 231, 0.5);
+  transition: all $duration-standard ease;
+
+  &:hover,
+  &.activeDot {
+    color: $jamindar-gold;
+
+    .dotBar {
+      background-color: $jamindar-gold;
+      width: 32px;
+    }
+  }
+}
+
+.dotBar {
+  width: 16px;
+  height: 2px;
+  background-color: rgba(245, 240, 231, 0.35);
+  transition: all $duration-standard ease;
+}
+
+.dotLabel {
+  font-family: $font-body;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+}
+
+@media (max-width: $bp-sm) {
+  .stage {
+    min-height: 520px;
+  }
+
+  .content {
+    padding: 60px 20px 32px;
+  }
+
+  .pagination {
+    gap: 12px;
+  }
+}

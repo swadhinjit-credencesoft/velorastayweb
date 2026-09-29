@@ -1,26 +1,17 @@
-"use client";
+import styles from "./JamindarWhatsAppButton.module.scss";
 
-import { usePathname } from "next/navigation";
-import { WHATSAPP_LINK } from "@/data/site";
-import JamindarWhatsAppButton from "@/components/jamindar/JamindarWhatsAppButton/JamindarWhatsAppButton";
-import styles from "./WhatsAppButton.module.scss";
-
-export default function WhatsAppButton() {
-  const pathname = usePathname();
-
-  if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
-    return <JamindarWhatsAppButton />;
-  }
+export default function JamindarWhatsAppButton() {
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=918337985913&text=Hello%20Jamindar%20Nest,%20I%20would%20like%20to%20inquire%20about%20a%20stay.`;
 
   return (
     <a
-      href={WHATSAPP_LINK}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className={styles.wrapper}
-      aria-label="Book via WhatsApp"
+      aria-label="Inquire with Jamindar Nest on WhatsApp"
     >
-      <span className={styles.tooltip}>Book via WhatsApp</span>
+      <span className={styles.tooltip}>Jamindar Concierge</span>
       <span className={styles.pulseRing} />
       <span className={styles.button}>
         <svg

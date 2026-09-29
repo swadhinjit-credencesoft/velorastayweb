@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon/Icon";
 import {
   FOOTER_GROUPS,
@@ -9,9 +10,15 @@ import {
   FOOTER_CONTACT,
 } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
+import JamindarFooter from "@/components/jamindar/JamindarFooter/JamindarFooter";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
+    return <JamindarFooter />;
+  }
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.top}>

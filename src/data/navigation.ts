@@ -98,6 +98,48 @@ export const NAV_GROUPS: NavGroup[] = [
     ],
   },
   {
+    id: "nav-jamindar",
+    label: "Jamindar Nest",
+    href: "/jamindar-nest",
+    children: [
+      {
+        id: "nav-jn-explore",
+        label: "Explore Jamindar Nest",
+        href: "/jamindar-nest",
+        description: "A new chapter of boutique heritage hospitality",
+        icon: "lucide:sparkles",
+      },
+      {
+        id: "nav-jn-rooms",
+        label: "Signature Nest Room",
+        href: "/jamindar-nest#rooms",
+        description: "Refined heritage comfort with contemporary hospitality",
+        icon: "lucide:bed-double",
+      },
+      {
+        id: "nav-jn-journey",
+        label: "The Jamindar Journey",
+        href: "/jamindar-nest#journey",
+        description: "Slow, authentic heritage rhythm in Puri",
+        icon: "lucide:compass",
+      },
+      {
+        id: "nav-jn-horizon",
+        label: "Jamindar Horizon",
+        href: "/jamindar-nest#horizon",
+        description: "Cinematic visual journey beyond the stay",
+        icon: "lucide:film",
+      },
+      {
+        id: "nav-jn-book",
+        label: "Book Jamindar Nest",
+        href: "https://bookone.io/Jamindar-Nest?bookingEngine=true",
+        description: "Direct reservation engine for best rates",
+        icon: "lucide:calendar-check",
+      },
+    ],
+  },
+  {
     id: "nav-amenities",
     label: "Amenities",
     href: "/facilities",
@@ -186,6 +228,7 @@ export const NAV_GROUPS: NavGroup[] = [
 export const NAV_LINKS: NavLink[] = [
   { id: "nav-home", label: "Home", href: "/" },
   { id: "nav-villas", label: "Our Rooms", href: "/rooms" },
+  { id: "nav-jamindar", label: "Jamindar Nest", href: "/jamindar-nest" },
   { id: "nav-amenities", label: "Amenities", href: "/facilities" },
   { id: "nav-puri", label: "Puri Experience", href: "/nearby" },
   { id: "nav-gallery", label: "Gallery", href: "/gallery" },
@@ -201,10 +244,11 @@ export const NAV_CTA = {
 export const FOOTER_GROUPS: FooterGroup[] = [
   {
     id: "footer-villa",
-    title: "Rooms",
+    title: "Rooms & Stays",
     links: [
       { id: "footer-about", label: "About Us", href: "/about" },
       { id: "footer-villas", label: "Our Rooms", href: "/rooms" },
+      { id: "footer-jamindar", label: "Jamindar Nest", href: "/jamindar-nest" },
       { id: "footer-amenities", label: "Amenities", href: "/facilities" },
       { id: "footer-gallery", label: "Gallery", href: "/gallery" },
       { id: "footer-reviews", label: "Guest Reviews", href: "/reviews" },

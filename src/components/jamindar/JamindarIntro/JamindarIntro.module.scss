@@ -1,0 +1,176 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.section {
+  position: relative;
+  background-color: $jamindar-ivory;
+  color: $jamindar-charcoal;
+  padding: 120px 24px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.imageColumn {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(36, 34, 30, 0.12);
+  border: 1px solid rgba(181, 150, 90, 0.25);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.imageBadge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(25, 53, 45, 0.88);
+  backdrop-filter: blur(8px);
+  color: $jamindar-gold;
+  padding: 10px 18px;
+  border-radius: $radius-full;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid rgba(181, 150, 90, 0.3);
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepNumber {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-family: $font-jamindar;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $jamindar-forest;
+  margin: 0 0 28px;
+}
+
+.quote {
+  font-family: $font-jamindar;
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: $jamindar-heritage-green;
+  margin: 0 0 24px;
+  padding-left: 20px;
+  border-left: 2px solid $jamindar-gold;
+}
+
+.body {
+  font-family: $font-body;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: lighten($jamindar-charcoal, 15%);
+  margin-bottom: 36px;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(36, 34, 30, 0.1);
+}
+
+.highlightItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.highlightIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-sm;
+  background-color: rgba(181, 150, 90, 0.14);
+  color: $jamindar-forest;
+  flex-shrink: 0;
+}
+
+.highlightTitle {
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: $jamindar-forest;
+  margin: 0 0 4px;
+}
+
+.highlightDesc {
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(36, 34, 30, 0.7);
+  margin: 0;
+}
+
+@media (max-width: $bp-lg) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -24,6 +24,7 @@ const staticPages: {
   changeFrequency: ChangeFrequency;
 }[] = [
   { path: "", priority: 1.0, changeFrequency: "daily" },
+  { path: "/jamindar-nest", priority: 0.9, changeFrequency: "weekly" },
   { path: "/rooms", priority: 0.9, changeFrequency: "weekly" },
   { path: "/facilities", priority: 0.8, changeFrequency: "weekly" },
   { path: "/nearby", priority: 0.8, changeFrequency: "weekly" },

@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
@@ -12,6 +13,7 @@ import type { NavGroup } from "@/types";
 import styles from "./MobileNav.module.scss";
 
 export default function MobileNav() {
+  const pathname = usePathname();
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
@@ -39,6 +41,11 @@ export default function MobileNav() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, close]);
+
+  // Suppress Bishnu Bhaban mobile nav on Jamindar Nest route
+  if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
+    return null;
+  }
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroup((prev) => (prev === groupId ? null : groupId));

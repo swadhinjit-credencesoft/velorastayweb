@@ -1,0 +1,193 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.footer {
+  background-color: $jamindar-charcoal;
+  color: $jamindar-ivory;
+  position: relative;
+  border-top: 1px solid rgba(181, 150, 90, 0.25);
+}
+
+.top {
+  padding: 80px 24px 60px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 56px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.brandTitle {
+  font-family: $font-jamindar;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: $jamindar-ivory;
+  text-transform: uppercase;
+}
+
+.brandSubtitle {
+  font-family: $font-body;
+  font-size: 0.625rem;
+  letter-spacing: 0.26em;
+  color: $jamindar-gold;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.tagline {
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(245, 240, 231, 0.75);
+  margin: 0 0 28px;
+  max-width: 380px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-body;
+  font-size: 0.875rem;
+  color: rgba(245, 240, 231, 0.85);
+  text-decoration: none;
+  transition: color $duration-fast ease;
+
+  svg {
+    color: $jamindar-gold;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    color: $jamindar-gold;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin: 0 0 24px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li a {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    color: rgba(245, 240, 231, 0.75);
+    text-decoration: none;
+    transition: color $duration-fast ease;
+
+    &:hover {
+      color: $jamindar-gold;
+    }
+  }
+}
+
+.policyText {
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(245, 240, 231, 0.55);
+}
+
+.bottom {
+  padding: 24px;
+  border-top: 1px solid rgba(245, 240, 231, 0.1);
+}
+
+.bottomInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  color: rgba(245, 240, 231, 0.55);
+}
+
+.copyright,
+.credits {
+  margin: 0;
+
+  a {
+    color: $jamindar-gold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: $bp-lg) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .brandCol {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .top {
+    padding: 60px 20px 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .brandCol {
+    grid-column: span 1;
+  }
+
+  .bottomInner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

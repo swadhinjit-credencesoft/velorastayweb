@@ -1,0 +1,320 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.section {
+  position: relative;
+  background-color: #f0eae1;
+  color: $jamindar-charcoal;
+  padding: 120px 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-family: $font-jamindar;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $jamindar-forest;
+  margin: 0 0 16px;
+}
+
+.subtitle {
+  font-family: $font-body;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: lighten($jamindar-charcoal, 20%);
+  margin: 0;
+}
+
+.roomCard {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  background-color: $color-surface;
+  border-radius: $radius-lg;
+  padding: 44px;
+  box-shadow: 0 16px 48px rgba(36, 34, 30, 0.08);
+  border: 1px solid rgba(181, 150, 90, 0.25);
+  align-items: center;
+}
+
+.mediaColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(36, 34, 30, 0.1);
+}
+
+.mainImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.priceBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(25, 53, 45, 0.92);
+  backdrop-filter: blur(8px);
+  color: $jamindar-ivory;
+  padding: 8px 16px;
+  border-radius: $radius-sm;
+  font-family: $font-body;
+  border: 1px solid rgba(181, 150, 90, 0.35);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.currency {
+  font-size: 0.875rem;
+  color: $jamindar-gold;
+}
+
+.priceNum {
+  font-family: $font-jamindar;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $jamindar-gold;
+}
+
+.unit {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 12px;
+}
+
+.thumbBtn {
+  position: relative;
+  width: 80px;
+  height: 60px;
+  border-radius: $radius-sm;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: all $duration-fast ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.activeThumb {
+  border-color: $jamindar-gold;
+  box-shadow: 0 0 0 1px $jamindar-gold;
+}
+
+.thumbImage {
+  object-fit: cover;
+}
+
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleArea {
+  margin-bottom: 20px;
+}
+
+.roomBadge {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 8px;
+}
+
+.roomName {
+  font-family: $font-jamindar;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $jamindar-forest;
+  margin: 0 0 8px;
+}
+
+.tagline {
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  color: $jamindar-heritage-green;
+  font-style: italic;
+  margin: 0;
+}
+
+.description {
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: lighten($jamindar-charcoal, 15%);
+  margin: 0 0 24px;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(36, 34, 30, 0.08);
+  border-bottom: 1px solid rgba(36, 34, 30, 0.08);
+  margin-bottom: 24px;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-body;
+  font-size: 0.875rem;
+  color: $jamindar-forest;
+  font-weight: 500;
+
+  svg {
+    color: $jamindar-gold;
+    flex-shrink: 0;
+  }
+}
+
+.amenitiesArea {
+  margin-bottom: 32px;
+}
+
+.amenitiesTitle {
+  font-family: $font-body;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $jamindar-forest;
+  margin: 0 0 14px;
+}
+
+.amenitiesList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  color: lighten($jamindar-charcoal, 10%);
+}
+
+.checkIcon {
+  color: $jamindar-heritage-green;
+  flex-shrink: 0;
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bookButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background-color: $jamindar-forest;
+  color: $jamindar-ivory;
+  font-family: $font-body;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: $radius-sm;
+  text-decoration: none;
+  transition: all $duration-standard ease;
+  box-shadow: 0 6px 20px rgba(25, 53, 45, 0.2);
+
+  &:hover {
+    background-color: lighten($jamindar-forest, 8%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(25, 53, 45, 0.3);
+  }
+}
+
+.directGuarantee {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  color: lighten($jamindar-charcoal, 25%);
+  justify-content: center;
+
+  svg {
+    color: $jamindar-gold;
+  }
+}
+
+@media (max-width: $bp-lg) {
+  .roomCard {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 36px;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .specsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .amenitiesList {
+    grid-template-columns: 1fr;
+  }
+}

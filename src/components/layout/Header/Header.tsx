@@ -14,12 +14,13 @@ import {
   setMobileNavOpen,
 } from "@/store/slices/uiSlice";
 import type { NavGroup } from "@/types";
+import JamindarHeader from "@/components/jamindar/JamindarHeader/JamindarHeader";
 import styles from "./Header.module.scss";
 
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const { isScrolled, scrollY } = useScrollPosition();
+  const { isScrolled } = useScrollPosition();
   const dispatch = useAppDispatch();
   const megaMenuOpen = useAppSelector((s) => s.ui.isMegaMenuOpen);
   const isMobileNavOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
@@ -42,6 +43,11 @@ export default function Header() {
   const closeMega = useCallback(() => {
     dispatch(setMegaMenuOpen(null));
   }, [dispatch]);
+
+  // Render Jamindar-specific header when on the Jamindar Nest route
+  if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
+    return <JamindarHeader />;
+  }
 
   const headerClass = [
     styles.header,

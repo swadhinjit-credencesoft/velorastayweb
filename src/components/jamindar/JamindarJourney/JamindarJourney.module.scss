@@ -1,0 +1,175 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.journeySection {
+  position: relative;
+  background-color: $jamindar-ivory;
+  color: $jamindar-charcoal;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.stickyHeader {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 24px;
+}
+
+.headerInner {
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-family: $font-jamindar;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $jamindar-forest;
+  margin: 0 0 14px;
+}
+
+.subheading {
+  font-family: $font-body;
+  font-size: 1rem;
+  color: lighten($jamindar-charcoal, 20%);
+  margin: 0;
+  max-width: 520px;
+}
+
+.trackContainer {
+  width: 100%;
+  overflow: visible;
+}
+
+.track {
+  display: flex;
+  gap: 36px;
+  padding: 0 60px;
+  width: max-content;
+  will-change: transform;
+}
+
+.card {
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-surface;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(36, 34, 30, 0.08);
+  border: 1px solid rgba(181, 150, 90, 0.2);
+  transition: transform $duration-standard ease, box-shadow $duration-standard ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(36, 34, 30, 0.12);
+  }
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+
+  .card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.stepBadge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(25, 53, 45, 0.88);
+  backdrop-filter: blur(6px);
+  color: $jamindar-gold;
+  font-family: $font-jamindar;
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(181, 150, 90, 0.4);
+}
+
+.cardInfo {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardStepLabel {
+  font-family: $font-body;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-family: $font-jamindar;
+  font-size: 1.625rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $jamindar-forest;
+  margin: 0 0 10px;
+}
+
+.cardDesc {
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: lighten($jamindar-charcoal, 15%);
+  margin: 0;
+}
+
+// Tablet & Mobile: Clean Vertical Stack
+@media (max-width: 1024px) {
+  .journeySection {
+    padding: 80px 20px;
+  }
+
+  .stickyHeader {
+    padding: 0;
+    margin-bottom: 36px;
+  }
+
+  .track {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 28px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}

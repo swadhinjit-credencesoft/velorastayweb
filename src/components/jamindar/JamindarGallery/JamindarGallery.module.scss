@@ -1,0 +1,299 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.section {
+  position: relative;
+  background-color: $jamindar-ivory;
+  color: $jamindar-charcoal;
+  padding: 120px 24px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-family: $font-jamindar;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $jamindar-forest;
+  margin: 0 0 16px;
+}
+
+.subtitle {
+  font-family: $font-body;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: lighten($jamindar-charcoal, 20%);
+  margin: 0;
+}
+
+.asymmetricGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 240px;
+  gap: 24px;
+}
+
+.gridItem {
+  position: relative;
+  border-radius: $radius-md;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(36, 34, 30, 0.08);
+  border: 1px solid rgba(181, 150, 90, 0.2);
+
+  &.large {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  &.tall {
+    grid-column: span 5;
+    grid-row: span 2;
+  }
+
+  &.wide {
+    grid-column: span 8;
+    grid-row: span 1;
+  }
+
+  &.normal {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .gridItem:hover & {
+    transform: scale(1.04);
+  }
+}
+
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 53, 45, 0.1) 0%,
+    rgba(36, 34, 30, 0.75) 100%
+  );
+  opacity: 0;
+  transition: opacity $duration-standard ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  color: $jamindar-ivory;
+
+  .gridItem:hover & {
+    opacity: 1;
+  }
+}
+
+.viewBadge {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(25, 53, 45, 0.85);
+  backdrop-filter: blur(6px);
+  color: $jamindar-gold;
+  font-family: $font-body;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: $radius-full;
+  border: 1px solid rgba(181, 150, 90, 0.35);
+}
+
+.itemCaption {
+  font-family: $font-body;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(245, 240, 231, 0.95);
+}
+
+// Lightbox Modal
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 20, 18, 0.94);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.lightboxModal {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightboxImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.lightboxImage {
+  object-fit: contain;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  background: none;
+  border: none;
+  color: $jamindar-ivory;
+  cursor: pointer;
+  padding: 8px;
+  transition: color $duration-fast ease;
+
+  &:hover {
+    color: $jamindar-gold;
+  }
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(25, 53, 45, 0.7);
+  border: 1px solid rgba(181, 150, 90, 0.3);
+  color: $jamindar-ivory;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all $duration-fast ease;
+  z-index: 10;
+
+  &:hover {
+    background: $jamindar-forest;
+    color: $jamindar-gold;
+    border-color: $jamindar-gold;
+  }
+}
+
+.prevBtn {
+  left: -24px;
+}
+
+.nextBtn {
+  right: -24px;
+}
+
+.lightboxCaption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 16px;
+  font-family: $font-body;
+  font-size: 0.9375rem;
+  color: rgba(245, 240, 231, 0.85);
+}
+
+.lightboxCounter {
+  color: $jamindar-gold;
+  font-weight: 500;
+}
+
+@media (max-width: $bp-lg) {
+  .asymmetricGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .gridItem.large,
+  .gridItem.wide {
+    grid-column: span 6;
+  }
+
+  .gridItem.tall,
+  .gridItem.normal {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .section {
+    padding: 80px 16px;
+  }
+
+  .asymmetricGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gridItem {
+    width: 100%;
+    height: 260px;
+  }
+
+  .hoverOverlay {
+    opacity: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(25, 53, 45, 0) 0%,
+      rgba(36, 34, 30, 0.75) 100%
+    );
+  }
+
+  .navBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .prevBtn {
+    left: 4px;
+  }
+
+  .nextBtn {
+    right: 4px;
+  }
+}
