@@ -27,7 +27,7 @@ export default function JamindarHeader() {
     { label: "JOURNEY", href: "#journey" },
     { label: "ROOMS", href: "#rooms" },
     { label: "EXPERIENCES", href: "#experiences" },
-    { label: "HORIZON", href: "#horizon" },
+    { label: "NEST", href: "#horizon" },
     { label: "GALLERY", href: "#gallery" },
   ];
 
@@ -38,7 +38,7 @@ export default function JamindarHeader() {
         role="banner"
       >
         <div className={styles.inner}>
-          {/* Jamindar Brand Logo */}
+          {/* Jamindar Brand Logo — left side only */}
           <Link href="/jamindar-nest" className={styles.brand}>
             <span className={styles.brandTitle}>JAMINDAR NEST</span>
             <span className={styles.brandSubtitle}>PURI • BOUTIQUE HERITAGE</span>
@@ -59,6 +59,12 @@ export default function JamindarHeader() {
 
           {/* Right Actions */}
           <div className={styles.actions}>
+            {/* Back to Bishnu Bhaban */}
+            <Link href="/" className={styles.backLink} aria-label="Go to Bishnu Bhaban">
+              <Icon icon="lucide:arrow-left" width={13} height={13} />
+              <span>BISHNU BHABAN</span>
+            </Link>
+
             <a
               href={jamindarBooking.url}
               target="_blank"

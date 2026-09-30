@@ -230,7 +230,7 @@ export const jamindarData = {
     image: "/images/jamindar/odisha-01.webp",
   },
   horizon: {
-    eyebrow: "JAMINDAR HORIZON",
+    eyebrow: "JAMINDAR NEST",
     heading: "BEYOND THE STAY",
     description:
       "A cinematic visual journey through moments of stillness, light, and heritage.",

@@ -125,7 +125,7 @@ export const NAV_GROUPS: NavGroup[] = [
       },
       {
         id: "nav-jn-horizon",
-        label: "Jamindar Horizon",
+        label: "Jamindar Nest",
         href: "/jamindar-nest#horizon",
         description: "Cinematic visual journey beyond the stay",
         icon: "lucide:film",

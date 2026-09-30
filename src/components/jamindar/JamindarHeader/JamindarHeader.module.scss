@@ -28,6 +28,46 @@
   justify-content: space-between;
 }
 
+.brandWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: $font-body;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $jamindar-ivory;
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(245, 240, 231, 0.45);
+  border-radius: $radius-full;
+  backdrop-filter: blur(6px);
+  background: rgba(25, 53, 45, 0.35);
+  transition: all $duration-fast ease;
+  white-space: nowrap;
+
+  &:hover {
+    color: $jamindar-gold;
+    border-color: $jamindar-gold;
+    background: rgba(181, 150, 90, 0.12);
+  }
+}
+
+.brandDivider {
+  width: 1px;
+  height: 32px;
+  background: rgba(245, 240, 231, 0.2);
+  flex-shrink: 0;
+}
+
 .brand {
   display: flex;
   flex-direction: column;
@@ -273,7 +313,8 @@
 
 @media (max-width: $bp-lg) {
   .desktopNav,
-  .actions .ctaButton {
+  .actions .ctaButton,
+  .backLink {
     display: none;
   }
 
@@ -283,5 +324,9 @@
 
   .header {
     padding: 18px 20px;
+  }
+
+  .brandDivider {
+    display: none;
   }
 }

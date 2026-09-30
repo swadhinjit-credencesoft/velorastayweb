@@ -7,6 +7,10 @@ html {
   scroll-padding-top: v.$nav-height + 16px;
 }
 
+:root {
+  --nav-height: #{v.$nav-height};
+}
+
 * {
   box-sizing: border-box;
 }

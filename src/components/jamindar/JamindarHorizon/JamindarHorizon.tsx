@@ -52,7 +52,7 @@ export default function JamindarHorizon() {
       id="horizon"
       ref={sectionRef}
       className={styles.horizonSection}
-      aria-label="Jamindar Horizon Experience"
+      aria-label="Jamindar Nest Experience"
     >
       <div ref={containerRef} className={styles.stage}>
         {/* Layered Background Images with crossfade */}
@@ -60,7 +60,6 @@ export default function JamindarHorizon() {
           <div
             key={idx}
             className={`${styles.imageSlide} ${activeIdx === idx ? styles.activeSlide : ""}`}
-            style={{ zIndex: idx }}
           >
             <Image
               src={scene.image}

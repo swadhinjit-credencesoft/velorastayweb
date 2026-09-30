@@ -49,7 +49,7 @@ export default function JamindarFooter() {
                 <li><a href="#journey">The Journey</a></li>
                 <li><a href="#rooms">Signature Nest Room</a></li>
                 <li><a href="#experiences">Experiences</a></li>
-                <li><a href="#horizon">Jamindar Horizon</a></li>
+                <li><a href="#horizon">Jamindar Nest</a></li>
                 <li><a href="#gallery">Editorial Gallery</a></li>
               </ul>
             </div>
@@ -93,6 +93,10 @@ export default function JamindarFooter() {
             <p className={styles.copyright}>
               © {currentYear} Jamindar Nest. All rights reserved.
             </p>
+            <Link href="/" className={styles.backToMain}>
+              <Icon icon="lucide:arrow-left" width={13} height={13} />
+              <span>Visit Bishnu Bhaban</span>
+            </Link>
             <p className={styles.credits}>
               Powered by{" "}
               <a href="https://bookone.io/" target="_blank" rel="noopener noreferrer">
