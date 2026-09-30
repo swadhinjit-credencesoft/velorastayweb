@@ -34,7 +34,7 @@ export default function RoomsPage() {
         heading={VILLAS_CONTENT.heading}
         description={VILLAS_CONTENT.description}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms", href: "/rooms" }]}
-        bgImage="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600"
+        bgImage="/bishnyhomeimage/homehero22.webp"
       />
       <RoomListClient fallbackRooms={VILLAS} />
     </>

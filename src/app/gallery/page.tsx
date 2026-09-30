@@ -11,7 +11,11 @@ export const metadata: Metadata = {
   title: "Photo Gallery | Bishnu Bhaban",
   description: "Photos of Bishnu Bhaban in Puri: the West Gate entrance, guest rooms, the dining area, and the common areas.",
   alternates: { canonical: "/gallery" },
-  openGraph: { title: "Photo Gallery | Bishnu Bhaban", description: "Take a visual tour of Bishnu Bhaban through our photo gallery." },
+  openGraph: {
+    title: "Photo Gallery | Bishnu Bhaban",
+    description: "Take a visual tour of Bishnu Bhaban through our photo gallery.",
+    images: [{ url: "https://bishnubhaban.com/bishnyhomeimage/homehero1.png", width: 1200, height: 630, alt: "Bishnu Bhaban Puri Gallery" }],
+  },
 };
 
 export default function GalleryPage() {

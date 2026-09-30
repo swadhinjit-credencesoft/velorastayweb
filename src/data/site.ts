@@ -53,15 +53,15 @@ export const SITE_ASSETS = {
   aboutImage:
     "/bishnyhomeimage/homehero1.png",
   roomsPreviewImage:
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
+    "/bishnyhomeimage/homehero1.png",
   eventsImage:
-    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2070",
+    "/bishnyhomeimage/homehero22.webp",
   contactMapImage:
-    "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200",
+    "/bishnyhomeimage/fascilitypuridarsan.png",
   testimonialBackground:
-    "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070",
+    "/bishnyhomeimage/homehero3.png",
   notFoundImage:
-    "https://images.unsplash.com/photo-1586611292717-f828b167408c?q=80&w=1200",
+    "/bishnyhomeimage/homehero1.png",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [

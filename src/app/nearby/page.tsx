@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nearby Attractions | Bishnu Bhaban",
     description: NEARBY_CONTENT.description,
+    images: [{ url: "https://bishnubhaban.com/bishnyhomeimage/homehero1.png", width: 1200, height: 630, alt: "Nearby Attractions in Puri" }],
   },
 };
 
@@ -42,10 +43,10 @@ export default function NearbyPage() {
 
       <section className="relative py-20 pt-32 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1600"
-          alt="Puri"
+          src="/bishnyhomeimage/homehero1.png"
+          alt="Puri Attractions near Bishnu Bhaban"
           fill
-          className="object-cover"
+          className="object-cover object-top"
           priority
           sizes="100vw"
         />
