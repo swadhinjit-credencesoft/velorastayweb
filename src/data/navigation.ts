@@ -194,6 +194,13 @@ export const NAV_GROUPS: NavGroup[] = [
     href: "/gallery",
     children: [
       {
+        id: "nav-more-events",
+        label: "Events & Banquet",
+        href: "/events",
+        description: "Banquet space and group celebrations in Puri",
+        icon: "lucide:party-popper",
+      },
+      {
         id: "nav-more-gallery",
         label: "Gallery",
         href: "/gallery",
@@ -230,6 +237,7 @@ export const NAV_LINKS: NavLink[] = [
   { id: "nav-villas", label: "Our Rooms", href: "/rooms" },
   { id: "nav-jamindar", label: "Jamindar Nest", href: "/jamindar-nest" },
   { id: "nav-amenities", label: "Amenities", href: "/facilities" },
+  { id: "nav-events", label: "Events & Banquet", href: "/events" },
   { id: "nav-puri", label: "Puri Experience", href: "/nearby" },
   { id: "nav-gallery", label: "Gallery", href: "/gallery" },
   { id: "nav-contact", label: "Contact Us", href: "/contact" },
@@ -249,6 +257,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
       { id: "footer-about", label: "About Us", href: "/about" },
       { id: "footer-villas", label: "Our Rooms", href: "/rooms" },
       { id: "footer-jamindar", label: "Jamindar Nest", href: "/jamindar-nest" },
+      { id: "footer-events", label: "Events & Banquet", href: "/events" },
       { id: "footer-amenities", label: "Amenities", href: "/facilities" },
       { id: "footer-gallery", label: "Gallery", href: "/gallery" },
       { id: "footer-reviews", label: "Guest Reviews", href: "/reviews" },

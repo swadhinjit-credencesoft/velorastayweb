@@ -1,13 +1,72 @@
 import type { EventType, SectionContent } from "@/types";
 
 export const EVENTS_CONTENT: SectionContent = {
-  eyebrow: "Groups & Celebrations",
-  heading: "Travelling Together, Staying Together",
+  eyebrow: "Events & Gatherings",
+  heading: "Spacious Banquet & Group Events in Puri",
   description:
-    "Bishnu Bhaban is a small, practical hotel, which makes it a good fit for families and groups travelling together. We can book several rooms under one name, arrange an early meal before an early train, and tell you plainly what the property can and cannot do. For anything beyond a group booking — decorators, caterers, pandits — we are happy to point you to people in the area.",
+    "Host religious ceremonies, family gatherings, yatra groups, and social functions at Bishnu Bhaban. Convenient hall arrangements and multi-room group stays located right at the West Gate of Jagannath Temple, Puri.",
 };
 
 export const EVENT_TYPES: EventType[] = [
+  {
+    id: "evt-banquet",
+    slug: "banquet-hall-events",
+    name: "Banquet Hall & Celebrations",
+    tagline: "Spacious venue for family functions, rituals & celebrations in Puri",
+    description:
+      "Host sacred ceremonies, thread ceremonies (Upanayana), family gatherings, and post-darshan feasts with attached room bookings.",
+    longDescription:
+      "Bishnu Bhaban offers spacious banquet and event gathering space combined with comfortable room accommodation just steps away from the Shree Jagannath Temple West Gate. Whether you are hosting a thread ceremony, religious ritual, marriage party stay, or family celebration, our property provides seamless group coordination, flexible seating arrangements, and dedicated group management.",
+    image: "/bishnyhomeimage/homehero1.png",
+    gallery: [
+      { id: "bnq-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Banquet & Gathering Space at Bishnu Bhaban" },
+      { id: "bnq-img-2", src: "/bishnyhomeimage/homehero1.png", alt: "Group celebrations at Bishnu Bhaban" },
+    ],
+    capacity: 100,
+    hallSize: "Banquet & Function Space",
+    priceRange: "Custom Packages Available",
+    packages: [
+      {
+        id: "bnq-pkg-standard",
+        name: "Standard Event Package",
+        description: "Hall arrangement with multi-room booking for families.",
+        price: "On Request",
+        includes: [
+          "Spacious event / gathering area",
+          "Multiple room allocation under one booking",
+          "Dedicated assistance from front desk",
+          "Luggage storage and coordination",
+        ],
+        popular: true,
+      },
+      {
+        id: "bnq-pkg-ritual",
+        name: "Religious Function Package",
+        description: "Tailored arrangements for puja, thread ceremonies, and yatra feasts.",
+        price: "On Request",
+        includes: [
+          "Event space allocated for religious rituals",
+          "Guidance on temple timings and local pandit coordination",
+          "Flexible check-in and checkout where available",
+          "Group stay in AC / Non-AC rooms",
+        ],
+        popular: false,
+      },
+    ],
+    features: ["Banquet Space", "Group Rooms", "Close to West Gate", "Front Desk 7 AM–11 PM", "Luggage Storage"],
+    faqs: [
+      {
+        id: "bnq-faq-1",
+        question: "How many guests can the banquet and gathering space accommodate?",
+        answer: "Our event space can accommodate gatherings up to 100 guests depending on the setup and room configurations.",
+      },
+      {
+        id: "bnq-faq-2",
+        question: "Can we book rooms and the event space together?",
+        answer: "Yes, we specialize in combined room stays and event space packages for families, pilgrim groups, and wedding parties.",
+      },
+    ],
+  },
   {
     id: "evt-family",
     slug: "family-gatherings",

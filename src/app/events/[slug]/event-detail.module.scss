@@ -1,0 +1,291 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.detailSection {
+  padding-block: v.$space-2xl;
+  background-color: #ffffff;
+}
+
+.container {
+  @include m.container;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-2xl;
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-2xl;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-md;
+}
+
+.sectionTitle {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: v.$color-text-main;
+  margin: 0;
+}
+
+.descriptionText {
+  font-size: 15px;
+  line-height: 1.75;
+  color: v.$color-text-muted;
+  white-space: pre-line;
+}
+
+.featuresGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
+}
+
+.featureBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  border-radius: v.$radius-md;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.packageGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-lg;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.packageCard {
+  position: relative;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  padding: v.$space-lg;
+  display: flex;
+  flex-direction: column;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &.popular {
+    border-color: v.$color-accent;
+    background-color: rgba(245, 237, 214, 0.3);
+    box-shadow: v.$shadow-md;
+  }
+}
+
+.popularBadge {
+  position: absolute;
+  top: -10px;
+  right: v.$space-md;
+  background-color: v.$color-accent;
+  color: #1a1a1a;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: v.$radius-full;
+  box-shadow: v.$shadow-xs;
+}
+
+.packageName {
+  font-family: v.$font-display;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: v.$color-text-main;
+  margin: 0;
+}
+
+.packageDesc {
+  font-size: 13px;
+  color: v.$color-text-muted;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.packagePrice {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: v.$color-accent-dark;
+  margin-top: v.$space-md;
+  padding-bottom: v.$space-sm;
+}
+
+.packageIncludes {
+  border-top: 1px solid v.$color-border;
+  padding-top: v.$space-md;
+  margin-top: v.$space-xs;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.includeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: v.$color-text-muted;
+  line-height: 1.4;
+
+  span {
+    flex: 1;
+  }
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-md;
+}
+
+.faqItem {
+  background-color: v.$color-background;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-md;
+  padding: v.$space-md v.$space-lg;
+}
+
+.faqQuestion {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: v.$color-text-main;
+  margin: 0;
+}
+
+.faqAnswer {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: v.$color-text-muted;
+  margin-top: 6px;
+}
+
+// ─── Sidebar ──────────────────────────────────────────────
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-lg;
+}
+
+.overviewCard {
+  position: sticky;
+  top: 110px;
+  background-color: v.$color-background;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-xl;
+  padding: v.$space-xl;
+  box-shadow: v.$shadow-card;
+}
+
+.overviewTitle {
+  font-family: v.$font-display;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: v.$color-text-main;
+  margin: 0 0 v.$space-md;
+  padding-bottom: v.$space-sm;
+  border-bottom: 2px solid v.$color-accent;
+}
+
+.overviewList {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-sm;
+  margin-bottom: v.$space-xl;
+}
+
+.overviewRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  padding-block: 8px;
+  border-bottom: 1px solid v.$color-border;
+
+  dt {
+    color: v.$color-text-muted;
+  }
+
+  dd {
+    font-weight: 600;
+    color: v.$color-text-main;
+    text-align: right;
+  }
+}
+
+.sidebarActions {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-sm;
+}
+
+.sidebarPrimaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background-color: v.$color-accent;
+  color: #1a1a1a;
+  padding: 13px 20px;
+  border-radius: v.$radius-md;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+    color: #ffffff;
+  }
+}
+
+.sidebarSecondaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background-color: #ffffff;
+  color: v.$color-text-main;
+  border: 1px solid v.$neutral-300;
+  padding: 12px 20px;
+  border-radius: v.$radius-md;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    border-color: v.$color-accent-dark;
+    color: v.$color-accent-dark;
+  }
+}

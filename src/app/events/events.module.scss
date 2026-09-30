@@ -1,0 +1,340 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.page {
+  background-color: v.$color-background;
+}
+
+.gridSection {
+  padding-block: v.$space-2xl;
+  background-color: v.$color-background;
+
+  @media (max-width: v.$bp-md) {
+    padding-block: v.$space-xl;
+  }
+}
+
+.container {
+  @include m.container;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-xl;
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: v.$color-surface;
+  border-radius: v.$radius-xl;
+  overflow: hidden;
+  border: 1px solid v.$color-border;
+  box-shadow: v.$shadow-card;
+  transition: transform v.$duration-standard v.$ease-standard,
+    box-shadow v.$duration-standard v.$ease-standard,
+    border-color v.$duration-standard v.$ease-standard;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: v.$shadow-xl;
+    border-color: rgba(201, 169, 110, 0.4);
+  }
+}
+
+.cardMedia {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background-color: #111827;
+
+  @media (min-width: v.$bp-md) {
+    height: 290px;
+  }
+}
+
+.cardImage {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform v.$duration-slower v.$ease-standard;
+
+  .card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 24, 39, 0.95) 0%,
+    rgba(17, 24, 39, 0.4) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.badgeTop {
+  position: absolute;
+  top: v.$space-md;
+  left: v.$space-md;
+  z-index: 2;
+}
+
+.hallBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: v.$color-accent;
+  color: #1a1a1a;
+  padding: 6px 14px;
+  border-radius: v.$radius-full;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: v.$shadow-sm;
+}
+
+.cardMediaContent {
+  position: absolute;
+  bottom: v.$space-md;
+  left: v.$space-md;
+  right: v.$space-md;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-family: v.$font-display;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.cardTagline {
+  font-size: 13px;
+  color: #fef08a;
+  margin-top: 4px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardBody {
+  padding: v.$space-lg;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.cardDesc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: v.$color-text-muted;
+  margin-bottom: v.$space-md;
+}
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: v.$space-lg;
+}
+
+.featureTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  border-radius: v.$radius-sm;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+  padding-block: v.$space-md;
+  border-top: 1px solid v.$color-border;
+  border-bottom: 1px solid v.$color-border;
+  margin-bottom: v.$space-lg;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: v.$color-text-muted;
+
+  strong {
+    color: v.$color-text-main;
+    font-weight: 600;
+  }
+}
+
+.metaIcon {
+  color: v.$color-accent-dark;
+  flex-shrink: 0;
+}
+
+.cardActions {
+  display: flex;
+  gap: v.$space-sm;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.primaryBtn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: v.$radius-md;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+  }
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: v.$color-text-main;
+  border: 1px solid v.$neutral-300;
+  padding: 12px 18px;
+  border-radius: v.$radius-md;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    border-color: v.$color-accent-dark;
+    color: v.$color-accent-dark;
+    background-color: v.$color-accent-light;
+  }
+}
+
+// ─── CTA Section ─────────────────────────────────────────
+.ctaSection {
+  padding-block: v.$space-2xl;
+  background-color: #ffffff;
+  border-top: 1px solid v.$color-border;
+}
+
+.ctaContainer {
+  @include m.container;
+  max-width: 800px;
+  text-align: center;
+}
+
+.ctaEyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: v.$color-accent-dark;
+  margin-bottom: v.$space-xs;
+}
+
+.ctaHeading {
+  font-family: v.$font-display;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  color: v.$color-text-main;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 v.$space-md;
+}
+
+.ctaDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: v.$color-text-muted;
+  max-width: 620px;
+  margin: 0 auto v.$space-xl;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: v.$space-md;
+  flex-wrap: wrap;
+}
+
+.ctaPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: v.$color-accent;
+  color: #1a1a1a;
+  padding: 14px 28px;
+  border-radius: v.$radius-md;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background-color v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+    color: #ffffff;
+  }
+}
+
+.ctaSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: v.$color-accent-dark;
+  border: 2px solid v.$color-accent;
+  padding: 12px 28px;
+  border-radius: v.$radius-md;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent-light;
+  }
+}

@@ -9,6 +9,10 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
+  const normalizedItems = items.filter(
+    (item) => item.href !== "/" && item.label.toLowerCase() !== "home"
+  );
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -19,7 +23,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
         name: "Home",
         item: SITE_INFO.url,
       },
-      ...items.map((item, index) => ({
+      ...normalizedItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.label,
@@ -37,7 +41,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             <span>Home</span>
           </Link>
         </li>
-        {items.map((item, index) => {
+        {normalizedItems.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
             <li key={item.href} className={styles.item}>

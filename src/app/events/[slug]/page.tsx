@@ -1,47 +1,42 @@
-// import type { Metadata } from "next";
-// import { notFound } from "next/navigation";
-// import Image from "next/image";
-// import Link from "next/link";
-// import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-// import JsonLd from "@/components/seo/JsonLd/JsonLd";
-// import { generateBreadcrumbSchema, generateEventSchema } from "@/utils/schema";
 import type { Metadata } from "next";
-import { EVENT_TYPES } from "@/data/events";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import PageHero from "@/components/sections/PageHero/PageHero";
+import JsonLd from "@/components/seo/JsonLd/JsonLd";
+import { generateBreadcrumbSchema, generateEventSchema } from "@/utils/schema";
+import { EVENT_TYPES, getEventBySlug } from "@/data/events";
+import { SITE_INFO } from "@/data/site";
+import Icon from "@/components/Icon/Icon";
+import styles from "./event-detail.module.scss";
 
-// type Props = { params: { slug: string } };
-
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+type Props = { params: { slug: string } };
 
 export function generateStaticParams() {
   return EVENT_TYPES.map((event) => ({ slug: event.slug }));
 }
 
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const event = getEventBySlug(params.slug);
-//   if (!event) return { title: "Event Not Found" };
-//   return {
-//     title: `${event.name} | Bishnu Bhaban Events`,
-//     description: event.description,
-//     alternates: { canonical: `/events/${event.slug}` },
-//     openGraph: {
-//       title: `${event.name} | Bishnu Bhaban`,
-//       description: event.tagline,
-//       images: [{ url: event.image, width: 1200, height: 630, alt: event.name }],
-//     },
-//   };
-// }
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const event = getEventBySlug(params.slug);
+  if (!event) return { title: "Event Not Found" };
+  return {
+    title: `${event.name} | Bishnu Bhaban Puri`,
+    description: event.description,
+    alternates: { canonical: `/events/${event.slug}` },
+    openGraph: {
+      title: `${event.name} | Bishnu Bhaban Puri`,
+      description: event.tagline,
+      images: [{ url: `${SITE_INFO.url}${event.image}`, width: 1200, height: 630, alt: event.name }],
+    },
+  };
+}
 
-export default function EventDetailPage() {
-  return null; // Events detail page disabled — kept (commented out) for later use
-  /* ORIGINAL PAGE CONTENT (disabled):
+export default function EventDetailPage({ params }: Props) {
   const event = getEventBySlug(params.slug);
   if (!event) notFound();
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    { label: "Events", href: "/events" },
+    { label: "Events & Banquet", href: "/events" },
     { label: event.name, href: `/events/${event.slug}` },
   ];
 
@@ -49,9 +44,9 @@ export default function EventDetailPage() {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Events", url: "/events" },
-          { name: event.name, url: `/events/${event.slug}` },
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Events & Banquet", url: `${SITE_INFO.url}/events` },
+          { name: event.name, url: `${SITE_INFO.url}/events/${event.slug}` },
         ])}
       />
       <JsonLd
@@ -60,68 +55,80 @@ export default function EventDetailPage() {
           description: event.description,
           startDate: "2026-01-01",
           endDate: "2026-12-31",
-          location: "Bishnu Bhaban, Lonavala, Maharashtra",
+          location: "Bishnu Bhaban, West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001",
         })}
       />
 
-      <section className="relative h-[50vh] min-h-[400px]">
-        <Image src={event.image} alt={event.name} fill className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
-          <div className="max-w-7xl mx-auto">
-            <Breadcrumb items={breadcrumbs} />
-            <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">{event.name}</h1>
-            <p className="text-amber-300 text-xl mt-2">{event.tagline}</p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Bishnu Bhaban Puri"
+        heading={event.name}
+        description={event.tagline}
+        breadcrumbs={breadcrumbs}
+        bgImage={event.image}
+      />
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2 space-y-10">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">About This Event</h2>
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line">
+      <section className={styles.detailSection}>
+        <div className={styles.container}>
+          <div className={styles.layoutGrid}>
+            <div className={styles.mainContent}>
+              <div className={styles.sectionBlock}>
+                <h2 className={styles.sectionTitle}>About This Arrangement</h2>
+                <p className={styles.descriptionText}>
                   {event.longDescription}
                 </p>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Features</h2>
-                <div className="flex flex-wrap gap-3">
+              <div className={styles.sectionBlock}>
+                <h2 className={styles.sectionTitle}>Key Features</h2>
+                <div className={styles.featuresGrid}>
                   {event.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-4 py-2 bg-amber-50 text-amber-700 rounded-lg font-medium"
-                    >
+                    <span key={feature} className={styles.featureBadge}>
+                      <Icon icon="lucide:check" width={14} height={14} />
                       {feature}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Gallery</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {event.gallery.map((img) => (
-                    <div key={img.id} className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                      <Image src={img.src} alt={img.alt} fill className="object-cover" />
-                    </div>
-                  ))}
+              {event.packages && event.packages.length > 0 && (
+                <div className={styles.sectionBlock}>
+                  <h2 className={styles.sectionTitle}>Available Packages</h2>
+                  <div className={styles.packageGrid}>
+                    {event.packages.map((pkg) => (
+                      <div
+                        key={pkg.id}
+                        className={`${styles.packageCard} ${pkg.popular ? styles.popular : ""}`}
+                      >
+                        {pkg.popular && (
+                          <span className={styles.popularBadge}>
+                            Most Popular
+                          </span>
+                        )}
+                        <h3 className={styles.packageName}>{pkg.name}</h3>
+                        <p className={styles.packageDesc}>{pkg.description}</p>
+                        <p className={styles.packagePrice}>{pkg.price}</p>
+                        <ul className={styles.packageIncludes}>
+                          {pkg.includes.map((item, idx) => (
+                            <li key={idx} className={styles.includeItem}>
+                              <Icon icon="lucide:check" width={14} height={14} className="text-amber-600" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              {event.faqs.length > 0 && (
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    Frequently Asked Questions
-                  </h2>
-                  <div className="space-y-4">
+              {event.faqs && event.faqs.length > 0 && (
+                <div className={styles.sectionBlock}>
+                  <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+                  <div className={styles.faqList}>
                     {event.faqs.map((faq) => (
-                      <div key={faq.id} className="border rounded-lg p-5">
-                        <h3 className="font-semibold text-gray-900">{faq.question}</h3>
-                        <p className="mt-2 text-gray-600">{faq.answer}</p>
+                      <div key={faq.id} className={styles.faqItem}>
+                        <h4 className={styles.faqQuestion}>{faq.question}</h4>
+                        <p className={styles.faqAnswer}>{faq.answer}</p>
                       </div>
                     ))}
                   </div>
@@ -129,65 +136,46 @@ export default function EventDetailPage() {
               )}
             </div>
 
-            <aside className="space-y-6">
-              <div className="bg-gray-50 rounded-xl p-6 sticky top-24 space-y-4">
-                <h3 className="text-xl font-bold text-gray-900">Event Details</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Capacity</span>
-                    <span className="font-medium">Up to {event.capacity} guests</span>
+            <div className={styles.sidebar}>
+              <div className={styles.overviewCard}>
+                <h3 className={styles.overviewTitle}>Event Overview</h3>
+                <dl className={styles.overviewList}>
+                  <div className={styles.overviewRow}>
+                    <dt>Capacity</dt>
+                    <dd>Up to {event.capacity} guests</dd>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Hall Size</span>
-                    <span className="font-medium">{event.hallSize}</span>
+                  <div className={styles.overviewRow}>
+                    <dt>Hall / Space</dt>
+                    <dd>{event.hallSize}</dd>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Price Range</span>
-                    <span className="font-medium">{event.priceRange}</span>
+                  <div className={styles.overviewRow}>
+                    <dt>Pricing</dt>
+                    <dd>{event.priceRange}</dd>
                   </div>
+                  <div className={styles.overviewRow}>
+                    <dt>Location</dt>
+                    <dd>West Gate, Puri</dd>
+                  </div>
+                </dl>
+
+                <div className={styles.sidebarActions}>
+                  <Link href="/contact" className={styles.sidebarPrimaryBtn}>
+                    <Icon icon="lucide:mail" width={15} height={15} />
+                    <span>Enquire for Booking</span>
+                  </Link>
+                  <a
+                    href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+                    className={styles.sidebarSecondaryBtn}
+                  >
+                    <Icon icon="lucide:phone" width={15} height={15} />
+                    <span>Call {SITE_INFO.phone}</span>
+                  </a>
                 </div>
-                <hr />
-                <h4 className="font-semibold text-gray-900">Packages</h4>
-                <div className="space-y-3">
-                  {event.packages.map((pkg) => (
-                    <div
-                      key={pkg.id}
-                      className={`p-4 rounded-lg border ${
-                        pkg.popular ? "border-amber-400 bg-amber-50" : "border-gray-200"
-                      }`}
-                    >
-                      {pkg.popular && (
-                        <span className="text-xs font-bold text-amber-600 uppercase">
-                          Most Popular
-                        </span>
-                      )}
-                      <div className="flex justify-between items-baseline mt-1">
-                        <span className="font-semibold">{pkg.name}</span>
-                        <span className="text-amber-600 font-bold">{pkg.price}</span>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-1">{pkg.description}</p>
-                      <ul className="mt-2 space-y-1">
-                        {pkg.includes.map((item) => (
-                          <li key={item} className="text-xs text-gray-600 flex items-start gap-1">
-                            <span className="text-green-500 mt-0.5">✓</span> {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                <Link
-                  href="/contact"
-                  className="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white py-3 rounded-lg font-semibold transition-colors"
-                >
-                  Enquire Now
-                </Link>
               </div>
-            </aside>
+            </div>
           </div>
         </div>
       </section>
     </>
   );
-  */
 }
