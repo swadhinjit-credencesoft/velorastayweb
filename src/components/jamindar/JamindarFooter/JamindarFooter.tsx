@@ -99,10 +99,10 @@ export default function JamindarFooter() {
             <p className={styles.copyright}>
               © {currentYear} Jamindar Nest. All rights reserved.
             </p>
-            <Link href="/" className={styles.backToMain}>
+            <a href="/" className={styles.backToMain}>
               <Icon icon="lucide:arrow-left" width={13} height={13} />
               <span>Visit Bishnu Bhaban</span>
-            </Link>
+            </a>
             <p className={styles.credits}>
               Powered by{" "}
               <a href="https://bookone.io/" target="_blank" rel="noopener noreferrer">

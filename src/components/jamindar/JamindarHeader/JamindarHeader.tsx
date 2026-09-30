@@ -67,10 +67,10 @@ export default function JamindarHeader() {
           {/* Right Actions */}
           <div className={styles.actions}>
             {/* Back to Bishnu Bhaban */}
-            <Link href="/" className={styles.backLink} aria-label="Go to Bishnu Bhaban">
+            <a href="/" className={styles.backLink} aria-label="Go to Bishnu Bhaban">
               <Icon icon="lucide:arrow-left" width={13} height={13} />
               <span>BISHNU BHABAN</span>
-            </Link>
+            </a>
 
             <a
               href={jamindarBooking.url}

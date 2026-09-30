@@ -49,7 +49,18 @@ export default function JamindarJourney() {
       });
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      if (typeof window !== "undefined") {
+        ScrollTrigger.getAll().forEach((t) => {
+          try {
+            t.kill(true);
+          } catch {
+            // ignore
+          }
+        });
+      }
+    };
   }, []);
 
   return (

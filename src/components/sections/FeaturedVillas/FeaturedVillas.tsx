@@ -25,7 +25,7 @@ export default function FeaturedVillas() {
           {popularVillas.map((villa) => (
             <div key={villa.id} className={styles.cardItem}>
               <RoomCard
-                image={villa.images[0]?.src}
+                image={typeof villa.images?.[0] === "string" ? villa.images[0] : villa.images?.[0]?.src}
                 badge={villa.tag}
               >
                 <div className={styles.roomInfo}>
