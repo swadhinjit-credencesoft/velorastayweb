@@ -1,7 +1,7 @@
 import { SITE_INFO } from "@/data/site";
 
 const HOTEL_IMAGE =
-  "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200&h=630&fit=crop";
+  `${SITE_INFO.url}/bishnyhomeimage/homehero1.png`;
 
 interface SchemaOrgProps {
   type: string;

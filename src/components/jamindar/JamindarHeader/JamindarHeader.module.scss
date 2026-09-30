@@ -42,6 +42,9 @@
         background: rgba(181, 150, 90, 0.1);
       }
     }
+    .brandLogo {
+      height: 64px;
+    }
   }
 }
 
@@ -100,11 +103,11 @@
 }
 
 .brandLogo {
-  height: 52px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   filter: brightness(1.05);
-  transition: transform $duration-fast ease;
+  transition: all $duration-standard ease;
 
   &:hover {
     transform: scale(1.02);
@@ -366,4 +369,9 @@
   .brandDivider {
     display: none;
   }
+
+  .brandLogo {
+    height: 60px;
+  }
 }
+

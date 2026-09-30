@@ -44,8 +44,8 @@ export default function JamindarHeader() {
             <Image
               src={jamindarData.logo}
               alt={jamindarData.name}
-              width={160}
-              height={56}
+              width={220}
+              height={80}
               className={styles.brandLogo}
               priority
             />
@@ -107,8 +107,8 @@ export default function JamindarHeader() {
             <Image
               src={jamindarData.logo}
               alt={jamindarData.name}
-              width={140}
-              height={50}
+              width={180}
+              height={64}
               className={styles.brandLogo}
             />
           </Link>

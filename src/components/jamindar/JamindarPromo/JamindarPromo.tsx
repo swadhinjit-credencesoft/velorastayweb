@@ -31,8 +31,8 @@ export default function JamindarPromo() {
               <Image
                 src={jamindarData.logo}
                 alt={jamindarData.name}
-                width={180}
-                height={64}
+                width={220}
+                height={80}
                 className={styles.promoLogo}
               />
             </div>

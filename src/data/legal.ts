@@ -1,4 +1,4 @@
-﻿export interface LegalPage {
+export interface LegalPage {
   slug: string;
   title: string;
   lastUpdated: string;
@@ -32,6 +32,8 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Introduction</h2>\n" +
       "<p>Bishnu Bhaban (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our booking services, or stay at our property. By accessing our website or using our services, you agree to the practices described in this policy.</p>\n\n" +
       PROPERTY_BLOCK +
+      "<h2>House Rules & Guest Compliance</h2>\n" +
+      "<p>Guests staying at Bishnu Bhaban must adhere to hotel policies, including our strict <strong>No Smoking</strong> policy (smoking is strictly prohibited inside all rooms and indoor hotel areas) and <strong>No Pets</strong> policy (pets are not allowed anywhere on the hotel premises). Cancellation and booking adjustments are processed in accordance with our stated booking terms.</p>\n\n" +
       "<h2>Information We Collect</h2>\n" +
       "<p>We collect various types of information to provide and improve our services. This includes personal information you voluntarily provide when making a reservation, such as your full name, email address, phone number, and billing details. We also collect identification information when required for check-in, including government-issued ID details, as mandated by Indian law. Every guest must present a valid photo ID at check-in, and Aadhaar, other government photo ID, and passport are all accepted. When you browse our website, we automatically gather certain technical data including your IP address, browser type and version, operating system, referring URLs, pages visited, time spent on pages, and other diagnostic information.</p>\n\n" +
       "<h2>How We Use Your Information</h2>\n" +
@@ -80,8 +82,15 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<li>Daily housekeeping</li>\n" +
       "</ul>\n" +
       "<p>The property also provides a front desk staffed from 7:00 AM to 11:00 PM, CCTV surveillance covering entry and exit points, luggage storage, laundry on request, and parking facilities. Late arrival or early departure outside desk hours should be arranged in advance by calling +91 9078922710.</p>\n\n" +
-      "<h2>Pet Policy</h2>\n" +
-      "<p><strong>Pets are not allowed</strong> at our property. We appreciate your understanding in maintaining a pet-free environment for the comfort of all guests.</p>\n\n" +
+      "<h2>Cancellation & Booking Adjustment</h2>\n" +
+      "<p>Cancellation charges will apply as per the cancellation policy applicable to the booking.</p>\n" +
+      "<p>Where permitted by the hotel, the eligible cancelled booking amount may be adjusted against a future stay within one year from the date of cancellation.</p>\n" +
+      "<p>The adjustment is subject to room availability and applicable tariff differences.</p>\n" +
+      "<p>Bookings made through third-party platforms may be subject to the cancellation and refund policies of the respective platform.</p>\n\n" +
+      "<h2>No Pets</h2>\n" +
+      "<p>Pets are not allowed anywhere on the hotel premises.</p>\n\n" +
+      "<h2>No Smoking</h2>\n" +
+      "<p>Smoking is strictly prohibited inside all rooms and indoor hotel areas.</p>\n\n" +
       "<h2>Food and Dining</h2>\n" +
       "<p>We do not operate a restaurant, kitchen, or room service on site. There is no food or meal plan included in your room rate, and guests are welcome to bring outside food into the property and eat in the room or the common areas. Puri has a large number of restaurants within walking distance, and the front desk can point you to whichever are open at the time.</p>\n\n" +
       "<h2>Pricing</h2>\n" +
@@ -89,13 +98,11 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Payment Terms</h2>\n" +
       "<p>We accept major credit and debit cards, UPI payments, net banking, and select digital wallets, as well as cash in INR. Payment is required at the time of booking unless otherwise agreed upon. A refundable security deposit may be collected at check-in to cover potential damages or outstanding charges, and the amount is confirmed at booking.</p>\n\n" +
       "<h2>Guest Responsibilities</h2>\n" +
-      "<p>Guests are responsible for all charges incurred during their stay. You must adhere to the property's house rules, which include restrictions on noise levels after 10:00 PM and prohibition of smoking in non-designated areas. Our property is on Grand Road, close to the temple, so we ask that guests keep noise down out of consideration for others. Any damage to property, fixtures, or furnishings will be charged to the guest's account at replacement or repair cost.</p>\n\n" +
+      "<p>Guests are responsible for all charges incurred during their stay. You must adhere to the property's house rules, which include restrictions on noise levels after 10:00 PM, zero tolerance for smoking inside rooms/indoor areas, and strict adherence to our no-pets policy. Any damage to property, fixtures, or furnishings will be charged to the guest's account at replacement or repair cost.</p>\n\n" +
       "<h2>Liability Limitations</h2>\n" +
       "<p>Bishnu Bhaban shall not be liable for any loss, damage, or injury to guests or their property except to the extent caused by our proven negligence. We are not responsible for delays, cancellations, or disruptions caused by events beyond our control, including weather, religious calendar changes affecting temple timings, or disruption of transport. We strongly recommend that guests obtain comprehensive travel insurance.</p>\n\n" +
       "<h2>Intellectual Property</h2>\n" +
       "<p>All content on the Bishnu Bhaban website, including text, graphics, logos, images, videos, and software, is the property of Bishnu Bhaban or its licensors and is protected by Indian and international copyright, trademark, and intellectual property laws.</p>\n\n" +
-      "<h2>Cancellation and Refund Terms</h2>\n" +
-      "<p>Cancellation terms vary depending on the rate type and booking channel. Please refer to our dedicated Cancellation Policy and Refund Policy pages for detailed information.</p>\n\n" +
       "<h2>Dispute Resolution</h2>\n" +
       "<p>Any disputes arising from these Terms and Conditions or your use of our services shall first be addressed through good-faith negotiation. If a resolution cannot be reached within 30 days, either party may initiate mediation. If mediation is unsuccessful, disputes shall be subject to the exclusive jurisdiction of the courts in Puri, Odisha, India.</p>\n\n" +
       "<h2>Contact Information</h2>\n" +
@@ -109,6 +116,11 @@ export const LEGAL_PAGES: LegalPage[] = [
     content:
       "<h2>Overview</h2>\n" +
       "<p>At Bishnu Bhaban, we understand that plans can change unexpectedly. This Refund Policy outlines the conditions under which refunds are available and the process for requesting a refund.</p>\n\n" +
+      "<h2>Cancellation & Booking Adjustment</h2>\n" +
+      "<p>Cancellation charges will apply as per the cancellation policy applicable to the booking.</p>\n" +
+      "<p>Where permitted by the hotel, the eligible cancelled booking amount may be adjusted against a future stay within one year from the date of cancellation.</p>\n" +
+      "<p>The adjustment is subject to room availability and applicable tariff differences.</p>\n" +
+      "<p>Bookings made through third-party platforms may be subject to the cancellation and refund policies of the respective platform.</p>\n\n" +
       "<h2>Eligible Refund Conditions</h2>\n" +
       "<p>Refunds may be issued under the following circumstances: if you cancel your reservation within the timeframe specified in our Cancellation Policy, if Bishnu Bhaban is unable to honour your reservation due to circumstances within our control, or if there is a documented service failure that significantly impacted your stay.</p>\n\n" +
       "<h2>Refund Processing Times</h2>\n" +
@@ -116,7 +128,9 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Partial Refunds</h2>\n" +
       "<p>Partial refunds may be issued if you check out earlier than your scheduled departure date without prior arrangement, or if charges for unused services are cancelled at least 24 hours in advance.</p>\n\n" +
       "<h2>Non-Refundable Charges</h2>\n" +
-      "<p>Certain charges are not eligible for refund under any circumstances. These include no-show charges, early checkout fees as specified in our cancellation policy, food orders that have already been prepared and delivered, and third-party services booked on your behalf.</p>\n\n" +
+      "<p>Certain charges are not eligible for refund under any circumstances. These include no-show charges, early checkout fees as specified in our cancellation policy, and third-party services booked on your behalf.</p>\n\n" +
+      "<h2>House Rules Note</h2>\n" +
+      "<p>Please note that violation of property rules — including our strict <strong>No Pets</strong> policy and <strong>No Smoking</strong> policy inside rooms and indoor hotel areas — may result in immediate cancellation of stay without eligibility for refund.</p>\n\n" +
       "<h2>How to Request a Refund</h2>\n" +
       "<p>To request a refund, please contact us through any of the following channels:</p>\n" +
       CHANNELS_LIST +
@@ -135,6 +149,14 @@ export const LEGAL_PAGES: LegalPage[] = [
     content:
       "<h2>Overview</h2>\n" +
       "<p>We understand that travel plans can change, and we have designed our cancellation policy to be fair and transparent. This policy applies to all direct bookings made through the Bishnu Bhaban website or by phone. Bookings made through third-party platforms are governed by that platform's own terms, which may differ.</p>\n\n" +
+      "<h2>Cancellation & Booking Adjustment</h2>\n" +
+      "<p>Cancellation charges will apply as per the cancellation policy applicable to the booking.</p>\n" +
+      "<p>Where permitted by the hotel, the eligible cancelled booking amount may be adjusted against a future stay within one year from the date of cancellation.</p>\n" +
+      "<p>The adjustment is subject to room availability and applicable tariff differences.</p>\n" +
+      "<p>Bookings made through third-party platforms may be subject to the cancellation and refund policies of the respective platform.</p>\n\n" +
+      "<h2>House Policies</h2>\n" +
+      "<p><strong>No Pets:</strong> Pets are not allowed anywhere on the hotel premises.</p>\n" +
+      "<p><strong>No Smoking:</strong> Smoking is strictly prohibited inside all rooms and indoor hotel areas.</p>\n\n" +
       "<h2>Cancellation Tiers</h2>\n" +
       "<p><strong>Free Cancellation (7 or More Days Before Check-in):</strong> If you cancel your reservation at least 7 days before your scheduled check-in date, you will receive a full refund of any prepaid amounts with no cancellation fee.</p>\n" +
       "<p><strong>Late Cancellation (2 to 7 Days Before Check-in):</strong> If you cancel between 2 and 7 days before your scheduled check-in, a charge equivalent to one night's stay may apply to your total reservation value.</p>\n" +

@@ -58,7 +58,7 @@ export default function FacilitiesPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <Image src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600" alt="" fill className="object-cover" sizes="100vw" priority />
+          <Image src="/bishnyhomeimage/homehero22.webp" alt="Facilities at Bishnu Bhaban" fill className="object-cover object-top" sizes="100vw" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/60 to-[#16213e]/50" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -89,7 +89,7 @@ export default function FacilitiesPage() {
                       <Image
                         src={
                           facility.image ||
-                          "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=800"
+                          "/bishnyhomeimage/fascilitypuridarsan.png"
                         }
                         alt={facility.name}
                         fill

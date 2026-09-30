@@ -17,10 +17,10 @@ export const EVENT_TYPES: EventType[] = [
       "Book multiple rooms under a single reservation, with one check-in and one check-out for everyone.",
     longDescription:
       "Most of our group bookings are families — parents, children, and grandparents travelling together for the temple, the beach, or a festival in between. The practical difficulty with a group is rarely the money; it is coordinating who holds the reservation, who pays, and who gets which room. We remove that problem by booking all your rooms under one name with a single contact, one check-in, and one invoice where you want it. Our multi-bed rooms are useful for families who would rather not split across properties, and if you are travelling with anyone who needs extra floor space or has mobility requirements, tell us before you book so we can allocate the right room rather than you finding out on arrival. During festival season, tell us early. Rooms in Puri fill up quickly from June to July and again over the winter months, and the West Gate area is busier than it is at other times of year.",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    image: "/bishnyhomeimage/homehero1.png",
     gallery: [
-      { id: "fam-img-1", src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800", alt: "Family group staying at Bishnu Bhaban" },
-      { id: "fam-img-2", src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800", alt: "Group of rooms booked together at Bishnu Bhaban" },
+      { id: "fam-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Family group staying at Bishnu Bhaban" },
+      { id: "fam-img-2", src: "/bishnyhomeimage/homehero1.png", alt: "Group of rooms booked together at Bishnu Bhaban" },
     ],
     capacity: 30,
     hallSize: "Multi-room group booking",
@@ -81,10 +81,10 @@ export const EVENT_TYPES: EventType[] = [
       "Accommodation for groups travelling the Odisha temple circuit, with help planning timings and logistics.",
     longDescription:
       "A significant part of our group bookings comes from families and small groups travelling the Odisha temple circuit — Puri, Konark, Dhauli, and Chilika along the way, often on tight schedules with fixed train or bus times. In that context, what matters is not decoration but reliability: a room that is ready when you arrive, luggage somewhere safe between checkout and your train, and a front desk that will let you leave before it formally opens if the schedule demands it. We do all three. Tell us your group size, your travel dates, and the times you need to be on the move, and we will be direct about what is possible. We are a modest property with a limited number of rooms, so we would rather confirm early and honestly than overcommit and disappoint you on arrival.",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    image: "/bishnyhomeimage/homehero1.png",
     gallery: [
-      { id: "pil-img-1", src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800", alt: "Pilgrim group arriving at Bishnu Bhaban" },
-      { id: "pil-img-2", src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800", alt: "Rooms arranged for a yatra group" },
+      { id: "pil-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Pilgrim group arriving at Bishnu Bhaban" },
+      { id: "pil-img-2", src: "/bishnyhomeimage/homehero1.png", alt: "Rooms arranged for a yatra group" },
     ],
     capacity: 25,
     hallSize: "Multi-room group booking",
@@ -145,9 +145,9 @@ export const EVENT_TYPES: EventType[] = [
       "For guests who need to work part of the day and see Puri part of the day. Ask us about the WiFi before you commit.",
     longDescription:
       "We are not a conference venue and we would not want to pretend otherwise. What we can offer is a quiet room with reliable WiFi in a city where a short break is genuinely restorative, which sometimes is what a team needs. If you are planning to work from Puri for a few days, contact us before booking and we will tell you exactly what the WiFi speeds and the power situation actually are, so you can decide whether it works for you. We will also tell you if the answer is no. For anything that requires a proper meeting room, AV setup, or printing facilities, we are happy to point you to venues in Puri that are set up for it rather than have you discover the gap on day one.",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
+    image: "/bishnyhomeimage/homehero1.png",
     gallery: [
-      { id: "corp-img-1", src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800", alt: "Working from a room at Bishnu Bhaban" },
+      { id: "corp-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Working from a room at Bishnu Bhaban" },
     ],
     capacity: 10,
     hallSize: "Rooms only, no meeting space",

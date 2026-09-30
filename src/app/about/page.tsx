@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1600" alt="About Bishnu Bhaban" fill className="object-cover" sizes="100vw" />
+          <Image src="/bishnyhomeimage/homehero1.png" alt="About Bishnu Bhaban" fill className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

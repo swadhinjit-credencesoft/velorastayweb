@@ -37,11 +37,11 @@
 
 .logoImage {
   width: auto;
-  height: 100px;
+  height: 110px;
   transition: height v.$duration-standard v.$ease-standard;
 
   .scrolled & {
-    height: 80px;
+    height: 90px;
   }
 }
 

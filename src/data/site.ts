@@ -51,7 +51,7 @@ export const SITE_ASSETS = {
   logoLight: "/bishnu-bhaban-logo1.png",
   favicon: "/favicon.ico",
   aboutImage:
-    "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600",
+    "/bishnyhomeimage/homehero1.png",
   roomsPreviewImage:
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
   eventsImage:
@@ -75,7 +75,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-2",
-    image: "/bishnyhomeimage/homehero2.png",
+    image: "/bishnyhomeimage/homehero22.webp",
     title: "Your Base for Puri Darshan",
     subtitle:
       "Hot water, free WiFi and a front desk open 7 AM to 11 PM, all within 50 to 280 metres of the temple complex.",

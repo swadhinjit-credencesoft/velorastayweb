@@ -170,7 +170,25 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-payment-02",
         question: "What is your cancellation policy?",
         answer:
-          "Free cancellation up to 7 days before check-in. Cancellations within 2 days of check-in may incur a charge of one night's stay, and no-shows are charged the full reservation amount. Group bookings may carry separate terms, which are communicated at the time of booking.",
+          "Cancellation charges will apply as per the cancellation policy applicable to the booking. Where permitted by the hotel, the eligible cancelled booking amount may be adjusted against a future stay within one year from the date of cancellation. The adjustment is subject to room availability and applicable tariff differences. Bookings made through third-party platforms may be subject to the cancellation and refund policies of the respective platform.",
+      },
+      {
+        id: "faq-payment-02-adjustment",
+        question: "Can my cancelled booking amount be adjusted for a future stay?",
+        answer:
+          "Where permitted by the hotel, the eligible cancelled booking amount may be adjusted against a future stay within one year from the date of cancellation. The adjustment is subject to room availability and applicable tariff differences.",
+      },
+      {
+        id: "faq-payment-pets",
+        question: "Are pets allowed at the property?",
+        answer:
+          "Pets are not allowed anywhere on the hotel premises.",
+      },
+      {
+        id: "faq-payment-smoking",
+        question: "Is smoking permitted in the hotel or rooms?",
+        answer:
+          "Smoking is strictly prohibited inside all rooms and indoor hotel areas.",
       },
       {
         id: "faq-payment-03",

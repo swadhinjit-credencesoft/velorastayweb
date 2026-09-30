@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -22,7 +22,7 @@ export default function GalleryPage() {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600"
+            src="/bishnyhomeimage/homehero1.png"
             alt="Bishnu Bhaban gallery"
             fill
             className="object-cover"

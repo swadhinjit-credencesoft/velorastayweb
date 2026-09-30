@@ -32,7 +32,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 const OG_IMAGE =
-  "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200&h=630&fit=crop";
+  `${SITE_INFO.url}/bishnyhomeimage/homehero1.png`;
 
 export const metadata: Metadata = {
   title: {

@@ -18,8 +18,8 @@ export default function JamindarFooter() {
                 <Image
                   src={jamindarData.logo}
                   alt={jamindarData.name}
-                  width={180}
-                  height={64}
+                  width={240}
+                  height={84}
                   className={styles.brandLogo}
                 />
               </Link>
