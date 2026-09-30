@@ -48,6 +48,12 @@
   margin: 0;
 }
 
+.roomsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
 .roomCard {
   display: grid;
   grid-template-columns: 1.1fr 1fr;

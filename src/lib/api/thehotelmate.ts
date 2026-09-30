@@ -1,9 +1,12 @@
 import type { VillaType } from "@/types";
+import type { JamindarRoom } from "@/data/jamindar";
 
 export const PROPERTY_ID = 3637;
+export const JAMINDAR_PROPERTY_ID = 3638;
 export const API_BASE = "https://api.thehotelmate.co/api/thm";
 
 export const BOOKING_ENGINE_URL = "https://bookone.io/Bishnu-Bhavan?bookingEngine=true";
+export const JAMINDAR_BOOKING_URL = "https://bookone.io/Jamindar-Nest?bookingEngine=true";
 
 interface TmImage {
   id: number | null;
@@ -36,6 +39,14 @@ interface TmAvailability {
   roomRatePlans: TmRatePlan[] | null;
 }
 
+export interface TmFacility {
+  id: number;
+  name: string;
+  description?: string | null;
+  logoUrl?: string;
+  imageUrl?: string;
+}
+
 export interface TmRoom {
   id: number;
   name: string;
@@ -45,6 +56,7 @@ export interface TmRoom {
   maximumOccupancy: number;
   noOfRooms: number;
   imageList: TmImage[] | null;
+  roomFacilities?: TmFacility[] | null;
   ratesAndAvailabilityDtos: TmAvailability[] | null;
 }
 
@@ -97,6 +109,13 @@ export function propertyAvailabilityUrl(fromDate?: string, toDate?: string): str
   return `${API_BASE}/checkAvailability/${PROPERTY_ID}?fromDate=${from}&toDate=${to}&noOfRooms=1&noOfPersons=1`;
 }
 
+export function jamindarAvailabilityUrl(fromDate?: string, toDate?: string): string {
+  const today = new Date();
+  const from = fromDate ?? formatApiDate(today);
+  const to = toDate ?? formatApiDate(addDays(today, 1));
+  return `${API_BASE}/checkAvailability/${JAMINDAR_PROPERTY_ID}?fromDate=${from}&toDate=${to}&noOfRooms=1&noOfPersons=1`;
+}
+
 let cachedProperty: TmProperty | null = null;
 let inflightPromise: Promise<TmProperty> | null = null;
 
@@ -129,6 +148,38 @@ export async function getProperty(options?: { refresh?: boolean }): Promise<TmPr
   return inflightPromise;
 }
 
+let cachedJamindarProperty: TmProperty | null = null;
+let inflightJamindarPromise: Promise<TmProperty> | null = null;
+
+export async function getJamindarProperty(options?: { refresh?: boolean }): Promise<TmProperty> {
+  if (!options?.refresh && cachedJamindarProperty) return cachedJamindarProperty;
+  if (inflightJamindarPromise) return inflightJamindarPromise;
+
+  inflightJamindarPromise = (async () => {
+    let data: TmProperty;
+    try {
+      const res = await fetch(jamindarAvailabilityUrl());
+      if (!res.ok) {
+        throw new Error(`Jamindar Nest API error: ${res.status} ${res.statusText}`);
+      }
+      data = (await res.json()) as TmProperty;
+    } catch (error) {
+      throw error instanceof Error
+        ? error
+        : new Error("Jamindar Nest API request failed");
+    }
+    if (!Array.isArray(data.roomList)) {
+      data = { ...data, roomList: [] };
+    }
+    cachedJamindarProperty = data;
+    return data;
+  })().finally(() => {
+    inflightJamindarPromise = null;
+  });
+
+  return inflightJamindarPromise;
+}
+
 function stripHtml(html: string): string {
   return html
     .replace(/<[^>]*>/g, " ")
@@ -140,11 +191,6 @@ function stripHtml(html: string): string {
     .replace(/&gt;/gi, ">")
     .replace(/\s+/g, " ")
     .trim();
-}
-
-function extractBhk(roomName: string): number {
-  const match = roomName.match(/(\d+)\s*BHK/i);
-  return match ? parseInt(match[1], 10) : 0;
 }
 
 const SERVICE_AMENITY_MAP: Record<string, string> = {
@@ -258,7 +304,7 @@ const ROOM_POLICIES = [
     id: "cancel",
     title: "Cancellation Policy",
     description:
-      "Free cancellation up to 7 days before check-in. Cancellations within 2 days may incur a charge of one night's stay.",
+      "Cancellation charges apply as per policy. Eligible cancelled amount can be adjusted against a future stay within one year from cancellation.",
   },
   {
     id: "guests",
@@ -268,8 +314,13 @@ const ROOM_POLICIES = [
   },
   {
     id: "pets",
-    title: "Pets",
-    description: "Pets are not permitted on the property.",
+    title: "No Pets",
+    description: "Pets are not allowed anywhere on the hotel premises.",
+  },
+  {
+    id: "smoking",
+    title: "No Smoking",
+    description: "Smoking is strictly prohibited inside all rooms and indoor areas.",
   },
 ];
 
@@ -371,4 +422,69 @@ export function mapPropertyVillas(property: TmProperty): VillaType[] {
   }
 
   return mapped.sort((a, b) => a.price - b.price);
+}
+
+export function mapJamindarRooms(property: TmProperty): JamindarRoom[] {
+  const defaultImages = [
+    "/images/jamindar/homeherojamidar.avif",
+    "/bishnyhomeimage/homehero1.png",
+  ];
+
+  if (!property.roomList || property.roomList.length === 0) {
+    return [];
+  }
+
+  return property.roomList.map((room, index) => {
+    const roomName = room.name || `Room ${index + 1}`;
+    const rawImages =
+      room.imageList && room.imageList.length > 0
+        ? room.imageList.map((img) => img.url)
+        : defaultImages;
+
+    const planAmount = pickPlanAmount(room);
+    const roomOnlyPrice =
+      typeof room.roomOnlyPrice === "number" && room.roomOnlyPrice > 0
+        ? room.roomOnlyPrice
+        : planAmount || 4000;
+
+    const maxOccupancy =
+      typeof room.maximumOccupancy === "number" && room.maximumOccupancy > 0
+        ? room.maximumOccupancy
+        : 3;
+
+    const rawFacilities =
+      room.roomFacilities && room.roomFacilities.length > 0
+        ? room.roomFacilities.map((f) => f.name)
+        : [
+            "Air Conditioning",
+            "24-Hour Front Desk",
+            "Hot Water Geyser",
+            "Free High-Speed WiFi",
+            "LED Television",
+            "Attached Bathroom",
+            "Daily Housekeeping",
+          ];
+
+    return {
+      id: `jamindar-room-${room.id ?? index}`,
+      name: roomName,
+      tagline: "Refined comfort with traditional hospitality",
+      description:
+        stripHtml(room.description || "") ||
+        "Our premiere room at Jamindar Nest offers a peaceful haven equipped with air conditioning, 24-hour hot water, high-speed WiFi, LED TV, and an attached modern bathroom.",
+      price: roomOnlyPrice,
+      currency: "₹",
+      priceUnit: "per night",
+      maxOccupancy,
+      bed: `${extractBedCount(roomName)} King / Twin Bedding`,
+      size: "Spacious Room",
+      image: rawImages[0],
+      images: rawImages,
+      amenities: rawFacilities,
+      cta: {
+        label: `BOOK ${roomName.toUpperCase()}`,
+        href: JAMINDAR_BOOKING_URL,
+      },
+    };
+  });
 }
