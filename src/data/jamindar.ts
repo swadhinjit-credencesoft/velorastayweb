@@ -66,6 +66,7 @@ export const jamindarData = {
   name: "Jamindar Nest",
   tagline: "A New Chapter of Heritage",
   slogan: "Stay Where Heritage Breathes",
+  logo: "/images/jamindar/logo.png",
   location: "Chakra Tirtha Road, Puri, Odisha 752002",
   geo: {
     latitude: 19.803225,
@@ -77,7 +78,7 @@ export const jamindarData = {
     title: "STAY WHERE HERITAGE BREATHES",
     description:
       "A refined stay experience shaped by warmth, character and the spirit of Odisha.",
-    image: "/images/jamindar/hero.webp",
+    image: "/images/jamindar/homeherojamidar.avif",
     ctaPrimary: {
       label: "BOOK YOUR STAY",
       href: jamindarBooking.url,
@@ -95,7 +96,7 @@ export const jamindarData = {
       "Jamindar Nest is imagined as a more intimate expression of hospitality — a place to slow down, settle in and experience the character of Odisha.",
     description:
       "Located on Chakratirtha Road in Puri, Jamindar Nest provides a peaceful sanctuary for families, couples, and travelers seeking rest and thoughtful hospitality. Situated close to the golden beach, sacred shrines, and vibrant local markets, it blends calm surroundings with effortless access to the wonders of Puri.",
-    image: "/images/jamindar/entrance.webp",
+    image: "/images/jamindar/homeherojamidar.avif",
     badge: "Boutique Heritage Stay",
   },
   cinematicStory: [
@@ -125,7 +126,7 @@ export const jamindarData = {
       step: "01",
       title: "ARRIVAL",
       desc: "Step off Chakra Tirtha Road into a calming sanctuary sheltered from the city's lively pulse.",
-      image: "/images/jamindar/entrance.webp",
+      image: "/images/jamindar/homeherojamidar.avif",
     },
     {
       step: "02",
@@ -281,7 +282,7 @@ export const jamindarData = {
       span: "tall",
     },
     {
-      src: "/images/jamindar/entrance.webp",
+      src: "/images/jamindar/homeherojamidar.avif",
       alt: "Entrance Portal",
       caption: "Quiet entrance courtyard",
       span: "wide",

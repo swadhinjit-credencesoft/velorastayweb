@@ -12,7 +12,7 @@ export default function JamindarPromo() {
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/jamindar/entrance.webp"
+                src="/images/jamindar/homeherojamidar.avif"
                 alt="Introducing Jamindar Nest by Bishnu Bhaban"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -27,7 +27,15 @@ export default function JamindarPromo() {
 
           <div className={styles.contentColumn}>
             <span className={styles.eyebrow}>INTRODUCING</span>
-            <h2 className={styles.heading}>JAMINDAR NEST</h2>
+            <div className={styles.promoBrand}>
+              <Image
+                src={jamindarData.logo}
+                alt={jamindarData.name}
+                width={180}
+                height={64}
+                className={styles.promoLogo}
+              />
+            </div>
             <span className={styles.tagline}>A NEW CHAPTER OF HERITAGE</span>
 
             <p className={styles.description}>

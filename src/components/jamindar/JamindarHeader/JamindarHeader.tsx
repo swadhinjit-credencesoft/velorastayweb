@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import { jamindarData, jamindarBooking } from "@/data/jamindar";
@@ -39,9 +40,15 @@ export default function JamindarHeader() {
       >
         <div className={styles.inner}>
           {/* Jamindar Brand Logo — left side only */}
-          <Link href="/jamindar-nest" className={styles.brand}>
-            <span className={styles.brandTitle}>JAMINDAR NEST</span>
-            <span className={styles.brandSubtitle}>PURI • BOUTIQUE HERITAGE</span>
+          <Link href="/jamindar-nest" className={styles.brand} aria-label={jamindarData.name}>
+            <Image
+              src={jamindarData.logo}
+              alt={jamindarData.name}
+              width={160}
+              height={56}
+              className={styles.brandLogo}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -96,10 +103,15 @@ export default function JamindarHeader() {
         aria-hidden={!mobileOpen}
       >
         <div className={styles.drawerHeader}>
-          <div className={styles.brand}>
-            <span className={styles.brandTitle}>JAMINDAR NEST</span>
-            <span className={styles.brandSubtitle}>PURI • BOUTIQUE HERITAGE</span>
-          </div>
+          <Link href="/jamindar-nest" className={styles.brand} onClick={() => setMobileOpen(false)} aria-label={jamindarData.name}>
+            <Image
+              src={jamindarData.logo}
+              alt={jamindarData.name}
+              width={140}
+              height={50}
+              className={styles.brandLogo}
+            />
+          </Link>
           <button
             type="button"
             className={styles.closeBtn}

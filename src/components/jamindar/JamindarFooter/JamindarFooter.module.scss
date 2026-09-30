@@ -35,6 +35,13 @@
   margin-bottom: 16px;
 }
 
+.brandLogo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+
 .brandTitle {
   font-family: $font-jamindar;
   font-size: 1.75rem;

@@ -78,7 +78,7 @@ export default function JamindarNestPage() {
   ]);
 
   return (
-    <div style={{ marginTop: "calc(-1 * var(--nav-height))" }}>
+    <>
       <JsonLd schema={hotelSchema} />
       <JsonLd schema={breadcrumbSchema} />
 
@@ -92,6 +92,6 @@ export default function JamindarNestPage() {
       <JamindarHorizon />
       <JamindarGallery />
       <JamindarCTA />
-    </div>
+    </>
   );
 }

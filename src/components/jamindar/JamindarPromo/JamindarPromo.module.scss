@@ -102,6 +102,17 @@
   margin-bottom: 8px;
 }
 
+.promoBrand {
+  margin: 4px 0 8px;
+}
+
+.promoLogo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+
 .heading {
   font-family: $font-jamindar;
   font-size: clamp(2rem, 3.8vw, 3.25rem);

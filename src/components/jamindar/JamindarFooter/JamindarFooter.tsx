@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import { jamindarData, jamindarBooking } from "@/data/jamindar";
@@ -13,9 +14,14 @@ export default function JamindarFooter() {
           <div className={styles.grid}>
             {/* Brand Column */}
             <div className={styles.brandCol}>
-              <Link href="/jamindar-nest" className={styles.brand}>
-                <span className={styles.brandTitle}>JAMINDAR NEST</span>
-                <span className={styles.brandSubtitle}>PURI • BOUTIQUE HERITAGE</span>
+              <Link href="/jamindar-nest" className={styles.brand} aria-label={jamindarData.name}>
+                <Image
+                  src={jamindarData.logo}
+                  alt={jamindarData.name}
+                  width={180}
+                  height={64}
+                  className={styles.brandLogo}
+                />
               </Link>
               <p className={styles.tagline}>
                 A refined stay experience shaped by warmth, character and the spirit of Odisha.

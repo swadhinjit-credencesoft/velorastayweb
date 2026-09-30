@@ -13,10 +13,35 @@
 
   &.scrolled {
     padding: 16px 32px;
-    background: rgba(25, 53, 45, 0.94);
+    background: #FEF5E6;
     backdrop-filter: blur(12px);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(181, 150, 90, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(181, 150, 90, 0.25);
+
+    // Dark text on light background when scrolled
+    .navLink {
+      color: $jamindar-charcoal;
+
+      &::after {
+        background-color: $jamindar-gold;
+      }
+
+      &:hover {
+        color: $jamindar-gold;
+      }
+    }
+
+    .backLink {
+      color: $jamindar-charcoal;
+      border-color: rgba(36, 34, 30, 0.3);
+      background: rgba(36, 34, 30, 0.06);
+
+      &:hover {
+        color: $jamindar-gold;
+        border-color: $jamindar-gold;
+        background: rgba(181, 150, 90, 0.1);
+      }
+    }
   }
 }
 
@@ -70,8 +95,20 @@
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   text-decoration: none;
+}
+
+.brandLogo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.05);
+  transition: transform $duration-fast ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .brandTitle {
