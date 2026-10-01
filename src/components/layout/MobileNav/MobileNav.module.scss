@@ -84,6 +84,74 @@
   @include m.custom-scrollbar;
 }
 
+.jamindarBanner {
+  padding: 8px v.$space-md 12px;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.jamindarCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #19352d;
+  border: 1px solid #b5965a;
+  border-radius: v.$radius-md;
+  text-decoration: none;
+  color: #f5f0e7;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background: #244b40;
+  }
+}
+
+.jamindarIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: v.$radius-full;
+  background: rgba(181, 150, 90, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b5965a;
+  flex-shrink: 0;
+}
+
+.jamindarBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.jamindarEyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #b5965a;
+  text-transform: uppercase;
+}
+
+.jamindarTitle {
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.jamindarSubtitle {
+  font-size: 11px;
+  color: rgba(245, 240, 231, 0.7);
+}
+
+.jamindarArrow {
+  color: #b5965a;
+  flex-shrink: 0;
+}
+
 .group {
   border-bottom: 1px solid v.$color-border;
 

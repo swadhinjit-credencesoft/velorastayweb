@@ -195,6 +195,10 @@
   .home & {
     background-color: #fff;
   }
+
+  .scrolled & {
+    background-color: v.$color-primary !important;
+  }
 }
 
 .hamburgerOpen {

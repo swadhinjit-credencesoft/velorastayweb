@@ -12,7 +12,7 @@
   transition: all $duration-standard ease;
 
   &.scrolled {
-    padding: 16px 32px;
+    padding: 14px 24px;
     background: #FEF5E6;
     backdrop-filter: blur(12px);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
@@ -33,17 +33,22 @@
 
     .backLink {
       color: $jamindar-charcoal;
-      border-color: rgba(36, 34, 30, 0.3);
+      border-color: rgba(36, 34, 30, 0.35);
       background: rgba(36, 34, 30, 0.06);
 
       &:hover {
-        color: $jamindar-gold;
-        border-color: $jamindar-gold;
-        background: rgba(181, 150, 90, 0.1);
+        color: $jamindar-forest;
+        border-color: $jamindar-forest;
+        background: rgba(181, 150, 90, 0.15);
       }
     }
+
+    .hamburger .line {
+      background-color: $jamindar-charcoal !important;
+    }
+
     .brandLogo {
-      height: 64px;
+      height: 60px;
     }
   }
 }
@@ -70,7 +75,7 @@
   font-family: $font-body;
   font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: $jamindar-ivory;
   text-decoration: none;
@@ -78,14 +83,14 @@
   border: 1px solid rgba(245, 240, 231, 0.45);
   border-radius: $radius-full;
   backdrop-filter: blur(6px);
-  background: rgba(25, 53, 45, 0.35);
+  background: rgba(25, 53, 45, 0.45);
   transition: all $duration-fast ease;
   white-space: nowrap;
 
   &:hover {
     color: $jamindar-gold;
     border-color: $jamindar-gold;
-    background: rgba(181, 150, 90, 0.12);
+    background: rgba(181, 150, 90, 0.18);
   }
 }
 
@@ -181,7 +186,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .ctaButton {
@@ -212,18 +217,18 @@
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 32px;
-  height: 24px;
+  width: 34px;
+  height: 26px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 2px 0;
   z-index: 101;
 }
 
 .line {
   width: 100%;
-  height: 2px;
+  height: 2.5px;
   background-color: $jamindar-ivory;
   border-radius: 2px;
   transition: all $duration-fast ease;
@@ -239,13 +244,14 @@
   height: 100vh;
   background: $jamindar-forest;
   z-index: 1000;
-  padding: 32px 24px;
+  padding: 28px 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
   border-left: 1px solid rgba(181, 150, 90, 0.3);
+  overflow-y: auto;
 
   &.mobileOpen {
     right: 0;
@@ -254,8 +260,9 @@
 
 .drawerHeader {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .closeBtn {
@@ -270,8 +277,79 @@
   }
 }
 
+// Switch to Bishnu Bhaban Card in Drawer
+.drawerBishnuLinkWrapper {
+  margin-bottom: 24px;
+}
+
+.drawerBishnuLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(245, 240, 231, 0.08);
+  border: 1px solid rgba(181, 150, 90, 0.35);
+  border-radius: $radius-md;
+  text-decoration: none;
+  color: $jamindar-ivory;
+  transition: all $duration-fast ease;
+
+  &:hover {
+    background: rgba(181, 150, 90, 0.18);
+    border-color: $jamindar-gold;
+  }
+}
+
+.drawerBishnuIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: $radius-full;
+  background: rgba(181, 150, 90, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $jamindar-gold;
+  flex-shrink: 0;
+}
+
+.drawerBishnuText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.drawerBishnuTag {
+  font-family: $font-body;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $jamindar-gold;
+}
+
+.drawerBishnuTitle {
+  font-family: $font-jamindar;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.drawerBishnuSubtitle {
+  font-family: $font-body;
+  font-size: 0.6875rem;
+  color: rgba(245, 240, 231, 0.7);
+}
+
+.drawerBishnuArrow {
+  color: $jamindar-gold;
+  flex-shrink: 0;
+}
+
 .drawerNav {
-  margin: auto 0;
+  margin: 10px 0 24px;
 }
 
 .drawerList {
@@ -280,12 +358,12 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .drawerLink {
   font-family: $font-jamindar;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: $jamindar-ivory;
@@ -300,15 +378,15 @@
 .drawerFooter {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-top: 24px;
+  gap: 16px;
+  padding-top: 20px;
   border-top: 1px solid rgba(245, 240, 231, 0.15);
 }
 
 .drawerContact {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contactItem {
@@ -353,9 +431,16 @@
 
 @media (max-width: $bp-lg) {
   .desktopNav,
-  .actions .ctaButton,
-  .backLink {
+  .actions .ctaButton {
     display: none;
+  }
+
+  .backLink {
+    display: inline-flex;
+    padding: 5px 10px;
+    font-size: 0.625rem;
+    letter-spacing: 0.12em;
+    gap: 4px;
   }
 
   .hamburger {
@@ -363,7 +448,7 @@
   }
 
   .header {
-    padding: 18px 20px;
+    padding: 14px 16px;
   }
 
   .brandDivider {
@@ -371,7 +456,16 @@
   }
 
   .brandLogo {
-    height: 60px;
+    height: 56px;
   }
 }
 
+@media (max-width: $bp-xs) {
+  .backLink span {
+    font-size: 0.58rem;
+  }
+
+  .brandLogo {
+    height: 48px;
+  }
+}

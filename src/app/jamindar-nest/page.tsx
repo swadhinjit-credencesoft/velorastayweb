@@ -85,8 +85,8 @@ export default function JamindarNestPage() {
       <JamindarHero />
       <JamindarIntro />
       <JamindarCinematicStory />
-      <JamindarJourney />
       <JamindarRooms />
+      <JamindarJourney />
       <JamindarExperience />
       <JamindarOdisha />
       <JamindarHorizon />

@@ -39,7 +39,7 @@ export default function JamindarHeader() {
         role="banner"
       >
         <div className={styles.inner}>
-          {/* Jamindar Brand Logo — left side only */}
+          {/* Jamindar Brand Logo */}
           <Link href="/jamindar-nest" className={styles.brand} aria-label={jamindarData.name}>
             <Image
               src={jamindarData.logo}
@@ -66,11 +66,11 @@ export default function JamindarHeader() {
 
           {/* Right Actions */}
           <div className={styles.actions}>
-            {/* Back to Bishnu Bhaban */}
-            <a href="/" className={styles.backLink} aria-label="Go to Bishnu Bhaban">
+            {/* Back to Bishnu Bhaban Link */}
+            <Link href="/" className={styles.backLink} aria-label="Go to Bishnu Bhaban">
               <Icon icon="lucide:arrow-left" width={13} height={13} />
               <span>BISHNU BHABAN</span>
-            </a>
+            </Link>
 
             <a
               href={jamindarBooking.url}
@@ -103,7 +103,12 @@ export default function JamindarHeader() {
         aria-hidden={!mobileOpen}
       >
         <div className={styles.drawerHeader}>
-          <Link href="/jamindar-nest" className={styles.brand} onClick={() => setMobileOpen(false)} aria-label={jamindarData.name}>
+          <Link
+            href="/jamindar-nest"
+            className={styles.brand}
+            onClick={() => setMobileOpen(false)}
+            aria-label={jamindarData.name}
+          >
             <Image
               src={jamindarData.logo}
               alt={jamindarData.name}
@@ -120,6 +125,26 @@ export default function JamindarHeader() {
           >
             <Icon icon="lucide:x" width={24} height={24} />
           </button>
+        </div>
+
+        {/* Prominent Switch to Bishnu Bhaban Card in Mobile Drawer */}
+        <div className={styles.drawerBishnuLinkWrapper}>
+          <Link
+            href="/"
+            className={styles.drawerBishnuLink}
+            onClick={() => setMobileOpen(false)}
+            aria-label="Back to Bishnu Bhaban"
+          >
+            <div className={styles.drawerBishnuIcon}>
+              <Icon icon="lucide:arrow-left" width={16} height={16} />
+            </div>
+            <div className={styles.drawerBishnuText}>
+              <span className={styles.drawerBishnuTag}>MAIN PROPERTY</span>
+              <span className={styles.drawerBishnuTitle}>BISHNU BHABAN</span>
+              <span className={styles.drawerBishnuSubtitle}>Near Jagannath Temple West Gate</span>
+            </div>
+            <Icon icon="lucide:chevron-right" width={14} height={14} className={styles.drawerBishnuArrow} />
+          </Link>
         </div>
 
         <nav className={styles.drawerNav}>
@@ -162,6 +187,7 @@ export default function JamindarHeader() {
           </a>
         </div>
       </div>
+
       {mobileOpen && (
         <div
           className={styles.backdrop}

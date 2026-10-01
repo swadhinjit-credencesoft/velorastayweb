@@ -9,7 +9,6 @@ import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setMobileNavOpen } from "@/store/slices/uiSlice";
-import type { NavGroup } from "@/types";
 import styles from "./MobileNav.module.scss";
 
 export default function MobileNav() {
@@ -83,6 +82,25 @@ export default function MobileNav() {
         </div>
 
         <div className={styles.links}>
+          {/* Jamindar Nest Heritage Feature Banner in Mobile Menu */}
+          <div className={styles.jamindarBanner}>
+            <Link
+              href="/jamindar-nest"
+              className={styles.jamindarCard}
+              onClick={close}
+            >
+              <div className={styles.jamindarIcon}>
+                <Icon icon="lucide:sparkles" width={16} height={16} />
+              </div>
+              <div className={styles.jamindarBody}>
+                <span className={styles.jamindarEyebrow}>HERITAGE BOUTIQUE STAY</span>
+                <span className={styles.jamindarTitle}>JAMINDAR NEST</span>
+                <span className={styles.jamindarSubtitle}>Chakra Tirtha Road, Puri</span>
+              </div>
+              <Icon icon="lucide:arrow-right" width={14} height={14} className={styles.jamindarArrow} />
+            </Link>
+          </div>
+
           {NAV_GROUPS.map((group) => (
             <div key={group.id} className={styles.group}>
               <div className={styles.groupHeader}>
