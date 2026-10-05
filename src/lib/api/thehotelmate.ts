@@ -1,11 +1,11 @@
-import type { VillaType } from "@/types";
+﻿import type { VillaType } from "@/types";
 import type { JamindarRoom } from "@/data/jamindar";
 
 export const PROPERTY_ID = 3637;
 export const JAMINDAR_PROPERTY_ID = 3638;
 export const API_BASE = "https://api.thehotelmate.co/api/thm";
 
-export const BOOKING_ENGINE_URL = "https://bookone.io/Bishnu-Bhavan?bookingEngine=true";
+export const BOOKING_ENGINE_URL = "https://bookone.io/bishnu-bhaban?bookingEngine=true";
 export const JAMINDAR_BOOKING_URL = "https://bookone.io/Jamindar-Nest?bookingEngine=true";
 
 interface TmImage {
@@ -371,7 +371,7 @@ export function mapRoomToVilla(
     longDescription: description,
     price: roomOnlyPrice,
     originalPrice,
-    currency: "₹",
+    currency: "â‚¹",
     priceUnit: "per night",
     bedrooms: Math.max(beds, 1),
     bathrooms: 1,
@@ -473,7 +473,7 @@ export function mapJamindarRooms(property: TmProperty): JamindarRoom[] {
         stripHtml(room.description || "") ||
         "Our premiere room at Jamindar Nest offers a peaceful haven equipped with air conditioning, 24-hour hot water, high-speed WiFi, LED TV, and an attached modern bathroom.",
       price: roomOnlyPrice,
-      currency: "₹",
+      currency: "â‚¹",
       priceUnit: "per night",
       maxOccupancy,
       bed: `${extractBedCount(roomName)} King / Twin Bedding`,

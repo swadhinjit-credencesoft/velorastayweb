@@ -1,4 +1,4 @@
-import Hero from "@/components/sections/Hero/Hero";
+﻿import Hero from "@/components/sections/Hero/Hero";
 import SearchBar from "@/components/sections/SearchBar/SearchBar";
 import FeaturedVillas from "@/components/sections/FeaturedVillas/FeaturedVillas";
 import JamindarPromo from "@/components/jamindar/JamindarPromo/JamindarPromo";
@@ -32,7 +32,7 @@ export default function HomePage() {
         heading="Book Your Room Today"
         description="A budget hotel fifty metres from the West Gate of the Jagannath Temple in Puri. Clean air-conditioned rooms, attached bathrooms, 24-hour hot water, and a front desk open from 7 AM to 11 PM."
         buttons={[
-          { label: "Book Now", href: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true", variant: "primary" },
+          { label: "Book Now", href: "https://bookone.io/bishnu-bhaban?bookingEngine=true", variant: "primary" },
           { label: "View Rooms", href: "/rooms", variant: "outline" },
         ]}
       />

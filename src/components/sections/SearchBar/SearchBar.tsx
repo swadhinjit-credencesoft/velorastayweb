@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -15,7 +15,7 @@ import { VILLAS } from "@/data/villas";
 import Icon from "@/components/Icon/Icon";
 import styles from "./SearchBar.module.scss";
 
-const BOOKING_BASE = "https://bookone.io/Bishnu-Bhavan";
+const BOOKING_BASE = "https://bookone.io/bishnu-bhaban";
 
 interface SearchBarProps {
   variant?: "hero" | "compact";

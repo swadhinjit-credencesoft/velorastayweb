@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Icon from "@/components/Icon/Icon";
@@ -16,7 +16,7 @@ export default function StickyBookButton({
   price,
   roomName,
   slug,
-  currency = "₹",
+  currency = "â‚¹",
 }: StickyBookButtonProps) {
   const { scrollY } = useScrollPosition();
   const [headerOffset, setHeaderOffset] = useState(0);
@@ -44,7 +44,7 @@ export default function StickyBookButton({
             <span className={styles.unit}>/ night</span>
           </span>
         </div>
-        <a href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" className={styles.bookBtn}>
+        <a href="https://bookone.io/bishnu-bhaban?bookingEngine=true" className={styles.bookBtn}>
           <Icon icon="lucide:calendar-check" width={16} height={16} />
           Book Now
         </a>

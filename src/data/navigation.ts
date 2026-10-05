@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   NavGroup,
   NavLink,
   FooterGroup,
@@ -245,7 +245,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const NAV_CTA = {
   label: "Book a Stay",
-  href: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true",
+  href: "https://bookone.io/bishnu-bhaban?bookingEngine=true",
   icon: "lucide:calendar-check",
 };
 
@@ -296,7 +296,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     links: [
       { id: "footer-contact", label: "Contact Us", href: "/contact" },
       { id: "footer-faq", label: "FAQs", href: "/faq" },
-      { id: "footer-booking", label: "Book Now", href: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true" },
+      { id: "footer-booking", label: "Book Now", href: "https://bookone.io/bishnu-bhaban?bookingEngine=true" },
       { id: "footer-cancellation", label: "Cancellation Policy", href: "/faq#cancellation" },
     ],
   },
@@ -338,7 +338,7 @@ export const FOOTER_CONTACT = {
     "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
   phone: "+91 9078922710",
   email: "reservation@thehotelmate.co",
-  hours: "Reception 7:00 AM – 11:00 PM",
+  hours: "Reception 7:00 AM â€“ 11:00 PM",
 };
 
-export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Bishnu Bhaban by D c developers. All rights reserved.`;
+export const FOOTER_COPYRIGHT = `Â© ${new Date().getFullYear()} Bishnu Bhaban by D c developers. All rights reserved.`;

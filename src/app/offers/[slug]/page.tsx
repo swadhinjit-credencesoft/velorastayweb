@@ -1,4 +1,4 @@
-// import type { Metadata } from "next";
+﻿// import type { Metadata } from "next";
 // import { notFound } from "next/navigation";
 // import Image from "next/image";
 // import Link from "next/link";
@@ -35,7 +35,7 @@ export function generateStaticParams() {
 // }
 
 export default function OfferDetailPage() {
-  return null; // Offers detail page disabled — kept (commented out) for later use
+  return null; // Offers detail page disabled â€” kept (commented out) for later use
   /* ORIGINAL PAGE CONTENT (disabled):
   const offer = getOfferBySlug(params.slug);
   if (!offer) notFound();
@@ -115,7 +115,7 @@ export default function OfferDetailPage() {
               <hr className={styles.sidebarDivider} />
               <p className={styles.sidebarLabel}>Use promo code</p>
               <p className={styles.sidebarCode}>{offer.code}</p>
-              <a href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" className={styles.bookBtn}>Book Now</a>
+              <a href="https://bookone.io/bishnu-bhaban?bookingEngine=true" className={styles.bookBtn}>Book Now</a>
               <Link href="/contact" className={styles.askBtn}>Ask a Question</Link>
             </div>
 

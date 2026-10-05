@@ -1,4 +1,4 @@
-import Icon from "@/components/Icon/Icon";
+﻿import Icon from "@/components/Icon/Icon";
 import Badge from "@/components/ui/Badge/Badge";
 import styles from "./VillaPricing.module.scss";
 
@@ -58,7 +58,7 @@ export default function VillaPricing({
       </div>
 
       <a
-        href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true"
+        href="https://bookone.io/bishnu-bhaban?bookingEngine=true"
         className={`${styles.bookButton} ${styles.accentButton}`}
         target="_blank"
         rel="noopener noreferrer"

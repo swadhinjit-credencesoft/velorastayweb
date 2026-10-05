@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -9,7 +9,7 @@ import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/sc
 export const metadata: Metadata = {
   title: "About Us | Bishnu Bhaban",
   description:
-    "Discover the story behind Bishnu Bhaban — a budget hotel at the West Gate of the Jagannath Temple in Puri. Learn about our mission and how we work.",
+    "Discover the story behind Bishnu Bhaban â€” a budget hotel at the West Gate of the Jagannath Temple in Puri. Learn about our mission and how we work.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Us | Bishnu Bhaban",
@@ -73,7 +73,7 @@ export default function AboutPage() {
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Experience the Bishnu Bhaban Difference</h2>
           <p className="mb-6 opacity-90">Book your stay and discover why guests keep coming back.</p>
-          <a href="https://bookone.io/Bishnu-Bhavan?bookingEngine=true" className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <a href="https://bookone.io/bishnu-bhaban?bookingEngine=true" className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Book Your Stay
           </a>
         </div>

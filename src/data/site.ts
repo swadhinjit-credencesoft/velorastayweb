@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   SiteInfo,
   SocialLinks,
   HeroSlide,
@@ -168,7 +168,7 @@ export const TRUST_BADGES: TrustBadge[] = [
     id: "badge-support",
     icon: "lucide:headphones",
     label: "Front Desk",
-    value: "7 AM – 11 PM",
+    value: "7 AM â€“ 11 PM",
   },
   {
     id: "badge-cctv",
@@ -199,10 +199,10 @@ export const NAV_LINKS: NavLink[] = [
   { id: "nav-contact", label: "Contact Us", href: "/contact" },
 ];
 
-export const BOOKING_URL = "https://bookone.io/Bishnu-Bhavan?bookingEngine=true";
+export const BOOKING_URL = "https://bookone.io/bishnu-bhaban?bookingEngine=true";
 
 export const NAV_CTA = {
   label: "Check Availability",
-  href: "https://bookone.io/Bishnu-Bhavan?bookingEngine=true",
+  href: "https://bookone.io/bishnu-bhaban?bookingEngine=true",
   icon: "lucide:calendar-check",
 };
