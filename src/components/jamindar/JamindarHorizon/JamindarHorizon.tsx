@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { unpinElement } from "@/utils/gsap";
+import { unpinElement, useIsomorphicLayoutEffect } from "@/utils/gsap";
 import { jamindarData } from "@/data/jamindar";
 import styles from "./JamindarHorizon.module.scss";
 
@@ -18,7 +18,7 @@ export default function JamindarHorizon() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const isMobile = window.innerWidth <= 1024;
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -27,12 +27,13 @@ export default function JamindarHorizon() {
     if (isMobile || prefersReducedMotion) return;
 
     const section = sectionRef.current;
+    let selfTrigger: ScrollTrigger | null = null;
 
     const ctx = gsap.context(() => {
       const totalScenes = horizon.scenes.length;
       if (!section) return;
 
-      ScrollTrigger.create({
+      selfTrigger = ScrollTrigger.create({
         trigger: section,
         start: "top top",
         end: () => `+=${totalScenes * 100}%`,
@@ -49,12 +50,14 @@ export default function JamindarHorizon() {
     }, sectionRef);
 
     return () => {
-      // Only revert this component's own tweens and ScrollTriggers.
-      // Never sweep ScrollTrigger.getAll(): that would also kill triggers owned
-      // by the page we navigate to next and throw a client-side exception.
+      // Destroy the pin before React detaches the host node.
+      // `kill(true)` reverts the pinned state immediately and synchronously.
+      if (selfTrigger) {
+        selfTrigger.kill(true);
+        selfTrigger = null;
+      }
       ctx.revert();
-      // This section is pinned; make sure no pin-spacer is left holding the node
-      // when React unmounts it, which would throw a removeChild NotFoundError.
+      // Safety net: guarantees React sees the DOM shape it rendered.
       unpinElement(section);
     };
   }, [horizon.scenes.length]);

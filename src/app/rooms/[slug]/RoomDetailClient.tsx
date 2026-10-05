@@ -141,10 +141,6 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
                   <span>Check-out</span>
                   <strong>{SITE_INFO.checkOut}</strong>
                 </div>
-                <div className={styles.bookingDetailRow}>
-                  <span>Free Cancellation</span>
-                  <strong>Up to 7 days</strong>
-                </div>
               </div>
             </div>
           </div>

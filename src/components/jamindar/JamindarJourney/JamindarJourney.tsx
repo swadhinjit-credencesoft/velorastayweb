@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { unpinElement } from "@/utils/gsap";
+import { unpinElement, useIsomorphicLayoutEffect } from "@/utils/gsap";
 import { jamindarData } from "@/data/jamindar";
 import styles from "./JamindarJourney.module.scss";
 
@@ -18,7 +18,7 @@ export default function JamindarJourney() {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const isMobile = window.innerWidth <= 1024;
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -29,6 +29,7 @@ export default function JamindarJourney() {
     }
 
     const section = sectionRef.current;
+    let selfTrigger: ScrollTrigger | null = null;
 
     const ctx = gsap.context(() => {
       const track = trackRef.current;
@@ -37,7 +38,7 @@ export default function JamindarJourney() {
 
       const totalScrollWidth = track.scrollWidth - window.innerWidth + 120;
 
-      gsap.to(track, {
+      const tween = gsap.to(track, {
         x: -totalScrollWidth,
         ease: "none",
         scrollTrigger: {
@@ -49,15 +50,19 @@ export default function JamindarJourney() {
           invalidateOnRefresh: true,
         },
       });
+
+      selfTrigger = tween.scrollTrigger ?? null;
     }, sectionRef);
 
     return () => {
-      // Only revert this component's own tweens and ScrollTriggers.
-      // Never sweep ScrollTrigger.getAll(): that would also kill triggers owned
-      // by the page we navigate to next and throw a client-side exception.
+      // Destroy the pin before React detaches the host node.
+      // `kill(true)` reverts the pinned state immediately and synchronously.
+      if (selfTrigger) {
+        selfTrigger.kill(true);
+        selfTrigger = null;
+      }
       ctx.revert();
-      // This section is pinned; make sure no pin-spacer is left holding the node
-      // when React unmounts it, which would throw a removeChild NotFoundError.
+      // Safety net: guarantees React sees the DOM shape it rendered.
       unpinElement(section);
     };
   }, []);

@@ -1,3 +1,5 @@
+import { useEffect, useLayoutEffect } from "react";
+
 /**
  * GSAP ScrollTrigger `pin: true` wraps the pinned element in a
  * `<div class="pin-spacer">` that React's virtual DOM knows nothing about.
@@ -27,3 +29,15 @@ export function unpinElement(el: HTMLElement | null): void {
   }
   parent.removeChild(spacer);
 }
+
+/**
+ * React runs `useEffect` destroy functions in a passive phase AFTER the whole
+ * commit (mutation) phase. By then React has already tried to `removeChild()` a
+ * still-pinned section, which throws NotFoundError.
+ *
+ * `useLayoutEffect` destroy runs synchronously during deletion, BEFORE the host
+ * node is detached, so GSAP can unwrap its pin-spacer in time. Resolve to
+ * `useEffect` on the server because layout effects do not run during SSR.
+ */
+export const useIsomorphicLayoutEffect =
+  typeof window === "undefined" ? useEffect : useLayoutEffect;

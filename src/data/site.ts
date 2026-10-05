@@ -30,8 +30,8 @@ export const SITE_INFO: SiteInfo = {
     latitude: 19.8040441,
     longitude: 85.8162435,
   },
-  checkIn: "2:00 PM",
-  checkOut: "11:00 AM",
+  checkIn: "08:00 AM",
+  checkOut: "09:00 AM",
   rating: 3.8,
   reviewCount: 534,
 };
