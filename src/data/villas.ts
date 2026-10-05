@@ -330,8 +330,9 @@ export const VILLAS: VillaType[] = [
       "Spacious 7 BHK villa featuring elegant bedrooms, comfortable living areas, modern amenities, and ample space for large families, reunions, or group vacations.",
     longDescription:
       "The Velora 7 (7 BHK) is the crown jewel of Velora Stays — an expansive villa designed for large families, reunions, and group vacations. With elegant bedrooms, comfortable living areas, and ample outdoor space near Pawna Lake.",
-    price: 21000,
-    originalPrice: 38500,
+    price: 38500,
+    originalPrice: undefined,
+
     currency: "₹",
     priceUnit: "per night",
     bedrooms: 7,
