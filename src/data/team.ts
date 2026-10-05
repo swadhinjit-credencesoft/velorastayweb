@@ -6,7 +6,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "The DC Developer Team",
     role: "Owners",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-    bio: "The group behind Bishnu Bhaban. Rather than build a larger hotel somewhere cheaper, they took a property at the West Gate of the Shree Jagannath Temple and set out to make a clean, well-run budget stay that pilgrims could rely on. Their focus has stayed on maintenance and honest pricing rather than expansion.",
+    bio: "The group behind Bishnu Bhaban. Rather than build a larger hotel somewhere cheaper, they took a property at the West Gate of the Shri Jagannath Temple and set out to make a clean, well-run budget stay that pilgrims could rely on. Their focus has stayed on maintenance and honest pricing rather than expansion.",
     social: [
       { platform: "instagram", url: "" },
     ],

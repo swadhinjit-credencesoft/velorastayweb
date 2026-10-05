@@ -90,7 +90,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-location-01",
         question: "How far is Bishnu Bhaban from Jagannath Temple?",
         answer:
-          "We are at the West Gate of the Shree Jagannath Temple, so the walk is roughly 50 to 280 metres depending on the entry point. This is the main reason most guests choose us over properties further along Grand Road.",
+          "We are at the West Gate of the Shri Jagannath Temple, so the walk is roughly 50 to 280 metres depending on the entry point. This is the main reason most guests choose us over properties further along Grand Road.",
       },
       {
         id: "faq-location-02",

@@ -21,7 +21,7 @@ const CHANNELS_LIST =
 
 const PROPERTY_BLOCK =
   "<h2>Our Property</h2>\n" +
-  "<p>Bishnu Bhaban is a single budget hotel property located at the West Gate of the Shree Jagannath Temple, Grand Road, Puri, Odisha 752001. It offers three categories of room: a Standard Room, a Deluxe Room, and a Multi-Bed Room, each with an attached western-style bathroom.</p>\n\n";
+  "<p>Bishnu Bhaban is a single budget hotel property located at the West Gate of the Shri Jagannath Temple, Grand Road, Puri, Odisha 752001. It offers three categories of room: a Standard Room, a Deluxe Room, and a Multi-Bed Room, each with an attached western-style bathroom.</p>\n\n";
 
 export const LEGAL_PAGES: LegalPage[] = [
   {

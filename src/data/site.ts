@@ -12,7 +12,7 @@ export const SITE_INFO: SiteInfo = {
   name: "Bishnu Bhaban",
   tagline: "Budget Hotel Near Jagannath Temple, Puri",
   description:
-    "Bishnu Bhaban is a budget-friendly hotel at the West Gate of the Shree Jagannath Temple in Puri, Odisha. Clean air-conditioned rooms with hot water, free WiFi, a front desk open 7 AM to 11 PM, daily housekeeping and CCTV security.",
+    "Bishnu Bhaban is a budget-friendly hotel at the West Gate of the Shri Jagannath Temple in Puri, Odisha. Clean air-conditioned rooms with hot water, free WiFi, a front desk open 7 AM to 11 PM, daily housekeeping and CCTV security.",
   url: "https://bishnubhaban.com",
   phone: "+91 9078922710",
   whatsapp: "+91 9861229896",
@@ -70,7 +70,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: "/bishnyhomeimage/homehero1.png",
     title: "Stay Steps from Jagannath Temple",
     subtitle:
-      "Clean, air-conditioned budget rooms at the West Gate of the Shree Jagannath Temple in Puri, within easy walking distance.",
+      "Clean, air-conditioned budget rooms at the West Gate of the Shri Jagannath Temple in Puri, within easy walking distance.",
     cta: { label: "Check Availability", href: "/contact" },
   },
   {

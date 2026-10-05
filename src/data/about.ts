@@ -27,7 +27,7 @@ export const ABOUT_STORY: AboutStory = {
   image:
     "/bishnyhomeimage/homehero1.png",
   description:
-    "Bishnu Bhaban sits at the West Gate of the Shree Jagannath Temple, and that single fact is the whole story. The people who run this hotel are not in the business of competing with five-star resorts a few kilometres down the beach. They are in the business of solving one problem properly: a lot of people come to Puri for early morning darshan, and they do not want to pay a premium or spend twenty minutes in an auto to reach the gate.\n\n" +
+    "Bishnu Bhaban sits at the West Gate of the Shri Jagannath Temple, and that single fact is the whole story. The people who run this hotel are not in the business of competing with five-star resorts a few kilometres down the beach. They are in the business of solving one problem properly: a lot of people come to Puri for early morning darshan, and they do not want to pay a premium or spend twenty minutes in an auto to reach the gate.\n\n" +
     "So the hotel is where it is because that is where it is useful. Roughly fifty metres from the West Gate, which means a guest leaving at 5:00 AM for the morning darshan is at the queue in a couple of minutes. The rooms are straightforward, air-conditioned, with an attached western-style bathroom and hot water at any hour, and they are cleaned every single day. There is a front desk running from 7:00 AM to 11:00 PM, which covers temple timings and almost all arrival and departure times, and if you are arriving after hours we will sort out check-in when you call ahead. There is CCTV, because guests leave luggage and go out for the day, and they should not have to think about it.\n\n" +
     "We are honest about what this is. Bishnu Bhaban is a budget hotel, not a luxury property, and we do not describe it as one. The rooms are simple, the mattresses are ordinary, the walls could use a fresh coat of paint. What we do commit to is the three things that actually decide whether a Puri trip went well: the location is unbeatable, the room is clean, and the price is fair. Guests tell us that in their reviews, including the ones that point out the plumbing on a busy morning, which is exactly the kind of feedback we would rather have than hide.\n\n" +
     "Most of our guests arrive from Odisha and neighbouring states, often travelling with family, often in groups. We accept group bookings and bookings with only male guests, and we do not make anyone feel like a problem for asking. Roughly five hundred people have left a review, and the average sits around four stars. We would rather be a well-known four-star budget hotel at the temple gate than an unknown five-star one somewhere further away.",
@@ -93,7 +93,7 @@ export const ABOUT_MILESTONES: Milestone[] = [
     year: "Opening",
     title: "Established at the West Gate",
     description:
-      "Bishnu Bhaban opened as a small budget property on Grand Road, at the West Gate of the Shree Jagannath Temple. The founding decision was location over scale: a smaller number of rooms, deliberately placed so that guests could reach the temple gate in minutes rather than by auto.",
+      "Bishnu Bhaban opened as a small budget property on Grand Road, at the West Gate of the Shri Jagannath Temple. The founding decision was location over scale: a smaller number of rooms, deliberately placed so that guests could reach the temple gate in minutes rather than by auto.",
   },
   {
     id: "milestone-front-desk",

@@ -4,14 +4,14 @@ export const NEARBY_CONTENT: SectionContent = {
   eyebrow: "Explore Puri",
   heading: "Temples, Beaches and Everything Around Puri",
   description:
-    "Most guests come to Puri for the Shree Jagannath Temple, and Bishnu Bhaban puts you at the West Gate so the walk is measured in minutes, not kilometres. Once you have done darshan, the beach, the other temples, and the markets are all within easy reach on foot or by a short auto ride.",
+    "Most guests come to Puri for the Shri Jagannath Temple, and Bishnu Bhaban puts you at the West Gate so the walk is measured in minutes, not kilometres. Once you have done darshan, the beach, the other temples, and the markets are all within easy reach on foot or by a short auto ride.",
 };
 
 export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
   {
     id: "jagannath-temple",
     slug: "jagannath-temple",
-    name: "Shree Jagannath Temple",
+    name: "Shri Jagannath Temple",
     description:
       "The reason most people are in Puri at all. One of the four Char Dham pilgrimage sites, the temple complex is where Bishnu Bhaban sits, right at the West Gate. The main darshan, the Swarna Vartika purification of the deities, and the evening aarti are all within a few minutes walk of the hotel, which is why our guests can be at the temple gate before the queue forms.",
     image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200",
@@ -26,7 +26,7 @@ export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
     ],
     tips:
       "Carry a cotton towel and be ready to remove footwear before entering. For early morning darshan, leave the hotel by 5:00 AM to be near the gate when it opens.",
-    mapUrl: "https://maps.google.com/?q=Shree+Jagannath+Temple+Puri",
+    mapUrl: "https://maps.google.com/?q=Shri +Jagannath+Temple+Puri",
   },
   {
     id: "vimala-temple",

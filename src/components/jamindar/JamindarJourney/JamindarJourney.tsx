@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { unpinElement } from "@/utils/gsap";
 import { jamindarData } from "@/data/jamindar";
 import styles from "./JamindarJourney.module.scss";
 
@@ -27,9 +28,10 @@ export default function JamindarJourney() {
       return;
     }
 
+    const section = sectionRef.current;
+
     const ctx = gsap.context(() => {
       const track = trackRef.current;
-      const section = sectionRef.current;
 
       if (!track || !section) return;
 
@@ -54,6 +56,9 @@ export default function JamindarJourney() {
       // Never sweep ScrollTrigger.getAll(): that would also kill triggers owned
       // by the page we navigate to next and throw a client-side exception.
       ctx.revert();
+      // This section is pinned; make sure no pin-spacer is left holding the node
+      // when React unmounts it, which would throw a removeChild NotFoundError.
+      unpinElement(section);
     };
   }, []);
 

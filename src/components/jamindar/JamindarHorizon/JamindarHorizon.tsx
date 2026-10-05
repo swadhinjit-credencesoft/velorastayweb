@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { unpinElement } from "@/utils/gsap";
 import { jamindarData } from "@/data/jamindar";
 import styles from "./JamindarHorizon.module.scss";
 
@@ -25,12 +26,14 @@ export default function JamindarHorizon() {
 
     if (isMobile || prefersReducedMotion) return;
 
+    const section = sectionRef.current;
+
     const ctx = gsap.context(() => {
       const totalScenes = horizon.scenes.length;
-      if (!sectionRef.current) return;
+      if (!section) return;
 
       ScrollTrigger.create({
-        trigger: sectionRef.current,
+        trigger: section,
         start: "top top",
         end: () => `+=${totalScenes * 100}%`,
         pin: true,
@@ -50,6 +53,9 @@ export default function JamindarHorizon() {
       // Never sweep ScrollTrigger.getAll(): that would also kill triggers owned
       // by the page we navigate to next and throw a client-side exception.
       ctx.revert();
+      // This section is pinned; make sure no pin-spacer is left holding the node
+      // when React unmounts it, which would throw a removeChild NotFoundError.
+      unpinElement(section);
     };
   }, [horizon.scenes.length]);
 

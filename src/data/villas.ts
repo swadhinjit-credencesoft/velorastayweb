@@ -4,7 +4,7 @@ export const VILLAS_CONTENT: SectionContent = {
   eyebrow: "Our Rooms",
   heading: "Clean, Comfortable Rooms Steps from Jagannath Temple",
   description:
-    "At Bishnu Bhaban, we keep things simple and dependable. Choose from air-conditioned and non-AC rooms, four-bed family options, and suites at the West Gate of the Shree Jagannath Temple in Puri.",
+    "At Bishnu Bhaban, we keep things simple and dependable. Choose from air-conditioned and non-AC rooms, four-bed family options, and suites at the West Gate of the Shri Jagannath Temple in Puri.",
 };
 
 export const VILLA_AMENITIES: VillaAmenity[] = [
@@ -25,7 +25,7 @@ export const VILLA_AMENITIES: VillaAmenity[] = [
 ];
 
 const ROOM_NEARBY = [
-  "Shree Jagannath Temple — 50 m walk",
+  "Shri Jagannath Temple — 50 m walk",
   "Vimala Temple — 400 m",
   "Puri Beach — 1.5 km",
 ];
@@ -297,7 +297,7 @@ const ROOM_SEEDS: RoomSeed[] = [
         id: "ddtf-faq-1",
         question: "What can we see from this room?",
         answer:
-          "This is our temple-facing configuration. The property sits at the West Gate of the Shree Jagannath Temple complex, so the view faces the temple side of the building.",
+          "This is our temple-facing configuration. The property sits at the West Gate of the Shri Jagannath Temple complex, so the view faces the temple side of the building.",
       },
     ],
     images: [

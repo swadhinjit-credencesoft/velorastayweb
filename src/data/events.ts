@@ -4,7 +4,7 @@ export const EVENTS_CONTENT: SectionContent = {
   eyebrow: "Events & Celebrations",
   heading: "Spacious Banquet & Event Venue in Puri",
   description:
-    "Host religious ceremonies, Upanayana (thread ceremonies), wedding party stays, yatra groups, and sacred celebrations at Bishnu Bhaban. Convenient banquet hall arrangements and multi-room group stays located right at the West Gate of Shree Jagannath Temple, Puri.",
+    "Host religious ceremonies, Upanayana (thread ceremonies), wedding party stays, yatra groups, and sacred celebrations at Bishnu Bhaban. Convenient banquet hall arrangements and multi-room group stays located right at the West Gate of Shri Jagannath Temple, Puri.",
 };
 
 export const EVENT_TYPES: EventType[] = [
@@ -16,7 +16,7 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Host sacred ceremonies, Upanayana, family functions, birthday gatherings, and post-darshan feasts with attached room bookings.",
     longDescription:
-      "Bishnu Bhaban offers a spacious banquet hall and gathering venue combined with comfortable multi-room accommodation just steps away from the Shree Jagannath Temple West Gate. Whether you are hosting a thread ceremony, religious puja, wedding party stay, or family feast, our property provides seamless group coordination, flexible seating arrangements, and dedicated front desk support from 7 AM to 11 PM.",
+      "Bishnu Bhaban offers a spacious banquet hall and gathering venue combined with comfortable multi-room accommodation just steps away from the Shri Jagannath Temple West Gate. Whether you are hosting a thread ceremony, religious puja, wedding party stay, or family feast, our property provides seamless group coordination, flexible seating arrangements, and dedicated front desk support from 7 AM to 11 PM.",
     image: "/bishnyhomeimage/homehero1.png",
     gallery: [
       { id: "bnq-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Banquet & Gathering Space at Bishnu Bhaban" },
@@ -84,7 +84,7 @@ export const EVENT_TYPES: EventType[] = [
     name: "Sacred Ceremonies & Upanayana",
     tagline: "Ideal sacred space for thread ceremonies, havans & ritual feasts",
     description:
-      "Perform traditional Vedic rituals, Bratopanayana, and puja ceremonies steps away from the sanctum of Shree Jagannath Temple.",
+      "Perform traditional Vedic rituals, Bratopanayana, and puja ceremonies steps away from the sanctum of Shri Jagannath Temple.",
     longDescription:
       "Performing sacred rites in Puri is deeply auspicious. Bishnu Bhaban's proximity to the West Gate of Jagannath Temple makes it the premier choice for families organizing Upanayana (Sacred Thread Ceremonies), Annaprashan, Sudhi Kriya, or special devotional havans. We provide dedicated space for pandits and family rituals, along with comfortable rooms for outstation guests and elders.",
     image: "/bishnyhomeimage/fascilitypuridarsan.png",

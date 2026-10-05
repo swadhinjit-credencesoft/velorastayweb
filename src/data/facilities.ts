@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Amenities",
   heading: "The Basics, Done Properly",
   description:
-    "Bishnu Bhaban is a budget hotel at the West Gate of the Shree Jagannath Temple, so we do not oversell the amenities list. What we do have is the set of things that actually decide whether a Puri stay works: air conditioning, hot water at any hour, an attached bathroom, daily housekeeping, a front desk open 7 AM to 11 PM, WiFi, and CCTV on a property where most guests leave their bags for the day.",
+    "Bishnu Bhaban is a budget hotel at the West Gate of the Shri Jagannath Temple, so we do not oversell the amenities list. What we do have is the set of things that actually decide whether a Puri stay works: air conditioning, hot water at any hour, an attached bathroom, daily housekeeping, a front desk open 7 AM to 11 PM, WiFi, and CCTV on a property where most guests leave their bags for the day.",
 };
 
 export const FACILITIES: Facility[] = [
@@ -13,7 +13,7 @@ export const FACILITIES: Facility[] = [
     slug: "temple-gate-location",
     name: "50 m from the West Gate",
     description:
-      "The single amenity we cannot compete on, because we own it. Bishnu Bhaban stands at the West Gate of the Shree Jagannath Temple, roughly 50 to 280 metres from the complex depending on the entry point. A guest leaving at 5:00 AM for the morning darshan is at the queue in a couple of minutes rather than in an auto.",
+      "The single amenity we cannot compete on, because we own it. Bishnu Bhaban stands at the West Gate of the Shri Jagannath Temple, roughly 50 to 280 metres from the complex depending on the entry point. A guest leaving at 5:00 AM for the morning darshan is at the queue in a couple of minutes rather than in an auto.",
     icon: "lucide:landmark",
     image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200",
     images: [

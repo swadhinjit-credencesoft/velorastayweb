@@ -315,7 +315,7 @@ function taglineForRoomName(roomName: string): string {
 }
 
 const ROOM_NEARBY = [
-  "Shree Jagannath Temple - 50 m walk",
+  "Shri Jagannath Temple - 50 m walk",
   "Puri Beach - 1.5 km",
   "Vimala Temple - 400 m",
 ];
