@@ -2,17 +2,17 @@ import type { VillaType } from "@/types";
 
 export const PROPERTY_ID = 3607;
 export const API_BASE = "https://api.thehotelmate.co/api/thm";
-
 export const BOOKING_ENGINE_URL = "https://bookone.io/Velora-Stays?bookingEngine=true";
 
-interface TmImage {
+export interface TmImage {
   id: number | null;
+  name?: string | null;
   url: string;
   description?: string | null;
   mainImage?: boolean | null;
 }
 
-interface TmRatePlan {
+export interface TmRatePlan {
   code: string;
   name: string;
   effectiveDate: string;
@@ -25,55 +25,61 @@ interface TmRatePlan {
   extraChargePerChild: number;
 }
 
-interface TmAvailability {
+export interface TmAvailability {
   id: number;
-  date: string;
-  price: number;
-  totalNoRooms: number;
-  noOfBooked: number;
-  noOfAvailable: number;
-  status: string;
-  roomRatePlans: TmRatePlan[] | null;
+  date?: string;
+  price?: number;
+  totalNoRooms?: number;
+  noOfBooked?: number;
+  noOfAvailable?: number;
+  status?: string;
+  roomRatePlans?: TmRatePlan[] | null;
 }
 
 export interface TmRoom {
-  id: number;
-  name: string;
+  id?: number;
+  roomId?: number;
+  name?: string;
+  roomName?: string;
   description?: string | null;
-  roomOnlyPrice: number;
-  minimumOccupancy: number;
-  maximumOccupancy: number;
-  noOfRooms: number;
-  imageList: TmImage[] | null;
-  ratesAndAvailabilityDtos: TmAvailability[] | null;
+  roomDetails?: string | null;
+  roomOnlyPrice?: number;
+  minimumOccupancy?: number;
+  maximumOccupancy?: number;
+  noOfRooms?: number;
+  imageList?: TmImage[] | null;
+  ratesAndAvailabilityDtos?: TmAvailability[] | null;
+  roomFacilities?: { id?: number; name?: string }[];
 }
 
 export interface TmService {
-  id: number;
+  id?: number | null;
   name: string;
   description?: string | null;
   serviceType?: string | null;
+  servicePrice?: number | null;
+  displayLabel?: string | null;
 }
 
 export interface TmProperty {
   id: number;
   name: string;
-  shortName: string;
-  email: string;
-  slogan: string;
-  landphone: string;
-  mobile: string;
-  whatsApp: string;
-  website: string;
-  localCurrency: string;
-  latitude: string;
-  longitude: string;
-  gstNumber: string;
+  shortName?: string;
+  email?: string;
+  slogan?: string;
+  landphone?: string;
+  mobile?: string;
+  whatsApp?: string;
+  website?: string;
+  localCurrency?: string;
+  latitude?: string;
+  longitude?: string;
+  gstNumber?: string;
   businessDescription?: string | null;
-  minimumRoooPrice: number;
-  imageList: TmImage[];
-  roomList: TmRoom[];
-  propertyServicesList: TmService[];
+  minimumRoooPrice?: number;
+  imageList?: TmImage[];
+  roomList?: TmRoom[];
+  propertyServicesList?: TmService[];
 }
 
 function pad(num: number): string {
@@ -107,7 +113,9 @@ export async function getProperty(options?: { refresh?: boolean }): Promise<TmPr
   inflightPromise = (async () => {
     let data: TmProperty;
     try {
-      const res = await fetch(propertyAvailabilityUrl());
+      const res = await fetch(propertyAvailabilityUrl(), {
+        next: { revalidate: 60 },
+      });
       if (!res.ok) {
         throw new Error(`Velora API error: ${res.status} ${res.statusText}`);
       }
@@ -129,7 +137,7 @@ export async function getProperty(options?: { refresh?: boolean }): Promise<TmPr
   return inflightPromise;
 }
 
-function stripHtml(html: string): string {
+export function stripHtml(html: string): string {
   return html
     .replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;/gi, " ")
@@ -142,7 +150,7 @@ function stripHtml(html: string): string {
     .trim();
 }
 
-function extractBhk(roomName: string): number {
+export function extractBhk(roomName: string): number {
   const match = roomName.match(/(\d+)\s*BHK/i);
   return match ? parseInt(match[1], 10) : 0;
 }
@@ -157,12 +165,19 @@ const SERVICE_AMENITY_MAP: Record<string, string> = {
 };
 
 const BASE_VILLA_AMENITIES = [
+  "pool",
   "ac",
   "kitchen",
   "refrigerator",
   "hot-water",
   "premium-bedding",
   "dining-area",
+  "wifi",
+  "parking",
+  "lake-view",
+  "lawn",
+  "bonfire",
+  "bbq",
 ];
 
 function buildAmenityIds(services: TmService[]): string[] {
@@ -195,10 +210,26 @@ const VILLA_TAGS: Record<number, string> = {
   7: "Premium Choice",
 };
 
-const VILLA_NEARBY = [
-  "Pawna Lake - 5 min Drive",
-  "Lonavala Market - 50min drive",
-]
+function extractNearbyFromServices(services: TmService[]): string[] {
+  const nearby = services
+    .filter(
+      (s) =>
+        s.serviceType === "DistanceRailway" ||
+        s.serviceType === "RestaurantHotel" ||
+        (s.name && s.name.includes("km"))
+    )
+    .map((s) => s.name.trim());
+
+  if (nearby.length === 0) {
+    return [
+      "Pawna Lake — 5 min drive",
+      "Lohagad Fort — 14.4 km",
+      "Dinosaur's Park — 12.2 km",
+      "Lonavala Market — 25 min drive",
+    ];
+  }
+  return ["Pawna Lake — 5 min drive", ...nearby];
+}
 
 const VILLA_POLICIES = [
   {
@@ -238,58 +269,102 @@ function isAvailable(room: TmRoom): boolean {
 }
 
 export function mapRoomToVilla(room: TmRoom, services: TmService[], index: number): VillaType {
-  const roomName = room.name ?? `Villa ${index + 1}`;
+  const roomName = (room.name || room.roomName || `Villa ${index + 1}`).trim();
+  const roomId = room.id ?? room.roomId ?? index;
   const bedrooms = extractBhk(roomName) || 0;
-  const description = stripHtml(room.description || `${roomName} at Velora Stays`);
+  const rawDesc = room.description || room.roomDetails || `${roomName} at Velora Stays`;
+  const description = stripHtml(rawDesc);
   const planAmount = pickPlanAmount(room);
   const roomOnlyPrice = typeof room.roomOnlyPrice === "number" ? room.roomOnlyPrice : 0;
-  const originalPrice =
-    planAmount && planAmount > roomOnlyPrice ? planAmount : undefined;
+
+  const images = (room.imageList ?? [])
+    .filter((img) => Boolean(img?.url))
+    .map((img, i) => ({
+      id: `${roomId}-${i}`,
+      src: img.url,
+      alt: `${roomName} photo ${i + 1} at Velora Stays near Pawna Lake`,
+      caption: `${roomName} - View ${i + 1}`,
+    }));
 
   return {
-    id: `room-${room.id ?? index}`,
-    slug: SLUG_BY_BHK[bedrooms] ?? roomName.toLowerCase().replace(/\s+/g, "-"),
+    id: `room-${roomId}`,
+    slug: SLUG_BY_BHK[bedrooms] ?? roomName.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
     name: roomName,
     tagline: VILLA_TAGLINES[bedrooms] ?? `${roomName} at Velora Stays`,
     description,
     longDescription: description,
-    price: roomOnlyPrice,
-    originalPrice,
+    // Use the rate plan amount as the definitive price when available (e.g. 38500 for 7BHK)
+    // Fall back to roomOnlyPrice only when no rate plan exists
+    price: planAmount || roomOnlyPrice || 0,
+    originalPrice: undefined,
+
     currency: "₹",
     priceUnit: "per night",
     bedrooms,
     bathrooms: Math.max(1, bedrooms),
-    maxOccupancy: room.maximumOccupancy ?? bedrooms * 2,
-    images: (room.imageList ?? []).map((img, i) => ({
-      id: `${room.id ?? index}-${i}`,
-      src: img.url,
-      alt: `${roomName} at Velora Stays`,
-      caption: roomName,
-    })),
+    maxOccupancy: room.maximumOccupancy ?? (bedrooms > 0 ? bedrooms * 2 : 6),
+    images: images.length > 0 ? images : [
+      {
+        id: `${roomId}-fallback`,
+        src: "/heroimg2.jpeg",
+        alt: roomName,
+        caption: roomName,
+      },
+    ],
     amenities: buildAmenityIds(services),
     highlights: [
-      `${bedrooms} BHK private villa`,
-      `Hosts up to ${room.maximumOccupancy ?? bedrooms * 2} guests`,
-      "Private pool and lawn access",
-      " Central Kitchen",
+      `${bedrooms} BHK luxury private villa`,
+      `Accommodates up to ${room.maximumOccupancy ?? (bedrooms * 2)} guests`,
+      "Private swimming pool & living lawn",
+      "Central Kitchen with modern appliances",
+      "Scenic Lake & Mountain views",
     ],
     features: [
-      "King-size beds with premium linens",
-      "Individual AC in every bedroom",
-      "High-speed WiFi",
-      "Dedicated caretaker on site",
+      "King-size beds with premium luxury linens",
+      "Individual AC in all bedrooms",
+      "Smart TV & high-speed WiFi",
+      "Dedicated on-site caretaker & daily housekeeping",
+      "Bonfire & BBQ setup available",
     ],
     policies: VILLA_POLICIES,
-    faqs: [],
-    nearby: VILLA_NEARBY,
+    faqs: [
+      {
+        id: `faq-${roomId}-1`,
+        question: `What are the check-in and check-out timings for ${roomName}?`,
+        answer: "Check-in is from 2:00 PM and check-out is by 11:00 AM.",
+      },
+      {
+        id: `faq-${roomId}-2`,
+        question: "Is swimming pool access private?",
+        answer: "Yes, you enjoy dedicated private pool access during your stay.",
+      },
+    ],
+    nearby: extractNearbyFromServices(services),
     popular: true,
     available: isAvailable(room),
-    tag: VILLA_TAGS[bedrooms],
+    tag: VILLA_TAGS[bedrooms] || "Luxury Villa",
   };
 }
 
 export function mapPropertyVillas(property: TmProperty): VillaType[] {
   return (property.roomList ?? [])
     .map((room, index) => mapRoomToVilla(room, property.propertyServicesList ?? [], index))
-    .sort((a, b) => a.price - b.price);
+    .sort((a, b) => a.bedrooms - b.bedrooms || a.price - b.price);
+}
+
+export async function getDynamicVillas(): Promise<VillaType[]> {
+  try {
+    const property = await getProperty();
+    const villas = mapPropertyVillas(property);
+    if (villas.length > 0) return villas;
+  } catch (err) {
+    console.error("Failed to load dynamic villas from TheHotelMate API:", err);
+  }
+  const { VILLAS } = await import("@/data/villas");
+  return VILLAS;
+}
+
+export async function getDynamicVillaBySlug(slug: string): Promise<VillaType | undefined> {
+  const villas = await getDynamicVillas();
+  return villas.find((v) => v.slug === slug);
 }

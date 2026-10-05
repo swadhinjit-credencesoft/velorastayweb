@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
+import { useVeloraData } from "@/hooks/useVeloraData";
 import { VILLAS } from "@/data/villas";
 
 export default function BookingForm() {
   const [step, setStep] = useState(1);
+  const { villas, error } = useVeloraData();
+  const activeVillas = !error && villas.length > 0 ? villas : VILLAS;
+
   const [form, setForm] = useState({
     checkIn: "", checkOut: "", roomType: "", adults: "1", children: "0",
     firstName: "", lastName: "", email: "", phone: "", specialRequests: "",
@@ -52,20 +56,24 @@ export default function BookingForm() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Villa Type</label>
                   <select className="w-full border rounded-lg px-4 py-3" value={form.roomType} onChange={(e) => setForm({ ...form, roomType: e.target.value })}>
                     <option value="">Select Villa</option>
-                    {VILLAS.map((r) => (<option key={r.id} value={r.slug}>{r.name}</option>))}
+                    {activeVillas.map((r) => (
+                      <option key={r.id} value={r.slug}>
+                        {r.name} — ₹{r.price.toLocaleString("en-IN")}/night
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Adults</label>
                     <select className="w-full border rounded-lg px-4 py-3" value={form.adults} onChange={(e) => setForm({ ...form, adults: e.target.value })}>
-                      {[1, 2, 3, 4].map((n) => <option key={n} value={n}>{n}</option>)}
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => <option key={n} value={n}>{n}</option>)}
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Children</label>
                     <select className="w-full border rounded-lg px-4 py-3" value={form.children} onChange={(e) => setForm({ ...form, children: e.target.value })}>
-                      {[0, 1, 2, 3].map((n) => <option key={n} value={n}>{n}</option>)}
+                      {[0, 1, 2, 3, 4, 5].map((n) => <option key={n} value={n}>{n}</option>)}
                     </select>
                   </div>
                 </div>

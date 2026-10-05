@@ -43,7 +43,7 @@ export function generateHotelSchema() {
     checkoutTime: SITE_INFO.checkOut,
     image: "/schemaimage.jpeg",
     sameAs: [
-      "https://www.instagram.com/the_explorerstays",
+      "https://www.instagram.com",
     ],
   };
 }

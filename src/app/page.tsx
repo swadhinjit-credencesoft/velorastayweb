@@ -4,26 +4,29 @@ import FeaturedVillas from "@/components/sections/FeaturedVillas/FeaturedVillas"
 import WhyChooseUs from "@/components/sections/WhyChooseUs/WhyChooseUs";
 import Testimonials from "@/components/sections/Testimonials/Testimonials";
 import Gallery from "@/components/sections/Gallery/Gallery";
-import Dining from "@/components/sections/Dining/Dining";
 import NearbyAttractions from "@/components/sections/NearbyAttractions/NearbyAttractions";
 import FAQ from "@/components/sections/FAQ/FAQ";
 import CTA from "@/components/sections/CTA/CTA";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateHotelSchema, generateWebsiteSchema } from "@/utils/schema";
-import { SITE_INFO } from "@/data/site";
+import { getDynamicVillas } from "@/lib/api/thehotelmate";
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const villas = await getDynamicVillas();
+
   return (
     <>
       <JsonLd schema={generateHotelSchema()} />
       <JsonLd schema={generateWebsiteSchema()} />
       <Hero>
-        <SearchBar />
+        <SearchBar serverVillas={villas} />
       </Hero>
-      <FeaturedVillas />
+      <FeaturedVillas serverVillas={villas} />
       <WhyChooseUs />
       <Testimonials />
-      <Gallery />
+      <Gallery serverVillas={villas} />
       {/* <Dining /> */}
       <NearbyAttractions />
       <FAQ />

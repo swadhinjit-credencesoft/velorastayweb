@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_INFO } from "@/data/site";
-import { VILLAS } from "@/data/villas";
+import { getDynamicVillas } from "@/lib/api/thehotelmate";
 import { FACILITIES } from "@/data/facilities";
 import { NEARBY_ATTRACTIONS } from "@/data/nearby";
 import { TOUR_PACKAGES } from "@/data/tours";
@@ -71,12 +71,14 @@ function entry(
   };
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [villas] = await Promise.all([getDynamicVillas()]);
+
   const staticEntries = staticPages.map((page) =>
     entry(page.path, page.priority, page.changeFrequency)
   );
 
-  const villaEntries = VILLAS.map((villa) =>
+  const villaEntries = villas.map((villa) =>
     entry(`/villas/${villa.slug}`, 0.9, "weekly")
   );
 

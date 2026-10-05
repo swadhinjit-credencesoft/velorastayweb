@@ -11,14 +11,15 @@ import {
   setSelectedRoomId,
 } from "@/store/slices/bookingSlice";
 import { useVeloraData } from "@/hooks/useVeloraData";
-import { VILLAS } from "@/data/villas";
 import Icon from "@/components/Icon/Icon";
+import type { VillaType } from "@/types";
 import styles from "./SearchBar.module.scss";
 
 const BOOKING_BASE = "https://bookone.io/Velora-Stays";
 
 interface SearchBarProps {
   variant?: "hero" | "compact";
+  serverVillas?: VillaType[];
 }
 
 function buildBookingUrl(
@@ -65,7 +66,7 @@ function buildBookingUrl(
   return `${BOOKING_BASE}?${params.toString()}`;
 }
 
-export default function SearchBar({ variant = "hero" }: SearchBarProps) {
+export default function SearchBar({ variant = "hero", serverVillas = [] }: SearchBarProps) {
   const dispatch = useAppDispatch();
   const { checkIn, checkOut, adults, children, rooms, selectedRoomId } =
     useAppSelector((state) => state.booking);
@@ -80,8 +81,11 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
     }
   }, [checkIn, dispatch]);
 
-  const { villas, error } = useVeloraData();
-  const villaOptions = [...(!error && villas.length > 0 ? villas : VILLAS)]
+  // Use live villas if available, else server-rendered villas — never hard-coded stale data
+  const { villas: liveVillas } = useVeloraData();
+  const activeVillas = liveVillas.length > 0 ? liveVillas : serverVillas;
+
+  const villaOptions = [...activeVillas]
     .sort((a, b) => a.bedrooms - b.bedrooms)
     .map((villa) => ({ value: villa.slug, label: villa.name }));
 

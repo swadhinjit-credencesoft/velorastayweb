@@ -4,20 +4,28 @@ import { useState } from "react";
 import Image from "next/image";
 import Icon from "@/components/Icon/Icon";
 import Modal from "@/components/ui/Modal/Modal";
-import { VILLAS } from "@/data/villas";
+import { useVeloraData } from "@/hooks/useVeloraData";
+import type { VillaType } from "@/types";
 import styles from "./Gallery.module.scss";
 
-const VILLA_IMAGES = VILLAS.flatMap((villa) =>
-  villa.images.map((img) => ({
-    id: `${villa.slug}-${img.id}`,
-    src: img.src,
-    alt: img.alt,
-    caption: img.caption ? `${villa.name.trim()} — ${img.caption}` : villa.name.trim(),
-  }))
-);
+interface GalleryProps {
+  serverVillas?: VillaType[];
+}
 
-export default function Gallery() {
+export default function Gallery({ serverVillas = [] }: GalleryProps) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const { villas: liveVillas } = useVeloraData();
+
+  const activeVillas = liveVillas.length > 0 ? liveVillas : serverVillas;
+
+  const villaImages = activeVillas.flatMap((villa) =>
+    (villa.images || []).map((img, idx) => ({
+      id: `${villa.slug}-${img.id || idx}`,
+      src: img.src,
+      alt: img.alt || villa.name,
+      caption: img.caption ? `${villa.name.trim()} — ${img.caption}` : villa.name.trim(),
+    }))
+  ).slice(0, 12);
 
   return (
     <section className={styles.section}>
@@ -28,7 +36,7 @@ export default function Gallery() {
         </div>
 
         <div className={styles.grid}>
-          {VILLA_IMAGES.map((image) => (
+          {villaImages.map((image) => (
             <button
               key={image.id}
               className={styles.gridItem}

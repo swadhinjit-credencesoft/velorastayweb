@@ -5,17 +5,20 @@ import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
-import { VILLAS, getVillaBySlug } from "@/data/villas";
+import { getDynamicVillas, getDynamicVillaBySlug } from "@/lib/api/thehotelmate";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
+
+export const revalidate = 60;
 
 type Props = { params: { slug: string } };
 
-export function generateStaticParams() {
-  return VILLAS.map((villa) => ({ slug: villa.slug }));
+export async function generateStaticParams() {
+  const villas = await getDynamicVillas();
+  return villas.map((villa) => ({ slug: villa.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const villa = getVillaBySlug(params.slug);
+  const villa = await getDynamicVillaBySlug(params.slug);
   if (!villa) return { title: "Gallery Not Found" };
   return {
     title: `${villa.name} Gallery | Velora Stays`,
@@ -30,11 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function VillaGalleryPage({ params }: Props) {
-  const villa = getVillaBySlug(params.slug);
+export default async function VillaGalleryPage({ params }: Props) {
+  const [villa, allVillas] = await Promise.all([
+    getDynamicVillaBySlug(params.slug),
+    getDynamicVillas(),
+  ]);
+
   if (!villa) notFound();
 
-  const otherVillas = VILLAS.filter((v) => v.slug !== villa.slug);
+  const otherVillas = allVillas.filter((v) => v.slug !== villa.slug);
 
   const breadcrumbs = [
     { label: "Home", href: "/" },

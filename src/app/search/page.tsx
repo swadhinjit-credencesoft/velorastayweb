@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { getDynamicVillas } from "@/lib/api/thehotelmate";
 import SearchForm from "./SearchForm";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Search | Velora Stays",
@@ -14,6 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SearchPage() {
-  return <SearchForm />;
+export default async function SearchPage() {
+  const villas = await getDynamicVillas();
+  return <SearchForm serverVillas={villas} />;
 }

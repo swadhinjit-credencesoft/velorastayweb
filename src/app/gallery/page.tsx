@@ -1,11 +1,14 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
+import { getDynamicVillas } from "@/lib/api/thehotelmate";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import GalleryVillaSections from "./GalleryVillaSections";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Photo Gallery | Velora Stays",
@@ -14,7 +17,9 @@ export const metadata: Metadata = {
   openGraph: { title: "Photo Gallery | Velora Stays", description: "Take a visual tour of Velora Stays through our photo gallery." },
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const villas = await getDynamicVillas();
+
   return (
     <>
       <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Gallery", url: "/gallery" }])} />
@@ -37,7 +42,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <GalleryVillaSections />
+      <GalleryVillaSections serverVillas={villas} />
 
       {GALLERY_CATEGORIES.map((cat) => {
         const images = GALLERY_IMAGES.filter((img) => img.category === cat.slug);

@@ -4,13 +4,20 @@ import Button from "@/components/ui/Button/Button";
 import RoomCard from "@/components/ui/Card/Card";
 import PriceDisplay from "@/components/ui/PriceDisplay/PriceDisplay";
 import Icon from "@/components/Icon/Icon";
-import { VILLAS_CONTENT, getPopularVillas } from "@/data/villas";
+import { VILLAS_CONTENT } from "@/data/villas";
 import { useVeloraData } from "@/hooks/useVeloraData";
+import type { VillaType } from "@/types";
 import styles from "./FeaturedVillas.module.scss";
 
-export default function FeaturedVillas() {
-  const { villas, error } = useVeloraData();
-  const popularVillas = !error && villas.length > 0 ? villas : getPopularVillas();
+interface FeaturedVillasProps {
+  serverVillas?: VillaType[];
+}
+
+export default function FeaturedVillas({ serverVillas = [] }: FeaturedVillasProps) {
+  const { villas: liveVillas } = useVeloraData();
+
+  // Prefer live API data if loaded, otherwise use server-rendered data (never falls back to hard-coded empty state)
+  const displayVillas = liveVillas.length > 0 ? liveVillas : serverVillas;
 
   return (
     <section className={styles.section}>
@@ -22,7 +29,7 @@ export default function FeaturedVillas() {
         </div>
 
         <div className={styles.grid}>
-          {popularVillas.map((villa) => (
+          {displayVillas.map((villa) => (
             <div key={villa.id} className={styles.cardItem}>
               <RoomCard
                 image={villa.images[0]?.src}

@@ -11,8 +11,9 @@ interface VillaListClientProps {
 }
 
 export default function VillaListClient({ fallbackVillas }: VillaListClientProps) {
-  const { villas, error } = useVeloraData();
-  const items = !error && villas.length > 0 ? villas : fallbackVillas;
+  // Prefer live API data; fall back to server-rendered prop (already API data), never stale hardcoded
+  const { villas: liveVillas } = useVeloraData();
+  const items = liveVillas.length > 0 ? liveVillas : fallbackVillas;
 
   return (
     <section className={styles.gridSection}>
@@ -25,8 +26,8 @@ export default function VillaListClient({ fallbackVillas }: VillaListClientProps
           >
             <div className={styles.imageWrap}>
               <Image
-                src={villa.images[0]?.src}
-                alt={villa.images[0]?.alt}
+                src={villa.images[0]?.src || "/heroimg2.jpeg"}
+                alt={villa.images[0]?.alt || villa.name}
                 width={400}
                 height={250}
                 className={styles.image}
@@ -44,7 +45,7 @@ export default function VillaListClient({ fallbackVillas }: VillaListClientProps
                 <span className={styles.price}>
                   {villa.currency}{villa.price.toLocaleString("en-IN")}
                 </span>
-                {villa.originalPrice && (
+                {villa.originalPrice && villa.originalPrice > villa.price && (
                   <span className={styles.originalPrice}>
                     {villa.currency}{villa.originalPrice.toLocaleString("en-IN")}
                   </span>

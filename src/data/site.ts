@@ -38,8 +38,8 @@ export const SITE_INFO: SiteInfo = {
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
-  facebook: "https://www.facebook.com/theexplorerstays",
-  instagram: "https://www.instagram.com/the_explorerstays",
+  facebook: "https://www.facebook.com",
+  instagram: "https://www.instagram.com",
   twitter: "",
   youtube: "",
   tripadvisor: "",

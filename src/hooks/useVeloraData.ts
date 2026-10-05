@@ -13,6 +13,8 @@ interface VeloraData {
 
 export function useVeloraData(): VeloraData {
   const [property, setProperty] = useState<TmProperty | null>(null);
+  // Start EMPTY — never initialize with hard-coded data
+  // Server components pass live data via props; this hook just keeps it fresh client-side
   const [villas, setVillas] = useState<VillaType[]>([]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState(true);
@@ -25,16 +27,17 @@ export function useVeloraData(): VeloraData {
         if (cancelled) return;
         setProperty(data);
         try {
-          setVillas(mapPropertyVillas(data));
+          const mapped = mapPropertyVillas(data);
+          if (mapped.length > 0) {
+            setVillas(mapped);
+          }
           setError(null);
         } catch (err) {
-          setVillas([]);
           setError(err instanceof Error ? err : new Error(String(err)));
         }
       })
       .catch((err) => {
         if (cancelled) return;
-        setVillas([]);
         setError(err instanceof Error ? err : new Error(String(err)));
       })
       .finally(() => {

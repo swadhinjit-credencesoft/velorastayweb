@@ -222,13 +222,13 @@ export const FOOTER_SOCIAL: SocialLink[] = [
   {
     id: "footer-social-instagram",
     icon: "lucide:instagram",
-    href: "https://www.instagram.com/the_explorerstays",
+    href: "https://www.instagram.com",
     label: "Instagram",
   },
   {
     id: "footer-social-facebook",
     icon: "lucide:facebook",
-    href: "https://www.facebook.com/theexplorerstays",
+    href: "https://www.facebook.com",
     label: "Facebook",
   },
   {
