@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Icon from "@/components/Icon/Icon";
@@ -16,7 +16,7 @@ export default function StickyBookButton({
   price,
   roomName,
   slug,
-  currency = "â‚¹",
+  currency = "₹",
 }: StickyBookButtonProps) {
   const { scrollY } = useScrollPosition();
   const [headerOffset, setHeaderOffset] = useState(0);

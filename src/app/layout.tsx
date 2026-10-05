@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Oswald, Cormorant_Garamond } from "next/font/google";
 import ReduxProvider from "@/providers/ReduxProvider";
+import { BhabanRoomsProvider } from "@/providers/BhabanRoomsProvider";
+import { getApiRooms } from "@/lib/api/thehotelmate";
 import Header from "@/components/layout/Header/Header";
 import MobileNav from "@/components/layout/MobileNav/MobileNav";
 import Footer from "@/components/layout/Footer/Footer";
@@ -91,21 +93,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const apiRooms = await getApiRooms();
+
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable} ${cormorant.variable}`}>
       <body className="antialiased">
         <GoogleTagManager />
-        <ReduxProvider>
-          <Header />
-          <MobileNav />
-          <main className="main-content">{children}</main>
-          <Footer />
-          <ScrollToTop />
-          <WhatsAppButton />
-        </ReduxProvider>
+        <BhabanRoomsProvider rooms={apiRooms}>
+          <ReduxProvider>
+            <Header />
+            <MobileNav />
+            <main className="main-content">{children}</main>
+            <Footer />
+            <ScrollToTop />
+            <WhatsAppButton />
+          </ReduxProvider>
+        </BhabanRoomsProvider>
       </body>
     </html>
   );

@@ -3,9 +3,12 @@ import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { VILLAS, VILLAS_CONTENT } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
+import { getApiRooms } from "@/lib/api/thehotelmate";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 import RoomListClient from "./RoomListClient";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Our Rooms | Bishnu Bhaban, Puri",
@@ -20,7 +23,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RoomsPage() {
+export default async function RoomsPage() {
+  // Fetched at build time (static export) so room names, prices and images are
+  // baked into the HTML. The browser fetch in useBhabanData is blocked by CORS
+  // on the live domain and would otherwise always fall back to hardcoded data.
+  const apiRooms = await getApiRooms();
+
   return (
     <>
       <JsonLd
@@ -36,7 +44,7 @@ export default function RoomsPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms", href: "/rooms" }]}
         bgImage="/bishnyhomeimage/homehero22.webp"
       />
-      <RoomListClient fallbackRooms={VILLAS} />
+      <RoomListClient fallbackRooms={apiRooms.length > 0 ? apiRooms : VILLAS} />
     </>
   );
 }

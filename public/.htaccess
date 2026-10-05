@@ -1,9 +1,15 @@
 ############################################
-# HOSTINGER - NEXT.JS STATIC EXPORT
+# HOSTINGER / APACHE - NEXT.JS STATIC EXPORT
+#
+# This file lives in /public so Next.js copies it into
+# the exported out/ folder on every build. If it is only
+# in the project root it never reaches the server and all
+# clean URLs break (/rooms -> 404, /rooms/ -> 403).
 ############################################
 
 Options -Indexes
 Options -MultiViews
+DirectoryIndex index.html
 
 RewriteEngine On
 
@@ -18,8 +24,6 @@ RewriteRule ^(.*)$ https://bishnubhaban.com/$1 [R=301,L]
 ############################################
 # REDIRECT LEGACY /villas URLS TO /rooms
 ############################################
-
-# The rooms section is now served from /rooms. Keep every old link working.
 
 # Retired Velora-era villa slugs, e.g.
 # /villas/2-bhk-villa, /villas/5-bhk-grand-villa, /villas/velora-4-bhk-villa
@@ -37,32 +41,49 @@ RewriteRule ^villas/?$ /rooms [R=301,L]
 RewriteRule ^villas/([^/]+)/?$ /rooms/$1 [R=301,L]
 
 ############################################
-# REMOVE index.html
+# STRIP index.html AND .html FROM URLs
 ############################################
 
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
 
-############################################
-# REMOVE .html FROM URLS
-############################################
-
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^(.+?)\.html$ /$1 [R=301,L]
 
 ############################################
-# SERVE EXISTING FILES
+# SERVE REAL FILES AS-IS
+# Covers /_next/*, /images/*, /sitemap.xml, /robots.txt, /icon.png
 ############################################
 
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
 ############################################
-# REWRITE CLEAN URLS TO .HTML
+# CLEAN URL -> .HTML
+#
+# Next.js exports pages as about.html, rooms.html,
+# rooms/double-bed-non-ac-room.html and so on, with NO
+# index.html inside the rooms/ folder. This block resolves:
+#   /rooms/                      -> rooms.html            (was 403)
+#   /rooms                       -> rooms.html
+#   /rooms/double-bed-non-ac-room -> rooms/double-bed-non-ac-room.html
+#   /jamindar-nest               -> jamindar-nest.html    (was 404)
+#   /jamindar-nest/              -> jamindar-nest.html
 ############################################
 
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Same rule via REQUEST_FILENAME, as a fallback for hosts that deploy the
+# site into a subdirectory where DOCUMENT_ROOT is not the app root.
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
+
+############################################
+# ERROR PAGES
+############################################
+
+ErrorDocument 404 /404.html
 
 ############################################
 # CACHE
@@ -118,9 +139,3 @@ Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
 </IfModule>
-
-############################################
-# CUSTOM 404
-############################################
-
-ErrorDocument 404 /404.html

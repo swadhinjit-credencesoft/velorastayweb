@@ -159,40 +159,8 @@ export const jamindarData = {
       image: "/images/jamindar/odisha-01.webp",
     },
   ] as JamindarJourneyStep[],
-  rooms: [
-    {
-      id: "signature-nest",
-      name: "Signature Nest",
-      tagline: "Refined comfort with traditional hospitality",
-      description:
-        "Our premiere room at Jamindar Nest offers a peaceful haven equipped with air conditioning, 24-hour hot water, high-speed WiFi, LED TV, and an attached modern bathroom.",
-      price: 4000,
-      currency: "₹",
-      priceUnit: "per night",
-      maxOccupancy: 3,
-      bed: "King / Twin Bedding",
-      size: "Spacious Room",
-      image: "/images/jamindar/room-01.webp",
-      images: [
-        "/images/jamindar/room-01.webp",
-        "/images/jamindar/room-02.webp",
-        "/images/jamindar/interior-01.webp",
-      ],
-      amenities: [
-        "Air Conditioning",
-        "24-Hour Front Desk",
-        "Hot Water Geyser",
-        "Free High-Speed WiFi",
-        "LED Television",
-        "Terrace Access",
-        "Daily Housekeeping",
-      ],
-      cta: {
-        label: "BOOK SIGNATURE NEST",
-        href: jamindarBooking.url,
-      },
-    },
-  ] as JamindarRoom[],
+  // NOTE: rooms are intentionally NOT defined here. Jamindar Nest rooms come
+  // from thehotelmate property 3638 at build time via getApiJamindarRooms().
   experiences: [
     {
       id: "heritage",

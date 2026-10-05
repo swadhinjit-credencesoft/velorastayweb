@@ -1,4 +1,4 @@
-﻿import type { VillaType } from "@/types";
+import type { VillaType } from "@/types";
 import type { JamindarRoom } from "@/data/jamindar";
 
 export const PROPERTY_ID = 3637;
@@ -126,7 +126,9 @@ export async function getProperty(options?: { refresh?: boolean }): Promise<TmPr
   inflightPromise = (async () => {
     let data: TmProperty;
     try {
-      const res = await fetch(propertyAvailabilityUrl());
+      const res = await fetch(propertyAvailabilityUrl(), {
+        cache: "force-cache",
+      });
       if (!res.ok) {
         throw new Error(`Bishnu Bhaban API error: ${res.status} ${res.statusText}`);
       }
@@ -371,7 +373,7 @@ export function mapRoomToVilla(
     longDescription: description,
     price: roomOnlyPrice,
     originalPrice,
-    currency: "â‚¹",
+    currency: "₹",
     priceUnit: "per night",
     bedrooms: Math.max(beds, 1),
     bathrooms: 1,
@@ -424,10 +426,46 @@ export function mapPropertyVillas(property: TmProperty): VillaType[] {
   return mapped.sort((a, b) => a.price - b.price);
 }
 
+/**
+ * Build-time (static export) room list for Bishnu Bhaban.
+ *
+ * The browser fetch in useBhabanData is blocked by CORS on the live domain, so
+ * every server-rendered room surface must read rooms from here instead of the
+ * hardcoded data in src/data/villas.ts. Returns [] if the API is unreachable
+ * so callers can fall back to VILLAS.
+ */
+export async function getApiRooms(): Promise<VillaType[]> {
+  try {
+    const property = await getProperty();
+    return mapPropertyVillas(property);
+  } catch (error) {
+    console.error("[rooms] build-time API fetch failed:", error);
+    return [];
+  }
+}
+
+/**
+ * Build-time (static export) room list for Jamindar Nest (property 3638).
+ *
+ * Same reason as getApiRooms: the browser fetch is blocked by CORS on the live
+ * domain, so useJamindarData used to always fall back to the hardcoded
+ * src/data/jamindar.ts rooms. Returns [] if the API is unreachable.
+ */
+export async function getApiJamindarRooms(): Promise<JamindarRoom[]> {
+  try {
+    const property = await getJamindarProperty();
+    return mapJamindarRooms(property);
+  } catch (error) {
+    console.error("[jamindar] build-time API fetch failed:", error);
+    return [];
+  }
+}
+
 export function mapJamindarRooms(property: TmProperty): JamindarRoom[] {
   const defaultImages = [
-    "/images/jamindar/homeherojamidar.avif",
-    "/bishnyhomeimage/homehero1.png",
+    "/images/jamindar/room-01.webp",
+    "/images/jamindar/room-02.webp",
+    "/images/jamindar/interior-01.webp",
   ];
 
   if (!property.roomList || property.roomList.length === 0) {
@@ -473,7 +511,7 @@ export function mapJamindarRooms(property: TmProperty): JamindarRoom[] {
         stripHtml(room.description || "") ||
         "Our premiere room at Jamindar Nest offers a peaceful haven equipped with air conditioning, 24-hour hot water, high-speed WiFi, LED TV, and an attached modern bathroom.",
       price: roomOnlyPrice,
-      currency: "â‚¹",
+      currency: "₹",
       priceUnit: "per night",
       maxOccupancy,
       bed: `${extractBedCount(roomName)} King / Twin Bedding`,

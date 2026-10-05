@@ -11,6 +11,8 @@ import JamindarHorizon from "@/components/jamindar/JamindarHorizon/JamindarHoriz
 import JamindarGallery from "@/components/jamindar/JamindarGallery/JamindarGallery";
 import JamindarCTA from "@/components/jamindar/JamindarCTA/JamindarCTA";
 import { jamindarData, jamindarBooking } from "@/data/jamindar";
+import { getApiJamindarRooms } from "@/lib/api/thehotelmate";
+import { JamindarRoomsProvider } from "@/providers/JamindarRoomsProvider";
 import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
@@ -45,7 +47,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function JamindarNestPage() {
+export default async function JamindarNestPage() {
+  const apiRooms = await getApiJamindarRooms();
+
   const hotelSchema = {
     "@context": "https://schema.org",
     "@type": "Hotel",
@@ -82,16 +86,18 @@ export default function JamindarNestPage() {
       <JsonLd schema={hotelSchema} />
       <JsonLd schema={breadcrumbSchema} />
 
-      <JamindarHero />
-      <JamindarIntro />
-      <JamindarCinematicStory />
-      <JamindarRooms />
-      <JamindarJourney />
-      <JamindarExperience />
-      <JamindarOdisha />
-      <JamindarHorizon />
-      <JamindarGallery />
-      <JamindarCTA />
+      <JamindarRoomsProvider rooms={apiRooms}>
+        <JamindarHero />
+        <JamindarIntro />
+        <JamindarCinematicStory />
+        <JamindarRooms />
+        <JamindarJourney />
+        <JamindarExperience />
+        <JamindarOdisha />
+        <JamindarHorizon />
+        <JamindarGallery />
+        <JamindarCTA />
+      </JamindarRoomsProvider>
     </>
   );
 }

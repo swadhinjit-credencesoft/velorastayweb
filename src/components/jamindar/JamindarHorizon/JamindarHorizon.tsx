@@ -46,16 +46,10 @@ export default function JamindarHorizon() {
     }, sectionRef);
 
     return () => {
+      // Only revert this component's own tweens and ScrollTriggers.
+      // Never sweep ScrollTrigger.getAll(): that would also kill triggers owned
+      // by the page we navigate to next and throw a client-side exception.
       ctx.revert();
-      if (typeof window !== "undefined") {
-        ScrollTrigger.getAll().forEach((t) => {
-          try {
-            t.kill(true);
-          } catch {
-            // ignore
-          }
-        });
-      }
     };
   }, [horizon.scenes.length]);
 
