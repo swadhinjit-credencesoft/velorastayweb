@@ -1,5 +1,6 @@
 import { SITE_INFO } from "@/data/site";
 import { VILLAS } from "@/data/villas";
+import { getApiRooms } from "@/lib/api/thehotelmate";
 import { FACILITIES } from "@/data/facilities";
 import { NEARBY_ATTRACTIONS } from "@/data/nearby";
 import { TOUR_PACKAGES } from "@/data/tours";
@@ -87,12 +88,15 @@ export function generateStaticParams() {
   return [];
 }
 
-export function GET() {
+export async function GET() {
   const entries: string[] = staticPages.map((page) =>
     entry(page.path, page.priority, page.changeFrequency)
   );
 
-  VILLAS.forEach((villa) => {
+  const apiRooms = await getApiRooms();
+  const rooms = apiRooms.length > 0 ? apiRooms : VILLAS;
+
+  rooms.forEach((villa) => {
     entries.push(entry(`/rooms/${villa.slug}`, 0.9, "weekly"));
   });
 

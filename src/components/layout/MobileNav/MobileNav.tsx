@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setMobileNavOpen } from "@/store/slices/uiSlice";
 import styles from "./MobileNav.module.scss";
@@ -16,6 +17,33 @@ export default function MobileNav() {
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
+  const { villas } = useBhabanData();
+
+  const navGroups = useMemo(() => {
+    if (!villas || villas.length === 0) return NAV_GROUPS;
+    return NAV_GROUPS.map((group) => {
+      if (group.id !== "nav-villas") return group;
+      return {
+        ...group,
+        children: [
+          {
+            id: "nav-villas-all",
+            label: "All Rooms",
+            href: "/rooms",
+            description: "Browse our complete room collection",
+            icon: "lucide:layout-grid",
+          },
+          ...villas.map((v) => ({
+            id: `nav-room-${v.slug}`,
+            label: v.name,
+            href: `/rooms/${v.slug}`,
+            description: v.tagline || `${v.beds} Bed, ₹${v.price}/night`,
+            icon: v.beds > 2 ? "lucide:users" : "lucide:bed",
+          })),
+        ],
+      };
+    });
+  }, [villas]);
 
   const close = useCallback(() => {
     dispatch(setMobileNavOpen(false));
@@ -101,7 +129,7 @@ export default function MobileNav() {
             </Link>
           </div>
 
-          {NAV_GROUPS.map((group) => (
+          {navGroups.map((group) => (
             <div key={group.id} className={styles.group}>
               <div className={styles.groupHeader}>
                 <Link

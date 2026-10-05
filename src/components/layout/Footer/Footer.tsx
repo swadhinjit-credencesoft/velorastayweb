@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,11 +11,28 @@ import {
   FOOTER_CONTACT,
 } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import JamindarFooter from "@/components/jamindar/JamindarFooter/JamindarFooter";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
   const pathname = usePathname();
+  const { villas } = useBhabanData();
+
+  const footerGroups = useMemo(() => {
+    if (!villas || villas.length === 0) return FOOTER_GROUPS;
+    return FOOTER_GROUPS.map((group) => {
+      if (group.id !== "footer-villa-config") return group;
+      return {
+        ...group,
+        links: villas.map((v) => ({
+          id: `footer-room-${v.slug}`,
+          label: v.name,
+          href: `/rooms/${v.slug}`,
+        })),
+      };
+    });
+  }, [villas]);
 
   if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
     return <JamindarFooter />;
@@ -77,7 +95,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {FOOTER_GROUPS.map((group) => (
+            {footerGroups.map((group) => (
               <div key={group.id} className={styles.column}>
                 <h3 className={styles.columnTitle}>{group.title}</h3>
                 <ul className={styles.columnLinks}>

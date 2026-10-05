@@ -197,31 +197,56 @@ function stripHtml(html: string): string {
 
 const SERVICE_AMENITY_MAP: Record<string, string> = {
   "Free WiFi": "wifi",
+  "Wifi": "wifi",
   "Flat screen TV (features)": "smart-tv",
+  "Flat TV": "smart-tv",
+  "LED Tv": "smart-tv",
   "Free Hotel Parking": "parking",
-  "Housekeeping": "housekeeping",
+  "Housekeeping": "daily-housekeeping",
   "Room Service": "room-service",
   "CCTV Security": "cctv",
+  "CCTV In Public Areas": "cctv",
   "Hot Water": "hot-water",
+  "Hot Water Geyser": "hot-water",
   "Air Conditioning": "ac",
+  "Air-Condition": "ac",
+  "Attached Bathroom": "attached-bathroom",
+  "Power Backup": "power-backup",
   "Restaurant": "restaurant",
   "Laundry Service": "laundry",
+  "Luggage Storage": "luggage-storage",
 };
 
-const BASE_ROOM_AMENITIES = [
-  "ac",
-  "hot-water",
-  "wifi",
-  "cctv",
-  "daily-housekeeping",
-];
+function buildAmenityIds(room: TmRoom, services: TmService[]): string[] {
+  const ids = new Set<string>();
+  const isNonAc = /\bnon\s*-?\s*ac\b/i.test(room.name || "");
 
-function buildAmenityIds(services: TmService[]): string[] {
-  const ids = new Set<string>(BASE_ROOM_AMENITIES);
-  services.forEach((service) => {
-    const id = SERVICE_AMENITY_MAP[service.name];
-    if (id) ids.add(id);
+  // Standard hotel inclusions
+  ids.add("attached-bathroom");
+  ids.add("wifi");
+  ids.add("daily-housekeeping");
+  ids.add("cctv");
+  ids.add("front-desk");
+
+  // Check specific facilities on the room first
+  (room.roomFacilities ?? []).forEach((f) => {
+    const mapped = SERVICE_AMENITY_MAP[f.name];
+    if (mapped) ids.add(mapped);
   });
+
+  // Check property-level services
+  (services ?? []).forEach((service) => {
+    const mapped = SERVICE_AMENITY_MAP[service.name];
+    if (mapped) ids.add(mapped);
+  });
+
+  if (isNonAc) {
+    ids.delete("ac");
+  } else if (/\bac\b/i.test(room.name || "")) {
+    ids.add("ac");
+    ids.add("hot-water");
+  }
+
   return Array.from(ids);
 }
 
@@ -346,6 +371,13 @@ function canonicalRoomSlug(roomName: string, index: number): string {
   return slugify(roomName) || `room-${index + 1}`;
 }
 
+function extractNearby(services: TmService[]): string[] {
+  const extracted = (services ?? [])
+    .map((s) => s.name.trim())
+    .filter((name) => /-\s*\d+(\.\d+)?\s*(m|km)\b/i.test(name));
+  return extracted.length > 0 ? extracted : ROOM_NEARBY;
+}
+
 export function mapRoomToVilla(
   room: TmRoom,
   services: TmService[],
@@ -360,7 +392,15 @@ export function mapRoomToVilla(
   const roomOnlyPrice = typeof room.roomOnlyPrice === "number" ? room.roomOnlyPrice : 0;
   const originalPrice =
     planAmount && planAmount > roomOnlyPrice ? planAmount : undefined;
-  const maxOccupancy = room.maximumOccupancy ?? beds;
+
+  // Guard against invalid raw occupancy values (e.g. 24)
+  const rawMax = room.maximumOccupancy;
+  const maxOccupancy =
+    typeof rawMax === "number" && rawMax > 0 && rawMax <= 12 ? rawMax : Math.max(beds, 3);
+
+  const isNonAc = /\bnon\s*-?\s*ac\b/i.test(roomName);
+  const isTempleFacing = /temple\s*facing/i.test(roomName);
+  const isSuite = /suite/i.test(roomName);
 
   const sourceImages = room.imageList?.length ? room.imageList : fallbackImages;
 
@@ -385,20 +425,30 @@ export function mapRoomToVilla(
       alt: img.description?.trim() || `${roomName} at Bishnu Bhaban`,
       caption: img.description?.trim() || roomName,
     })),
-    amenities: buildAmenityIds(services),
+    amenities: buildAmenityIds(room, services),
     highlights: [
-      `${beds} bed${beds === 1 ? "" : "s"} with attached bathroom`,
-      "Free WiFi in room",
-      "Daily housekeeping",
+      isTempleFacing
+        ? "Temple-facing view"
+        : isSuite
+        ? "Spacious suite layout"
+        : `${beds} bed${beds === 1 ? "" : "s"} with attached bathroom`,
+      isNonAc
+        ? "Budget-friendly non-AC room"
+        : `${beds} bed${beds === 1 ? "" : "s"} with air conditioning`,
+      "50 m from the Jagannath Temple gate",
     ],
     features: [
-      "Air-conditioned room",
-      "Attached western-style bathroom",
+      isNonAc
+        ? "Non air-conditioned room"
+        : isSuite
+        ? "Air-conditioned suite"
+        : "Air-conditioned room",
+      isTempleFacing ? "Temple-facing window" : "Attached western-style bathroom",
       "Free WiFi access",
     ],
     policies: ROOM_POLICIES,
     faqs: [],
-    nearby: ROOM_NEARBY,
+    nearby: extractNearby(services),
     popular: true,
     available: isAvailable(room),
     tag: tagForRoomName(roomName),

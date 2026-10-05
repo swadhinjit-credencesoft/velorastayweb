@@ -6,16 +6,24 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { VILLAS, getVillaBySlug } from "@/data/villas";
+import { getApiRooms } from "@/lib/api/thehotelmate";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 
 type Props = { params: { slug: string } };
 
-export function generateStaticParams() {
-  return VILLAS.map((villa) => ({ slug: villa.slug }));
+async function resolveAllRooms() {
+  const apiRooms = await getApiRooms();
+  return apiRooms.length > 0 ? apiRooms : VILLAS;
+}
+
+export async function generateStaticParams() {
+  const rooms = await resolveAllRooms();
+  return rooms.map((villa) => ({ slug: villa.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const villa = getVillaBySlug(params.slug);
+  const rooms = await resolveAllRooms();
+  const villa = rooms.find((r) => r.slug === params.slug) ?? getVillaBySlug(params.slug);
   if (!villa) return { title: "Gallery Not Found" };
   return {
     title: `${villa.name} Gallery | Bishnu Bhaban`,
@@ -30,11 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function VillaGalleryPage({ params }: Props) {
-  const villa = getVillaBySlug(params.slug);
+export default async function VillaGalleryPage({ params }: Props) {
+  const rooms = await resolveAllRooms();
+  const villa = rooms.find((r) => r.slug === params.slug);
   if (!villa) notFound();
 
-  const otherVillas = VILLAS.filter((v) => v.slug !== villa.slug);
+  const otherVillas = rooms.filter((v) => v.slug !== villa.slug);
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -75,10 +84,10 @@ export default function VillaGalleryPage({ params }: Props) {
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
             <h2 className="text-2xl font-bold text-gray-900">{villa.name} Photos</h2>
             <Link
-              href={`/villas/${villa.slug}`}
+              href={`/rooms/${villa.slug}`}
               className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-colors"
             >
-              View Villa Details
+              View Room Details
             </Link>
           </div>
 

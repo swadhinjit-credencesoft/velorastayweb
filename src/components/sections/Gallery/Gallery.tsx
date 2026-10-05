@@ -1,23 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import Icon from "@/components/Icon/Icon";
 import Modal from "@/components/ui/Modal/Modal";
 import { VILLAS } from "@/data/villas";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import styles from "./Gallery.module.scss";
-
-const VILLA_IMAGES = VILLAS.flatMap((villa) =>
-  villa.images.map((img) => ({
-    id: `${villa.slug}-${img.id}`,
-    src: img.src,
-    alt: img.alt,
-    caption: img.caption ? `${villa.name.trim()} — ${img.caption}` : villa.name.trim(),
-  }))
-);
 
 export default function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const { villas, error } = useBhabanData();
+  const roomList = !error && villas.length > 0 ? villas : VILLAS;
+
+  const villaImages = useMemo(() => {
+    return roomList.flatMap((villa) =>
+      villa.images.map((img) => ({
+        id: `${villa.slug}-${img.id}`,
+        src: img.src,
+        alt: img.alt,
+        caption: img.caption ? `${villa.name.trim()} — ${img.caption}` : villa.name.trim(),
+      }))
+    );
+  }, [roomList]);
 
   return (
     <section className={styles.section}>
@@ -28,7 +33,7 @@ export default function Gallery() {
         </div>
 
         <div className={styles.grid}>
-          {VILLA_IMAGES.map((image) => (
+          {villaImages.map((image) => (
             <button
               key={image.id}
               className={styles.gridItem}

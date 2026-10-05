@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useCallback } from "react";
+import { useRef, useCallback, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,6 +8,7 @@ import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { useBhabanData } from "@/hooks/useBhabanData";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   setMegaMenuOpen,
@@ -25,6 +26,33 @@ export default function Header() {
   const megaMenuOpen = useAppSelector((s) => s.ui.isMegaMenuOpen);
   const isMobileNavOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
   const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { villas } = useBhabanData();
+
+  const navGroups = useMemo(() => {
+    if (!villas || villas.length === 0) return NAV_GROUPS;
+    return NAV_GROUPS.map((group) => {
+      if (group.id !== "nav-villas") return group;
+      return {
+        ...group,
+        children: [
+          {
+            id: "nav-villas-all",
+            label: "All Rooms",
+            href: "/rooms",
+            description: "Browse our complete room collection",
+            icon: "lucide:layout-grid",
+          },
+          ...villas.map((v) => ({
+            id: `nav-room-${v.slug}`,
+            label: v.name,
+            href: `/rooms/${v.slug}`,
+            description: v.tagline || `${v.beds} Bed, ₹${v.price}/night`,
+            icon: v.beds > 2 ? "lucide:users" : "lucide:bed",
+          })),
+        ],
+      };
+    });
+  }, [villas]);
 
   const handleMegaEnter = useCallback(
     (group: NavGroup) => {
@@ -74,7 +102,7 @@ export default function Header() {
 
         <nav className={styles.desktopNav} aria-label="Main navigation">
           <ul className={styles.navList}>
-            {NAV_GROUPS.map((group) => (
+            {navGroups.map((group) => (
               <li
                 key={group.id}
                 className={styles.navItem}
@@ -132,7 +160,7 @@ export default function Header() {
           onMouseLeave={handleMegaLeave}
           onClick={closeMega}
         >
-          {NAV_GROUPS.map((group) =>
+          {navGroups.map((group) =>
             megaMenuOpen === group.id ? (
               <div key={group.id} className={styles.megaContent}>
                 <div className={styles.megaInner}>

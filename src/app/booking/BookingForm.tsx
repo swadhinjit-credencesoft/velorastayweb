@@ -3,8 +3,11 @@
 import { useState } from "react";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import { VILLAS } from "@/data/villas";
+import { useBhabanData } from "@/hooks/useBhabanData";
 
 export default function BookingForm() {
+  const { villas, error } = useBhabanData();
+  const roomList = !error && villas.length > 0 ? villas : VILLAS;
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
     checkIn: "", checkOut: "", roomType: "", adults: "1", children: "0",
@@ -52,7 +55,7 @@ export default function BookingForm() {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Room Type</label>
                   <select className="w-full border rounded-lg px-4 py-3" value={form.roomType} onChange={(e) => setForm({ ...form, roomType: e.target.value })}>
                     <option value="">Select Room</option>
-                    {VILLAS.map((r) => (<option key={r.id} value={r.slug}>{r.name}</option>))}
+                    {roomList.map((r) => (<option key={r.id} value={r.slug}>{r.name}</option>))}
                   </select>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
