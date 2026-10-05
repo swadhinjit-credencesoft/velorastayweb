@@ -3,12 +3,13 @@
 import { useState } from "react";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import { useVeloraData } from "@/hooks/useVeloraData";
-import { VILLAS } from "@/data/villas";
 
 export default function BookingForm() {
   const [step, setStep] = useState(1);
-  const { villas, error } = useVeloraData();
-  const activeVillas = !error && villas.length > 0 ? villas : VILLAS;
+  const { villas } = useVeloraData();
+  // Always use live API villas — never fall back to hardcoded data
+  const activeVillas = villas;
+
 
   const [form, setForm] = useState({
     checkIn: "", checkOut: "", roomType: "", adults: "1", children: "0",

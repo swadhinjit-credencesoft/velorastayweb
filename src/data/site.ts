@@ -14,9 +14,9 @@ export const SITE_INFO: SiteInfo = {
   description:
     "Velora Stays offers premium luxury villas with private pools near Pawna Lake, Lonavala. 4 villas, 5 villas & 7 grand villas with stunning mountain views for family reunions & weekend getaways.",
   url: "https://velorastays.in",
-  phone: "+91 7326079861",
+  phone: "+91  9004129370 ",
   whatsapp: "+91 9004126958",
-  email: "reservation@thehotelmate.co",
+  email: "booking@velorastays.in ",
   address: {
     street: "Gevhande Apati",
     area: "Near Pawna Lake",

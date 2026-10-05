@@ -11,8 +11,8 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "Direct Phone",
     icon: "lucide:phone",
-    value: "+91 7326079861",
-    href: "tel:+917326079861",
+    value: "+91  9004129370 ",
+    href: "tel:+91 9004129370 ",
     primary: true,
   },
   {
@@ -25,8 +25,8 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     label: "Email",
     icon: "lucide:mail",
-    value: "reservation@thehotelmate.co",
-    href: "mailto:reservation@thehotelmate.co",
+    value: "booking@velorastays.in ",
+    href: "mailto:booking@velorastays.in ",
     primary: true,
   },
   {
@@ -55,32 +55,32 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-general",
     name: "General Enquiries",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    email: "booking@velorastays.in ",
+    phone: "+91  9004129370 ",
     description:
       "For any general questions about Velora Stays, our villa configurations, amenities, or policies, our team is happy to help.",
   },
   {
     id: "dept-reservations",
     name: "Reservations",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    email: "booking@velorastays.in ",
+    phone: "+91  9004129370 ",
     description:
       "Our dedicated reservations team handles all booking-related queries including villa availability, rate inquiries, and special requests.",
   },
   {
     id: "dept-events",
     name: "Events & Celebrations",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    email: "booking@velorastays.in ",
+    phone: "+91  9004129370 ",
     description:
       "From birthday celebrations to corporate retreats, our team will help you plan and execute a memorable occasion at our villa.",
   },
   {
     id: "dept-feedback",
     name: "Feedback & Support",
-    email: "reservation@thehotelmate.co",
-    phone: "+91 7326079861",
+    email: "booking@velorastays.in ",
+    phone: "+91  9004129370 ",
     description:
       "Your feedback helps us improve. Whether you want to share a positive experience or suggest improvements, we take every comment seriously.",
   },

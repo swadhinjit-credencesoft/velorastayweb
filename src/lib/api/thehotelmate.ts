@@ -360,8 +360,8 @@ export async function getDynamicVillas(): Promise<VillaType[]> {
   } catch (err) {
     console.error("Failed to load dynamic villas from TheHotelMate API:", err);
   }
-  const { VILLAS } = await import("@/data/villas");
-  return VILLAS;
+  // Return empty — never fall back to hardcoded data
+  return [];
 }
 
 export async function getDynamicVillaBySlug(slug: string): Promise<VillaType | undefined> {
