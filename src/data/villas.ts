@@ -141,7 +141,8 @@ export const VILLAS: VillaType[] = [
     longDescription:
       "The Velora 4 (4 BHK) at Velora Stays is the perfect choice for families and groups looking for premium privacy and comfort. It features well-appointed bedrooms, a cozy living space, functional kitchen, and private swimming pool.",
     price: 12000,
-    originalPrice: 16000,
+    originalPrice: undefined,
+
     currency: "₹",
     priceUnit: "per night",
     bedrooms: 4,
@@ -234,7 +235,8 @@ export const VILLAS: VillaType[] = [
     longDescription:
       "The Velora 5 (5 BHK) at Velora Stays is a luxurious retreat offering stylish bedrooms, spacious living and dining areas, and a private pool. Perfect for family gatherings or group stays near Pawna Lake.",
     price: 15000,
-    originalPrice: 20000,
+    originalPrice: undefined,
+
     currency: "₹",
     priceUnit: "per night",
     bedrooms: 5,
