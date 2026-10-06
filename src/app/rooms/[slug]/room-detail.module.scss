@@ -252,8 +252,16 @@
 /* ── Sidebar / Booking Card ────────────────────── */
 .sidebar {
   position: sticky;
-  top: 100px;
+  top: 82px;
   align-self: start;
+
+  @media (min-width: v.$bp-sm) {
+    top: 100px;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    top: calc(v.$nav-height-scrolled + 16px);
+  }
 }
 
 .bookingCard {

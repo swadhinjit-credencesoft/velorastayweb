@@ -99,7 +99,8 @@
 .priceRow {
   display: flex;
   align-items: baseline;
-  gap: v.$space-sm;
+  flex-wrap: wrap;
+  gap: v.$space-xs v.$space-sm;
   padding-top: v.$space-sm;
   border-top: 1px solid v.$color-border;
   margin-top: auto;

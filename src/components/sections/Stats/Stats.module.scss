@@ -12,8 +12,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: v.$space-lg;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-xs) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$space-lg;
+  }
 
   @media (min-width: v.$bp-lg) {
     grid-template-columns: repeat(4, 1fr);
@@ -27,7 +32,12 @@
   align-items: center;
   text-align: center;
   gap: v.$space-sm;
-  padding: v.$space-lg;
+  padding: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    padding: v.$space-lg;
+  }
+
   border-radius: v.$radius-lg;
   background-color: v.$color-surface;
   border: 1px solid v.$color-border;

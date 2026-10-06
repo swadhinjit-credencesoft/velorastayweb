@@ -101,9 +101,10 @@ export default async function RootLayout({
         <GoogleTagManager />
         <BhabanRoomsProvider rooms={apiRooms}>
           <ReduxProvider>
-            <LayoutSwitcher />
-            <main className="main-content">{children}</main>
-            <ScrollToTop />
+            <LayoutSwitcher>
+              <main className="main-content">{children}</main>
+              <ScrollToTop />
+            </LayoutSwitcher>
           </ReduxProvider>
         </BhabanRoomsProvider>
       </body>

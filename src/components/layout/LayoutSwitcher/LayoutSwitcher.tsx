@@ -7,33 +7,41 @@ import Footer from "@/components/layout/Footer/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton/WhatsAppButton";
 
 /**
- * LayoutSwitcher — wraps all layout shells with a stable React `key`.
+ * LayoutSwitcher — forces React to cleanly remount layout shells when the
+ * active brand changes between Jamindar Nest and Bishnu Bhaban.
  *
- * When navigating between /jamindar-nest* and Bishnu Bhaban pages, the
- * Header / Footer / WhatsAppButton each do an early return of a completely
- * different component root.  React reconciles them as the *same* component
- * instance and tries to mutate the live DOM, which causes:
+ * Without this, navigating FROM /jamindar-nest BACK TO any Bishnu Bhaban
+ * page triggers:
  *   "NotFoundError: Failed to execute 'removeChild' on 'Node':
  *    The node to be removed is not a child of this node."
  *
- * The fix: give the entire layout shell a different `key` depending on which
- * brand we're displaying.  React will fully unmount the old tree and mount a
- * fresh one, preventing any DOM orphan errors.
+ * Root cause: Header / Footer / WhatsAppButton each do an early `return` of
+ * a completely different component tree depending on the pathname.  React
+ * reconciles them as the *same* component instance and tries to patch the
+ * live DOM in-place, which orphans nodes.
+ *
+ * Fix: pass a `key` prop that changes with the brand.  React will fully
+ * unmount the old component tree and mount a fresh one — no DOM orphans.
  */
-export default function LayoutSwitcher() {
+export default function LayoutSwitcher({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const pathname = usePathname();
   const isJamindar =
     pathname === "/jamindar-nest" ||
     (pathname?.startsWith("/jamindar-nest/") ?? false);
 
-  const layoutKey = isJamindar ? "jamindar" : "bhaban";
+  const k = isJamindar ? "jamindar" : "bhaban";
 
   return (
-    <div key={layoutKey}>
-      <Header />
-      <MobileNav />
-      <WhatsAppButton />
-      <Footer />
-    </div>
+    <>
+      <Header key={`${k}-header`} />
+      <MobileNav key={`${k}-mobilenav`} />
+      {children}
+      <Footer key={`${k}-footer`} />
+      <WhatsAppButton key={`${k}-whatsapp`} />
+    </>
   );
 }

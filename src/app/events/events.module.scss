@@ -200,7 +200,7 @@
   display: flex;
   gap: v.$space-sm;
 
-  @media (max-width: 480px) {
+  @media (max-width: #{v.$bp-xs}) {
     flex-direction: column;
   }
 }

@@ -8,7 +8,15 @@ html {
 }
 
 :root {
-  --nav-height: #{v.$nav-height};
+  --nav-height: 90px;
+
+  @media (min-width: 640px) {
+    --nav-height: 110px;
+  }
+
+  @media (min-width: 1024px) {
+    --nav-height: #{v.$nav-height};
+  }
 }
 
 * {
@@ -101,7 +109,15 @@ img {
 // ─── Main Content (fixed header compensation) ─────────────
 
 .main-content {
-  padding-top: v.$nav-height;
+  padding-top: 90px;
+
+  @media (min-width: #{640px}) {
+    padding-top: 110px;
+  }
+
+  @media (min-width: #{1024px}) {
+    padding-top: v.$nav-height;
+  }
 }
 
 // ─── Page Transitions ─────────────────────────────────────

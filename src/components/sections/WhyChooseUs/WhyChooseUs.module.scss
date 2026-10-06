@@ -79,8 +79,13 @@
 
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: v.$space-md;
+  grid-template-columns: 1fr;
+  gap: v.$space-sm;
+
+  @media (min-width: v.$bp-xs) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$space-md;
+  }
 }
 
 .statItem {

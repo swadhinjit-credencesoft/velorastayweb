@@ -103,6 +103,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
   padding-top: v.$space-md;
   margin-top: auto;
 }

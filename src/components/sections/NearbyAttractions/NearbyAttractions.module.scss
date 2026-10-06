@@ -115,7 +115,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: v.$space-sm;
+  flex-wrap: wrap;
+  gap: v.$space-xs;
 }
 
 .cardName {

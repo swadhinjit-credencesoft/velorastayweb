@@ -26,11 +26,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: v.$space-md;
-  padding: v.$space-md v.$space-lg;
+  gap: v.$space-sm;
+  padding: v.$space-sm v.$space-md;
   background-color: v.$color-surface;
   border-top: 1px solid v.$color-border;
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+
+  @media (min-width: v.$bp-xs) {
+    gap: v.$space-md;
+    padding: v.$space-md v.$space-lg;
+  }
 }
 
 .roomInfo {

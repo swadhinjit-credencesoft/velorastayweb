@@ -36,19 +36,20 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: v.$space-md;
+  grid-template-columns: 1fr;
+  gap: v.$space-sm;
 
-  @media (max-width: v.$bp-lg - 1) {
+  @media (min-width: v.$bp-xs) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$space-md;
+  }
+
+  @media (min-width: v.$bp-md) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: v.$bp-md - 1) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: v.$bp-xs - 1) {
-    grid-template-columns: 1fr;
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

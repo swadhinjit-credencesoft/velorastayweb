@@ -59,7 +59,7 @@
 }
 
 .card {
-  flex: 0 0 360px;
+  flex: 0 0 min(300px, 85vw);
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -73,6 +73,10 @@
 
   &:hover {
     box-shadow: v.$shadow-card-hover;
+  }
+
+  @media (min-width: v.$bp-sm) {
+    flex: 0 0 360px;
   }
 
   @media (min-width: v.$bp-lg) {

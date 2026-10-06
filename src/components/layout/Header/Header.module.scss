@@ -7,13 +7,30 @@
   left: 0;
   right: 0;
   z-index: v.$z-nav;
-  height: v.$nav-height;
+  height: 90px;
   transition: height v.$duration-standard v.$ease-standard,
     background-color v.$duration-standard v.$ease-standard,
     box-shadow v.$duration-standard v.$ease-standard;
 
+  @media (min-width: v.$bp-sm) {
+    height: 110px;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    height: v.$nav-height;
+  }
+
   &.scrolled {
-    height: v.$nav-height-scrolled;
+    height: 72px;
+
+    @media (min-width: v.$bp-sm) {
+      height: 84px;
+    }
+
+    @media (min-width: v.$bp-lg) {
+      height: v.$nav-height-scrolled;
+    }
+
     @include m.glass-surface;
     box-shadow: v.$shadow-glass;
   }
@@ -37,11 +54,27 @@
 
 .logoImage {
   width: auto;
-  height: 110px;
+  height: 80px;
   transition: height v.$duration-standard v.$ease-standard;
 
+  @media (min-width: v.$bp-sm) {
+    height: 100px;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    height: 110px;
+  }
+
   .scrolled & {
-    height: 90px;
+    height: 70px;
+
+    @media (min-width: v.$bp-sm) {
+      height: 80px;
+    }
+
+    @media (min-width: v.$bp-lg) {
+      height: 90px;
+    }
   }
 }
 
@@ -271,12 +304,20 @@
   grid-template-columns: repeat(2, 1fr);
   gap: v.$space-sm;
 
-  @media (min-width: v.$bp-md) {
+  @media (min-width: v.$bp-sm) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: v.$bp-lg) {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: v.$bp-xl) {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
