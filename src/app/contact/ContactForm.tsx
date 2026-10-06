@@ -22,7 +22,7 @@ export default function ContactForm() {
             <h2 className={styles.heading}>Ways To Get In Touch</h2>
             <p className={styles.description}>
               Call, WhatsApp, or email us — our team is available 24/7 to help
-              plan your stay at the West Gate of the Jagannath Temple.
+              plan your stay at the West Gate of the Shri Jagannath Temple.
             </p>
           </div>
 

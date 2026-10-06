@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -10,7 +10,7 @@ import styles from "./Experiences.module.scss";
 export const metadata: Metadata = {
   title: "Things to Do in Puri | Bishnu Bhaban",
   description:
-    "What to do in Puri from a hotel at the West Gate of the Jagannath Temple: darshan timings, Grand Road in the evening, the beach, Konark day trip, Odia food, and market shopping.",
+    "What to do in Puri from a hotel at the West Gate of the Shri Jagannath Temple: darshan timings, Grand Road in the evening, the beach, Konark day trip, Odia food, and market shopping.",
   alternates: { canonical: "/explore/experiences" },
   openGraph: {
     title: "Things to Do in Puri | Bishnu Bhaban",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 const EXPERIENCES = [
   {
     id: "exp-darshan",
-    title: "Jagannath Temple Darshan",
+    title: "Shri Jagannath Temple Darshan",
     description:
-      "Several aartha timings run from the pre-dawn hours through to the evening, and which ones you can attend depends on the season. Leave at 3:00 to 3:30 AM for the shortest queue, or go later and accept the crowds. Book slots through the official Jagannath Temple Management Committee — not through hotels.",
+      "Several aartha timings run from the pre-dawn hours through to the evening, and which ones you can attend depends on the season. Leave at 3:00 to 3:30 AM for the shortest queue, or go later and accept the crowds. Book slots through the official Shri Jagannath Temple Management Committee — not through hotels.",
     duration: "Pre-dawn or evening",
     price: "Free",
     icon: "lucide:landmark",

@@ -1,4 +1,4 @@
-﻿import type { TourPackage, SectionContent } from "@/types";
+import type { TourPackage, SectionContent } from "@/types";
 
 export const TOURS_CONTENT: SectionContent = {
   eyebrow: "Day Plans",
@@ -14,9 +14,9 @@ export const TOUR_PACKAGES: TourPackage[] = [
     name: "Temple & Grand Road Day",
     tagline: "The reason most people are in Puri, done without the stress",
     description:
-      "A plan for the Jagannath Temple itself and the surrounding Grand Road, built around how the temple actually works: early darshan, a rest in the middle of the day, and the evening when the street comes alive.",
+      "A plan for the Shri Jagannath Temple itself and the surrounding Grand Road, built around how the temple actually works: early darshan, a rest in the middle of the day, and the evening when the street comes alive.",
     longDescription:
-      "Most guests are staying here for the temple, so this is the plan we walk through with you at check-in. The important thing to understand about darshan at the Jagannath Temple is that it is not a single fixed event. There are several aartha timings across the day, from the pre-dawn slot through to the evening, and which one you can realistically attend depends on the season, the day of the week, and the festival calendar. The temple is at the West Gate of Grand Road, so from our rooms it is a short walk rather than a journey. For pre-dawn darshan, leave your room at around 3:00 to 3:30 AM; the gates open well before sunrise and the queue is far shorter than it will be at seven in the morning. Eating afterwards is the practical problem, and the sweet shops and tea stalls on Grand Road are already open by then, a couple of minutes from the gate. Between darshan and the evening, Puri in the middle of the day is hot and there is not much that demands doing. This is a good time to rest, to visit the Jagannath Temple Museum on the temple grounds if it is open that day, or to swim before the afternoon heat. In the evening, Grand Road changes character completely. The road closes to traffic, the stalls come out, and the whole area fills with people. The evening aarti is the other darshan worth planning around, and the crowd around it is significant. Wear clothes you can walk in, carry something small in cash for the stalls, and be aware that footwear needs to come off well before you reach the temple gates — there are places to leave it, and it is easier to use them than to carry them.",
+      "Most guests are staying here for the temple, so this is the plan we walk through with you at check-in. The important thing to understand about darshan at the Shri Jagannath Temple is that it is not a single fixed event. There are several aartha timings across the day, from the pre-dawn slot through to the evening, and which one you can realistically attend depends on the season, the day of the week, and the festival calendar. The temple is at the West Gate of Grand Road, so from our rooms it is a short walk rather than a journey. For pre-dawn darshan, leave your room at around 3:00 to 3:30 AM; the gates open well before sunrise and the queue is far shorter than it will be at seven in the morning. Eating afterwards is the practical problem, and the sweet shops and tea stalls on Grand Road are already open by then, a couple of minutes from the gate. Between darshan and the evening, Puri in the middle of the day is hot and there is not much that demands doing. This is a good time to rest, to visit the Shri Jagannath Temple Museum on the temple grounds if it is open that day, or to swim before the afternoon heat. In the evening, Grand Road changes character completely. The road closes to traffic, the stalls come out, and the whole area fills with people. The evening aarti is the other darshan worth planning around, and the crowd around it is significant. Wear clothes you can walk in, carry something small in cash for the stalls, and be aware that footwear needs to come off well before you reach the temple gates — there are places to leave it, and it is easier to use them than to carry them.",
     image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800",
     duration: "Full day",
     price: 0,
@@ -55,7 +55,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
         time: "9:00 AM – 4:00 PM",
         activity: "Rest, and the middle of the day",
         description:
-          "Puri is hot between late morning and mid-afternoon and most visitors rest through it. This is a good window for the Jagannath Temple Museum on the temple grounds, shopping on Grand Road, or simply recovering before the evening.",
+          "Puri is hot between late morning and mid-afternoon and most visitors rest through it. This is a good window for the Shri Jagannath Temple Museum on the temple grounds, shopping on Grand Road, or simply recovering before the evening.",
       },
       {
         id: "tg-5",
@@ -76,13 +76,13 @@ export const TOUR_PACKAGES: TourPackage[] = [
         id: "tg-faq-1",
         question: "Can we book darshan through the hotel?",
         answer:
-          "No. We are not a temple booking agent and cannot reserve slots on your behalf. Darshan and puja bookings must be made through the official Jagannath Temple Management Committee channels. We can explain how the system works so you know what to do when you arrive.",
+          "No. We are not a temple booking agent and cannot reserve slots on your behalf. Darshan and puja bookings must be made through the official Shri Jagannath Temple Management Committee channels. We can explain how the system works so you know what to do when you arrive.",
       },
       {
         id: "tg-faq-2",
         question: "How far is the temple from the hotel?",
         answer:
-          "We are at the West Gate of the Jagannath Temple on Grand Road, so it is a short walk rather than a drive. Grand Road itself closes to traffic in the evenings, which is convenient on foot and confusing if you are trying to reach us by car during that window.",
+          "We are at the West Gate of the Shri Jagannath Temple on Grand Road, so it is a short walk rather than a drive. Grand Road itself closes to traffic in the evenings, which is convenient on foot and confusing if you are trying to reach us by car during that window.",
       },
       {
         id: "tg-faq-3",

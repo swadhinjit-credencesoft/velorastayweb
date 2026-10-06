@@ -86,10 +86,10 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Perform traditional Vedic rituals, Bratopanayana, and puja ceremonies steps away from the sanctum of Shri Jagannath Temple.",
     longDescription:
-      "Performing sacred rites in Puri is deeply auspicious. Bishnu Bhaban's proximity to the West Gate of Jagannath Temple makes it the premier choice for families organizing Upanayana (Sacred Thread Ceremonies), Annaprashan, Sudhi Kriya, or special devotional havans. We provide dedicated space for pandits and family rituals, along with comfortable rooms for outstation guests and elders.",
+      "Performing sacred rites in Puri is deeply auspicious. Bishnu Bhaban's proximity to the West Gate of Shri Jagannath Temple makes it the premier choice for families organizing Upanayana (Sacred Thread Ceremonies), Annaprashan, Sudhi Kriya, or special devotional havans. We provide dedicated space for pandits and family rituals, along with comfortable rooms for outstation guests and elders.",
     image: "/bishnyhomeimage/fascilitypuridarsan.png",
     gallery: [
-      { id: "upa-img-1", src: "/bishnyhomeimage/fascilitypuridarsan.png", alt: "Sacred ceremonies near Jagannath Temple" },
+      { id: "upa-img-1", src: "/bishnyhomeimage/fascilitypuridarsan.png", alt: "Sacred ceremonies near Shri Jagannath Temple" },
       { id: "upa-img-2", src: "/bishnyhomeimage/homehero1.png", alt: "Ritual space at Bishnu Bhaban" },
     ],
     capacity: 75,

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -6,11 +6,11 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
   title: "Careers at Bishnu Bhaban | Join Our Team",
-    description: "Career opportunities at Bishnu Bhaban. Join our small team running a budget hotel at the West Gate of the Jagannath Temple in Puri.",
+  description: "Career opportunities at Bishnu Bhaban. Join our small team running a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.",
   alternates: { canonical: "/about/careers" },
   openGraph: {
     title: "Careers at Bishnu Bhaban",
-  description: "Career opportunities at Bishnu Bhaban. Join our small team running a budget hotel at the West Gate of the Jagannath Temple in Puri.",
+  description:     "Career opportunities at Bishnu Bhaban. Join our small team running a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.",
   },
 };
 
@@ -46,7 +46,7 @@ export default function CareersPage() {
           </div>
           <div className="bg-white border rounded-xl p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Apply</h2>
-            <p className="text-gray-600">Send your resume and a brief cover letter to <a href="mailto:reservation@thehotelmate.co" className="text-amber-600 font-semibold hover:underline">reservation@thehotelmate.co</a> with the subject line &quot;Application - [Position]&quot;. Our HR team will review your application and get back to you within 5 business days.</p>
+            <p className="text-gray-600">Send your resume and a brief cover letter to <a href="mailto:Bishnubhabanpuri@gmail.com" className="text-amber-600 font-semibold hover:underline">Bishnubhabanpuri@gmail.com</a> with the subject line &quot;Application - [Position]&quot;. Our HR team will review your application and get back to you within 5 business days.</p>
           </div>
           <div className="text-center">
             <Link href="/about" className="text-amber-600 font-semibold hover:underline">← Back to About</Link>

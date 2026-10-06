@@ -107,6 +107,61 @@
   color: v.$color-text-muted;
 }
 
+// ─── Features Grid ───────────────────────────────────────
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+  margin-bottom: v.$space-xl;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  padding: v.$space-lg;
+  border-radius: v.$radius-lg;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+
+  &:hover {
+    box-shadow: v.$shadow-md;
+  }
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-accent-light;
+  color: v.$color-accent-dark;
+  margin-bottom: v.$space-md;
+}
+
+.featureTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: v.$color-primary;
+  margin-bottom: 4px;
+}
+
+.featureText {
+  font-size: 13px;
+  line-height: 1.6;
+  color: v.$color-text-muted;
+}
+
 // ─── Badges Grid ─────────────────────────────────────────
 
 .badgesGrid {

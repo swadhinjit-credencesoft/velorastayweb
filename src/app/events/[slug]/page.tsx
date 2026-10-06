@@ -55,7 +55,7 @@ export default function EventDetailPage({ params }: Props) {
           description: event.description,
           startDate: "2026-01-01",
           endDate: "2026-12-31",
-          location: "Bishnu Bhaban, West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001",
+          location: "Bishnu Bhaban, West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001",
         })}
       />
 

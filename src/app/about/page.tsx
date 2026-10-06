@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -9,7 +9,7 @@ import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/sc
 export const metadata: Metadata = {
   title: "About Us | Bishnu Bhaban",
   description:
-    "Discover the story behind Bishnu Bhaban â€” a budget hotel at the West Gate of the Jagannath Temple in Puri. Learn about our mission and how we work.",
+    "Discover the story behind Bishnu Bhaban — a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri. Learn about our mission and how we work.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Us | Bishnu Bhaban",

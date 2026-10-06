@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO } from "@/data/site";
@@ -10,7 +10,7 @@ import styles from "./Gallery.module.scss";
 export const metadata: Metadata = {
   title: "Photo Gallery | Bishnu Bhaban",
   description:
-    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk at the West Gate of the Jagannath Temple, the guest rooms, and the common areas.",
+    "Photographs of Bishnu Bhaban in Puri: the entrance and front desk at the West Gate of the Shri Jagannath Temple, the guest rooms, and the common areas.",
   alternates: { canonical: "/explore/gallery" },
   openGraph: {
     title: "Photo Gallery | Bishnu Bhaban",

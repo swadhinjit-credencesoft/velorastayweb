@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
@@ -7,11 +7,11 @@ import { ABOUT_VISION } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Our Vision | Bishnu Bhaban",
-    description: "The vision driving Bishnu Bhaban — to be the budget stay people think of first when planning a trip to the Jagannath Temple.",
+  description: "The vision driving Bishnu Bhaban — to be the stay people think of first when planning a trip to the Shri Jagannath Temple.",
   alternates: { canonical: "/about/vision" },
   openGraph: {
     title: "Our Vision | Bishnu Bhaban",
-  description: "The vision driving Bishnu Bhaban — to be the budget stay people think of first when planning a trip to the Jagannath Temple.",
+    description: "The vision driving Bishnu Bhaban — to be the stay people think of first when planning a trip to the Shri Jagannath Temple.",
   },
 };
 

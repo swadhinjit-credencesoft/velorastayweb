@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import Icon from "@/components/Icon/Icon";
@@ -11,7 +11,7 @@ import styles from "./Nearby.module.scss";
 export const metadata: Metadata = {
   title: "Nearby Attractions | Bishnu Bhaban",
   description:
-    "What is near Bishnu Bhaban at the West Gate of the Jagannath Temple in Puri: Vimala Temple, the temple museum, Grand Road, Puri Beach, Konark, Dhauli, and Chilika.",
+    "What is near Bishnu Bhaban at the West Gate of the Shri Jagannath Temple in Puri: Vimala Temple, the temple museum, Grand Road, Puri Beach, Konark, Dhauli, and Chilika.",
   alternates: { canonical: "/explore/nearby-attractions" },
   openGraph: {
     title: "Nearby Attractions | Bishnu Bhaban",

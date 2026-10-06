@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Icon from "@/components/Icon/Icon";
-import { TRUST_BADGES, SITE_ASSETS, SITE_INFO } from "@/data/site";
+import {
+  TRUST_BADGES,
+  SITE_ASSETS,
+  SITE_INFO,
+  WHY_BHABAN_FEATURES,
+} from "@/data/site";
 import styles from "./WhyChooseUs.module.scss";
 
 export default function WhyChooseUs() {
@@ -28,16 +33,16 @@ export default function WhyChooseUs() {
           </div>
 
           <div className={styles.contentCol}>
-            <span className={styles.eyebrow}>Why Choose Us</span>
+            <span className={styles.eyebrow}>Why Bishnu Bhaban?</span>
             <h2 className={`${styles.heading} font-oswald`}>
-              Bishnu Bhaban Difference
+              Why Bishnu Bhaban?
             </h2>
             <p className={styles.description}>
-              We are a budget hotel fifty metres from the West Gate of the Jagannath
-              Temple, and we do not pretend to be more than that. What we commit to is
-              the set of things that decide whether a Puri trip went well: a clean room
-              every time, hot water at any hour, a front desk open from 7 AM to 11 PM,
-              and a price that does not need justifying.
+              We offer a comfortable stay just fifty metres from the West Gate of Shri
+              Jagannath Temple, and we do not pretend to be more than that. What we
+              commit to is the set of things that decide whether a Puri trip went well: a
+              clean room every time, hot water at any hour, a front desk open from 7 AM
+              to 11 PM, and a price that does not need justifying.
             </p>
 
             <div className={styles.statsGrid}>
@@ -50,6 +55,18 @@ export default function WhyChooseUs() {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className={styles.featuresGrid}>
+          {WHY_BHABAN_FEATURES.map((feature) => (
+            <div key={feature.id} className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <Icon icon={feature.icon} width={24} height={24} />
+              </div>
+              <h3 className={styles.featureTitle}>{feature.title}</h3>
+              <p className={styles.featureText}>{feature.description}</p>
+            </div>
+          ))}
         </div>
 
         <div className={styles.badgesGrid}>

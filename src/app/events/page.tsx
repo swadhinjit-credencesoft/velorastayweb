@@ -12,12 +12,12 @@ import styles from "./events.module.scss";
 export const metadata: Metadata = {
   title: "Events & Banquet Hall | Bishnu Bhaban Puri",
   description:
-    "Host religious ceremonies, family gatherings, yatra groups, and social functions at Bishnu Bhaban. Convenient hall arrangements and multi-room group stays located right at the West Gate of Jagannath Temple, Puri.",
+    "Host religious ceremonies, family gatherings, yatra groups, and social functions at Bishnu Bhaban. Convenient hall arrangements and multi-room group stays located right at the West Gate of Shri Jagannath Temple, Puri.",
   alternates: { canonical: "/events" },
   openGraph: {
     title: "Events & Banquet Hall | Bishnu Bhaban Puri",
     description:
-      "Host sacred ceremonies, thread ceremonies, family gatherings, and group events right at the West Gate of Jagannath Temple.",
+      "Host sacred ceremonies, thread ceremonies, family gatherings, and group events right at the West Gate of Shri Jagannath Temple.",
     url: `${SITE_INFO.url}/events`,
     images: [{ url: `${SITE_INFO.url}/bishnyhomeimage/homehero1.png`, width: 1200, height: 630, alt: "Bishnu Bhaban Events" }],
   },

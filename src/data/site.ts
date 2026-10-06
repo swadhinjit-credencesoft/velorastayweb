@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   SiteInfo,
   SocialLinks,
   HeroSlide,
@@ -10,21 +10,21 @@
 
 export const SITE_INFO: SiteInfo = {
   name: "Bishnu Bhaban",
-  tagline: "Budget Hotel Near Jagannath Temple, Puri",
+  tagline: "A Comfortable stay at the West Gate of Shri Jagannath Temple",
   description:
-    "Bishnu Bhaban is a budget-friendly hotel at the West Gate of the Shri Jagannath Temple in Puri, Odisha. Clean air-conditioned rooms with hot water, free WiFi, a front desk open 7 AM to 11 PM, daily housekeeping and CCTV security.",
+    "Bishnu Bhaban offers a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri, Odisha. Clean air-conditioned rooms with hot water, free WiFi, a front desk open 7 AM to 11 PM, daily housekeeping and CCTV security.",
   url: "https://bishnubhaban.com",
   phone: "+91 9078922710",
-  whatsapp: "+91 9861229896",
-  email: "reservation@thehotelmate.co",
+  whatsapp: "+91 9437093094",
+  email: "Bishnubhabanpuri@gmail.com",
   address: {
-    street: "West Gate of Jagannath Temple",
+    street: "West Gate of Shri Jagannath Temple",
     area: "Grand Road",
     city: "Puri",
     state: "Odisha",
     pincode: "752001",
     country: "India",
-    full: "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
+    full: "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
   },
   geo: {
     latitude: 19.8040441,
@@ -68,9 +68,9 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
     image: "/bishnyhomeimage/homehero1.png",
-    title: "Stay Steps from Jagannath Temple",
+    title: "Stay Just 50 Metres from Shri Jagannath Temple",
     subtitle:
-      "Clean, air-conditioned budget rooms at the West Gate of the Shri Jagannath Temple in Puri, within easy walking distance.",
+      "Comfortable rooms at the West Gate of Shri Jagannath Temple, Puri, within easy walking distance.",
     cta: { label: "Check Availability", href: "/contact" },
   },
   {
@@ -168,7 +168,7 @@ export const TRUST_BADGES: TrustBadge[] = [
     id: "badge-support",
     icon: "lucide:headphones",
     label: "Front Desk",
-    value: "7 AM â€“ 11 PM",
+    value: "7 AM – 11 PM",
   },
   {
     id: "badge-cctv",
@@ -178,13 +178,65 @@ export const TRUST_BADGES: TrustBadge[] = [
   },
 ];
 
+export const WHY_BHABAN_FEATURES: {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}[] = [
+  {
+    id: "why-temple-distance",
+    icon: "lucide:landmark",
+    title: "50 Metres from Shri Jagannath Temple",
+    description:
+      "Walk to the West Gate of Shri Jagannath Temple in minutes.",
+  },
+  {
+    id: "why-temple-view",
+    icon: "lucide:eye",
+    title: "Temple View Rooms",
+    description: "Selected rooms offer views towards the temple.",
+  },
+  {
+    id: "why-family-rooms",
+    icon: "lucide:users",
+    title: "Family-Friendly Rooms",
+    description: "Double, four-bed and six-bed options.",
+  },
+  {
+    id: "why-parking",
+    icon: "lucide:car",
+    title: "Parking Available",
+    description:
+      "Two-wheeler parking and vehicle parking assistance.",
+  },
+  {
+    id: "why-guest-assistance",
+    icon: "lucide:headphones",
+    title: "24-Hour Guest Assistance",
+    description: "Assistance whenever you need it.",
+  },
+  {
+    id: "why-darshan",
+    icon: "lucide:sparkles",
+    title: "Temple Darshan Assistance",
+    description: "We help guests plan their temple visit.",
+  },
+  {
+    id: "why-lift-hot-water",
+    icon: "lucide:move-vertical",
+    title: "Lift & Hot Water",
+    description: "Convenient facilities for families and senior guests.",
+  },
+];
+
 const whatsappPhone = SITE_INFO.whatsapp.replace(/\s+/g, "").replace("+", "");
 const whatsappMessage = [
   "*This is an Enquiry from :* The HotelMate Website",
   "Hotel Name: Bishnu Bhaban,",
   "Property Id: 3637,",
   "externalSite: WebSite,",
-  "Address: West Gate of Jagannath Temple, Grand Road, Puri, Odisha, India",
+  "Address: West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha, India",
 ].join("\n");
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`;
 

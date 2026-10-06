@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
@@ -9,7 +9,7 @@ import styles from "./Explore.module.scss";
 export const metadata: Metadata = {
   title: "Explore Puri | Bishnu Bhaban",
   description:
-    "Explore Puri from Bishnu Bhaban — things to do, nearby attractions, day plans, photo gallery, and a walkthrough of the property at the West Gate of the Jagannath Temple.",
+    "Explore Puri from Bishnu Bhaban — things to do, nearby attractions, day plans, photo gallery, and a walkthrough of the property at the West Gate of the Shri Jagannath Temple.",
   alternates: { canonical: "/explore" },
   openGraph: {
     title: "Explore Puri | Bishnu Bhaban",
@@ -81,7 +81,7 @@ export default function ExplorePage() {
           <p className={styles.eyebrow}>Explore</p>
           <h1 className={styles.title}>Explore Puri</h1>
           <p className={styles.subtitle}>
-            You are fifty metres from the West Gate of the Jagannath Temple, so
+            You are fifty metres from the West Gate of the Shri Jagannath Temple, so
             exploring Puri is mostly a question of how far you want to walk and
             when you want to go. Start here.
           </p>

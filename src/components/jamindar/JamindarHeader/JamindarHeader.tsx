@@ -141,7 +141,7 @@ export default function JamindarHeader() {
             <div className={styles.drawerBishnuText}>
               <span className={styles.drawerBishnuTag}>MAIN PROPERTY</span>
               <span className={styles.drawerBishnuTitle}>BISHNU BHABAN</span>
-              <span className={styles.drawerBishnuSubtitle}>Near Jagannath Temple West Gate</span>
+              <span className={styles.drawerBishnuSubtitle}>Near Shri Jagannath Temple West Gate</span>
             </div>
             <Icon icon="lucide:chevron-right" width={14} height={14} className={styles.drawerBishnuArrow} />
           </Link>

@@ -284,7 +284,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     id: "footer-experience",
     title: "Puri Experience",
     links: [
-      { id: "footer-temple", label: "Jagannath Temple", href: "/nearby" },
+      { id: "footer-temple", label: "Shri Jagannath Temple", href: "/nearby" },
       { id: "footer-nearby", label: "Nearby Attractions", href: "/nearby#beach" },
       { id: "footer-adventure", label: "Day Trips", href: "/nearby#heritage" },
       { id: "footer-blog", label: "Travel Blog", href: "/blog" },
@@ -335,10 +335,9 @@ export const FOOTER_SOCIAL: SocialLink[] = [
 
 export const FOOTER_CONTACT = {
   address:
-    "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
+    "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
   phone: "+91 9078922710",
-  email: "reservation@thehotelmate.co",
-  hours: "Reception 7:00 AM â€“ 11:00 PM",
+  email: "Bishnubhabanpuri@gmail.com",
+  hours: "Reception 7:00 AM – 11:00 PM",
 };
 
-export const FOOTER_COPYRIGHT = `Â© ${new Date().getFullYear()} Bishnu Bhaban by D c developers. All rights reserved.`;

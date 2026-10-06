@@ -7,15 +7,15 @@ export interface LegalPage {
 
 const CONTACT_BLOCK =
   "<p><strong>Bishnu Bhaban</strong><br>\n" +
-  "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India<br>\n" +
-  "Email: reservation@thehotelmate.co<br>\n" +
+  "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001, India<br>\n" +
+  "Email: Bishnubhabanpuri@gmail.com<br>\n" +
   "Phone: +91 9078922710</p>";
 
 const CHANNELS_LIST =
   "<ul>\n" +
-  "<li>Email: reservation@thehotelmate.co</li>\n" +
+  "<li>Email: Bishnubhabanpuri@gmail.com</li>\n" +
   "<li>Phone: +91 9078922710</li>\n" +
-  "<li>WhatsApp: +91 9861229896</li>\n" +
+  "<li>WhatsApp: +91 9437093094</li>\n" +
   "<li>Speak to the front desk during your stay (staffed 24 hours)</li>\n" +
   "</ul>";
 
@@ -138,8 +138,8 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Contact Us</h2>\n" +
       "<p>For refund-related inquiries, please reach out to us at:</p>\n" +
       "<p><strong>Bishnu Bhaban - Refund Department</strong><br>\n" +
-      "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India<br>\n" +
-      "Email: reservation@thehotelmate.co<br>\n" +
+      "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001, India<br>\n" +
+      "Email: Bishnubhabanpuri@gmail.com<br>\n" +
       "Phone: +91 9078922710</p>",
   },
   {
@@ -206,14 +206,14 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Website Accessibility</h2>\n" +
       "<p>Our website is designed with accessibility in mind, including proper heading structure, alt text on images, and keyboard-navigable controls. If you encounter a barrier anywhere on this site, please contact us and we will work to provide the information you need in an accessible format.</p>\n\n" +
       "<h2>Property Physical Accessibility</h2>\n" +
-      "<p>Our property is located on Grand Road at the West Gate of the Jagannath Temple, an area with a high volume of pedestrian traffic, uneven paving, and crowd congestion that varies considerably by day and by festival season. The temple complex itself has steps and uneven surfaces, and is not fully accessible to wheelchair users. If you have mobility requirements, please contact us before booking so we can be straightforward about what we can and cannot accommodate, and so we can advise you on the practical arrangements for darshan access.</p>\n\n" +
+      "<p>Our property is located on Grand Road at the West Gate of the Shri Jagannath Temple, an area with a high volume of pedestrian traffic, uneven paving, and crowd congestion that varies considerably by day and by festival season. The temple complex itself has steps and uneven surfaces, and is not fully accessible to wheelchair users. If you have mobility requirements, please contact us before booking so we can be straightforward about what we can and cannot accommodate, and so we can advise you on the practical arrangements for darshan access.</p>\n\n" +
       "<h2>Getting Assistance</h2>\n" +
       "<p>If you need specific accommodations, or if any part of the property is not suitable for your requirements, please tell us before you book. We would much rather you knew in advance than discovered on arrival.</p>\n\n" +
       "<h2>Contact Us</h2>\n" +
       "<p>For accessibility-related inquiries or to request specific accommodations, please contact us at:</p>\n" +
       "<p><strong>Bishnu Bhaban - Accessibility</strong><br>\n" +
-      "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001, India<br>\n" +
-      "Email: reservation@thehotelmate.co<br>\n" +
+      "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001, India<br>\n" +
+      "Email: Bishnubhabanpuri@gmail.com<br>\n" +
       "Phone: +91 9078922710</p>",
   },
 ];

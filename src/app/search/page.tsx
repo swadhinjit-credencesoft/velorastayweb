@@ -4,7 +4,7 @@ import SearchForm from "./SearchForm";
 export const metadata: Metadata = {
   title: "Search | Bishnu Bhaban",
   description:
-    "Search rooms, facilities, and blog posts at Bishnu Bhaban, a budget hotel at the West Gate of the Jagannath Temple in Puri.",
+    "Search rooms, facilities, and blog posts at Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.",
   robots: { index: false, follow: false },
   alternates: { canonical: "/search" },
   openGraph: {

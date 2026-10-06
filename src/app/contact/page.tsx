@@ -10,7 +10,7 @@ import ContactForm from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us | Bishnu Bhaban",
   description:
-    "Get in touch with Bishnu Bhaban. Contact us for bookings, inquiries, or assistance with your stay at our budget hotel near the Jagannath Temple in Puri.",
+    "Get in touch with Bishnu Bhaban. Contact us for bookings, inquiries, or assistance with your comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Us | Bishnu Bhaban",

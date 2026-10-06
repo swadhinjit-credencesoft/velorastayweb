@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
@@ -8,11 +8,11 @@ import { ABOUT_STORY, ABOUT_MILESTONES } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Our Story | Bishnu Bhaban",
-  description: "The story of Bishnu Bhaban: a budget property at the West Gate of the Jagannath Temple in Puri, built around one idea — that people coming to Puri need a clean, affordable room close to the gate.",
+  description: "The story of Bishnu Bhaban: a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri, built around one idea — that people coming to Puri need a clean, affordable room close to the gate.",
   alternates: { canonical: "/about/story" },
   openGraph: {
     title: "Our Story | Bishnu Bhaban",
-    description: "A budget property at the West Gate of the Jagannath Temple, built around one idea.",
+    description: "A comfortable stay at the West Gate of the Shri Jagannath Temple, built around one idea.",
   },
 };
 

@@ -13,12 +13,12 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Our Rooms | Bishnu Bhaban, Puri",
   description:
-    "Choose from our rooms at Bishnu Bhaban, a budget hotel at the West Gate of the Jagannath Temple in Puri. Air-conditioned and non-AC options, four-bed family rooms, and suites, all with an attached bathroom and free WiFi.",
+    "Choose from our rooms at Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri. Air-conditioned and non-AC options, four-bed family rooms, and suites, all with an attached bathroom and free WiFi.",
   alternates: { canonical: "/rooms" },
   openGraph: {
     title: "Our Rooms | Bishnu Bhaban Puri",
     description:
-      "Browse the air-conditioned, non-AC, four-bed, and suite rooms at Bishnu Bhaban, a budget hotel steps from the Jagannath Temple in Puri.",
+      "Browse the air-conditioned, non-AC, four-bed, and suite rooms at Bishnu Bhaban, a comfortable stay just 50 metres from the West Gate of Shri Jagannath Temple, Puri.",
     url: generateCanonicalUrl("/rooms"),
   },
 };

@@ -3,11 +3,8 @@ import { Inter, Oswald, Cormorant_Garamond } from "next/font/google";
 import ReduxProvider from "@/providers/ReduxProvider";
 import { BhabanRoomsProvider } from "@/providers/BhabanRoomsProvider";
 import { getApiRooms } from "@/lib/api/thehotelmate";
-import Header from "@/components/layout/Header/Header";
-import MobileNav from "@/components/layout/MobileNav/MobileNav";
-import Footer from "@/components/layout/Footer/Footer";
+import LayoutSwitcher from "@/components/layout/LayoutSwitcher/LayoutSwitcher";
 import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
-import WhatsAppButton from "@/components/layout/WhatsAppButton/WhatsAppButton";
 import { SITE_INFO } from "@/data/site";
 import GoogleTagManager from "@/components/analytics/GoogleTagManager";
 import "./globals.scss";
@@ -38,16 +35,16 @@ const OG_IMAGE =
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_INFO.name} | Rooms Near Jagannath Temple, Puri`,
+    default: `${SITE_INFO.name} | Rooms Near Shri Jagannath Temple, Puri`,
     template: `%s | ${SITE_INFO.name}`,
   },
   description: SITE_INFO.description,
   keywords: [
-    "hotel near Jagannath Temple",
+    "hotel near Shri Jagannath Temple",
     "Bishnu Bhaban Puri",
-    "budget hotel in Puri",
+    "comfortable stay near Shri Jagannath Temple",
     "Puri darshan hotel",
-    "rooms at Jagannath Temple gate",
+    "rooms at Shri Jagannath Temple gate",
     "Puri Grand Road hotel",
     "temple visit accommodation Puri",
   ],
@@ -63,7 +60,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_INFO.url,
     siteName: SITE_INFO.name,
-    title: `${SITE_INFO.name} | Rooms Near Jagannath Temple, Puri`,
+    title: `${SITE_INFO.name} | Rooms Near Shri Jagannath Temple, Puri`,
     description: SITE_INFO.description,
     images: [
       {
@@ -76,7 +73,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_INFO.name} | Rooms Near Jagannath Temple, Puri`,
+    title: `${SITE_INFO.name} | Rooms Near Shri Jagannath Temple, Puri`,
     description: SITE_INFO.description,
     images: [OG_IMAGE],
   },
@@ -104,12 +101,9 @@ export default async function RootLayout({
         <GoogleTagManager />
         <BhabanRoomsProvider rooms={apiRooms}>
           <ReduxProvider>
-            <Header />
-            <MobileNav />
+            <LayoutSwitcher />
             <main className="main-content">{children}</main>
-            <Footer />
             <ScrollToTop />
-            <WhatsAppButton />
           </ReduxProvider>
         </BhabanRoomsProvider>
       </body>

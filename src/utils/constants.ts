@@ -1,6 +1,7 @@
 export const SITE_CONSTANTS = {
   PROPERTY_NAME: "Bishnu Bhaban",
-  PROPERTY_TAGLINE: "Budget Hotel Near Jagannath Temple, Puri",
+  PROPERTY_TAGLINE:
+    "A Comfortable stay at the West Gate of Shri Jagannath Temple",
   BOOKING_ENGINE_URL: "https://bookone.io/bishnu-bhaban?bookingEngine=true",
   DEFAULT_CURRENCY: "₹",
   MIN_PRICE: 1000,
@@ -11,7 +12,7 @@ export const SITE_CONSTANTS = {
   MAX_GALLERY_IMAGES_PER_PAGE: 24,
   BLOG_POSTS_PER_PAGE: 9,
   REVIEWS_PER_PAGE: 10,
-  WHATSAPP_NUMBER: "+919861229896",
+  WHATSAPP_NUMBER: "+919437093094",
   EMERGENCY_NUMBER: "+919078922710",
   RECEPTION_NUMBER: "+919078922710",
 } as const;

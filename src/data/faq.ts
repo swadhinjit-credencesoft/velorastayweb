@@ -10,13 +10,13 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-01",
         question: "How can I book a room at Bishnu Bhaban?",
         answer:
-          "You can book directly through this website by selecting your check-in and check-out dates, choosing a room type, and completing payment. You can also call our reservations line on +91 9078922710 or send a WhatsApp message to +91 9861229896. Rooms are also listed on MakeMyTrip, Agoda, Goibibo, and Justdial if you prefer to book through a platform.",
+          "You can book directly through this website by selecting your check-in and check-out dates, choosing a room type, and completing payment. You can also call our reservations line on +91 9078922710 or send a WhatsApp message to +91 9437093094. Rooms are also listed on MakeMyTrip, Agoda, Goibibo, and Justdial if you prefer to book through a platform.",
       },
       {
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes. Free cancellation is available up to 7 days before your check-in date. Cancellations made within 2 days of check-in may incur a charge of one night's stay. To modify a booking, contact us at reservation@thehotelmate.co or call +91 9078922710 and we will do what we can to accommodate the change.",
+          "Yes. Free cancellation is available up to 7 days before your check-in date. Cancellations made within 2 days of check-in may incur a charge of one night's stay. To modify a booking, contact us at Bishnubhabanpuri@gmail.com or call +91 9078922710 and we will do what we can to accommodate the change.",
       },
       {
         id: "faq-booking-03",
@@ -88,7 +88,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-location-01",
-        question: "How far is Bishnu Bhaban from Jagannath Temple?",
+        question: "How far is Bishnu Bhaban from Shri Jagannath Temple?",
         answer:
           "We are at the West Gate of the Shri Jagannath Temple, so the walk is roughly 50 to 280 metres depending on the entry point. This is the main reason most guests choose us over properties further along Grand Road.",
       },

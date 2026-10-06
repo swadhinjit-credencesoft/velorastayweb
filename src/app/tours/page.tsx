@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Puri day plan",
     "Konark day trip from Puri",
     "Puri beach guide",
-    "Jagannath Temple timings",
+    "Shri Jagannath Temple timings",
     "Puri itinerary",
   ],
   alternates: { canonical: "/tours" },

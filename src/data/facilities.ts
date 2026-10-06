@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Amenities",
   heading: "The Basics, Done Properly",
   description:
-    "Bishnu Bhaban is a budget hotel at the West Gate of the Shri Jagannath Temple, so we do not oversell the amenities list. What we do have is the set of things that actually decide whether a Puri stay works: air conditioning, hot water at any hour, an attached bathroom, daily housekeeping, a front desk open 7 AM to 11 PM, WiFi, and CCTV on a property where most guests leave their bags for the day.",
+    "Bishnu Bhaban is a comfortable stay at the West Gate of the Shri Jagannath Temple, so we do not oversell the amenities list. What we do have is the set of things that actually decide whether a Puri stay works: air conditioning, hot water at any hour, an attached bathroom, daily housekeeping, a front desk open 7 AM to 11 PM, WiFi, and CCTV on a property where most guests leave their bags for the day.",
 };
 
 export const FACILITIES: Facility[] = [

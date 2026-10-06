@@ -2,7 +2,7 @@ import type { VillaType, VillaAmenity, SectionContent } from "@/types";
 
 export const VILLAS_CONTENT: SectionContent = {
   eyebrow: "Our Rooms",
-  heading: "Clean, Comfortable Rooms Steps from Jagannath Temple",
+  heading: "Comfortable Rooms at the West Gate of Shri Jagannath Temple",
   description:
     "At Bishnu Bhaban, we keep things simple and dependable. Choose from air-conditioned and non-AC rooms, four-bed family options, and suites at the West Gate of the Shri Jagannath Temple in Puri.",
 };
@@ -102,7 +102,7 @@ const ROOM_SEEDS: RoomSeed[] = [
     highlights: [
       "Lowest rate at Bishnu Bhaban",
       "Double bed, sleeps up to 3 guests",
-      "50 m from the Jagannath Temple gate",
+      "50 m from the Shri Jagannath Temple gate",
     ],
     features: [
       "Non air-conditioned room",
@@ -151,7 +151,7 @@ const ROOM_SEEDS: RoomSeed[] = [
     highlights: [
       "Double bed with air conditioning",
       "Sleeps up to 3 guests",
-      "50 m from the Jagannath Temple gate",
+      "50 m from the Shri Jagannath Temple gate",
     ],
     features: [
       "Air-conditioned room",
@@ -468,7 +468,7 @@ const ROOM_SEEDS: RoomSeed[] = [
     highlights: [
       "Suite layout with extra space",
       "Sleeps up to 4 guests",
-      "Steps from the temple gate",
+      "Just 50 metres from the temple gate",
     ],
     features: [
       "Air-conditioned suite",

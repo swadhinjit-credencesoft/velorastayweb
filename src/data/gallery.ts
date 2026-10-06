@@ -25,7 +25,7 @@ const BB_EXTERIOR = "/bishnyhomeimage/homehero1.png";
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   // ── Location & Temple Gate ──
-  { id: "gallery-loc-01", src: BB_EXTERIOR, alt: "Bishnu Bhaban at the West Gate of the Jagannath Temple", category: "location", caption: "Bishnu Bhaban, West Gate" },
+  { id: "gallery-loc-01", src: BB_EXTERIOR, alt: "Bishnu Bhaban at the West Gate of the Shri Jagannath Temple", category: "location", caption: "Bishnu Bhaban, West Gate" },
 
   // ── Rooms ──
   { id: "gallery-room-01", src: "/bishnyhomeimage/homehero22.webp", alt: "Guest room at Bishnu Bhaban", category: "rooms", caption: "Guest Room" },

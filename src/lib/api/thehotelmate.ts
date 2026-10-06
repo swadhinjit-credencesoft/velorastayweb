@@ -433,9 +433,9 @@ export function mapRoomToVilla(
         ? "Spacious suite layout"
         : `${beds} bed${beds === 1 ? "" : "s"} with attached bathroom`,
       isNonAc
-        ? "Budget-friendly non-AC room"
+        ? "Comfortable non-AC room"
         : `${beds} bed${beds === 1 ? "" : "s"} with air conditioning`,
-      "50 m from the Jagannath Temple gate",
+      "50 m from the Shri Jagannath Temple gate",
     ],
     features: [
       isNonAc

@@ -26,7 +26,7 @@ export const OFFERS: Offer[] = [
       "Cannot be combined with any other promotional offer.",
     ],
     features: [
-      "Rooms a short walk from the West Gate of the Jagannath Temple",
+      "Rooms a short walk from the West Gate of the Shri Jagannath Temple",
       "Front desk help with pre-dawn darshan timings",
       "Front desk open 7 AM to 11 PM for timings and directions",
     ],

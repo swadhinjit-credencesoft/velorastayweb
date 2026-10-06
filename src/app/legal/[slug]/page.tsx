@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getLegalPage(params.slug);
   if (!page) return { title: "Page Not Found" };
-  const desc = `${page.title} — Bishnu Bhaban, a budget hotel at the West Gate of the Jagannath Temple in Puri.`;
+  const desc = `${page.title} — Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.`;
   return {
     title: `${page.title} | Bishnu Bhaban`,
     description: desc,

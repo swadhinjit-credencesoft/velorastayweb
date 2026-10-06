@@ -16,23 +16,30 @@ export const CONTACT_INFO: ContactInfo[] = [
     primary: true,
   },
   {
+    label: "Phone & WhatsApp",
+    icon: "lucide:phone-call",
+    value: "+91 9437093094",
+    href: "tel:+919437093094",
+    primary: true,
+  },
+  {
     label: "WhatsApp",
     icon: "lucide:message-circle",
-    value: "+91 9861229896",
-    href: "https://api.whatsapp.com/send?phone=919861229896&text=*This%20is%20an%20Enquiry%20from%20%3A*%20The%20HotelMate%20Website%0AHotel%20Name%3A%20Bishnu%20Bhaban%2C%0AProperty%20Id%3A%203637%2C%0AexternalSite%3A%20WebSite%2C%0AAddress%3A%20West%20Gate%20of%20Jagannath%20Temple%2C%20Grand%20Road%2C%20Puri%2C%20Odisha%2C%20India",
+    value: "+91 9437093094",
+    href: "https://api.whatsapp.com/send?phone=919437093094&text=*This%20is%20an%20Enquiry%20from%20%3A*%20The%20HotelMate%20Website%0AHotel%20Name%3A%20Bishnu%20Bhaban%2C%0AProperty%20Id%3A%203637%2C%0AexternalSite%3A%20WebSite%2C%0AAddress%3A%20West%20Gate%20of%20Jagannath%20Temple%2C%20Grand%20Road%2C%20Puri%2C%20Odisha%2C%20India",
     primary: true,
   },
   {
     label: "Email",
     icon: "lucide:mail",
-    value: "reservation@thehotelmate.co",
-    href: "mailto:reservation@thehotelmate.co",
+    value: "Bishnubhabanpuri@gmail.com",
+    href: "mailto:Bishnubhabanpuri@gmail.com",
     primary: true,
   },
   {
     label: "Address",
     icon: "lucide:map-pin",
-    value: "West Gate of Jagannath Temple, Grand Road, Puri, Odisha 752001",
+    value: "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001",
     href: "https://maps.google.com/?q=Bishnu+Bhaban+West+Gate+of+Jagannath+Temple+Puri",
   },
   {
@@ -55,7 +62,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-general",
     name: "General Enquiries",
-    email: "reservation@thehotelmate.co",
+    email: "Bishnubhabanpuri@gmail.com",
     phone: "+91 9078922710",
     description:
       "For any general questions about Bishnu Bhaban, our room types, amenities, or policies, our team is happy to help.",
@@ -63,7 +70,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-reservations",
     name: "Reservations",
-    email: "reservation@thehotelmate.co",
+    email: "Bishnubhabanpuri@gmail.com",
     phone: "+91 9078922710",
     description:
       "Our reservations team handles all booking-related queries including room availability, rate inquiries, group bookings, and special requests.",
@@ -71,7 +78,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-groups",
     name: "Group Bookings",
-    email: "reservation@thehotelmate.co",
+    email: "Bishnubhabanpuri@gmail.com",
     phone: "+91 9078922710",
     description:
       "Travelling as a family or a group, or with male guests only? Contact us a few days in advance so we can allocate rooms together and confirm the total rate.",
@@ -79,7 +86,7 @@ export const CONTACT_DEPARTMENT: Department[] = [
   {
     id: "dept-feedback",
     name: "Feedback & Support",
-    email: "reservation@thehotelmate.co",
+    email: "Bishnubhabanpuri@gmail.com",
     phone: "+91 9078922710",
     description:
       "Your feedback helps us improve. Whether you want to share a positive experience or flag something that needs fixing, we take every comment seriously.",

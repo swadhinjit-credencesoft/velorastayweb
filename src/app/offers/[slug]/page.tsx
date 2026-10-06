@@ -35,7 +35,7 @@ export function generateStaticParams() {
 // }
 
 export default function OfferDetailPage() {
-  return null; // Offers detail page disabled â€” kept (commented out) for later use
+  return null; // Offers detail page disabled — kept (commented out) for later use
   /* ORIGINAL PAGE CONTENT (disabled):
   const offer = getOfferBySlug(params.slug);
   if (!offer) notFound();

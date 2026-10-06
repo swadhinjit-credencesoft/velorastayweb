@@ -9,11 +9,11 @@ import { NEARBY_ATTRACTIONS, NEARBY_CONTENT, getAllCategories } from "@/data/nea
 export const metadata: Metadata = {
   title: "Nearby Attractions in Puri | Bishnu Bhaban",
   description:
-    "What is near Bishnu Bhaban at the West Gate of the Jagannath Temple in Puri: Vimala Temple, the temple museum, Grand Road, Puri Beach, Konark, Dhauli, and Chilika.",
+    "What is near Bishnu Bhaban at the West Gate of the Shri Jagannath Temple in Puri: Vimala Temple, the temple museum, Grand Road, Puri Beach, Konark, Dhauli, and Chilika.",
   keywords: [
     "Puri attractions",
     "things to do in Puri",
-    "places to visit near Jagannath Temple",
+    "places to visit near Shri Jagannath Temple",
     "Puri sightseeing",
     "tourist spots Puri",
   ],

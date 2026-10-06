@@ -16,7 +16,7 @@ const TOUR_AREAS = [
     image: "/WhatsApp Image 2026-07-19 at 8.42.19 AM (1).jpeg",
     imageAlt: "Common seating area just inside the entrance at Bishnu Bhaban",
     description:
-      "You come in through a gate on Grand Road, a short walk from the West Gate of the Jagannath Temple. The front desk is staffed from 7:00 AM to 11:00 PM, so if you are arriving very late or leaving before dawn, call ahead and we will arrange it.",
+      "You come in through a gate on Grand Road, a short walk from the West Gate of the Shri Jagannath Temple. The front desk is staffed from 7:00 AM to 11:00 PM, so if you are arriving very late or leaving before dawn, call ahead and we will arrange it.",
     highlights: [
       "Front desk 7:00 AM to 11:00 PM",
       "Luggage storage before check-in or after check-out",

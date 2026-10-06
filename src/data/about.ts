@@ -36,7 +36,7 @@ export const ABOUT_STORY: AboutStory = {
 export const ABOUT_MISSION: AboutMission = {
   title: "Our Mission",
   description:
-    "Our mission is to be the most reliable budget stay at the West Gate of the Jagannath Temple. Not the most lavish, not the most expensive, simply the one that does the basic things properly and charges an honest price for them.\n\n" +
+    "Our mission is to be the most reliable budget stay at the West Gate of the Shri Jagannath Temple. Not the most lavish, not the most expensive, simply the one that does the basic things properly and charges an honest price for them.\n\n" +
     "That means a clean room, every time, without exception. Our housekeeping team works on a fixed daily schedule and each room is checked before a guest arrives, not after one leaves. It means hot water at four in the morning, because that is when people shower before a dawn darshan. It means a front desk that is open from 7:00 AM to 11:00 PM, and someone who will stay late for you if you call ahead and ask. It means being honest about the condition of the property when something needs repair, rather than hoping nobody mentions it.\n\n" +
     "It also means pricing that makes sense. Guests who come to Puri on a short temple trip are spending their money on prasad, travel, and family time, not on room upgrades. We keep our rates competitive with the rest of the budget category near the temple and we do not add charges at check-out that were not shown at booking. When guests leave feedback, including criticism, we read it and we act on what we can actually fix.",
 };

@@ -155,7 +155,7 @@ export const jamindarData = {
     {
       step: "06",
       title: "ODISHA",
-      desc: "Take morning walks along Puri beach or seek blessings at the sacred Jagannath Temple.",
+      desc: "Take morning walks along Puri beach or seek blessings at the sacred Shri Jagannath Temple.",
       image: "/images/jamindar/odisha-01.webp",
     },
   ] as JamindarJourneyStep[],
