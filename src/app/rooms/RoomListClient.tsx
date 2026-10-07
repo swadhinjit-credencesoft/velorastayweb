@@ -55,7 +55,6 @@ export default function RoomListClient({ fallbackRooms }: RoomListClientProps) {
                       {room.originalPrice.toLocaleString("en-IN")}
                     </span>
                   )}
-                  <span className={styles.unit}>/ {room.priceUnit}</span>
                 </div>
               </div>
             </Link>

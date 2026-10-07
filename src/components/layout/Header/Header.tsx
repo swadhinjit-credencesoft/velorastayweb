@@ -46,7 +46,7 @@ export default function Header() {
             id: `nav-room-${v.slug}`,
             label: v.name,
             href: `/rooms/${v.slug}`,
-            description: v.tagline || `${v.beds} Bed, ₹${v.price}/night`,
+            description: v.tagline || `${v.beds} Bed, ₹${v.price}`,
             icon: v.beds > 2 ? "lucide:users" : "lucide:bed",
           })),
         ],

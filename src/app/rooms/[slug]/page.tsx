@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
   if (!room) return { title: "Room Not Found" };
   return {
     title: `${room.name} | Book at ${SITE_INFO.name}`,
-    description: `${room.name} starting from ₹${room.price}/night. ${room.description.substring(0, 150)}. Book now for the best rates.`,
+    description: `${room.name} starting from ₹${room.price}. ${room.description.substring(0, 150)}. Book now for the best rates.`,
     alternates: { canonical: `/rooms/${room.slug}` },
     openGraph: {
       title: `${room.name} | ${SITE_INFO.name}`,

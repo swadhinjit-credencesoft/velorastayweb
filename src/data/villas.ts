@@ -577,7 +577,7 @@ export const VILLAS: VillaType[] = ROOM_SEEDS.map((seed) => ({
   longDescription: seed.description,
   price: seed.price,
   currency: "₹",
-  priceUnit: "per night",
+  priceUnit: "",
   bedrooms: 1,
   bathrooms: 1,
   beds: seed.beds,

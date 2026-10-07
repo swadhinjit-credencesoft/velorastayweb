@@ -29,7 +29,7 @@ export default function VillaComparison({ villas }: VillaComparisonProps) {
       {
         label: "Price",
         icon: "lucide:indian-rupee",
-        values: villas.map((r) => `${r.currency}${r.price} / ${r.priceUnit}`),
+        values: villas.map((r) => `${r.currency}${r.price}`),
       },
       {
         label: "Size",

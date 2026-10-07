@@ -91,7 +91,6 @@ export default function VillaCard({ villa }: VillaCardProps) {
             <span className={styles.price}>
               {villa.currency}{villa.price}
             </span>
-            <span className={styles.priceUnit}>{villa.priceUnit}</span>
           </div>
           <span className={styles.viewBtn}>
             View Details

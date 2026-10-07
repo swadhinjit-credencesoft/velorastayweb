@@ -52,7 +52,6 @@ export default function FeaturedVillas() {
                       price={villa.price}
                       originalPrice={villa.originalPrice}
                       currency={villa.currency}
-                      unit={villa.priceUnit}
                     />
                     <Button variant="outline" size="sm" href={`/rooms/${villa.slug}`}>
                       View Details

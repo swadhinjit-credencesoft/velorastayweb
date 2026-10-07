@@ -11,7 +11,7 @@ export default function PriceDisplay({
   price,
   originalPrice,
   currency = "₹",
-  unit = "per night",
+  unit,
 }: PriceDisplayProps) {
   const hasDiscount = !!originalPrice && originalPrice > price;
 
@@ -25,7 +25,7 @@ export default function PriceDisplay({
       <span className={styles.current}>
         {currency}{price}
       </span>
-      <span className={styles.unit}>{unit}</span>
+      {unit && <span className={styles.unit}>{unit}</span>}
     </div>
   );
 }

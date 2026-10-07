@@ -30,7 +30,6 @@ function JamindarRoomCard({ room }: JamindarRoomCardProps) {
           <div className={styles.priceBadge}>
             <span className={styles.currency}>{room.currency}</span>
             <span className={styles.priceNum}>{room.price.toLocaleString("en-IN")}</span>
-            <span className={styles.unit}>/{room.priceUnit}</span>
           </div>
         </div>
 

@@ -129,7 +129,6 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
                   </span>
                 )}
               </div>
-              <p className={styles.priceUnit}>per {room.priceUnit}</p>
               <a href={BOOKING_ENGINE_URL} className={styles.bookBtn}>Book Now</a>
               <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
               <div className={styles.bookingDetails}>

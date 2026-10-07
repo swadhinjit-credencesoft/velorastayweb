@@ -1,4 +1,4 @@
-﻿import Icon from "@/components/Icon/Icon";
+import Icon from "@/components/Icon/Icon";
 import Badge from "@/components/ui/Badge/Badge";
 import styles from "./VillaPricing.module.scss";
 
@@ -37,7 +37,6 @@ export default function VillaPricing({
           <span className={styles.currentPrice}>
             {currency}{price}
           </span>
-          <span className={styles.priceUnit}>{priceUnit}</span>
         </div>
         {hasDiscount && (
           <Badge variant="success">

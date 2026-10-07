@@ -41,7 +41,6 @@ export default function StickyBookButton({
           <span className={styles.price}>
             <span className={styles.currency}>{currency}</span>
             {price}
-            <span className={styles.unit}>/ night</span>
           </span>
         </div>
         <a href="https://bookone.io/bishnu-bhaban?bookingEngine=true" className={styles.bookBtn}>
