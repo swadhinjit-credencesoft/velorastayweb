@@ -11,7 +11,6 @@ import {
   setSelectedRoomId,
 } from "@/store/slices/bookingSlice";
 import { useBhabanData } from "@/hooks/useBhabanData";
-import { VILLAS } from "@/data/villas";
 import Icon from "@/components/Icon/Icon";
 import styles from "./SearchBar.module.scss";
 
@@ -80,8 +79,8 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
     }
   }, [checkIn, dispatch]);
 
-  const { villas, error } = useBhabanData();
-  const villaOptions = [...(!error && villas.length > 0 ? villas : VILLAS)]
+  const { villas } = useBhabanData();
+  const villaOptions = [...villas]
     .sort((a, b) => a.bedrooms - b.bedrooms)
     .map((villa) => ({ value: villa.slug, label: villa.name }));
 

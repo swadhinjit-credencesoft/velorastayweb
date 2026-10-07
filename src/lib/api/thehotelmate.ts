@@ -119,33 +119,60 @@ export function jamindarAvailabilityUrl(fromDate?: string, toDate?: string): str
 let cachedProperty: TmProperty | null = null;
 let inflightPromise: Promise<TmProperty> | null = null;
 
+const FETCH_ATTEMPTS = 4;
+const FETCH_RETRY_DELAY_MS = 700;
+
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Single source of truth for room data: thehotelmate's checkAvailability endpoint.
+ *
+ * There is no hardcoded room list in this project. If this call cannot be made
+ * the build fails loudly rather than shipping stale prices or names.
+ */
+async function fetchProperty(url: string, label: string): Promise<TmProperty> {
+  let lastError: Error | null = null;
+
+  for (let attempt = 1; attempt <= FETCH_ATTEMPTS; attempt++) {
+    try {
+      const res = await fetch(url, { cache: "force-cache" });
+      if (!res.ok) {
+        throw new Error(`${label} API error: ${res.status} ${res.statusText}`);
+      }
+      const data = (await res.json()) as TmProperty;
+      if (!Array.isArray(data.roomList) || data.roomList.length === 0) {
+        throw new Error(`${label} API returned no rooms`);
+      }
+      return data;
+    } catch (error) {
+      lastError =
+        error instanceof Error ? error : new Error(`${label} API request failed`);
+      if (attempt < FETCH_ATTEMPTS) {
+        await delay(FETCH_RETRY_DELAY_MS * attempt);
+      }
+    }
+  }
+
+  throw lastError ?? new Error(`${label} API request failed`);
+}
+
 export async function getProperty(options?: { refresh?: boolean }): Promise<TmProperty> {
   if (!options?.refresh && cachedProperty) return cachedProperty;
   if (inflightPromise) return inflightPromise;
 
-  inflightPromise = (async () => {
-    let data: TmProperty;
-    try {
-      const res = await fetch(propertyAvailabilityUrl(), {
-        cache: "force-cache",
-      });
-      if (!res.ok) {
-        throw new Error(`Bishnu Bhaban API error: ${res.status} ${res.statusText}`);
-      }
-      data = (await res.json()) as TmProperty;
-    } catch (error) {
-      throw error instanceof Error
-        ? error
-        : new Error("Bishnu Bhaban API request failed");
-    }
-    if (!Array.isArray(data.roomList)) {
-      data = { ...data, roomList: [] };
-    }
-    cachedProperty = data;
-    return data;
-  })().finally(() => {
-    inflightPromise = null;
-  });
+  inflightPromise = fetchProperty(
+    propertyAvailabilityUrl(),
+    "Bishnu Bhaban"
+  )
+    .then((data) => {
+      cachedProperty = data;
+      return data;
+    })
+    .finally(() => {
+      inflightPromise = null;
+    });
 
   return inflightPromise;
 }
@@ -157,27 +184,17 @@ export async function getJamindarProperty(options?: { refresh?: boolean }): Prom
   if (!options?.refresh && cachedJamindarProperty) return cachedJamindarProperty;
   if (inflightJamindarPromise) return inflightJamindarPromise;
 
-  inflightJamindarPromise = (async () => {
-    let data: TmProperty;
-    try {
-      const res = await fetch(jamindarAvailabilityUrl());
-      if (!res.ok) {
-        throw new Error(`Jamindar Nest API error: ${res.status} ${res.statusText}`);
-      }
-      data = (await res.json()) as TmProperty;
-    } catch (error) {
-      throw error instanceof Error
-        ? error
-        : new Error("Jamindar Nest API request failed");
-    }
-    if (!Array.isArray(data.roomList)) {
-      data = { ...data, roomList: [] };
-    }
-    cachedJamindarProperty = data;
-    return data;
-  })().finally(() => {
-    inflightJamindarPromise = null;
-  });
+  inflightJamindarPromise = fetchProperty(
+    jamindarAvailabilityUrl(),
+    "Jamindar Nest"
+  )
+    .then((data) => {
+      cachedJamindarProperty = data;
+      return data;
+    })
+    .finally(() => {
+      inflightJamindarPromise = null;
+    });
 
   return inflightJamindarPromise;
 }
@@ -325,7 +342,7 @@ const ROOM_POLICIES = [
     id: "checkin",
     title: "Check-in & Check-out",
     description:
-      "Check-in time is 2:00 PM and check-out is 11:00 AM. Early check-in and late check-out are available on request, subject to availability.",
+      "Check-in time is 08:00 AM and check-out is 09:00 AM. Early check-in and late check-out are available on request, subject to availability.",
   },
   {
     id: "cancel",
@@ -480,35 +497,24 @@ export function mapPropertyVillas(property: TmProperty): VillaType[] {
  * Build-time (static export) room list for Bishnu Bhaban.
  *
  * The browser fetch in useBhabanData is blocked by CORS on the live domain, so
- * every server-rendered room surface must read rooms from here instead of the
- * hardcoded data in src/data/villas.ts. Returns [] if the API is unreachable
- * so callers can fall back to VILLAS.
+ * every server-rendered room surface reads rooms from here. This throws if the
+ * API cannot be reached so a build never falls back to hardcoded room data.
  */
 export async function getApiRooms(): Promise<VillaType[]> {
-  try {
-    const property = await getProperty();
-    return mapPropertyVillas(property);
-  } catch (error) {
-    console.error("[rooms] build-time API fetch failed:", error);
-    return [];
-  }
+  const property = await getProperty();
+  return mapPropertyVillas(property);
 }
 
 /**
  * Build-time (static export) room list for Jamindar Nest (property 3638).
  *
  * Same reason as getApiRooms: the browser fetch is blocked by CORS on the live
- * domain, so useJamindarData used to always fall back to the hardcoded
- * src/data/jamindar.ts rooms. Returns [] if the API is unreachable.
+ * domain. This throws if the API cannot be reached rather than falling back to
+ * hardcoded room data.
  */
 export async function getApiJamindarRooms(): Promise<JamindarRoom[]> {
-  try {
-    const property = await getJamindarProperty();
-    return mapJamindarRooms(property);
-  } catch (error) {
-    console.error("[jamindar] build-time API fetch failed:", error);
-    return [];
-  }
+  const property = await getJamindarProperty();
+  return mapJamindarRooms(property);
 }
 
 export function mapJamindarRooms(property: TmProperty): JamindarRoom[] {
@@ -533,7 +539,7 @@ export function mapJamindarRooms(property: TmProperty): JamindarRoom[] {
     const roomOnlyPrice =
       typeof room.roomOnlyPrice === "number" && room.roomOnlyPrice > 0
         ? room.roomOnlyPrice
-        : planAmount || 4000;
+        : planAmount || 0;
 
     const maxOccupancy =
       typeof room.maximumOccupancy === "number" && room.maximumOccupancy > 0

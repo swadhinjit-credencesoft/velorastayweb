@@ -4,8 +4,6 @@ export const SITE_CONSTANTS = {
     "A Comfortable stay at the West Gate of Shri Jagannath Temple",
   BOOKING_ENGINE_URL: "https://bookone.io/bishnu-bhaban?bookingEngine=true",
   DEFAULT_CURRENCY: "₹",
-  MIN_PRICE: 1000,
-  MAX_PRICE: 4000,
   MAX_OCCUPANCY: 12,
   CHECK_IN_TIME: "14:00",
   CHECK_OUT_TIME: "11:00",

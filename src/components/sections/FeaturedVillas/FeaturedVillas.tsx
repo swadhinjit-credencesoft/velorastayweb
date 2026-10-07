@@ -4,13 +4,13 @@ import Button from "@/components/ui/Button/Button";
 import RoomCard from "@/components/ui/Card/Card";
 import PriceDisplay from "@/components/ui/PriceDisplay/PriceDisplay";
 import Icon from "@/components/Icon/Icon";
-import { VILLAS_CONTENT, getPopularVillas } from "@/data/villas";
+import { VILLAS_CONTENT } from "@/data/villas";
 import { useBhabanData } from "@/hooks/useBhabanData";
 import styles from "./FeaturedVillas.module.scss";
 
 export default function FeaturedVillas() {
-  const { villas, error } = useBhabanData();
-  const popularVillas = !error && villas.length > 0 ? villas : getPopularVillas();
+  const { villas } = useBhabanData();
+  const popularVillas = villas;
 
   return (
     <section className={styles.section}>

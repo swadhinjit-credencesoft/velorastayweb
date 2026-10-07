@@ -8,7 +8,22 @@ interface SchemaOrgProps {
   data?: Record<string, unknown>;
 }
 
-export function generateHotelSchema() {
+/**
+ * Price range for structured data, derived from the rooms fetched at build
+ * time. Returns undefined when there is nothing to report, so the caller can
+ * omit the property rather than publish a hardcoded figure.
+ */
+export function priceRangeLabel(prices: (number | undefined | null)[]): string | undefined {
+  const valid = prices.filter(
+    (p): p is number => typeof p === "number" && Number.isFinite(p) && p > 0,
+  );
+  if (valid.length === 0) return undefined;
+  const min = Math.min(...valid);
+  const max = Math.max(...valid);
+  return min === max ? `₹${min}` : `₹${min} - ₹${max}`;
+}
+
+export function generateHotelSchema(priceRange?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
@@ -41,7 +56,7 @@ export function generateHotelSchema() {
       bestRating: 5,
       worstRating: 1,
     },
-    priceRange: "₹1210 - ₹2400",
+    ...(priceRange ? { priceRange } : {}),
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
     openingHoursSpecification: {
@@ -51,46 +66,6 @@ export function generateHotelSchema() {
       closes: "23:59",
     },
     image: HOTEL_IMAGE,
-  };
-}
-
-export function generateLocalBusinessSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${SITE_INFO.url}#business`,
-    name: SITE_INFO.name,
-    description: SITE_INFO.description,
-    url: SITE_INFO.url,
-    telephone: SITE_INFO.phone,
-    email: SITE_INFO.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: SITE_INFO.address.street,
-      addressLocality: SITE_INFO.address.city,
-      addressRegion: SITE_INFO.address.state,
-      postalCode: SITE_INFO.address.pincode,
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE_INFO.geo.latitude,
-      longitude: SITE_INFO.geo.longitude,
-    },
-    image: HOTEL_IMAGE,
-    priceRange: "₹1210-₹2400",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_INFO.rating,
-      reviewCount: SITE_INFO.reviewCount,
-      bestRating: 5,
-    },
   };
 }
 

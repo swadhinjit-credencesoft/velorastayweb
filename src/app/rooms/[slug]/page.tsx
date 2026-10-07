@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { VILLAS, getVillaBySlug } from "@/data/villas";
 import { getApiRooms } from "@/lib/api/thehotelmate";
 import { SITE_INFO } from "@/data/site";
 import { generateVillaSchema, generateBreadcrumbSchema } from "@/utils/schema";
@@ -13,15 +12,14 @@ interface RoomPageProps {
   params: { slug: string };
 }
 
-/** API rooms first; VILLAS only keeps the build alive if the API is down. */
+/** API-only: throws at build time if thehotelmate cannot be reached. */
 async function resolveRoom(slug: string) {
   const apiRooms = await getApiRooms();
-  return apiRooms.find((room) => room.slug === slug) ?? getVillaBySlug(slug);
+  return apiRooms.find((room) => room.slug === slug);
 }
 
 export async function generateStaticParams() {
-  const apiRooms = await getApiRooms();
-  const rooms = apiRooms.length > 0 ? apiRooms : VILLAS;
+  const rooms = await getApiRooms();
   return rooms.map((room) => ({ slug: room.slug }));
 }
 

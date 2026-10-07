@@ -17,9 +17,9 @@ export const EVENT_TYPES: EventType[] = [
       "Host sacred ceremonies, Upanayana, family functions, birthday gatherings, and post-darshan feasts with attached room bookings.",
     longDescription:
       "Bishnu Bhaban offers a spacious banquet hall and gathering venue combined with comfortable multi-room accommodation just steps away from the Shri Jagannath Temple West Gate. Whether you are hosting a thread ceremony, religious puja, wedding party stay, or family feast, our property provides seamless group coordination, flexible seating arrangements, and dedicated 24-hour front desk support.",
-    image: "/bishnyhomeimage/homehero1.png",
+    image: "/eventhallbhajan.avif",
     gallery: [
-      { id: "bnq-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Banquet & Gathering Space at Bishnu Bhaban" },
+      { id: "bnq-img-1", src: "/eventhallbhajan.avif", alt: "Banquet & Function Hall at Bishnu Bhaban" },
       { id: "bnq-img-2", src: "/bishnyhomeimage/homehero22.webp", alt: "Group celebrations at Bishnu Bhaban" },
     ],
     capacity: 100,

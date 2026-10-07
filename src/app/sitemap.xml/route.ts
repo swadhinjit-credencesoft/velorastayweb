@@ -1,5 +1,4 @@
 import { SITE_INFO } from "@/data/site";
-import { VILLAS } from "@/data/villas";
 import { getApiRooms } from "@/lib/api/thehotelmate";
 import { FACILITIES } from "@/data/facilities";
 import { NEARBY_ATTRACTIONS } from "@/data/nearby";
@@ -93,8 +92,7 @@ export async function GET() {
     entry(page.path, page.priority, page.changeFrequency)
   );
 
-  const apiRooms = await getApiRooms();
-  const rooms = apiRooms.length > 0 ? apiRooms : VILLAS;
+  const rooms = await getApiRooms();
 
   rooms.forEach((villa) => {
     entries.push(entry(`/rooms/${villa.slug}`, 0.9, "weekly"));

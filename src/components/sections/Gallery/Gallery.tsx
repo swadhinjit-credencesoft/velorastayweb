@@ -4,14 +4,13 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Icon from "@/components/Icon/Icon";
 import Modal from "@/components/ui/Modal/Modal";
-import { VILLAS } from "@/data/villas";
 import { useBhabanData } from "@/hooks/useBhabanData";
 import styles from "./Gallery.module.scss";
 
 export default function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  const { villas, error } = useBhabanData();
-  const roomList = !error && villas.length > 0 ? villas : VILLAS;
+  const { villas } = useBhabanData();
+  const roomList = villas;
 
   const villaImages = useMemo(() => {
     return roomList.flatMap((villa) =>

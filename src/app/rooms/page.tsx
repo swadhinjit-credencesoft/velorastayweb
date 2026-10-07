@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { VILLAS, VILLAS_CONTENT } from "@/data/villas";
+import { VILLAS_CONTENT } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
 import { getApiRooms } from "@/lib/api/thehotelmate";
 import { generateBreadcrumbSchema } from "@/utils/schema";
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default async function RoomsPage() {
   // Fetched at build time (static export) so room names, prices and images are
   // baked into the HTML. The browser fetch in useBhabanData is blocked by CORS
-  // on the live domain and would otherwise always fall back to hardcoded data.
+  // on the live domain, so this build-time call is the only room source.
   const apiRooms = await getApiRooms();
 
   return (
@@ -44,7 +44,7 @@ export default async function RoomsPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms", href: "/rooms" }]}
         bgImage="/bishnyhomeimage/homehero22.webp"
       />
-      <RoomListClient fallbackRooms={apiRooms.length > 0 ? apiRooms : VILLAS} />
+      <RoomListClient fallbackRooms={apiRooms} />
     </>
   );
 }

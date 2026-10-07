@@ -15,10 +15,9 @@ export const FACILITIES: Facility[] = [
     description:
       "The single amenity we cannot compete on, because we own it. Bishnu Bhaban stands at the West Gate of the Shri Jagannath Temple, roughly 50 to 280 metres from the complex depending on the entry point. A guest leaving at 5:00 AM for the morning darshan is at the queue in a couple of minutes rather than in an auto.",
     icon: "lucide:landmark",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200",
+    image: "/50min-ameneties.png",
     images: [
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200",
+      "/50min-ameneties.png",
     ],
     features: ["50 m walk", "Darshan before the queue", "Market 2 min away"],
     category: "location",
@@ -162,7 +161,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Puri Beach is about 1.5 kilometres away, a short auto ride or roughly a twenty minute walk. Chandrabhaga Beach, the quieter northern end, is around 3 kilometres. We cannot arrange swimming here, but the desk will happily call you an auto at whatever hour you want to leave.",
     icon: "lucide:waves",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200",
+    image: "/puriseabeach.png",
     features: ["1.5 km to Puri Beach", "3 km to Chandrabhaga", "Autos on request"],
     category: "location",
   },

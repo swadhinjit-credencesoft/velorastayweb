@@ -14,7 +14,7 @@ import { jamindarData, jamindarBooking } from "@/data/jamindar";
 import { getApiJamindarRooms } from "@/lib/api/thehotelmate";
 import { JamindarRoomsProvider } from "@/providers/JamindarRoomsProvider";
 import { SITE_INFO } from "@/data/site";
-import { generateBreadcrumbSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, priceRangeLabel } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 
 export const metadata: Metadata = {
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 
 export default async function JamindarNestPage() {
   const apiRooms = await getApiJamindarRooms();
+  const priceRange = priceRangeLabel(apiRooms.map((room) => room.price));
 
   const hotelSchema = {
     "@context": "https://schema.org",
@@ -73,7 +74,7 @@ export default async function JamindarNestPage() {
       latitude: jamindarData.geo.latitude,
       longitude: jamindarData.geo.longitude,
     },
-    priceRange: "₹₹",
+    ...(priceRange ? { priceRange } : {}),
   };
 
   const breadcrumbSchema = generateBreadcrumbSchema([

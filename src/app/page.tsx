@@ -9,13 +9,21 @@ import NearbyAttractions from "@/components/sections/NearbyAttractions/NearbyAtt
 import FAQ from "@/components/sections/FAQ/FAQ";
 import CTA from "@/components/sections/CTA/CTA";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { generateHotelSchema, generateWebsiteSchema } from "@/utils/schema";
+import {
+  generateHotelSchema,
+  generateWebsiteSchema,
+  priceRangeLabel,
+} from "@/utils/schema";
+import { getApiRooms } from "@/lib/api/thehotelmate";
 import { SITE_INFO } from "@/data/site";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const rooms = await getApiRooms();
+  const priceRange = priceRangeLabel(rooms.map((room) => room.price));
+
   return (
     <>
-      <JsonLd schema={generateHotelSchema()} />
+      <JsonLd schema={generateHotelSchema(priceRange)} />
       <JsonLd schema={generateWebsiteSchema()} />
       <Hero>
         <SearchBar />

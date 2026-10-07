@@ -5,15 +5,14 @@ import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
-import { VILLAS, getVillaBySlug } from "@/data/villas";
 import { getApiRooms } from "@/lib/api/thehotelmate";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 
 type Props = { params: { slug: string } };
 
+/** API-only: throws at build time if thehotelmate cannot be reached. */
 async function resolveAllRooms() {
-  const apiRooms = await getApiRooms();
-  return apiRooms.length > 0 ? apiRooms : VILLAS;
+  return getApiRooms();
 }
 
 export async function generateStaticParams() {
@@ -23,7 +22,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const rooms = await resolveAllRooms();
-  const villa = rooms.find((r) => r.slug === params.slug) ?? getVillaBySlug(params.slug);
+  const villa = rooms.find((r) => r.slug === params.slug);
   if (!villa) return { title: "Gallery Not Found" };
   return {
     title: `${villa.name} Gallery | Bishnu Bhaban`,
