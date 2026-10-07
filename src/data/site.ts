@@ -12,7 +12,7 @@ export const SITE_INFO: SiteInfo = {
   name: "Bishnu Bhaban",
   tagline: "A Comfortable stay at the West Gate of Shri Jagannath Temple",
   description:
-    "Bishnu Bhaban offers a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri, Odisha. Clean air-conditioned rooms with hot water, free WiFi, a front desk open 7 AM to 11 PM, daily housekeeping and CCTV security.",
+    "Bishnu Bhaban offers a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri, Odisha. Clean air-conditioned rooms with hot water, free WiFi, a front desk open 24 hours, daily housekeeping and CCTV security.",
   url: "https://bishnubhaban.com",
   phone: "+91 9078922710",
   whatsapp: "+91 9437093094",
@@ -78,7 +78,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: "/bishnyhomeimage/homehero22.webp",
     title: "Your Base for Puri Darshan",
     subtitle:
-      "Hot water, free WiFi and a front desk open 7 AM to 11 PM, all within 50 to 280 metres of the temple complex.",
+      "Hot water, free WiFi and a front desk open 24 hours, all within 50 to 280 metres of the temple complex.",
     cta: { label: "Explore Rooms", href: "/rooms" },
   },
   {
@@ -168,7 +168,7 @@ export const TRUST_BADGES: TrustBadge[] = [
     id: "badge-support",
     icon: "lucide:headphones",
     label: "Front Desk",
-    value: "7 AM – 11 PM",
+    value: " 24×7",
   },
   {
     id: "badge-cctv",

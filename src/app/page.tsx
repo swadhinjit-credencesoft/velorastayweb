@@ -30,7 +30,7 @@ export default function HomePage() {
       <CTA
         eyebrow="Ready to Stay in Puri?"
         heading="Book Your Room Today"
-        description="A comfortable stay just 50 metres from the West Gate of Shri Jagannath Temple, Puri. Clean air-conditioned rooms, attached bathrooms, 24-hour hot water, and a front desk open from 7 AM to 11 PM."
+        description="A comfortable stay just 50 metres from the West Gate of Shri Jagannath Temple, Puri. Clean air-conditioned rooms, attached bathrooms, 24-hour hot water, and a front desk open 24 hours."
         buttons={[
           { label: "Book Now", href: "https://bookone.io/bishnu-bhaban?bookingEngine=true", variant: "primary" },
           { label: "View Rooms", href: "/rooms", variant: "outline" },

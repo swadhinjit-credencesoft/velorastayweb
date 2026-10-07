@@ -15,7 +15,7 @@ export const VILLA_AMENITIES: VillaAmenity[] = [
   { id: "wifi", icon: "lucide:wifi", label: "Free WiFi", category: "basic" },
   { id: "smart-tv", icon: "lucide:tv", label: "Television", category: "entertainment" },
   { id: "daily-housekeeping", icon: "lucide:sparkles", label: "Daily Housekeeping", category: "service" },
-  { id: "front-desk", icon: "lucide:headphones", label: "Front Desk 7 AM – 11 PM", category: "service" },
+  { id: "front-desk", icon: "lucide:headphones", label: "Front Desk  24×7", category: "service" },
   { id: "cctv", icon: "lucide:shield-check", label: "CCTV Security", category: "service" },
   { id: "parking", icon: "lucide:car", label: "Parking Facility", category: "outdoor" },
   { id: "laundry", icon: "lucide:shirt", label: "Laundry Service", category: "service" },

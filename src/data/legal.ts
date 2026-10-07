@@ -71,7 +71,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<h2>Check-in and Check-out</h2>\n" +
       "<p><strong>Check-in Time:</strong> 2:00 PM<br>\n" +
       "<strong>Check-out Time:</strong> 11:00 AM</p>\n" +
-      "<p>The front desk is staffed from 7:00 AM to 11:00 PM. Early check-in is available subject to room availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. During festival season we recommend arranging either in advance.</p>\n\n" +
+      "<p>The front desk is staffed 24 hours, 24×7. Early check-in is available subject to room availability and may incur an additional charge. Late check-out can also be arranged upon request, depending on availability on the day. During festival season we recommend arranging either in advance.</p>\n\n" +
       "<h2>Facilities and Amenities</h2>\n" +
       "<p>All of our rooms include the following:</p>\n" +
       "<ul>\n" +
@@ -81,7 +81,7 @@ export const LEGAL_PAGES: LegalPage[] = [
       "<li>Television</li>\n" +
       "<li>Daily housekeeping</li>\n" +
       "</ul>\n" +
-      "<p>The property also provides a front desk staffed from 7:00 AM to 11:00 PM, CCTV surveillance covering entry and exit points, luggage storage, laundry on request, and parking facilities. Late arrival or early departure outside desk hours should be arranged in advance by calling +91 9078922710.</p>\n\n" +
+      "<p>The property also provides a front desk staffed 24 hours, CCTV surveillance covering entry and exit points, luggage storage, laundry on request, and parking facilities. Late arrivals and early departures are handled by calling ahead on +91 9078922710 so someone is waiting for you.</p>\n\n" +
       "<h2>Cancellation & Booking Adjustment</h2>\n" +
       "<p>Cancellation charges will apply as per the cancellation policy applicable to the booking.</p>\n" +
       "<p>Where permitted by the hotel, the eligible cancelled booking amount may be adjusted against a future stay within one year from the date of cancellation.</p>\n" +

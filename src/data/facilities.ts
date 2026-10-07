@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Amenities",
   heading: "The Basics, Done Properly",
   description:
-    "Bishnu Bhaban is a comfortable stay at the West Gate of the Shri Jagannath Temple, so we do not oversell the amenities list. What we do have is the set of things that actually decide whether a Puri stay works: air conditioning, hot water at any hour, an attached bathroom, daily housekeeping, a front desk open 7 AM to 11 PM, WiFi, and CCTV on a property where most guests leave their bags for the day.",
+    "Bishnu Bhaban is a comfortable stay at the West Gate of the Shri Jagannath Temple, so we do not oversell the amenities list. What we do have is the set of things that actually decide whether a Puri stay works: air conditioning, hot water at any hour, an attached bathroom, daily housekeeping, a front desk open 24 hours, WiFi, and CCTV on a property where most guests leave their bags for the day.",
 };
 
 export const FACILITIES: Facility[] = [
@@ -70,12 +70,12 @@ export const FACILITIES: Facility[] = [
   {
     id: "facility-front-desk",
     slug: "front-desk",
-    name: "Front Desk (7 AM – 11 PM)",
+    name: "Front Desk ( 24×7)",
     description:
-      "The desk is staffed from 7:00 AM to 11:00 PM, which covers temple timings and almost all arrival and departure times. If you are arriving after 11 PM or leaving very early, call ahead on +91 9078922710 so we can arrange check-in outside those hours. The desk also handles luggage storage, which most guests use while they are at the beach or on a day trip to Konark.",
+      "The desk is staffed 24 hours a day, 24×7, which covers temple timings at any hour of the night and every arrival and departure time. If you are arriving very late or leaving before dawn, call ahead on +91 9078922710 so someone is waiting for you. The desk also handles luggage storage, which most guests use while they are at the beach or on a day trip to Konark.",
     icon: "lucide:concierge-bell",
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    features: ["Staffed 7 AM to 11 PM", "Luggage storage", "Late check-in by arrangement"],
+    features: ["Staffed 24 hours", "Luggage storage", "Late check-in by arrangement"],
     category: "service",
   },
   {

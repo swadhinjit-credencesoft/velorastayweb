@@ -16,7 +16,7 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Host sacred ceremonies, Upanayana, family functions, birthday gatherings, and post-darshan feasts with attached room bookings.",
     longDescription:
-      "Bishnu Bhaban offers a spacious banquet hall and gathering venue combined with comfortable multi-room accommodation just steps away from the Shri Jagannath Temple West Gate. Whether you are hosting a thread ceremony, religious puja, wedding party stay, or family feast, our property provides seamless group coordination, flexible seating arrangements, and dedicated front desk support from 7 AM to 11 PM.",
+      "Bishnu Bhaban offers a spacious banquet hall and gathering venue combined with comfortable multi-room accommodation just steps away from the Shri Jagannath Temple West Gate. Whether you are hosting a thread ceremony, religious puja, wedding party stay, or family feast, our property provides seamless group coordination, flexible seating arrangements, and dedicated 24-hour front desk support.",
     image: "/bishnyhomeimage/homehero1.png",
     gallery: [
       { id: "bnq-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Banquet & Gathering Space at Bishnu Bhaban" },
@@ -34,7 +34,7 @@ export const EVENT_TYPES: EventType[] = [
         includes: [
           "Spacious event & gathering area (up to 100 guests)",
           "Multiple room allocation under one booking",
-          "Dedicated assistance from front desk (7 AM–11 PM)",
+          "Dedicated assistance from front desk (24 hours)",
           "Luggage storage and group coordination",
         ],
         popular: true,
@@ -57,7 +57,7 @@ export const EVENT_TYPES: EventType[] = [
       "Capacity up to 100 Guests",
       "Steps to West Gate",
       "Multi-Room Bookings",
-      "Front Desk 7 AM–11 PM",
+      "Front Desk 24 hours",
       "Luggage Storage",
     ],
     faqs: [
@@ -216,7 +216,7 @@ export const EVENT_TYPES: EventType[] = [
     description:
       "Accommodation for pilgrim groups and yatra organizers travelling the Odisha temple circuit with pre-dawn start support.",
     longDescription:
-      "Organizing a pilgrim group on the Odisha temple circuit requires precision and dependable support: rooms ready upon arrival, secure luggage storage while you visit the sanctum or beach, and a front desk open from 7 AM to 11 PM to facilitate early morning darshan. Bishnu Bhaban is located right at the West Gate, saving your group precious walking time.",
+      "Organizing a pilgrim group on the Odisha temple circuit requires precision and dependable support: rooms ready upon arrival, secure luggage storage while you visit the sanctum or beach, and a front desk open 24 hours to help with early morning darshan. Bishnu Bhaban is located right at the West Gate, saving your group precious walking time.",
     image: "/bishnyhomeimage/homehero1.png",
     gallery: [
       { id: "pil-img-1", src: "/bishnyhomeimage/homehero1.png", alt: "Pilgrim group arriving at Bishnu Bhaban" },

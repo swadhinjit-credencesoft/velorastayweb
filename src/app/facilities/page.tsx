@@ -10,7 +10,7 @@ import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
 export const metadata: Metadata = {
   title: "Facilities & Amenities | Bishnu Bhaban",
   description:
-    "The facilities at Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri: air conditioning, 24-hour hot water, attached bathroom, free WiFi, daily housekeeping, and a front desk open from 7 AM to 11 PM.",
+    "The facilities at Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri: air conditioning, 24-hour hot water, attached bathroom, free WiFi, daily housekeeping, and a front desk open 24 hours.",
   keywords: [
     "hotel near Shri Jagannath Temple",
     "comfortable stay Puri amenities",

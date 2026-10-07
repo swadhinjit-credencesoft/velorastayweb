@@ -41,8 +41,8 @@ export default function WhyChooseUs() {
               We offer a comfortable stay just fifty metres from the West Gate of Shri
               Jagannath Temple, and we do not pretend to be more than that. What we
               commit to is the set of things that decide whether a Puri trip went well: a
-              clean room every time, hot water at any hour, a front desk open from 7 AM
-              to 11 PM, and a price that does not need justifying.
+              clean room every time, hot water at any hour, a front desk open 24
+              hours, and a price that does not need justifying.
             </p>
 
             <div className={styles.statsGrid}>

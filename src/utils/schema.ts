@@ -44,6 +44,12 @@ export function generateHotelSchema() {
     priceRange: "₹1210 - ₹2400",
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
     image: HOTEL_IMAGE,
   };
 }
@@ -76,8 +82,8 @@ export function generateLocalBusinessSchema() {
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "07:00",
-      closes: "23:00",
+      opens: "00:00",
+      closes: "23:59",
     },
     aggregateRating: {
       "@type": "AggregateRating",

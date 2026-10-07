@@ -139,7 +139,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-facilities-03",
         question: "What are the front desk hours?",
         answer:
-          "The front desk is staffed from 7:00 AM to 11:00 PM. If you are arriving after 11 PM or leaving well before 7 AM, call us on +91 9078922710 in advance and we will arrange check-in outside those hours where possible.",
+          "The front desk is staffed 24 hours a day, 24×7 — there is always someone there, whatever the time. If you are arriving very late or leaving before dawn, calling us on +91 9078922710 in advance is still useful so we can have someone waiting and get you straight into your room.",
       },
       {
         id: "faq-facilities-04",

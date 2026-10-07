@@ -338,6 +338,6 @@ export const FOOTER_CONTACT = {
     "West Gate of Shri Jagannath Temple, Grand Road, Puri, Odisha 752001, India",
   phone: "+91 9078922710",
   email: "Bishnubhabanpuri@gmail.com",
-  hours: "Reception 7:00 AM – 11:00 PM",
+  hours: "Reception  24×7",
 };
 

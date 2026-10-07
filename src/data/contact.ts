@@ -4,7 +4,7 @@ export const CONTACT_CONTENT: SectionContent = {
   eyebrow: "Get In Touch",
   heading: "Questions About Rooms, Rates, or Availability?",
   description:
-    "Most guests reach us with a simple question: is a room free, and how much. Call the reservations line, send a WhatsApp message, or email us and we will answer directly rather than through a form that takes two days to reply to. Reception is staffed 7:00 AM to 11:00 PM, and the front desk is available around the clock for guests already staying with us.",
+    "Most guests reach us with a simple question: is a room free, and how much. Call the reservations line, send a WhatsApp message, or email us and we will answer directly rather than through a form that takes two days to reply to. The front desk is staffed 24 hours, 24×7, so there is always someone to reach — whether you are booking, arriving late, or already staying with us.",
 };
 
 export const CONTACT_INFO: ContactInfo[] = [
@@ -43,9 +43,9 @@ export const CONTACT_INFO: ContactInfo[] = [
     href: "https://maps.google.com/?q=Bishnu+Bhaban+West+Gate+of+Jagannath+Temple+Puri",
   },
   {
-    label: "Reception Hours",
+    label: "Front Desk Hours",
     icon: "lucide:clock",
-    value: "7:00 AM – 11:00 PM",
+    value: " 24×7",
     href: "#",
   },
 ];

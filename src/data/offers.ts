@@ -28,7 +28,7 @@ export const OFFERS: Offer[] = [
     features: [
       "Rooms a short walk from the West Gate of the Shri Jagannath Temple",
       "Front desk help with pre-dawn darshan timings",
-      "Front desk open 7 AM to 11 PM for timings and directions",
+      "Front desk open 24 hours for timings and directions",
     ],
     popular: true,
   },
