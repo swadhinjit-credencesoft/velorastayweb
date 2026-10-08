@@ -342,7 +342,7 @@ const ROOM_POLICIES = [
     id: "checkin",
     title: "Check-in & Check-out",
     description:
-      "Check-in time is 08:00 AM and check-out is 09:00 AM. Early check-in and late check-out are available on request, subject to availability.",
+      "Check-in time is 09:00 AM and check-out is 08:00 AM. Early check-in and late check-out are available on request, subject to availability.",
   },
   {
     id: "cancel",
