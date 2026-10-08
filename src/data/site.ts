@@ -49,7 +49,7 @@ export const SOCIAL_LINKS: SocialLinks = {
 export const SITE_ASSETS = {
   logo: "/bishnu-bhaban-logo1.png",
   logoLight: "/bishnu-bhaban-logo1.png",
-  favicon: "/favicon.ico",
+  favicon: "/bishnu-bhaban-logo1.png",
   aboutImage:
     "/bishnyhomeimage/homehero1.png",
   roomsPreviewImage:
