@@ -56,9 +56,14 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.ico?v=2",
-    shortcut: "/favicon.ico?v=2",
-    apple: "/bishnyhomeimage/homehero1.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-256.png", sizes: "256x256", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "256x256", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",

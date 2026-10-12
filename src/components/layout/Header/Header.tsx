@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useCallback, useMemo } from "react";
+import { useRef, useCallback, useMemo, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -70,6 +70,14 @@ export default function Header() {
 
   const closeMega = useCallback(() => {
     dispatch(setMegaMenuOpen(null));
+  }, [dispatch]);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth < 1024) dispatch(setMegaMenuOpen(null));
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, [dispatch]);
 
   // Render Jamindar-specific header when on the Jamindar Nest route
