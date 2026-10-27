@@ -82,11 +82,6 @@ export default function JamindarFooter() {
                     WhatsApp Concierge
                   </a>
                 </li>
-                <li>
-                  <span className={styles.policyText}>
-                    Free cancellation up to 7 days before check-in.
-                  </span>
-                </li>
               </ul>
             </div>
           </div>
@@ -104,8 +99,12 @@ export default function JamindarFooter() {
               <span>Visit Bishnu Bhaban</span>
             </a>
             <p className={styles.credits}>
-              Powered by{" "}
-              <a href="https://bookone.io/" target="_blank" rel="noopener noreferrer">
+              Designed &amp; Developed by{" "}
+              <a href="https://www.credencesoft.in/" target="_blank" rel="noopener noreferrer">
+                CredenceSoft
+              </a>
+              , Powered by{" "}
+              <a href="https://bookonepms.com/" target="_blank" rel="noopener noreferrer">
                 BookOne
               </a>
             </p>
