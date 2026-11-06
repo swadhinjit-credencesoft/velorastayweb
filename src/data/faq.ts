@@ -16,7 +16,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-booking-02",
         question: "Can I modify or cancel my reservation?",
         answer:
-          "Yes. Free cancellation is available up to 7 days before your check-in date. Cancellations made within 2 days of check-in may incur a charge of one night's stay. To modify a booking, contact us at Bishnubhabanpuri@gmail.com or call +91 9078922710 and we will do what we can to accommodate the change.",
+          "No. All bookings are strictly non-cancellable and non-refundable. Once a reservation is confirmed, cancellations are not permitted, and no refunds will be issued. For booking-related queries, please contact us at Bishnubhabanpuri@gmail.com or call +91 9078922710.",
       },
       {
         id: "faq-booking-03",
@@ -53,7 +53,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-rooms-02",
         question: "What are the check-in and check-out times?",
         answer:
-          "Check-in is from 2:00 PM and check-out is by 11:00 AM. Early check-in and late check-out can be requested subject to availability; during festival season we recommend arranging this in advance rather than on the day.",
+          "Check-in is from 9:00 AM and check-out is by 08:00 AM. Early check-in and late check-out can be requested subject to availability; during festival season we recommend arranging this in advance rather than on the day.",
       },
       {
         id: "faq-rooms-03",
