@@ -1,7 +1,6 @@
 import { SITE_INFO } from "@/data/site";
 
-const HOTEL_IMAGE =
-  `${SITE_INFO.url}/bishnyhomeimage/homehero1.png`;
+const HOTEL_IMAGE = `${SITE_INFO.url}/y-hotels-room.svg`;
 
 interface SchemaOrgProps {
   type: string;
@@ -40,22 +39,11 @@ export function generateHotelSchema(priceRange?: string) {
       postalCode: SITE_INFO.address.pincode,
       addressCountry: "IN",
     },
-    geo: {
+    ...(SITE_INFO.geo ? { geo: {
       "@type": "GeoCoordinates",
       latitude: SITE_INFO.geo.latitude,
       longitude: SITE_INFO.geo.longitude,
-    },
-    starRating: {
-      "@type": "Rating",
-      ratingValue: 5,
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_INFO.rating,
-      reviewCount: SITE_INFO.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    } } : {}),
     ...(priceRange ? { priceRange } : {}),
     checkinTime: SITE_INFO.checkIn,
     checkoutTime: SITE_INFO.checkOut,
@@ -75,7 +63,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_INFO.name,
     url: SITE_INFO.url,
-    logo: "/bishnu-bhaban-logo1.png",
+    logo: `${SITE_INFO.url}/y-hotels-signature.svg`,
     description: SITE_INFO.description,
     address: {
       "@type": "PostalAddress",
@@ -135,12 +123,6 @@ export function generateVillaSchema(villa: {
         name: SITE_INFO.name,
       },
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_INFO.rating,
-      reviewCount: SITE_INFO.reviewCount,
-      bestRating: 5,
-    },
   };
 }
 
@@ -193,12 +175,6 @@ export function generateReviewSchema(reviews: {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     name: SITE_INFO.name,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_INFO.rating,
-      reviewCount: SITE_INFO.reviewCount,
-      bestRating: 5,
-    },
     review: reviews.map((review) => ({
       "@type": "Review",
       author: {

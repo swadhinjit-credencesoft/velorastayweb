@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function LegacyDeluxeRoomPage() {
-  redirect("/rooms/deluxe-double-bedded-temple-facing-room");
+  redirect("/rooms/super-deluxe");
 }

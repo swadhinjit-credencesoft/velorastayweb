@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_VISION } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Vision | Bishnu Bhaban",
-  description: "The vision driving Bishnu Bhaban — to be the stay people think of first when planning a trip to the Shri Jagannath Temple.",
+  title: "Our Focus | Y Hotels Signature",
+  description: "Y Hotels Signature in Jharsuguda, Odisha.",
   alternates: { canonical: "/about/vision" },
   openGraph: {
-    title: "Our Vision | Bishnu Bhaban",
-    description: "The vision driving Bishnu Bhaban — to be the stay people think of first when planning a trip to the Shri Jagannath Temple.",
+    title: "Our Focus | Y Hotels Signature",
+    description: "Room and stay information for Y Hotels Signature.",
   },
 };
 

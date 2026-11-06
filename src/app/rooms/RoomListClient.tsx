@@ -10,8 +10,7 @@ interface RoomListClientProps {
   fallbackRooms: VillaType[];
 }
 
-const PLACEHOLDER_IMAGE =
-  "https://bookonelocal.in/cdn/2026-09-25-115951629-p4.jpg";
+const PLACEHOLDER_IMAGE = "/y-hotels-room.svg";
 
 export default function RoomListClient({ fallbackRooms }: RoomListClientProps) {
   const { villas, error } = useBhabanData();

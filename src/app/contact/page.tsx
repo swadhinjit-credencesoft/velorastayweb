@@ -8,13 +8,12 @@ import { generateCanonicalUrl } from "@/utils/seo";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Bishnu Bhaban",
-  description:
-    "Get in touch with Bishnu Bhaban. Contact us for bookings, inquiries, or assistance with your comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.",
+  title: "Contact | Y Hotels Signature, Jharsuguda",
+  description: "Contact Y Hotels Signature to check room availability, rates and meal plans.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Us | Bishnu Bhaban",
-    description: "Get in touch with Bishnu Bhaban for bookings and inquiries.",
+    title: "Contact Y Hotels Signature",
+    description: "Official and listing phone numbers, email and address for Y Hotels Signature.",
     url: generateCanonicalUrl("/contact"),
   },
 };

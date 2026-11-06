@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function LegacyStandardRoomPage() {
-  redirect("/rooms/double-bed-ac-room");
+  redirect("/rooms/deluxe");
 }

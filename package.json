@@ -1,8 +1,8 @@
 {
-  "name": "velora-stays-web",
+  "name": "y-hotels-signature-web",
   "version": "1.0.0",
   "private": true,
-  "description": "Velora Stays — luxury villa marketing site near Pawna Lake, Lonavala, built with Next.js, TypeScript, SCSS and Redux Toolkit.",
+  "description": "Y Hotels Signature hotel website in Jharsuguda, Odisha, built with Next.js, TypeScript and SCSS.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

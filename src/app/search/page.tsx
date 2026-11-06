@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import SearchForm from "./SearchForm";
 
 export const metadata: Metadata = {
-  title: "Search | Bishnu Bhaban",
-  description:
-    "Search rooms, facilities, and blog posts at Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.",
+  title: "Search | Y Hotels Signature",
+  description: "Search rooms and hotel information at Y Hotels Signature in Jharsuguda.",
   robots: { index: false, follow: false },
   alternates: { canonical: "/search" },
   openGraph: {
-    title: "Search | Bishnu Bhaban",
-    description: "Search rooms, facilities, and blog posts at Bishnu Bhaban.",
-    url: "https://bishnubhaban.com/search",
+    title: "Search | Y Hotels Signature",
+    description: "Search Y Hotels Signature rooms and information.",
+    url: "https://yhotels.in/search",
   },
 };
 

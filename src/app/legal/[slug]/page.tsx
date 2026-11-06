@@ -4,49 +4,19 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { LEGAL_PAGES, getLegalPage } from "@/data/legal";
-
+import { SITE_INFO } from "@/data/site";
 type Props = { params: { slug: string } };
-
-export async function generateStaticParams() {
-  return LEGAL_PAGES.map((p) => ({ slug: p.slug }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export function generateStaticParams() { return LEGAL_PAGES.map((page) => ({ slug: page.slug })); }
+export function generateMetadata({ params }: Props): Metadata {
   const page = getLegalPage(params.slug);
-  if (!page) return { title: "Page Not Found" };
-  const desc = `${page.title} — Bishnu Bhaban, a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri.`;
-  return {
-    title: `${page.title} | Bishnu Bhaban`,
-    description: desc,
-    alternates: { canonical: `/legal/${page.slug}` },
-    openGraph: {
-      title: `${page.title} | Bishnu Bhaban`,
-      description: desc,
-    },
-  };
+  if (!page) return { title: `Page Not Found | ${SITE_INFO.name}` };
+  return { title: `${page.title} | ${SITE_INFO.name}`, description: `${page.title} for Y Hotels Signature in Jharsuguda.`, alternates: { canonical: `/legal/${page.slug}` } };
 }
-
 export default function LegalPage({ params }: Props) {
   const page = getLegalPage(params.slug);
   if (!page) notFound();
-
-  return (
-    <>
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: page.title, url: `/legal/${page.slug}` }])} />
-
-      <section className="relative bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-20 pt-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: page.title, href: `/legal/${page.slug}` }]} />
-          <h1 className="text-4xl font-bold text-white mt-4">{page.title}</h1>
-          <p className="mt-2 text-gray-300">Last Updated: {page.lastUpdated}</p>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600" dangerouslySetInnerHTML={{ __html: page.content }} />
-        </div>
-      </section>
-    </>
-  );
+  return <>
+    <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: page.title, url: `${SITE_INFO.url}/legal/${page.slug}` }])}/>
+    <main className="mx-auto max-w-4xl px-6 py-32"><Breadcrumb items={[{ label: "Home", href: "/" }, { label: page.title, href: `/legal/${page.slug}` }]}/><h1 className="mt-6 text-4xl font-bold">{page.title}</h1><p className="mt-2 text-sm text-gray-500">Last updated: {page.lastUpdated}</p><article className="prose prose-lg mt-8 max-w-none" dangerouslySetInnerHTML={{ __html: page.content }}/></main>
+  </>;
 }

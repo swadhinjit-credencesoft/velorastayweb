@@ -46,7 +46,7 @@ export default function SearchForm() {
                     {villaResults.map((r) => (
                       <Link key={r.id} href={`/rooms/${r.slug}`} className="bg-white rounded-lg p-4 shadow-sm hover:shadow transition-shadow flex gap-4">
                         <div className="relative w-20 h-20 rounded overflow-hidden flex-shrink-0">
-                           <Image src={r.images?.[0]?.src || "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800"} alt={r.name} fill className="object-cover" sizes="80px" />
+                           <Image src={r.images?.[0]?.src || "/y-hotels-room.svg"} alt={r.name} fill className="object-cover" sizes="80px" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-gray-900">{r.name}</h3>

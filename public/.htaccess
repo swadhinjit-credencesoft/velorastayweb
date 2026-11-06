@@ -18,21 +18,20 @@ RewriteEngine On
 ############################################
 
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.bishnubhaban\.com$ [NC]
-RewriteRule ^(.*)$ https://bishnubhaban.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} !^yhotels\.in$ [NC]
+RewriteRule ^(.*)$ https://yhotels.in/$1 [R=301,L]
 
 ############################################
 # REDIRECT LEGACY /villas URLS TO /rooms
 ############################################
 
-# Retired Velora-era villa slugs, e.g.
-# /villas/2-bhk-villa, /villas/5-bhk-grand-villa, /villas/velora-4-bhk-villa
+# Retired villa slugs
 RewriteRule ^villas/(?:velora-)?[0-9]+-bhk-(?:grand-)?villa/?$ /rooms [R=301,L]
 
 # Old invented room slugs, mapped to the closest current room
-RewriteRule ^villas/standard-room/?$ /rooms/double-bed-ac-room [R=301,L]
-RewriteRule ^villas/deluxe-room/?$ /rooms/deluxe-double-bedded-temple-facing-room [R=301,L]
-RewriteRule ^villas/multi-bed-room/?$ /rooms/four-bed-ac-room [R=301,L]
+RewriteRule ^villas/standard-room/?$ /rooms/deluxe [R=301,L]
+RewriteRule ^villas/deluxe-room/?$ /rooms/super-deluxe [R=301,L]
+RewriteRule ^villas/multi-bed-room/?$ /rooms/executive [R=301,L]
 
 # The listing itself
 RewriteRule ^villas/?$ /rooms [R=301,L]
@@ -67,8 +66,7 @@ RewriteRule ^ - [L]
 #   /rooms/                      -> rooms.html            (was 403)
 #   /rooms                       -> rooms.html
 #   /rooms/double-bed-non-ac-room -> rooms/double-bed-non-ac-room.html
-#   /jamindar-nest               -> jamindar-nest.html    (was 404)
-#   /jamindar-nest/              -> jamindar-nest.html
+#   /rooms/deluxe                -> rooms/deluxe.html
 ############################################
 
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f

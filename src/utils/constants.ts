@@ -1,18 +1,18 @@
 export const SITE_CONSTANTS = {
-  PROPERTY_NAME: "Bishnu Bhaban",
-  PROPERTY_TAGLINE:
-    "A Comfortable stay at the West Gate of Shri Jagannath Temple",
-  BOOKING_ENGINE_URL: "https://bookone.io/bishnu-bhaban?bookingEngine=true",
-  DEFAULT_CURRENCY: "₹",
-  MAX_OCCUPANCY: 12,
-  CHECK_IN_TIME: "14:00",
+  PROPERTY_NAME: "Y Hotels Signature",
+  PROPERTY_TAGLINE: "A signature stay in Jharsuguda",
+  OFFICIAL_PHONE: "+919124674120",
+  LISTING_PHONE: "+918455007740",
+  EMAIL: "connect@yhotels.in",
+  GST_NUMBER: "21AACFY5722D1ZL",
+  CHECK_IN_TIME: "13:00",
   CHECK_OUT_TIME: "11:00",
+  BASE_SINGLE_RATE: 3500,
+  DOUBLE_OCCUPANCY_INCREMENT: 500,
+  CATEGORY_INCREMENT: 500,
   MAX_GALLERY_IMAGES_PER_PAGE: 24,
   BLOG_POSTS_PER_PAGE: 9,
   REVIEWS_PER_PAGE: 10,
-  WHATSAPP_NUMBER: "+919437093094",
-  EMERGENCY_NUMBER: "+919078922710",
-  RECEPTION_NUMBER: "+919078922710",
 } as const;
 
 export const NAVIGATION_TIMEOUT = 300;

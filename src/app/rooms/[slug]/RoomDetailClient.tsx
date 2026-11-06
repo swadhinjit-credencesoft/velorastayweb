@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useVillaBySlug } from "@/hooks/useBhabanData";
 import { VILLA_AMENITIES } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
-import { BOOKING_ENGINE_URL } from "@/lib/api/thehotelmate";
 import type { VillaAmenity, VillaType } from "@/types";
 import styles from "./room-detail.module.scss";
 
@@ -129,8 +128,11 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
                   </span>
                 )}
               </div>
-              <a href={BOOKING_ENGINE_URL} className={styles.bookBtn}>Book Now</a>
-              <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
+              <div className={styles.bookingDetailRow}><span>Single occupancy</span><strong>{room.currency}{room.price.toLocaleString("en-IN")}</strong></div>
+              <div className={styles.bookingDetailRow}><span>Double occupancy</span><strong>{room.currency}{(room.price + 500).toLocaleString("en-IN")}</strong></div>
+              <p>Rate shown before any meal plan selection. EP, CP, MAP and AP are available; call to confirm plan prices.</p>
+              <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.bookBtn}>Call {SITE_INFO.phone}</a>
+              <a href={`tel:${SITE_INFO.listingPhone.replace(/\s+/g, "")}`} className={styles.callBtn}>Listing line {SITE_INFO.listingPhone}</a>
               <div className={styles.bookingDetails}>
                 <div className={styles.bookingDetailRow}>
                   <span>Check-in</span>

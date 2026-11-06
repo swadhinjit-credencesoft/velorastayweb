@@ -8,7 +8,7 @@ export default function Error({
   reset: () => void;
 }) {
   console.error(
-    "[Bishnu Bhaban] Unhandled render error",
+    "[Y Hotels Signature] Unhandled render error",
     error?.message ?? error,
     error?.digest ?? ""
   );

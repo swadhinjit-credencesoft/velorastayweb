@@ -43,14 +43,16 @@ export interface FooterGroup {
 // ─── Site / Contact ──────────────────────────────────────
 export interface SiteInfo {
   name: string;
+  ownerName: string;
+  gstNumber: string;
   tagline: string;
   description: string;
   url: string;
   phone: string;
-  whatsapp: string;
+  listingPhone: string;
   email: string;
   address: Address;
-  geo: GeoCoordinates;
+  geo?: GeoCoordinates;
   checkIn: string;
   checkOut: string;
   rating: number;
@@ -169,6 +171,7 @@ export interface VillaType {
   currency: string;
   priceUnit: string;
   bedrooms: number;
+  floor?: string;
   bathrooms: number;
   beds: number;
   maxOccupancy: number;

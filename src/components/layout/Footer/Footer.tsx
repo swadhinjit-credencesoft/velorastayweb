@@ -1,9 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon/Icon";
 import {
   FOOTER_GROUPS,
@@ -11,32 +9,10 @@ import {
   FOOTER_CONTACT,
 } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
-import { useBhabanData } from "@/hooks/useBhabanData";
-import JamindarFooter from "@/components/jamindar/JamindarFooter/JamindarFooter";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
-  const pathname = usePathname();
-  const { villas } = useBhabanData();
-
-  const footerGroups = useMemo(() => {
-    if (!villas || villas.length === 0) return FOOTER_GROUPS;
-    return FOOTER_GROUPS.map((group) => {
-      if (group.id !== "footer-villa-config") return group;
-      return {
-        ...group,
-        links: villas.map((v) => ({
-          id: `footer-room-${v.slug}`,
-          label: v.name,
-          href: `/rooms/${v.slug}`,
-        })),
-      };
-    });
-  }, [villas]);
-
-  if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
-    return <JamindarFooter />;
-  }
+  const footerGroups = FOOTER_GROUPS;
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.top}>
@@ -47,8 +23,8 @@ export default function Footer() {
                 <Image
                   src={SITE_ASSETS.logo}
                   alt={SITE_INFO.name}
-                  width={664}
-                  height={453}
+                  width={520}
+                  height={120}
                   className={styles.logoImage}
                 />
               </Link>
@@ -65,6 +41,13 @@ export default function Footer() {
                 >
                   <Icon icon="lucide:phone" width={16} height={16} />
                   <span>{FOOTER_CONTACT.phone}</span>
+                </a>
+                <a
+                  href={`tel:${SITE_INFO.listingPhone.replace(/\s+/g, "")}`}
+                  className={styles.contactItem}
+                >
+                  <Icon icon="lucide:phone-call" width={16} height={16} />
+                  <span>{SITE_INFO.listingPhone}</span>
                 </a>
                 <a
                   href={`mailto:${FOOTER_CONTACT.email}`}
@@ -118,13 +101,7 @@ export default function Footer() {
           <div className={styles.bottomInner}>
             <p className={styles.credits}>
               Designed &amp; Developed by{" "}
-              <a href="https://www.credencesoft.in/" target="_blank" rel="noopener noreferrer">
-                CredenceSoft
-              </a>
-              , Powered by{" "}
-              <a href="https://bookonepms.com/" target="_blank" rel="noopener noreferrer">
-                BookOne
-              </a>
+              © {new Date().getFullYear()} {SITE_INFO.name}. All rights reserved.
             </p>
           </div>
         </div>

@@ -7,19 +7,16 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { BLOG_POSTS, BLOG_CONTENT, BLOG_CATEGORIES } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Puri Notes | Bishnu Bhaban",
-  description:
-    "Practical guides to Puri from the front desk of a hotel at the temple gate: darshan timings, when to visit, planning around a departure time, and where it is safe to swim.",
+  title: "Hotel Information | Y Hotels Signature",
+  description: "Room, rate and stay information for Y Hotels Signature in Jharsuguda, Odisha.",
   keywords: [
-    "Puri travel guide",
-    "Puri blog",
-    "darshan timings",
-    "best time to visit Puri",
-    "Puri safety",
+    "Y Hotels Signature",
+    "Jharsuguda hotel",
+    "Jharsuguda rooms",
   ],
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Puri Notes | Bishnu Bhaban",
+    title: "Hotel Information | Y Hotels Signature",
     description: BLOG_CONTENT.description,
   },
 };

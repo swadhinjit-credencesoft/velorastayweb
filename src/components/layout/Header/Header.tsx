@@ -15,7 +15,6 @@ import {
   setMobileNavOpen,
 } from "@/store/slices/uiSlice";
 import type { NavGroup } from "@/types";
-import JamindarHeader from "@/components/jamindar/JamindarHeader/JamindarHeader";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -80,11 +79,6 @@ export default function Header() {
     return () => window.removeEventListener("resize", onResize);
   }, [dispatch]);
 
-  // Render Jamindar-specific header when on the Jamindar Nest route
-  if (pathname === "/jamindar-nest" || pathname?.startsWith("/jamindar-nest/")) {
-    return <JamindarHeader />;
-  }
-
   const headerClass = [
     styles.header,
     isHome && !isScrolled ? styles.home : "",
@@ -101,8 +95,8 @@ export default function Header() {
           <Image
             src={SITE_ASSETS.logo}
             alt={SITE_INFO.name}
-            width={664}
-            height={453}
+            width={520}
+            height={120}
             className={styles.logoImage}
             priority
           />

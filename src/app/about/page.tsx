@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO } from "@/data/site";
@@ -7,77 +8,18 @@ import { ABOUT_STORY, ABOUT_MISSION, ABOUT_VISION } from "@/data/about";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
-  title: "About Us | Bishnu Bhaban",
-  description:
-    "Discover the story behind Bishnu Bhaban — a comfortable stay at the West Gate of the Shri Jagannath Temple in Puri. Learn about our mission and how we work.",
+  title: "About Y Hotels Signature | Jharsuguda",
+  description: "Learn about Y Hotels Signature, its room categories and location in Jharsuguda, Odisha.",
   alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About Us | Bishnu Bhaban",
-    description: "Learn about Bishnu Bhaban, our story, and mission.",
-    url: `${SITE_INFO.url}/about`,
-  },
 };
 
 export default function AboutPage() {
-  return (
-    <>
-      <JsonLd schema={generateOrganizationSchema()} />
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "About", url: `${SITE_INFO.url}/about` }])} />
-
-      <section className="relative py-20 pt-32">
-        <div className="absolute inset-0 z-0">
-          <Image src="/bishnyhomeimage/homehero1.png" alt="About Bishnu Bhaban" fill className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]} />
-          <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">About Us</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">{ABOUT_STORY.title}</h1>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">Discover the story behind Bishnu Bhaban.</p>
-        </div>
-      </section>
-
-      <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            {ABOUT_STORY.description.split("\n\n").map((para, i) => (
-              <p key={i} className="text-gray-600 leading-relaxed mb-4">{para}</p>
-            ))}
-          </div>
-          <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-            <Image src={ABOUT_STORY.image} alt={ABOUT_STORY.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{ABOUT_MISSION.title}</h2>
-              {ABOUT_MISSION.description.split("\n\n").map((para, i) => (
-                <p key={i} className="text-gray-600 leading-relaxed mb-3">{para}</p>
-              ))}
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{ABOUT_VISION.title}</h2>
-              {ABOUT_VISION.description.split("\n\n").map((para, i) => (
-                <p key={i} className="text-gray-600 leading-relaxed mb-3">{para}</p>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-amber-500 text-white text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Experience the Bishnu Bhaban Difference</h2>
-          <p className="mb-6 opacity-90">Book your stay and discover why guests keep coming back.</p>
-          <a href="https://bookone.io/bishnu-bhaban?bookingEngine=true" className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Book Your Stay
-          </a>
-        </div>
-      </section>
-    </>
-  );
+  return <>
+    <JsonLd schema={generateOrganizationSchema()}/>
+    <JsonLd schema={generateBreadcrumbSchema([{ name: "About", url: `${SITE_INFO.url}/about` }])}/>
+    <section className="relative py-20 pt-32"><div className="absolute inset-0"><Image src="/y-hotels-room.svg" alt="Y Hotels Signature" fill className="object-cover" sizes="100vw"/><div className="absolute inset-0 bg-slate-950/65"/></div><div className="relative mx-auto max-w-7xl px-4 text-center"><Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}/><p className="mt-4 text-sm uppercase tracking-wide text-amber-300">About us</p><h1 className="mt-2 text-4xl font-bold text-white">{ABOUT_STORY.title}</h1><p className="mx-auto mt-4 max-w-2xl text-lg text-gray-200">A 34-room hotel in Jharsuguda, Odisha.</p></div></section>
+    <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2"><div>{ABOUT_STORY.description.split("\n\n").map((paragraph, index) => <p key={index} className="mb-4 leading-relaxed text-gray-600">{paragraph}</p>)}<p className="text-gray-600">Owner: {SITE_INFO.ownerName}</p><p className="mt-2 text-gray-600">GSTIN: {SITE_INFO.gstNumber}</p></div><div className="relative aspect-[4/3] overflow-hidden rounded-xl"><Image src={ABOUT_STORY.image} alt={ABOUT_STORY.title} fill className="object-cover"/></div></section>
+    <section className="bg-gray-50 py-16"><div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2"><div><h2 className="mb-4 text-2xl font-bold">{ABOUT_MISSION.title}</h2><p className="text-gray-600">{ABOUT_MISSION.description}</p></div><div><h2 className="mb-4 text-2xl font-bold">{ABOUT_VISION.title}</h2><p className="text-gray-600">{ABOUT_VISION.description}</p></div></div></section>
+    <section className="bg-amber-600 py-12 text-center text-white"><h2 className="text-3xl font-bold">Plan your stay</h2><p className="my-4">Contact our team to check availability and rates.</p><Link href="/contact" className="inline-block rounded-lg bg-white px-8 py-3 font-semibold text-amber-700">Contact the Hotel</Link></section>
+  </>;
 }

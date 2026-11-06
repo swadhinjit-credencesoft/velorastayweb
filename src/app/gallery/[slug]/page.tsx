@@ -7,10 +7,11 @@ import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { getApiRooms } from "@/lib/api/thehotelmate";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
+import { SITE_INFO } from "@/data/site";
 
 type Props = { params: { slug: string } };
 
-/** API-only: throws at build time if thehotelmate cannot be reached. */
+/** Uses the local Y Hotels room catalogue. */
 async function resolveAllRooms() {
   return getApiRooms();
 }
@@ -25,14 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const villa = rooms.find((r) => r.slug === params.slug);
   if (!villa) return { title: "Gallery Not Found" };
   return {
-    title: `${villa.name} Gallery | Bishnu Bhaban`,
-    description: `Photo gallery of ${villa.name} at Bishnu Bhaban. ${villa.tagline}.`,
+    title: `${villa.name} | Y Hotels Signature Gallery`,
+    description: `${villa.name} category at Y Hotels Signature in Jharsuguda. ${villa.tagline}.`,
     alternates: { canonical: `/gallery/${villa.slug}` },
     openGraph: {
-      title: `${villa.name} Gallery | Bishnu Bhaban`,
+      title: `${villa.name} | Y Hotels Signature Gallery`,
       description: villa.tagline,
-      url: `https://bishnubhaban.com/gallery/${villa.slug}`,
-      images: [{ url: villa.images[0]?.src || "/heroimg2.jpeg", alt: villa.name }],
+      url: `${SITE_INFO.url}/gallery/${villa.slug}`,
+      images: [{ url: villa.images[0]?.src || "/y-hotels-room.svg", alt: villa.name }],
     },
   };
 }

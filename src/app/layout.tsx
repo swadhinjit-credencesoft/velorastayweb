@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Oswald, Cormorant_Garamond } from "next/font/google";
 import ReduxProvider from "@/providers/ReduxProvider";
-import { BhabanRoomsProvider } from "@/providers/BhabanRoomsProvider";
-import { getApiRooms } from "@/lib/api/thehotelmate";
+import { HotelRoomsProvider } from "@/providers/HotelRoomsProvider";
+import { HOTEL_ROOMS } from "@/data/villas";
 import LayoutSwitcher from "@/components/layout/LayoutSwitcher/LayoutSwitcher";
 import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
 import { SITE_INFO } from "@/data/site";
@@ -30,23 +30,19 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const OG_IMAGE =
-  `${SITE_INFO.url}/bishnyhomeimage/homehero1.png`;
+const OG_IMAGE = `${SITE_INFO.url}/y-hotels-room.svg`;
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_INFO.name} | Rooms Near Shri Jagannath Temple, Puri`,
+    default: `${SITE_INFO.name} | Hotel in Jharsuguda, Odisha`,
     template: `%s | ${SITE_INFO.name}`,
   },
   description: SITE_INFO.description,
   keywords: [
-    "hotel near Shri Jagannath Temple",
-    "Bishnu Bhaban Puri",
-    "comfortable stay near Shri Jagannath Temple",
-    "Puri darshan hotel",
-    "rooms at Shri Jagannath Temple gate",
-    "Puri Grand Road hotel",
-    "temple visit accommodation Puri",
+    "Y Hotels Signature",
+    "hotel in Jharsuguda",
+    "hotel near Sarbahal Road Jharsuguda",
+    "rooms in Jharsuguda Odisha",
   ],
   applicationName: SITE_INFO.name,
   authors: [{ name: SITE_INFO.name }],
@@ -56,21 +52,16 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon-256.png", sizes: "256x256", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "256x256", type: "image/png" },
-    ],
+    icon: [{ url: "/y-hotels-signature.svg", type: "image/svg+xml" }],
+    shortcut: "/y-hotels-signature.svg",
+    apple: [{ url: "/y-hotels-signature.svg" }],
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: SITE_INFO.url,
     siteName: SITE_INFO.name,
-    title: `${SITE_INFO.name} | Rooms Near Shri Jagannath Temple, Puri`,
+    title: `${SITE_INFO.name} | Hotel in Jharsuguda, Odisha`,
     description: SITE_INFO.description,
     images: [
       {
@@ -83,7 +74,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_INFO.name} | Rooms Near Shri Jagannath Temple, Puri`,
+    title: `${SITE_INFO.name} | Hotel in Jharsuguda, Odisha`,
     description: SITE_INFO.description,
     images: [OG_IMAGE],
   },
@@ -100,23 +91,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const apiRooms = await getApiRooms();
-
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable} ${cormorant.variable}`}>
       <body className="antialiased">
         <GoogleTagManager />
-        <BhabanRoomsProvider rooms={apiRooms}>
+        <HotelRoomsProvider rooms={HOTEL_ROOMS}>
           <ReduxProvider>
             <LayoutSwitcher>
               <main className="main-content">{children}</main>
               <ScrollToTop />
             </LayoutSwitcher>
           </ReduxProvider>
-        </BhabanRoomsProvider>
+        </HotelRoomsProvider>
       </body>
     </html>
   );

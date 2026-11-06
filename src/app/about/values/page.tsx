@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_VALUES } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Values | Bishnu Bhaban",
-  description: "The core values that guide every aspect of hospitality at Bishnu Bhaban — cleanliness, guest-centricity, and continuous improvement.",
+  title: "Guest Information | Y Hotels Signature",
+  description: "Room and reservation information for Y Hotels Signature in Jharsuguda.",
   alternates: { canonical: "/about/values" },
   openGraph: {
-    title: "Our Values | Bishnu Bhaban",
-    description: "The core values that guide every aspect of hospitality at Bishnu Bhaban — cleanliness, guest-centricity, and continuous improvement.",
+    title: "Guest Information | Y Hotels Signature",
+    description: "Clear room and rate information for your stay.",
   },
 };
 

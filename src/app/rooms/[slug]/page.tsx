@@ -12,7 +12,7 @@ interface RoomPageProps {
   params: { slug: string };
 }
 
-/** API-only: throws at build time if thehotelmate cannot be reached. */
+/** Static room catalogue for Y Hotels Signature. */
 async function resolveRoom(slug: string) {
   const apiRooms = await getApiRooms();
   return apiRooms.find((room) => room.slug === slug);
@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
   const room = await resolveRoom(params.slug);
   if (!room) return { title: "Room Not Found" };
   return {
-    title: `${room.name} | Book at ${SITE_INFO.name}`,
-    description: `${room.name} starting from ₹${room.price}. ${room.description.substring(0, 150)}. Book now for the best rates.`,
+    title: `${room.name} | ${SITE_INFO.name}, Jharsuguda`,
+    description: `${room.name} from ₹${room.price} single occupancy. ${room.description.substring(0, 140)} Contact the hotel to confirm rates and availability.`,
     alternates: { canonical: `/rooms/${room.slug}` },
     openGraph: {
       title: `${room.name} | ${SITE_INFO.name}`,

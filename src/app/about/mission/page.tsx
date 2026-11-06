@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { ABOUT_MISSION } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Our Mission | Bishnu Bhaban",
-  description: "Discover the mission behind Bishnu Bhaban — redefining luxury hospitality with quality, cleanliness, and genuine care.",
+  title: "Our Approach | Y Hotels Signature",
+  description: "Learn how Y Hotels Signature shares room, rate and stay information with guests.",
   alternates: { canonical: "/about/mission" },
   openGraph: {
-    title: "Our Mission | Bishnu Bhaban",
-    description: "Discover the mission behind Bishnu Bhaban — redefining luxury hospitality with quality, cleanliness, and genuine care.",
+    title: "Our Approach | Y Hotels Signature",
+    description: "Room and reservation information for Y Hotels Signature.",
   },
 };
 

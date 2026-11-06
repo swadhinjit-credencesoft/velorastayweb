@@ -6,12 +6,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { SUSTAINABILITY } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Sustainability | Bishnu Bhaban",
-  description: "Learn about Bishnu Bhaban' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+  title: "Property Information | Y Hotels Signature",
+  description: "Contact Y Hotels Signature for current service and accessibility information.",
   alternates: { canonical: "/about/sustainability" },
   openGraph: {
-    title: "Sustainability | Bishnu Bhaban",
-    description: "Learn about Bishnu Bhaban' sustainability commitment — energy conservation, water saving, waste management, and eco-friendly practices.",
+    title: "Property Information | Y Hotels Signature",
+    description: "Current hotel services and accessibility information.",
   },
 };
 
