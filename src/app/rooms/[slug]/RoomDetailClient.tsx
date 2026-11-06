@@ -82,12 +82,10 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
               </>
             )}
 
-            {amenities.length > 0 && <>
-              <h2 className={styles.sectionTitle}>Amenities</h2>
-              <div className={styles.amenitiesGrid}>
-                {amenities.map((amenity) => <div key={amenity.id} className={styles.amenityItem}><span>{amenity.label}</span></div>)}
-              </div>
-            </>}
+            <h2 className={styles.sectionTitle}>Amenities</h2>
+            {amenities.length > 0 ? <div className={styles.amenitiesGrid}>
+              {amenities.map((amenity) => <div key={amenity.id} className={styles.amenityItem}><span>{amenity.label}</span></div>)}
+            </div> : <p className={styles.bodyText}>Room-specific amenities have not been confirmed for publication. Contact the hotel to check facilities available in this category.</p>}
 
             {room.policies && room.policies.length > 0 && (
               <>

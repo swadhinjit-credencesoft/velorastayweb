@@ -31,7 +31,7 @@ export default function VisionPage() {
             <p className="text-xl text-gray-800 leading-relaxed">{ABOUT_VISION.description}</p>
           </div>
           <div className="text-center">
-            <Link href="/about" className="text-amber-600 font-semibold hover:underline">← Back to About</Link>
+            <Link href="/about" className="text-amber-600 font-semibold hover:underline">Back to About</Link>
           </div>
         </div>
       </section>

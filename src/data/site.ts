@@ -33,9 +33,9 @@ export const SOCIAL_LINKS: SocialLinks = {
 };
 
 export const SITE_ASSETS = {
-  logo: "/y-hotels-signature.svg",
-  logoLight: "/y-hotels-signature.svg",
-  favicon: "/y-hotels-signature.svg",
+  logo: "/yhotel.png",
+  logoLight: "/yhotel.png",
+  favicon: "/yhotel.png",
   aboutImage: STOCK_IMAGES.lobby,
   roomsPreviewImage: STOCK_IMAGES.deluxe,
   eventsImage: STOCK_IMAGES.executive,

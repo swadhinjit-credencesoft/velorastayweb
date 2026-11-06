@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [{ url: "/y-hotels-signature.svg", type: "image/svg+xml" }],
-    shortcut: "/y-hotels-signature.svg",
-    apple: [{ url: "/y-hotels-signature.svg" }],
+    icon: [{ url: "/yhotel.png", type: "image/png" }],
+    shortcut: "/yhotel.png",
+    apple: [{ url: "/yhotel.png" }],
   },
   openGraph: {
     type: "website",

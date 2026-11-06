@@ -23,7 +23,7 @@ export default function ValuesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Values", href: "/about/values" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Our Values</h1>
-          <p className="mt-3 text-gray-300">The principles that define who we are.</p>
+          <p className="mt-3 text-gray-300">Practical information to help guests plan a stay.</p>
         </div>
       </section>
       <section className="py-16">

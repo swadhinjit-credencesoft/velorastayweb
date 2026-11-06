@@ -63,7 +63,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_INFO.name,
     url: SITE_INFO.url,
-    logo: `${SITE_INFO.url}/y-hotels-signature.svg`,
+    logo: `${SITE_INFO.url}/yhotel.png`,
     description: SITE_INFO.description,
     address: {
       "@type": "PostalAddress",

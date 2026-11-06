@@ -30,7 +30,7 @@ export default function MobileNav() {
     <div className={`${styles.overlay} ${isOpen ? styles.overlayVisible : ""}`} onClick={close} aria-hidden="true" />
     <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ""}`} aria-label="Mobile navigation">
       <div className={styles.header}>
-        <Link href="/" className={styles.logo} onClick={close}><Image src={SITE_ASSETS.logo} alt={SITE_INFO.name} width={520} height={120} className={styles.logoImage}/></Link>
+        <Link href="/" className={styles.logo} onClick={close}><Image src={SITE_ASSETS.logo} alt={SITE_INFO.name} width={2412} height={1954} className={styles.logoImage}/></Link>
         <button type="button" className={styles.closeBtn} aria-label="Close navigation" onClick={close}><Icon icon="lucide:x" width={22} height={22}/></button>
       </div>
       <div className={styles.links}>{NAV_GROUPS.map((group) => <div key={group.id} className={styles.group}>

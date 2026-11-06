@@ -23,8 +23,8 @@ export default function Footer() {
                 <Image
                   src={SITE_ASSETS.logo}
                   alt={SITE_INFO.name}
-                  width={520}
-                  height={120}
+                  width={2412}
+                  height={1954}
                   className={styles.logoImage}
                 />
               </Link>

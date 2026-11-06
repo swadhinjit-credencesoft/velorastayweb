@@ -23,7 +23,7 @@ export default function SustainabilityPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Sustainability", href: "/about/sustainability" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">{SUSTAINABILITY.title}</h1>
-          <p className="mt-3 text-gray-300">Our commitment to responsible and sustainable hospitality.</p>
+          <p className="mt-3 text-gray-300">Contact the hotel for current property and accessibility information.</p>
         </div>
       </section>
       <section className="py-16">

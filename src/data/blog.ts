@@ -7,7 +7,7 @@ export const BLOG_CONTENT: SectionContent = {
   description: "Useful details about our room categories, rates and location in Jharsuguda, Odisha.",
 };
 export const BLOG_CATEGORIES = ["Hotel Information", "Rooms", "Rates", "Local Food", "Explore Jharsuguda", "Group Stays"];
-const AUTHOR = { name: "Y Hotels Signature", image: "/y-hotels-signature.svg", bio: "Hotel information from Y Hotels Signature, Jharsuguda." };
+const AUTHOR = { name: "Y Hotels Signature", image: "/yhotel.png", bio: "Hotel information from Y Hotels Signature, Jharsuguda." };
 
 export const BLOG_POSTS: BlogPost[] = [
   {

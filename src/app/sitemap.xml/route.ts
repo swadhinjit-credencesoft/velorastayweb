@@ -10,7 +10,7 @@ export function GET() {
   const paths = [
     "", "/rooms", "/about", "/about/story", "/about/mission", "/about/vision", "/about/values",
     "/about/team", "/about/awards", "/about/careers", "/about/sustainability",
-    "/facilities", "/amenities", "/dining", "/faq", "/contact", "/booking", "/blog", "/gallery", "/offers", "/events",
+    "/facilities", "/amenities", "/dining", "/restaurant", "/faq", "/contact", "/booking", "/blog", "/gallery", "/offers", "/events",
     "/nearby", "/tours", "/explore", "/explore/experiences", "/explore/nearby-attractions",
     "/explore/tour-packages", "/explore/virtual-tour", "/privacy", "/terms", "/refund", "/reviews",
   ];
