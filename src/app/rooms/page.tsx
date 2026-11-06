@@ -7,6 +7,7 @@ import { HOTEL_ROOMS } from "@/data/villas";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 import RoomListClient from "./RoomListClient";
+import { STOCK_IMAGES } from "@/data/images";
 
 export const dynamic = "force-static";
 
@@ -35,7 +36,7 @@ export default function RoomsPage() {
         heading={VILLAS_CONTENT.heading}
         description={VILLAS_CONTENT.description}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms", href: "/rooms" }]}
-        bgImage="/y-hotels-room.svg"
+        bgImage={STOCK_IMAGES.deluxe}
       />
       <RoomListClient fallbackRooms={HOTEL_ROOMS} />
     </>

@@ -55,6 +55,7 @@ export interface SiteInfo {
   geo?: GeoCoordinates;
   checkIn: string;
   checkOut: string;
+  extraPersonCharge: number;
   rating: number;
   reviewCount: number;
 }
@@ -170,10 +171,10 @@ export interface VillaType {
   originalPrice?: number;
   currency: string;
   priceUnit: string;
-  bedrooms: number;
+  bedrooms?: number;
   floor?: string;
-  bathrooms: number;
-  beds: number;
+  bathrooms?: number;
+  beds?: number;
   maxOccupancy: number;
   bedConfig?: string;
   view?: string;
@@ -189,6 +190,10 @@ export interface VillaType {
   popular: boolean;
   available: boolean;
   tag?: string;
+  roomCount?: number;
+  roomNumbers?: number[];
+  adultOccupancy?: number;
+  childOccupancy?: number;
 }
 
 // ─── Dining ───────────────────────────────────────────────
@@ -377,6 +382,7 @@ export interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   keywords: string[];
+  references?: { label: string; url: string }[];
 }
 
 export interface BlogAuthor {

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useBhabanData } from "@/hooks/useBhabanData";
+import { useHotelData } from "@/hooks/useHotelData";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import type { VillaType } from "@/types";
 
@@ -15,10 +15,9 @@ function uniqueImages(villa: VillaType): VillaType["images"] {
 }
 
 export default function GalleryVillaSections() {
-  const { villas } = useBhabanData();
-  const items = villas;
+  const { rooms: items } = useHotelData();
 
-  const sorted = [...items].sort((a, b) => b.bedrooms - a.bedrooms);
+  const sorted = [...items].sort((a, b) => (b.roomCount ?? 0) - (a.roomCount ?? 0));
 
   return (
     <>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
-import { getApiRooms } from "@/lib/api/thehotelmate";
+import { getApiRooms } from "@/lib/api/hotel-rooms";
 import GalleryGrid from "@/components/sections/Gallery/GalleryGrid";
 import { SITE_INFO } from "@/data/site";
 
@@ -64,7 +64,7 @@ export default async function VillaGalleryPage({ params }: Props) {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src={villa.images[0]?.src || "/heroimg2.jpeg"}
+            src={villa.images[0]?.src || "/y-hotels-room.svg"}
             alt={villa.name}
             fill
             className="object-cover"
@@ -101,15 +101,16 @@ export default async function VillaGalleryPage({ params }: Props) {
               }))}
             />
           ) : (
-            <p className="text-gray-600">No photos available for this villa yet.</p>
+            <p className="text-gray-600">Room photos are not available. Contact the hotel for current images.</p>
           )}
+          <p className="mt-5 text-center text-xs text-gray-500">Representative Unsplash stock photos, not actual photographs of Y Hotels Signature rooms.</p>
         </div>
       </section>
 
       {otherVillas.length > 0 && (
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Other Villa Galleries</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Other Room Categories</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {otherVillas.map((v) => (
                 <Link
@@ -119,7 +120,7 @@ export default async function VillaGalleryPage({ params }: Props) {
                 >
                   <div className="relative h-40 overflow-hidden">
                     <Image
-                      src={v.images[0]?.src || "/heroimg2.jpeg"}
+                      src={v.images[0]?.src || "/y-hotels-room.svg"}
                       alt={v.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"

@@ -5,12 +5,12 @@ import RoomCard from "@/components/ui/Card/Card";
 import PriceDisplay from "@/components/ui/PriceDisplay/PriceDisplay";
 import Icon from "@/components/Icon/Icon";
 import { VILLAS_CONTENT } from "@/data/villas";
-import { useBhabanData } from "@/hooks/useBhabanData";
+import { useHotelData } from "@/hooks/useHotelData";
 import styles from "./FeaturedVillas.module.scss";
 
 export default function FeaturedVillas() {
-  const { villas } = useBhabanData();
-  const popularVillas = villas;
+  const { rooms } = useHotelData();
+  const popularVillas = rooms;
 
   return (
     <section className={styles.section}>
@@ -41,10 +41,6 @@ export default function FeaturedVillas() {
                     <span className={styles.metaItem}>
                       <Icon icon="lucide:users" width={14} height={14} />
                       Up to {villa.maxOccupancy}
-                    </span>
-                    <span className={styles.metaItem}>
-                      <Icon icon="lucide:bed" width={14} height={14} />
-                      {villa.beds} {villa.beds === 1 ? "Bed" : "Beds"}
                     </span>
                   </div>
                   <div className={styles.roomFooter}>

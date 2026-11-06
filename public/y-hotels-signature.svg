@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title description">
   <title id="title">Y Hotels Signature</title>
+  <desc id="description">Y Hotels Signature wordmark</desc>
   <rect width="520" height="120" rx="18" fill="#102a43"/>
   <path d="M40 34h14l15 21 15-21h14L75 67v20H63V67z" fill="#d8b36a"/>
-  <text x="112" y="58" fill="#fff" font-family="Arial,sans-serif" font-size="31" font-weight="700">Y HOTELS</text>
-  <text x="114" y="83" fill="#d8b36a" font-family="Arial,sans-serif" font-size="16" letter-spacing="5">SIGNATURE</text>
+  <text x="112" y="58" fill="#fff" font-family="Arial,sans-serif" font-size="31" font-weight="700">Y Hotels</text>
+  <text x="114" y="83" fill="#d8b36a" font-family="Arial,sans-serif" font-size="16" letter-spacing="4">Signature</text>
 </svg>

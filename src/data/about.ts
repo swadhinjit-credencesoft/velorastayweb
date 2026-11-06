@@ -1,4 +1,5 @@
 import type { AboutStory, Milestone } from "@/types";
+import { STOCK_IMAGES } from "@/data/images";
 export interface AboutMission { title: string; description: string; }
 export interface AboutVision { title: string; description: string; }
 export interface AboutValue { id: string; title: string; description: string; icon: string; }
@@ -6,7 +7,7 @@ export interface Sustainability { title: string; description: string; }
 
 export const ABOUT_STORY: AboutStory = {
   title: "About Y Hotels Signature",
-  image: "/y-hotels-room.svg",
+  image: STOCK_IMAGES.lobby,
   description: "Y Hotels Signature is located at Mangalam Tower, Sarbahal Road, Marwari Para, Jharsuguda, Odisha 768201. The hotel lists 34 rooms across Deluxe, Super Deluxe and Executive categories.\n\nGuests can ask the hotel team about room availability, the EP, CP, MAP and AP meal plans, and rates for their dates. Check-in is at 1:00 PM and check-out is at 11:00 AM.",
 };
 export const ABOUT_MISSION: AboutMission = { title: "Our Approach", description: "We aim to make room choices and rates clear. Our team can help guests compare the three room categories, check occupancy and confirm meal plan pricing before arrival." };

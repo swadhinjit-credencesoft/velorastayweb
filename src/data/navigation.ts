@@ -9,6 +9,12 @@ export const NAV_GROUPS: NavGroup[] = [
   ] },
   { id: "nav-property", label: "Hotel", href: "/about", children: [
     { id: "about", label: "About Y Hotels Signature", href: "/about", icon: "lucide:building-2" },
+    { id: "gallery", label: "Room gallery", href: "/gallery", icon: "lucide:images" },
+    { id: "dining", label: "Dining and food guide", href: "/dining", icon: "lucide:utensils" },
+    { id: "events", label: "Groups and local events", href: "/events", icon: "lucide:calendar-days" },
+    { id: "explore", label: "Explore Jharsuguda", href: "/explore", icon: "lucide:map" },
+    { id: "rates", label: "Rates and meal plans", href: "/offers", icon: "lucide:indian-rupee" },
+    { id: "blog", label: "Stay information", href: "/blog", icon: "lucide:notebook-text" },
     { id: "facilities", label: "Facilities", href: "/facilities", icon: "lucide:concierge-bell" },
     { id: "faq", label: "FAQs", href: "/faq", icon: "lucide:help-circle" },
     { id: "contact", label: "Contact", href: "/contact", icon: "lucide:phone" },
@@ -18,6 +24,9 @@ export const NAV_GROUPS: NavGroup[] = [
 export const NAV_LINKS: NavLink[] = [
   { id: "home", label: "Home", href: "/" },
   { id: "rooms", label: "Rooms", href: "/rooms" },
+  { id: "dining", label: "Dining", href: "/dining" },
+  { id: "explore", label: "Explore", href: "/explore" },
+  { id: "events", label: "Events", href: "/events" },
   { id: "facilities", label: "Facilities", href: "/facilities" },
   { id: "contact", label: "Contact", href: "/contact" },
 ];
@@ -29,6 +38,12 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     { id: "about", label: "About", href: "/about" },
     { id: "facilities", label: "Facilities", href: "/facilities" },
     { id: "faq", label: "FAQs", href: "/faq" },
+    { id: "gallery", label: "Room gallery", href: "/gallery" },
+    { id: "dining", label: "Dining and food guide", href: "/dining" },
+    { id: "events", label: "Groups and local events", href: "/events" },
+    { id: "explore", label: "Explore Jharsuguda", href: "/explore" },
+    { id: "rates", label: "Rates and meal plans", href: "/offers" },
+    { id: "blog", label: "Stay information", href: "/blog" },
     { id: "contact", label: "Contact", href: "/contact" },
   ] },
   { id: "rooms", title: "Rooms", links: [

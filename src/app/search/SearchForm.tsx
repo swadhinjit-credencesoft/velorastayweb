@@ -4,14 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-import { useBhabanData } from "@/hooks/useBhabanData";
+import { useHotelData } from "@/hooks/useHotelData";
 import { FACILITIES } from "@/data/facilities";
 import { BLOG_POSTS } from "@/data/blog";
 
 export default function SearchForm() {
   const [query, setQuery] = useState("");
-  const { villas } = useBhabanData();
-  const searchVillas = villas;
+  const { rooms } = useHotelData();
+  const searchVillas = rooms;
 
   const q = query.toLowerCase();
   const villaResults = searchVillas.filter((r) => r.name.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));

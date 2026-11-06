@@ -1,16 +1,5 @@
-﻿"use client";
+import type { Metadata } from "next";
+import LegalContent from "@/components/sections/LegalContent";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-
-export default function RefundPage() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace("/legal/refund-policy");
-  }, [router]);
-  return (
-    <section className="py-32 text-center text-gray-500">
-      Redirecting to Refund Policy...
-    </section>
-  );
-}
+export const metadata: Metadata = { title: "Refund Policy | Y Hotels Signature", description: "Refund information for reservations at Y Hotels Signature.", alternates: { canonical: "/refund" } };
+export default function RefundPage() { return <LegalContent slug="refund-policy" path="/refund" />; }

@@ -1,4 +1,5 @@
 import type { SiteInfo, SocialLinks, HeroSlide, HeroStat, SocialLink, TrustBadge, NavLink } from "@/types";
+import { STOCK_IMAGES } from "@/data/images";
 
 export const SITE_INFO: SiteInfo = {
   name: "Y Hotels Signature",
@@ -21,6 +22,7 @@ export const SITE_INFO: SiteInfo = {
   },
   checkIn: "01:00 PM",
   checkOut: "11:00 AM",
+  extraPersonCharge: 700,
   rating: 0,
   reviewCount: 0,
 };
@@ -34,17 +36,17 @@ export const SITE_ASSETS = {
   logo: "/y-hotels-signature.svg",
   logoLight: "/y-hotels-signature.svg",
   favicon: "/y-hotels-signature.svg",
-  aboutImage: "/y-hotels-room.svg",
-  roomsPreviewImage: "/y-hotels-room.svg",
-  eventsImage: "/y-hotels-room.svg",
-  contactMapImage: "/y-hotels-room.svg",
-  testimonialBackground: "/y-hotels-room.svg",
-  notFoundImage: "/y-hotels-room.svg",
+  aboutImage: STOCK_IMAGES.lobby,
+  roomsPreviewImage: STOCK_IMAGES.deluxe,
+  eventsImage: STOCK_IMAGES.executive,
+  contactMapImage: STOCK_IMAGES.lobby,
+  testimonialBackground: STOCK_IMAGES.superDeluxe,
+  notFoundImage: STOCK_IMAGES.deluxe,
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
-  { id: "hero-rooms", image: "/y-hotels-room.svg", title: "A signature stay in Jharsuguda", subtitle: "Choose from 34 Deluxe, Super Deluxe and Executive rooms at Mangalam Tower.", cta: { label: "Explore Rooms", href: "/rooms" } },
-  { id: "hero-comfort", image: "/y-hotels-room.svg", title: "Room for every kind of stay", subtitle: "Three room categories, with meal plan options available. Contact the hotel for availability.", cta: { label: "Call the Hotel", href: "tel:+919124674120" } },
+  { id: "hero-rooms", image: STOCK_IMAGES.deluxe, title: "A signature stay in Jharsuguda", subtitle: "Choose from 34 Deluxe, Super Deluxe and Executive rooms at Mangalam Tower.", cta: { label: "Explore Rooms", href: "/rooms" } },
+  { id: "hero-comfort", image: STOCK_IMAGES.lobby, title: "Room for every kind of stay", subtitle: "Three room categories, with meal plan options available. Contact the hotel for availability.", cta: { label: "Call the Hotel", href: "tel:+919124674120" } },
 ];
 
 export const HERO_STATS: HeroStat[] = [

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useVillaBySlug } from "@/hooks/useBhabanData";
+import { useRoomBySlug } from "@/hooks/useHotelData";
 import { VILLA_AMENITIES } from "@/data/villas";
 import { SITE_INFO } from "@/data/site";
 import type { VillaAmenity, VillaType } from "@/types";
@@ -17,7 +17,7 @@ function getAmenityById(id: string): VillaAmenity | undefined {
 }
 
 export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClientProps) {
-  const { villa: liveRoom, error } = useVillaBySlug(slug);
+  const { room: liveRoom, error } = useRoomBySlug(slug);
   const room = !error && liveRoom ? liveRoom : fallbackRoom;
 
   const amenities = room.amenities.map(getAmenityById).filter(Boolean) as VillaAmenity[];
@@ -51,6 +51,7 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
             )}
           </div>
         )}
+        <p className={styles.bodyText}>Representative Unsplash stock photo; actual Y Hotels Signature room photos have not been provided.</p>
 
         <div className={styles.contentGrid}>
           <div className={styles.main}>
@@ -60,16 +61,12 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
 
             <div className={styles.quickStats}>
               <div className={styles.stat}>
-                <span className={styles.statLabel}>Beds</span>
-                <strong>{room.beds}</strong>
+                <span className={styles.statLabel}>Rooms in category</span>
+                <strong>{room.roomCount}</strong>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statLabel}>Bathrooms</span>
-                <strong>{room.bathrooms}</strong>
-              </div>
-              <div className={styles.stat}>
-                <span className={styles.statLabel}>Guests</span>
-                <strong>Up to {room.maxOccupancy}</strong>
+                <span className={styles.statLabel}>Occupancy</span>
+                <strong>{room.adultOccupancy} adults + {room.childOccupancy} child</strong>
               </div>
             </div>
 
@@ -85,14 +82,12 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
               </>
             )}
 
-            <h2 className={styles.sectionTitle}>Amenities</h2>
-            <div className={styles.amenitiesGrid}>
-              {amenities.map((amenity) => (
-                <div key={amenity.id} className={styles.amenityItem}>
-                  <span>{amenity.label}</span>
-                </div>
-              ))}
-            </div>
+            {amenities.length > 0 && <>
+              <h2 className={styles.sectionTitle}>Amenities</h2>
+              <div className={styles.amenitiesGrid}>
+                {amenities.map((amenity) => <div key={amenity.id} className={styles.amenityItem}><span>{amenity.label}</span></div>)}
+              </div>
+            </>}
 
             {room.policies && room.policies.length > 0 && (
               <>
@@ -130,6 +125,7 @@ export default function RoomDetailClient({ slug, fallbackRoom }: RoomDetailClien
               </div>
               <div className={styles.bookingDetailRow}><span>Single occupancy</span><strong>{room.currency}{room.price.toLocaleString("en-IN")}</strong></div>
               <div className={styles.bookingDetailRow}><span>Double occupancy</span><strong>{room.currency}{(room.price + 500).toLocaleString("en-IN")}</strong></div>
+              <div className={styles.bookingDetailRow}><span>Additional person</span><strong>{room.currency}{SITE_INFO.extraPersonCharge.toLocaleString("en-IN")}</strong></div>
               <p>Rate shown before any meal plan selection. EP, CP, MAP and AP are available; call to confirm plan prices.</p>
               <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.bookBtn}>Call {SITE_INFO.phone}</a>
               <a href={`tel:${SITE_INFO.listingPhone.replace(/\s+/g, "")}`} className={styles.callBtn}>Listing line {SITE_INFO.listingPhone}</a>

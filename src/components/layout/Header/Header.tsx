@@ -8,7 +8,7 @@ import Icon from "@/components/Icon/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
 import { SITE_ASSETS, SITE_INFO } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
-import { useBhabanData } from "@/hooks/useBhabanData";
+import { useHotelData } from "@/hooks/useHotelData";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   setMegaMenuOpen,
@@ -25,7 +25,7 @@ export default function Header() {
   const megaMenuOpen = useAppSelector((s) => s.ui.isMegaMenuOpen);
   const isMobileNavOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
   const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { villas } = useBhabanData();
+  const { rooms: villas } = useHotelData();
 
   const navGroups = useMemo(() => {
     if (!villas || villas.length === 0) return NAV_GROUPS;
@@ -45,8 +45,8 @@ export default function Header() {
             id: `nav-room-${v.slug}`,
             label: v.name,
             href: `/rooms/${v.slug}`,
-            description: v.tagline || `${v.beds} Bed, ₹${v.price}`,
-            icon: v.beds > 2 ? "lucide:users" : "lucide:bed",
+            description: v.tagline || `From ${v.currency}${v.price}`,
+            icon: v.maxOccupancy > 3 ? "lucide:users" : "lucide:bed",
           })),
         ],
       };

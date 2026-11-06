@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useBhabanData } from "@/hooks/useBhabanData";
+import { useHotelData } from "@/hooks/useHotelData";
+import { STOCK_IMAGES } from "@/data/images";
 import type { VillaType } from "@/types";
 import styles from "./rooms.module.scss";
 
@@ -10,11 +11,11 @@ interface RoomListClientProps {
   fallbackRooms: VillaType[];
 }
 
-const PLACEHOLDER_IMAGE = "/y-hotels-room.svg";
+const PLACEHOLDER_IMAGE = STOCK_IMAGES.deluxe;
 
 export default function RoomListClient({ fallbackRooms }: RoomListClientProps) {
-  const { villas, error } = useBhabanData();
-  const items = !error && villas.length > 0 ? villas : fallbackRooms;
+  const { rooms, error } = useHotelData();
+  const items = !error && rooms.length > 0 ? rooms : fallbackRooms;
 
   return (
     <section className={styles.gridSection}>
@@ -38,9 +39,6 @@ export default function RoomListClient({ fallbackRooms }: RoomListClientProps) {
                 <h2 className={styles.name}>{room.name}</h2>
                 <p className={styles.tagline}>{room.tagline}</p>
                 <div className={styles.meta}>
-                  <span>
-                    {room.beds} {room.beds === 1 ? "Bed" : "Beds"}
-                  </span>
                   <span>Max {room.maxOccupancy} guests</span>
                 </div>
                 <div className={styles.priceRow}>
@@ -60,6 +58,7 @@ export default function RoomListClient({ fallbackRooms }: RoomListClientProps) {
           );
         })}
       </div>
+      <p className="mx-auto mt-5 max-w-4xl px-4 text-center text-xs text-gray-500">Room images are representative Unsplash stock photos, not photographs of Y Hotels Signature.</p>
     </section>
   );
 }

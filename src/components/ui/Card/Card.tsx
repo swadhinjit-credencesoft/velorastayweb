@@ -27,7 +27,7 @@ export default function Card({
         <div className={styles.imageWrap}>
           <Image
             src={image}
-            alt=""
+            alt="Representative hotel room stock photo; actual room may differ"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={styles.image}

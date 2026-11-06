@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Icon from "@/components/Icon/Icon";
 import Badge from "@/components/ui/Badge/Badge";
 import { NEARBY_CONTENT, NEARBY_ATTRACTIONS } from "@/data/nearby";
@@ -16,7 +17,7 @@ export default function NearbyAttractions() {
           <p className={styles.description}>{NEARBY_CONTENT.description}</p>
         </div>
 
-        <div className={styles.scrollRow}>
+        {DISPLAY_ATTRACTIONS.length > 0 ? <div className={styles.scrollRow}>
           {DISPLAY_ATTRACTIONS.map((attraction) => (
             <div
               key={attraction.id}
@@ -25,36 +26,27 @@ export default function NearbyAttractions() {
               <div className={styles.imageWrap}>
                 <Image
                   src={attraction.image}
-                  alt={attraction.name}
+                  alt="Representative landscape stock photo; not a photograph of this destination"
                   fill
                   sizes="280px"
                   className={styles.image}
                 />
-                <div className={styles.distanceBadge}>
-                  <Icon icon="lucide:navigation" width={12} height={12} />
-                  {attraction.distance}
-                </div>
+                <span className={styles.distanceBadge}>Stock image</span>
               </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTop}>
-                  <h3 className={styles.cardName}>{attraction.name}</h3>
+                  <Link href={`/nearby/${attraction.slug}`} className={styles.cardName}>{attraction.name}</Link>
                   <Badge variant="neutral" size="sm">{attraction.category}</Badge>
                 </div>
-                <p className={styles.cardTravel}>
-                  <Icon icon="lucide:clock" width={12} height={12} />
-                  {attraction.travelTime}
-                </p>
+                <p className={styles.cardTravel}>{attraction.description}</p>
               </div>
             </div>
           ))}
-        </div>
+        </div> : <p className={styles.description}>We do not have verified nearby attraction details to publish. Contact the hotel team for current local directions and transport information.</p>}
 
-        <div className={styles.viewAll}>
-          <a href="/explore" className={styles.viewAllLink}>
-            View All Attractions
-            <Icon icon="lucide:arrow-right" width={16} height={16} />
-          </a>
-        </div>
+        {DISPLAY_ATTRACTIONS.length > 0 && <div className={styles.viewAll}>
+          <a href="/explore" className={styles.viewAllLink}>View All Attractions <Icon icon="lucide:arrow-right" width={16} height={16} /></a>
+        </div>}
       </div>
     </section>
   );

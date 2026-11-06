@@ -64,6 +64,7 @@ export default function BlogPostPage({ params }: Props) {
 
       <section className="relative h-[45vh] min-h-[350px]">
         <Image src={post.image} alt={post.title} fill className="object-cover" />
+        <span className="absolute right-4 top-4 rounded bg-black/60 px-3 py-1 text-xs text-white">Representative stock photo</span>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
           <div className="max-w-4xl mx-auto">
@@ -90,6 +91,8 @@ export default function BlogPostPage({ params }: Props) {
               </p>
             ))}
           </div>
+
+          {post.references && post.references.length > 0 && <div className="mt-8 border-t pt-5"><h2 className="font-semibold text-slate-900">Further information</h2><ul className="mt-2 list-disc pl-5">{post.references.map((source) => <li key={source.url}><a className="text-blue-700 underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></div>}
 
           <div className="flex flex-wrap gap-2 mt-10">
             {post.tags.map((tag: string) => (

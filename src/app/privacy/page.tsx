@@ -1,16 +1,5 @@
-﻿"use client";
+import type { Metadata } from "next";
+import LegalContent from "@/components/sections/LegalContent";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-
-export default function PrivacyPage() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace("/legal/privacy-policy");
-  }, [router]);
-  return (
-    <section className="py-32 text-center text-gray-500">
-      Redirecting to Privacy Policy...
-    </section>
-  );
-}
+export const metadata: Metadata = { title: "Privacy Policy | Y Hotels Signature", description: "Privacy information for the Y Hotels Signature website.", alternates: { canonical: "/privacy" } };
+export default function PrivacyPage() { return <LegalContent slug="privacy-policy" path="/privacy" />; }

@@ -64,6 +64,7 @@ export default function Hero({ children }: HeroProps) {
               View All Rooms
             </Button>
           </div>
+          <p className="mt-3 text-xs text-white/80">Representative stock photos; actual Y Hotels Signature rooms may differ.</p>
         </div>
 
         <div className={styles.searchSection}>

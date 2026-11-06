@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
-import { getApiRooms } from "@/lib/api/thehotelmate";
+import { getApiRooms } from "@/lib/api/hotel-rooms";
 import { SITE_INFO } from "@/data/site";
 import { generateVillaSchema, generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";

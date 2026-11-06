@@ -42,6 +42,7 @@ export default function BlogPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">{BLOG_CONTENT.heading}</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">{BLOG_CONTENT.description}</p>
+          <p className="mt-3 text-xs text-gray-400">Article images are representative stock photos, not property photos.</p>
         </div>
       </section>
 
@@ -50,7 +51,7 @@ export default function BlogPage() {
           {BLOG_CATEGORIES.map((cat) => (
             <span
               key={cat}
-              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm whitespace-nowrap hover:bg-amber-50 hover:text-amber-700 cursor-pointer transition-colors"
+              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm whitespace-nowrap"
             >
               {cat}
             </span>

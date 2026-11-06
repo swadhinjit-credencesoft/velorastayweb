@@ -11,10 +11,11 @@ export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const next = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % REVIEWS.length);
+    if (REVIEWS.length > 0) setCurrentIndex((prev) => (prev + 1) % REVIEWS.length);
   }, []);
 
   useEffect(() => {
+    if (REVIEWS.length === 0) return;
     const interval = setInterval(next, 4000);
     return () => clearInterval(interval);
   }, [next]);
@@ -35,6 +36,18 @@ export default function Testimonials() {
     const p = REVIEW_PLATFORMS.find((rp) => rp.name.toLowerCase() === platform);
     return p?.icon ?? "lucide:message-square";
   };
+
+  if (REVIEWS.length === 0) {
+    return <section className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.eyebrow}>{REVIEWS_CONTENT.eyebrow}</span>
+          <h2 className={`${styles.heading} font-oswald`}>Guest feedback</h2>
+          <p className={styles.description}>Guest reviews have not been provided for publication yet. Please check the hotel's public listing for current feedback.</p>
+        </div>
+      </div>
+    </section>;
+  }
 
   return (
     <section className={styles.section}>

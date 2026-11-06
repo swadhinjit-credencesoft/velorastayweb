@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
-import { useBhabanData } from "@/hooks/useBhabanData";
+import { useHotelData } from "@/hooks/useHotelData";
 
 export default function BookingForm() {
-  const { villas } = useBhabanData();
-  const roomList = villas;
+  const { rooms: roomList } = useHotelData();
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
     checkIn: "", checkOut: "", roomType: "", adults: "1", children: "0",

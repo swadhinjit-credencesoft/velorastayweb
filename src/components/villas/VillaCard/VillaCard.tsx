@@ -58,10 +58,10 @@ export default function VillaCard({ villa }: VillaCardProps) {
               {villa.size} {villa.sizeUnit}
             </span>
           )}
-          <span className={styles.metaItem}>
+          {villa.beds != null && villa.beds > 0 && <span className={styles.metaItem}>
             <Icon icon="lucide:bed" width={14} height={14} />
             {villa.beds} {villa.beds === 1 ? "Bed" : "Beds"}
-          </span>
+          </span>}
         </div>
 
         <div className={styles.amenities}>

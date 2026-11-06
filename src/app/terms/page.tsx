@@ -1,16 +1,5 @@
-﻿"use client";
+import type { Metadata } from "next";
+import LegalContent from "@/components/sections/LegalContent";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-
-export default function TermsPage() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace("/legal/terms-conditions");
-  }, [router]);
-  return (
-    <section className="py-32 text-center text-gray-500">
-      Redirecting to Terms &amp; Conditions...
-    </section>
-  );
-}
+export const metadata: Metadata = { title: "Terms and Conditions | Y Hotels Signature", description: "Terms for room information and enquiries at Y Hotels Signature.", alternates: { canonical: "/terms" } };
+export default function TermsPage() { return <LegalContent slug="terms-and-conditions" path="/terms" />; }

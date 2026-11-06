@@ -10,8 +10,9 @@ export default function WhyChooseUs() {
         <div className={styles.layout}>
           <div className={styles.imageCol}>
             <div className={styles.imageWrap}>
-              <Image src={SITE_ASSETS.aboutImage} alt="Y Hotels Signature in Jharsuguda" fill sizes="(max-width: 768px) 100vw, 45vw" className={styles.image} />
+              <Image src={SITE_ASSETS.aboutImage} alt="Representative hotel lobby stock photo, not Y Hotels Signature" fill sizes="(max-width: 768px) 100vw, 45vw" className={styles.image} />
             </div>
+            <p className="mt-2 text-xs text-gray-500">Representative stock photo; not a photo of the hotel.</p>
           </div>
           <div className={styles.contentCol}>
             <span className={styles.eyebrow}>Y Hotels Signature</span>

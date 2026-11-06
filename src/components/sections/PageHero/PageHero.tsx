@@ -43,6 +43,7 @@ export default function PageHero({
         {description && (
           <p className={styles.description}>{description}</p>
         )}
+        {bgImage && <p className="mt-3 text-xs text-white/75">Representative stock photo; actual property images may differ.</p>}
       </div>
     </section>
   );

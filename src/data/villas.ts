@@ -1,4 +1,5 @@
 import type { VillaAmenity, SectionContent, VillaType } from "@/types";
+import { STOCK_IMAGES } from "@/data/images";
 
 export const VILLAS_CONTENT: SectionContent = {
   eyebrow: "Y Hotels Signature",
@@ -8,10 +9,10 @@ export const VILLAS_CONTENT: SectionContent = {
 
 export const VILLA_AMENITIES: VillaAmenity[] = [];
 
-const rooms: { name: string; slug: string; price: number; count: number; occupancy: number; rooms: number[]; floor: string }[] = [
-  { name: "Deluxe", slug: "deluxe", price: 3500, count: 12, occupancy: 3, rooms: [310, 311, 312, 314, 315, 316, 410, 411, 412, 414, 415, 416], floor: "3rd and 4th floors" },
-  { name: "Super Deluxe", slug: "super-deluxe", price: 4000, count: 10, occupancy: 4, rooms: [302, 303, 304, 306, 307, 402, 403, 404, 406, 407], floor: "3rd and 4th floors" },
-  { name: "Executive", slug: "executive", price: 4500, count: 12, occupancy: 5, rooms: [301, 305, 308, 309, 317, 318, 401, 405, 408, 409, 417, 418], floor: "3rd and 4th floors" },
+const rooms: { name: string; slug: string; price: number; count: number; occupancy: number; rooms: number[]; floor: string; image: string }[] = [
+  { name: "Deluxe", slug: "deluxe", price: 3500, count: 12, occupancy: 3, rooms: [310, 311, 312, 314, 315, 316, 410, 411, 412, 414, 415, 416], floor: "3rd and 4th floors", image: STOCK_IMAGES.deluxe },
+  { name: "Super Deluxe", slug: "super-deluxe", price: 4000, count: 10, occupancy: 4, rooms: [302, 303, 304, 306, 307, 402, 403, 404, 406, 407], floor: "3rd and 4th floors", image: STOCK_IMAGES.superDeluxe },
+  { name: "Executive", slug: "executive", price: 4500, count: 12, occupancy: 5, rooms: [301, 305, 308, 309, 317, 318, 401, 405, 408, 409, 417, 418], floor: "3rd and 4th floors", image: STOCK_IMAGES.executive },
 ];
 
 export const HOTEL_ROOMS: VillaType[] = rooms.map((room) => ({
@@ -24,15 +25,16 @@ export const HOTEL_ROOMS: VillaType[] = rooms.map((room) => ({
   price: room.price,
   currency: "₹",
   priceUnit: "per room, single occupancy",
-  bedrooms: 1,
-  bathrooms: 1,
-  beds: 1,
+  roomCount: room.count,
+  roomNumbers: room.rooms,
+  adultOccupancy: room.occupancy - 1,
+  childOccupancy: 1,
   maxOccupancy: room.occupancy,
-  bedConfig: "Ask the hotel about bed configuration",
+  bedConfig: "Confirm bed configuration with the hotel",
   sizeUnit: "sq ft",
   floor: room.floor,
   view: "",
-  images: [{ id: `${room.slug}-illustration`, src: "/y-hotels-room.svg", alt: `${room.name} room illustration` }],
+  images: [{ id: `${room.slug}-stock`, src: room.image, alt: `Representative ${room.name.toLowerCase()} hotel room stock photo; not a photo of Y Hotels Signature` }],
   amenities: [],
   highlights: [`${room.count} rooms in this category`, `Room numbers: ${room.rooms.join(", ")}`, `${room.occupancy - 1} adults + 1 child`, "EP, CP, MAP and AP meal plans available"],
   features: [`Single occupancy from ₹${room.price.toLocaleString("en-IN")}`, `Double occupancy add-on: ₹500`, "Contact the hotel for meal plan pricing"],
