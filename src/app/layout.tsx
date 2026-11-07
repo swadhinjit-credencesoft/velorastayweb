@@ -47,6 +47,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/yogirajlogo.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/yogirajlogo.png",
+    apple: "/yogirajlogo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -87,6 +95,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
+      <head>
+        <link rel="icon" href="/yogirajlogo.png" type="image/png" />
+        <link rel="shortcut icon" href="/yogirajlogo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/yogirajlogo.png" />
+      </head>
       <body className="antialiased">
         <ReduxProvider>
           <Header />
