@@ -16,9 +16,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: ["./src/styles"],
   },
-  experimental: {
-    cpus: 1,
-  },
 };
 
 export default nextConfig;
