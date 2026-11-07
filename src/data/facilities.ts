@@ -4,7 +4,7 @@ export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Hotel Amenities",
   heading: "Hotel Amenities",
   description:
-    "Enjoy a comfortable and convenient stay at Hotel Yogiraj with free & fast Wi-Fi, AC rooms, an in-house restaurant, car parking, CCTV cameras and 24-hour room service in the heart of Shirdi.",
+    "Enjoy a comfortable and convenient stay at Hotel Yogiraj NX with free & fast Wi-Fi, AC rooms, an in-house restaurant, car parking, CCTV cameras and 24-hour room service in the heart of Shirdi.",
 };
 
 export const FACILITIES: Facility[] = [

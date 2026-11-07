@@ -6,7 +6,7 @@ import { NEARBY_ATTRACTIONS, NEARBY_CONTENT } from "@/data/nearby";
 import { SITE_INFO, GOOGLE_MAPS_URL } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Location & Nearby Attractions | Hotel Yogiraj, Shirdi",
+  title: "Location & Nearby Attractions | Hotel Yogiraj NX, Shirdi",
   description:
     "Located at Pimpalwadi Rd, near Sai Baba Temple, Shirdi, Maharashtra. Explore nearby attractions: Sai Baba Temple, Dwarkamai, Chavadi, Shirdi Bus Station and more.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/location" },
   openGraph: {
-    title: "Location & Nearby Attractions | Hotel Yogiraj, Shirdi",
+    title: "Location & Nearby Attractions | Hotel Yogiraj NX, Shirdi",
     description: NEARBY_CONTENT.description,
   },
 };

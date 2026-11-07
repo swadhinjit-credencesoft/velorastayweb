@@ -121,7 +121,7 @@ export const NAV_GROUPS: NavGroup[] = [
         id: "nav-more-about",
         label: "About Us",
         href: "/about",
-        description: "Welcome to Hotel Yogiraj",
+        description: "Welcome to Hotel Yogiraj NX",
         icon: "lucide:info",
       },
       {
@@ -225,17 +225,19 @@ export const FOOTER_SOCIAL: SocialLink[] = [
   {
     id: "footer-social-google",
     icon: "lucide:map-pin",
-    href: "https://maps.google.com/?q=Hotel+Yogiraj+Shirdi+Maharashtra",
+    href: "https://maps.google.com/?q=Hotel+Yogiraj+NX+Shirdi+Maharashtra",
     label: "Google Maps",
   },
+  { id: "footer-social-facebook", icon: "lucide:facebook", href: "https://www.facebook.com/61571729401203", label: "Facebook" },
+  { id: "footer-social-instagram", icon: "lucide:instagram", href: "https://www.instagram.com/hotelyogirajnx/", label: "Instagram" }
 ];
 
 export const FOOTER_CONTACT = {
   address:
     "Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109, India",
-  phone: "+91 95955 33535",
+  phone: "+91 99030 33535",
   email: "info@yogirajhotel.com",
   hours: "24-Hour Front Desk",
 };
 
-export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Hotel Yogiraj, Shirdi. All rights reserved.`;
+export const FOOTER_COPYRIGHT = `© ${new Date().getFullYear()} Hotel Yogiraj NX, Shirdi. All rights reserved.`;

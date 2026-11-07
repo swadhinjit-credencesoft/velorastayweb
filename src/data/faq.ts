@@ -8,9 +8,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-booking-01",
-        question: "How can I book a room at Hotel Yogiraj, Shirdi?",
+        question: "How can I book a room at Hotel Yogiraj NX, Shirdi?",
         answer:
-          "You can book directly through our website by filling in the booking form with your check-in and check-out dates, room type and guest details. Alternatively, you can call or WhatsApp our reservations team at +91 95955 33535 or email us at info@yogirajhotel.com.",
+          "You can book directly through our website by filling in the booking form with your check-in and check-out dates, room type and guest details. Alternatively, you can call or WhatsApp our reservations team at +91 99030 33535 or email us at info@yogirajhotel.com.",
       },
       {
         id: "faq-booking-02",
@@ -126,9 +126,9 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         id: "faq-location-01",
-        question: "Where is Hotel Yogiraj located?",
+        question: "Where is Hotel Yogiraj NX located?",
         answer:
-          "Hotel Yogiraj is located at Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109.",
+          "Hotel Yogiraj NX is located at Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109.",
       },
       {
         id: "faq-location-02",

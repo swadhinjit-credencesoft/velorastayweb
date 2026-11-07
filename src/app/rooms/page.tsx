@@ -12,12 +12,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Rooms & Rates | Hotel Yogiraj, Shirdi",
+  title: "Rooms & Rates | Hotel Yogiraj NX, Shirdi",
   description:
-    "Explore rooms at Hotel Yogiraj, Shirdi: Double Bed Non-AC, Double Bed, Triple Bed AC/Non-AC and Four Bed AC/Non-AC rooms with free Wi-Fi, near the Sai Baba Temple.",
+    "Explore rooms at Hotel Yogiraj NX, Shirdi: Double Bed Non-AC, Double Bed, Triple Bed AC/Non-AC and Four Bed AC/Non-AC rooms with free Wi-Fi, near the Sai Baba Temple.",
   alternates: { canonical: "/rooms" },
   openGraph: {
-    title: "Rooms & Rates | Hotel Yogiraj, Shirdi",
+    title: "Rooms & Rates | Hotel Yogiraj NX, Shirdi",
     description: "Comfortable rooms in Shirdi, near the Sai Baba Temple.",
     url: generateCanonicalUrl("/rooms"),
   },

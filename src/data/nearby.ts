@@ -2,9 +2,9 @@ import type { SectionContent, NearbyAttraction } from "@/types";
 
 export const NEARBY_CONTENT: SectionContent = {
   eyebrow: "Explore Shirdi",
-  heading: "Places to Visit Near Hotel Yogiraj",
+  heading: "Places to Visit Near Hotel Yogiraj NX",
   description:
-    "Stay just minutes from the Sai Baba Temple at Hotel Yogiraj. Explore Shirdi's most important temples, sacred sites and attractions, most within easy walking distance.",
+    "Stay just minutes from the Sai Baba Temple at Hotel Yogiraj NX. Explore Shirdi's most important temples, sacred sites and attractions, most within easy walking distance.",
 };
 
 export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [

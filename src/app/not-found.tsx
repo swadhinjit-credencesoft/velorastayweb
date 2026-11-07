@@ -22,7 +22,7 @@ export default function NotFound() {
         <h1 className={styles.heading}>Page Not Found</h1>
         <p className={styles.description}>
           The page you are looking for does not exist or has been moved. Let us
-          guide you back to your stay at Hotel Yogiraj – Shirdi.
+          guide you back to your stay at Hotel Yogiraj NX – Shirdi.
         </p>
         <div className={styles.actions}>
           <Button

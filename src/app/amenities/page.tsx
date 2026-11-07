@@ -7,9 +7,9 @@ import { FACILITIES, FACILITIES_CONTENT } from "@/data/facilities";
 import { SITE_INFO } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Hotel Amenities | Hotel Yogiraj, Shirdi",
+  title: "Hotel Amenities | Hotel Yogiraj NX, Shirdi",
   description:
-    "Hotel amenities at Hotel Yogiraj, Shirdi: free Wi-Fi, air conditioning, 24-hour front desk, in-house vegetarian restaurant, free parking, CCTV and more near the Sai Baba Temple.",
+    "Hotel amenities at Hotel Yogiraj NX, Shirdi: free Wi-Fi, air conditioning, 24-hour front desk, in-house vegetarian restaurant, free parking, CCTV and more near the Sai Baba Temple.",
   keywords: [
     "hotel amenities Shirdi",
     "hotel facilities Shirdi",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/amenities" },
   openGraph: {
-    title: "Hotel Amenities | Hotel Yogiraj, Shirdi",
+    title: "Hotel Amenities | Hotel Yogiraj NX, Shirdi",
     description: FACILITIES_CONTENT.description,
     url: `${SITE_INFO.url}/amenities`,
   },

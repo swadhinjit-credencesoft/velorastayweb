@@ -2,7 +2,7 @@ import type { SectionContent } from "@/types";
 
 export const RESTAURANT_CONTENT: SectionContent = {
   eyebrow: "In-House Restaurant",
-  heading: "Dining at Hotel Yogiraj",
+  heading: "Dining at Hotel Yogiraj NX",
   description:
     "Enjoy delicious vegetarian meals at our in-house restaurant in Shirdi, including a complimentary breakfast buffet — a convenient dining option for guests after temple darshan.",
 };

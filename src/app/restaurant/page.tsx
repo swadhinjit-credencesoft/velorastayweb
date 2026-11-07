@@ -6,12 +6,12 @@ import { RESTAURANT_CONTENT, RESTAURANT_HIGHLIGHTS, RESTAURANT_DETAILS } from "@
 import { WHATSAPP_LINK } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Restaurant | Dining at Hotel Yogiraj, Shirdi",
+  title: "Restaurant | Dining at Hotel Yogiraj NX, Shirdi",
   description:
-    "Dining at Hotel Yogiraj, Shirdi. Enjoy pure vegetarian meals at our in-house restaurant, with complimentary breakfast for guests and 24-hour room service.",
+    "Dining at Hotel Yogiraj NX, Shirdi. Enjoy pure vegetarian meals at our in-house restaurant, with complimentary breakfast for guests and 24-hour room service.",
   alternates: { canonical: "/restaurant" },
   openGraph: {
-    title: "Restaurant | Hotel Yogiraj, Shirdi",
+    title: "Restaurant | Hotel Yogiraj NX, Shirdi",
     description: RESTAURANT_CONTENT.description,
   },
 };

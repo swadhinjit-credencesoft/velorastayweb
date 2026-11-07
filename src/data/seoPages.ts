@@ -15,13 +15,13 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "hotel-near-sai-baba-temple",
     h1: "Hotel Near Sai Baba Temple, Shirdi",
-    metaTitle: "Hotel Near Sai Baba Temple Shirdi | Hotel Yogiraj",
+    metaTitle: "Hotel Near Sai Baba Temple Shirdi | Hotel Yogiraj NX",
     metaDescription:
-      "Looking for a hotel near Sai Baba Temple in Shirdi? Hotel Yogiraj is just a short walk from the temple with comfortable AC & non-AC rooms, free Wi-Fi, parking and an in-house restaurant.",
+      "Looking for a hotel near Sai Baba Temple in Shirdi? Hotel Yogiraj NX is just a short walk from the temple with comfortable AC & non-AC rooms, free Wi-Fi, parking and an in-house restaurant.",
     eyebrow: "Just Minutes from Shri Sai Baba Temple",
     intro: [
       "Looking for a comfortable hotel close to the Shri Sai Baba Temple in Shirdi?",
-      "Hotel Yogiraj is located on Pimpalwadi Road, within easy walking distance of the Sai Baba Temple, making it one of the most convenient places to stay for pilgrimage.",
+      "Hotel Yogiraj NX is located on Pimpalwadi Road, within easy walking distance of the Sai Baba Temple, making it one of the most convenient places to stay for pilgrimage.",
       "Guests can enjoy clean AC & non-AC rooms, free & fast Wi-Fi, a complimentary breakfast buffet, car parking and a 24-hour front desk with temple guidance.",
     ],
     pointsLabel: "Ideal for",
@@ -38,14 +38,14 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "hotel-in-shirdi",
     h1: "Hotel in Shirdi",
-    metaTitle: "Hotel in Shirdi | Hotel Yogiraj – Near Sai Baba Temple",
+    metaTitle: "Hotel in Shirdi | Hotel Yogiraj NX – Near Sai Baba Temple",
     metaDescription:
-      "Book a comfortable hotel in Shirdi near the Sai Baba Temple. Hotel Yogiraj offers clean rooms, free Wi-Fi, vegetarian restaurant, parking and a 24-hour front desk.",
+      "Book a comfortable hotel in Shirdi near the Sai Baba Temple. Hotel Yogiraj NX offers clean rooms, free Wi-Fi, vegetarian restaurant, parking and a 24-hour front desk.",
     eyebrow: "Comfortable Stay in Central Shirdi",
     intro: [
       "Looking for a hotel in Shirdi with a central location and comfortable rooms?",
-      "Hotel Yogiraj is situated on Pimpalwadi Road in Shiv Nagar, close to the Sai Baba Temple, Shirdi Bus Station and local commercial areas.",
-      "Our clean, spacious AC & non-AC rooms, in-house vegetarian restaurant, free parking and helpful staff make Hotel Yogiraj a great choice for your Shirdi stay.",
+      "Hotel Yogiraj NX is situated on Pimpalwadi Road in Shiv Nagar, close to the Sai Baba Temple, Shirdi Bus Station and local commercial areas.",
+      "Our clean, spacious AC & non-AC rooms, in-house vegetarian restaurant, free parking and helpful staff make Hotel Yogiraj NX a great choice for your Shirdi stay.",
     ],
     pointsLabel: "Why stay with us",
     points: [
@@ -61,13 +61,13 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "budget-hotel-in-shirdi",
     h1: "Budget Hotel in Shirdi",
-    metaTitle: "Budget Hotel in Shirdi | Hotel Yogiraj – Affordable Stay",
+    metaTitle: "Budget Hotel in Shirdi | Hotel Yogiraj NX – Affordable Stay",
     metaDescription:
-      "Looking for an affordable budget hotel in Shirdi near Sai Baba Temple? Hotel Yogiraj offers clean, comfortable rooms at budget-friendly rates with free Wi-Fi and parking.",
+      "Looking for an affordable budget hotel in Shirdi near Sai Baba Temple? Hotel Yogiraj NX offers clean, comfortable rooms at budget-friendly rates with free Wi-Fi and parking.",
     eyebrow: "Affordable & Comfortable",
     intro: [
       "Planning an affordable trip to Shirdi for Sai Baba darshan?",
-      "Hotel Yogiraj offers clean, comfortable and budget-friendly rooms in a prime location just minutes from the Sai Baba Temple, Shirdi Bus Station and local markets.",
+      "Hotel Yogiraj NX offers clean, comfortable and budget-friendly rooms in a prime location just minutes from the Sai Baba Temple, Shirdi Bus Station and local markets.",
       "Enjoy free & fast Wi-Fi, a vegetarian restaurant, hot water geysers, power backup and helpful service — all at a great price.",
     ],
     pointsLabel: "Budget-friendly features",
@@ -84,13 +84,13 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "family-hotel-shirdi",
     h1: "Family Hotel in Shirdi",
-    metaTitle: "Family Hotel in Shirdi | Hotel Yogiraj – Family-Friendly Stay",
+    metaTitle: "Family Hotel in Shirdi | Hotel Yogiraj NX – Family-Friendly Stay",
     metaDescription:
-      "Planning a family trip to Shirdi? Hotel Yogiraj offers family-friendly four-bed rooms, free parking, a vegetarian restaurant and a convenient location near Sai Baba Temple.",
+      "Planning a family trip to Shirdi? Hotel Yogiraj NX offers family-friendly four-bed rooms, free parking, a vegetarian restaurant and a convenient location near Sai Baba Temple.",
     eyebrow: "Family-Friendly Stay",
     intro: [
       "Planning a family trip to Shirdi?",
-      "Hotel Yogiraj offers family-friendly accommodation with spacious four-bed rooms, clean private bathrooms, free Wi-Fi, free parking and convenient hotel services.",
+      "Hotel Yogiraj NX offers family-friendly accommodation with spacious four-bed rooms, clean private bathrooms, free Wi-Fi, free parking and convenient hotel services.",
       "With the Sai Baba Temple just a short walk away, our hotel is a great base for a family pilgrimage or holiday.",
     ],
     pointsLabel: "Suitable for",
@@ -106,13 +106,13 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "hotel-near-shirdi-bus-station",
     h1: "Hotel Near Shirdi Bus Station",
-    metaTitle: "Hotel Near Shirdi Bus Station | Hotel Yogiraj",
+    metaTitle: "Hotel Near Shirdi Bus Station | Hotel Yogiraj NX",
     metaDescription:
-      "Stay just 200 m from Shirdi Bus Station. Hotel Yogiraj offers comfortable rooms, free Wi-Fi, parking and a convenient location near the Sai Baba Temple.",
+      "Stay just 200 m from Shirdi Bus Station. Hotel Yogiraj NX offers comfortable rooms, free Wi-Fi, parking and a convenient location near the Sai Baba Temple.",
     eyebrow: "Convenient for Bus Travellers",
     intro: [
       "Arriving in Shirdi by bus?",
-      "Hotel Yogiraj is located just approximately 200 m from Shirdi Bus Station, making it an extremely convenient place to stay for bus travellers.",
+      "Hotel Yogiraj NX is located just approximately 200 m from Shirdi Bus Station, making it an extremely convenient place to stay for bus travellers.",
       "After settling in, the Sai Baba Temple and other sacred sites are all within easy walking distance.",
     ],
     pointsLabel: "Good to know",
@@ -127,13 +127,13 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "hotel-near-shirdi-airport",
     h1: "Hotel Near Shirdi Airport (SAG)",
-    metaTitle: "Hotel Near Shirdi Airport | Hotel Yogiraj",
+    metaTitle: "Hotel Near Shirdi Airport | Hotel Yogiraj NX",
     metaDescription:
-      "Shirdi Airport is approximately 15 km from Hotel Yogiraj. A convenient Shirdi base for pilgrims and travellers arriving by air.",
+      "Shirdi Airport is approximately 15 km from Hotel Yogiraj NX. A convenient Shirdi base for pilgrims and travellers arriving by air.",
     eyebrow: "Convenient for Air Travellers",
     intro: [
       "Shirdi Airport (SAG) is approximately 15 km from the hotel.",
-      "Hotel Yogiraj offers a convenient Shirdi location for travellers arriving in or departing from Shirdi, with comfortable rooms, free Wi-Fi and a 24-hour front desk.",
+      "Hotel Yogiraj NX offers a convenient Shirdi location for travellers arriving in or departing from Shirdi, with comfortable rooms, free Wi-Fi and a 24-hour front desk.",
       "Please contact the front desk for airport transfer and taxi information, and verify current journey times before travel.",
     ],
     pointsLabel: "Good to know",
@@ -148,13 +148,13 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
   {
     slug: "hotel-for-sai-baba-pilgrims",
     h1: "Hotel for Sai Baba Pilgrims",
-    metaTitle: "Hotel for Sai Baba Pilgrims | Hotel Yogiraj Shirdi",
+    metaTitle: "Hotel for Sai Baba Pilgrims | Hotel Yogiraj NX Shirdi",
     metaDescription:
-      "A comfortable hotel for Sai Baba pilgrims in Shirdi. Hotel Yogiraj is close to the Sai Baba Temple with clean rooms, vegetarian dining, parking and helpful staff.",
+      "A comfortable hotel for Sai Baba pilgrims in Shirdi. Hotel Yogiraj NX is close to the Sai Baba Temple with clean rooms, vegetarian dining, parking and helpful staff.",
     eyebrow: "Built for Pilgrims",
     intro: [
       "Travelling to Shirdi for Sai Baba darshan?",
-      "Hotel Yogiraj is designed with pilgrims in mind — located just a short walk from the Sai Baba Temple, with clean, comfortable rooms and a peaceful environment to rest after darshan.",
+      "Hotel Yogiraj NX is designed with pilgrims in mind — located just a short walk from the Sai Baba Temple, with clean, comfortable rooms and a peaceful environment to rest after darshan.",
       "Our staff are happy to help with temple guidance, darshan passes and local information so you can make the most of your pilgrimage.",
     ],
     pointsLabel: "Pilgrim-friendly",

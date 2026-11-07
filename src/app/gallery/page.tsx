@@ -7,12 +7,12 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery | Hotel Yogiraj, Shirdi",
-  description: "Explore photos of rooms, restaurant, lobby, common areas and Shirdi at Hotel Yogiraj, near the Sai Baba Temple in Shirdi, Maharashtra.",
+  title: "Photo Gallery | Hotel Yogiraj NX, Shirdi",
+  description: "Explore photos of rooms, restaurant, lobby, common areas and Shirdi at Hotel Yogiraj NX, near the Sai Baba Temple in Shirdi, Maharashtra.",
   alternates: { canonical: "/gallery" },
   openGraph: {
-    title: "Photo Gallery | Hotel Yogiraj, Shirdi",
-    description: "Take a visual tour of Hotel Yogiraj, Shirdi through our photo gallery.",
+    title: "Photo Gallery | Hotel Yogiraj NX, Shirdi",
+    description: "Take a visual tour of Hotel Yogiraj NX, Shirdi through our photo gallery.",
   },
 };
 
@@ -25,7 +25,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/yogirajimg/AKS08545.avif"
-            alt="Hotel Yogiraj, Shirdi gallery"
+            alt="Hotel Yogiraj NX, Shirdi gallery"
             fill
             className="object-cover"
             sizes="100vw"
@@ -36,7 +36,7 @@ export default function GalleryPage() {
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Gallery", href: "/gallery" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">Photo Gallery</h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-lg">
-            Take a visual tour of Hotel Yogiraj, Shirdi and discover what makes our hotel special.
+            Take a visual tour of Hotel Yogiraj NX, Shirdi and discover what makes our hotel special.
           </p>
         </div>
       </section>

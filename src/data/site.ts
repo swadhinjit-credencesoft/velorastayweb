@@ -10,13 +10,13 @@ import type {
 import { BOOKING_ENGINE_URL } from "@/config";
 
 export const SITE_INFO: SiteInfo = {
-  name: "Hotel Yogiraj",
+  name: "Hotel Yogiraj NX",
   tagline: "A Comfortable Stay Close to Sai Baba Temple",
   description:
-    "Stay at Hotel Yogiraj, Shirdi — a budget-friendly hotel just moments from the Sai Baba Temple. Enjoy comfortable AC & non-AC rooms, free Wi-Fi, an in-house restaurant, car parking and 24-hour front-desk assistance for pilgrims, families and travellers.",
+    "Stay at Hotel Yogiraj NX, Shirdi — a budget-friendly hotel just moments from the Sai Baba Temple. Enjoy comfortable AC & non-AC rooms, free Wi-Fi, an in-house restaurant, car parking and 24-hour front-desk assistance for pilgrims, families and travellers.",
   url: "https://yogirajhotel.com",
-  phone: "+91 95955 33535",
-  whatsapp: "+91 95955 33535",
+  phone: "+91 99030 33535",
+  whatsapp: "+91 99030 33535",
   email: "info@yogirajhotel.com",
   address: {
     street: "Pimpalwadi Rd, near Sai Baba Temple, near Sai Sh corner",
@@ -35,16 +35,16 @@ export const SITE_INFO: SiteInfo = {
   checkIn: "12:00 PM",
   checkOut: "11:00 AM",
   rating: 4.4,
-  reviewCount: 2298,
+  reviewCount: 2310,
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
-  facebook: "",
-  instagram: "",
+  facebook: "https://www.facebook.com/61571729401203",
+  instagram: "https://www.instagram.com/hotelyogirajnx/",
   twitter: "",
   youtube: "",
   tripadvisor: "",
-  google: "https://maps.google.com/?q=Hotel+Yogiraj+Shirdi+Maharashtra",
+  google: "https://maps.google.com/?q=Hotel+Yogiraj+NX+Shirdi+Maharashtra",
 };
 
 export const SITE_ASSETS = {
@@ -71,7 +71,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: "/yogirajimg/01.avif",
     title: "Stay Minutes from Sai Baba Temple",
     subtitle:
-      "Welcome to Hotel Yogiraj, Shirdi — a comfortable, budget-friendly hotel right near the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
+      "Welcome to Hotel Yogiraj NX, Shirdi — a comfortable, budget-friendly hotel right near the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
     cta: { label: "Check Availability", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
   },
   {
@@ -169,7 +169,7 @@ export const TRUST_BADGES: TrustBadge[] = [
 
 const whatsappPhone = SITE_INFO.whatsapp.replace(/\s+/g, "").replace("+", "");
 const whatsappMessage = [
-  "Hello Hotel Yogiraj, Shirdi,",
+  "Hello Hotel Yogiraj NX, Shirdi,",
   "I would like to enquire about a booking.",
   "Name: ",
   "Check-in: ",

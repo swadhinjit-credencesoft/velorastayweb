@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   keywords: [
     "hotel in Shirdi",
     "hotels in Shirdi",
+    "Hotel Yogiraj NX Shirdi",
+    "Hotel Yogiraj NX",
     "Hotel Yogiraj Shirdi",
     "hotel near Sai Baba Temple",
     "hotel near Sai Baba Mandir Shirdi",

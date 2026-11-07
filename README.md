@@ -1,6 +1,6 @@
-# Hotel Yogiraj – Shirdi
+# Hotel Yogiraj NX NX – Shirdi
 
-Marketing site for Hotel Yogiraj, a hotel at Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109. Built with:
+Marketing site for Hotel Yogiraj NX, a hotel at Pimpalwadi Rd, near Sai Baba Temple, Shiv Nagar, Shirdi, Maharashtra 423109. Built with:
 
 - **Next.js 14** (App Router) + **TypeScript**
 - **SCSS Modules** for component styling, with a shared token/mixin layer
@@ -27,7 +27,7 @@ npm run start
 
 ## Booking flow
 
-Booking actions (room pages, homepage CTAs, search bar) open the BookOne engine at **https://bookone.io/Hotel-Yogiraj?bookingEngine=true**. Live room availability and prices (property **651**) are fetched from the THM API. Guests can also reach the hotel directly on **+91 95955 33535** (call/WhatsApp) or **info@yogirajhotel.com**.
+Booking actions (room pages, homepage CTAs, search bar) open the BookOne engine at **https://bookone.io/Hotel-Yogiraj?bookingEngine=true**. Live room availability and prices (property **651**) are fetched from the THM API. Guests can also reach the hotel directly on **+91 99030 33535** (call/WhatsApp) or **info@yogirajhotel.com**.
 
 ## File structure
 
@@ -99,5 +99,5 @@ velorastayweb/
 
 ## Notes
 
-- Site images now use the real Hotel Yogiraj photos under `public/yogirajimg/` (gallery, pages, backgrounds, seo) and `public/nearby/` (Shirdi place photos). Legacy placeholder assets (`homehero*.png`, `whychooseus.png`, `schemaimg.png`, `deluxeroomimage/`, `PremiumDoubleRoom/`, `TripleSuitewithJacuzzi/`, `queenslogo.png`) have been removed. Note: room listing images come from the booking API (`ApiRoom.imageList`), not `public/`.
-- The nav/header logo still uses `public/yogirajlogo.png` (the old Queen's Head mark). Replace it with a Hotel Yogiraj logo file and update `SITE_ASSETS.logo` plus the `src` refs in `Header.tsx`, `Footer.tsx` and `MobileNav.tsx`.
+- Site images now use the real Hotel Yogiraj NX photos under `public/yogirajimg/` (gallery, pages, backgrounds, seo) and `public/nearby/` (Shirdi place photos). Legacy placeholder assets (`homehero*.png`, `whychooseus.png`, `schemaimg.png`, `deluxeroomimage/`, `PremiumDoubleRoom/`, `TripleSuitewithJacuzzi/`, `queenslogo.png`) have been removed. Note: room listing images come from the booking API (`ApiRoom.imageList`), not `public/`.
+- The nav/header logo still uses `public/yogirajlogo.png` (the old Queen's Head mark). Replace it with a Hotel Yogiraj NX logo file and update `SITE_ASSETS.logo` plus the `src` refs in `Header.tsx`, `Footer.tsx` and `MobileNav.tsx`.

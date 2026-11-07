@@ -103,7 +103,7 @@ export default function ContactForm() {
             <iframe
               src={GOOGLE_MAPS_URL}
               className={styles.map}
-              title="Hotel Yogiraj Shirdi location map"
+              title="Hotel Yogiraj NX Shirdi location map"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"

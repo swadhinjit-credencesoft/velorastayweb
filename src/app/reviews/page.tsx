@@ -5,11 +5,11 @@ import { generateBreadcrumbSchema, generateHotelSchema } from "@/utils/schema";
 import { REVIEWS, REVIEWS_CONTENT, REVIEW_PLATFORMS } from "@/data/reviews";
 
 export const metadata: Metadata = {
-  title: "Guest Reviews | Hotel Yogiraj, Shirdi",
+  title: "Guest Reviews | Hotel Yogiraj NX, Shirdi",
   description:
-    "Read guest reviews for Hotel Yogiraj, Shirdi. See ratings from Google, Booking.com, Agoda, and Tripadvisor.",
+    "Read guest reviews for Hotel Yogiraj NX, Shirdi. See ratings from Google, Booking.com, Agoda, and Tripadvisor.",
   alternates: { canonical: "/reviews" },
-  openGraph: { title: "Guest Reviews | Hotel Yogiraj, Shirdi", description: REVIEWS_CONTENT.description },
+  openGraph: { title: "Guest Reviews | Hotel Yogiraj NX, Shirdi", description: REVIEWS_CONTENT.description },
 };
 
 export default function ReviewsPage() {

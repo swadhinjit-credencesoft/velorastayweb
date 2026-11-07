@@ -5,7 +5,7 @@ import type {
 
 export const ROOMS_CONTENT: SectionContent = {
   eyebrow: "Rooms & Suites",
-  heading: "Rooms at Hotel Yogiraj",
+  heading: "Rooms at Hotel Yogiraj NX",
   description:
     "Choose from comfortable AC and Non-AC rooms in Shirdi, from budget double rooms to spacious family-friendly four-bed rooms — all within easy reach of the Sai Baba Temple.",
 };
