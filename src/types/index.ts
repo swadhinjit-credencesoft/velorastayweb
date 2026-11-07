@@ -1,3 +1,4 @@
+import type { ApiRoom, ApiRoomFacility } from "./api";
 // ─── Navigation ───────────────────────────────────────────
 export interface NavLink {
   id: string;
@@ -134,6 +135,13 @@ export interface RoomType {
   popular: boolean;
   available: boolean;
   tag?: string;
+  rawRoom?: ApiRoom;
+  facilitiesList?: ApiRoomFacility[];
+  noOfRooms?: number;
+  minimumOccupancy?: number;
+  minimumLengthOfStay?: number;
+  minStay?: number;
+  minOccupancy?: number;
 }
 
 export interface RoomImage {

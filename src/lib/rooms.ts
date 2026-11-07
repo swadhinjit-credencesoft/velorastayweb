@@ -1,4 +1,4 @@
-import type { RoomType, RoomImage, RoomPolicy, FaqItem } from "@/types";
+import type { RoomType, RoomImage } from "@/types";
 import type { ApiRoom } from "@/types/api";
 
 export function generateSlug(name: string): string {
@@ -8,7 +8,7 @@ export function generateSlug(name: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
-function stripHtml(html: string): string {
+export function stripHtml(html: string): string {
   return (html || "")
     .replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;/g, " ")
@@ -58,7 +58,7 @@ function mapApiImages(images: ApiRoom["imageList"], roomName: string): RoomImage
     id: String(img.id ?? i),
     src: img.url.trim(),
     alt: stripHtml(img.description || "") || `${roomName} - View ${i + 1}`,
-    caption: img.mainImage ? "Main view" : undefined,
+    caption: img.mainImage ? "Main view" : `View ${i + 1}`,
   }));
 }
 
@@ -73,12 +73,12 @@ function getBedDetails(name: string, occupancy: number): { bedType: string; bedC
   if (lower.includes("triple") || occupancy === 3) {
     return {
       bedType: "Triple Bed",
-      bedConfig: "1 Double Bed + 1 Single Bed",
+      bedConfig: "1 Double Bed + 1 Single Bed (3 Guests)",
     };
   }
   return {
     bedType: "Double Bed",
-    bedConfig: "1 Comfortable Double Bed",
+    bedConfig: "1 Large Double Bed (2 Guests)",
   };
 }
 
@@ -105,6 +105,9 @@ export function apiRoomToRoomType(apiRoom: ApiRoom): RoomType {
     apiRoom.ratesAndAvailabilityDtos?.[0]?.price ||
     0;
   const occupancy = apiRoom.maximumOccupancy || 2;
+  const minOccupancy = apiRoom.minimumOccupancy || 1;
+  const noOfRooms = apiRoom.noOfRooms || 1;
+  const minStay = apiRoom.minimumLengthOfStay || 1;
   const isAc =
     !cleanName.toLowerCase().includes("non ac") &&
     !cleanName.toLowerCase().includes("non-ac");
@@ -128,99 +131,25 @@ export function apiRoomToRoomType(apiRoom: ApiRoom): RoomType {
   }
 
   const cleanDesc = stripHtml(apiRoom.description || "");
-  const facilityNames = (apiRoom.roomFacilities || []).map((f) => f.name).join(", ");
-
-  const longDescription =
-    cleanDesc.length > 50
-      ? cleanDesc
-      : `${cleanName} at Hotel Yogiraj offers a clean, peaceful, and comfortable stay in Shirdi, located just a 2-minute walk from the holy Shri Sai Baba Temple. Configured for up to ${occupancy} guests, this room includes ${facilityNames || "free Wi-Fi and 24-hour room service"} for a rejuvenating pilgrimage experience.`;
-
-  const highlights = [
-    `Spacious accommodation for up to ${occupancy} guests`,
-    isAc ? "Split air conditioning for complete comfort" : "Well-ventilated room with ceiling fan",
-    "Attached private bathroom with hot water (geyser)",
-    "Free high-speed Wi-Fi throughout the stay",
-    "24-hour room service & front-desk assistance",
-    "Just a 2-minute walk to Shri Sai Baba Temple",
-  ];
-
-  const features = [
-    `Room Size: approx. ${size} ${sizeUnit}`,
-    `Bedding: ${bedConfig}`,
-    `Occupancy: Up to ${occupancy} Guests`,
-    "Check-in: 12:00 PM | Check-out: 11:00 AM",
-    "Daily housekeeping & sanitization",
-    "In-house pure vegetarian restaurant on premises",
-  ];
-
-  const policies: RoomPolicy[] = [
-    {
-      id: `${slug}-checkin`,
-      title: "Check-in & Check-out",
-      description:
-        "Check-in from 12:00 PM. Check-out by 11:00 AM. 24-hour front desk available for early morning darshan or late arrivals.",
-    },
-    {
-      id: `${slug}-cancellation`,
-      title: "Cancellation Policy",
-      description:
-        "Free cancellation if cancelled up to 24 hours prior to check-in. Non-refundable within 24 hours.",
-    },
-    {
-      id: `${slug}-children`,
-      title: "Children & Extra Beds",
-      description:
-        "Children up to 5 years stay complimentary with existing bedding. Extra mattress available on request.",
-    },
-  ];
-
-  const faqs: FaqItem[] = [
-    {
-      id: `${slug}-faq-ac`,
-      question: "Is this room air-conditioned?",
-      answer: isAc
-        ? "Yes, this room features split air conditioning for cool and pleasant comfort."
-        : "No, this is a budget-friendly Non-AC room with high-speed ceiling fans and good ventilation.",
-    },
-    {
-      id: `${slug}-faq-guests`,
-      question: "How many guests can stay in this room?",
-      answer: `This room comfortably accommodates up to ${occupancy} guests.`,
-    },
-    {
-      id: `${slug}-faq-temple`,
-      question: "How close is Hotel Yogiraj to the Sai Baba Temple?",
-      answer:
-        "The hotel is located on Pimpalwadi Road, just a 2-minute walk from the Sai Baba Temple entrance.",
-    },
-    {
-      id: `${slug}-faq-parking`,
-      question: "Is car parking available?",
-      answer: "Yes, free secure car parking is available on-site for all staying guests.",
-    },
-  ];
-
-  const nearby = [
-    "Shri Sai Baba Temple (2 min walk)",
-    "Shirdi Bus Station (5 min drive)",
-    "Dwarkamai & Chavadi (3 min walk)",
-    "Shri Sai Baba Sansthan Prasadalaya (4 min walk)",
-    "Shirdi International Airport (25 min drive)",
-  ];
 
   return {
     id: `room-${slug}`,
     slug,
     name: cleanName,
-    tagline: `Comfortable stay for ${occupancy} guests near Sai Baba Temple`,
+    tagline: `${bedConfig} • Up to ${occupancy} Guests • ₹${price.toLocaleString("en-IN")}/night`,
     description: cleanDesc,
-    longDescription,
+    longDescription: cleanDesc,
     price,
     currency: "\u20B9",
     priceUnit: "night",
     size,
     sizeUnit,
     maxOccupancy: occupancy,
+    minOccupancy,
+    minimumOccupancy: minOccupancy,
+    minimumLengthOfStay: minStay,
+    noOfRooms,
+    minStay,
     bedType,
     bedConfig,
     bathroomType: "Private Bathroom (Geyser Hot Water)",
@@ -228,16 +157,18 @@ export function apiRoomToRoomType(apiRoom: ApiRoom): RoomType {
     view: "Interior / City View",
     images: mapApiImages(apiRoom.imageList, cleanName),
     amenities: facilitySlugs,
-    highlights,
-    features,
-    policies,
-    faqs,
-    nearby,
+    facilitiesList: apiRoom.roomFacilities || [],
+    rawRoom: apiRoom,
+    highlights: [],
+    features: [],
+    policies: [],
+    faqs: [],
+    nearby: [],
     popular:
       Boolean(apiRoom.ranking && apiRoom.ranking <= 3) ||
       occupancy === 2 ||
       cleanName.toLowerCase().includes("four bed ac"),
-    available: (apiRoom.noOfRooms ?? 1) > 0,
+    available: noOfRooms > 0,
     tag,
   };
 }

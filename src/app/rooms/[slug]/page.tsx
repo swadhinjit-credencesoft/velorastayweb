@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
+import Icon from "@/components/Icon";
+import RoomBookingWidget from "@/components/rooms/RoomBookingWidget";
 import { ROOM_AMENITIES } from "@/data/rooms";
 import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 import { checkAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
-import { BOOKING_ENGINE_URL } from "@/config";
 import styles from "./room-detail.module.scss";
 
 interface RoomPageProps {
@@ -29,14 +30,21 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
   if (!room) return { title: "Room Not Found" };
 
   return {
-    title: `${room.name} | Book at ${SITE_INFO.name}`,
-    description: `${room.name} at ${SITE_INFO.name} starting from ₹${room.price.toLocaleString("en-IN")}/night (Room Only). ${room.description.substring(0, 150)}. Book by phone or WhatsApp for best rates.`,
+    title: `${room.name} | ${SITE_INFO.name}, Shirdi`,
+    description: `${room.name} at ${SITE_INFO.name}, Shirdi starting from ₹${room.price.toLocaleString("en-IN")}/night. ${room.description.slice(0, 140)}. Minutes from Sai Baba Temple.`,
     alternates: { canonical: `/rooms/${room.slug}` },
     openGraph: {
       title: `${room.name} | ${SITE_INFO.name}`,
-      description: room.description.substring(0, 200),
+      description: room.description.slice(0, 200),
       url: generateCanonicalUrl(`/rooms/${room.slug}`),
-      images: [{ url: room.images[0]?.src || "/yogirajhero2.jpeg", width: 800, height: 600, alt: room.name }],
+      images: [
+        {
+          url: room.images[0]?.src || "/yogirajhero2.jpeg",
+          width: 800,
+          height: 600,
+          alt: room.name,
+        },
+      ],
     },
   };
 }
@@ -47,17 +55,17 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
   const room = rooms.find((r) => r.slug === params.slug);
   if (!room) notFound();
 
-  const amenities = room.amenities
+  // Combine live API facilities with fallback amenities
+  const apiFacilities = room.facilitiesList ?? [];
+  const apiFacilityNames = new Set(apiFacilities.map((f) => f.name.toLowerCase().trim()));
+
+  const complementaryAmenities = room.amenities
     .map((id) => {
       const found = ROOM_AMENITIES.find((a) => a.id === id);
-      if (found) return found;
-      const formatted = id.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-      return {
-        id,
-        label: formatted,
-        icon: "lucide:check-circle",
-        category: "basic" as const,
-      };
+      if (found && !apiFacilityNames.has(found.label.toLowerCase())) {
+        return found;
+      }
+      return null;
     })
     .filter(Boolean);
 
@@ -91,9 +99,9 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
               />
               {room.images.length > 1 && (
                 <div className={styles.galleryGrid}>
-                  {room.images.slice(1).map((img) => (
+                  {room.images.slice(1).map((img, idx) => (
                     <Image
-                      key={img.id}
+                      key={`${img.id}-${idx}`}
                       src={img.src}
                       alt={img.alt}
                       width={600}
@@ -108,136 +116,106 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
 
           <div className={styles.contentGrid}>
             <div className={styles.main}>
-              <div>{room.tag && <span className={styles.tag}>{room.tag}</span>}</div>
+              {room.tag && <span className={styles.tag}>{room.tag}</span>}
               <h1 className={styles.title}>{room.name}</h1>
               <p className={styles.tagline}>{room.tagline}</p>
 
+              {/* Quick Room Stats derived from API */}
               <div className={styles.quickStats}>
                 <div className={styles.stat}>
-                  <span className={styles.statLabel}>Bed</span>
+                  <span className={styles.statLabel}>Bed Setup</span>
                   <strong>{room.bedConfig}</strong>
                 </div>
                 <div className={styles.stat}>
-                  <span className={styles.statLabel}>Guests</span>
-                  <strong>Up to {room.maxOccupancy}</strong>
+                  <span className={styles.statLabel}>Max Occupancy</span>
+                  <strong>{room.maxOccupancy} Guests</strong>
                 </div>
                 <div className={styles.stat}>
-                  <span className={styles.statLabel}>Size</span>
+                  <span className={styles.statLabel}>Room Size</span>
                   <strong>{room.size} {room.sizeUnit}</strong>
                 </div>
+                {room.noOfRooms !== undefined && (
+                  <div className={styles.stat}>
+                    <span className={styles.statLabel}>Total Rooms</span>
+                    <strong>{room.noOfRooms} Units</strong>
+                  </div>
+                )}
                 <div className={styles.stat}>
-                  <span className={styles.statLabel}>View</span>
-                  <strong>{room.view}</strong>
+                  <span className={styles.statLabel}>Min Stay</span>
+                  <strong>{room.minStay} Night</strong>
                 </div>
               </div>
 
+              {/* Room Description */}
               <h2 className={styles.sectionTitle}>About This Room</h2>
-              <p className={styles.bodyText}>{room.longDescription || room.description}</p>
+              <p className={styles.bodyText}>{room.description}</p>
 
-              {room.highlights && room.highlights.length > 0 && (
-                <>
-                  <h3 className={styles.sectionTitleSm}>Highlights</h3>
-                  <ul className={styles.highlightsList}>
-                    {room.highlights.map((h, i) => (
-                      <li key={i}>{h}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              {room.features && room.features.length > 0 && (
-                <>
-                  <h2 className={styles.sectionTitle}>Rates & Details</h2>
-                  <ul className={styles.highlightsList}>
-                    {room.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              <h2 className={styles.sectionTitle}>Amenities</h2>
+              {/* Official API Facilities & Amenities */}
+              <h2 className={styles.sectionTitle}>Room Facilities & Amenities</h2>
               <div className={styles.amenitiesGrid}>
-                {amenities.map((amenity) => (
-                  <div key={amenity.id} className={styles.amenityItem}>
-                    <span>{amenity.label}</span>
+                {apiFacilities.map((fac, idx) => (
+                  <div key={fac.id ?? idx} className={styles.amenityItem}>
+                    {fac.logoUrl ? (
+                      <Image
+                        src={fac.logoUrl}
+                        alt={fac.name}
+                        width={22}
+                        height={22}
+                        className={styles.facilityIcon}
+                      />
+                    ) : (
+                      <Icon
+                        icon="lucide:check-circle"
+                        width={18}
+                        height={18}
+                        className={styles.facilityIconCheck}
+                      />
+                    )}
+                    <span>{fac.name}</span>
                   </div>
+                ))}
+                {complementaryAmenities.map((amenity) => (
+                  amenity && (
+                    <div key={amenity.id} className={styles.amenityItem}>
+                      <Icon
+                        icon={amenity.icon || "lucide:check-circle"}
+                        width={18}
+                        height={18}
+                        className={styles.facilityIconCheck}
+                      />
+                      <span>{amenity.label}</span>
+                    </div>
+                  )
                 ))}
               </div>
 
-              {room.policies && room.policies.length > 0 && (
-                <>
-                  <h2 className={styles.sectionTitle}>Policies</h2>
-                  {room.policies.map((policy) => (
-                    <div key={policy.id} className={styles.policyItem}>
-                      <h4 className={styles.policyTitle}>{policy.title}</h4>
-                      <p className={styles.policyText}>{policy.description}</p>
-                    </div>
-                  ))}
-                </>
-              )}
+              {/* Property Policies */}
+              <h2 className={styles.sectionTitle}>Stay & Hotel Information</h2>
+              <div className={styles.policyItem}>
+                <h4 className={styles.policyTitle}>Location & Temple Proximity</h4>
+                <p className={styles.policyText}>
+                  Situated on Pimpalwadi Road, just a 2-minute walk from the sacred Sai Baba Temple, Hotel Yogiraj offers utmost convenience for morning Kakad Aarti and darshan.
+                </p>
+              </div>
 
-              {room.faqs && room.faqs.length > 0 && (
-                <>
-                  <h2 className={styles.sectionTitle}>FAQs</h2>
-                  {room.faqs.map((faq) => (
-                    <div key={faq.id} className={styles.policyItem}>
-                      <h4 className={styles.policyTitle}>{faq.question}</h4>
-                      <p className={styles.policyText}>{faq.answer}</p>
-                    </div>
-                  ))}
-                </>
-              )}
+              <div className={styles.policyItem}>
+                <h4 className={styles.policyTitle}>Check-in & Check-out</h4>
+                <p className={styles.policyText}>
+                  Standard check-in is from {SITE_INFO.checkIn} and check-out is by {SITE_INFO.checkOut}. 24-hour front desk assistance is available for early arrivals and luggage storage.
+                </p>
+              </div>
 
-              {room.nearby && room.nearby.length > 0 && (
-                <>
-                  <h2 className={styles.sectionTitle}>Nearby</h2>
-                  <ul className={styles.nearbyList}>
-                    {room.nearby.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
+              <div className={styles.policyItem}>
+                <h4 className={styles.policyTitle}>Pricing & Meal Plan</h4>
+                <p className={styles.policyText}>
+                  Rates shown are for European Plan (Room Only). Taxes are calculated as per applicable GST slabs at booking.
+                </p>
+              </div>
             </div>
 
+            {/* Sticky Live Booking Sidebar */}
             <div className={styles.sidebar}>
-              <div className={styles.bookingCard}>
-                <div className={styles.priceRow}>
-                  <span className={styles.price}>
-                    {room.currency}{room.price.toLocaleString("en-IN")}
-                  </span>
-                </div>
-                <p className={styles.priceUnit}>per {room.priceUnit} — Room Only</p>
-                <a
-                  href={`${BOOKING_ENGINE_URL}?bookingEngine=true`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.bookBtn}
-                >
-                  Book Now
-                </a>
-                <a
-                  href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
-                  className={styles.callBtn}
-                >
-                  Call to Book
-                </a>
-                <div className={styles.bookingDetails}>
-                  <div className={styles.bookingDetailRow}>
-                    <span>Check-in</span>
-                    <strong>{SITE_INFO.checkIn}</strong>
-                  </div>
-                  <div className={styles.bookingDetailRow}>
-                    <span>Check-out</span>
-                    <strong>{SITE_INFO.checkOut}</strong>
-                  </div>
-                  <div className={styles.bookingDetailRow}>
-                    <span>Free Cancellation</span>
-                    <strong>24 hours prior</strong>
-                  </div>
-                </div>
-              </div>
+              <RoomBookingWidget room={room} />
             </div>
           </div>
         </div>

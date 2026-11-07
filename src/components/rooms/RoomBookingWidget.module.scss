@@ -1,0 +1,246 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.widget {
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  padding: v.$space-lg;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Price Header ────────────────────────────── */
+.priceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: v.$space-sm;
+  padding-bottom: v.$space-md;
+  border-bottom: 1px solid v.$color-border;
+  margin-bottom: v.$space-md;
+}
+
+.rateLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: v.$neutral-500;
+  margin-bottom: 2px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.currency {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: v.$color-accent-dark;
+}
+
+.amount {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: v.$color-accent-dark;
+  line-height: 1.1;
+}
+
+.unit {
+  font-size: 0.8125rem;
+  color: v.$neutral-500;
+  margin-left: 4px;
+}
+
+/* ── Status Badge ────────────────────────────── */
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.available {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: v.$radius-full;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.checking {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: v.$radius-full;
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.soldOut {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: v.$radius-full;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* ── Form Inputs ─────────────────────────────── */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: v.$space-sm;
+  margin-bottom: v.$space-md;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: v.$neutral-700;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.8125rem;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-sm;
+  background-color: #fff;
+  color: v.$neutral-900;
+  font-family: inherit;
+  transition: border-color v.$duration-fast;
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-accent;
+  }
+}
+
+/* ── Summary Row ─────────────────────────────── */
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: v.$neutral-50;
+  border-radius: v.$radius-sm;
+  font-size: 0.8125rem;
+  color: v.$neutral-700;
+  margin-bottom: v.$space-md;
+
+  strong {
+    font-size: 1rem;
+    color: v.$color-accent-dark;
+  }
+}
+
+/* ── Action Buttons ──────────────────────────── */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xs;
+  margin-bottom: v.$space-md;
+}
+
+.bookBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-xs;
+  width: 100%;
+  background-color: v.$color-accent;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: v.$radius-md;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: background-color v.$duration-fast;
+
+  &:hover {
+    background-color: v.$color-accent-dark;
+  }
+}
+
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-xs;
+  width: 100%;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: v.$radius-md;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: opacity v.$duration-fast;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.callBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$space-xs;
+  width: 100%;
+  border: 1px solid v.$color-accent;
+  color: v.$color-accent-dark;
+  padding: 10px 16px;
+  border-radius: v.$radius-md;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background-color v.$duration-fast;
+
+  &:hover {
+    background-color: v.$color-accent-light;
+  }
+}
+
+/* ── Property Notes ──────────────────────────── */
+.propertyNotes {
+  padding-top: v.$space-md;
+  border-top: 1px solid v.$color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: v.$neutral-600;
+}
+
+.noteItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  svg {
+    flex-shrink: 0;
+    color: v.$color-accent;
+  }
+
+  strong {
+    color: v.$neutral-900;
+  }
+}

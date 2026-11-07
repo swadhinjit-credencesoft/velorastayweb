@@ -55,7 +55,7 @@ export const SITE_ASSETS = {
   ] as const,
   logo: "/yogirajlogo.png",
   logoLight: "",
-  favicon: "/favicon.ico",
+  favicon: "/yogirajlogo.png",
   aboutImage: "/reception.jpeg",
   roomsPreviewImage: "/yogirajhero2.jpeg",
   diningImage: "/yogirajhero1.jpeg",
