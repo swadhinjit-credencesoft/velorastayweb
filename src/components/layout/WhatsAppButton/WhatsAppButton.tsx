@@ -2,8 +2,25 @@ import Icon from "@/components/Icon/Icon";
 import { SITE_INFO } from "@/data/site";
 import styles from "./WhatsAppButton.module.scss";
 
-export default function ContactButton() {
-  return <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.wrapper} aria-label="Call Y Hotels Signature">
-    <span className={styles.tooltip}>Call the hotel</span><span className={styles.pulseRing}/><span className={styles.button}><Icon icon="lucide:phone" width={24} height={24}/></span>
-  </a>;
+export default function WhatsAppButton() {
+  const cleanPhone = SITE_INFO.phone.replace(/[^0-9]/g, "").slice(-10);
+  const waUrl = `https://wa.me/91${cleanPhone}?text=${encodeURIComponent(
+    "Hello Y Hotels Signature, I would like to inquire about room availability and reservations."
+  )}`;
+
+  return (
+    <a
+      href={waUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.wrapper}
+      aria-label="Chat with Y Hotels Signature on WhatsApp"
+    >
+      <span className={styles.tooltip}>Chat on WhatsApp</span>
+      <span className={styles.pulseRing} />
+      <span className={styles.button}>
+        <Icon icon="lucide:message-circle" width={26} height={26} />
+      </span>
+    </a>
+  );
 }

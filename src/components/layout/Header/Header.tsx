@@ -30,7 +30,7 @@ export default function Header() {
   const navGroups = useMemo(() => {
     if (!villas || villas.length === 0) return NAV_GROUPS;
     return NAV_GROUPS.map((group) => {
-      if (group.id !== "nav-villas") return group;
+      if (group.id !== "nav-rooms" && group.id !== "nav-villas") return group;
       return {
         ...group,
         children: [

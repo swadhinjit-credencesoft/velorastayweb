@@ -7,7 +7,7 @@ import { NEARBY_ATTRACTIONS, getAttractionBySlug } from "@/data/nearby";
 
 type Props = { params: { slug: string } };
 export const dynamicParams = false;
-export function generateStaticParams() { return NEARBY_ATTRACTIONS.map((place) => ({ slug: place.slug })); }
+export async function generateStaticParams() { return NEARBY_ATTRACTIONS.map((place) => ({ slug: place.slug })); }
 export function generateMetadata({ params }: Props): Metadata {
   const place = getAttractionBySlug(params.slug);
   return place ? { title: `${place.name} | Explore Western Odisha`, description: place.description, alternates: { canonical: `/nearby/${place.slug}` } } : { title: "Destination not found | Y Hotels Signature" };

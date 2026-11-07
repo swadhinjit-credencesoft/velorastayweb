@@ -1,15 +1,17 @@
 /** Representative Unsplash stock photos; these are not photographs of Y Hotels Signature. */
 export const STOCK_IMAGES = {
-  deluxe: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1600&q=85",
-  superDeluxe: "https://images.unsplash.com/photo-1713762523087-41019a875741?auto=format&fit=crop&w=1600&q=85",
-  executive: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1600&q=85",
-  lobby: "https://images.unsplash.com/photo-1759038086832-795644825e3a?auto=format&fit=crop&w=1600&q=85",
-  meal: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=85",
-  restaurant: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85",
-  diningTable: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85",
-  indianFood: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85",
-  freshFood: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85",
-  landscape: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=85",
+  heroRoom: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1920&q=85",
+  heroLobby: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1920&q=85",
+  deluxe: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1600&q=85",
+  superDeluxe: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=85",
+  executive: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=85",
+  lobby: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=85",
+  meal: "/images/dining-meal.jpg",
+  restaurant: "/images/restaurant-interior.jpg",
+  diningTable: "/images/restaurant-table.jpg",
+  indianFood: "/images/indian-food.jpg",
+  freshFood: "/images/fresh-food.jpg",
+  landscape: "/images/western-odisha-landscape.jpg",
 };
 
 export const STOCK_GALLERY = [

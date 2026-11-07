@@ -43,7 +43,7 @@ export default function Testimonials() {
         <div className={styles.header}>
           <span className={styles.eyebrow}>{REVIEWS_CONTENT.eyebrow}</span>
           <h2 className={`${styles.heading} font-oswald`}>Guest feedback</h2>
-          <p className={styles.description}>Guest reviews have not been provided for publication yet. Please check the hotel's public listing for current feedback.</p>
+          <p className={styles.description}>Guest reviews have not been provided for publication yet. Please check the hotel&apos;s public listing for current feedback.</p>
         </div>
       </div>
     </section>;

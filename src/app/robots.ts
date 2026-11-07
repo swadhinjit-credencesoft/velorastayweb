@@ -3,7 +3,7 @@ import { SITE_INFO } from "@/data/site";
 
 export const dynamic = "force-static";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return [{ __metadata_id__: ["robots.txt"] }];
 }
 

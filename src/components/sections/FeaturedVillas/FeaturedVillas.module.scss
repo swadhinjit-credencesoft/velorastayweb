@@ -2,33 +2,68 @@
 @use "../../../styles/mixins" as m;
 
 .section {
+  position: relative;
   @include m.section-padding;
+  background-color: #faf9f6;
+  overflow: hidden;
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .container {
   @include m.container;
+  position: relative;
+  z-index: 1;
 }
 
 // ─── Header ──────────────────────────────────────────────
 
 .header {
   text-align: center;
-  max-width: 640px;
+  max-width: 680px;
   margin-inline: auto;
-  margin-bottom: v.$space-xl;
+  margin-bottom: v.$space-2xl;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: v.$space-sm;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1px;
+  background: v.$color-accent;
+  opacity: 0.7;
 }
 
 .eyebrow {
   @include m.eyebrow;
-  display: block;
-  margin-bottom: v.$space-sm;
+  margin-bottom: 0;
+  color: v.$color-accent-dark;
+  font-weight: 600;
+  letter-spacing: 0.18em;
 }
 
 .heading {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.04em;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: v.$color-primary;
   margin-bottom: v.$space-md;
@@ -36,7 +71,7 @@
 
 .description {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: v.$color-text-muted;
 }
 
@@ -45,7 +80,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: v.$space-lg;
+  gap: v.$space-xl;
 
   @media (min-width: v.$bp-sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -58,7 +93,7 @@
 
 .cardItem {
   opacity: 1;
-  transform: translateY(0);
+  transition: opacity 0.6s ease;
 }
 
 // ─── Room Info ───────────────────────────────────────────
@@ -69,12 +104,33 @@
   gap: v.$space-sm;
 }
 
+.roomTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .roomName {
   font-family: v.$font-display;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  color: v.$color-primary;
+}
+
+.floorBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: v.$neutral-100;
+  border: 1px solid v.$neutral-200;
+  font-size: 11px;
+  font-weight: 500;
+  color: v.$neutral-600;
 }
 
 .roomTagline {
@@ -85,18 +141,23 @@
 
 .roomMeta {
   display: flex;
-  flex-wrap: wrap;
-  gap: v.$space-md;
+  flex-direction: column;
+  gap: 6px;
   padding-top: v.$space-sm;
-  border-top: 1px solid v.$color-border;
+  padding-bottom: v.$space-xs;
+  border-top: 1px solid v.$neutral-200;
 }
 
 .metaItem {
   display: flex;
   align-items: center;
-  gap: v.$space-xs;
+  gap: 8px;
   font-size: 13px;
   color: v.$color-text-muted;
+
+  svg {
+    color: v.$color-accent;
+  }
 }
 
 .roomFooter {
@@ -107,11 +168,95 @@
   gap: v.$space-sm;
   padding-top: v.$space-md;
   margin-top: auto;
+  border-top: 1px dashed v.$neutral-200;
 }
 
-// ─── CTA ─────────────────────────────────────────────────
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceSubtext {
+  font-size: 11px;
+  color: v.$neutral-400;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.waIconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: v.$radius-sm;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: #16a34a;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #25d366;
+    border-color: #25d366;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  }
+}
+
+// ─── Bottom CTA Banner ───────────────────────────────────
 
 .cta {
-  text-align: center;
-  margin-top: v.$space-xl;
+  margin-top: v.$space-2xl;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$space-lg;
+  padding: v.$space-xl;
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  border-radius: v.$radius-xl;
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+
+  @media (min-width: v.$bp-md) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.ctaText {
+  max-width: 540px;
+}
+
+.ctaTitle {
+  font-family: v.$font-display;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  color: #f7dfa5;
+}
+
+.ctaDesc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  flex-shrink: 0;
 }

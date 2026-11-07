@@ -2,22 +2,48 @@
 @use "../../../styles/mixins" as m;
 
 .section {
+  position: relative;
   @include m.section-padding;
-  background-color: v.$color-surface;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.defaultDark {
+  background: linear-gradient(135deg, #0e0e12 0%, #1a1a24 100%);
 }
 
 .withBg {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: v.$color-text-on-dark;
+  background-attachment: scroll;
+
+  @media (min-width: v.$bp-md) {
+    background-attachment: fixed;
+  }
 }
 
 .bgOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.7));
+  background: radial-gradient(
+    ellipse at center,
+    rgba(14, 14, 18, 0.78) 0%,
+    rgba(10, 10, 14, 0.94) 100%
+  );
   z-index: 0;
+}
+
+.glowBlob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.16) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .container {
@@ -27,52 +53,143 @@
 }
 
 .content {
-  max-width: 640px;
+  max-width: 780px;
   margin-inline: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: v.$space-md;
+  padding: v.$space-xl v.$space-lg;
+  border-radius: v.$radius-2xl;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5),
+              0 0 40px -10px rgba(201, 169, 110, 0.2);
+}
+
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sparkle {
+  color: v.$color-accent;
+  font-size: 11px;
 }
 
 .eyebrow {
   @include m.eyebrow;
-
-  .withBg & {
-    color: v.$color-accent;
-  }
+  color: #f7dfa5;
+  margin-bottom: 0;
+  letter-spacing: 0.18em;
+  font-weight: 600;
 }
 
 .heading {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
-
-  .withBg & {
-    color: #fff;
-  }
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .description {
   font-size: 16px;
   line-height: 1.7;
-
-  .withBg & {
-    color: v.$neutral-400;
-  }
-
-  .section:not(.withBg) & {
-    color: v.$color-text-muted;
-  }
+  color: rgba(245, 245, 248, 0.85);
+  max-width: 600px;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: v.$space-md;
+  gap: 14px;
   margin-top: v.$space-md;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #d8b77a 0%, #b89350 100%) !important;
+  color: #0f0f11 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 8px 24px -4px rgba(201, 169, 110, 0.5) !important;
+  border: none !important;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -4px rgba(201, 169, 110, 0.7) !important;
+  }
+}
+
+.outlineBtn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(8px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px);
+  }
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: v.$radius-sm;
+  background: rgba(37, 211, 102, 0.18);
+  border: 1px solid rgba(37, 211, 102, 0.5);
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: #25d366;
+    color: #ffffff;
+    border-color: #25d366;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.45);
+  }
+}
+
+.hotelContactMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: v.$space-md;
+  padding-top: v.$space-md;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  svg {
+    color: v.$color-accent;
+  }
+}
+
+.metaDivider {
+  opacity: 0.4;
 }

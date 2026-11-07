@@ -9,7 +9,7 @@ export default function LegalContent({ slug, path }: { slug: string; path: strin
   const page = getLegalPage(slug);
   if (!page) notFound();
   return <>
-    <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: page.title, url: `${SITE_INFO.url}${path}` }]} />
+    <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: page.title, url: `${SITE_INFO.url}${path}` }])} />
     <main className="mx-auto max-w-4xl px-6 py-32">
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: page.title, href: path }]} />
       <h1 className="mt-6 text-4xl font-bold">{page.title}</h1>

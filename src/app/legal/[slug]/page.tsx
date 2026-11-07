@@ -6,7 +6,7 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { LEGAL_PAGES, getLegalPage } from "@/data/legal";
 import { SITE_INFO } from "@/data/site";
 type Props = { params: { slug: string } };
-export function generateStaticParams() { return LEGAL_PAGES.map((page) => ({ slug: page.slug })); }
+export async function generateStaticParams() { return LEGAL_PAGES.map((page) => ({ slug: page.slug })); }
 export function generateMetadata({ params }: Props): Metadata {
   const page = getLegalPage(params.slug);
   if (!page) return { title: `Page Not Found | ${SITE_INFO.name}` };

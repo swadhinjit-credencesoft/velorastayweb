@@ -2,12 +2,28 @@
 @use "../../../styles/mixins" as m;
 
 .section {
+  position: relative;
   @include m.section-padding;
-  background-color: v.$neutral-50;
+  background-color: #f7f6f2;
+  overflow: hidden;
+}
+
+.ambientBlob {
+  position: absolute;
+  top: 30%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .container {
   @include m.container;
+  position: relative;
+  z-index: 1;
 }
 
 // ─── Layout ──────────────────────────────────────────────
@@ -17,10 +33,10 @@
   grid-template-columns: 1fr;
   gap: v.$space-xl;
   align-items: center;
-  margin-bottom: v.$space-xl;
+  margin-bottom: v.$space-2xl;
 
   @media (min-width: v.$bp-lg) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1.15fr;
     gap: v.$space-2xl;
   }
 }
@@ -37,32 +53,138 @@
   aspect-ratio: 4 / 5;
   border-radius: v.$radius-xl;
   overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(26, 26, 26, 0.15);
+  border: 1px solid rgba(201, 169, 110, 0.2);
 
   @media (min-width: v.$bp-lg) {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 4.8;
   }
 }
 
 .image {
   object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.floatingBadgeTop {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.badgeIcon {
+  color: v.$color-accent;
+}
+
+.floatingBadgeBottom {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: v.$radius-lg;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  z-index: 2;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.shieldIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(201, 169, 110, 0.15);
+  color: v.$color-accent-dark;
+  flex-shrink: 0;
+}
+
+.badgeBold {
+  font-size: 14px;
+  font-weight: 600;
+  color: v.$color-primary;
+}
+
+.badgeLight {
+  font-size: 12px;
+  color: v.$neutral-500;
+}
+
+.disclaimerText {
+  margin-top: 8px;
+  font-size: 12px;
+  color: v.$neutral-400;
 }
 
 // ─── Content Column ──────────────────────────────────────
 
 .contentCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: v.$space-sm;
+}
+
+.eyebrowLine {
+  width: 28px;
+  height: 1px;
+  background: v.$color-accent;
 }
 
 .eyebrow {
   @include m.eyebrow;
-  display: block;
-  margin-bottom: v.$space-sm;
+  color: v.$color-accent-dark;
+  letter-spacing: 0.18em;
+  margin-bottom: 0;
 }
 
 .heading {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.04em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: v.$color-primary;
   margin-bottom: v.$space-md;
@@ -70,46 +192,113 @@
 
 .description {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: v.$color-text-muted;
-  margin-bottom: v.$space-lg;
+  margin-bottom: v.$space-xl;
 }
 
-// ─── Stats ───────────────────────────────────────────────
+// ─── Stats Grid ──────────────────────────────────────────
 
 .statsGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: v.$space-sm;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: v.$space-xl;
 
-  @media (min-width: v.$bp-xs) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: v.$space-md;
+  @media (max-width: v.$bp-xs) {
+    grid-template-columns: 1fr;
   }
 }
 
 .statItem {
   display: flex;
-  flex-direction: column;
-  gap: v.$space-xs;
-  padding: v.$space-md;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 14px;
   border-radius: v.$radius-md;
-  background-color: v.$color-surface;
-  border: 1px solid v.$color-border;
-  color: v.$color-accent;
+  background: #ffffff;
+  border: 1px solid v.$neutral-200;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 169, 110, 0.5);
+    box-shadow: 0 10px 24px -6px rgba(201, 169, 110, 0.15);
+  }
+}
+
+.statIcon {
+  color: v.$color-accent-dark;
+  display: flex;
+  align-items: center;
 }
 
 .statValue {
+  display: block;
   font-family: v.$font-display;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   color: v.$color-primary;
-  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .statLabel {
-  font-size: 13px;
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: v.$color-text-muted;
+  margin-top: 2px;
+}
+
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.learnMoreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: v.$color-primary;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: v.$radius-sm;
+  background: #ffffff;
+  border: 1px solid v.$neutral-300;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: v.$neutral-900;
+    color: #ffffff;
+    border-color: v.$neutral-900;
+    transform: translateX(4px);
+  }
+}
+
+.callBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$neutral-700;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: v.$radius-sm;
+  background: rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: v.$color-accent;
+    color: #ffffff;
+  }
 }
 
 // ─── Features Grid ───────────────────────────────────────
@@ -117,28 +306,37 @@
 .featuresGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: v.$space-md;
-  margin-bottom: v.$space-xl;
+  gap: v.$space-lg;
+  padding-top: v.$space-xl;
+  border-top: 1px solid v.$neutral-200;
 
   @media (min-width: v.$bp-sm) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: v.$bp-lg) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .featureCard {
-  display: flex;
-  flex-direction: column;
-  padding: v.$space-lg;
+  padding: 24px;
+  background: #ffffff;
   border-radius: v.$radius-lg;
-  background-color: v.$color-surface;
-  border: 1px solid v.$color-border;
+  border: 1px solid v.$neutral-200;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
 
   &:hover {
-    box-shadow: v.$shadow-md;
+    transform: translateY(-6px);
+    border-color: rgba(201, 169, 110, 0.5);
+    box-shadow: 0 16px 36px -8px rgba(201, 169, 110, 0.18);
+
+    .featureIcon {
+      background: v.$color-accent;
+      color: #ffffff;
+      transform: scale(1.08);
+    }
   }
 }
 
@@ -149,74 +347,24 @@
   width: 48px;
   height: 48px;
   border-radius: v.$radius-md;
-  background-color: v.$color-accent-light;
+  background: rgba(201, 169, 110, 0.12);
   color: v.$color-accent-dark;
   margin-bottom: v.$space-md;
+  transition: all 0.3s ease;
 }
 
 .featureTitle {
-  font-size: 15px;
-  font-weight: 600;
+  font-family: v.$font-display;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   color: v.$color-primary;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .featureText {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
-  color: v.$color-text-muted;
-}
-
-// ─── Badges Grid ─────────────────────────────────────────
-
-.badgesGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: v.$space-md;
-
-  @media (min-width: v.$bp-sm) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: v.$bp-lg) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.badgeCard {
-  display: flex;
-  align-items: flex-start;
-  gap: v.$space-md;
-  padding: v.$space-lg;
-  border-radius: v.$radius-lg;
-  background-color: v.$color-surface;
-  border: 1px solid v.$color-border;
-
-  &:hover {
-    box-shadow: v.$shadow-md;
-  }
-}
-
-.badgeIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: v.$radius-md;
-  background-color: v.$color-accent-light;
-  color: v.$color-accent-dark;
-  flex-shrink: 0;
-}
-
-.badgeLabel {
-  font-size: 15px;
-  font-weight: 600;
-  color: v.$color-primary;
-  margin-bottom: 2px;
-}
-
-.badgeValue {
-  font-size: 13px;
   color: v.$color-text-muted;
 }

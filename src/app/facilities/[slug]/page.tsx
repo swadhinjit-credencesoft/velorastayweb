@@ -7,7 +7,7 @@ import { SITE_INFO } from "@/data/site";
 
 type Props = { params: { slug: string } };
 export const dynamicParams = false;
-export function generateStaticParams() { return FACILITIES.map((facility) => ({ slug: facility.slug })); }
+export async function generateStaticParams() { return FACILITIES.map((facility) => ({ slug: facility.slug })); }
 export function generateMetadata({ params }: Props): Metadata {
   const facility = getFacilityBySlug(params.slug);
   return facility ? { title: `${facility.name} | Y Hotels Signature`, description: facility.description, alternates: { canonical: `/facilities/${facility.slug}` } } : { title: `Not found | ${SITE_INFO.name}` };

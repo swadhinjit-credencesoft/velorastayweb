@@ -45,8 +45,20 @@ export const SITE_ASSETS = {
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
-  { id: "hero-rooms", image: STOCK_IMAGES.deluxe, title: "A signature stay in Jharsuguda", subtitle: "Choose from 34 Deluxe, Super Deluxe and Executive rooms at Mangalam Tower.", cta: { label: "Explore Rooms", href: "/rooms" } },
-  { id: "hero-comfort", image: STOCK_IMAGES.lobby, title: "Room for every kind of stay", subtitle: "Three room categories, with meal plan options available. Contact the hotel for availability.", cta: { label: "Call the Hotel", href: "tel:+919124674120" } },
+  {
+    id: "hero-rooms",
+    image: STOCK_IMAGES.heroRoom,
+    title: "A signature stay in Jharsuguda",
+    subtitle: "Choose from 34 Deluxe, Super Deluxe and Executive rooms at Mangalam Tower.",
+    cta: { label: "Explore Rooms", href: "/rooms" },
+  },
+  {
+    id: "hero-comfort",
+    image: STOCK_IMAGES.heroLobby,
+    title: "Room for every kind of stay",
+    subtitle: "Three room categories, with meal plan options available. Contact the hotel for availability.",
+    cta: { label: "Call the Hotel", href: "tel:+919124674120" },
+  },
 ];
 
 export const HERO_STATS: HeroStat[] = [
