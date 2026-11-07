@@ -1,5 +1,6 @@
 import type { ApiPropertyResponse, ApiCheckAvailabilityParams } from "@/types/api";
 import { API_BASE_URL, PROPERTY_ID } from "@/config";
+import fallbackProperty from "@/data/fallbackProperty.json";
 
 function getDefaultDates() {
   const today = new Date();
@@ -27,9 +28,14 @@ export async function checkAvailability(
       `${API_BASE_URL}/checkAvailability/${PROPERTY_ID}?${query}`,
       { next: { revalidate: 3600 } }
     );
-    if (!res.ok) return null;
-    return res.json();
+    if (!res.ok) {
+      return (fallbackProperty as unknown) as ApiPropertyResponse;
+    }
+    const data = await res.json();
+    return (data && data.roomList && data.roomList.length > 0)
+      ? data
+      : ((fallbackProperty as unknown) as ApiPropertyResponse);
   } catch {
-    return null;
+    return (fallbackProperty as unknown) as ApiPropertyResponse;
   }
 }

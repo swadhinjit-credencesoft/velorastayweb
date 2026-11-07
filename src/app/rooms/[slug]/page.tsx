@@ -57,7 +57,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
   const room = apiRoomToRoomType(apiRoom);
 
   const amenities = room.amenities
-    .map((id) => ROOM_AMENITIES.find((a) => a.id === id))
+    .map((id) => ROOM_AMENITIES.find((a) => a.id === id) || { id, label: id.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "), icon: "lucide:check-circle-2", category: "basic" as const })
     .filter(Boolean);
 
   return (

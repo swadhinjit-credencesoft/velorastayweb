@@ -1,4 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { ROOMS_CONTENT } from "@/data/rooms";
@@ -8,8 +10,6 @@ import { generateCanonicalUrl } from "@/utils/seo";
 import { checkAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "./rooms.module.scss";
-import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Rooms & Rates | Hotel Yogiraj NX, Shirdi",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default async function RoomsPage() {
   const property = await checkAvailability();
-  const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
+  const rooms = (property?.roomList ?? []).map((r, i) => apiRoomToRoomType(r, i));
 
   return (
     <>
@@ -49,8 +49,8 @@ export default async function RoomsPage() {
             <Link key={room.id} href={`/rooms/${room.slug}`} className={styles.card}>
               <div className={styles.imageWrap}>
                 <Image
-                  src={room.images[0]?.src}
-                  alt={room.images[0]?.alt}
+                  src={room.images[0]?.src || "/yogirajimg/AKS08604.avif"}
+                  alt={room.images[0]?.alt || room.name}
                   width={400}
                   height={250}
                   className={styles.image}
@@ -58,17 +58,21 @@ export default async function RoomsPage() {
                 {room.tag && <span className={styles.tag}>{room.tag}</span>}
               </div>
               <div className={styles.cardBody}>
-                <h2 className={styles.name}>{room.name}</h2>
-                <p className={styles.tagline}>{room.tagline}</p>
-                <div className={styles.meta}>
-                  <span>{room.bedConfig}</span>
-                  <span>Max {room.maxOccupancy} guests</span>
+                <div className={styles.metaRow}>
+                  <span>{room.size} {room.sizeUnit}</span>
+                  <span>•</span>
+                  <span>Up to {room.maxOccupancy} Guests</span>
                 </div>
+                <h3 className={styles.name}>{room.name}</h3>
+                <p className={styles.desc}>{room.tagline}</p>
                 <div className={styles.priceRow}>
-                  <span className={styles.price}>
-                    {room.currency}{room.price.toLocaleString("en-IN")}
-                  </span>
-                  <span className={styles.unit}>/ {room.priceUnit} (EP)</span>
+                  <div>
+                    <span className={styles.price}>
+                      {room.currency}{room.price.toLocaleString("en-IN")}
+                    </span>
+                    <span className={styles.perNight}> / {room.priceUnit}</span>
+                  </div>
+                  <span className={styles.cta}>View Details →</span>
                 </div>
               </div>
             </Link>

@@ -9,9 +9,9 @@ import styles from "./FeaturedRooms.module.scss";
 
 export default async function FeaturedRooms() {
   const property = await checkAvailability();
-  const popularRooms = (property?.roomList ?? [])
-    .map(apiRoomToRoomType)
-    .filter((room) => room.popular);
+  const allRooms = (property?.roomList ?? []).map((r, i) => apiRoomToRoomType(r, i));
+  const popularRooms = allRooms.filter((room) => room.popular);
+  const displayRooms = popularRooms.length > 0 ? popularRooms : allRooms.slice(0, 3);
 
   return (
     <section className={styles.section}>
@@ -23,7 +23,7 @@ export default async function FeaturedRooms() {
         </div>
 
         <div className={styles.grid}>
-          {popularRooms.map((room) => (
+          {displayRooms.map((room) => (
             <div key={room.id} className={styles.cardItem}>
               <RoomCard image={room.images[0]?.src} badge={room.tag}>
                 <div className={styles.roomInfo}>
