@@ -23,7 +23,7 @@ export default function FAQPage() {
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/yogirajimg/AKS08625.avif)" }}
+            style={{ backgroundImage: "url(/yogirajhero2.jpeg)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>

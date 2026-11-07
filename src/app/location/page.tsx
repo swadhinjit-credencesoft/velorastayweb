@@ -37,7 +37,7 @@ export default function LocationPage() {
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/yogirajimg/AKS08584.avif)" }}
+            style={{ backgroundImage: "url(/yogirajhero2.jpeg)" }}
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>

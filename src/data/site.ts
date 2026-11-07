@@ -49,26 +49,26 @@ export const SOCIAL_LINKS: SocialLinks = {
 
 export const SITE_ASSETS = {
   heroImages: [
-    "/yogirajimg/AKS08567.avif",
-    "/yogirajimg/AKS08604.avif",
-    "/yogirajimg/AKS08582.avif",
+    "/yogirajhero2.jpeg",
+    "/yogirajhero1.jpeg",
+    "/yogirajhero.jpeg",
   ] as const,
-  logo: "/yogirajlogo.png",
+  logo: "/yogirajlogo.webp",
   logoLight: "",
   favicon: "/favicon.ico",
-  aboutImage: "/yogirajimg/01.avif",
-  roomsPreviewImage: "/yogirajimg/AKS08605.avif",
-  diningImage: "/yogirajimg/AKS08641.avif",
-  eventsImage: "/yogirajimg/AKS08587.avif",
-  contactMapImage: "/yogirajimg/4.avif",
-  testimonialBackground: "/yogirajimg/AKS08625.avif",
-  notFoundImage: "/yogirajimg/AKS08545.avif",
+  aboutImage: "/yogirajhero1.jpeg",
+  roomsPreviewImage: "/yogirajhero2.jpeg",
+  diningImage: "/yogirajhero1.jpeg",
+  eventsImage: "/yogirajhero.jpeg",
+  contactMapImage: "/yogirajhero.jpeg",
+  testimonialBackground: "/yogirajhero2.jpeg",
+  notFoundImage: "/yogirajhero.jpeg",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
-    image: "/yogirajimg/01.avif",
+    image: "/yogirajhero2.jpeg",
     title: "Stay Minutes from Sai Baba Temple",
     subtitle:
       "Welcome to Hotel Yogiraj, Shirdi — a comfortable, budget-friendly hotel right near the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
@@ -76,7 +76,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-2",
-    image: "/yogirajimg/4.avif",
+    image: "/yogirajhero.jpeg",
     title: "Comfortable Rooms for Every Traveller",
     subtitle:
       "From double bed rooms to family-friendly four-bed rooms, choose the perfect stay for your Shirdi pilgrimage or family trip.",
@@ -84,7 +84,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   { 
     id: "hero-slide-3",
-    image: "/yogirajimg/3.avif",
+    image: "/yogirajhero1.jpeg",
     title: "In-House Restaurant & Parking",
     subtitle:
       "Enjoy delicious vegetarian meals at our in-house restaurant, plus convenient car parking, free Wi-Fi and a 24-hour front desk.",

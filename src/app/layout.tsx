@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description: SITE_INFO.description,
     images: [
       {
-        url: `${SITE_INFO.url}/yogirajimg/AKS08545.avif`,
+        url: `${SITE_INFO.url}/yogirajhero2.jpeg`,
         width: 1200,
         height: 630,
         alt: SITE_INFO.name,
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_INFO.name} | Hotel Near Sai Baba Temple, Shirdi`,
     description: SITE_INFO.description,
-    images: [`${SITE_INFO.url}/yogirajimg/AKS08545.avif`],
+    images: [`${SITE_INFO.url}/yogirajhero2.jpeg`],
   },
   robots: {
     index: true,

@@ -40,7 +40,7 @@ export default async function RoomsPage() {
         heading={ROOMS_CONTENT.heading}
         description={ROOMS_CONTENT.description}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms & Rates", href: "/rooms" }]}
-        bgImage="/yogirajimg/AKS08604.avif"
+        bgImage="/yogirajhero2.jpeg"
       />
 
       <section className={styles.gridSection}>

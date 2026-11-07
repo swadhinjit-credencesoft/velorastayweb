@@ -33,7 +33,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Weekend darshan visits",
       "Bus & rail travellers",
     ],
-    image: "/yogirajimg/AKS08545.avif",
+    image: "/yogirajhero2.jpeg",
   },
   {
     slug: "hotel-in-shirdi",
@@ -56,7 +56,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Card payment accepted",
       "24-hour front desk",
     ],
-    image: "/yogirajimg/AKS08582.avif",
+    image: "/yogirajhero1.jpeg",
   },
   {
     slug: "budget-hotel-in-shirdi",
@@ -79,7 +79,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Clean, comfortable rooms",
       "24-hour service",
     ],
-    image: "/yogirajimg/AKS08604.avif",
+    image: "/yogirajhero.jpeg",
   },
   {
     slug: "family-hotel-shirdi",
@@ -101,7 +101,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Weekend getaways",
       "Senior-friendly ground floor access",
     ],
-    image: "/yogirajimg/AKS08567.avif",
+    image: "/yogirajhero2.jpeg",
   },
   {
     slug: "hotel-near-shirdi-bus-station",
@@ -122,7 +122,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Free parking for self-drive guests",
       "24-hour front desk",
     ],
-    image: "/yogirajimg/AKS08625.avif",
+    image: "/yogirajhero1.jpeg",
   },
   {
     slug: "hotel-near-shirdi-airport",
@@ -143,7 +143,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "24-hour front desk for early departures",
       "Comfortable rooms for rest before or after your flight",
     ],
-    image: "/yogirajimg/AKS08584.avif",
+    image: "/yogirajhero.jpeg",
   },
   {
     slug: "hotel-for-sai-baba-pilgrims",
@@ -166,7 +166,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Helpful temple guidance",
       "Peaceful rest after darshan",
     ],
-    image: "/yogirajimg/AKS08605.avif",
+    image: "/yogirajhero2.jpeg",
   },
 ];
 

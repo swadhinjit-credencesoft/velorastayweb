@@ -25,7 +25,7 @@ export async function checkAvailability(
   try {
     const res = await fetch(
       `${API_BASE_URL}/checkAvailability/${PROPERTY_ID}?${query}`,
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
     );
     if (!res.ok) return null;
     return res.json();
