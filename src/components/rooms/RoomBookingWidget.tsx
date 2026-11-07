@@ -255,7 +255,7 @@ export default function RoomBookingWidget({ room }: RoomBookingWidgetProps) {
         </div>
         <div className={styles.noteItem}>
           <Icon icon="lucide:map-pin" width={14} height={14} />
-          <span><strong>2 Min Walk</strong> to Sai Baba Temple, Pimpalwadi Rd</span>
+          <span><strong>Only 300 Meters</strong> to Sai Baba Temple, Pimpalwadi Rd</span>
         </div>
         <div className={styles.noteItem}>
           <Icon icon="lucide:shield-check" width={14} height={14} />

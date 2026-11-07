@@ -4,7 +4,7 @@ export const REVIEWS_CONTENT: SectionContent = {
   eyebrow: "Guest Reviews",
   heading: "Guest Reviews",
   description:
-    "Discover what guests say about their stay at Hotel Yogiraj — close to Sai Baba Temple, with clean rooms, helpful staff and a comfortable, family-friendly experience.",
+    "Discover what guests say about their stay at Hotel Yogiraj — only 300 meters from Sai Baba Temple, with clean rooms, helpful staff and a comfortable, family-friendly experience.",
 };
 
 export const REVIEW_PLATFORMS: ReviewPlatform[] = [
@@ -50,7 +50,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     date: "2026-07-15",
     title: "Perfect location near Sai Baba Temple",
-    text: "Hotel Yogiraj is just a short walk from the Sai Baba Temple — the location could not be better. Rooms were clean, the staff was very helpful, and breakfast was good. Highly recommended for pilgrims.",
+    text: "Hotel Yogiraj is only 300 meters from the Sai Baba Temple — the location could not be better. Rooms were clean, the staff was very helpful, and breakfast was good. Highly recommended for pilgrims.",
     verified: true,
   },
   {
@@ -100,7 +100,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     date: "2026-05-14",
     title: "Excellent location and service",
-    text: "Only minutes from the Sai Baba Temple. The staff arranged our darshan passes and were always helpful. The complimentary breakfast was a nice touch.",
+    text: "Only 300 meters from the Sai Baba Temple. The staff arranged our darshan passes and were always helpful. The complimentary breakfast was a nice touch.",
     verified: true,
   },
   {

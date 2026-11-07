@@ -17,11 +17,11 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
     h1: "Hotel Near Sai Baba Temple, Shirdi",
     metaTitle: "Hotel Near Sai Baba Temple Shirdi | Hotel Yogiraj",
     metaDescription:
-      "Looking for a hotel near Sai Baba Temple in Shirdi? Hotel Yogiraj is just a short walk from the temple with comfortable AC & non-AC rooms, free Wi-Fi, parking and an in-house restaurant.",
-    eyebrow: "Just Minutes from Shri Sai Baba Temple",
+      "Looking for a hotel near Sai Baba Temple in Shirdi? Hotel Yogiraj is located only 300 meters from the temple with comfortable AC & non-AC rooms, free Wi-Fi, parking and an in-house restaurant.",
+    eyebrow: "Only 300 Meters from Shri Sai Baba Temple",
     intro: [
       "Looking for a comfortable hotel close to the Shri Sai Baba Temple in Shirdi?",
-      "Hotel Yogiraj is located on Pimpalwadi Road, within easy walking distance of the Sai Baba Temple, making it one of the most convenient places to stay for pilgrimage.",
+      "Hotel Yogiraj is located on Pimpalwadi Road, only 300 meters from the Sai Baba Temple, making it one of the most convenient places to stay for pilgrimage.",
       "Guests can enjoy clean AC & non-AC rooms, free & fast Wi-Fi, a complimentary breakfast buffet, car parking and a 24-hour front desk with temple guidance.",
     ],
     pointsLabel: "Ideal for",
@@ -49,7 +49,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
     ],
     pointsLabel: "Why stay with us",
     points: [
-      "Close to Sai Baba Temple",
+      "Close to Sai Baba Temple (Only 300m)",
       "Free & fast Wi-Fi",
       "In-house vegetarian restaurant",
       "Free car parking",
@@ -91,7 +91,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
     intro: [
       "Planning a family trip to Shirdi?",
       "Hotel Yogiraj offers family-friendly accommodation with spacious four-bed rooms, clean private bathrooms, free Wi-Fi, free parking and convenient hotel services.",
-      "With the Sai Baba Temple just a short walk away, our hotel is a great base for a family pilgrimage or holiday.",
+      "With the Sai Baba Temple only 300 meters away, our hotel is a great base for a family pilgrimage or holiday.",
     ],
     pointsLabel: "Suitable for",
     points: [
@@ -118,7 +118,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
     pointsLabel: "Good to know",
     points: [
       "Shirdi Bus Station — approx. 200 m",
-      "Sai Baba Temple — short walk",
+      "Sai Baba Temple — only 300 meters",
       "Free parking for self-drive guests",
       "24-hour front desk",
     ],
@@ -150,16 +150,16 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
     h1: "Hotel for Sai Baba Pilgrims",
     metaTitle: "Hotel for Sai Baba Pilgrims | Hotel Yogiraj Shirdi",
     metaDescription:
-      "A comfortable hotel for Sai Baba pilgrims in Shirdi. Hotel Yogiraj is close to the Sai Baba Temple with clean rooms, vegetarian dining, parking and helpful staff.",
+      "A comfortable hotel for Sai Baba pilgrims in Shirdi. Hotel Yogiraj is only 300 meters from the Sai Baba Temple with clean rooms, vegetarian dining, parking and helpful staff.",
     eyebrow: "Built for Pilgrims",
     intro: [
       "Travelling to Shirdi for Sai Baba darshan?",
-      "Hotel Yogiraj is designed with pilgrims in mind — located just a short walk from the Sai Baba Temple, with clean, comfortable rooms and a peaceful environment to rest after darshan.",
+      "Hotel Yogiraj is designed with pilgrims in mind — located only 300 meters from the Sai Baba Temple, with clean, comfortable rooms and a peaceful environment to rest after darshan.",
       "Our staff are happy to help with temple guidance, darshan passes and local information so you can make the most of your pilgrimage.",
     ],
     pointsLabel: "Pilgrim-friendly",
     points: [
-      "Short walk to Sai Baba Temple",
+      "Only 300 meters to Sai Baba Temple",
       "Complimentary breakfast buffet",
       "Vegetarian in-house restaurant",
       "Free parking & Wi-Fi",

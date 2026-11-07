@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
 
   return {
     title: `${room.name} | ${SITE_INFO.name}, Shirdi`,
-    description: `${room.name} at ${SITE_INFO.name}, Shirdi starting from ₹${room.price.toLocaleString("en-IN")}/night. ${room.description.slice(0, 140)}. Minutes from Sai Baba Temple.`,
+    description: `${room.name} at ${SITE_INFO.name}, Shirdi starting from ₹${room.price.toLocaleString("en-IN")}/night. ${room.description.slice(0, 140)}. Only 300 meters from Sai Baba Temple.`,
     alternates: { canonical: `/rooms/${room.slug}` },
     openGraph: {
       title: `${room.name} | ${SITE_INFO.name}`,
@@ -194,7 +194,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
               <div className={styles.policyItem}>
                 <h4 className={styles.policyTitle}>Location & Temple Proximity</h4>
                 <p className={styles.policyText}>
-                  Situated on Pimpalwadi Road, just a 2-minute walk from the sacred Sai Baba Temple, Hotel Yogiraj offers utmost convenience for morning Kakad Aarti and darshan.
+                  Situated on Pimpalwadi Road, only 300 meters from the sacred Sai Baba Temple, Hotel Yogiraj offers utmost convenience for morning Kakad Aarti and darshan.
                 </p>
               </div>
 

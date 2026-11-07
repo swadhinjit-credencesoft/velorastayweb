@@ -29,7 +29,7 @@ export default function HomePage() {
       <CTA
         eyebrow="Ready to Stay in Shirdi?"
         heading="Book Your Room at Hotel Yogiraj"
-        description="Comfortable rooms, free Wi-Fi and a 24-hour front desk near the Sai Baba Temple in Shirdi — a short walk from the temple and close to the bus stand."
+        description="Comfortable rooms, free Wi-Fi and a 24-hour front desk only 300 meters from the Sai Baba Temple in Shirdi."
         buttons={[
           { label: "Book Now", href: `${BOOKING_ENGINE_URL}?bookingEngine=true`, variant: "primary" },
           { label: "View Rooms", href: "/rooms", variant: "outline" },

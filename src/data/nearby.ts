@@ -4,7 +4,7 @@ export const NEARBY_CONTENT: SectionContent = {
   eyebrow: "Explore Shirdi",
   heading: "Places to Visit Near Hotel Yogiraj",
   description:
-    "Stay just minutes from the Sai Baba Temple at Hotel Yogiraj. Explore Shirdi's most important temples, sacred sites and attractions, most within easy walking distance.",
+    "Stay only 300 meters from the Sai Baba Temple at Hotel Yogiraj. Explore Shirdi's most important temples, sacred sites and attractions, most within easy walking distance.",
 };
 
 export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [

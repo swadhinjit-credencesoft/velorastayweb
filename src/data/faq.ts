@@ -134,7 +134,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         id: "faq-location-02",
         question: "Is the hotel near the Sai Baba Temple?",
         answer:
-          "Yes. The hotel is within easy walking distance of the Shri Sai Baba Temple — one of the best locations in Shirdi.",
+          "Yes. The hotel is located only 300 meters from the Shri Sai Baba Temple — one of the best and most convenient locations in Shirdi.",
       },
       {
         id: "faq-location-03",

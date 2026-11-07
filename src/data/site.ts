@@ -11,9 +11,9 @@ import { BOOKING_ENGINE_URL } from "@/config";
 
 export const SITE_INFO: SiteInfo = {
   name: "Hotel Yogiraj",
-  tagline: "A Comfortable Stay Close to Sai Baba Temple",
+  tagline: "Close to Sai Baba Temple — Only 300 Meters",
   description:
-    "Stay at Hotel Yogiraj, Shirdi — a budget-friendly hotel just moments from the Sai Baba Temple. Enjoy comfortable AC & non-AC rooms, free Wi-Fi, an in-house restaurant, car parking and 24-hour front-desk assistance for pilgrims, families and travellers.",
+    "Stay at Hotel Yogiraj, Shirdi — a budget-friendly hotel located only 300 meters from the Sai Baba Temple. Enjoy comfortable AC & non-AC rooms, free Wi-Fi, an in-house restaurant, car parking and 24-hour front-desk assistance for pilgrims, families and travellers.",
   url: "https://yogirajhotel.com",
   phone: "+91 95955 33535",
   whatsapp: "+91 95955 33535",
@@ -69,9 +69,9 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
     image: "/yogirajhero2.jpeg",
-    title: "Stay Minutes from Sai Baba Temple",
+    title: "Close to Sai Baba Temple — Only 300 Meters",
     subtitle:
-      "Welcome to Hotel Yogiraj, Shirdi — a comfortable, budget-friendly hotel right near the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
+      "Welcome to Hotel Yogiraj, Shirdi — a comfortable, budget-friendly hotel located only 300 meters from the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
     cta: { label: "Check Availability", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
   },
   {
@@ -132,7 +132,7 @@ export const TRUST_BADGES: TrustBadge[] = [
   {
     id: "badge-temple",
     icon: "lucide:map-pin",
-    label: "Close to Sai Baba Temple",
+    label: "Close to Sai Baba Temple Only 300 meter",
     value: "Walkable",
   },
   {
