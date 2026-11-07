@@ -56,7 +56,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Card payment accepted",
       "24-hour front desk",
     ],
-    image: "/yogirajhero1.jpeg",
+    image: "/reception.jpeg",
   },
   {
     slug: "budget-hotel-in-shirdi",
@@ -166,7 +166,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
       "Helpful temple guidance",
       "Peaceful rest after darshan",
     ],
-    image: "/yogirajhero2.jpeg",
+    image: "/reception.jpeg",
   },
 ];
 

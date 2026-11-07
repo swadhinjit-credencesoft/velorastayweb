@@ -81,7 +81,7 @@ export const FACILITIES: Facility[] = [
     description:
       "Our front desk operates 24 hours to assist guests with their stay, bookings, temple guidance and local information.",
     icon: "lucide:headphones",
-    image: "/yogirajhero2.jpeg",
+    image: "/reception.jpeg",
     features: ["Always available", "Check-in & check-out assistance", "Temple guidance"],
     category: "service",
   },

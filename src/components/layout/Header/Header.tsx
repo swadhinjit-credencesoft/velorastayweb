@@ -57,7 +57,7 @@ export default function Header() {
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={SITE_INFO.name}>
           <Image
-            src="/yogirajlogo.webp"
+            src="/yogirajlogo.png"
             alt={SITE_INFO.name}
             width={2000}
             height={3548}
@@ -95,6 +95,15 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
+          <a
+            href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+            className={styles.phoneBtn}
+            aria-label={`Call ${SITE_INFO.name} at ${SITE_INFO.phone}`}
+          >
+            <Icon icon="lucide:phone-call" width={16} height={16} className={styles.phoneIcon} />
+            <span className={styles.phoneNumber}>{SITE_INFO.phone}</span>
+          </a>
+
           <Link
             href={NAV_CTA.href}
             className={styles.ctaButton}

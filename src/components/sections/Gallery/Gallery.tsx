@@ -1,21 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Icon from "@/components/Icon";
 import Modal from "@/components/ui/Modal/Modal";
 import { GALLERY_IMAGES } from "@/data/gallery";
 import styles from "./Gallery.module.scss";
 
-const VILLA_IMAGES = GALLERY_IMAGES.map((img) => ({
-  id: img.id,
-  src: img.src,
-  alt: img.alt,
-  caption: img.caption || img.alt,
-}));
+const TABS = [
+  { id: "all", label: "All Photos" },
+  { id: "exterior", label: "Exterior" },
+  { id: "lobby", label: "Lobby & Reception" },
+  { id: "rooms", label: "Rooms & Suites" },
+  { id: "dining", label: "Dining" },
+];
 
 export default function Gallery() {
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; caption: string } | null>(null);
+
+  const filteredImages = useMemo(() => {
+    if (activeCategory === "all") {
+      return GALLERY_IMAGES;
+    }
+    return GALLERY_IMAGES.filter((img) => img.category === activeCategory);
+  }, [activeCategory]);
 
   return (
     <section className={styles.section}>
@@ -25,12 +35,33 @@ export default function Gallery() {
           <h2 className={`${styles.heading} font-oswald`}>A Glimpse Inside</h2>
         </div>
 
+        <div className={styles.tabs} role="tablist">
+          {TABS.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              role="tab"
+              aria-selected={activeCategory === tab.id}
+              className={`${styles.tab} ${activeCategory === tab.id ? styles.activeTab : ""}`}
+              onClick={() => setActiveCategory(tab.id)}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
         <div className={styles.grid}>
-          {VILLA_IMAGES.map((image) => (
+          {filteredImages.map((image) => (
             <button
               key={image.id}
+              type="button"
               className={styles.gridItem}
-              onClick={() => setLightboxImage(image.src)}
+              onClick={() =>
+                setLightboxImage({
+                  src: image.src,
+                  caption: image.caption || image.alt,
+                })
+              }
               aria-label={`View ${image.alt}`}
             >
               <Image
@@ -49,18 +80,40 @@ export default function Gallery() {
             </button>
           ))}
         </div>
+
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-600 hover:text-amber-700 hover:underline"
+          >
+            Explore Complete Hotel Gallery ({GALLERY_IMAGES.length} Photos) &rarr;
+          </Link>
+        </div>
       </div>
 
       <Modal isOpen={!!lightboxImage} onClose={() => setLightboxImage(null)}>
         {lightboxImage && (
           <div className={styles.lightboxImage}>
             <Image
-              src={lightboxImage}
-              alt=""
+              src={lightboxImage.src}
+              alt={lightboxImage.caption}
               width={900}
               height={600}
               className={styles.lightboxImg}
             />
+            {lightboxImage.caption && (
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#ffffff",
+                  marginTop: "12px",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                }}
+              >
+                {lightboxImage.caption}
+              </p>
+            )}
           </div>
         )}
       </Modal>

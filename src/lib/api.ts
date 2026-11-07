@@ -1,5 +1,6 @@
 import type { ApiPropertyResponse, ApiCheckAvailabilityParams } from "@/types/api";
 import { API_BASE_URL, PROPERTY_ID } from "@/config";
+import fallbackProperty from "@/data/fallbackProperty.json";
 
 function getDefaultDates() {
   const today = new Date();
@@ -13,23 +14,29 @@ function getDefaultDates() {
 
 export async function checkAvailability(
   params?: Partial<ApiCheckAvailabilityParams>
-): Promise<ApiPropertyResponse | null> {
+): Promise<ApiPropertyResponse> {
   const defaults = getDefaultDates();
   const query = new URLSearchParams({
     fromDate: params?.fromDate ?? defaults.fromDate,
     toDate: params?.toDate ?? defaults.toDate,
     noOfRooms: String(params?.noOfRooms ?? 1),
-    noOfPersons: String(params?.noOfPersons ?? 1),
+    noOfPersons: String(params?.noOfPersons ?? 2),
   });
 
   try {
     const res = await fetch(
       `${API_BASE_URL}/checkAvailability/${PROPERTY_ID}?${query}`,
-      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) }
     );
-    if (!res.ok) return null;
-    return res.json();
+    if (!res.ok) {
+      return fallbackProperty as unknown as ApiPropertyResponse;
+    }
+    const data = await res.json();
+    if (data && Array.isArray(data.roomList) && data.roomList.length > 0) {
+      return data;
+    }
+    return fallbackProperty as unknown as ApiPropertyResponse;
   } catch {
-    return null;
+    return fallbackProperty as unknown as ApiPropertyResponse;
   }
 }

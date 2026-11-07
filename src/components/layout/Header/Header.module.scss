@@ -100,6 +100,70 @@
   }
 }
 
+
+.phoneBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: v.$color-text-main;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: v.$radius-full;
+  border: 1px solid v.$color-border;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  transition: all v.$duration-fast v.$ease-standard;
+  white-space: nowrap;
+
+  @include m.focus-ring;
+
+  &:hover {
+    border-color: v.$color-accent;
+    color: v.$color-accent;
+    background-color: rgba(v.$color-accent, 0.08);
+  }
+
+  .home & {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+  }
+
+  @media (max-width: #{v.$bp-sm - 1px}) {
+    padding: 8px;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+}
+
+.phoneIcon {
+  flex-shrink: 0;
+  color: v.$color-accent;
+
+  .home & {
+    color: v.$color-accent-light;
+  }
+}
+
+.phoneNumber {
+  display: inline;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+
+  @media (max-width: #{v.$bp-sm - 1px}) {
+    display: none;
+  }
+}
+
 .actions {
   display: flex;
   align-items: center;

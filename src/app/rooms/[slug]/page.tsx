@@ -18,46 +18,47 @@ interface RoomPageProps {
 
 export async function generateStaticParams() {
   const property = await checkAvailability();
-  if (!property) return [];
-  return property.roomList.map((room) => {
-    const mapped = apiRoomToRoomType(room);
-    return { slug: mapped.slug };
-  });
+  const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
+  return rooms.map((room) => ({ slug: room.slug }));
 }
 
 export async function generateMetadata({ params }: RoomPageProps): Promise<Metadata> {
   const property = await checkAvailability();
-  const apiRoom = property?.roomList?.find((r) => {
-    const mapped = apiRoomToRoomType(r);
-    return mapped.slug === params.slug;
-  });
-  if (!apiRoom) return { title: "Room Not Found" };
-  const room = apiRoomToRoomType(apiRoom);
+  const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
+  const room = rooms.find((r) => r.slug === params.slug);
+  if (!room) return { title: "Room Not Found" };
+
   return {
     title: `${room.name} | Book at ${SITE_INFO.name}`,
-    description: `${room.name} at ${SITE_INFO.name} starting from ₹${room.price}/night (Room Only). ${room.description.substring(0, 150)}. Book by phone or WhatsApp for the best rates.`,
+    description: `${room.name} at ${SITE_INFO.name} starting from ₹${room.price.toLocaleString("en-IN")}/night (Room Only). ${room.description.substring(0, 150)}. Book by phone or WhatsApp for best rates.`,
     alternates: { canonical: `/rooms/${room.slug}` },
     openGraph: {
       title: `${room.name} | ${SITE_INFO.name}`,
       description: room.description.substring(0, 200),
       url: generateCanonicalUrl(`/rooms/${room.slug}`),
-      images: [{ url: room.images[0]?.src, width: 800, height: 600, alt: room.name }],
+      images: [{ url: room.images[0]?.src || "/yogirajhero2.jpeg", width: 800, height: 600, alt: room.name }],
     },
   };
 }
 
 export default async function RoomDetailPage({ params }: RoomPageProps) {
   const property = await checkAvailability();
-  const apiRoom = property?.roomList?.find((r) => {
-    const mapped = apiRoomToRoomType(r);
-    return mapped.slug === params.slug;
-  });
-  if (!apiRoom) notFound();
-
-  const room = apiRoomToRoomType(apiRoom);
+  const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
+  const room = rooms.find((r) => r.slug === params.slug);
+  if (!room) notFound();
 
   const amenities = room.amenities
-    .map((id) => ROOM_AMENITIES.find((a) => a.id === id))
+    .map((id) => {
+      const found = ROOM_AMENITIES.find((a) => a.id === id);
+      if (found) return found;
+      const formatted = id.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      return {
+        id,
+        label: formatted,
+        icon: "lucide:check-circle",
+        category: "basic" as const,
+      };
+    })
     .filter(Boolean);
 
   return (
@@ -137,7 +138,9 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                 <>
                   <h3 className={styles.sectionTitleSm}>Highlights</h3>
                   <ul className={styles.highlightsList}>
-                    {room.highlights.map((h, i) => <li key={i}>{h}</li>)}
+                    {room.highlights.map((h, i) => (
+                      <li key={i}>{h}</li>
+                    ))}
                   </ul>
                 </>
               )}
@@ -146,7 +149,9 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                 <>
                   <h2 className={styles.sectionTitle}>Rates & Details</h2>
                   <ul className={styles.highlightsList}>
-                    {room.features.map((f, i) => <li key={i}>{f}</li>)}
+                    {room.features.map((f, i) => (
+                      <li key={i}>{f}</li>
+                    ))}
                   </ul>
                 </>
               )}
@@ -154,8 +159,8 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
               <h2 className={styles.sectionTitle}>Amenities</h2>
               <div className={styles.amenitiesGrid}>
                 {amenities.map((amenity) => (
-                  <div key={amenity!.id} className={styles.amenityItem}>
-                    <span>{amenity!.label}</span>
+                  <div key={amenity.id} className={styles.amenityItem}>
+                    <span>{amenity.label}</span>
                   </div>
                 ))}
               </div>
@@ -188,7 +193,9 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                 <>
                   <h2 className={styles.sectionTitle}>Nearby</h2>
                   <ul className={styles.nearbyList}>
-                    {room.nearby.map((item, i) => <li key={i}>{item}</li>)}
+                    {room.nearby.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
                   </ul>
                 </>
               )}
@@ -202,8 +209,20 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   </span>
                 </div>
                 <p className={styles.priceUnit}>per {room.priceUnit} — Room Only</p>
-                <a href={`${BOOKING_ENGINE_URL}?bookingEngine=true`} target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>Book Now</a>
-                <a href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`} className={styles.callBtn}>Call to Book</a>
+                <a
+                  href={`${BOOKING_ENGINE_URL}?bookingEngine=true`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.bookBtn}
+                >
+                  Book Now
+                </a>
+                <a
+                  href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+                  className={styles.callBtn}
+                >
+                  Call to Book
+                </a>
                 <div className={styles.bookingDetails}>
                   <div className={styles.bookingDetailRow}>
                     <span>Check-in</span>

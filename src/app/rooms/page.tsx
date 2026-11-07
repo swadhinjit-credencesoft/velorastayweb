@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero/PageHero";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { ROOMS_CONTENT } from "@/data/rooms";
@@ -39,7 +39,10 @@ export default async function RoomsPage() {
         eyebrow={ROOMS_CONTENT.eyebrow}
         heading={ROOMS_CONTENT.heading}
         description={ROOMS_CONTENT.description}
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rooms & Rates", href: "/rooms" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Rooms & Rates", href: "/rooms" },
+        ]}
         bgImage="/yogirajhero2.jpeg"
       />
 
@@ -49,8 +52,8 @@ export default async function RoomsPage() {
             <Link key={room.id} href={`/rooms/${room.slug}`} className={styles.card}>
               <div className={styles.imageWrap}>
                 <Image
-                  src={room.images[0]?.src}
-                  alt={room.images[0]?.alt}
+                  src={room.images[0]?.src || "/yogirajhero2.jpeg"}
+                  alt={room.images[0]?.alt || room.name}
                   width={400}
                   height={250}
                   className={styles.image}
