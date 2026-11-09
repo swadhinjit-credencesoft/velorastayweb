@@ -4,7 +4,7 @@ import type {
   FooterGroup,
   SocialLink,
 } from "@/types";
-import { BOOKING_ENGINE_URL } from "@/config";
+import { NX_BOOKING_URL } from "@/config";
 
 export const NX_NAV_GROUPS: NavGroup[] = [
   {
@@ -166,7 +166,7 @@ export const NX_NAV_GROUPS: NavGroup[] = [
 export const NAV_CTA: NavLink = {
   id: "nav-cta-book",
   label: "Book Now",
-  href: `${BOOKING_ENGINE_URL}?bookingEngine=true`,
+  href: NX_BOOKING_URL,
   icon: "lucide:calendar-check",
 };
 
@@ -210,7 +210,7 @@ export const FOOTER_GROUPS: FooterGroup[] = [
     links: [
       { id: "f-contact", label: "Contact Us", href: "/yogiraj-nx/contact" },
       { id: "f-switch-main", label: "Switch to Hotel Yogiraj (Main)", href: "/" },
-      { id: "f-booking", label: "Online Booking", href: `${BOOKING_ENGINE_URL}?bookingEngine=true` },
+      { id: "f-booking", label: "Online Booking", href: NX_BOOKING_URL },
       { id: "f-sitemap", label: "Sitemap", href: "/sitemap.xml" },
     ],
   },

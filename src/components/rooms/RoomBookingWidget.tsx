@@ -9,9 +9,19 @@ import styles from "./RoomBookingWidget.module.scss";
 
 interface RoomBookingWidgetProps {
   room: RoomType;
+  bookingEngineBaseUrl?: string;
+  hotelName?: string;
+  whatsappPhone?: string;
+  deskPhone?: string;
 }
 
-export default function RoomBookingWidget({ room }: RoomBookingWidgetProps) {
+export default function RoomBookingWidget({
+  room,
+  bookingEngineBaseUrl = BOOKING_ENGINE_URL,
+  hotelName = "Hotel Yogiraj",
+  whatsappPhone = "919595533535",
+  deskPhone = SITE_INFO.phone,
+}: RoomBookingWidgetProps) {
   const [checkIn, setCheckIn] = useState<string>("");
   const [checkOut, setCheckOut] = useState<string>("");
   const [adults, setAdults] = useState<number>(room.maxOccupancy);
@@ -94,7 +104,7 @@ export default function RoomBookingWidget({ room }: RoomBookingWidgetProps) {
   }, [livePrice, nights, roomsCount]);
 
   const bookingEngineUrl = useMemo(() => {
-    if (!checkIn || !checkOut) return `${BOOKING_ENGINE_URL}?bookingEngine=true`;
+    if (!checkIn || !checkOut) return `${bookingEngineBaseUrl}?bookingEngine=true`;
     const ci = new Date(checkIn + "T00:00:00");
     const co = new Date(checkOut + "T00:00:00");
 
@@ -114,13 +124,13 @@ export default function RoomBookingWidget({ room }: RoomBookingWidgetProps) {
       rooms: String(roomsCount),
     });
 
-    return `${BOOKING_ENGINE_URL}?${params.toString()}`;
-  }, [checkIn, checkOut, nights, adults, roomsCount]);
+    return `${bookingEngineBaseUrl}?${params.toString()}`;
+  }, [bookingEngineBaseUrl, checkIn, checkOut, nights, adults, roomsCount]);
 
   const whatsappMessage = useMemo(() => {
-    const text = `Hello Hotel Yogiraj, I would like to book the "${room.name}" from ${checkIn} to ${checkOut} (${nights} night${nights > 1 ? "s" : ""}) for ${adults} guests. Please confirm availability and rates.`;
-    return `https://wa.me/919595533535?text=${encodeURIComponent(text)}`;
-  }, [room.name, checkIn, checkOut, nights, adults]);
+    const text = `Hello ${hotelName}, I would like to book the "${room.name}" from ${checkIn} to ${checkOut} (${nights} night${nights > 1 ? "s" : ""}) for ${adults} guests. Please confirm availability and rates.`;
+    return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`;
+  }, [hotelName, whatsappPhone, room.name, checkIn, checkOut, nights, adults]);
 
   return (
     <div className={styles.widget}>
@@ -240,11 +250,11 @@ export default function RoomBookingWidget({ room }: RoomBookingWidgetProps) {
         </a>
 
         <a
-          href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+          href={`tel:${deskPhone.replace(/\s+/g, "")}`}
           className={styles.callBtn}
         >
           <Icon icon="lucide:phone-call" width={16} height={16} />
-          Call Desk: {SITE_INFO.phone}
+          Call Desk: {deskPhone}
         </a>
       </div>
 

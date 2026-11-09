@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import Icon from "@/components/Icon";
 import RoomBookingWidget from "@/components/rooms/RoomBookingWidget";
+import { NX_BOOKING_ENGINE_URL } from "@/config";
 import { ROOM_AMENITIES } from "@/data/nx/rooms";
 import { SITE_INFO as NX_SITE } from "@/data/nx/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
@@ -249,7 +250,13 @@ export default async function NxRoomDetailPage({ params }: RoomPageProps) {
 
               <aside className={styles.sidebarCol}>
                 <div className={styles.stickyWidget}>
-                  <RoomBookingWidget room={room} />
+                  <RoomBookingWidget
+                    room={room}
+                    bookingEngineBaseUrl={NX_BOOKING_ENGINE_URL}
+                    hotelName="Hotel Yogiraj NX"
+                    whatsappPhone="919903033535"
+                    deskPhone="+91 99030 33535"
+                  />
                 </div>
               </aside>
             </div>

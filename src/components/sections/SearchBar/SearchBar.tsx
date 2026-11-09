@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo } from "react";
+import { usePathname } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   setCheckIn,
@@ -9,16 +10,19 @@ import {
   setChildren,
 } from "@/store/slices/bookingSlice";
 import Icon from "@/components/Icon";
-import { BOOKING_ENGINE_URL } from "@/config";
+import { BOOKING_ENGINE_URL, NX_BOOKING_ENGINE_URL } from "@/config";
 import styles from "./SearchBar.module.scss";
-
-const BOOKING_ENGINE_BASE = BOOKING_ENGINE_URL;
 
 interface SearchBarProps {
   variant?: "hero" | "compact";
+  bookingEngineUrl?: string;
 }
 
-export default function SearchBar({ variant = "hero" }: SearchBarProps) {
+export default function SearchBar({ variant = "hero", bookingEngineUrl }: SearchBarProps) {
+  const pathname = usePathname();
+  const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
+  const baseEngine = bookingEngineUrl ?? (isNx ? NX_BOOKING_ENGINE_URL : BOOKING_ENGINE_URL);
+
   const dispatch = useAppDispatch();
   const { checkIn, checkOut, adults, children } =
     useAppSelector((state) => state.booking);
@@ -42,6 +46,7 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
     const totalGuests = numAdults + numChildren;
 
     const params = new URLSearchParams({
+      bookingEngine: "true",
       checkinDay: String(ci.getDate()),
       checkinMonth: String(ci.getMonth() + 1),
       checkinYear: String(ci.getFullYear()),
@@ -58,8 +63,8 @@ export default function SearchBar({ variant = "hero" }: SearchBarProps) {
       rooms: "1",
     });
 
-    return `${BOOKING_ENGINE_BASE}?${params.toString()}`;
-  }, [checkIn, checkOut, adults, children]);
+    return `${baseEngine}?${params.toString()}`;
+  }, [baseEngine, checkIn, checkOut, adults, children]);
 
   const guestOptions = Array.from({ length: 6 }, (_, i) => ({
     value: i + 1,

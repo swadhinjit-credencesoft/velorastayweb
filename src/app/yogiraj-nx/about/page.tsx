@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { SITE_INFO as NX_SITE } from "@/data/nx/site";
 import { ABOUT_STORY, ABOUT_MISSION, ABOUT_VISION } from "@/data/nx/about";
-import { BOOKING_ENGINE_URL } from "@/config";
+import { NX_BOOKING_URL } from "@/config";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/utils/schema";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function NxAboutPage() {
-  const bookingUrl = `${BOOKING_ENGINE_URL}?bookingEngine=true`;
+  const bookingUrl = NX_BOOKING_URL;
 
   return (
     <>

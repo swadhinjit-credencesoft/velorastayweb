@@ -13,7 +13,7 @@ import { generateHotelSchema, generateWebsiteSchema } from "@/utils/schema";
 import { SITE_INFO as NX_SITE, HERO_SLIDES as NX_SLIDES } from "@/data/nx/site";
 import { GALLERY_IMAGES as NX_GALLERY } from "@/data/nx/gallery";
 import { REVIEWS as NX_REVIEWS_LIST } from "@/data/nx/reviews";
-import { BOOKING_ENGINE_URL } from "@/config";
+import { NX_BOOKING_URL } from "@/config";
 
 export const metadata: Metadata = {
   title: "Hotel Yogiraj NX | Hotel Near Sai Baba Temple, Shirdi",
@@ -103,7 +103,7 @@ export default function HotelYogirajNxHomePage() {
         buttons={[
           {
             label: "Book Now",
-            href: `${BOOKING_ENGINE_URL}?bookingEngine=true`,
+            href: NX_BOOKING_URL,
             variant: "primary",
           },
           {

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
-import { NX_NAV_GROUPS } from "@/data/nx/navigation";
+import { NX_NAV_GROUPS, NAV_CTA as NX_NAV_CTA } from "@/data/nx/navigation";
 import { SITE_INFO } from "@/data/site";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setMobileNavOpen } from "@/store/slices/uiSlice";
@@ -16,6 +16,7 @@ export default function MobileNav() {
   const pathname = usePathname();
   const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
   const navGroups = isNx ? NX_NAV_GROUPS : NAV_GROUPS;
+  const navCta = isNx ? NX_NAV_CTA : NAV_CTA;
   const currentPhone = isNx ? "+91 99030 33535" : SITE_INFO.phone;
   const currentPhoneRaw = isNx ? "+919903033535" : SITE_INFO.phone.replace(/\s+/g, "");
   const currentName = isNx ? "Hotel Yogiraj NX" : SITE_INFO.name;
@@ -173,12 +174,12 @@ export default function MobileNav() {
             </a>
           </div>
           <Link
-            href={NAV_CTA.href}
+            href={navCta.href ?? "#"}
             className={styles.ctaButton}
             onClick={close}
           >
-            <Icon icon={NAV_CTA.icon} width={16} height={16} />
-            {NAV_CTA.label}
+            <Icon icon={navCta.icon ?? "lucide:calendar-check"} width={16} height={16} />
+            {navCta.label}
           </Link>
         </div>
       </nav>

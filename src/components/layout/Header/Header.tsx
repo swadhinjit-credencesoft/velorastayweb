@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
-import { NX_NAV_GROUPS } from "@/data/nx/navigation";
+import { NX_NAV_GROUPS, NAV_CTA as NX_NAV_CTA } from "@/data/nx/navigation";
 import { SITE_INFO } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -22,6 +22,7 @@ export default function Header() {
   const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
   const isHome = pathname === "/" || pathname === "/yogiraj-nx" || pathname === "/hotel-yogiraj-nx";
   const navGroups = isNx ? NX_NAV_GROUPS : NAV_GROUPS;
+  const navCta = isNx ? NX_NAV_CTA : NAV_CTA;
   const currentPhone = isNx ? "+91 99030 33535" : SITE_INFO.phone;
   const currentPhoneRaw = isNx ? "+919903033535" : SITE_INFO.phone.replace(/\s+/g, "");
   const currentName = isNx ? "Hotel Yogiraj NX" : SITE_INFO.name;
@@ -136,11 +137,11 @@ export default function Header() {
           </a>
 
           <Link
-            href={NAV_CTA.href}
+            href={navCta.href ?? "#"}
             className={styles.ctaButton}
           >
-            <Icon icon={NAV_CTA.icon} width={16} height={16} className={styles.ctaIcon} />
-            <span className={styles.ctaLabel}>{NAV_CTA.label}</span>
+            <Icon icon={navCta.icon ?? "lucide:calendar-check"} width={16} height={16} className={styles.ctaIcon} />
+            <span className={styles.ctaLabel}>{navCta.label}</span>
           </Link>
 
           <button
