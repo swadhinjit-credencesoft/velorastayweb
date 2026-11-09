@@ -24,7 +24,7 @@ export default function AboutPage() {
       <JsonLd schema={generateOrganizationSchema()} />
       <JsonLd schema={generateBreadcrumbSchema([{ name: "About", url: `${SITE_INFO.url}/about` }])} />
 
-      <section className="relative py-20 pt-32">
+      <section className="relative -mt-[72px] md:-mt-[120px] pt-28 md:pt-36 pb-16 md:pb-20">
         <div className="absolute inset-0 z-0">
           <Image src="/yogirajhero1.png" alt="About Hotel Yogiraj, Shirdi" fill className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />

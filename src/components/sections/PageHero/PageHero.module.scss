@@ -6,6 +6,7 @@
   display: flex;
   align-items: flex-end;
   min-height: 280px;
+  margin-top: -72px;
   padding: calc(72px + 1.5rem) v.$space-md v.$space-lg;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   background-size: cover;
@@ -14,12 +15,13 @@
 
   @media (min-width: v.$bp-md) {
     min-height: 340px;
-    padding: calc(v.$nav-height + v.$space-lg) v.$space-lg v.$space-xl;
+    margin-top: v.$nav-height * -1;
+    padding: calc(#{v.$nav-height} + 2rem) v.$space-lg v.$space-xl;
   }
 
   @media (min-width: v.$bp-lg) {
-    min-height: 400px;
-    padding: calc(v.$nav-height + v.$space-2xl) v.$space-lg v.$space-2xl;
+    min-height: 380px;
+    padding: calc(#{v.$nav-height} + 2.5rem) v.$space-lg v.$space-2xl;
   }
 }
 

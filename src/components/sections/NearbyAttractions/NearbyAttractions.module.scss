@@ -55,7 +55,7 @@
 }
 
 .card {
-  flex: 0 0 260px;
+  flex: 0 0 min(260px, 75vw);
   scroll-snap-align: start;
   border-radius: v.$radius-lg;
   background-color: v.$color-surface;

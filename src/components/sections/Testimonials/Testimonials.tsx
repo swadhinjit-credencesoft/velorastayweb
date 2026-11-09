@@ -39,7 +39,7 @@ export default function Testimonials({
       if (card) {
         const scrollTarget =
           card.offsetLeft - container.offsetLeft - (container.clientWidth - card.clientWidth) / 2;
-        container.scrollTo({ left: scrollTarget, behavior: "smooth" });
+        container.scrollTo({ left: Math.max(0, scrollTarget), behavior: "smooth" });
       }
     }
   }, [currentIndex]);

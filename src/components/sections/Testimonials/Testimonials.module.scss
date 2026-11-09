@@ -46,12 +46,16 @@
 
 .carousel {
   display: flex;
-  gap: v.$space-lg;
+  gap: v.$space-md;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding-bottom: v.$space-md;
   @include m.custom-scrollbar;
+
+  @media (min-width: v.$bp-sm) {
+    gap: v.$space-lg;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -59,12 +63,12 @@
 }
 
 .card {
-  flex: 0 0 360px;
+  flex: 0 0 min(360px, calc(100vw - 3rem));
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   gap: v.$space-md;
-  padding: v.$space-lg;
+  padding: v.$space-md;
   border-radius: v.$radius-lg;
   background-color: v.$color-surface;
   border: 1px solid v.$color-border;
@@ -73,6 +77,11 @@
 
   &:hover {
     box-shadow: v.$shadow-card-hover;
+  }
+
+  @media (min-width: v.$bp-sm) {
+    flex: 0 0 360px;
+    padding: v.$space-lg;
   }
 
   @media (min-width: v.$bp-lg) {

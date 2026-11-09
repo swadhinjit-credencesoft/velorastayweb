@@ -9,13 +9,14 @@
   flex-direction: column;
   justify-content: center;
   margin-top: -72px;
-  padding-top: calc(72px + 1.25rem);
-  padding-bottom: 4.5rem;
+  padding-top: 72px;
+  padding-bottom: 3.5rem;
+  box-sizing: border-box;
 
   @media (min-width: v.$bp-md) {
     margin-top: v.$nav-height * -1;
-    padding-top: calc(#{v.$nav-height} + 1.5rem);
-    padding-bottom: calc(#{v.$space-xl} + 1.5rem);
+    padding-top: v.$nav-height;
+    padding-bottom: 4rem;
   }
 }
 
@@ -50,7 +51,7 @@
     180deg,
     rgba(0, 0, 0, 0.55) 0%,
     rgba(0, 0, 0, 0.35) 40%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, 0.72) 100%
   );
 }
 
@@ -96,23 +97,27 @@
   letter-spacing: 0.2em;
   color: v.$color-accent;
   font-weight: 500;
-  margin-bottom: v.$space-sm;
+  margin-bottom: v.$space-xs;
 
   @media (min-width: v.$bp-sm) {
-    margin-bottom: v.$space-md;
+    margin-bottom: v.$space-sm;
   }
 }
 
 .heading {
-  font-size: clamp(1.75rem, 5.5vw, 3.25rem);
+  font-size: clamp(1.65rem, 5.2vw, 3.25rem);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: v.$space-md;
+  margin-bottom: v.$space-sm;
   overflow-wrap: break-word;
   word-break: normal;
+
+  @media (min-width: v.$bp-sm) {
+    margin-bottom: v.$space-md;
+  }
 }
 
 .headingLine {
@@ -123,8 +128,8 @@
 
 .subtitle {
   font-size: clamp(14px, 1.8vw, 17px);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
   max-width: 580px;
   margin-bottom: v.$space-md;
 
@@ -142,11 +147,18 @@
   @media (min-width: v.$bp-sm) {
     gap: v.$space-md;
   }
+
+  @media (max-width: #{v.$bp-xs - 1px}) {
+    & > * {
+      padding: 12px 18px !important;
+      font-size: 12px !important;
+    }
+  }
 }
 
 .ghostBtn {
   color: #fff !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.15) !important;
@@ -159,6 +171,10 @@
 .searchSection {
   width: 100%;
   max-width: 960px;
+
+  @media (max-width: v.$bp-lg) {
+    display: none !important;
+  }
 }
 
 // ─── Stats Row ───────────────────────────────────────────

@@ -4,7 +4,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: v.$nav-height + 16px;
+  scroll-padding-top: calc(72px + 16px);
+  overflow-x: hidden;
+  max-width: 100%;
+
+  @media (min-width: v.$bp-md) {
+    scroll-padding-top: calc(#{v.$nav-height} + 16px);
+  }
 }
 
 * {
@@ -28,6 +34,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body::selection,
@@ -97,7 +104,11 @@ img {
 // ─── Main Content (fixed header compensation) ─────────────
 
 .main-content {
-  padding-top: v.$nav-height;
+  padding-top: 72px;
+
+  @media (min-width: v.$bp-md) {
+    padding-top: v.$nav-height;
+  }
 }
 
 // ─── Page Transitions ─────────────────────────────────────

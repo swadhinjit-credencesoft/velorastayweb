@@ -18,7 +18,7 @@ export default function ReviewsPage() {
       <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Reviews", url: "/reviews" }])} />
       <JsonLd schema={generateHotelSchema()} />
 
-      <section className="relative py-20 pt-32">
+      <section className="relative -mt-[72px] md:-mt-[120px] pt-28 md:pt-36 pb-16 md:pb-20">
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
