@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import ReduxProvider from "@/providers/ReduxProvider";
+import PropertySwitcherBar from "@/components/layout/PropertySwitcherBar/PropertySwitcherBar";
 import Header from "@/components/layout/Header/Header";
 import MobileNav from "@/components/layout/MobileNav/MobileNav";
 import Footer from "@/components/layout/Footer/Footer";
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     "hotel in Shirdi",
     "hotels in Shirdi",
     "Hotel Yogiraj Shirdi",
+    "Hotel Yogiraj NX Shirdi",
     "hotel near Sai Baba Temple",
     "hotel near Sai Baba Mandir Shirdi",
     "budget hotel in Shirdi",
@@ -102,6 +104,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ReduxProvider>
+          <PropertySwitcherBar />
           <Header />
           <MobileNav />
           <main className="main-content">{children}</main>

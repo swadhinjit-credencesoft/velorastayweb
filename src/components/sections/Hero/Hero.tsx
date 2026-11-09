@@ -4,30 +4,39 @@ import { useState, useEffect, useCallback, type ReactNode } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button/Button";
 import { HERO_SLIDES, SITE_INFO } from "@/data/site";
+import type { HeroSlide } from "@/types";
 import styles from "./Hero.module.scss";
 
 interface HeroProps {
   children?: ReactNode;
+  slides?: HeroSlide[];
+  siteName?: string;
+  roomsHref?: string;
 }
 
-export default function Hero({ children }: HeroProps) {
+export default function Hero({
+  children,
+  slides = HERO_SLIDES,
+  siteName = SITE_INFO.name,
+  roomsHref = "/rooms",
+}: HeroProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-  }, []);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, [nextSlide]);
 
-  const slide = HERO_SLIDES[currentSlide];
+  const slide = slides[currentSlide] ?? slides[0];
 
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
-        {HERO_SLIDES.map((s, i) => (
+        {slides.map((s, i) => (
           <div
             key={s.id}
             className={`${styles.slide} ${i === currentSlide ? styles.active : ""}`}
@@ -47,7 +56,7 @@ export default function Hero({ children }: HeroProps) {
 
       <div className={styles.content}>
         <div className={styles.textBlock}>
-          <span className={styles.eyebrow}>Welcome to {SITE_INFO.name}</span>
+          <span className={styles.eyebrow}>Welcome to {siteName}</span>
           <h1 className={`${styles.heading} font-oswald`}>
             {slide.title.split("|").map((line, i) => (
               <span key={i} className={styles.headingLine}>
@@ -60,7 +69,7 @@ export default function Hero({ children }: HeroProps) {
             <Button variant="primary" size="lg" href={slide.cta.href} icon="lucide:arrow-right" iconPosition="right">
               {slide.cta.label}
             </Button>
-            <Button variant="ghost" size="lg" href="/rooms" className={styles.ghostBtn}>
+            <Button variant="ghost" size="lg" href={roomsHref} className={styles.ghostBtn}>
               View Rooms
             </Button>
           </div>
@@ -72,7 +81,7 @@ export default function Hero({ children }: HeroProps) {
       </div>
 
       <div className={styles.dots}>
-        {HERO_SLIDES.map((_, i) => (
+        {slides.map((_, i) => (
           <button
             key={i}
             className={`${styles.dot} ${i === currentSlide ? styles.dotActive : ""}`}

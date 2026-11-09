@@ -3,15 +3,24 @@
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
+import { NX_NAV_GROUPS } from "@/data/nx/navigation";
 import { SITE_INFO } from "@/data/site";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setMobileNavOpen } from "@/store/slices/uiSlice";
-import type { NavGroup } from "@/types";
 import styles from "./MobileNav.module.scss";
 
 export default function MobileNav() {
+  const pathname = usePathname();
+  const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
+  const navGroups = isNx ? NX_NAV_GROUPS : NAV_GROUPS;
+  const currentPhone = isNx ? "+91 99030 33535" : SITE_INFO.phone;
+  const currentPhoneRaw = isNx ? "+919903033535" : SITE_INFO.phone.replace(/\s+/g, "");
+  const currentName = isNx ? "Hotel Yogiraj NX" : SITE_INFO.name;
+  const homeHref = isNx ? "/yogiraj-nx" : "/";
+
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
@@ -56,10 +65,10 @@ export default function MobileNav() {
         aria-label="Mobile navigation"
       >
         <div className={styles.header}>
-          <Link href="/" className={styles.logo} onClick={close}>
+          <Link href={homeHref} className={styles.logo} onClick={close}>
             <Image
               src="/yogirajlogo.png"
-              alt={SITE_INFO.name}
+              alt={currentName}
               width={2000}
               height={3548}
               className={styles.logoImg}
@@ -76,7 +85,7 @@ export default function MobileNav() {
         </div>
 
         <div className={styles.links}>
-          {NAV_GROUPS.map((group) => (
+          {navGroups.map((group) => (
             <div key={group.id} className={styles.group}>
               <div className={styles.groupHeader}>
                 <Link
@@ -128,11 +137,11 @@ export default function MobileNav() {
         <div className={styles.footer}>
           <div className={styles.contactList}>
             <a
-              href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+              href={`tel:${currentPhoneRaw}`}
               className={styles.contactLink}
             >
               <Icon icon="lucide:phone" width={16} height={16} />
-              <span>{SITE_INFO.phone}</span>
+              <span>{currentPhone}</span>
             </a>
             <a
               href={`mailto:${SITE_INFO.email}`}

@@ -6,14 +6,24 @@ import styles from "./NearbyAttractions.module.scss";
 
 const DISPLAY_ATTRACTIONS = NEARBY_ATTRACTIONS.slice(0, 10);
 
-export default function NearbyAttractions() {
+interface NearbyAttractionsProps {
+  heading?: string;
+  description?: string;
+  viewAllHref?: string;
+}
+
+export default function NearbyAttractions({
+  heading = NEARBY_CONTENT.heading,
+  description = NEARBY_CONTENT.description,
+  viewAllHref = "/location",
+}: NearbyAttractionsProps = {}) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.eyebrow}>{NEARBY_CONTENT.eyebrow}</span>
-          <h2 className={`${styles.heading} font-oswald`}>{NEARBY_CONTENT.heading}</h2>
-          <p className={styles.description}>{NEARBY_CONTENT.description}</p>
+          <h2 className={`${styles.heading} font-oswald`}>{heading}</h2>
+          <p className={styles.description}>{description}</p>
         </div>
 
         <div className={styles.scrollRow}>
@@ -50,7 +60,7 @@ export default function NearbyAttractions() {
         </div>
 
         <div className={styles.viewAll}>
-          <a href="/location" className={styles.viewAllLink}>
+          <a href={viewAllHref} className={styles.viewAllLink}>
             View All Attractions
             <Icon icon="lucide:arrow-right" width={16} height={16} />
           </a>

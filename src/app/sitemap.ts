@@ -23,6 +23,7 @@ const staticPages: {
   priority: number;
   changeFrequency: ChangeFrequency;
 }[] = [
+  // Hotel Yogiraj (Main)
   { path: "", priority: 1.0, changeFrequency: "daily" },
   { path: "/rooms", priority: 0.9, changeFrequency: "weekly" },
   { path: "/amenities", priority: 0.8, changeFrequency: "monthly" },
@@ -33,6 +34,18 @@ const staticPages: {
   { path: "/reviews", priority: 0.6, changeFrequency: "weekly" },
   { path: "/faq", priority: 0.5, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
+
+  // Hotel Yogiraj NX (Building 2)
+  { path: "/yogiraj-nx", priority: 1.0, changeFrequency: "daily" },
+  { path: "/yogiraj-nx/rooms", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/yogiraj-nx/amenities", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/yogiraj-nx/restaurant", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/yogiraj-nx/location", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/yogiraj-nx/gallery", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/yogiraj-nx/about", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/yogiraj-nx/reviews", priority: 0.6, changeFrequency: "weekly" },
+  { path: "/yogiraj-nx/faq", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/yogiraj-nx/contact", priority: 0.6, changeFrequency: "monthly" },
 ];
 
 function entry(
@@ -57,18 +70,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   const property = await checkAvailability();
-  const roomEntries = (property?.roomList ?? []).map((room) => {
+  const roomEntries = (property?.roomList ?? []).flatMap((room) => {
     const mapped = apiRoomToRoomType(room);
-    return entry(`/rooms/${mapped.slug}`, 0.9, "weekly");
+    return [
+      entry(`/rooms/${mapped.slug}`, 0.9, "weekly"),
+      entry(`/yogiraj-nx/rooms/${mapped.slug}`, 0.9, "weekly"),
+    ];
   });
 
   const galleryEntries = GALLERY_CATEGORIES.map((cat) =>
     entry(`/gallery/${cat.slug}`, 0.5, "monthly")
   );
 
-  const localSeoEntries = LOCAL_SEO_PAGES.map((page) =>
-    entry(`/${page.slug}`, 0.7, "monthly")
-  );
+  const localSeoEntries = LOCAL_SEO_PAGES.flatMap((page) => [
+    entry(`/${page.slug}`, 0.7, "monthly"),
+    entry(`/yogiraj-nx/${page.slug}`, 0.7, "monthly"),
+  ]);
 
   const legalEntries = LEGAL_PAGES.map((page) =>
     entry(`/legal/${page.slug}`, 0.3, "yearly")

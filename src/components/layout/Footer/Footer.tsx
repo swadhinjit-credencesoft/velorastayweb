@@ -2,60 +2,95 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon";
 import {
   FOOTER_GROUPS,
   FOOTER_SOCIAL,
   FOOTER_CONTACT,
 } from "@/data/navigation";
+import { FOOTER_GROUPS as NX_FOOTER_GROUPS } from "@/data/nx/navigation";
 import { SITE_INFO } from "@/data/site";
+import { SITE_INFO as NX_SITE } from "@/data/nx/site";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
+
+  const currentSite = isNx ? NX_SITE : SITE_INFO;
+  const groups = isNx ? NX_FOOTER_GROUPS : FOOTER_GROUPS;
+  const logoHref = isNx ? "/yogiraj-nx" : "/";
+  const phoneFormatted = isNx ? "+91 99030 33535" : FOOTER_CONTACT.phone;
+  const phoneRaw = isNx ? "+919903033535" : SITE_INFO.phone.replace(/\s+/g, "");
+
+  const socialLinks = isNx
+    ? [
+        {
+          id: "soc-fb",
+          label: "Facebook",
+          href: "https://www.facebook.com/61571729401203",
+          icon: "lucide:facebook",
+        },
+        {
+          id: "soc-ig",
+          label: "Instagram",
+          href: "https://www.instagram.com/hotelyogirajnx/",
+          icon: "lucide:instagram",
+        },
+        {
+          id: "soc-gm",
+          label: "Google Maps",
+          href: "https://maps.google.com/?q=Hotel+Yogiraj+NX+Shirdi+Maharashtra",
+          icon: "lucide:map-pin",
+        },
+      ]
+    : FOOTER_SOCIAL;
+
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.top}>
         <div className={styles.container}>
           <div className={styles.grid}>
             <div className={styles.brand}>
-              <Link href="/" className={styles.logo}>
+              <Link href={logoHref} className={styles.logo}>
                 <Image
                   src="/yogirajlogo.png"
-                  alt={SITE_INFO.name}
+                  alt={currentSite.name}
                   width={2000}
                   height={3548}
                   className={styles.logoImg}
                 />
               </Link>
-              <p className={styles.tagline}>{SITE_INFO.tagline}</p>
+              <p className={styles.tagline}>{currentSite.tagline}</p>
 
               <div className={styles.contactInfo}>
                 <div className={styles.contactItem}>
                   <Icon icon="lucide:map-pin" width={16} height={16} />
-                  <span>{FOOTER_CONTACT.address}</span>
+                  <span>{currentSite.address.full}</span>
                 </div>
                 <a
-                  href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+                  href={`tel:${phoneRaw}`}
                   className={styles.contactItem}
                 >
                   <Icon icon="lucide:phone" width={16} height={16} />
-                  <span>{FOOTER_CONTACT.phone}</span>
+                  <span>{phoneFormatted}</span>
                 </a>
                 <a
-                  href={`mailto:${FOOTER_CONTACT.email}`}
+                  href={`mailto:${currentSite.email}`}
                   className={styles.contactItem}
                 >
                   <Icon icon="lucide:mail" width={16} height={16} />
-                  <span>{FOOTER_CONTACT.email}</span>
+                  <span>{currentSite.email}</span>
                 </a>
                 <div className={styles.contactItem}>
                   <Icon icon="lucide:clock" width={16} height={16} />
-                  <span>{FOOTER_CONTACT.hours}</span>
+                  <span>Front Desk: Open 24 hours</span>
                 </div>
               </div>
 
               <div className={styles.social}>
-                {FOOTER_SOCIAL.map((social) => (
+                {socialLinks.map((social) => (
                   <a
                     key={social.id}
                     href={social.href}
@@ -70,7 +105,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {FOOTER_GROUPS.map((group) => (
+            {groups.map((group) => (
               <div key={group.id} className={styles.column}>
                 <h3 className={styles.columnTitle}>{group.title}</h3>
                 <ul className={styles.columnLinks}>

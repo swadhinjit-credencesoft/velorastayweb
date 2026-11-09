@@ -7,7 +7,23 @@ import { checkAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "./FeaturedRooms.module.scss";
 
-export default async function FeaturedRooms() {
+interface FeaturedRoomsProps {
+  eyebrow?: string;
+  heading?: string;
+  description?: string;
+  roomsHref?: string;
+  roomBaseHref?: string;
+  roomImagesMap?: Record<string, string>;
+}
+
+export default async function FeaturedRooms({
+  eyebrow = ROOMS_CONTENT.eyebrow,
+  heading = ROOMS_CONTENT.heading,
+  description = ROOMS_CONTENT.description,
+  roomsHref = "/rooms",
+  roomBaseHref = "/rooms",
+  roomImagesMap,
+}: FeaturedRoomsProps = {}) {
   const property = await checkAvailability();
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
   const popularRooms = rooms.filter((room) => room.popular);
@@ -17,52 +33,69 @@ export default async function FeaturedRooms() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.eyebrow}>{ROOMS_CONTENT.eyebrow}</span>
-          <h2 className={`${styles.heading} font-oswald`}>{ROOMS_CONTENT.heading}</h2>
-          <p className={styles.description}>{ROOMS_CONTENT.description}</p>
+          <span className={styles.eyebrow}>{eyebrow}</span>
+          <h2 className={`${styles.heading} font-oswald`}>{heading}</h2>
+          <p className={styles.description}>{description}</p>
         </div>
 
         <div className={styles.grid}>
-          {displayRooms.map((room) => (
-            <div key={room.id} className={styles.cardItem}>
-              <RoomCard image={room.images[0]?.src} badge={room.tag}>
-                <div className={styles.roomInfo}>
-                  <h3 className={styles.roomName}>{room.name}</h3>
-                  <p className={styles.roomTagline}>{room.tagline}</p>
-                  <div className={styles.roomMeta}>
-                    {room.size && room.sizeUnit && (
+          {displayRooms.map((room) => {
+            const displayImage =
+              (roomImagesMap && roomImagesMap[room.slug]) ||
+              room.images[0]?.src ||
+              "/yogirajhero2.jpeg";
+
+            return (
+              <div key={room.id} className={styles.cardItem}>
+                <RoomCard image={displayImage} badge={room.tag}>
+                  <div className={styles.roomInfo}>
+                    <h3 className={styles.roomName}>{room.name}</h3>
+                    <p className={styles.roomTagline}>{room.tagline}</p>
+                    <div className={styles.roomMeta}>
+                      {room.size && room.sizeUnit && (
+                        <span className={styles.metaItem}>
+                          <Icon icon="lucide:maximize-2" width={14} height={14} />
+                          {room.size} {room.sizeUnit}
+                        </span>
+                      )}
                       <span className={styles.metaItem}>
-                        <Icon icon="lucide:maximize-2" width={14} height={14} />
-                        {room.size} {room.sizeUnit}
+                        <Icon icon="lucide:users" width={14} height={14} />
+                        Up to {room.maxOccupancy}
                       </span>
-                    )}
-                    <span className={styles.metaItem}>
-                      <Icon icon="lucide:users" width={14} height={14} />
-                      Up to {room.maxOccupancy}
-                    </span>
-                    <span className={styles.metaItem}>
-                      <Icon icon="lucide:bed" width={14} height={14} />
-                      {room.bedConfig}
-                    </span>
+                      <span className={styles.metaItem}>
+                        <Icon icon="lucide:bed" width={14} height={14} />
+                        {room.bedConfig}
+                      </span>
+                    </div>
+                    <div className={styles.roomFooter}>
+                      <PriceDisplay
+                        price={room.price}
+                        currency={room.currency}
+                        unit={`/ ${room.priceUnit}`}
+                      />
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        href={`${roomBaseHref}/${room.slug}`}
+                      >
+                        View Details
+                      </Button>
+                    </div>
                   </div>
-                  <div className={styles.roomFooter}>
-                    <PriceDisplay
-                      price={room.price}
-                      currency={room.currency}
-                      unit={`/ ${room.priceUnit}`}
-                    />
-                    <Button variant="outline" size="sm" href={`/rooms/${room.slug}`}>
-                      View Details
-                    </Button>
-                  </div>
-                </div>
-              </RoomCard>
-            </div>
-          ))}
+                </RoomCard>
+              </div>
+            );
+          })}
         </div>
 
         <div className={styles.cta}>
-          <Button variant="secondary" size="lg" href="/rooms" icon="lucide:arrow-right" iconPosition="right">
+          <Button
+            variant="secondary"
+            size="lg"
+            href={roomsHref}
+            icon="lucide:arrow-right"
+            iconPosition="right"
+          >
             View All Rooms
           </Button>
         </div>

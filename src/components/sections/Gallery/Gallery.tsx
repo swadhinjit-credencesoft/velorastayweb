@@ -6,6 +6,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import Modal from "@/components/ui/Modal/Modal";
 import { GALLERY_IMAGES } from "@/data/gallery";
+import type { GalleryImage } from "@/types";
 import styles from "./Gallery.module.scss";
 
 const TABS = [
@@ -16,23 +17,37 @@ const TABS = [
   { id: "dining", label: "Dining" },
 ];
 
-export default function Gallery() {
+interface GalleryProps {
+  images?: GalleryImage[];
+  viewAllHref?: string;
+  eyebrow?: string;
+  heading?: string;
+  hotelName?: string;
+}
+
+export default function Gallery({
+  images = GALLERY_IMAGES,
+  viewAllHref = "/gallery",
+  eyebrow = "Gallery",
+  heading = "A Glimpse Inside",
+  hotelName = "Hotel Yogiraj",
+}: GalleryProps = {}) {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [lightboxImage, setLightboxImage] = useState<{ src: string; caption: string } | null>(null);
 
   const filteredImages = useMemo(() => {
     if (activeCategory === "all") {
-      return GALLERY_IMAGES;
+      return images;
     }
-    return GALLERY_IMAGES.filter((img) => img.category === activeCategory);
-  }, [activeCategory]);
+    return images.filter((img) => img.category === activeCategory);
+  }, [activeCategory, images]);
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.eyebrow}>Gallery</span>
-          <h2 className={`${styles.heading} font-oswald`}>A Glimpse Inside</h2>
+          <span className={styles.eyebrow}>{eyebrow}</span>
+          <h2 className={`${styles.heading} font-oswald`}>{heading}</h2>
         </div>
 
         <div className={styles.tabs} role="tablist">
@@ -83,10 +98,10 @@ export default function Gallery() {
 
         <div style={{ textAlign: "center", marginTop: "40px" }}>
           <Link
-            href="/gallery"
+            href={viewAllHref}
             className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-600 hover:text-amber-700 hover:underline"
           >
-            Explore Complete Hotel Gallery ({GALLERY_IMAGES.length} Photos) &rarr;
+            Explore Complete {hotelName} Gallery ({images.length} Photos) &rarr;
           </Link>
         </div>
       </div>
@@ -99,21 +114,9 @@ export default function Gallery() {
               alt={lightboxImage.caption}
               width={900}
               height={600}
-              className={styles.lightboxImg}
+              style={{ objectFit: "contain", maxHeight: "80vh", width: "auto", height: "auto" }}
             />
-            {lightboxImage.caption && (
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#ffffff",
-                  marginTop: "12px",
-                  fontSize: "14px",
-                  fontWeight: 500,
-                }}
-              >
-                {lightboxImage.caption}
-              </p>
-            )}
+            <p className={styles.lightboxCaption}>{lightboxImage.caption}</p>
           </div>
         )}
       </Modal>

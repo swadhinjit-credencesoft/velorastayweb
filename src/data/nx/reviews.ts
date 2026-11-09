@@ -1,0 +1,116 @@
+import type { SectionContent, Review, ReviewPlatform } from "@/types";
+
+export const REVIEWS_CONTENT: SectionContent = {
+  eyebrow: "Guest Reviews",
+  heading: "Guest Reviews",
+  description:
+    "Discover what guests say about their stay at Hotel Yogiraj NX — close to Sai Baba Temple, with clean rooms, helpful staff and a comfortable, family-friendly experience.",
+};
+
+export const REVIEW_PLATFORMS: ReviewPlatform[] = [
+  {
+    id: "platform-google",
+    name: "Google",
+    icon: "lucide:search",
+    rating: 4.4,
+    reviewCount: 2310,
+    url: "https://maps.google.com/?q=Hotel+Yogiraj+NX+Shirdi+Maharashtra",
+  },
+  {
+    id: "platform-booking", name: "Booking.com", icon: "lucide:book-open", rating: 8.8, reviewCount: 1176, url: "https://www.booking.com/hotel/in/yogiraj-nx.html",
+  },
+  {
+    id: "platform-agoda",
+    name: "Agoda",
+    icon: "lucide:globe",
+    rating: 8.8,
+    reviewCount: 443,
+    url: "#",
+  },
+  {
+    id: "platform-tripadvisor", name: "Tripadvisor", icon: "lucide:map-pin", rating: 4.2, reviewCount: 51, url: "https://www.tripadvisor.in/Hotel_Review-g679021-d8671138-Reviews-Hotel_Yogiraj-Shirdi_Ahmednagar_District_Maharashtra.html",
+  },
+];
+
+export const REVIEWS: Review[] = [
+  {
+    id: "review-1",
+    author: "Rahul Deshmukh",
+    platform: "google",
+    rating: 5,
+    date: "2026-07-15",
+    title: "Perfect location near Sai Baba Temple",
+    text: "Hotel Yogiraj NX is just a short walk from the Sai Baba Temple — the location could not be better. Rooms were clean, the staff was very helpful, and breakfast was good. Highly recommended for pilgrims.",
+    verified: true,
+  },
+  {
+    id: "review-2",
+    author: "Anita Kulkarni",
+    platform: "google",
+    rating: 5,
+    date: "2026-07-03",
+    title: "Clean rooms and polite staff",
+    text: "We stayed in a family four-bed AC room. Everything was clean including the bathrooms, and the staff was polite and quick to help. Great value for money so close to the temple.",
+    verified: true,
+  },
+  {
+    id: "review-3",
+    author: "Suresh Patil",
+    platform: "booking",
+    rating: 5,
+    date: "2026-06-22",
+    title: "Comfortable and convenient",
+    text: "Excellent service and a very good location. The in-house vegetarian restaurant was convenient and the room service was fast. Perfect for a Shirdi darshan trip.",
+    verified: true,
+  },
+  {
+    id: "review-4",
+    author: "Meera Joshi",
+    platform: "booking",
+    rating: 5,
+    date: "2026-06-10",
+    title: "Great family stay",
+    text: "Stayed with my family for two nights. Parking was easy, the rooms were comfortable, and the staff helped us with temple guidance and taxi arrangements. Very family-friendly hotel.",
+    verified: true,
+  },
+  {
+    id: "review-5",
+    author: "Vikram Rao",
+    platform: "google",
+    rating: 4,
+    date: "2026-05-27",
+    title: "Good budget stay in Shirdi",
+    text: "Clean rooms, hot water and free Wi-Fi. The location near the bus station and temple is very convenient. Would definitely stay again.",
+    verified: true,
+  },
+  {
+    id: "review-6",
+    author: "Kavita Sharma",
+    platform: "agoda",
+    rating: 5,
+    date: "2026-05-14",
+    title: "Excellent location and service",
+    text: "Only minutes from the Sai Baba Temple. The staff arranged our darshan passes and were always helpful. The complimentary breakfast was a nice touch.",
+    verified: true,
+  },
+  {
+    id: "review-7",
+    author: "Rajendra Singh",
+    platform: "tripadvisor",
+    rating: 4,
+    date: "2026-04-28",
+    title: "Comfortable base for Shirdi",
+    text: "Very walkable to the temple. Clean, simple rooms with good service. Great pick for anyone visiting Shirdi for darshan.",
+    verified: true,
+  },
+  {
+    id: "review-8",
+    author: "Priya Reddy",
+    platform: "google",
+    rating: 5,
+    date: "2026-04-11",
+    title: "Warm hospitality",
+    text: "The staff were warm and welcoming from check-in to check-out. The rooms were clean, parking was convenient, and everything was very close to the temple. Highly recommended.",
+    verified: true,
+  },
+];

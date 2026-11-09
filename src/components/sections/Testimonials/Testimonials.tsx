@@ -4,15 +4,28 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Icon from "@/components/Icon";
 import Rating from "@/components/ui/Rating/Rating";
 import { REVIEWS_CONTENT, REVIEWS, REVIEW_PLATFORMS } from "@/data/reviews";
+import type { Review } from "@/types";
 import styles from "./Testimonials.module.scss";
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  eyebrow?: string;
+  heading?: string;
+  description?: string;
+  reviews?: Review[];
+}
+
+export default function Testimonials({
+  eyebrow = REVIEWS_CONTENT.eyebrow,
+  heading = REVIEWS_CONTENT.heading,
+  description = REVIEWS_CONTENT.description,
+  reviews = REVIEWS,
+}: TestimonialsProps = {}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const next = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % REVIEWS.length);
-  }, []);
+    setCurrentIndex((prev) => (prev + 1) % reviews.length);
+  }, [reviews.length]);
 
   useEffect(() => {
     const interval = setInterval(next, 4000);
@@ -40,14 +53,14 @@ export default function Testimonials() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.eyebrow}>{REVIEWS_CONTENT.eyebrow}</span>
-          <h2 className={`${styles.heading} font-oswald`}>{REVIEWS_CONTENT.heading}</h2>
-          <p className={styles.description}>{REVIEWS_CONTENT.description}</p>
+          <span className={styles.eyebrow}>{eyebrow}</span>
+          <h2 className={`${styles.heading} font-oswald`}>{heading}</h2>
+          <p className={styles.description}>{description}</p>
         </div>
 
         <div className={styles.carouselWrap}>
           <div className={styles.carousel} ref={scrollRef}>
-            {REVIEWS.map((review) => (
+            {reviews.map((review) => (
               <div key={review.id} className={styles.card}>
                 <div className={styles.cardHeader}>
                   <div className={styles.authorInfo}>
@@ -71,13 +84,18 @@ export default function Testimonials() {
                 </div>
                 <Rating rating={review.rating} size="sm" />
                 <p className={styles.reviewText}>{review.text}</p>
-                <span className={styles.date}>{new Date(review.date).toLocaleDateString("en-IN", { year: "numeric", month: "short" })}</span>
+                <span className={styles.date}>
+                  {new Date(review.date).toLocaleDateString("en-IN", {
+                    year: "numeric",
+                    month: "short",
+                  })}
+                </span>
               </div>
             ))}
           </div>
 
           <div className={styles.dots}>
-            {REVIEWS.map((_, i) => (
+            {reviews.map((_, i) => (
               <button
                 key={i}
                 className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ""}`}

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/Icon";
 import { NAV_GROUPS, NAV_CTA } from "@/data/navigation";
+import { NX_NAV_GROUPS } from "@/data/nx/navigation";
 import { SITE_INFO } from "@/data/site";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -18,8 +19,15 @@ import styles from "./Header.module.scss";
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const { isScrolled, scrollY } = useScrollPosition();
+  const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
+  const isHome = pathname === "/" || pathname === "/yogiraj-nx" || pathname === "/hotel-yogiraj-nx";
+  const navGroups = isNx ? NX_NAV_GROUPS : NAV_GROUPS;
+  const currentPhone = isNx ? "+91 99030 33535" : SITE_INFO.phone;
+  const currentPhoneRaw = isNx ? "+919903033535" : SITE_INFO.phone.replace(/\s+/g, "");
+  const currentName = isNx ? "Hotel Yogiraj NX" : SITE_INFO.name;
+  const homeHref = isNx ? "/yogiraj-nx" : "/";
+
+  const { isScrolled } = useScrollPosition();
   const dispatch = useAppDispatch();
   const megaMenuOpen = useAppSelector((s) => s.ui.isMegaMenuOpen);
   const isMobileNavOpen = useAppSelector((s) => s.ui.isMobileNavOpen);
@@ -55,20 +63,21 @@ export default function Header() {
       role="banner"
     >
       <div className={styles.inner}>
-        <Link href="/" className={styles.logo} aria-label={SITE_INFO.name}>
+        <Link href={homeHref} className={styles.logo} aria-label={currentName}>
           <Image
             src="/yogirajlogo.png"
-            alt={SITE_INFO.name}
+            alt={currentName}
             width={2000}
             height={3548}
             priority
             className={styles.logoImg}
           />
+          {isNx && <span className={styles.nxTag}>NX</span>}
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Main navigation">
           <ul className={styles.navList}>
-            {NAV_GROUPS.map((group) => (
+            {navGroups.map((group) => (
               <li
                 key={group.id}
                 className={styles.navItem}
@@ -96,12 +105,12 @@ export default function Header() {
 
         <div className={styles.actions}>
           <a
-            href={`tel:${SITE_INFO.phone.replace(/\s+/g, "")}`}
+            href={`tel:${currentPhoneRaw}`}
             className={styles.phoneBtn}
-            aria-label={`Call ${SITE_INFO.name} at ${SITE_INFO.phone}`}
+            aria-label={`Call ${currentName} at ${currentPhone}`}
           >
             <Icon icon="lucide:phone-call" width={16} height={16} className={styles.phoneIcon} />
-            <span className={styles.phoneNumber}>{SITE_INFO.phone}</span>
+            <span className={styles.phoneNumber}>{currentPhone}</span>
           </a>
 
           <Link
@@ -133,23 +142,29 @@ export default function Header() {
             if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
           }}
           onMouseLeave={handleMegaLeave}
-          onClick={closeMega}
         >
-          {NAV_GROUPS.map((group) =>
-            megaMenuOpen === group.id ? (
-              <div key={group.id} className={styles.megaContent}>
+          {navGroups
+            .filter((g) => g.id === megaMenuOpen)
+            .map((group) => (
+              <div
+                key={group.id}
+                className={styles.megaContent}
+                onMouseEnter={() => {
+                  if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+                }}
+                onMouseLeave={handleMegaLeave}
+              >
                 <div className={styles.megaInner}>
                   <div className={styles.megaHeader}>
+                    <h3 className={styles.megaTitle}>{group.label}</h3>
                     <Link
                       href={group.href ?? "#"}
-                      className={styles.megaTitle}
+                      className={styles.megaViewAll}
                       onClick={closeMega}
                     >
-                      {group.label}
+                      View All
+                      <Icon icon="lucide:arrow-right" width={14} height={14} />
                     </Link>
-                    <span className={styles.megaSubtitle}>
-                      Explore all {group.label.toLowerCase()} options
-                    </span>
                   </div>
                   <div className={styles.megaGrid}>
                     {group.children.map((child) => (
@@ -160,10 +175,14 @@ export default function Header() {
                         onClick={closeMega}
                       >
                         <div className={styles.megaCardIcon}>
-                          <Icon icon={child.icon ?? "lucide:link"} width={20} height={20} />
+                          <Icon
+                            icon={child.icon ?? "lucide:arrow-right"}
+                            width={20}
+                            height={20}
+                          />
                         </div>
-                        <div className={styles.megaCardBody}>
-                          <span className={styles.megaCardLabel}>
+                        <div className={styles.megaCardText}>
+                          <span className={styles.megaCardTitle}>
                             {child.label}
                           </span>
                           {child.description && (
@@ -172,19 +191,12 @@ export default function Header() {
                             </span>
                           )}
                         </div>
-                        <Icon
-                          icon="lucide:arrow-right"
-                          width={14}
-                          height={14}
-                          className={styles.megaCardArrow}
-                        />
                       </Link>
                     ))}
                   </div>
                 </div>
               </div>
-            ) : null
-          )}
+            ))}
         </div>
       )}
     </header>

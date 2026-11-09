@@ -4,13 +4,31 @@ import { generateBreadcrumbSchema } from "@/utils/schema";
 import { SITE_INFO, WHATSAPP_LINK } from "@/data/site";
 import type { LocalSeoPage } from "@/data/seoPages";
 
-export default function LocalSeoPageView({ page }: { page: LocalSeoPage }) {
+interface LocalSeoPageViewProps {
+  page: LocalSeoPage;
+  siteName?: string;
+  sitePhone?: string;
+  whatsappLink?: string;
+  baseHref?: string;
+  roomsHref?: string;
+}
+
+export default function LocalSeoPageView({
+  page,
+  siteName = SITE_INFO.name,
+  sitePhone = SITE_INFO.phone,
+  whatsappLink = WHATSAPP_LINK,
+  baseHref = "/",
+  roomsHref = "/rooms",
+}: LocalSeoPageViewProps) {
+  const homeUrl = baseHref === "/" ? SITE_INFO.url : `${SITE_INFO.url}${baseHref}`;
+
   return (
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: SITE_INFO.url },
-          { name: page.h1, url: `${SITE_INFO.url}/${page.slug}` },
+          { name: "Home", url: homeUrl },
+          { name: page.h1, url: `${homeUrl}/${page.slug}` },
         ])}
       />
 
@@ -23,7 +41,12 @@ export default function LocalSeoPageView({ page }: { page: LocalSeoPage }) {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/80 to-[#16213e]/70" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: page.h1, href: `/${page.slug}` }]} />
+          <Breadcrumb
+            items={[
+              { label: "Home", href: baseHref },
+              { label: page.h1, href: `${baseHref === "/" ? "" : baseHref}/${page.slug}` },
+            ]}
+          />
           <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mt-4">{page.eyebrow}</p>
           <h1 className="text-3xl md:text-5xl font-bold text-white mt-2">{page.h1}</h1>
         </div>
@@ -62,19 +85,19 @@ export default function LocalSeoPageView({ page }: { page: LocalSeoPage }) {
           )}
 
           <div className="mt-10 bg-gray-50 rounded-2xl p-6 sm:p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Book Your Room at {SITE_INFO.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Book Your Room at {siteName}</h2>
             <p className="text-gray-600 mb-6">
-              Call {SITE_INFO.phone} or send a WhatsApp request — our team confirms availability with the best rates.
+              Call {sitePhone} or send a WhatsApp request — our team confirms availability with the best rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/rooms"
+                href={roomsHref}
                 className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 View Rooms
               </a>
               <a
-                href={WHATSAPP_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"

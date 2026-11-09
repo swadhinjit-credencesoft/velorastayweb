@@ -1,10 +1,22 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { WHATSAPP_LINK } from "@/data/site";
 import styles from "./WhatsAppButton.module.scss";
 
 export default function WhatsAppButton() {
+  const pathname = usePathname();
+  const isNx = pathname?.startsWith("/yogiraj-nx") || pathname?.startsWith("/hotel-yogiraj-nx");
+
+  const href = isNx
+    ? `https://api.whatsapp.com/send?phone=919903033535&text=${encodeURIComponent(
+        "Hello Hotel Yogiraj NX, Shirdi,\nI would like to enquire about a booking."
+      )}`
+    : WHATSAPP_LINK;
+
   return (
     <a
-      href={WHATSAPP_LINK}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className={styles.wrapper}
