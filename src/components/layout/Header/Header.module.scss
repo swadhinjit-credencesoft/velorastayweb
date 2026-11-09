@@ -428,3 +428,98 @@
     transform: translateY(0);
   }
 }
+
+
+.switchPropertyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: v.$color-accent;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: v.$radius-full;
+  border: 1.5px solid v.$color-accent;
+  background-color: rgba(v.$color-accent, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all v.$duration-fast v.$ease-standard;
+  white-space: nowrap;
+
+  @include m.focus-ring;
+
+  &:hover {
+    background-color: v.$color-accent;
+    color: #ffffff;
+    border-color: v.$color-accent;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(v.$color-accent, 0.25);
+
+    .switchBadge {
+      background-color: #ffffff;
+      color: v.$color-accent;
+    }
+  }
+
+  .home & {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.45);
+    background-color: rgba(0, 0, 0, 0.35);
+
+    &:hover {
+      background-color: v.$color-accent;
+      border-color: v.$color-accent;
+      color: #ffffff;
+    }
+  }
+
+  @media (max-width: #{v.$bp-sm - 1px}) {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 5px;
+  }
+}
+
+.switchIcon {
+  flex-shrink: 0;
+  transition: transform v.$duration-fast v.$ease-standard;
+
+  .switchPropertyBtn:hover & {
+    transform: rotate(180deg);
+  }
+}
+
+.switchLabelLong {
+  display: none;
+
+  @media (min-width: v.$bp-lg) {
+    display: inline;
+  }
+}
+
+.switchLabelShort {
+  display: inline;
+
+  @media (min-width: v.$bp-lg) {
+    display: none;
+  }
+}
+
+.switchBadge {
+  display: inline-block;
+  background-color: v.$color-accent;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  .home & {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+}

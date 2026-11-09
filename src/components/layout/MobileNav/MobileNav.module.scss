@@ -190,3 +190,56 @@
   width: 100%;
   justify-content: center;
 }
+
+
+.propertySwitcher {
+  padding: v.$space-sm v.$space-md;
+  background-color: rgba(v.$color-accent, 0.06);
+  border-bottom: 1px solid v.$color-border;
+}
+
+.propertySwitcherLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: v.$radius-md;
+  border: 1px solid v.$color-accent;
+  background-color: v.$color-surface;
+  color: v.$color-accent;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all v.$duration-fast v.$ease-standard;
+
+  &:hover {
+    background-color: v.$color-accent;
+    color: #ffffff;
+
+    .propertySwitcherBadge {
+      background-color: #ffffff;
+      color: v.$color-accent;
+    }
+  }
+}
+
+.propertySwitcherIcon {
+  flex-shrink: 0;
+}
+
+.propertySwitcherText {
+  flex: 1;
+}
+
+.propertySwitcherBadge {
+  display: inline-block;
+  background-color: v.$color-accent;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

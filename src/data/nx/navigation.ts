@@ -161,12 +161,6 @@ export const NX_NAV_GROUPS: NavGroup[] = [
       },
     ],
   },
-  {
-    id: "nav-switch-main",
-    label: "Hotel Yogiraj (Main)",
-    href: "/",
-    children: [],
-  },
 ];
 
 export const NAV_CTA: NavLink = {

@@ -26,6 +26,10 @@ export default function Header() {
   const currentPhoneRaw = isNx ? "+919903033535" : SITE_INFO.phone.replace(/\s+/g, "");
   const currentName = isNx ? "Hotel Yogiraj NX" : SITE_INFO.name;
   const homeHref = isNx ? "/yogiraj-nx" : "/";
+  const switchHref = isNx ? "/" : "/yogiraj-nx";
+  const switchTitle = isNx
+    ? "Switch to Hotel Yogiraj (Main Building)"
+    : "Switch to Hotel Yogiraj NX (Building 2)";
 
   const { isScrolled } = useScrollPosition();
   const dispatch = useAppDispatch();
@@ -104,6 +108,24 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
+          <Link
+            href={switchHref}
+            className={styles.switchPropertyBtn}
+            title={switchTitle}
+            aria-label={switchTitle}
+          >
+            <Icon icon="lucide:arrow-left-right" width={14} height={14} className={styles.switchIcon} />
+            <span className={styles.switchLabelLong}>
+              {isNx ? "Hotel Yogiraj" : "Hotel Yogiraj NX"}
+            </span>
+            <span className={styles.switchLabelShort}>
+              {isNx ? "Main Hotel" : "Yogiraj NX"}
+            </span>
+            <span className={styles.switchBadge}>
+              {isNx ? "Main" : "NX"}
+            </span>
+          </Link>
+
           <a
             href={`tel:${currentPhoneRaw}`}
             className={styles.phoneBtn}

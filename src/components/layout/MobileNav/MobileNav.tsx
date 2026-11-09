@@ -84,6 +84,27 @@ export default function MobileNav() {
           </button>
         </div>
 
+        <div className={styles.propertySwitcher}>
+          <Link
+            href={isNx ? "/" : "/yogiraj-nx"}
+            className={styles.propertySwitcherLink}
+            onClick={close}
+          >
+            <Icon
+              icon="lucide:arrow-left-right"
+              width={16}
+              height={16}
+              className={styles.propertySwitcherIcon}
+            />
+            <span className={styles.propertySwitcherText}>
+              {isNx ? "Switch to Hotel Yogiraj" : "Switch to Hotel Yogiraj NX"}
+            </span>
+            <span className={styles.propertySwitcherBadge}>
+              {isNx ? "Main" : "NX"}
+            </span>
+          </Link>
+        </div>
+
         <div className={styles.links}>
           {navGroups.map((group) => (
             <div key={group.id} className={styles.group}>
