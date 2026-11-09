@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { RESTAURANT_CONTENT, RESTAURANT_HIGHLIGHTS, RESTAURANT_DETAILS } from "@/data/restaurant";
-import { WHATSAPP_LINK } from "@/data/site";
+import { WHATSAPP_LINK, SITE_INFO } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Restaurant | Dining at Hotel Yogiraj, Shirdi",
@@ -21,8 +21,8 @@ export default function RestaurantPage() {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Restaurant", url: "/restaurant" },
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Restaurant", url: `${SITE_INFO.url}/restaurant` },
         ])}
       />
 

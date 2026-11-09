@@ -8,7 +8,7 @@ import RoomBookingWidget from "@/components/rooms/RoomBookingWidget";
 import { NX_BOOKING_ENGINE_URL, NX_PROPERTY_ID } from "@/config";
 import { ROOM_AMENITIES } from "@/data/nx/rooms";
 import { SITE_INFO as NX_SITE } from "@/data/nx/site";
-import { generateBreadcrumbSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateRoomSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 import { checkNxAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
@@ -104,6 +104,7 @@ export default async function NxRoomDetailPage({ params }: RoomPageProps) {
           { name: room.name, url: `https://yogirajhotel.com/yogiraj-nx/rooms/${room.slug}` },
         ])}
       />
+      <JsonLd schema={generateRoomSchema(room, true)} />
 
       <div className={styles.page}>
         <div className={styles.topBar}>

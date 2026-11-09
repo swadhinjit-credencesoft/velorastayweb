@@ -4,6 +4,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema } from "@/utils/schema";
+import { SITE_INFO } from "@/data/site";
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from "@/data/gallery";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <>
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Gallery", url: "/gallery" }])} />
+      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: "Gallery", url: `${SITE_INFO.url}/gallery` }])} />
 
       <section className="relative -mt-[72px] md:-mt-[120px] pt-28 md:pt-36 pb-16 md:pb-20">
         <div className="absolute inset-0 z-0">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 import RoomBookingWidget from "@/components/rooms/RoomBookingWidget";
 import { ROOM_AMENITIES } from "@/data/rooms";
 import { SITE_INFO } from "@/data/site";
-import { generateBreadcrumbSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateRoomSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
 import { checkAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
@@ -78,6 +78,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
           { name: room.name, url: `${SITE_INFO.url}/rooms/${room.slug}` },
         ])}
       />
+      <JsonLd schema={generateRoomSchema(room)} />
       <Breadcrumb
         items={[
           { label: "Rooms & Rates", href: "/rooms" },

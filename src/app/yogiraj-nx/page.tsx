@@ -52,7 +52,7 @@ export default function HotelYogirajNxHomePage() {
 
   return (
     <>
-      <JsonLd schema={generateHotelSchema()} />
+      <JsonLd schema={generateHotelSchema(true)} />
       <JsonLd schema={generateWebsiteSchema()} />
       <Hero
         slides={NX_SLIDES}

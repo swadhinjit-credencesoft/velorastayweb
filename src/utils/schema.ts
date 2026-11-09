@@ -1,45 +1,60 @@
 import { SITE_INFO } from "@/data/site";
+import { SITE_INFO as NX_SITE_INFO } from "@/data/nx/site";
+import type { RoomType } from "@/types";
 
-export function generateHotelSchema() {
+export function generateHotelSchema(isNx = false) {
+  const info = isNx ? NX_SITE_INFO : SITE_INFO;
+  const url = isNx ? `${SITE_INFO.url}/yogiraj-nx` : SITE_INFO.url;
+  const image = isNx
+    ? `${SITE_INFO.url}/yogirajimg/01.avif`
+    : `${SITE_INFO.url}/yogirajhero1.png`;
+
   const hotel: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Hotel",
-    name: SITE_INFO.name,
-    description: SITE_INFO.description,
-    url: SITE_INFO.url,
-    telephone: SITE_INFO.phone,
-    email: SITE_INFO.email,
+    "@id": `${url}#hotel`,
+    name: info.name,
+    description: info.description,
+    url,
+    telephone: info.phone,
+    email: info.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: SITE_INFO.address.street,
-      addressLocality: SITE_INFO.address.city,
-      addressRegion: SITE_INFO.address.state,
-      postalCode: SITE_INFO.address.pincode,
+      streetAddress: info.address.street,
+      addressLocality: info.address.city,
+      addressRegion: info.address.state,
+      postalCode: info.address.pincode,
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: SITE_INFO.geo.latitude,
-      longitude: SITE_INFO.geo.longitude,
+      latitude: info.geo.latitude,
+      longitude: info.geo.longitude,
     },
-    priceRange: "₹1000 - ₹2999",
-    checkinTime: SITE_INFO.checkIn,
-    checkoutTime: SITE_INFO.checkOut,
-    image: `${SITE_INFO.url}/yogirajhero1.png`,
+    priceRange: isNx ? "₹1400 - ₹4500" : "₹1000 - ₹2999",
+    checkinTime: info.checkIn,
+    checkoutTime: info.checkOut,
+    image,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "24-Hour Front Desk", value: true },
       { "@type": "LocationFeatureSpecification", name: "In-House Restaurant", value: true },
       { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
+      ...(isNx
+        ? [
+            { "@type": "LocationFeatureSpecification", name: "Elevator", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Bathtub Suites", value: true },
+          ]
+        : []),
     ],
   };
 
-  if (SITE_INFO.reviewCount > 0) {
+  if (info.reviewCount > 0) {
     hotel.aggregateRating = {
       "@type": "AggregateRating",
-      ratingValue: SITE_INFO.rating,
-      reviewCount: SITE_INFO.reviewCount,
+      ratingValue: info.rating,
+      reviewCount: info.reviewCount,
       bestRating: 5,
       worstRating: 1,
     };
@@ -48,26 +63,77 @@ export function generateHotelSchema() {
   return hotel;
 }
 
-export function generateOrganizationSchema() {
+export function generateRoomSchema(room: RoomType, isNx = false) {
+  const hotelUrl = isNx ? `${SITE_INFO.url}/yogiraj-nx` : SITE_INFO.url;
+  const roomUrl = `${hotelUrl}/rooms/${room.slug}`;
+  const hotelName = isNx ? "Hotel Yogiraj NX" : "Hotel Yogiraj";
+  const defaultImage = isNx
+    ? `${SITE_INFO.url}/yogirajimg/01.avif`
+    : `${SITE_INFO.url}/yogirajhero1.png`;
+
+  const images = (room.images && room.images.length > 0)
+    ? room.images.map((img) => (img.src.startsWith("http") ? img.src : `${SITE_INFO.url}${img.src}`))
+    : [defaultImage];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "HotelRoom",
+    "@id": `${roomUrl}#room`,
+    name: `${room.name} - ${hotelName}`,
+    description: room.description || room.tagline,
+    url: roomUrl,
+    image: images,
+    occupancy: {
+      "@type": "QuantitativeValue",
+      maxValue: room.maxOccupancy,
+      unitCode: "C62",
+    },
+    bed: {
+      "@type": "BedDetails",
+      description: room.bedConfig || room.bedType || "Double Bed",
+    },
+    offers: {
+      "@type": "Offer",
+      price: room.price,
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      validFrom: new Date().toISOString().split("T")[0],
+      url: isNx
+        ? `https://bookone.io/Hotel-Yogiraj-Nx?bookingEngine=true`
+        : `https://bookone.io/Hotel-Yogiraj?bookingEngine=true`,
+    },
+    isPartOf: {
+      "@type": "Hotel",
+      name: hotelName,
+      url: hotelUrl,
+    },
+  };
+}
+
+export function generateOrganizationSchema(isNx = false) {
+  const info = isNx ? NX_SITE_INFO : SITE_INFO;
+  const url = isNx ? `${SITE_INFO.url}/yogiraj-nx` : SITE_INFO.url;
+
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: SITE_INFO.name,
-    url: SITE_INFO.url,
-    description: SITE_INFO.description,
+    "@id": `${url}#organization`,
+    name: info.name,
+    url,
+    description: info.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: SITE_INFO.address.street,
-      addressLocality: SITE_INFO.address.city,
-      addressRegion: SITE_INFO.address.state,
-      postalCode: SITE_INFO.address.pincode,
+      streetAddress: info.address.street,
+      addressLocality: info.address.city,
+      addressRegion: info.address.state,
+      postalCode: info.address.pincode,
       addressCountry: "IN",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: SITE_INFO.phone,
+      telephone: info.phone,
       contactType: "customer service",
-      availableLanguage: ["English", "Hindi"],
+      availableLanguage: ["English", "Hindi", "Marathi"],
     },
   };
 }
@@ -76,6 +142,7 @@ export function generateWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_INFO.url}#website`,
     name: SITE_INFO.name,
     url: SITE_INFO.url,
   };

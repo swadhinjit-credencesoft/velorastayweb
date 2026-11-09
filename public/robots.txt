@@ -1,0 +1,42 @@
+# ==============================================================================
+# Robots.txt for Hotel Yogiraj & Hotel Yogiraj NX, Shirdi, Maharashtra
+# Website: https://yogirajhotel.com
+# ==============================================================================
+
+# Search Engine Crawlers (Google, Bing, Yahoo, DuckDuckGo, Baidu, Yandex)
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+
+# AI Search & Large Language Model Crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+# Host and Sitemap
+Host: https://yogirajhotel.com
+Sitemap: https://yogirajhotel.com/sitemap.xml

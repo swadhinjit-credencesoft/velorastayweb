@@ -29,8 +29,8 @@ export default function AmenitiesPage() {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Amenities", url: "/amenities" },
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Amenities", url: `${SITE_INFO.url}/amenities` },
         ])}
       />
 

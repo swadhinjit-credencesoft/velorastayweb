@@ -28,8 +28,8 @@ export default function LocationPage() {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Location", url: "/location" },
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Location", url: `${SITE_INFO.url}/location` },
         ])}
       />
 

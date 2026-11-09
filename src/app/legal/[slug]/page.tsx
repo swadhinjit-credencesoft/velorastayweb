@@ -33,7 +33,7 @@ export default function LegalPage({ params }: Props) {
 
   return (
     <>
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: page.title, url: `/legal/${page.slug}` }])} />
+      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: page.title, url: `${SITE_INFO.url}/legal/${page.slug}` }])} />
 
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">

@@ -24,7 +24,7 @@ export default function NxAboutPage() {
 
   return (
     <>
-      <JsonLd schema={generateOrganizationSchema()} />
+      <JsonLd schema={generateOrganizationSchema(true)} />
       <JsonLd
         schema={generateBreadcrumbSchema([
           { name: "Home", url: "https://yogirajhotel.com/yogiraj-nx" },

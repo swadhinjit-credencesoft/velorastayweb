@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema, generateHotelSchema } from "@/utils/schema";
+import { SITE_INFO } from "@/data/site";
 import { REVIEWS, REVIEWS_CONTENT, REVIEW_PLATFORMS } from "@/data/reviews";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 export default function ReviewsPage() {
   return (
     <>
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Reviews", url: "/reviews" }])} />
+      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: "Reviews", url: `${SITE_INFO.url}/reviews` }])} />
       <JsonLd schema={generateHotelSchema()} />
 
       <section className="relative -mt-[72px] md:-mt-[120px] pt-28 md:pt-36 pb-16 md:pb-20">

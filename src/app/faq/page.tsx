@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/utils/schema";
+import { SITE_INFO } from "@/data/site";
 import { FAQ_CATEGORIES } from "@/data/faq";
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export default function FAQPage() {
 
   return (
     <>
-      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "FAQ", url: "/faq" }])} />
+      <JsonLd schema={generateBreadcrumbSchema([{ name: "Home", url: SITE_INFO.url }, { name: "FAQ", url: `${SITE_INFO.url}/faq` }])} />
       <JsonLd schema={generateFAQSchema(allItems)} />
 
       <section className="relative -mt-[72px] md:-mt-[120px] pt-28 md:pt-36 pb-16 md:pb-20">

@@ -47,9 +47,9 @@ export default function GalleryCategoryPage({ params }: Props) {
     <>
       <JsonLd
         schema={generateBreadcrumbSchema([
-          { name: "Home", url: "/" },
-          { name: "Gallery", url: "/gallery" },
-          { name: category.name, url: `/gallery/${category.slug}` },
+          { name: "Home", url: SITE_INFO.url },
+          { name: "Gallery", url: `${SITE_INFO.url}/gallery` },
+          { name: category.name, url: `${SITE_INFO.url}/gallery/${category.slug}` },
         ])}
       />
 
