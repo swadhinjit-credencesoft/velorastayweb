@@ -23,6 +23,20 @@ export const CONTACT_INFO: ContactInfo[] = [
     primary: true,
   },
   {
+    label: "Travel & Transport (Mr. Sachin)",
+    icon: "lucide:car",
+    value: "+91 76767 73535 (Special Discount)",
+    href: "tel:+917676773535",
+    primary: true,
+  },
+  {
+    label: "Travel Desk WhatsApp",
+    icon: "lucide:message-circle",
+    value: "+91 76767 73535",
+    href: "https://api.whatsapp.com/send?phone=917676773535&text=Hello%20Mr.%20Sachin%2C%20I%20am%20staying%20at%20Hotel%20Yogiraj%20NX%20and%20enquiring%20about%20transport%20services%20with%20special%20discount.",
+    primary: true,
+  },
+  {
     label: "WhatsApp",
     icon: "lucide:message-circle",
     value: "+91 99030 33535",
@@ -48,6 +62,8 @@ export interface Department {
   description: string;
   email: string;
   phone: string;
+  contactPerson?: string;
+  specialOffer?: string;
 }
 
 export const CONTACT_DEPARTMENT: Department[] = [
@@ -57,6 +73,15 @@ export const CONTACT_DEPARTMENT: Department[] = [
     description: "Bookings, availability and room rates",
     email: "info@yogirajhotel.com",
     phone: "+91 99030 33535",
+  },
+  {
+    id: "dept-travel",
+    name: "Travel & Transport Desk",
+    contactPerson: "Mr. Sachin",
+    specialOffer: "Special Discount Available",
+    description: "Airport transfers (SAG), Shirdi railway station pickup/drop, Shani Shingnapur darshan tours, and local taxi cabs. Exclusive special discounts for in-house hotel guests!",
+    email: "info@yogirajhotel.com",
+    phone: "+91 76767 73535",
   },
   {
     id: "dept-frontdesk",
@@ -69,13 +94,6 @@ export const CONTACT_DEPARTMENT: Department[] = [
     id: "dept-restaurant",
     name: "Restaurant",
     description: "Dining, meal plans and special requests",
-    email: "info@yogirajhotel.com",
-    phone: "+91 99030 33535",
-  },
-  {
-    id: "dept-travel",
-    name: "Temple & Travel",
-    description: "Sai Baba Temple guidance, sightseeing, taxis and airport transfers",
     email: "info@yogirajhotel.com",
     phone: "+91 99030 33535",
   },

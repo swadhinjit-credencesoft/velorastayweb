@@ -74,6 +74,39 @@ export default function NxLocationPage() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+
+          <div className="mt-8 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <span className="inline-block bg-amber-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+                Special Discount For Hotel Guests
+              </span>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                Need Travel & Transport Assistance in Shirdi?
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base mt-1 max-w-2xl">
+                Book direct airport pickup/drop (SAG), Shirdi railway station transfers, or day trips to Shani Shingnapur, Trimbakeshwar & Nashik at exclusive discounted rates for our hotel guests.
+              </p>
+              <p className="text-gray-900 text-sm font-semibold mt-2">
+                Travel Manager: <span className="text-amber-700">Mr. Sachin</span> • Phone: <span className="text-amber-700">+91 76767 73535</span>
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <a
+                href="tel:+917676773535"
+                className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-colors shadow-sm"
+              >
+                Call Mr. Sachin
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=917676773535&text=Hello%20Mr.%20Sachin%2C%20I%20am%20staying%20at%20Hotel%20Yogiraj%20NX%20and%20enquiring%20about%20transport%20services%20with%20special%20discount."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-colors shadow-sm"
+              >
+                WhatsApp Desk
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

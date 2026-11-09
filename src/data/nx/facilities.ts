@@ -1,4 +1,4 @@
-﻿import type { SectionContent, Facility } from "@/types";
+import type { SectionContent, Facility } from "@/types";
 
 export const FACILITIES_CONTENT: SectionContent = {
   eyebrow: "Hotel Amenities",
@@ -72,6 +72,22 @@ export const FACILITIES: Facility[] = [
     icon: "lucide:car",
     image: "/yogirajimg/AKS08545.avif",
     features: ["On-site parking", "Free for guests"],
+    category: "transport",
+  },
+  {
+    id: "fac-transport",
+    slug: "travel-transport-service",
+    name: "Travel & Transport Service (Special Discount)",
+    description:
+      "Comfortable airport transfers (SAG), Shirdi railway station pickup/drop, local taxi services, and Shani Shingnapur darshan tours with exclusive special discounts for hotel guests. Contact Mr. Sachin at +91 76767 73535.",
+    icon: "lucide:car",
+    image: "/yogirajimg/AKS08545.avif",
+    features: [
+      "Special Discount for Hotel Guests",
+      "Travel Manager: Mr. Sachin (+91 76767 73535)",
+      "Shirdi Airport (SAG) & Railway Station Transfers",
+      "Shani Shingnapur & Outstation Sightseeing Cabs",
+    ],
     category: "transport",
   },
   {

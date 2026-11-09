@@ -77,6 +77,14 @@ export default function Footer() {
                   <span>{phoneFormatted}</span>
                 </a>
                 <a
+                  href="tel:+917676773535"
+                  className={styles.contactItem}
+                  title="Travel & Transport (Mr. Sachin) - Special Discount"
+                >
+                  <Icon icon="lucide:car" width={16} height={16} />
+                  <span>Travel Desk: +91 76767 73535 (Mr. Sachin)</span>
+                </a>
+                <a
                   href={`mailto:${currentSite.email}`}
                   className={styles.contactItem}
                 >

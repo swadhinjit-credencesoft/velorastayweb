@@ -1,4 +1,4 @@
-﻿export interface LocalSeoPage {
+export interface LocalSeoPage {
   slug: string;
   h1: string;
   metaTitle: string;
@@ -139,7 +139,7 @@ export const LOCAL_SEO_PAGES: LocalSeoPage[] = [
     pointsLabel: "Good to know",
     points: [
       "Shirdi Airport (SAG) — approx. 15 km",
-      "Airport transfer & taxi assistance available",
+      "Airport transfers & taxi assistance with special discounts (Contact Mr. Sachin: +91 76767 73535)",
       "24-hour front desk for early departures",
       "Comfortable rooms for rest before or after your flight",
     ],

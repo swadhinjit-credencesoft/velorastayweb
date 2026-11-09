@@ -182,6 +182,76 @@
   }
 }
 
+.departmentHeaderRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-xs;
+}
+
+.departmentBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.departmentPerson {
+  font-size: 13px;
+  color: v.$neutral-700;
+
+  strong {
+    color: v.$color-accent-dark;
+  }
+}
+
+.departmentActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-sm;
+  margin-top: v.$space-2xs;
+}
+
+.departmentPhone {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2xs;
+  font-size: 13px;
+  font-weight: 600;
+  color: v.$color-text-main;
+  transition: color v.$duration-fast;
+
+  &:hover {
+    color: v.$color-accent-dark;
+    text-decoration: underline;
+  }
+}
+
+.departmentWhatsApp {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2xs;
+  font-size: 13px;
+  font-weight: 600;
+  color: #15803d;
+  background-color: #f0fdf4;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #bbf7d0;
+  transition: background-color v.$duration-fast;
+
+  &:hover {
+    background-color: #dcfce7;
+  }
+}
+
 // ─── Map ───────────────────────────────────────────────
 
 .mapCard {

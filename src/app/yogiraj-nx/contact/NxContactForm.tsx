@@ -2,12 +2,15 @@
 
 import Icon from "@/components/Icon";
 import { CONTACT_INFO, CONTACT_DEPARTMENT } from "@/data/nx/contact";
-import { SITE_INFO as NX_SITE } from "@/data/nx/site";
+import { SITE_INFO as NX_SITE, GOOGLE_MAPS_URL } from "@/data/nx/site";
 import styles from "@/app/contact/ContactForm.module.scss";
 
 const DEPARTMENT_ICONS: Record<string, string> = {
   "dept-general": "lucide:help-circle",
   "dept-reservations": "lucide:calendar-check",
+  "dept-travel": "lucide:car",
+  "dept-frontdesk": "lucide:headphones",
+  "dept-restaurant": "lucide:utensils",
   "dept-events": "lucide:party-popper",
   "dept-feedback": "lucide:message-square",
 };
@@ -55,36 +58,74 @@ export default function NxContactForm() {
             <span className={styles.eyebrow}>Departments</span>
             <h2 className={styles.heading}>Who Can Help You</h2>
             <p className={styles.description}>
-              Reach the right team directly — every department responds within
-              a few hours.
+              Reach the right team directly — for rooms, dining, or travel & transport bookings with exclusive guest discounts.
             </p>
           </div>
 
           <div className={styles.departmentList}>
-            {CONTACT_DEPARTMENT.map((dept) => (
-              <div key={dept.id} className={styles.departmentCard}>
-                <span className={styles.departmentIcon}>
-                  <Icon
-                    icon={DEPARTMENT_ICONS[dept.id] ?? "lucide:user"}
-                    width={18}
-                    height={18}
-                  />
-                </span>
-                <div className={styles.departmentBody}>
-                  <span className={styles.departmentName}>{dept.name}</span>
-                  <span className={styles.departmentDesc}>
-                    {dept.description}
+            {CONTACT_DEPARTMENT.map((dept) => {
+              const cleanPhone = dept.phone.replace(/[^0-9]/g, "");
+              const waText = dept.contactPerson
+                ? `Hello ${dept.contactPerson}, I am staying at Hotel Yogiraj NX and enquiring about transport services with special discount.`
+                : `Hello ${dept.name}, I am enquiring about services at Hotel Yogiraj NX.`;
+
+              return (
+                <div key={dept.id} className={styles.departmentCard}>
+                  <span className={styles.departmentIcon}>
+                    <Icon
+                      icon={DEPARTMENT_ICONS[dept.id] ?? "lucide:user"}
+                      width={18}
+                      height={18}
+                    />
                   </span>
-                  <a
-                    href={`mailto:${dept.email}`}
-                    className={styles.departmentEmail}
-                  >
-                    <Icon icon="lucide:mail" width={14} height={14} />
-                    {dept.email}
-                  </a>
+                  <div className={styles.departmentBody}>
+                    <div className={styles.departmentHeaderRow}>
+                      <span className={styles.departmentName}>{dept.name}</span>
+                      {dept.specialOffer && (
+                        <span className={styles.departmentBadge}>
+                          {dept.specialOffer}
+                        </span>
+                      )}
+                    </div>
+                    {dept.contactPerson && (
+                      <span className={styles.departmentPerson}>
+                        Contact: <strong>{dept.contactPerson}</strong>
+                      </span>
+                    )}
+                    <span className={styles.departmentDesc}>
+                      {dept.description}
+                    </span>
+                    <div className={styles.departmentActions}>
+                      <a
+                        href={`tel:${dept.phone.replace(/\s+/g, "")}`}
+                        className={styles.departmentPhone}
+                      >
+                        <Icon icon="lucide:phone" width={14} height={14} />
+                        {dept.phone}
+                      </a>
+                      <a
+                        href={`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(
+                          waText
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.departmentWhatsApp}
+                      >
+                        <Icon icon="lucide:message-circle" width={14} height={14} />
+                        WhatsApp
+                      </a>
+                      <a
+                        href={`mailto:${dept.email}`}
+                        className={styles.departmentEmail}
+                      >
+                        <Icon icon="lucide:mail" width={14} height={14} />
+                        {dept.email}
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -102,9 +143,9 @@ export default function NxContactForm() {
 
           <div className={styles.mapCard}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0!2d74.48043686!3d19.76695517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPimpalwadi%20Rd%2C%20near%20Sai%20Baba%20Temple%2C%20near%20Sai%20Sh%20corner%2C%20Shiv%20Nagar%2C%20Shirdi%2C%20Maharashtra%20423109%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000"
+              src={GOOGLE_MAPS_URL}
               className={styles.map}
-              title="Hotel Yogiraj NX Shirdi location map"
+              title={`${NX_SITE.name} location map`}
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"

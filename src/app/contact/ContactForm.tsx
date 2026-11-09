@@ -8,6 +8,9 @@ import styles from "./ContactForm.module.scss";
 const DEPARTMENT_ICONS: Record<string, string> = {
   "dept-general": "lucide:help-circle",
   "dept-reservations": "lucide:calendar-check",
+  "dept-travel": "lucide:car",
+  "dept-frontdesk": "lucide:headphones",
+  "dept-restaurant": "lucide:utensils",
   "dept-events": "lucide:party-popper",
   "dept-feedback": "lucide:message-square",
 };
@@ -55,36 +58,74 @@ export default function ContactForm() {
             <span className={styles.eyebrow}>Departments</span>
             <h2 className={styles.heading}>Who Can Help You</h2>
             <p className={styles.description}>
-              Reach the right team directly — every department responds within
-              a few hours.
+              Reach the right team directly — for rooms, dining, or travel & transport bookings with exclusive guest discounts.
             </p>
           </div>
 
           <div className={styles.departmentList}>
-            {CONTACT_DEPARTMENT.map((dept) => (
-              <div key={dept.id} className={styles.departmentCard}>
-                <span className={styles.departmentIcon}>
-                  <Icon
-                    icon={DEPARTMENT_ICONS[dept.id] ?? "lucide:user"}
-                    width={18}
-                    height={18}
-                  />
-                </span>
-                <div className={styles.departmentBody}>
-                  <span className={styles.departmentName}>{dept.name}</span>
-                  <span className={styles.departmentDesc}>
-                    {dept.description}
+            {CONTACT_DEPARTMENT.map((dept) => {
+              const cleanPhone = dept.phone.replace(/[^0-9]/g, "");
+              const waText = dept.contactPerson
+                ? `Hello ${dept.contactPerson}, I am staying at Hotel Yogiraj and enquiring about transport services with special discount.`
+                : `Hello ${dept.name}, I am enquiring about services at Hotel Yogiraj.`;
+
+              return (
+                <div key={dept.id} className={styles.departmentCard}>
+                  <span className={styles.departmentIcon}>
+                    <Icon
+                      icon={DEPARTMENT_ICONS[dept.id] ?? "lucide:user"}
+                      width={18}
+                      height={18}
+                    />
                   </span>
-                  <a
-                    href={`mailto:${dept.email}`}
-                    className={styles.departmentEmail}
-                  >
-                    <Icon icon="lucide:mail" width={14} height={14} />
-                    {dept.email}
-                  </a>
+                  <div className={styles.departmentBody}>
+                    <div className={styles.departmentHeaderRow}>
+                      <span className={styles.departmentName}>{dept.name}</span>
+                      {dept.specialOffer && (
+                        <span className={styles.departmentBadge}>
+                          {dept.specialOffer}
+                        </span>
+                      )}
+                    </div>
+                    {dept.contactPerson && (
+                      <span className={styles.departmentPerson}>
+                        Contact: <strong>{dept.contactPerson}</strong>
+                      </span>
+                    )}
+                    <span className={styles.departmentDesc}>
+                      {dept.description}
+                    </span>
+                    <div className={styles.departmentActions}>
+                      <a
+                        href={`tel:${dept.phone.replace(/\s+/g, "")}`}
+                        className={styles.departmentPhone}
+                      >
+                        <Icon icon="lucide:phone" width={14} height={14} />
+                        {dept.phone}
+                      </a>
+                      <a
+                        href={`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(
+                          waText
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.departmentWhatsApp}
+                      >
+                        <Icon icon="lucide:message-circle" width={14} height={14} />
+                        WhatsApp
+                      </a>
+                      <a
+                        href={`mailto:${dept.email}`}
+                        className={styles.departmentEmail}
+                      >
+                        <Icon icon="lucide:mail" width={14} height={14} />
+                        {dept.email}
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -99,11 +140,12 @@ export default function ContactForm() {
               Temple and Shirdi Bus Station.
             </p>
           </div>
+
           <div className={styles.mapCard}>
             <iframe
               src={GOOGLE_MAPS_URL}
               className={styles.map}
-              title="Hotel Yogiraj Shirdi location map"
+              title={`${SITE_INFO.name} location map`}
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
