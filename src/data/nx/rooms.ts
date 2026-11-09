@@ -7,7 +7,7 @@ export const ROOMS_CONTENT: SectionContent = {
   eyebrow: "Rooms & Suites",
   heading: "Rooms at Hotel Yogiraj NX",
   description:
-    "Choose from comfortable AC and Non-AC rooms in Shirdi, from budget double rooms to spacious family-friendly four-bed rooms — all within easy reach of the Sai Baba Temple.",
+    "Choose from comfortable AC rooms in Shirdi, from double rooms to luxury suites with bathtubs and spacious six-bedroom family suites — all within easy reach of the Sai Baba Temple.",
 };
 
 export const ROOM_AMENITIES: RoomAmenity[] = [
