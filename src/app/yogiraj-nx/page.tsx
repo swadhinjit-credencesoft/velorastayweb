@@ -13,7 +13,7 @@ import { generateHotelSchema, generateWebsiteSchema } from "@/utils/schema";
 import { SITE_INFO as NX_SITE, HERO_SLIDES as NX_SLIDES } from "@/data/nx/site";
 import { GALLERY_IMAGES as NX_GALLERY } from "@/data/nx/gallery";
 import { REVIEWS as NX_REVIEWS_LIST } from "@/data/nx/reviews";
-import { NX_BOOKING_URL } from "@/config";
+import { NX_BOOKING_URL, NX_PROPERTY_ID } from "@/config";
 
 export const metadata: Metadata = {
   title: "Hotel Yogiraj NX | Hotel Near Sai Baba Temple, Shirdi",
@@ -39,12 +39,10 @@ export const metadata: Metadata = {
 };
 
 const NX_ROOM_IMAGES: Record<string, string> = {
-  "double-bed-room": "/yogirajimg/AKS08605.avif",
-  "double-bed-non-ac-room": "/yogirajimg/AKS08604.avif",
-  "triple-bed-ac-room": "/yogirajimg/AKS08614.avif",
-  "triple-bed-non-ac-room": "/yogirajimg/AKS08614.avif",
-  "four-bed-ac-room": "/yogirajimg/AKS08614.avif",
-  "four-bed-non-ac-room": "/yogirajimg/AKS08614.avif",
+  "double-bed-ac": "/yogirajimg/AKS08605.avif",
+  "triple-bed-ac": "/yogirajimg/AKS08614.avif",
+  "suite-room-with-bathtub": "/yogirajimg/AKS08582.avif",
+  "six-bedroom-with-2-washrooms": "/yogirajimg/4.avif",
 };
 
 export default function HotelYogirajNxHomePage() {
@@ -64,9 +62,10 @@ export default function HotelYogirajNxHomePage() {
         <SearchBar />
       </Hero>
       <FeaturedRooms
+        propertyId={NX_PROPERTY_ID}
         eyebrow="Rooms & Suites"
         heading="Rooms at Hotel Yogiraj NX"
-        description="Choose from comfortable AC and Non-AC rooms in Shirdi, from budget double rooms to spacious family-friendly four-bed rooms — all within easy reach of the Sai Baba Temple."
+        description="Choose from comfortable AC rooms in Shirdi, from double rooms to luxury suites with bathtubs and spacious six-bedroom family suites — all within easy reach of the Sai Baba Temple."
         roomsHref="/yogiraj-nx/rooms"
         roomBaseHref="/yogiraj-nx/rooms"
         roomImagesMap={NX_ROOM_IMAGES}

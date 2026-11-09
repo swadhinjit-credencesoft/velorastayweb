@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Icon from "@/components/Icon";
-import { BOOKING_ENGINE_URL } from "@/config";
+import { BOOKING_ENGINE_URL, PROPERTY_ID } from "@/config";
 import { SITE_INFO } from "@/data/site";
 import type { RoomType } from "@/types";
 import styles from "./RoomBookingWidget.module.scss";
 
 interface RoomBookingWidgetProps {
   room: RoomType;
+  propertyId?: number;
   bookingEngineBaseUrl?: string;
   hotelName?: string;
   whatsappPhone?: string;
@@ -17,6 +18,7 @@ interface RoomBookingWidgetProps {
 
 export default function RoomBookingWidget({
   room,
+  propertyId = PROPERTY_ID,
   bookingEngineBaseUrl = BOOKING_ENGINE_URL,
   hotelName = "Hotel Yogiraj",
   whatsappPhone = "919595533535",
@@ -51,7 +53,7 @@ export default function RoomBookingWidget({
     let isMounted = true;
     setIsLoading(true);
 
-    const url = `https://api.thehotelmate.co/api/thm/checkAvailability/651?fromDate=${checkIn}&toDate=${checkOut}&noOfRooms=${roomsCount}&noOfPersons=${adults}`;
+    const url = `https://api.thehotelmate.co/api/thm/checkAvailability/${propertyId}?fromDate=${checkIn}&toDate=${checkOut}&noOfRooms=${roomsCount}&noOfPersons=${adults}`;
 
     fetch(url)
       .then((res) => {
@@ -89,7 +91,7 @@ export default function RoomBookingWidget({
     return () => {
       isMounted = false;
     };
-  }, [checkIn, checkOut, adults, roomsCount, room.name, room.price, room.rawRoom?.id]);
+  }, [propertyId, checkIn, checkOut, adults, roomsCount, room.name, room.price, room.rawRoom?.id]);
 
   const nights = useMemo(() => {
     if (!checkIn || !checkOut) return 1;

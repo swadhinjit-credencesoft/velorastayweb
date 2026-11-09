@@ -26,7 +26,8 @@ function extractSize(description: string, occupancy: number): { size: number; si
       sizeUnit: `sq. ft. (${sqm} m²)`,
     };
   }
-  const defaultSqft = occupancy >= 4 ? 215 : occupancy === 3 ? 160 : 120;
+  const defaultSqft =
+    occupancy >= 6 ? 320 : occupancy >= 4 ? 215 : occupancy === 3 ? 160 : 120;
   const defaultSqm = Math.round(defaultSqft / 10.764);
   return {
     size: defaultSqft,
@@ -34,23 +35,31 @@ function extractSize(description: string, occupancy: number): { size: number; si
   };
 }
 
-function mapApiImages(images: ApiRoom["imageList"], roomName: string): RoomImage[] {
+function mapApiImages(
+  images: ApiRoom["imageList"],
+  roomName: string,
+  propertyId?: number
+): RoomImage[] {
   const valid = (images || []).filter(
     (img) => img && typeof img.url === "string" && img.url.trim().length > 0
   );
   if (valid.length === 0) {
+    const isNx = propertyId === 3653;
+    const defaultHero = isNx ? "/yogirajimg/01.avif" : "/yogirajhero2.jpeg";
+    const defaultSec = isNx ? "/yogirajimg/4.avif" : "/yogirajhero.jpeg";
+    const brandName = isNx ? "Hotel Yogiraj NX" : "Hotel Yogiraj";
     return [
       {
         id: "hero-aerial",
-        src: "/yogirajhero2.jpeg",
-        alt: `${roomName} at Hotel Yogiraj`,
-        caption: "Hotel Yogiraj",
+        src: defaultHero,
+        alt: `${roomName} at ${brandName}`,
+        caption: brandName,
       },
       {
         id: "hero-driveway",
-        src: "/yogirajhero.jpeg",
+        src: defaultSec,
         alt: `${roomName} building and entrance`,
-        caption: "Hotel entrance",
+        caption: `${brandName} entrance`,
       },
     ];
   }
@@ -64,6 +73,18 @@ function mapApiImages(images: ApiRoom["imageList"], roomName: string): RoomImage
 
 function getBedDetails(name: string, occupancy: number): { bedType: string; bedConfig: string } {
   const lower = name.toLowerCase();
+  if (lower.includes("six") || occupancy >= 6) {
+    return {
+      bedType: "Six Bed / Family Suite",
+      bedConfig: "Multiple Beds & 2 Washrooms (Up to 6 Guests)",
+    };
+  }
+  if (lower.includes("suite") || lower.includes("bathtub")) {
+    return {
+      bedType: "Suite Room with Bathtub",
+      bedConfig: "1 King Bed + Private Bathtub (Up to 3 Guests)",
+    };
+  }
   if (lower.includes("four") || occupancy >= 4) {
     return {
       bedType: "Four Bed / Family",
@@ -84,6 +105,12 @@ function getBedDetails(name: string, occupancy: number): { bedType: string; bedC
 
 function getRoomTag(name: string, price: number, occupancy: number): string {
   const lower = name.toLowerCase();
+  if (lower.includes("bathtub") || lower.includes("suite")) {
+    return "Luxury Suite";
+  }
+  if (lower.includes("six") || occupancy >= 6) {
+    return "Large Family Group";
+  }
   if (lower.includes("non-ac") || lower.includes("non ac")) {
     return price <= 1200 ? "Budget Choice" : "Value Stay";
   }
@@ -129,8 +156,12 @@ export function apiRoomToRoomType(apiRoom: ApiRoom): RoomType {
   if (!facilitySlugs.includes("free-parking")) {
     facilitySlugs.push("free-parking");
   }
+  if (cleanName.toLowerCase().includes("bathtub") && !facilitySlugs.includes("jacuzzi")) {
+    facilitySlugs.push("jacuzzi");
+  }
 
   const cleanDesc = stripHtml(apiRoom.description || "");
+  const hasBathtub = cleanName.toLowerCase().includes("bathtub");
 
   return {
     id: `room-${slug}`,
@@ -152,10 +183,12 @@ export function apiRoomToRoomType(apiRoom: ApiRoom): RoomType {
     minStay,
     bedType,
     bedConfig,
-    bathroomType: "Private Bathroom (Geyser Hot Water)",
+    bathroomType: hasBathtub
+      ? "Private Bathroom with Luxury Bathtub"
+      : "Private Bathroom (Geyser Hot Water)",
     floor: "Multiple Floors",
     view: "Interior / City View",
-    images: mapApiImages(apiRoom.imageList, cleanName),
+    images: mapApiImages(apiRoom.imageList, cleanName, apiRoom.propertyId),
     amenities: facilitySlugs,
     facilitiesList: apiRoom.roomFacilities || [],
     rawRoom: apiRoom,
@@ -167,7 +200,7 @@ export function apiRoomToRoomType(apiRoom: ApiRoom): RoomType {
     popular:
       Boolean(apiRoom.ranking && apiRoom.ranking <= 3) ||
       occupancy === 2 ||
-      cleanName.toLowerCase().includes("four bed ac"),
+      cleanName.toLowerCase().includes("suite"),
     available: noOfRooms > 0,
     tag,
   };

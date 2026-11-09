@@ -14,6 +14,7 @@ interface FeaturedRoomsProps {
   roomsHref?: string;
   roomBaseHref?: string;
   roomImagesMap?: Record<string, string>;
+  propertyId?: number;
 }
 
 export default async function FeaturedRooms({
@@ -23,8 +24,9 @@ export default async function FeaturedRooms({
   roomsHref = "/rooms",
   roomBaseHref = "/rooms",
   roomImagesMap,
+  propertyId,
 }: FeaturedRoomsProps = {}) {
-  const property = await checkAvailability();
+  const property = await checkAvailability(undefined, propertyId);
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
   const popularRooms = rooms.filter((room) => room.popular);
   const displayRooms = popularRooms.length > 0 ? popularRooms : rooms.slice(0, 3);
@@ -41,9 +43,9 @@ export default async function FeaturedRooms({
         <div className={styles.grid}>
           {displayRooms.map((room) => {
             const displayImage =
-              (roomImagesMap && roomImagesMap[room.slug]) ||
               room.images[0]?.src ||
-              "/yogirajhero2.jpeg";
+              (roomImagesMap && roomImagesMap[room.slug]) ||
+              "/yogirajimg/01.avif";
 
             return (
               <div key={room.id} className={styles.cardItem}>

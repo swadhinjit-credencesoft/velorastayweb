@@ -5,12 +5,12 @@ import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import Icon from "@/components/Icon";
 import RoomBookingWidget from "@/components/rooms/RoomBookingWidget";
-import { NX_BOOKING_ENGINE_URL } from "@/config";
+import { NX_BOOKING_ENGINE_URL, NX_PROPERTY_ID } from "@/config";
 import { ROOM_AMENITIES } from "@/data/nx/rooms";
 import { SITE_INFO as NX_SITE } from "@/data/nx/site";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
-import { checkAvailability } from "@/lib/api";
+import { checkNxAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "@/app/rooms/[slug]/room-detail.module.scss";
 
@@ -19,46 +19,42 @@ interface RoomPageProps {
 }
 
 const NX_ROOM_IMAGES: Record<string, string[]> = {
-  "double-bed-room": [
+  "double-bed-ac": [
     "/yogirajimg/AKS08605.avif",
     "/yogirajimg/AKS08604.avif",
     "/yogirajimg/AKS08635.avif",
   ],
-  "double-bed-non-ac-room": [
-    "/yogirajimg/AKS08604.avif",
-    "/yogirajimg/AKS08605.avif",
-  ],
-  "triple-bed-ac-room": [
+  "triple-bed-ac": [
     "/yogirajimg/AKS08614.avif",
     "/yogirajimg/AKS08605.avif",
     "/yogirajimg/AKS08635.avif",
   ],
-  "triple-bed-non-ac-room": [
-    "/yogirajimg/AKS08614.avif",
-    "/yogirajimg/AKS08604.avif",
+  "suite-room-with-bathtub": [
+    "/yogirajimg/AKS08582.avif",
+    "/yogirajimg/AKS08584.avif",
+    "/yogirajimg/01.avif",
   ],
-  "four-bed-ac-room": [
-    "/yogirajimg/AKS08614.avif",
-    "/yogirajimg/AKS08635.avif",
-    "/yogirajimg/AKS08605.avif",
-  ],
-  "four-bed-non-ac-room": [
-    "/yogirajimg/AKS08614.avif",
-    "/yogirajimg/AKS08604.avif",
+  "six-bedroom-with-2-washrooms": [
+    "/yogirajimg/4.avif",
+    "/yogirajimg/3.avif",
+    "/yogirajimg/AKS08625.avif",
   ],
 };
 
 export async function generateStaticParams() {
-  const property = await checkAvailability();
+  const property = await checkNxAvailability();
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
   return rooms.map((room) => ({ slug: room.slug }));
 }
 
 export async function generateMetadata({ params }: RoomPageProps): Promise<Metadata> {
-  const property = await checkAvailability();
+  const property = await checkNxAvailability();
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
   const room = rooms.find((r) => r.slug === params.slug);
   if (!room) return { title: "Room Not Found" };
+
+  const roomImages = (room.images || []).map((img) => img.src).filter(Boolean);
+  const primaryImg = roomImages[0] || NX_ROOM_IMAGES[room.slug]?.[0] || "/yogirajimg/AKS08605.avif";
 
   return {
     title: `${room.name} | Hotel Yogiraj NX, Shirdi`,
@@ -70,7 +66,7 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
       url: generateCanonicalUrl(`/yogiraj-nx/rooms/${room.slug}`),
       images: [
         {
-          url: NX_ROOM_IMAGES[room.slug]?.[0] || room.images[0]?.src || "/yogirajimg/AKS08605.avif",
+          url: primaryImg,
           width: 800,
           height: 600,
           alt: room.name,
@@ -81,7 +77,7 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
 }
 
 export default async function NxRoomDetailPage({ params }: RoomPageProps) {
-  const property = await checkAvailability();
+  const property = await checkNxAvailability();
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
   const room = rooms.find((r) => r.slug === params.slug);
   if (!room) notFound();
@@ -93,7 +89,10 @@ export default async function NxRoomDetailPage({ params }: RoomPageProps) {
     room.amenities.includes(a.id) && !apiFacilityNames.has(a.label.toLowerCase().trim())
   );
 
-  const imagesToDisplay = NX_ROOM_IMAGES[room.slug] || room.images.map((img) => img.src);
+  const roomApiImages = (room.images || []).map((img) => img.src).filter(Boolean);
+  const imagesToDisplay = roomApiImages.length > 0
+    ? roomApiImages
+    : (NX_ROOM_IMAGES[room.slug] || ["/yogirajimg/AKS08605.avif"]);
   const primaryImage = imagesToDisplay[0] || "/yogirajimg/AKS08605.avif";
 
   return (
@@ -252,6 +251,7 @@ export default async function NxRoomDetailPage({ params }: RoomPageProps) {
                 <div className={styles.stickyWidget}>
                   <RoomBookingWidget
                     room={room}
+                    propertyId={NX_PROPERTY_ID}
                     bookingEngineBaseUrl={NX_BOOKING_ENGINE_URL}
                     hotelName="Hotel Yogiraj NX"
                     whatsappPhone="919903033535"

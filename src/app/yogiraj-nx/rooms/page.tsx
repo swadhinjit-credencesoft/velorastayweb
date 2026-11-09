@@ -7,14 +7,14 @@ import { SITE_INFO as NX_SITE } from "@/data/nx/site";
 import { ROOMS_CONTENT as NX_ROOMS_CONTENT } from "@/data/nx/rooms";
 import { generateBreadcrumbSchema } from "@/utils/schema";
 import { generateCanonicalUrl } from "@/utils/seo";
-import { checkAvailability } from "@/lib/api";
+import { checkNxAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
 import styles from "@/app/rooms/rooms.module.scss";
 
 export const metadata: Metadata = {
   title: "Rooms & Rates | Hotel Yogiraj NX, Shirdi",
   description:
-    "Explore rooms at Hotel Yogiraj NX, Shirdi: Double Bed Non-AC, Double Bed, Triple Bed AC/Non-AC and Four Bed AC/Non-AC rooms with free Wi-Fi, near the Sai Baba Temple.",
+    "Explore rooms at Hotel Yogiraj NX, Shirdi: Double Bed AC, Triple Bed AC, Suite Room With Bathtub, and Six-Bedroom with 2 Washrooms with free Wi-Fi, near the Sai Baba Temple.",
   alternates: { canonical: "/yogiraj-nx/rooms" },
   openGraph: {
     title: "Rooms & Rates | Hotel Yogiraj NX, Shirdi",
@@ -24,16 +24,14 @@ export const metadata: Metadata = {
 };
 
 const NX_ROOM_IMAGES: Record<string, string> = {
-  "double-bed-room": "/yogirajimg/AKS08605.avif",
-  "double-bed-non-ac-room": "/yogirajimg/AKS08604.avif",
-  "triple-bed-ac-room": "/yogirajimg/AKS08614.avif",
-  "triple-bed-non-ac-room": "/yogirajimg/AKS08614.avif",
-  "four-bed-ac-room": "/yogirajimg/AKS08614.avif",
-  "four-bed-non-ac-room": "/yogirajimg/AKS08614.avif",
+  "double-bed-ac": "/yogirajimg/AKS08605.avif",
+  "triple-bed-ac": "/yogirajimg/AKS08614.avif",
+  "suite-room-with-bathtub": "/yogirajimg/AKS08582.avif",
+  "six-bedroom-with-2-washrooms": "/yogirajimg/4.avif",
 };
 
 export default async function NxRoomsPage() {
-  const property = await checkAvailability();
+  const property = await checkNxAvailability();
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
 
   return (
@@ -59,7 +57,9 @@ export default async function NxRoomsPage() {
         <div className={styles.grid}>
           {rooms.map((room) => {
             const displayImage =
-              NX_ROOM_IMAGES[room.slug] || room.images[0]?.src || "/yogirajimg/AKS08605.avif";
+              room.images[0]?.src ||
+              NX_ROOM_IMAGES[room.slug] ||
+              "/yogirajimg/AKS08605.avif";
 
             return (
               <Link

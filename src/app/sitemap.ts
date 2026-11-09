@@ -3,7 +3,7 @@ import { SITE_INFO } from "@/data/site";
 import { GALLERY_CATEGORIES } from "@/data/gallery";
 import { LOCAL_SEO_PAGES } from "@/data/seoPages";
 import { LEGAL_PAGES } from "@/data/legal";
-import { checkAvailability } from "@/lib/api";
+import { checkAvailability, checkNxAvailability } from "@/lib/api";
 import { apiRoomToRoomType } from "@/lib/rooms";
 
 const BASE_URL = SITE_INFO.url;
@@ -70,13 +70,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   const property = await checkAvailability();
-  const roomEntries = (property?.roomList ?? []).flatMap((room) => {
+  const nxProperty = await checkNxAvailability();
+
+  const mainRoomEntries = (property?.roomList ?? []).map((room) => {
     const mapped = apiRoomToRoomType(room);
-    return [
-      entry(`/rooms/${mapped.slug}`, 0.9, "weekly"),
-      entry(`/yogiraj-nx/rooms/${mapped.slug}`, 0.9, "weekly"),
-    ];
+    return entry(`/rooms/${mapped.slug}`, 0.9, "weekly");
   });
+
+  const nxRoomEntries = (nxProperty?.roomList ?? []).map((room) => {
+    const mapped = apiRoomToRoomType(room);
+    return entry(`/yogiraj-nx/rooms/${mapped.slug}`, 0.9, "weekly");
+  });
+
+  const roomEntries = [...mainRoomEntries, ...nxRoomEntries];
 
   const galleryEntries = GALLERY_CATEGORIES.map((cat) =>
     entry(`/gallery/${cat.slug}`, 0.5, "monthly")

@@ -1,6 +1,7 @@
 import type { ApiPropertyResponse, ApiCheckAvailabilityParams } from "@/types/api";
-import { API_BASE_URL, PROPERTY_ID } from "@/config";
+import { API_BASE_URL, PROPERTY_ID, NX_PROPERTY_ID } from "@/config";
 import fallbackProperty from "@/data/fallbackProperty.json";
+import nxFallbackProperty from "@/data/nx/fallbackProperty.json";
 
 function getDefaultDates() {
   const today = new Date();
@@ -13,9 +14,14 @@ function getDefaultDates() {
 }
 
 export async function checkAvailability(
-  params?: Partial<ApiCheckAvailabilityParams>
+  params?: Partial<ApiCheckAvailabilityParams>,
+  propertyId: number = PROPERTY_ID
 ): Promise<ApiPropertyResponse> {
   const defaults = getDefaultDates();
+  const fallback = (propertyId === NX_PROPERTY_ID
+    ? nxFallbackProperty
+    : fallbackProperty) as unknown as ApiPropertyResponse;
+
   const query = new URLSearchParams({
     fromDate: params?.fromDate ?? defaults.fromDate,
     toDate: params?.toDate ?? defaults.toDate,
@@ -25,18 +31,24 @@ export async function checkAvailability(
 
   try {
     const res = await fetch(
-      `${API_BASE_URL}/checkAvailability/${PROPERTY_ID}?${query}`,
+      `${API_BASE_URL}/checkAvailability/${propertyId}?${query}`,
       { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) }
     );
     if (!res.ok) {
-      return fallbackProperty as unknown as ApiPropertyResponse;
+      return fallback;
     }
     const data = await res.json();
     if (data && Array.isArray(data.roomList) && data.roomList.length > 0) {
       return data;
     }
-    return fallbackProperty as unknown as ApiPropertyResponse;
+    return fallback;
   } catch {
-    return fallbackProperty as unknown as ApiPropertyResponse;
+    return fallback;
   }
+}
+
+export async function checkNxAvailability(
+  params?: Partial<ApiCheckAvailabilityParams>
+): Promise<ApiPropertyResponse> {
+  return checkAvailability(params, NX_PROPERTY_ID);
 }
