@@ -142,6 +142,7 @@ export default function Header() {
           >
             <Icon icon={navCta.icon ?? "lucide:calendar-check"} width={16} height={16} className={styles.ctaIcon} />
             <span className={styles.ctaLabel}>{navCta.label}</span>
+            <span className={styles.ctaLabelShort}>Book</span>
           </Link>
 
           <button

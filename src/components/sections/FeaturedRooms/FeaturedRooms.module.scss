@@ -27,7 +27,7 @@
 .heading {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: v.$color-primary;

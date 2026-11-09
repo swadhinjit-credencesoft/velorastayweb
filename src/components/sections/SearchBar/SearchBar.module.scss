@@ -7,11 +7,13 @@
   gap: 0;
   padding: 6px;
   border-radius: v.$radius-xl;
-  background-color: rgba(10, 10, 20, 0.85);
+  background-color: rgba(10, 10, 20, 0.88);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .field {
@@ -36,7 +38,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.6);
   white-space: nowrap;
 }
 
@@ -44,7 +46,7 @@
 .select {
   width: 100%;
   padding: 6px 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   background-color: transparent;
@@ -52,6 +54,10 @@
   outline: none;
   appearance: auto;
   -webkit-appearance: auto;
+
+  @media (min-width: v.$bp-md) {
+    font-size: 14px;
+  }
 
   option {
     background: #1a1a2e;
@@ -124,9 +130,9 @@
 
   .searchBtn {
     grid-column: 1 / -1;
-    width: 100%;
+    width: auto;
     margin: 6px;
-    padding: 14px !important;
+    padding: 12px 20px !important;
   }
 }
 
@@ -138,12 +144,13 @@
     grid-template-columns: 1fr;
     gap: 0;
     padding: 6px;
+    border-radius: v.$radius-lg;
   }
 
   .field {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 10px 14px;
+    padding: 8px 12px;
 
     &:last-of-type {
       border-bottom: none;
@@ -152,8 +159,9 @@
 
   .searchBtn {
     grid-column: 1;
-    width: 100%;
+    width: auto;
     margin: 6px;
-    padding: 14px !important;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
   }
 }
