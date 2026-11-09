@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/utils/schema";
@@ -23,7 +23,7 @@ export default function FAQPage() {
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/yogirajhero2.jpeg)" }}
+            style={{ backgroundImage: "url(/yogirajhero1.png)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 to-[#16213e]/80" />
         </div>

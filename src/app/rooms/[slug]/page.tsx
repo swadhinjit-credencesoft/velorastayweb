@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: RoomPageProps): Promise<Metad
       url: generateCanonicalUrl(`/rooms/${room.slug}`),
       images: [
         {
-          url: room.images[0]?.src || "/yogirajhero2.jpeg",
+          url: room.images[0]?.src || "/yogirajhero1.png",
           width: 800,
           height: 600,
           alt: room.name,

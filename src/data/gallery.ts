@@ -27,21 +27,21 @@ export const HOTEL_GALLERY_IMAGES: GalleryImage[] = [
   // Exterior
   {
     id: "gal-ext-1",
-    src: "/yogirajhero2.jpeg",
+    src: "/yogirajhero1.png",
     alt: "Hotel Yogiraj building exterior aerial view in Shirdi",
     category: "exterior",
     caption: "Hotel Aerial View",
   },
   {
     id: "gal-ext-2",
-    src: "/yogirajhero1.jpeg",
+    src: "/yogirajhero2.png",
     alt: "Hotel Yogiraj facade and covered parking",
     category: "exterior",
     caption: "Facade & Parking",
   },
   {
     id: "gal-ext-3",
-    src: "/yogirajhero.jpeg",
+    src: "/yogirajhero3.png",
     alt: "Hotel Yogiraj entrance and driveway in Shirdi",
     category: "exterior",
     caption: "Entrance & Driveway",
@@ -66,7 +66,7 @@ export const HOTEL_GALLERY_IMAGES: GalleryImage[] = [
   // Dining
   {
     id: "gal-din-1",
-    src: "/yogirajhero1.jpeg",
+    src: "/yogirajhero2.png",
     alt: "Pure vegetarian restaurant and dining at Hotel Yogiraj",
     category: "dining",
     caption: "In-House Vegetarian Restaurant",
@@ -82,14 +82,14 @@ export const HOTEL_GALLERY_IMAGES: GalleryImage[] = [
   },
   {
     id: "gal-com-2",
-    src: "/yogirajhero.jpeg",
+    src: "/yogirajhero3.png",
     alt: "Hotel Yogiraj entrance driveway and surroundings",
     category: "common",
     caption: "Driveway & Entrance",
   },
   {
     id: "gal-com-3",
-    src: "/yogirajhero1.jpeg",
+    src: "/yogirajhero1.png",
     alt: "Hotel Yogiraj covered parking area",
     category: "common",
     caption: "Covered Parking",

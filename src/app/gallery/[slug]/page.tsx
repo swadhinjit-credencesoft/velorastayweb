@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${category.name} Gallery | Hotel Yogiraj, Shirdi`,
       description: `Photo gallery of ${category.name} at Hotel Yogiraj, Shirdi.`,
       url: `${SITE_INFO.url}/gallery/${category.slug}`,
-      images: [{ url: "/yogirajhero2.jpeg", alt: category.name }],
+      images: [{ url: "/yogirajhero1.png", alt: category.name }],
     },
   };
 }
@@ -56,7 +56,7 @@ export default function GalleryCategoryPage({ params }: Props) {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/yogirajhero2.jpeg"
+            src="/yogirajhero1.png"
             alt={category.name}
             fill
             className="object-cover"

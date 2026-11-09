@@ -45,8 +45,8 @@ function mapApiImages(
   );
   if (valid.length === 0) {
     const isNx = propertyId === 3653;
-    const defaultHero = isNx ? "/yogirajimg/01.avif" : "/yogirajhero2.jpeg";
-    const defaultSec = isNx ? "/yogirajimg/4.avif" : "/yogirajhero.jpeg";
+    const defaultHero = isNx ? "/yogirajimg/01.avif" : "/yogirajhero1.png";
+    const defaultSec = isNx ? "/yogirajimg/4.avif" : "/yogirajhero2.png";
     const brandName = isNx ? "Hotel Yogiraj NX" : "Hotel Yogiraj";
     return [
       {

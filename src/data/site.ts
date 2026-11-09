@@ -49,26 +49,26 @@ export const SOCIAL_LINKS: SocialLinks = {
 
 export const SITE_ASSETS = {
   heroImages: [
-    "/yogirajhero2.jpeg",
-    "/yogirajhero1.jpeg",
-    "/yogirajhero.jpeg",
+    "/yogirajhero1.png",
+    "/yogirajhero2.png",
+    "/yogirajhero3.png",
   ] as const,
   logo: "/yogirajlogo.png",
   logoLight: "",
- favicon : "/yogirajlogo.png",
+  favicon : "/yogirajlogo.png",
   aboutImage: "/reception.jpeg",
-  roomsPreviewImage: "/yogirajhero2.jpeg",
-  diningImage: "/yogirajhero1.jpeg",
-  eventsImage: "/yogirajhero.jpeg",
+  roomsPreviewImage: "/yogirajhero1.png",
+  diningImage: "/yogirajhero2.png",
+  eventsImage: "/yogirajhero3.png",
   contactMapImage: "/reception.jpeg",
-  testimonialBackground: "/yogirajhero2.jpeg",
-  notFoundImage: "/yogirajhero.jpeg",
+  testimonialBackground: "/yogirajhero2.png",
+  notFoundImage: "/yogirajhero1.png",
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "hero-slide-1",
-    image: "/yogirajhero2.jpeg",
+    image: "/yogirajhero1.png",
     title: "Close to Sai Baba Temple — Only 300 Meters",
     subtitle:
       "Welcome to Hotel Yogiraj, Shirdi — a comfortable, budget-friendly hotel located only 300 meters from the Sai Baba Temple with AC & non-AC rooms, free Wi-Fi and warm hospitality.",
@@ -76,15 +76,15 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "hero-slide-2",
-    image: "/yogirajhero.jpeg",
+    image: "/yogirajhero2.png",
     title: "Comfortable Rooms for Every Traveller",
     subtitle:
       "From double bed rooms to family-friendly four-bed rooms, choose the perfect stay for your Shirdi pilgrimage or family trip.",
     cta: { label: "Explore Rooms", href: "/rooms" },
   },
-  { 
+  {
     id: "hero-slide-3",
-    image: "/yogirajhero1.jpeg",
+    image: "/yogirajhero3.png",
     title: "In-House Restaurant & Parking",
     subtitle:
       "Enjoy delicious vegetarian meals at our in-house restaurant, plus convenient car parking, free Wi-Fi and a 24-hour front desk.",

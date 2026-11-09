@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
@@ -24,7 +24,7 @@ export default function GalleryPage() {
       <section className="relative py-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/yogirajhero2.jpeg"
+            src="/yogirajhero1.png"
             alt="Hotel Yogiraj, Shirdi gallery"
             fill
             className="object-cover"

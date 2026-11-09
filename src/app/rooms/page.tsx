@@ -43,7 +43,7 @@ export default async function RoomsPage() {
           { label: "Home", href: "/" },
           { label: "Rooms & Rates", href: "/rooms" },
         ]}
-        bgImage="/yogirajhero2.jpeg"
+        bgImage="/yogirajhero1.png"
       />
 
       <section className={styles.gridSection}>
@@ -52,7 +52,7 @@ export default async function RoomsPage() {
             <Link key={room.id} href={`/rooms/${room.slug}`} className={styles.card}>
               <div className={styles.imageWrap}>
                 <Image
-                  src={room.images[0]?.src || "/yogirajhero2.jpeg"}
+                  src={room.images[0]?.src || "/yogirajhero1.png"}
                   alt={room.images[0]?.alt || room.name}
                   width={400}
                   height={250}
