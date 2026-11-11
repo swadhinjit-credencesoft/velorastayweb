@@ -2,11 +2,310 @@
 @use "../../../styles/mixins" as m;
 
 .page {
-  @include m.container;
-  padding-block: v.$space-lg;
+  width: 100%;
+  background-color: #fbfbfe;
+  min-height: 80vh;
 }
 
-/* ── Image Gallery ─────────────────────────────── */
+.topBar {
+  background-color: #ffffff;
+  border-bottom: 1px solid v.$color-border;
+  padding: v.$space-xs 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 v.$space-md;
+
+  @media (min-width: v.$bp-md) {
+    padding: 0 v.$space-lg;
+  }
+}
+
+.mainSection {
+  padding-block: v.$space-lg v.$space-2xl;
+}
+
+/* ── 2-Column Responsive Layout ───────────────── */
+.layout,
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xl;
+
+  @media (min-width: v.$bp-lg) {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(340px, 1.15fr);
+    gap: v.$space-2xl;
+    align-items: start;
+  }
+}
+
+.contentCol,
+.main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-xl;
+}
+
+.sidebarCol,
+.sidebar {
+  width: 100%;
+
+  @media (min-width: v.$bp-lg) {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+}
+
+.stickyWidget {
+  width: 100%;
+}
+
+/* ── Room Header / Titles ──────────────────────── */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-2xs;
+}
+
+.title,
+.roomTitle {
+  font-family: v.$font-display;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: v.$neutral-900;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 2.25rem;
+  }
+
+  @media (min-width: v.$bp-lg) {
+    font-size: 2.5rem;
+  }
+}
+
+.tagline,
+.roomTagline {
+  color: v.$color-accent-dark;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 1.125rem;
+  }
+}
+
+.tag,
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: linear-gradient(135deg, v.$color-accent 0%, v.$color-accent-dark 100%);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: v.$radius-full;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Key Features / Quick Stats ───────────────── */
+.keyFeatures,
+.quickStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+  padding: v.$space-md;
+  background-color: #ffffff;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: v.$space-md;
+    padding: v.$space-lg;
+  }
+}
+
+.featureItem,
+.stat {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+
+  svg {
+    color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.featureLabel,
+.statLabel {
+  display: block;
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: v.$neutral-500;
+  margin-bottom: 2px;
+}
+
+.featureValue,
+.stat strong {
+  display: block;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: v.$neutral-900;
+  line-height: 1.3;
+}
+
+/* ── Content Sections ──────────────────────────── */
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-sm;
+  background-color: #ffffff;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-lg;
+  padding: v.$space-lg;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+
+  @media (min-width: v.$bp-sm) {
+    padding: v.$space-xl;
+  }
+}
+
+.sectionTitle {
+  font-family: v.$font-display;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: v.$neutral-900;
+  margin-bottom: v.$space-xs;
+  display: flex;
+  align-items: center;
+  gap: v.$space-xs;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.15em;
+    background-color: v.$color-accent;
+    border-radius: 2px;
+  }
+
+  @media (min-width: v.$bp-sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.descriptionText,
+.bodyText {
+  line-height: 1.75;
+  color: v.$neutral-700;
+  font-size: 0.975rem;
+}
+
+/* ── Amenities Grid ────────────────────────────── */
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$space-sm;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: v.$space-md;
+  }
+
+  @media (min-width: v.$bp-md) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+.amenityCard,
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: v.$space-sm;
+  padding: 10px 14px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: v.$radius-md;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: v.$color-accent-light;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.amenityImgWrap,
+.facilityIcon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.amenityImg {
+  object-fit: contain;
+}
+
+.amenityIcon,
+.facilityIconCheck {
+  color: v.$color-accent;
+  flex-shrink: 0;
+}
+
+.amenityName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: v.$neutral-800;
+}
+
+/* ── Policies & Stay Info ──────────────────────── */
+.policiesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-md;
+
+  @media (min-width: v.$bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.policyItem {
+  padding: v.$space-md;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: v.$radius-md;
+}
+
+.policyTitle {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: v.$neutral-900;
+}
+
+.policyText {
+  color: v.$neutral-600;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+/* ── Legacy Gallery Support ───────────────────── */
 .gallery {
   display: grid;
   gap: 8px;
@@ -61,180 +360,4 @@
   @media (min-width: v.$bp-md) {
     height: 220px;
   }
-}
-
-/* ── Content Layout ────────────────────────────── */
-.contentGrid {
-  display: grid;
-  gap: v.$space-lg;
-
-  @media (min-width: v.$bp-md) {
-    grid-template-columns: 1.8fr 1.2fr;
-    gap: v.$space-xl;
-  }
-}
-
-.main {
-  min-width: 0;
-}
-
-/* ── Header / Tag ──────────────────────────────── */
-.tag {
-  display: inline-block;
-  background-color: v.$color-accent;
-  color: #fff;
-  padding: 4px 14px;
-  border-radius: v.$radius-full;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: v.$space-xs;
-}
-
-.title {
-  font-family: v.$font-display;
-  font-size: 1.625rem;
-  font-weight: 700;
-  margin-bottom: v.$space-xs;
-  color: v.$neutral-900;
-
-  @media (min-width: v.$bp-sm) {
-    font-size: 2.25rem;
-  }
-}
-
-.tagline {
-  color: v.$color-accent-dark;
-  font-size: 1rem;
-  margin-bottom: v.$space-lg;
-
-  @media (min-width: v.$bp-sm) {
-    font-size: 1.125rem;
-  }
-}
-
-/* ── Quick Stats ───────────────────────────────── */
-.quickStats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: v.$space-sm v.$space-md;
-  margin-bottom: v.$space-lg;
-  padding: v.$space-md;
-  background-color: v.$neutral-50;
-  border: 1px solid v.$color-border;
-  border-radius: v.$radius-md;
-  font-size: 0.875rem;
-
-  @media (min-width: v.$bp-sm) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: v.$bp-md) {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: v.$space-md;
-  }
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-
-  strong {
-    font-weight: 600;
-    color: v.$neutral-900;
-  }
-}
-
-.statLabel {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: v.$neutral-500;
-}
-
-/* ── Sections ──────────────────────────────────── */
-.sectionTitle {
-  font-family: v.$font-display;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: v.$space-lg;
-  margin-bottom: v.$space-sm;
-  color: v.$neutral-900;
-
-  @media (min-width: v.$bp-sm) {
-    font-size: 1.5rem;
-  }
-}
-
-.bodyText {
-  line-height: 1.7;
-  color: v.$neutral-700;
-  margin-bottom: v.$space-lg;
-}
-
-/* ── Amenities Grid ────────────────────────────── */
-.amenitiesGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: v.$space-sm;
-  margin-bottom: v.$space-xl;
-
-  @media (min-width: v.$bp-xs) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: v.$bp-sm) {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-}
-
-.amenityItem {
-  display: flex;
-  align-items: center;
-  gap: v.$space-sm;
-  padding: 10px 14px;
-  background-color: v.$neutral-50;
-  border: 1px solid v.$color-border;
-  border-radius: v.$radius-sm;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: v.$neutral-800;
-}
-
-.facilityIcon {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.facilityIconCheck {
-  color: v.$color-accent;
-  flex-shrink: 0;
-}
-
-/* ── Policies & Hotel Highlights ───────────────── */
-.policyItem {
-  margin-bottom: v.$space-md;
-  padding: v.$space-sm 0;
-  border-bottom: 1px solid v.$neutral-100;
-}
-
-.policyTitle {
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: v.$neutral-800;
-}
-
-.policyText {
-  color: v.$neutral-600;
-  line-height: 1.6;
-  font-size: 0.875rem;
-}
-
-/* ── Sidebar ───────────────────────────────────── */
-.sidebar {
-  position: sticky;
-  top: 100px;
-  align-self: start;
 }

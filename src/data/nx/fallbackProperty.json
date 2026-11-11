@@ -186,10 +186,10 @@
         "FEBRUARY": 2
       },
       "2026": {
-        "NOVEMBER": 20
+        "NOVEMBER": 25
       }
     },
-    "totalNumberOfVisits": 90
+    "totalNumberOfVisits": 95
   },
   "noOfBookOneReview": 0,
   "roomList": [
@@ -303,13 +303,13 @@
       "dayTrip": false,
       "ratesAndAvailabilityDtos": [
         {
-          "id": 6402664,
+          "id": 6402666,
           "price": 2999,
           "totalNoRooms": 10,
           "noOfBooked": 0,
           "noOfAvailable": 10,
           "noOfOnHold": 0,
-          "date": "2026-11-09",
+          "date": "2026-11-11",
           "roomName": "Double Bed AC",
           "propertyName": "Hotel Yogiraj Nx",
           "fromDate": null,
@@ -438,13 +438,6 @@
         {
           "id": null,
           "name": "file",
-          "url": "https://bookonelocal.in/cdn/2026-11-07-160527892-room_05_372x360.jpg",
-          "description": "<p>Spacious air-conditioned room with three comfortable sleeping spaces, suitable for small families or groups looking for a convenient stay.</p>",
-          "mainImage": false
-        },
-        {
-          "id": null,
-          "name": "file",
           "url": "https://bookonelocal.in/cdn/2026-11-07-160535256-room_01_372x360.jpg",
           "description": "<p>Spacious air-conditioned room with three comfortable sleeping spaces, suitable for small families or groups looking for a convenient stay.</p>",
           "mainImage": false
@@ -511,13 +504,13 @@
       "dayTrip": false,
       "ratesAndAvailabilityDtos": [
         {
-          "id": 6402674,
+          "id": 6402676,
           "price": 2999,
           "totalNoRooms": 11,
           "noOfBooked": 0,
           "noOfAvailable": 11,
           "noOfOnHold": 0,
-          "date": "2026-11-09",
+          "date": "2026-11-11",
           "roomName": "Triple Bed AC",
           "propertyName": "Hotel Yogiraj Nx",
           "fromDate": null,
@@ -642,7 +635,78 @@
       "extraChargePerPerson": null,
       "noOfRooms": 1,
       "roomDetails": null,
-      "imageList": [],
+      "imageList": [
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043059349-room_05_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043108704-room_06_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043117353-room_08_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043122694-room_09_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043131825-room_04_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043138739-room_02_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043204044-room_01_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043210834-room_07_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043219054-room_03_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-043223924-room_11_372x252.jpg",
+          "description": "<p>Well-appointed suite featuring a comfortable bed, air conditioning and a private bathtub for a relaxing and enjoyable stay.</p>",
+          "mainImage": false
+        }
+      ],
       "minimumLengthOfStay": 0,
       "maximumLengthOfStay": 0,
       "size": null,
@@ -662,13 +726,13 @@
       "dayTrip": false,
       "ratesAndAvailabilityDtos": [
         {
-          "id": 6402684,
+          "id": 6402686,
           "price": 3499,
           "totalNoRooms": 1,
           "noOfBooked": 0,
           "noOfAvailable": 1,
           "noOfOnHold": 0,
-          "date": "2026-11-09",
+          "date": "2026-11-11",
           "roomName": "Suite Room With Bathtub",
           "propertyName": "Hotel Yogiraj Nx",
           "fromDate": null,
@@ -793,7 +857,64 @@
       "extraChargePerPerson": null,
       "noOfRooms": 1,
       "roomDetails": null,
-      "imageList": [],
+      "imageList": [
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045614918-suite_03_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045619887-suite_05_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045624252-suite_01_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045629051-suite_02_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045637181-suite_06_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045643647-suite_07_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045650972-suite_04_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        },
+        {
+          "id": null,
+          "name": "file",
+          "url": "https://bookonelocal.in/cdn/2026-11-11-045656702-suite_08_372x252.jpg",
+          "description": "<p>Spacious accommodation with six bedrooms and two shared washrooms, ideal for large families or groups travelling together.</p>",
+          "mainImage": false
+        }
+      ],
       "minimumLengthOfStay": 0,
       "maximumLengthOfStay": 0,
       "size": null,
@@ -813,13 +934,13 @@
       "dayTrip": false,
       "ratesAndAvailabilityDtos": [
         {
-          "id": 6402694,
+          "id": 6402696,
           "price": 4999,
           "totalNoRooms": 1,
           "noOfBooked": 0,
           "noOfAvailable": 1,
           "noOfOnHold": 0,
-          "date": "2026-11-09",
+          "date": "2026-11-11",
           "roomName": "Six-Bedroom With 2 Washrooms",
           "propertyName": "Hotel Yogiraj Nx",
           "fromDate": null,

@@ -32,7 +32,7 @@ export async function checkAvailability(
   try {
     const res = await fetch(
       `${API_BASE_URL}/checkAvailability/${propertyId}?${query}`,
-      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(6000) }
+      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(20000) }
     );
     if (!res.ok) {
       return fallback;

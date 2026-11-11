@@ -1,10 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Breadcrumb from "@/components/layout/Breadcrumb/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd/JsonLd";
 import Icon from "@/components/Icon";
 import RoomBookingWidget from "@/components/rooms/RoomBookingWidget";
+import RoomGallery from "@/components/rooms/RoomGallery";
 import { ROOM_AMENITIES } from "@/data/rooms";
 import { SITE_INFO } from "@/data/site";
 import { generateBreadcrumbSchema, generateRoomSchema } from "@/utils/schema";
@@ -23,28 +24,28 @@ export async function generateStaticParams() {
   return rooms.map((room) => ({ slug: room.slug }));
 }
 
-export async function generateMetadata({ params }: RoomPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: RoomPageProps): Promise<Metadata> {
   const property = await checkAvailability();
   const rooms = (property?.roomList ?? []).map(apiRoomToRoomType);
   const room = rooms.find((r) => r.slug === params.slug);
   if (!room) return { title: "Room Not Found" };
 
   return {
-    title: `${room.name} | ${SITE_INFO.name}, Shirdi`,
-    description: `${room.name} at ${SITE_INFO.name}, Shirdi starting from ₹${room.price.toLocaleString("en-IN")}/night. ${room.description.slice(0, 140)}. Only 300 meters from Sai Baba Temple.`,
+    title: `${room.name} | Hotel Yogiraj, Shirdi`,
+    description: `${room.name} at Hotel Yogiraj, Shirdi starting from ₹${room.price.toLocaleString("en-IN")}/night. ${room.description.slice(0, 140)}. Only 300 meters from Sai Baba Temple.`,
     alternates: { canonical: `/rooms/${room.slug}` },
     openGraph: {
-      title: `${room.name} | ${SITE_INFO.name}`,
+      title: `${room.name} | Hotel Yogiraj`,
       description: room.description.slice(0, 200),
       url: generateCanonicalUrl(`/rooms/${room.slug}`),
-      images: [
-        {
-          url: room.images[0]?.src || "/yogirajhero1.png",
-          width: 800,
-          height: 600,
-          alt: room.name,
-        },
-      ],
+      images: room.images.map((img) => ({
+        url: img.src,
+        width: 800,
+        height: 600,
+        alt: img.alt,
+      })),
     },
   };
 }
@@ -55,15 +56,18 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
   const room = rooms.find((r) => r.slug === params.slug);
   if (!room) notFound();
 
-  // Combine live API facilities with fallback amenities
   const apiFacilities = room.facilitiesList ?? [];
-  const apiFacilityNames = new Set(apiFacilities.map((f) => f.name.toLowerCase().trim()));
+  const apiFacilityNames = new Set(
+    apiFacilities.map((f) => f.name.toLowerCase().trim())
+  );
 
   const complementaryAmenities = room.amenities
-    .map((id) => {
-      const found = ROOM_AMENITIES.find((a) => a.id === id);
-      if (found && !apiFacilityNames.has(found.label.toLowerCase())) {
-        return found;
+    .map((slug) => {
+      const match = ROOM_AMENITIES.find(
+        (a) => a.id.toLowerCase() === slug.toLowerCase()
+      );
+      if (match && !apiFacilityNames.has(match.label.toLowerCase().trim())) {
+        return match;
       }
       return null;
     })
@@ -79,148 +83,166 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
         ])}
       />
       <JsonLd schema={generateRoomSchema(room)} />
-      <Breadcrumb
-        items={[
-          { label: "Rooms & Rates", href: "/rooms" },
-          { label: room.name, href: `/rooms/${room.slug}` },
-        ]}
-      />
 
-      <section className={styles.page}>
-        <div>
-          {room.images.length > 0 && (
-            <div className={styles.gallery}>
-              <Image
-                src={room.images[0].src}
-                alt={room.images[0].alt}
-                width={1200}
-                height={600}
-                className={styles.galleryMain}
-                priority
-              />
-              {room.images.length > 1 && (
-                <div className={styles.galleryGrid}>
-                  {room.images.slice(1).map((img, idx) => (
-                    <Image
-                      key={`${img.id}-${idx}`}
-                      src={img.src}
-                      alt={img.alt}
-                      width={600}
-                      height={400}
-                      className={styles.galleryGridImg}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          <div className={styles.contentGrid}>
-            <div className={styles.main}>
-              {room.tag && <span className={styles.tag}>{room.tag}</span>}
-              <h1 className={styles.title}>{room.name}</h1>
-              <p className={styles.tagline}>{room.tagline}</p>
-
-              {/* Quick Room Stats derived from API */}
-              <div className={styles.quickStats}>
-                <div className={styles.stat}>
-                  <span className={styles.statLabel}>Bed Setup</span>
-                  <strong>{room.bedConfig}</strong>
-                </div>
-                <div className={styles.stat}>
-                  <span className={styles.statLabel}>Max Occupancy</span>
-                  <strong>{room.maxOccupancy} Guests</strong>
-                </div>
-                <div className={styles.stat}>
-                  <span className={styles.statLabel}>Room Size</span>
-                  <strong>{room.size} {room.sizeUnit}</strong>
-                </div>
-                {room.noOfRooms !== undefined && (
-                  <div className={styles.stat}>
-                    <span className={styles.statLabel}>Total Rooms</span>
-                    <strong>{room.noOfRooms} Units</strong>
-                  </div>
-                )}
-                <div className={styles.stat}>
-                  <span className={styles.statLabel}>Min Stay</span>
-                  <strong>{room.minStay} Night</strong>
-                </div>
-              </div>
-
-              {/* Room Description */}
-              <h2 className={styles.sectionTitle}>About This Room</h2>
-              <p className={styles.bodyText}>{room.description}</p>
-
-              {/* Official API Facilities & Amenities */}
-              <h2 className={styles.sectionTitle}>Room Facilities & Amenities</h2>
-              <div className={styles.amenitiesGrid}>
-                {apiFacilities.map((fac, idx) => (
-                  <div key={fac.id ?? idx} className={styles.amenityItem}>
-                    {fac.logoUrl ? (
-                      <Image
-                        src={fac.logoUrl}
-                        alt={fac.name}
-                        width={22}
-                        height={22}
-                        className={styles.facilityIcon}
-                      />
-                    ) : (
-                      <Icon
-                        icon="lucide:check-circle"
-                        width={18}
-                        height={18}
-                        className={styles.facilityIconCheck}
-                      />
-                    )}
-                    <span>{fac.name}</span>
-                  </div>
-                ))}
-                {complementaryAmenities.map((amenity) => (
-                  amenity && (
-                    <div key={amenity.id} className={styles.amenityItem}>
-                      <Icon
-                        icon={amenity.icon || "lucide:check-circle"}
-                        width={18}
-                        height={18}
-                        className={styles.facilityIconCheck}
-                      />
-                      <span>{amenity.label}</span>
-                    </div>
-                  )
-                ))}
-              </div>
-
-              {/* Property Policies */}
-              <h2 className={styles.sectionTitle}>Stay & Hotel Information</h2>
-              <div className={styles.policyItem}>
-                <h4 className={styles.policyTitle}>Location & Temple Proximity</h4>
-                <p className={styles.policyText}>
-                  Situated on Pimpalwadi Road, only 300 meters from the sacred Sai Baba Temple, Hotel Yogiraj offers utmost convenience for morning Kakad Aarti and darshan.
-                </p>
-              </div>
-
-              <div className={styles.policyItem}>
-                <h4 className={styles.policyTitle}>Check-in & Check-out</h4>
-                <p className={styles.policyText}>
-                  Standard check-in is from {SITE_INFO.checkIn} and check-out is by {SITE_INFO.checkOut}. 24-hour front desk assistance is available for early arrivals and luggage storage.
-                </p>
-              </div>
-
-              <div className={styles.policyItem}>
-                <h4 className={styles.policyTitle}>Pricing & Meal Plan</h4>
-                <p className={styles.policyText}>
-                  Rates shown are for European Plan (Room Only). Taxes are calculated as per applicable GST slabs at booking.
-                </p>
-              </div>
-            </div>
-
-            {/* Sticky Live Booking Sidebar */}
-            <div className={styles.sidebar}>
-              <RoomBookingWidget room={room} />
-            </div>
+      <div className={styles.page}>
+        <div className={styles.topBar}>
+          <div className={styles.container}>
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Rooms & Rates", href: "/rooms" },
+                { label: room.name, href: `/rooms/${room.slug}` },
+              ]}
+            />
           </div>
         </div>
-      </section>
+
+        <section className={styles.mainSection}>
+          <div className={styles.container}>
+            <div className={styles.layout}>
+              <div className={styles.contentCol}>
+                {/* Interactive Dynamic Room Photo Gallery */}
+                <RoomGallery
+                  images={room.images}
+                  roomName={room.name}
+                  tag={room.tag}
+                />
+
+                <div className={styles.header}>
+                  <h1 className={styles.roomTitle}>{room.name}</h1>
+                  <p className={styles.roomTagline}>{room.tagline}</p>
+                </div>
+
+                {/* Quick Room Stats derived from API */}
+                <div className={styles.keyFeatures}>
+                  <div className={styles.featureItem}>
+                    <Icon icon="lucide:bed" width={22} height={22} />
+                    <div>
+                      <span className={styles.featureLabel}>Bed Setup</span>
+                      <strong className={styles.featureValue}>{room.bedConfig}</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <Icon icon="lucide:users" width={22} height={22} />
+                    <div>
+                      <span className={styles.featureLabel}>Max Occupancy</span>
+                      <strong className={styles.featureValue}>{room.maxOccupancy} Guests</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <Icon icon="lucide:maximize-2" width={22} height={22} />
+                    <div>
+                      <span className={styles.featureLabel}>Room Size</span>
+                      <strong className={styles.featureValue}>
+                        {room.size} {room.sizeUnit}
+                      </strong>
+                    </div>
+                  </div>
+                  {room.noOfRooms !== undefined && (
+                    <div className={styles.featureItem}>
+                      <Icon icon="lucide:layout-grid" width={22} height={22} />
+                      <div>
+                        <span className={styles.featureLabel}>Total Rooms</span>
+                        <strong className={styles.featureValue}>{room.noOfRooms} Units</strong>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Room Description */}
+                <div className={styles.sectionBlock}>
+                  <h2 className={styles.sectionTitle}>About This Room</h2>
+                  <p className={styles.descriptionText}>{room.description}</p>
+                </div>
+
+                {/* Official API Facilities & Amenities */}
+                <div className={styles.sectionBlock}>
+                  <h2 className={styles.sectionTitle}>Room Facilities & Amenities</h2>
+                  <div className={styles.amenitiesGrid}>
+                    {apiFacilities.map((fac, idx) => (
+                      <div key={fac.id ?? idx} className={styles.amenityCard}>
+                        {fac.logoUrl ? (
+                          <div className={styles.amenityImgWrap}>
+                            <Image
+                              src={fac.logoUrl}
+                              alt={fac.name}
+                              width={22}
+                              height={22}
+                              className={styles.amenityImg}
+                            />
+                          </div>
+                        ) : (
+                          <Icon
+                            icon="lucide:check-circle"
+                            width={18}
+                            height={18}
+                            className={styles.amenityIcon}
+                          />
+                        )}
+                        <span className={styles.amenityName}>{fac.name}</span>
+                      </div>
+                    ))}
+                    {complementaryAmenities.map((amenity) => (
+                      amenity && (
+                        <div key={amenity.id} className={styles.amenityCard}>
+                          <Icon
+                            icon={amenity.icon || "lucide:check-circle"}
+                            width={18}
+                            height={18}
+                            className={styles.amenityIcon}
+                          />
+                          <span className={styles.amenityName}>{amenity.label}</span>
+                        </div>
+                      )
+                    ))}
+                  </div>
+                </div>
+
+                {/* Property Policies */}
+                <div className={styles.sectionBlock}>
+                  <h2 className={styles.sectionTitle}>Stay & Hotel Information</h2>
+                  <div className={styles.policiesGrid}>
+                    <div className={styles.policyItem}>
+                      <h4 className={styles.policyTitle}>Location & Temple Proximity</h4>
+                      <p className={styles.policyText}>
+                        Situated on Pimpalwadi Road, only 300 meters from Shri Sai Baba Samadhi Mandir Gate 2, Hotel Yogiraj offers utmost convenience for morning Kakad Aarti and evening darshan.
+                      </p>
+                    </div>
+
+                    <div className={styles.policyItem}>
+                      <h4 className={styles.policyTitle}>Check-in & Check-out</h4>
+                      <p className={styles.policyText}>
+                        Standard check-in is from {SITE_INFO.checkIn} and check-out is by {SITE_INFO.checkOut}. 24-hour front desk assistance is available for early arrivals and luggage storage.
+                      </p>
+                    </div>
+
+                    <div className={styles.policyItem}>
+                      <h4 className={styles.policyTitle}>Pricing & Meal Plan</h4>
+                      <p className={styles.policyText}>
+                        Rates shown are for European Plan (Room Only). Taxes are calculated as per applicable GST slabs at booking.
+                      </p>
+                    </div>
+
+                    <div className={styles.policyItem}>
+                      <h4 className={styles.policyTitle}>Pure Vegetarian Dining</h4>
+                      <p className={styles.policyText}>
+                        Freshly prepared pure vegetarian breakfast, lunch, and dinner available with round-the-clock room service.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sticky Live Booking Sidebar */}
+              <aside className={styles.sidebarCol}>
+                <div className={styles.stickyWidget}>
+                  <RoomBookingWidget room={room} />
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
