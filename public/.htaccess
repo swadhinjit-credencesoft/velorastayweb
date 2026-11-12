@@ -1,51 +1,74 @@
 # ==============================================================================
 # Hotel Yogiraj & Hotel Yogiraj NX — Production Apache Configuration (.htaccess)
+# Designed & Optimized for Hostinger (Apache / LiteSpeed Web Server)
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# 1. Rewrites & Canonical Redirects
+# 0. Global Directives & Directory Index
+# ------------------------------------------------------------------------------
+# Disable directory browsing for security (prevents listing files)
+Options -Indexes +FollowSymLinks
+
+# Set default document names for directory requests
+DirectoryIndex index.html index.php
+
+# ------------------------------------------------------------------------------
+# 1. Rewrites & Canonical Redirects (mod_rewrite)
 # ------------------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # 1.1 Force HTTPS
+  # 1.1 Force HTTPS (Redirect HTTP to HTTPS)
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 1.2 Canonical Domain (redirect www to non-www)
+  # 1.2 Canonical Domain (Redirect www to non-www)
   RewriteCond %{HTTP_HOST} ^www\.yogirajhotel\.com$ [NC]
   RewriteRule ^(.*)$ https://yogirajhotel.com/$1 [L,R=301]
 
-  # 1.3 Block Hidden Files and Directories (.git, .env, etc.)
+  # 1.3 Block Hidden Files and Directories (.git, .env, .next_build, etc.)
   RewriteRule "(^|/)\.(?!well-known)" - [F]
 
-  # 1.3.1 Legacy & Alias Redirects
+  # 1.4 Legacy & Alias Redirects
   RewriteRule ^hotel-yogiraj/?$ / [R=301,L]
   RewriteRule ^hotel-yogiraj-nx/?$ /yogiraj-nx [R=301,L]
 
-  # 1.4 Serve Existing Static Files & Directories
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # 1.5 Serve Existing Real Files directly (css, js, images, avif, webp, svg, pdf, etc.)
+  # Note: Exclude directories (-d) here so they do NOT trigger 403 Forbidden!
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 1.5 Clean URLs: /rooms -> /rooms.html
+  # 1.6 If a directory is requested and it contains an index.html, serve that index.html
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)/?$ $1/index.html [L]
+
+  # 1.7 Explicit Rewrites for Directory Routes with Root-Level .html files
+  # (Prevents 403 Forbidden when /yogiraj-nx or /yogiraj-nx/ is accessed/refreshed)
+  RewriteRule ^yogiraj-nx/?$ yogiraj-nx.html [L]
+  RewriteRule ^rooms/?$ rooms.html [L]
+  RewriteRule ^gallery/?$ gallery.html [L]
+  RewriteRule ^yogiraj-nx/rooms/?$ yogiraj-nx/rooms.html [L]
+
+  # 1.8 Clean URLs for single-segment routes: e.g. /about -> /about.html, /contact -> /contact.html
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^([^/]+)/?$ $1.html [L]
 
-  # 1.6 Clean URLs for nested routes: /yogiraj-nx/rooms -> /yogiraj-nx/rooms.html
+  # 1.9 Clean URLs for multi-segment routes: e.g. /yogiraj-nx/about -> /yogiraj-nx/about.html
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.*)/?$ $1.html [L]
+  RewriteRule ^(.+?)/?$ $1.html [L]
 
-  # 1.7 Clean URLs for directory index: /yogiraj-nx/ -> /yogiraj-nx/index.html
+  # 1.10 Clean URLs for subdirectories containing index.html: e.g. /yogiraj-nx/ -> /yogiraj-nx/index.html
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-  RewriteRule ^(.*)/?$ $1/index.html [L]
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
 </IfModule>
 
 # ------------------------------------------------------------------------------
 # 2. Custom Error Documents
 # ------------------------------------------------------------------------------
+ErrorDocument 403 /404.html
 ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html
 
@@ -65,7 +88,7 @@ ErrorDocument 500 /500.html
 </IfModule>
 
 # ------------------------------------------------------------------------------
-# 4. GZIP / Brotli Compression
+# 4. GZIP / Brotli Compression (mod_deflate)
 # ------------------------------------------------------------------------------
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
@@ -93,14 +116,14 @@ ErrorDocument 500 /500.html
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # HTML & Dynamic Content (1 hour, must revalidate)
+  # HTML & Manifests (1 hour, revalidate)
   ExpiresByType text/html "access plus 1 hour"
   ExpiresByType application/json "access plus 1 hour"
   ExpiresByType application/xml "access plus 1 hour"
   ExpiresByType text/xml "access plus 1 hour"
   ExpiresByType text/plain "access plus 1 day"
 
-  # Next.js Static Chunks & JS/CSS (1 year)
+  # Next.js Static Chunks & JS/CSS (1 year immutable)
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"

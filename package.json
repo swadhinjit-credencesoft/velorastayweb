@@ -5,7 +5,7 @@
   "description": "Hotel Yogiraj — hotel near Sai Baba Temple, Shirdi. Built with Next.js, TypeScript, SCSS and Redux Toolkit.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node --max-old-space-size=4096 ./node_modules/next/dist/bin/next build && node scripts/post-build.mjs",
     "start": "next start",
     "lint": "next lint"
   },
