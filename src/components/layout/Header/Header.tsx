@@ -58,7 +58,7 @@ export default function Header() {
 
   const headerClass = [
     styles.header,
-    isHome && !isScrolled ? styles.home : "",
+    !isScrolled ? styles.home : "",
     isScrolled ? styles.scrolled : "",
   ].filter(Boolean).join(" ");
 

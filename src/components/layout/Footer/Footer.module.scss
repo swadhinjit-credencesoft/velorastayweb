@@ -263,8 +263,8 @@
 }
 
 .credits {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
   text-align: center;
 
   @media (min-width: v.$bp-md) {
@@ -272,12 +272,14 @@
   }
 
   a {
-    color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    font-weight: 500;
     text-decoration: none;
     transition: color v.$duration-fast v.$ease-standard;
 
     &:hover {
       color: v.$color-accent;
+      text-decoration: underline;
     }
   }
 }

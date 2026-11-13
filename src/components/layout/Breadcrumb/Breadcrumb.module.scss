@@ -2,15 +2,15 @@
 @use "../../../styles/mixins" as m;
 
 .breadcrumb {
-  @include m.container;
-  padding-block: v.$space-md;
+  padding-block: v.$space-xs;
+  color: inherit;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: v.$space-xs;
+  gap: 6px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -19,33 +19,37 @@
 .item {
   display: inline-flex;
   align-items: center;
-  gap: v.$space-xs;
+  gap: 6px;
 }
 
 .separator {
   color: currentColor;
-  opacity: 0.45;
+  opacity: 0.6;
   flex-shrink: 0;
 }
 
 .link {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   font-size: 13px;
+  font-weight: 500;
   color: currentColor;
-  opacity: 0.8;
+  opacity: 0.92;
   text-decoration: none;
-  transition: opacity v.$duration-fast v.$ease-standard;
+  transition: opacity v.$duration-fast v.$ease-standard,
+    color v.$duration-fast v.$ease-standard;
 
   &:hover {
     opacity: 1;
+    color: v.$color-accent-light;
   }
 }
 
 .current {
   font-size: 13px;
   color: currentColor;
-  opacity: 0.6;
-  font-weight: 500;
+  opacity: 1;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }

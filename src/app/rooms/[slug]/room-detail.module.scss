@@ -11,6 +11,19 @@
   background-color: #ffffff;
   border-bottom: 1px solid v.$color-border;
   padding: v.$space-xs 0;
+  color: v.$color-text-main;
+
+  a {
+    color: v.$color-text-muted;
+
+    &:hover {
+      color: v.$color-accent;
+    }
+  }
+
+  span {
+    color: v.$color-text-main;
+  }
 }
 
 .container {

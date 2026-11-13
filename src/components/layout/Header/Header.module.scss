@@ -106,19 +106,41 @@
     background-color: rgba(v.$color-accent, 0.06);
   }
 
+  .header:not(.scrolled) &,
   .home & {
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 
     &:hover,
     &.navLinkActive {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.16);
+    }
+  }
+
+  .scrolled & {
+    color: v.$color-text-main;
+    text-shadow: none;
+
+    &:hover,
+    &.navLinkActive {
+      color: v.$color-accent;
+      background-color: rgba(v.$color-accent, 0.08);
     }
   }
 }
 
 .chevron {
   transition: transform v.$duration-fast v.$ease-standard;
+
+  .header:not(.scrolled) &,
+  .home & {
+    color: #ffffff;
+  }
+
+  .scrolled & {
+    color: currentColor;
+  }
 
   .navLinkActive & {
     transform: rotate(180deg);
@@ -149,10 +171,11 @@
     background-color: rgba(v.$color-accent, 0.08);
   }
 
+  .header:not(.scrolled) &,
   .home & {
     color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.35);
-    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.35);
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);
@@ -173,6 +196,7 @@
   flex-shrink: 0;
   color: v.$color-accent;
 
+  .header:not(.scrolled) &,
   .home & {
     color: v.$color-accent-light;
   }
@@ -300,6 +324,7 @@
   transition: transform v.$duration-standard v.$ease-standard,
     opacity v.$duration-fast v.$ease-standard;
 
+  .header:not(.scrolled) &,
   .home & {
     background-color: #fff;
   }
@@ -506,6 +531,7 @@
     }
   }
 
+  .header:not(.scrolled) &,
   .home & {
     color: #ffffff;
     border-color: rgba(255, 255, 255, 0.45);
@@ -557,6 +583,7 @@
   text-transform: uppercase;
   transition: all v.$duration-fast v.$ease-standard;
 
+  .header:not(.scrolled) &,
   .home & {
     background-color: rgba(255, 255, 255, 0.25);
     color: #ffffff;

@@ -134,11 +134,19 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.container}>
           <div className={styles.bottomInner}>
+            <p className={styles.copyright}>
+              &copy; {new Date().getFullYear()} {currentSite.name}. All Rights Reserved.
+            </p>
             <p className={styles.credits}>
-              Designed &amp; Developed by{" "}
-              <a href="https://www.credencesoft.in/" target="_blank" rel="noopener noreferrer">
+              Designed and Developed By{" "}
+              <a href="https://credencesoft.in/" target="_blank" rel="noopener noreferrer">
                 CredenceSoft
               </a>
+              , Powered By{" "}
+              <a href="https://bookonepms.com/" target="_blank" rel="noopener noreferrer">
+                BookOne
+              </a>
+              .
             </p>
           </div>
         </div>

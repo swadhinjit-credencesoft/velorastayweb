@@ -9,6 +9,10 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
+  const firstIsHome = items.length > 0 && items[0].label.toLowerCase() === "home";
+  const homeHref = firstIsHome ? items[0].href : "/";
+  const displayItems = firstIsHome ? items.slice(1) : items;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -17,9 +21,9 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: SITE_INFO.url,
+        item: `${SITE_INFO.url}${homeHref === "/" ? "" : homeHref}`,
       },
-      ...items.map((item, index) => ({
+      ...displayItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.label,
@@ -32,13 +36,13 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
     <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
       <ol className={styles.list}>
         <li className={styles.item}>
-          <Link href="/" className={styles.link}>
+          <Link href={homeHref} className={styles.link}>
             <Icon icon="lucide:home" width={14} height={14} />
             <span>Home</span>
           </Link>
         </li>
-        {items.map((item, index) => {
-          const isLast = index === items.length - 1;
+        {displayItems.map((item, index) => {
+          const isLast = index === displayItems.length - 1;
           return (
             <li key={item.href} className={styles.item}>
               <Icon icon="lucide:chevron-right" width={12} height={12} className={styles.separator} />
